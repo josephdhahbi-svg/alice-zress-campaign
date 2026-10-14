@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-14",
+  "method": "deterministic in-memory checks of newly authored prototype data; not end-to-end playtesting",
+  "tests": [
+    {
+      "name": "unique map nodes",
+      "pass": true,
+      "detail": "8 nodes"
+    },
+    {
+      "name": "all links resolve and bidirectional",
+      "pass": true,
+      "detail": "all adjacency reciprocal"
+    },
+    {
+      "name": "all shop nodes resolve",
+      "pass": true,
+      "detail": "3 shops"
+    },
+    {
+      "name": "all stock nonnegative",
+      "pass": true,
+      "detail": "inventory price and qty"
+    },
+    {
+      "name": "scene nodes and five options",
+      "pass": true,
+      "detail": "2 scenes"
+    },
+    {
+      "name": "monster nodes resolve",
+      "pass": true,
+      "detail": "2 proposed monsters"
+    },
+    {
+      "name": "purchase spends gold",
+      "pass": true,
+      "detail": "20gp to 15gp, stock decremented"
+    },
+    {
+      "name": "duplicate purchase id blocked",
+      "pass": true,
+      "detail": "no second charge"
+    },
+    {
+      "name": "insufficient gold blocked",
+      "pass": true,
+      "detail": "0.5gp cannot buy 10gp rope"
+    },
+    {
+      "name": "approval event applies once",
+      "pass": true,
+      "detail": "+3 once"
+    },
+    {
+      "name": "consent not auto-granted",
+      "pass": true,
+      "detail": "invitation only"
+    }
+  ],
+  "passed": 11,
+  "total": 11,
+  "grades": {
+    "narrative": 7,
+    "character_roster": 6,
+    "dialogue_choices": 7,
+    "romance": 4,
+    "economy": 4,
+    "map_navigation": 4,
+    "monster_placement": 2,
+    "chronology": 3,
+    "state_integrity": 5,
+    "game_integration": 1
+  },
+  "total_score": 43,
+  "max_score": 100,
+  "limitations": [
+    "Only 3 priced shops of planned 100",
+    "No live persistent game engine or map coordinates",
+    "Monster CR and stat blocks not fully verified",
+    "1492 DR is provisional",
+    "Approval simulation only; not integrated into UI",
+    "Romance dialogue is non-explicit, consent based"
+  ]
+}
