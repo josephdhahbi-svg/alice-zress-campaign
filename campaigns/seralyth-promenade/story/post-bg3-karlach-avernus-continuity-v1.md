@@ -27,3 +27,10 @@ The user states ALL their BG3 saves use the good-guys endings. Apply the HEROIC 
 - BG3 original player character, Karlach romance partner, Wyll's exact ending, Astarion ascension, Gale's Crown choice, House of Hope outcomes: exact save details NOT retrievable here. Mark detail unknown within the overarching good-ending branch, not morally ambiguous/evil.
 - Persistent saves: one connected continuity across pre-BG3, BG3, post-BG3; all rescues, deaths, alliances, betrayals, inventory, promises and faction consequences carry forward. No arbitrary reset.
 - Distinguish existing BG3 good outcomes from future Moonveil quests and homebrew divine ascensions. The user prefers heroic completionist, redeem villains where feasible, and save all possible companions.
+
+## User-confirmed companion updates (2026-10-14)
+- **Astarion:** GOOD / BLUE. Non-ascended heroic direction; operates in Baldur's Gate helping stop criminals, per user's chosen epilogue. Exact organization and mechanics not established. Do not label evil or assume ascension.
+- **Gale:** GOOD / BLUE. Professor based in Baldur's Gate in user's Moonveil continuity, accompanied by his cat **Tara** (a tressym in Forgotten Realms lore; user calls her his cat). Do not silently relocate him to Waterdeep even if other BG3 endings depict that; this is the user's custom continuity.
+- **Halsin:** GOOD / BLUE. User tentatively recalls he returned to the grove; mark **PROVISIONAL / NEEDS CONFIRMATION**, not canon-locked.
+- **Hope:** GOOD / BLUE. House of Hope and Hope's fate are to be explored in a dedicated **future quest chain**. Do not assume her rescue has already been resolved or that she is present at a given location.
+- Keep Karlach alive in Avernus and the heroic completionist BG3 continuity. Distinguish user-established postgame facts from official game epilogues and Moonveil homebrew.
