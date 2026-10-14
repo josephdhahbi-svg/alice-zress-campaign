@@ -413,3 +413,125 @@ Risk of over-complexity: **8.6**
 # NEXT RICOCHET
 
 Next pass should smash the same trilogy against three *different* supplied D&D books and compare scores. If the second combination produces stronger pieces, steal them. Continue until the Cthulhu Mythos trilogy consistently scores above 98 without sacrificing comprehensibility.
+
+
+---
+
+# GAME-LAYER DIRECTIVE — BRING THE MYTHOS TO LIFE
+
+## Reference policy
+
+The project may study cosmic-horror tabletop/video-game design and other RPG implementations for **design principles**: investigation loops, sanity/stress alternatives, clue redundancy, journals, relationship pressure, ritual interfaces, environmental storytelling, mystery pacing, boss telegraphs, inventory affordances, and consequence tracking.
+
+**Baldur's Gate 3 is a quality/reference benchmark, not an asset source.** Learn from its readable party presentation, contextual actions, dialogue-choice clarity, tooltips, inspectability, cinematic-to-gameplay transitions, combat readability, quest journal, character sheets, inventories, maps, and consequence-rich conversations. Do **not** copy its copyrighted art, UI assets, text, icons, music, maps, characters, proprietary code, or exact screen layouts. Moonveil must retain its own visual identity and interaction design.
+
+Likewise, Cthulhu-Mythos games can inspire systems and pacing, but their proprietary code/assets/text are not imported unless separately licensed. Public-domain material, open-source code, and permissively licensed assets may be considered only after license verification and attribution requirements are recorded.
+
+## Moonveil Mythos playable loop
+
+**EXPLORE -> NOTICE -> RECORD -> INTERPRET -> CHOOSE -> RISK -> CONSEQUENCE -> CALLBACK**
+
+Every major mystery should support:
+- environmental evidence;
+- NPC testimony;
+- material/object evidence;
+- magical/eldritch evidence;
+- contradictory evidence;
+- at least two viable clue routes so one failed check does not stop the story.
+
+## Five core HUD instruments
+
+1. **Party Rail** — five women, portrait/state/relationship pressure, quick selection.
+2. **Context Wheel** — Talk / Inspect / Use / Help / Special; specialist homebrews add contextual actions.
+3. **Mythos Journal** — evidence board separating FACT, TESTIMONY, THEORY, CONTRADICTION, UNKNOWN.
+4. **5-10-15 Constellation** — discovered nodes visually connect across books without revealing undiscovered answers.
+5. **World-State Lens** — communities, routes, factions, promises, anomalies, and consequences changed by the party.
+
+## Character-specific interface actions
+
+- **Ilyra / PATH:** Waymark, Inspect Route, Establish Refuge.
+- **Brikket / AGREEMENT:** Witness, Compare Terms, Trace Obligation.
+- **Pella / SPACE:** Survey, Map Missing, Overlay Geometry.
+- **Rhava / CHANGE:** Measure, Forecast Hazard, Issue Warning.
+- **Naeva / MEMORY:** Recall Form, Compare Tradition, Preserve Refrain.
+
+These actions should expose *options and information*, not automatically solve encounters.
+
+## Cosmic-horror pressure: Lucidity, not a punitive "insanity meter"
+
+Avoid reducing cosmic horror to "see monster -> lose sanity." Prototype three interacting states:
+
+- **Lucidity:** ability to distinguish observation from interpretation.
+- **Strain:** short-term cognitive/emotional load from impossible events.
+- **Anchors:** relationships, routines, songs, places, beliefs, promises, and practices that help a character remain herself.
+
+High Strain can create unreliable interface cues, conflicting theories, or difficult choices, but never treats mental illness as monsterhood. Anchors are story relationships and practices, not a generic healing potion.
+
+## Dialogue
+
+Five-choice conversations remain the default major-decision grammar:
+1. direct/action;
+2. investigative/reasoned;
+3. empathetic/merciful;
+4. cultural/relationship;
+5. risky/homebrew/specialist.
+
+Choices can be locked/unlocked by knowledge, relationships, items, skills, prior promises, faction status, or world state. Locked options should explain the requirement when revealing it does not spoil the mystery.
+
+## Combat
+
+Use readable turn-based tactical combat as the benchmark:
+- clear initiative;
+- movement and range previews;
+- inspectable status effects;
+- environmental interactions;
+- reactions;
+- elevation/cover where the ruleset supports them;
+- contextual specialist actions;
+- boss mechanics learned through prior exploration.
+
+Mythos bosses have **Body + System + Idea**. Reducing HP can defeat Body; puzzles/allies can dismantle System; player choices determine whether Idea survives.
+
+## Visual identity
+
+Moonveil should be recognizably its own game:
+- dark charcoal/deep-violet base rather than pure black;
+- warm gold/crimson accents;
+- moon-silver for safe/heroic navigation;
+- impossible violet for Origin anomalies;
+- constellation lines for connected evidence;
+- plate-and-line information compartments;
+- rich portraits and location art;
+- five large touch-friendly choice buttons on mobile.
+
+## Technical implementation order
+
+1. Finish reliable offline single-player vertical slice.
+2. Evidence/Mythos Journal.
+3. Party Rail for five women.
+4. Context actions tied to the five homebrews.
+5. 5-10-15 puzzle/reward/boss data schema.
+6. World-state/faction/community consequences.
+7. Tactical encounter prototype.
+8. Character/inventory/spell/equipment surfaces.
+9. Cinematic presentation layer.
+10. Only after those are stable: optional network/LLM services.
+
+Do not let generated V35-V220 archive numbering overwrite the verified live SQLite chain. The live repository currently proceeds from V6; new production migrations must continue from verified code and be tested sequentially.
+
+## Definition of "alive"
+
+A Moonveil location is not production-ready merely because it has a quest. Before promotion it should answer:
+- Who lives here?
+- What do they eat?
+- What work keeps the place functioning?
+- What do children learn?
+- What do people do for fun?
+- What do people argue about?
+- Who has power and why?
+- What is bought/sold/shared?
+- What environmental constraint shapes life?
+- What happens when the heroes leave?
+- What changes because they came?
+
+The universe is successful when players remember communities and people as strongly as bosses.
