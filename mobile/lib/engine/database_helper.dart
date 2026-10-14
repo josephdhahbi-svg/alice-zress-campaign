@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+import 'dynamic_npc_dialogue_v6.dart';
 
 /// Validated, single-scene prototype. Never trust approval or flags from UI.
 class DatabaseHelper {
@@ -142,6 +143,7 @@ class DatabaseHelper {
       }
     }
     if (oldVersion < 5) await _createV5(db);
+    if (oldVersion < 6) await DynamicNpcDialogueMigration.apply(db);
   }
 
   Future<Database> get database async {
@@ -149,8 +151,8 @@ class DatabaseHelper {
     final location = _databasePath ??
         join(await _factory.getDatabasesPath(), 'moonveil_universe.db');
     _db = await _factory.openDatabase(location,
-        options: OpenDatabaseOptions(version: 5,
-            onCreate: (db, version) async { await _createV2(db); await _createV5(db); },
+        options: OpenDatabaseOptions(version: 6,
+            onCreate: (db, version) async { await _createV2(db); await _createV5(db); await DynamicNpcDialogueMigration.apply(db); },
             onUpgrade: _upgrade));
     return _db!;
   }
