@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "status": "Game design spec; not live engine or system instructions",
+  "warning": "Mature themes, suggestive romance, violence, adult nightlife. Non-graphic intimacy.",
+  "agency": "Player controls all PC dialogue and actions",
+  "consent": "Mutual, revocable; approval, gold and magic cannot override consent",
+  "approval": {
+    "min": -50,
+    "max": 50,
+    "start": 0,
+    "update": "after resolved actions only"
+  },
+  "romance_stages": [
+    "Introduction and mutual interest",
+    "Trust, personal quests and voluntary dates",
+    "Commitment, friendship or private fade-to-black scene"
+  ],
+  "coach": "Suggest respectful conversation, never assume or infer private sexual desires",
+  "choices": [
+    "Heroic/action",
+    "Sarcastic/comedy",
+    "Flirt/invitation",
+    "Chaos",
+    "Insight/scan",
+    "Custom"
+  ],
+  "loot": [
+    {
+      "name": "Amulet of Yearning",
+      "rarity": "uncommon homebrew",
+      "effect": "+2 Persuasion on one check per long rest",
+      "earned": "community service quest"
+    },
+    {
+      "name": "Ring of the Siren's Voice",
+      "rarity": "rare homebrew",
+      "effect": "Suggestion once per long rest, never for sexual consent",
+      "earned": "music quest"
+    },
+    {
+      "name": "Boots of the Astral Dancer",
+      "rarity": "uncommon homebrew",
+      "effect": "+5 ft speed for 1 minute once per long rest",
+      "earned": "performance quest"
+    },
+    {
+      "name": "Crimson Silk Robe",
+      "rarity": "rare homebrew",
+      "effect": "Advantage on one Performance check per long rest while worn",
+      "earned": "arts quest"
+    }
+  ],
+  "example": {
+    "npc": "Maris Thorne",
+    "venue": "River Lantern Tavern",
+    "stage": 1,
+    "approval": 0,
+    "coach": "Ask about her concerns; offer help without demanding a date",
+    "options": [
+      "Help patrons escape the cellar threat",
+      "Joke about dimensional room service",
+      "Invite her to a drink after her shift, if interested",
+      "Ask the Modron to negotiate with the cellar",
+      "Inspect the ward with an Arcana check",
+      "Custom action"
+    ],
+    "reward_preview": "Crimson Silk Robe from optional arts quest"
+  },
+  "limitations": [
+    "No persistent mobile game engine",
+    "Not playtested",
+    "Homebrew item balance provisional",
+    "No guaranteed intimacy or romance"
+  ]
+}
