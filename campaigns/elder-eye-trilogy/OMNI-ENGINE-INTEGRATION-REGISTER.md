@@ -275,3 +275,42 @@ Generated "omni-master" files never become authoritative merely because they are
 9. promote only the useful layer.
 
 This preserves the strong ideas while preventing version-number escalation from overwriting the Elder Eye foundation.
+
+
+## V127 intake — Elder Eye "Definitive Master Codex" — 2026-10-14
+
+Two supplied V127 documents are duplicates; register once.
+
+**Classification:** generated alternate/candidate implementation, **NOT the authoritative foundational Elder Eye trilogy**.
+
+### Direct conflicts with locked trilogy
+V127 renames/reframes the books as Pit Rise/Temple Avalanche, Endless Maze/Oozing Return, and Realmspace/Time/Space Convergence. This conflicts with locked titles and functions:
+1. **That Which Lurks** — Discovery.
+2. **The Labyrinth of the Elder Eye** — Descent / Understanding.
+3. **The Return of the Avatar of Ghaunador** — Consequence.
+
+It also presets Book 1 and Book 2 as conquered, predetermines tactical climaxes/rewards, injects the Five-Pillar Stasis Grid, and treats Ao/Alice/cosmic convergence as required Book 3 content. Those are not promoted.
+
+### Useful extraction
+Retain only the reusable programmatic pattern:
+`book/scene id -> location -> threat/hazard -> player-selected resolution -> earned reward -> completion/world-state`.
+
+Improve it before production:
+- replace one predetermined `tactical_climax_resolution` with five-choice resolution records;
+- default all completion flags false per save slot;
+- separate official/campaign/crossover source status;
+- attach era/DR/location/plane/continuity fields;
+- record immediate and later consequences;
+- keep Book I clue/mystery state rather than revealing the avatar immediately;
+- do not assume migration V151-V160.
+
+### Design-lab score
+V127 as replacement canon:
+Fun 7; Agency 2; Living World 4; Mystery 1; Themes 4; Relationships 2; Continuity 2; World Building 6; Replayability 3; Callback 6.
+**Weighted: 36.8/100 — REJECT.**
+
+V127 data/HUD pattern after normalization:
+Fun 8; Agency 9; Living World 8; Mystery 9; Themes 9; Relationships 8; Continuity 9; World Building 9; Replayability 9; Callback 10.
+**Expected normalized architecture: ~87/100 — PROMOTE FOR REWRITE.**
+
+V127's "definitive" and "production-grade" labels are document claims only and do not override repository canon or code audit requirements.
