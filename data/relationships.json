@@ -1,0 +1,5 @@
+[
+  {"id":"eilistraee-ghaunadaur","subject":"eilistraee","predicate":"opposes","object":"ghaunadaur","start_dr":"unknown","end_dr":"unknown","location":"Forgotten Realms","plane":"multiple","source":"user-provided Forgotten Realms lore excerpt; verify official source","canon_status":"unverified","continuity_status":"pending_review"},
+  {"id":"eilistraee-lolth","subject":"eilistraee","predicate":"opposes","object":"lolth","start_dr":"unknown","end_dr":"unknown","location":"Forgotten Realms","plane":"multiple","source":"user-provided Forgotten Realms lore excerpt; verify official source","canon_status":"unverified","continuity_status":"pending_review"},
+  {"id":"alice-ghaunadaur","subject":"alice-zress","predicate":"warlock_patron","object":"ghaunadaur","start_dr":"unknown","end_dr":"unknown","location":"unknown","plane":"Material Plane / Abyss (planned)","source":"campaign homebrew","canon_status":"homebrew","continuity_status":"pending_review"}
+]
