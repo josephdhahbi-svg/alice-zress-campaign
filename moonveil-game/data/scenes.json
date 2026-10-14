@@ -44,6 +44,34 @@
       "reply": "That might be how we save the sanctuary."
     },
     {
+      "id": 6,
+      "label": "Ask Lyra what she needs tonight.",
+      "approval": 3,
+      "flag": "listened_to_lyra",
+      "reply": "For once? Someone to listen. Thank you."
+    },
+    {
+      "id": 7,
+      "label": "Offer to stand watch while she rests.",
+      "approval": 2,
+      "flag": "shared_watch",
+      "reply": "Then we can trade shifts. Neither of us has to do everything."
+    },
+    {
+      "id": 8,
+      "label": "Ask about Eilistraee and Lathander.",
+      "approval": 1,
+      "flag": "discussed_faith",
+      "reply": "Perhaps dawn and moonlight can share the same horizon."
+    },
+    {
+      "id": 9,
+      "label": "Set a boundary and ask for quiet.",
+      "approval": 0,
+      "flag": "boundary_respected",
+      "reply": "Of course. I will be here when you want to talk."
+    },
+    {
       "id": 10,
       "label": "Ask to share a deeper vow.",
       "requires": {
@@ -53,6 +81,22 @@
       "approval": 3,
       "flag": "vow_spoken",
       "reply": "I choose this freely, Seralyth. And I choose you."
+    },
+    {
+      "id": 11,
+      "label": "Secret: Speak the Sun–Moon Covenant.",
+      "hidden": true,
+      "requires": {
+        "approval": 40,
+        "flags": [
+          "vow_spoken",
+          "sanctuary_restored",
+          "mutual_covenant_ready"
+        ]
+      },
+      "approval": 0,
+      "flag": "sun_moon_covenant",
+      "reply": "The vow is offered and accepted freely, beneath moonlight and dawn."
     }
   ]
 }
