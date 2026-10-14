@@ -42,15 +42,69 @@ class DatabaseHelper {
     return true;
   }
 
+  static Future<void> _createV1(DatabaseExecutor db) async {
+    await db.execute('CREATE TABLE IF NOT EXISTS saves (slot INTEGER PRIMARY KEY, state_json TEXT NOT NULL)');
+    await db.execute('CREATE TABLE IF NOT EXISTS events (id TEXT PRIMARY KEY, slot INTEGER NOT NULL, choice_id INTEGER NOT NULL, detail_json TEXT NOT NULL)');
+  }
+
+  static Future<void> _createV2(DatabaseExecutor db) async {
+    await _createV1(db);
+    // New tables are additive projections; legacy saves remain authoritative.
+    await db.execute('CREATE TABLE IF NOT EXISTS world_events (event_id TEXT PRIMARY KEY, slot INTEGER NOT NULL, scene_id TEXT NOT NULL, choice_id INTEGER NOT NULL, detail_json TEXT NOT NULL, recorded_at TEXT)');
+    await db.execute('CREATE TABLE IF NOT EXISTS persistent_flags (slot INTEGER NOT NULL, flag_key TEXT NOT NULL, flag_value TEXT NOT NULL, PRIMARY KEY (slot, flag_key))');
+    await db.execute("CREATE TRIGGER IF NOT EXISTS world_events_no_update BEFORE UPDATE ON world_events BEGIN SELECT RAISE(ABORT, 'world events are immutable'); END");
+    await db.execute("CREATE TRIGGER IF NOT EXISTS world_events_no_delete BEFORE DELETE ON world_events BEGIN SELECT RAISE(ABORT, 'world events are immutable'); END");
+  }
+
+  static Future<void> _upgrade(Database db, int oldVersion, int newVersion) async {
+    if (oldVersion < 2) {
+      await _createV2(db);
+      // Preserve every legacy event, including its original ID and payload.
+      // A legacy timestamp was never recorded: do not invent one.
+      final oldEvents = await db.query('events');
+      for (final event in oldEvents) {
+        final id = event['id'] as String;
+        final choiceId = event['choice_id'] as int;
+        final suffix = ':$choiceId';
+        final sceneId = id.endsWith(suffix)
+            ? id.substring(0, id.length - suffix.length)
+            : 'legacy_unknown';
+        await db.insert('world_events', {
+          'event_id': id,
+          'slot': event['slot'],
+          'scene_id': sceneId,
+          'choice_id': choiceId,
+          'detail_json': event['detail_json'],
+          'recorded_at': null,
+        }, conflictAlgorithm: ConflictAlgorithm.abort);
+      }
+      // Existing flags remain in saves.state_json. This table is a
+      // forward-looking index, never a substitute for the snapshot.
+      final saves = await db.query('saves');
+      for (final save in saves) {
+        final slot = save['slot'] as int;
+        final state = jsonDecode(save['state_json'] as String);
+        if (state is Map && state['flags'] is Map) {
+          for (final entry in (state['flags'] as Map).entries) {
+            await db.insert('persistent_flags', {
+              'slot': slot,
+              'flag_key': entry.key.toString(),
+              'flag_value': jsonEncode(entry.value),
+            }, conflictAlgorithm: ConflictAlgorithm.abort);
+          }
+        }
+      }
+    }
+  }
+
   Future<Database> get database async {
     if (_db != null && _db!.isOpen) return _db!;
     final location = _databasePath ??
         join(await _factory.getDatabasesPath(), 'moonveil_universe.db');
     _db = await _factory.openDatabase(location,
-        options: OpenDatabaseOptions(version: 1, onCreate: (db, version) async {
-      await db.execute('CREATE TABLE saves (slot INTEGER PRIMARY KEY, state_json TEXT NOT NULL)');
-      await db.execute('CREATE TABLE events (id TEXT PRIMARY KEY, slot INTEGER NOT NULL, choice_id INTEGER NOT NULL, detail_json TEXT NOT NULL)');
-    }));
+        options: OpenDatabaseOptions(version: 2,
+            onCreate: (db, version) => _createV2(db),
+            onUpgrade: _upgrade));
     return _db!;
   }
 
@@ -95,6 +149,15 @@ class DatabaseHelper {
         'id': eventId, 'slot': 1, 'choice_id': choiceId,
         'detail_json': jsonEncode({'approvalDelta': choice.approval, 'flag': choice.flag})
       });
+      await txn.insert('world_events', {
+        'event_id': eventId, 'slot': 1, 'scene_id': state['scene'],
+        'choice_id': choiceId,
+        'detail_json': jsonEncode({'approvalDelta': choice.approval, 'flag': choice.flag}),
+        'recorded_at': DateTime.now().toUtc().toIso8601String(),
+      }, conflictAlgorithm: ConflictAlgorithm.abort);
+      await txn.insert('persistent_flags', {
+        'slot': 1, 'flag_key': choice.flag, 'flag_value': jsonEncode(true),
+      }, conflictAlgorithm: ConflictAlgorithm.replace);
       await txn.insert('saves', {'slot': 1, 'state_json': jsonEncode(state)},
           conflictAlgorithm: ConflictAlgorithm.replace);
       return true;
