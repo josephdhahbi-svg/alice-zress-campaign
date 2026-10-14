@@ -1,5 +1,7 @@
 # Narrative roadmap and canon gates
 
+> **ACTIVE FOCUS (2026-10-14):** Develop and verify the foundational Elder Eye Trilogy first. Working paperwork lives in `campaigns/elder-eye-trilogy/`. Later Alice/Underdark and Abyss material remains downstream context until the trilogy's Legacy Packet is established.
+
 ## Reading / play order
 1. **Foundational prologue trilogy (Eilistraee-centered)**:
    - Book I: *That Which Lurks*
