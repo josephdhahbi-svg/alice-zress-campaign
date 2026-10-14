@@ -65,3 +65,12 @@ Notepad/Markdown notes are the human-readable story bible.
 Spreadsheet/Excel is the structured cross-reference ledger.
 GitHub is the version-controlled source of truth for implementation and synchronization.
 All three must use stable IDs so a story scene, item, feat, skill, and game record can cross-reference each other.
+
+
+## Locked genre identities — Three Chosen
+
+- **Chosen 1 — Alice:** Drow, Underdark / Elder Eye path. **Genre identity: MADNESS.** Her Underdark journey, Rabbit Hole, Elder Eye, cosmic doors and related presentation should use Madness as the governing genre/aesthetic identity.
+- **Chosen 2 — Solar:** Aasimar, Angel path. **Story shape: MIDDLE → LOW → RISE.** Mortal/Material beginning → descent into Avernus → ascent to space/stars → earned Angel/Solar culmination.
+- **Chosen 3 — Dhampir Undead Warlock:** Ravenloft path. **Genre identity: GOTHIC.** Ravenloft, undeath, horror architecture and the eventual lich path should use Gothic as the governing genre/aesthetic identity.
+
+These identities are structural design rules, not merely visual labels. They should influence locations, encounters, music, imagery, character progression, items, dialogue, quests and UI while preserving each character's distinct story.
