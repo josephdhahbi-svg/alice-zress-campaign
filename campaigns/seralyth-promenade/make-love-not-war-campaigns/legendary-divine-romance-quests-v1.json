@@ -1,0 +1,130 @@
+{
+  "campaign_label": "Make Love, Not War Campaigns",
+  "romance_tiers": [
+    "First Spark",
+    "Courtship",
+    "Great Romance",
+    "Enchanted Heart",
+    "Celestial Court",
+    "Chosen of Love",
+    "Divine Nirvana"
+  ],
+  "quests": [
+    {
+      "deity": "Sune",
+      "chosen": {
+        "name": "Lady Elysia",
+        "canon": "homebrew"
+      },
+      "legendary_quest": "The Heartfire Chalice",
+      "proposed_reward": "Heartfire Benediction",
+      "quest_status": "not started",
+      "romance_status": "not started",
+      "reward_earned": false,
+      "theme": "Make Love, Not War",
+      "objective": "Complete a mythic courtship journey built on mutual trust and meaningful choices, not a boss battle"
+    },
+    {
+      "deity": "Hanali Celanil",
+      "chosen": {
+        "name": "Princess Maeve",
+        "canon": "homebrew"
+      },
+      "legendary_quest": "The Canvas of Souls",
+      "proposed_reward": "Starlight Muse's Favor",
+      "quest_status": "not started",
+      "romance_status": "not started",
+      "reward_earned": false,
+      "theme": "Make Love, Not War",
+      "objective": "Complete a mythic courtship journey built on mutual trust and meaningful choices, not a boss battle"
+    },
+    {
+      "deity": "Sharess",
+      "chosen": {
+        "name": "Mistress Vespera",
+        "canon": "homebrew"
+      },
+      "legendary_quest": "The Feast of Unbroken Joy",
+      "proposed_reward": "Festival of Joy Blessing",
+      "quest_status": "not started",
+      "romance_status": "not started",
+      "reward_earned": false,
+      "theme": "Make Love, Not War",
+      "objective": "Complete a mythic courtship journey built on mutual trust and meaningful choices, not a boss battle"
+    },
+    {
+      "deity": "Sehanine Moonbow",
+      "chosen": {
+        "name": "Kira the Silent",
+        "canon": "homebrew"
+      },
+      "legendary_quest": "The Shroud of Midnight",
+      "proposed_reward": "Dreamwalker's Veil",
+      "quest_status": "not started",
+      "romance_status": "not started",
+      "reward_earned": false,
+      "theme": "Make Love, Not War",
+      "objective": "Complete a mythic courtship journey built on mutual trust and meaningful choices, not a boss battle"
+    },
+    {
+      "deity": "Aphrodite",
+      "chosen": {
+        "name": "Lady Aurelia",
+        "canon": "homebrew"
+      },
+      "legendary_quest": "The Golden Apple of Discord",
+      "proposed_reward": "Rosegold Inspiration",
+      "quest_status": "not started",
+      "romance_status": "not started",
+      "reward_earned": false,
+      "theme": "Make Love, Not War",
+      "objective": "Complete a mythic courtship journey built on mutual trust and meaningful choices, not a boss battle"
+    },
+    {
+      "deity": "Sheela Peryroyl",
+      "chosen": {
+        "name": "Bree of the Glade",
+        "canon": "homebrew"
+      },
+      "legendary_quest": "The Bloom of First Light",
+      "proposed_reward": "Bloomkeeper's Grace",
+      "quest_status": "not started",
+      "romance_status": "not started",
+      "reward_earned": false,
+      "theme": "Make Love, Not War",
+      "objective": "Complete a mythic courtship journey built on mutual trust and meaningful choices, not a boss battle"
+    },
+    {
+      "deity": "Evening Glory",
+      "chosen": {
+        "name": "Nadia the Undying",
+        "canon": "homebrew"
+      },
+      "legendary_quest": "The Boundless Ring",
+      "proposed_reward": "Bond of Remembrance",
+      "quest_status": "not started",
+      "romance_status": "not started",
+      "reward_earned": false,
+      "theme": "Make Love, Not War",
+      "objective": "Complete a mythic courtship journey built on mutual trust and meaningful choices, not a boss battle"
+    }
+  ],
+  "mechanics": {
+    "base_choices": 9,
+    "locked_choice": 10,
+    "hidden_choice": 11,
+    "approval_range": [
+      -50,
+      50
+    ],
+    "consent_required": true,
+    "auto_approval": false,
+    "auto_immortality": false
+  },
+  "notes": [
+    "Romance ranks separate from combat level",
+    "Lore, plane and date verification pending",
+    "All rewards homebrew and unearned",
+    "Earlier files retained; this is the canonical folder index"
+  ]
+}
