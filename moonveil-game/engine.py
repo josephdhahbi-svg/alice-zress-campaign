@@ -28,12 +28,13 @@ def save_state(state, path=SAVE):
 def eligible(choice, state):
     requirement = choice.get("requires", {})
     return (state["approval"].get("lyra_solaria", 0) >= requirement.get("approval", -50)
-            and (not requirement.get("flag") or state["flags"].get(requirement["flag"], False)))
+            and (not requirement.get("flag") or state["flags"].get(requirement["flag"], False))
+            and all(state["flags"].get(flag, False) for flag in requirement.get("flags", [])))
 
 def resolve(choice, state, roll=None):
     if not eligible(choice, state):
         return {"ok": False, "message": "Choice locked: requirements not met."}
-    if any(event["choice_id"] == choice["id"] for event in state["events"]):
+    if any(event.get("scene_id", state["scene"]) == state["scene"] and event["choice_id"] == choice["id"] for event in state["events"]):
         return {"ok": False, "message": "This scene choice has already been resolved."}
     check = choice.get("check")
     if check:
@@ -43,13 +44,13 @@ def resolve(choice, state, roll=None):
             raise ValueError("D20 roll must be 1..20")
         total = roll + check["modifier"]
         if total < check["dc"]:
-            state["events"].append({"choice_id": choice["id"], "roll": roll, "total": total, "success": False})
+            state["events"].append({"scene_id": state["scene"], "choice_id": choice["id"], "roll": roll, "total": total, "success": False})
             return {"ok": True, "message": f"Investigation {roll}+{check['modifier']}={total} vs DC {check['dc']}: failed. Lyra suggests another approach."}
     else:
         total = None
     state["approval"]["lyra_solaria"] = max(-50, min(50, state["approval"]["lyra_solaria"] + choice["approval"]))
     state["flags"][choice["flag"]] = True
-    state["events"].append({"choice_id": choice["id"], "roll": roll if check else None, "total": total, "success": True})
+    state["events"].append({"scene_id": state["scene"], "choice_id": choice["id"], "roll": roll if check else None, "total": total, "success": True})
     return {"ok": True, "message": choice["reply"]}
 
 def main():
@@ -60,6 +61,8 @@ def main():
     print(f'{scene["speaker"]}: "{scene["opening"]}"')
     print("Lyra approval:", state["approval"]["lyra_solaria"])
     for choice in scene["choices"]:
+        if choice.get("hidden") and not eligible(choice, state):
+            continue
         marker = "" if eligible(choice, state) else " [LOCKED]"
         print(f'{choice["id"]}. {choice["label"]}{marker}')
     try:
