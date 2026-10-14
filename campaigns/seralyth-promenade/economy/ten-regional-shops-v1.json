@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "language": "English",
+  "status": "homebrew retail registry, not running engine",
+  "currency": {
+    "cp_per_gp": 100,
+    "cp_per_sp": 10
+  },
+  "source_note": "Prices user supplied. Some standard equipment values correspond to 2014 5e lists, but scrolls, magic items, reagents and specialty services are not established as official fixed retail prices; 2024 differences unverified.",
+  "stores": [
+    {
+      "id": "SHOP01",
+      "name": "The Broken Blade Blacksmith",
+      "location": "Luskan Docks",
+      "proprietor": {
+        "name": "Delly",
+        "species": "Dwarf",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Greatsword",
+          "price_cp": 5000,
+          "stock": 3,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Longsword",
+          "price_cp": 1500,
+          "stock": 8,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Plate Armor",
+          "price_cp": 150000,
+          "stock": 1,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Chain Mail",
+          "price_cp": 7500,
+          "stock": 4,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Shield",
+          "price_cp": 1000,
+          "stock": 12,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    },
+    {
+      "id": "SHOP02",
+      "name": "The Alchemist's Cauldron",
+      "location": "Neverwinter Outskirts",
+      "proprietor": {
+        "name": "Trixie",
+        "species": "Rock Gnome",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Potion of Healing",
+          "price_cp": 5000,
+          "stock": 25,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Potion of Greater Healing",
+          "price_cp": 15000,
+          "stock": 5,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Alchemist's Fire",
+          "price_cp": 5000,
+          "stock": 10,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Antitoxin",
+          "price_cp": 5000,
+          "stock": 15,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Acid Vial",
+          "price_cp": 2500,
+          "stock": 12,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    },
+    {
+      "id": "SHOP03",
+      "name": "The Arcane Archive Bookstore",
+      "location": "Waterdeep",
+      "proprietor": {
+        "name": "Nesta",
+        "species": "Halfling",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Blank Spellbook",
+          "price_cp": 5000,
+          "stock": 5,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Cantrip Spell Scroll",
+          "price_cp": 1000,
+          "stock": 20,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Level 1 Spell Scroll",
+          "price_cp": 6000,
+          "stock": 10,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Level 2 Spell Scroll",
+          "price_cp": 12000,
+          "stock": 4,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Map or Scroll Case",
+          "price_cp": 100,
+          "stock": 30,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    },
+    {
+      "id": "SHOP04",
+      "name": "The Wildrunner Fletcher & Bowyer",
+      "location": "Misty Forest",
+      "proprietor": {
+        "name": "Maeve",
+        "species": "Wood Elf",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Longbow",
+          "price_cp": 5000,
+          "stock": 6,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Shortbow",
+          "price_cp": 2500,
+          "stock": 10,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Arrows 20",
+          "price_cp": 100,
+          "stock": 100,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Heavy Crossbow",
+          "price_cp": 5000,
+          "stock": 3,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Crossbow Bolts 20",
+          "price_cp": 100,
+          "stock": 80,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    },
+    {
+      "id": "SHOP05",
+      "name": "The Dragon's Hoard Jeweler",
+      "location": "Baldur's Gate Upper City",
+      "proprietor": {
+        "name": "Onyx",
+        "species": "Tiefling",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Diamond 300gp",
+          "price_cp": 30000,
+          "stock": 2,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Amulet Holy Symbol",
+          "price_cp": 500,
+          "stock": 15,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Ruby Stone",
+          "price_cp": 10000,
+          "stock": 5,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Gold Ring",
+          "price_cp": 2500,
+          "stock": 10,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    },
+    {
+      "id": "SHOP06",
+      "name": "The Wanderer's Outfitter",
+      "location": "Luskan",
+      "proprietor": {
+        "name": "Kess",
+        "species": "Half-Elf",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Backpack",
+          "price_cp": 200,
+          "stock": 40,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Hempen Rope 50ft",
+          "price_cp": 100,
+          "stock": 60,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Rations 1 day",
+          "price_cp": 50,
+          "stock": 300,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Tinderbox",
+          "price_cp": 50,
+          "stock": 50,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Torch",
+          "price_cp": 1,
+          "stock": 500,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    },
+    {
+      "id": "SHOP07",
+      "name": "The Silver Stallion Stable & Farrier",
+      "location": "Waterdeep Gates",
+      "proprietor": {
+        "name": "Fiona",
+        "species": "Human",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Riding Horse",
+          "price_cp": 7500,
+          "stock": 8,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Draft Horse",
+          "price_cp": 5000,
+          "stock": 12,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Riding Saddle",
+          "price_cp": 1000,
+          "stock": 15,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Saddlebags",
+          "price_cp": 400,
+          "stock": 20,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    },
+    {
+      "id": "SHOP08",
+      "name": "The Vault of Wondrous Curios",
+      "location": "Bryn Shander",
+      "proprietor": {
+        "name": "Sariel",
+        "species": "Moon Elf",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Bag of Holding",
+          "price_cp": 50000,
+          "stock": 1,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Immovable Rod",
+          "price_cp": 40000,
+          "stock": 2,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Goggles of Night",
+          "price_cp": 30000,
+          "stock": 3,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Cloak of Protection",
+          "price_cp": 45000,
+          "stock": 1,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    },
+    {
+      "id": "SHOP09",
+      "name": "The Underdark Spore Vault",
+      "location": "Menzoberranzan",
+      "proprietor": {
+        "name": "Zilvra",
+        "species": "Drow",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Zurkhwood Plank",
+          "price_cp": 50,
+          "stock": 200,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Faerzress Spore Powder",
+          "price_cp": 1000,
+          "stock": 22,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Waterorb Bulb",
+          "price_cp": 10,
+          "stock": 150,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Drow Poison Vial",
+          "price_cp": 20000,
+          "stock": 4,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    },
+    {
+      "id": "SHOP10",
+      "name": "The Iron Hide Leatherworker",
+      "location": "Baldur's Gate Lower City",
+      "proprietor": {
+        "name": "Dahlia",
+        "species": "Half-Orc",
+        "adult": true
+      },
+      "inventory": [
+        {
+          "name": "Leather Armor",
+          "price_cp": 1000,
+          "stock": 20,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Studded Leather",
+          "price_cp": 4500,
+          "stock": 10,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Hide Armor",
+          "price_cp": 1000,
+          "stock": 15,
+          "price_status": "user-proposed; rules verification pending"
+        },
+        {
+          "name": "Scale Mail",
+          "price_cp": 5000,
+          "stock": 8,
+          "price_status": "user-proposed; rules verification pending"
+        }
+      ],
+      "location_status": "homebrew shop, route and chronology pending",
+      "romance": "optional non-graphic and consensual; prices never buy consent"
+    }
+  ],
+  "rules": {
+    "purchase": "confirm and debit once with transaction id; reject insufficient funds and stock",
+    "resale": "50 percent is a homebrew default for eligible gear; gems and art at face value when applicable; damaged gear not automatically eligible",
+    "discount": "negotiated, not automatic from flirting",
+    "crime": "theft requires checks and has legal consequences; no automatic success",
+    "approval": "only changes after resolved actions",
+    "player_agency": true
+  },
+  "choice_matrix": {
+    "base": 9,
+    "locked_10": "Complete The Broken Bell, Merchant's Accord, and The Moonlit Ledger",
+    "secret_11": "Show only after locked quest plus nonviolent merchant protection achievement",
+    "secret_visible": false
+  },
+  "opening": {
+    "location": "Broken Blade Blacksmith, Luskan Docks",
+    "npc": "Delly",
+    "dialogue": "'If you're buying steel, name your blade. If you're here to waste my time, the door's behind you.'",
+    "starting_wallet": "unknown, do not debit",
+    "reward_preview": "Masterwork Forge Token (homebrew, unearned)"
+  },
+  "limitations": [
+    "No live inventory persistence",
+    "No verified source-by-source 2014 vs 2024 price reconciliation",
+    "Merchant character names may overlap other rosters",
+    "No full playtest"
+  ]
+}
