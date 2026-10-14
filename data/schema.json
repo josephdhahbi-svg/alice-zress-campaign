@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "required": [
+    "id",
+    "name",
+    "category",
+    "era",
+    "canon_date_dr",
+    "campaign_timestamp",
+    "location",
+    "plane",
+    "earliest_available",
+    "latest_available",
+    "duration",
+    "activation_time",
+    "prerequisites",
+    "source",
+    "canon_status",
+    "continuity_status",
+    "notes"
+  ],
+  "allowed_continuity_status": [
+    "pending_review",
+    "confirmed",
+    "contradiction",
+    "alternate_timeline"
+  ],
+  "allowed_canon_status": [
+    "official",
+    "homebrew",
+    "crossover",
+    "mixed",
+    "unverified"
+  ]
+}
