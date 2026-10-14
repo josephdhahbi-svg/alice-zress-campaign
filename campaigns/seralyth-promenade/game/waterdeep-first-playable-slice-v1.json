@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "status": "PLAYABLE TEXT SCENE DATA / PROVISIONAL ECONOMY; not integrated with external game UI",
+  "era": "1492 DR PROVISIONAL",
+  "rules": "D&D 5e-inspired homebrew; coin prices below provisional",
+  "map": {
+    "nodes": [
+      {
+        "id": "WD_DOCK",
+        "name": "Waterdeep Dock Ward",
+        "kind": "surface",
+        "adjacent": [
+          "WD_TAVERN",
+          "WD_MARKET",
+          "WD_YAWNING"
+        ]
+      },
+      {
+        "id": "WD_TAVERN",
+        "name": "River Lantern Tavern (homebrew Waterdeep branch)",
+        "kind": "tavern",
+        "adjacent": [
+          "WD_DOCK"
+        ]
+      },
+      {
+        "id": "WD_MARKET",
+        "name": "Dock Ward Market (homebrew merchant stalls)",
+        "kind": "market",
+        "adjacent": [
+          "WD_DOCK"
+        ]
+      },
+      {
+        "id": "WD_YAWNING",
+        "name": "Yawning Portal access",
+        "kind": "gate",
+        "adjacent": [
+          "WD_DOCK",
+          "UNDERMOUNTAIN"
+        ],
+        "requires": "guide_or_permit"
+      },
+      {
+        "id": "UNDERMOUNTAIN",
+        "name": "Undermountain approach",
+        "kind": "dungeon",
+        "adjacent": [
+          "WD_YAWNING",
+          "SKULLPORT"
+        ],
+        "requires": "expedition_clearance"
+      },
+      {
+        "id": "SKULLPORT",
+        "name": "Skullport",
+        "kind": "underdark",
+        "adjacent": [
+          "UNDERMOUNTAIN",
+          "PROMENADE_ROUTE"
+        ]
+      },
+      {
+        "id": "PROMENADE_ROUTE",
+        "name": "Promenade route (homebrew gated path; canon route unverified)",
+        "kind": "underdark",
+        "adjacent": [
+          "SKULLPORT",
+          "PROMENADE"
+        ],
+        "requires": "route_safe"
+      },
+      {
+        "id": "PROMENADE",
+        "name": "Promenade sanctuary",
+        "kind": "sanctuary",
+        "adjacent": [
+          "PROMENADE_ROUTE"
+        ]
+      }
+    ]
+  },
+  "economy": {
+    "starting_gold_gp": 20,
+    "currencies": {
+      "cp_per_sp": 10,
+      "sp_per_gp": 10,
+      "gp_per_pp": 10
+    },
+    "buy_sell_policy": "No automatic resale at same price; resale 50% of list, rounded down in cp",
+    "shops": [
+      {
+        "id": "WD_S01",
+        "name": "Lantern & Rope",
+        "node": "WD_MARKET",
+        "merchant": "Mira Silverskein",
+        "stock": [
+          {
+            "id": "rope_50ft",
+            "price_cp": 1000,
+            "qty": 2
+          },
+          {
+            "id": "oil_flask",
+            "price_cp": 10,
+            "qty": 12
+          },
+          {
+            "id": "healers_kit",
+            "price_cp": 500,
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "id": "WD_S02",
+        "name": "Bellwright's Tools",
+        "node": "WD_MARKET",
+        "merchant": "Dara Bellwright",
+        "stock": [
+          {
+            "id": "hammer",
+            "price_cp": 100,
+            "qty": 4
+          },
+          {
+            "id": "tuning_fork_homebrew",
+            "price_cp": 250,
+            "qty": 2
+          }
+        ]
+      },
+      {
+        "id": "WD_S03",
+        "name": "River Lantern Tavern",
+        "node": "WD_TAVERN",
+        "merchant": "Maris Thorne",
+        "stock": [
+          {
+            "id": "meal",
+            "price_cp": 30,
+            "qty": 20
+          },
+          {
+            "id": "ale_mug",
+            "price_cp": 4,
+            "qty": 30
+          },
+          {
+            "id": "private_room_night",
+            "price_cp": 800,
+            "qty": 3
+          }
+        ]
+      }
+    ]
+  },
+  "romance": {
+    "id": "C14",
+    "name": "Maris Thorne",
+    "age": "adult",
+    "gender": "woman",
+    "attraction": "women (homebrew character choice)",
+    "approval_start": 0,
+    "approval_min": -50,
+    "approval_max": 50,
+    "romance_requires": {
+      "mutual_consent": true,
+      "trust_at_least": 15,
+      "personal_quest": "Q-TAVERN-13"
+    },
+    "notes": "No automatic romance from payment, employment, or approval; friendship path always available"
+  },
+  "scenes": [
+    {
+      "id": "SC01",
+      "title": "The River Lantern's Last Song",
+      "node": "WD_TAVERN",
+      "npc": "C14",
+      "opening": "Rain drums on the Waterdeep windows. Maris Thorne sets down a glass as a traveler's star-chart sputters and a violet eye flickers in the reflection. The cellar door rattles.",
+      "dialogue": "'Either that cellar is haunted, or somebody has opened a very expensive hole in reality. Drinks are still half-price until the screaming starts.'",
+      "options": [
+        {
+          "id": 1,
+          "tag": "Heroic",
+          "text": "Help Maris evacuate the guests before checking the cellar.",
+          "effects": {
+            "approval": 3,
+            "flags": [
+              "guests_safe"
+            ],
+            "quest": "Q-TAVERN-13"
+          }
+        },
+        {
+          "id": 2,
+          "tag": "Comedy",
+          "text": "Ask whether planar disasters are included in the room rate.",
+          "effects": {
+            "approval": 1,
+            "flags": [
+              "maris_laughs"
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "tag": "Flirt",
+          "text": "Invite Maris to share a drink after her shift, if she'd like.",
+          "effects": {
+            "approval": 1,
+            "flags": [
+              "invitation_offered"
+            ],
+            "consent": "Maris may accept or decline; no guaranteed romance"
+          }
+        },
+        {
+          "id": 4,
+          "tag": "Chaos",
+          "text": "Ask the malfunctioning Modron to negotiate with the cellar.",
+          "effects": {
+            "approval": 0,
+            "flags": [
+              "modron_involved"
+            ],
+            "risk": "possible complication"
+          }
+        },
+        {
+          "id": 5,
+          "tag": "Insight",
+          "text": "Study Maris and the violet reflection; request an Insight check.",
+          "effects": {
+            "approval": 0,
+            "flags": [
+              "insight_requested"
+            ],
+            "check": "DM adjudicates; no automatic success"
+          }
+        }
+      ]
+    },
+    {
+      "id": "SC02",
+      "title": "The Unheard Bell",
+      "node": "PROMENADE",
+      "npc": "Eilistraeen priestess (original NPC)",
+      "opening": "Beneath the old temple, the bell rings without sound. An ancient ward bears three marks: an Eye, a Moon, and the Weave.",
+      "dialogue": "'The ward can be mended, but the novices are still below. What matters most to you?'",
+      "options": [
+        {
+          "id": 1,
+          "tag": "Heroic",
+          "text": "Rescue the novices first.",
+          "effects": {
+            "approval": 0,
+            "flags": [
+              "novices_prioritized"
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "tag": "Comedy",
+          "text": "Ask whether the silent bell has a refund policy.",
+          "effects": {
+            "approval": 0,
+            "flags": [
+              "priestess_amused"
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "tag": "Flirt",
+          "text": "Offer a warm compliment, without pressuring the priestess.",
+          "effects": {
+            "approval": 0,
+            "flags": [
+              "courtesy_offered"
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "tag": "Chaos",
+          "text": "Suggest recruiting a myconid choir to sing at the bell.",
+          "effects": {
+            "approval": 0,
+            "flags": [
+              "choir_suggested"
+            ]
+          }
+        },
+        {
+          "id": 5,
+          "tag": "Insight",
+          "text": "Examine the sigils and request an Arcana check.",
+          "effects": {
+            "approval": 0,
+            "flags": [
+              "arcana_requested"
+            ],
+            "check": "DM adjudicates"
+          }
+        }
+      ]
+    }
+  ],
+  "monsters": [
+    {
+      "id": "EN01",
+      "name": "Animated armor",
+      "source": "D&D 5e SRD-compatible creature concept; verify exact edition stat block",
+      "node": "UNDERMOUNTAIN",
+      "cr": "1",
+      "trigger": "investigate abandoned guard post",
+      "status": "proposed, no verified stat block or coordinates"
+    },
+    {
+      "id": "EN02",
+      "name": "Cultist",
+      "source": "D&D 5e SRD-compatible creature concept; verify exact edition stat block",
+      "node": "PROMENADE_ROUTE",
+      "cr": "1/8",
+      "trigger": "route_safe false and cult investigation",
+      "status": "proposed, no verified stat block or coordinates"
+    }
+  ],
+  "scoring": {
+    "categories": [
+      "narrative",
+      "character_roster",
+      "dialogue_choices",
+      "romance",
+      "economy",
+      "map_navigation",
+      "monster_placement",
+      "chronology",
+      "state_integrity",
+      "game_integration"
+    ],
+    "scale": "0-10 each; evidence-limited internal design score; not external playtest"
+  }
+}
