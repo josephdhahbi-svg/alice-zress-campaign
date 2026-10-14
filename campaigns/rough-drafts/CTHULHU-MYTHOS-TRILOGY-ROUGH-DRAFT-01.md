@@ -535,3 +535,39 @@ A Moonveil location is not production-ready merely because it has a quest. Befor
 - What changes because they came?
 
 The universe is successful when players remember communities and people as strongly as bosses.
+
+
+---
+
+# LOCKED SETUP — THE SUN, THE MOONS, AND THE STARS
+
+The five-woman adventuring party is collectively called:
+
+## **THE SUN, THE MOONS, AND THE STARS**
+
+Their divine/cosmic five-point frame is:
+
+- ☀ **Lathander — THE SUN** — dawn, renewal, beginnings.
+- ☾ **Selûne — THE MOON** — moon, navigation, night-light.
+- ♫☾ **Eilistraee — THE SECOND MOON** — moonlight, song, dance, freedom.
+- ✦ **Mystra — THE STARS** — magic, pattern, the Weave.
+- ◉ **Ghaunadaur / THE EYE** — NOT a party light. The Eye follows them.
+
+## The trilogy image
+
+**The Sun rises.  
+The Moons guide.  
+The Stars reveal the road.  
+And the Eye is always watching.**
+
+The Eye should initially appear at the edges of the story rather than explain itself: an extra shadow, a circular absence on a map, a wrong star, an eye-like reflection, a repeated symbol, a witness who feels observed, a route that seems to watch travelers back.
+
+Across the trilogy the visual progression is:
+
+**BOOK I — LIGHT:** They first notice the Eye.  
+**BOOK II — STARS:** They discover the Eye has been following their route.  
+**BOOK III — COLOR:** They learn why the Eye followed *them* and must decide what relationship, if any, the universe will have with it.
+
+Do not make Ghaunadaur an ordinary member of the five-person party or reduce the Eye to a standard quest marker. It is the pursuing eldritch presence that turns the party's celestial identity into the central visual motif of the trilogy.
+
+This setup is now the narrative north star for subsequent rough-draft scripts, comics, maps, puzzles, rewards, bosses, and GUI experiments.
