@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "status": "PROPOSED HOMEBREW CONTENT NOT CANON VERIFIED OR IMPLEMENTED",
+  "campaign": "Seralyth Promenade Book I",
+  "date": {
+    "dr": "TBD pending BG3 chronology",
+    "sequence": "Book I pre-BG3; NPCs gated"
+  },
+  "map": {
+    "id": "MAP-PROMENADE-BOOK1-DRAFT",
+    "geometry": "not drawn; nodes conceptual",
+    "nodes": [
+      "Promenade",
+      "Promenade outskirts",
+      "Underdark trade junction",
+      "Skullport",
+      "Undermountain approach"
+    ]
+  },
+  "quests": [
+    {
+      "id": "Q-BELL-01",
+      "title": "The Unheard Bell",
+      "scene": "Book I opening",
+      "shop_ids": [
+        "S01",
+        "S02"
+      ],
+      "effect": "bell_repaired enables trade reopening"
+    },
+    {
+      "id": "Q-ROUTE-02",
+      "title": "Light the Passage",
+      "shop_ids": [
+        "S03",
+        "S06"
+      ],
+      "effect": "route_safe changes merchant travel"
+    },
+    {
+      "id": "Q-SPORE-03",
+      "title": "Spores for the Sick",
+      "shop_ids": [
+        "S04",
+        "S09"
+      ],
+      "effect": "medicine_delivered changes apothecary stock"
+    },
+    {
+      "id": "Q-SALVAGE-04",
+      "title": "Salvage Without Slavery",
+      "shop_ids": [
+        "S05"
+      ],
+      "effect": "rescued_workers changes salvage prices"
+    },
+    {
+      "id": "Q-COURIER-05",
+      "title": "The Missing Courier",
+      "shop_ids": [
+        "S06",
+        "S10"
+      ],
+      "effect": "letters_recovered unlocks leads"
+    },
+    {
+      "id": "Q-SONG-06",
+      "title": "The Bell's Lost Note",
+      "shop_ids": [
+        "S07",
+        "S02"
+      ],
+      "effect": "song_found unlocks peaceful solution"
+    },
+    {
+      "id": "Q-REFUGE-07",
+      "title": "Cloaks for Refugees",
+      "shop_ids": [
+        "S08",
+        "S01"
+      ],
+      "effect": "refugees_warm raises local trust"
+    },
+    {
+      "id": "Q-HEAL-08",
+      "title": "The Bitter Cure",
+      "shop_ids": [
+        "S09",
+        "S04"
+      ],
+      "effect": "antidote_supply improves recovery"
+    },
+    {
+      "id": "Q-LEDGER-09",
+      "title": "Who Funds the Silence?",
+      "shop_ids": [
+        "S10",
+        "S05"
+      ],
+      "effect": "trade_records_expose faction"
+    }
+  ],
+  "shops": [
+    {
+      "id": "S01",
+      "name": "Moonlit Supply Counter",
+      "region": "Promenade",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Mira Silverskein",
+        "moral": "BLUE",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "1-4",
+      "inventory_preview": [
+        "rope",
+        "lantern oil",
+        "healer kits"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-BELL-01"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    },
+    {
+      "id": "S02",
+      "name": "Bellwright's Bench",
+      "region": "Promenade",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Dara Bellwright",
+        "moral": "BLUE",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "1-4",
+      "inventory_preview": [
+        "hammers",
+        "copper wire",
+        "tuning forks"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-BELL-01"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    },
+    {
+      "id": "S03",
+      "name": "Underdark Lanterns",
+      "region": "Promenade outskirts",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Velis Duskward",
+        "moral": "GREEN",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "3-7",
+      "inventory_preview": [
+        "hooded lanterns",
+        "chalk",
+        "maps"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-ROUTE-02"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    },
+    {
+      "id": "S04",
+      "name": "Mushroom Exchange",
+      "region": "Underdark trade junction",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Sporekeeper Nymm",
+        "moral": "GREEN",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "3-8",
+      "inventory_preview": [
+        "fungi",
+        "antidote ingredients",
+        "rations"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-SPORE-03"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    },
+    {
+      "id": "S05",
+      "name": "Skullport Salvage",
+      "region": "Skullport",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Rusk Ironhook",
+        "moral": "GREEN",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "5-10",
+      "inventory_preview": [
+        "scrap armor",
+        "grappling hooks",
+        "gears"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-SALVAGE-04"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    },
+    {
+      "id": "S06",
+      "name": "Deepway Courier",
+      "region": "Undermountain approach",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Tella Quickstep",
+        "moral": "BLUE",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "2-8",
+      "inventory_preview": [
+        "sealed letters",
+        "travel supplies",
+        "route permits"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-COURIER-05"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    },
+    {
+      "id": "S07",
+      "name": "Quiet Strings Music House",
+      "region": "Promenade",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Elen Songglass",
+        "moral": "BLUE",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "1-6",
+      "inventory_preview": [
+        "lyres",
+        "strings",
+        "sheet music"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-SONG-06"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    },
+    {
+      "id": "S08",
+      "name": "Silver Thread Tailors",
+      "region": "Promenade",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Jessa Threadwell",
+        "moral": "BLUE",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "1-5",
+      "inventory_preview": [
+        "cloaks",
+        "gloves",
+        "ordinary clothing"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-REFUGE-07"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    },
+    {
+      "id": "S09",
+      "name": "Old Gate Apothecary",
+      "region": "Promenade",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Harrin Vale",
+        "moral": "GREEN",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "1-6",
+      "inventory_preview": [
+        "herbs",
+        "salves",
+        "poultices"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-HEAL-08"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    },
+    {
+      "id": "S10",
+      "name": "Watchful Ledger",
+      "region": "Promenade",
+      "map_id": "MAP-PROMENADE-BOOK1-DRAFT",
+      "map_coordinates": null,
+      "merchant": {
+        "name": "Orren Ink",
+        "moral": "GREEN",
+        "source": "original homebrew",
+        "status": "alive at Book I opening; subject to story state"
+      },
+      "level_band": "1-10",
+      "inventory_preview": [
+        "paper",
+        "ink",
+        "trade ledgers"
+      ],
+      "prices": "TBD before gameplay; no purchases simulated",
+      "opening_hours": "TBD",
+      "date_dr": "TBD",
+      "quest_ids": [
+        "Q-LEDGER-09"
+      ],
+      "restock": "after 7 in-world days only if route_safe; rule proposed",
+      "source": "Moonveil homebrew",
+      "completion": "draft: not fully populated"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Q-BELL-01",
+      "to": "S02",
+      "flag": "bell_repaired",
+      "impact": "unlocks bellwright repairs"
+    },
+    {
+      "from": "Q-ROUTE-02",
+      "to": "S03",
+      "flag": "route_safe",
+      "impact": "restock access"
+    },
+    {
+      "from": "Q-SPORE-03",
+      "to": "S09",
+      "flag": "medicine_delivered",
+      "impact": "restock antidote ingredients"
+    },
+    {
+      "from": "Q-SONG-06",
+      "to": "Q-BELL-01",
+      "flag": "song_found",
+      "impact": "peaceful bell solution"
+    },
+    {
+      "from": "Q-LEDGER-09",
+      "to": "Q-BELL-01",
+      "flag": "trade_records_expose faction",
+      "impact": "alternative culprit lead"
+    }
+  ],
+  "verification": {
+    "records": 10,
+    "target": 100,
+    "unique_ids": true,
+    "shop_quest_references": "to be programmatically verified",
+    "map_coordinates_complete": false,
+    "dr_dates_complete": false,
+    "inventory_prices_complete": false,
+    "tests_executed": 0,
+    "playtests": 0
+  }
+}
