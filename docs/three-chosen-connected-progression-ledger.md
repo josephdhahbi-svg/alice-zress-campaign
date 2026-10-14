@@ -97,3 +97,26 @@ points LEFT       points RIGHT
 ```
 
 The emblem represents the three central characters together and is reserved as a major visual identity for the eventual trilogy poster. Preserve the red-left / green-up / blue-right placement consistently in future poster, logo, UI, title-card, and promotional concepts unless the user explicitly changes it.
+
+
+## LOCKED DESIGN POLICY — Three Chosen as Homebrew World-Mapping NPCs
+
+The universe is built and mapped **first through the Three Chosen as campaign-original/homebrew characters**. This development phase intentionally permits homebrew classes/features, transformations, items, spells, divine relationships, progression systems, cosmological links, and other mechanics needed to establish the setting.
+
+The Three Chosen are not merely player-character drafts. They are **signature setting characters / DM-usable NPCs** who embody and reveal the universe. A Dungeon Master running adventures in this setting may use them as major NPCs, patrons, allies, rivals, quest-givers, historical figures, cosmic guides, or other story roles appropriate to the campaign.
+
+Their journeys function as three primary lenses for mapping the universe:
+- **Alice — MADNESS:** Drow / Underdark / Elder Eye / Rabbit Hole / Infinite Doors / cosmic-unreality route.
+- **Solar — MIDDLE → LOW → RISE:** Aasimar / mortal world → descent into Avernus → ascent through stars/space → Angel/Solar culmination.
+- **Dhampir Undead Warlock — GOTHIC:** Ravenloft / undeath / Gothic-horror route → eventual lich culmination.
+
+Together, their three routes establish major geography, cosmology, factions, divine conflicts, cultures, themes, planar roads, quest structures, and visual language before ordinary book-rules characters are introduced.
+
+### Homebrew-first, official-rules-second rule
+
+1. **Worldbuilding phase:** use the Three Chosen and clearly labeled homebrew/campaign-original material to map and develop the universe.
+2. **Setting stabilization:** document the resulting locations, cosmology, factions, history, conflicts, doors/routes, and DM-facing setting material.
+3. **Official-character phase:** afterward, build ordinary playable characters using the selected official D&D rules/sourcebooks as written, with homebrew excluded unless the DM explicitly opts into it.
+4. Never disguise campaign-original mechanics as official rules. Every record continues to carry its source/canon status.
+
+This separation allows the Three Chosen to be mythic signature figures of the setting while players can still enter the completed universe using straightforward official-rule characters.
