@@ -125,3 +125,25 @@ For world-building, retain only the reusable structure:
 **apex entity -> domain -> threat/hazard -> encounter resolution -> consequence -> reward -> future callback**.
 
 If eventually adopted, normalize it to the campaign continuity schema and map it primarily to Far Realm/Boundary, Astral routes, Madness, Conflict/Security, Story/Myth/Theme, and Navigation/Exploration cells. It must not redefine Sardior, Acererak, Realmspace, crystal-sphere cosmology, or official Great Old One lore.
+
+
+## V106-V112 imported package batch
+
+| Package | Primary contribution | Classification | Elder Eye / world-building use | Status |
+|---|---|---|---|---|
+| V106 | Upper Planes & Celestial Heavens ledger/HUD; proposed V64 | mixed official place-names + campaign-original mechanics | supports Upper Planes station, Solar/angel ascent, virtue trials | QUARANTINE + LORE/CODE AUDIT |
+| V107 | Nine Hells & Infernal Hierarchy ledger/HUD; proposed V65 | mixed official place-names + campaign-original mechanics | supports Solar descent/redemption and infernal law/contract world-building | QUARANTINE + LORE/CODE AUDIT |
+| V108 | Far Realm Entropy ledger/HUD; proposed V66 | mixed D&D/crossover/homebrew | strong Alice MADNESS/Far Realm framework; Carcosa/Xoriat/Kyuss require source separation | QUARANTINE + LORE/CODE AUDIT |
+| V109 | Five-Pillar Convergence ledger/HUD; proposed V67 | campaign-original cosmology overlay | reusable convergence-node structure, but does not replace locked 15-station spectrum | QUARANTINE + RECONCILE |
+| V111 | Infinity-Core cumulative migration/dashboard V35-V70 | generated consolidation candidate | useful inventory of prior engines; not authoritative production core | REFERENCE ONLY + CODE AUDIT |
+| V112 | Prompt-Ingestion archive V35-V72 | generated handoff/archive candidate | useful transfer/index artifact; not source of truth | REFERENCE ONLY + DEDUP |
+
+### Batch handling rules
+
+1. Preserve the locked 15-station LIGHT -> STARS -> COLOR cosmology and 15 world-building pillars. V109's five pillars are a subordinate campaign mechanic, not a replacement cosmology.
+2. Official D&D names do not make surrounding claims official. Sovereigns, hazards, rewards, fixed damage/DCs, conquest states, invented sectors, and hybrid cosmology require individual verification/classification.
+3. V106's celestial realms can feed Solar's ascent path, but terms such as Metatron/Valravn and any exact sovereignty claims remain unverified/crossover until sourced.
+4. V107 can feed Avernus and infernal-contract systems, but destructive save-state mechanics and automatic conquest language are design candidates only.
+5. V108 aligns strongly with Alice's MADNESS identity and Far Realm navigation, but Carcosa/Yellow King material is crossover; Xoriat is setting-specific; Kyuss placement requires audit.
+6. V111/V112 are cumulative generated archives. Never assume their claim of production readiness, migration completeness, or database-version authority. Reconcile every migration number against the actual Flutter database before implementation.
+7. Duplicate V109 uploads are one logical package, not multiple versions.
