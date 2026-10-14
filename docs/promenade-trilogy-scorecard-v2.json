@@ -1,0 +1,182 @@
+{
+  "title": "Promenade trilogy integrated outline v2",
+  "status": "Provisional editorial scores; no mechanics verification or real playtests",
+  "method": "25 categories x (concept+written+verified+playtested), each 0-10",
+  "categories": [
+    {
+      "category": "Fun",
+      "concept": 8,
+      "written": 5,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Agency",
+      "concept": 8,
+      "written": 6,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Story",
+      "concept": 8,
+      "written": 7,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Character",
+      "concept": 8,
+      "written": 6,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Living World",
+      "concept": 8,
+      "written": 6,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Culture",
+      "concept": 7,
+      "written": 4,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Politics",
+      "concept": 7,
+      "written": 5,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Economy",
+      "concept": 6,
+      "written": 4,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "History",
+      "concept": 6,
+      "written": 3,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Geography",
+      "concept": 7,
+      "written": 4,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Quest Design",
+      "concept": 8,
+      "written": 6,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Combat",
+      "concept": 7,
+      "written": 4,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "2024 Compliance",
+      "concept": 5,
+      "written": 2,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Enemy AI",
+      "concept": 6,
+      "written": 3,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Magic Economy",
+      "concept": 6,
+      "written": 4,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Progression",
+      "concept": 8,
+      "written": 5,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Exploration",
+      "concept": 8,
+      "written": 6,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Dialogue",
+      "concept": 7,
+      "written": 5,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Morality",
+      "concept": 8,
+      "written": 6,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Pacing",
+      "concept": 7,
+      "written": 6,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Visual Maps",
+      "concept": 3,
+      "written": 1,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Audio",
+      "concept": 2,
+      "written": 0,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Interface",
+      "concept": 5,
+      "written": 3,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Documentation",
+      "concept": 8,
+      "written": 7,
+      "verified": 0,
+      "playtested": 0
+    },
+    {
+      "category": "Replayability",
+      "concept": 8,
+      "written": 5,
+      "verified": 0,
+      "playtested": 0
+    }
+  ]
+}
