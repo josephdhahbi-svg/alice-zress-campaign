@@ -1,0 +1,21 @@
+[
+  {
+    "id": "promenade",
+    "name": "Promenade of the Dark Maiden",
+    "category": "location",
+    "era": "historical era pending",
+    "canon_date_dr": "unknown",
+    "campaign_timestamp": "not_started",
+    "location": "Undermountain beneath Waterdeep",
+    "plane": "Material Plane",
+    "earliest_available": "unknown",
+    "latest_available": "unknown",
+    "duration": "not_applicable",
+    "activation_time": "not_applicable",
+    "prerequisites": [],
+    "source": "Forgotten Realms lore; specific citations pending",
+    "canon_status": "official",
+    "continuity_status": "pending_review",
+    "notes": "Check construction, leadership, destruction and access by date."
+  }
+]
