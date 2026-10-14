@@ -363,3 +363,46 @@ The useful shared schema should be normalized to:
 `record_id | entity/event | era | DR date | sequence | location | plane | source | canon_status | continuity_status | hazard | five_choice_set | immediate_consequence | later_consequence | world_state | future_callback`.
 
 **Decision:** V130 = HOLD / RESEARCH & SALVAGE. V131 = HOLD / SALVAGE ARCHITECTURE, REJECT PRESET CLIMAX.
+
+
+## Copilot intake — "The Moonweave Codex" — 2026-10-14
+
+**Classification:** user-supplied/Copilot-generated homebrew reference package. It is NOT a complete or authoritative handoff of the Moonveil Universe and does not override the Elder Eye trilogy, Three Chosen structure, chronology ledger, or existing character canon.
+
+### What is useful
+- Moonweave as a campaign-original synthesis motif linking Mystra/Weave, Selune/moonlight, and Eilistraee/song-dance-sword imagery.
+- Modular design vocabulary: Moonfire, Moondance, Sword Dance, Radiant Blade, Crescent Movement, Spellsong.
+- The ten named character concepts can be mined as NPC/cast candidates.
+- A reusable character-template concept.
+
+### Required corrections / quarantine
+- The package conflates official D&D lore, user-supplied reference/homebrew, and newly generated mechanics. Every feature must be source-tagged before adoption.
+- It incorrectly presents one "Eldritch Lich of Eilistraee" as if it were established core canon. Alice remains the central drow Great Old One Warlock with Ghaunadaur patron and Eilistraee heroic/moral relationship; her Eldritch Lich transformation is earned later.
+- The ten Moonweave names are not automatically the ten principal Moonveil PCs. Earlier brainstorming may supply historical NPCs/allies/instructors instead.
+- Do not give most historical characters identical Demiplane -> Lich -> Chosen -> Aspect -> Avatar ladders.
+- "Deity fusion" is not automatically literal fusion of Mystra, Selune, and Eilistraee. Prefer cooperative/symbolic magical traditions unless the user explicitly establishes literal divine fusion.
+- Mechanical claims such as sunlight-sensitivity removal, unlimited Divine Strike, +3/+4 weapons, 300-ft truesight, resistances/vulnerabilities, Far Realm Step reactions, transformation stat packages, and spell access are homebrew until individually sourced/approved.
+- The Eldritch Lich attack/spell package may be inspired by a supplied Eldritch Lich reference, but this Copilot rewrite is not evidence that those numbers are official or appropriate as player features.
+
+### Elder Eye integration
+For the foundational trilogy, mine the cast by differentiated social/story function rather than making ten duplicate ascension protagonists:
+- Astryl/Three-Lights concept -> scholar or disputed theological figure.
+- Vel'nara -> protector / Silverhair-style knight.
+- Maelora -> songkeeper, healer, diplomat.
+- Thal'mor -> prophet/seer who recognizes the disappearances are not merely Lolthite.
+- Zel'thessa -> Sword Dancer/duelist/instructor.
+- Astralyn -> legendary, prophetic, or culmination figure rather than routine party member.
+Other names remain candidate cast pending chronology/geography/source checks.
+
+### Theme mapping
+Moonweave material is subordinate to the locked seven-theme Elder Eye identity:
+**Sword + Song + Dance + Moonlight + Mercy + Freedom + Hope.**
+Mystra/Selune material can enrich Weave/moon imagery, but Eilistraee remains the foundational trilogy's heroic moral center and Ghaunadaur/Lolth retain their established antagonist roles.
+
+### Design-lab verdict
+- As an authoritative "everything we built" master codex: **REJECT**.
+- As a homebrew idea bank / NPC-archetype library: **KEEP**.
+- As a direct rules package without source audit and balance testing: **QUARANTINE**.
+- As visual/thematic inspiration for differentiated Elder Eye NPCs: **PROMOTE FOR REWRITE**.
+
+Normalize adopted records through the existing continuity fields and require five-choice consequences, acquisition chronology, prerequisites, source/canon status, and future callbacks before anything becomes playable canon.
