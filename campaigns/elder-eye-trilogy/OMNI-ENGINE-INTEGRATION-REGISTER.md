@@ -314,3 +314,52 @@ Fun 8; Agency 9; Living World 8; Mystery 9; Themes 9; Relationships 8; Continuit
 **Expected normalized architecture: ~87/100 — PROMOTE FOR REWRITE.**
 
 V127's "definitive" and "production-grade" labels are document claims only and do not override repository canon or code audit requirements.
+
+
+## V130/V131 intake — Mystryl and Mystra Weave engines — 2026-10-14
+
+Seven supplied documents collapse to **two unique modules**: six duplicates of V130 Mystryl and one V131 Mystra.
+
+### V130 Mystryl
+**Classification:** mixed lore + generated campaign mechanics; supporting historical/cosmology material, not authoritative Elder Eye plot.
+
+Retain for verification:
+- Mystryl / Netheril / Karsus's Folly historical research thread.
+- reusable epoch/event -> hazard -> state -> consequence UI/data pattern.
+- potential chronology node linking ancient magic history to later Weave records.
+
+Quarantine pending source audit:
+- exact wording/scope of magic cessation;
+- "primordial Weave core";
+- level-10 wild magic surges;
+- Primordial Weave Shard, +3 Intelligence surge, dead-magic immunity;
+- Netherese Fallback Protocol;
+- Tears of Mystryl;
+- Mystra's Reborn Weave sovereign class.
+- migration V181-V190 assumptions.
+
+### V131 Mystra
+**Classification:** generated campaign-original mechanics wrapped around an official-lore character; candidate support module only.
+
+Retain:
+- Mystra/Weave as a continuity research axis where historically relevant.
+- node/synchronization HUD/data pattern.
+
+Quarantine/reject as locked canon:
+- mandatory Ao + Eilistraee + Mystra + Alice Elder Eye climax;
+- Sevenfold Ley-Line Network as stated;
+- Chosen of Mystra Citadel/trial;
+- +4 Staff of the Magi;
+- level-10 spell-slot synthesis;
+- Ascendant Weave Matrix;
+- Tears of Mystra / Omniversal Weave-Keeper;
+- automatic sealing of all Far Realm tears;
+- migration V191-V200 assumptions.
+
+### Integration rule
+Neither module may hijack the foundational Elder Eye trilogy. Mystryl/Mystra material enters only where chronology, geography, source status, and story causality justify it. The trilogy remains Eilistraee heroic center, Ghaunadaur active threat, Lolth independent major antagonist, with mystery-first Book I and five meaningful player choices per playable scene.
+
+The useful shared schema should be normalized to:
+`record_id | entity/event | era | DR date | sequence | location | plane | source | canon_status | continuity_status | hazard | five_choice_set | immediate_consequence | later_consequence | world_state | future_callback`.
+
+**Decision:** V130 = HOLD / RESEARCH & SALVAGE. V131 = HOLD / SALVAGE ARCHITECTURE, REJECT PRESET CLIMAX.
