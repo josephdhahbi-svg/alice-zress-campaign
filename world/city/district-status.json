@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "region": "Waterdeep–Skullport Axis",
+  "status": "sample_homebrew_initial_state",
+  "districts": [
+    {
+      "id": "WATERDEEP_HIGH_WARD",
+      "name": "High Ward",
+      "settlement": "Waterdeep",
+      "security": 85,
+      "tax_multiplier": "1.25",
+      "faction": "Lords of Waterdeep"
+    },
+    {
+      "id": "WATERDEEP_TRADES_WARD",
+      "name": "Trades Ward",
+      "settlement": "Waterdeep",
+      "security": 65,
+      "tax_multiplier": "1.00",
+      "faction": "City Watch and guild interests"
+    },
+    {
+      "id": "SKULLPORT",
+      "name": "Skullport",
+      "settlement": "Skullport",
+      "security": 20,
+      "tax_multiplier": "0.50",
+      "faction": "Contested underworld groups"
+    },
+    {
+      "id": "PROMENADE",
+      "name": "Promenade sanctuary",
+      "settlement": "Undermountain",
+      "security": 40,
+      "tax_multiplier": "1.00",
+      "faction": "Eilistraean community; historical status requires date check"
+    }
+  ],
+  "player_law_state": {
+    "heat": 0,
+    "warrants": [],
+    "reported_offenses": []
+  },
+  "npc_overrides": {}
+}
