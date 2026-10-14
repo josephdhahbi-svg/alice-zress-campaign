@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0",
+  "campaign_id":"MEGA-001",
+  "note":"Template only. No combat has yet been simulated for the 52 Fate Gates.",
+  "combat_log_template":{
+    "combat_id":"CBT-DNG001-001","run_id":"RUN-DNG001-001","dungeon_id":"DNG-001","encounter_id":"ENC-001",
+    "map_id":"MAP-001","room_id":"DNG-001-R00","rounds":null,"outcome":"NOT_RUN",
+    "participants":[],
+    "per_character_metrics":{"initiative":null,"starting_hp":null,"ending_hp":null,"temp_hp_gained":0,"damage_dealt":{},"damage_taken":{},"healing_done":0,"damage_prevented":0,"control_turns":0,"conditions_inflicted":[],"conditions_received":[],"attacks":0,"hits":0,"misses":0,"crits":0,"save_attempts":0,"save_successes":0,"save_failures":0,"spell_slots_spent":{},"class_resources_spent":{},"concentration_rounds":0,"movement_ft":0,"objective_actions":0,"zero_hp_events":0,"death_saves":[],"items_consumed":[],"protection_value":0,"solution_value":0,"exploration_value":0,"social_value":0,"puzzle_steam_value":0,"boss_value":0},
+    "monster_metrics":[],"loot_awarded":[],"xp_or_milestone":null,"rest_after":"NONE","notes":[]
+  }
+}
