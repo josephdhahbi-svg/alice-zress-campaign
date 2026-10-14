@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alice Z'ress — Choice Prototype</title>
+<style>body{font:16px system-ui;background:#101020;color:#eee;max-width:700px;margin:3rem auto;padding:1rem}h1{color:#c5b7ff}button{display:block;width:100%;padding:1rem;margin:.7rem 0;background:#242747;color:#fff;border:1px solid #8880d6;border-radius:12px;text-align:left;font:inherit}button:hover{background:#343968}#status{color:#b5dfc2}small{color:#aaa}</style>
+<h1>Alice Z'ress — The Elder Eye</h1><p><small>Playable choice-system prototype · Original fiction · Not yet a full D&D rules engine</small></p>
+<h2 id="scene">The Moonlit Crossroads</h2><p>Five paths lead away from the sanctuary. Your choices are recorded for later chapters.</p><div id="choices"></div><p id="status" aria-live="polite"></p><button id="reset">Reset this prototype save</button>
+<script>
+const options=[
+["Protect the refugees","main","The sanctuary remembers your protection."],
+["Investigate the Elder Eye sigil","main","A forbidden symbol enters your journal."],
+["Speak to the Harper courier","mid","A discreet ally shares a lead."],
+["Repair a musician's lyre","low","A song is restored to the community."],
+["Follow the silver moth","mid","A moonlit omen leads you onward."]
+];
+const key="alice-zress-prototype-v1";
+let history=JSON.parse(localStorage.getItem(key)||"[]");
+const box=document.getElementById("choices"),status=document.getElementById("status");
+function render(){box.replaceChildren();options.forEach(([label,tier,result],index)=>{const b=document.createElement("button");b.textContent=(index+1)+". "+label+" ["+tier+"]";b.onclick=()=>{history.push({choice:index,label,tier,result,at:new Date().toISOString()});localStorage.setItem(key,JSON.stringify(history));status.textContent=result+" Saved choices: "+history.length;};box.append(b)});status.textContent="Saved choices: "+history.length;}
+document.getElementById("reset").onclick=()=>{history=[];localStorage.removeItem(key);render()};render();
+</script></html>
