@@ -120,3 +120,20 @@ Together, their three routes establish major geography, cosmology, factions, div
 4. Never disguise campaign-original mechanics as official rules. Every record continues to carry its source/canon status.
 
 This separation allows the Three Chosen to be mythic signature figures of the setting while players can still enter the completed universe using straightforward official-rule characters.
+
+
+## Working triads — October 2026 rough draft (confirmation pending)
+
+**Exactly three central divine/thematic relationships for each Chosen.** Do not treat these as automatic class levels or mechanical benefits. Separate patron, deity, mentor, and thematic aspect in future records.
+
+1. **Alice — Drow Great Old One Warlock:** Ghaunadaur, Eilistraee, Mystra. User's spoken 'Gondor' and 'illustrate' are interpreted tentatively from established campaign names; Wizard element/class intent needs confirmation.
+2. **Solar — Aasimar / angel path:** Mystra, Selûne, **sun deity TBD**. Lathander is a candidate, not confirmed.
+3. **Dhampir — Ravenloft Undead Warlock:** **Undead + Angel + third aspect TBD**. These are thematic aspects, not yet three identified gods.
+
+## World-building method: Great Road
+
+**FOLLOW THE EYE → FOLLOW THE STARS → FOLLOW THE LIGHT.** Travel from the deepest parts of the world to the furthest accessible cosmos and back. Analyze 15 cosmic stations × 15 world-building pillars = **225 design cells**. Illustrate with (a) linear spectrum/route, (b) circular hue/relationship wheel, and (c) 3D color-solid/road coordinates. All color-to-plane assignments and coordinate formulas are campaign-original art/navigation metaphors, not scientific laws or official D&D planar geography.
+
+Provisional formulas: completeness = verified cells / 225; hue angle θ = 2πk/15; conceptual 3D position = (r cos θ, r sin θ, z). Science anchor: photon energy E = hc/λ. A weighted door score may be designed from historical compatibility, access, theme, consequences and playability; weights are not official mechanics.
+
+Source-check science against CIE colorimetry, published research on eye evolution, NIST matter-state references; D&D gods, realms, status and chronology require edition-specific official source verification. Keep all unresolved identities and timelines explicitly pending.
