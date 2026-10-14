@@ -1,0 +1,42 @@
+[
+  {
+    "id": "alice-zress",
+    "name": "Alice Z'ress",
+    "category": "character",
+    "era": "campaign era TBD",
+    "canon_date_dr": "unknown",
+    "campaign_timestamp": "not_started",
+    "location": "Menzoberranzan (origin; date unverified)",
+    "plane": "Material Plane",
+    "earliest_available": "prologue, subject to date selection",
+    "latest_available": "unknown",
+    "duration": "not_applicable",
+    "activation_time": "not_applicable",
+    "prerequisites": [
+      "approved level-one build"
+    ],
+    "source": "campaign homebrew",
+    "canon_status": "homebrew",
+    "continuity_status": "pending_review",
+    "notes": "BLUE; drow GOO Warlock; Ghaunadaur patron; Eilistraee goddess; lich at 17 and archlich at 20 are homebrew gates."
+  },
+  {
+    "id": "qilue-veladorn",
+    "name": "Qilué Veladorn",
+    "category": "character",
+    "era": "Forgotten Realms historical era TBD",
+    "canon_date_dr": "unknown",
+    "campaign_timestamp": "not_started",
+    "location": "Promenade of the Dark Maiden (historical association)",
+    "plane": "Material Plane",
+    "earliest_available": "pending source verification",
+    "latest_available": "pending source verification",
+    "duration": "not_applicable",
+    "activation_time": "not_applicable",
+    "prerequisites": [],
+    "source": "Forgotten Realms published lore; exact source/page pending",
+    "canon_status": "official",
+    "continuity_status": "pending_review",
+    "notes": "BLUE; verify existence, status and date before depicting in scene."
+  }
+]
