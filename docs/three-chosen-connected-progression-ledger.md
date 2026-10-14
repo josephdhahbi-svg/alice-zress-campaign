@@ -74,3 +74,26 @@ All three must use stable IDs so a story scene, item, feat, skill, and game reco
 - **Chosen 3 — Dhampir Undead Warlock:** Ravenloft path. **Genre identity: GOTHIC.** Ravenloft, undeath, horror architecture and the eventual lich path should use Gothic as the governing genre/aesthetic identity.
 
 These identities are structural design rules, not merely visual labels. They should influence locations, encounters, music, imagery, character progression, items, dialogue, quests and UI while preserving each character's distinct story.
+
+
+## Locked poster emblem — Three Warlocks / Three Diamonds
+
+When the Three Chosen trilogy work is complete, create a **poster featuring the three warlocks/Chosen** and their shared emblem: **three adjacent diamond-shaped gems arranged as a triangular three-part symbol**.
+
+### Exact gem composition
+- **RED diamond:** furthest left; oriented/pointing **left**.
+- **GREEN diamond:** centered above the other two; highest point of the composition; oriented/pointing **up**.
+- **BLUE diamond:** furthest right; oriented/pointing **right**.
+- The three gems sit directly next to one another and collectively read as a **triangle / three-part crest**.
+
+Simple layout reference:
+
+```
+          ◆ GREEN
+         points UP
+
+RED ◆               ◆ BLUE
+points LEFT       points RIGHT
+```
+
+The emblem represents the three central characters together and is reserved as a major visual identity for the eventual trilogy poster. Preserve the red-left / green-up / blue-right placement consistently in future poster, logo, UI, title-card, and promotional concepts unless the user explicitly changes it.
