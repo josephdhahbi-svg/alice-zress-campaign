@@ -1,3 +1,5 @@
+import 'dart:io';
+import 'package:path/path.dart' as p;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:moonveil_universe/engine/database_helper.dart';
@@ -5,13 +7,18 @@ import 'package:moonveil_universe/engine/database_helper.dart';
 void main() {
   sqfliteFfiInit();
   late DatabaseHelper helper;
-  setUp(() {
+  late Directory directory;
+  setUp(() async {
+    directory = await Directory.systemTemp.createTemp('moonveil_sqlite_test_');
     helper = DatabaseHelper(
       factory: databaseFactoryFfi,
-      databasePath: inMemoryDatabasePath,
+      databasePath: p.join(directory.path, 'save.db'),
     );
   });
-  tearDown(() async => helper.close());
+  tearDown(() async {
+    await helper.close();
+    await directory.delete(recursive: true);
+  });
 
   test('new game is neutral with unassigned HP', () async {
     final state = await helper.load();
