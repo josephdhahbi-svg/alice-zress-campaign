@@ -1,0 +1,58 @@
+{
+  "scene_id": "moonlight_tent",
+  "location": "Camp outside Skullport (provisional)",
+  "speaker": "Lyra Solaria",
+  "opening": "You don't have to carry every wound alone, Seralyth.",
+  "choices": [
+    {
+      "id": 1,
+      "label": "Stay with me, Lyra.",
+      "approval": 5,
+      "flag": "shared_vulnerability",
+      "reply": "Then I'll stay. Not because you need a healer, but because you asked me."
+    },
+    {
+      "id": 2,
+      "label": "Tease her about her bedside manner.",
+      "approval": 2,
+      "flag": "shared_laughter",
+      "reply": "My bedside manner is excellent. My patience with stubborn paladins is less so."
+    },
+    {
+      "id": 3,
+      "label": "Ask her to examine the injury.",
+      "approval": 3,
+      "flag": "accepted_help",
+      "reply": "Thank you for trusting me."
+    },
+    {
+      "id": 4,
+      "label": "Ask about the sanctuary's missing healers.",
+      "approval": 1,
+      "flag": "hospice_lead",
+      "reply": "I heard a name in the market. We should follow it."
+    },
+    {
+      "id": 5,
+      "label": "Study the conduit diagram together (Investigation DC 14).",
+      "check": {
+        "dc": 14,
+        "modifier": 4
+      },
+      "approval": 2,
+      "flag": "conduit_clue",
+      "reply": "That might be how we save the sanctuary."
+    },
+    {
+      "id": 10,
+      "label": "Ask to share a deeper vow.",
+      "requires": {
+        "approval": 40,
+        "flag": "shared_vulnerability"
+      },
+      "approval": 3,
+      "flag": "vow_spoken",
+      "reply": "I choose this freely, Seralyth. And I choose you."
+    }
+  ]
+}
