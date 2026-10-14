@@ -56,7 +56,53 @@ class DatabaseHelper {
     await db.execute("CREATE TRIGGER IF NOT EXISTS world_events_no_delete BEFORE DELETE ON world_events BEGIN SELECT RAISE(ABORT, 'world events are immutable'); END");
   }
 
-  static Future<void> _upgrade(Database db, int oldVersion, int newVersion) async {
+
+  // V30 reference catalog. Campaign-dependent relationships are initial defaults.
+  static Future<void> _createV5(DatabaseExecutor db) async {
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS canon_factions (
+        faction_id TEXT PRIMARY KEY,
+        faction_name TEXT NOT NULL,
+        canonical_alignment TEXT NOT NULL,
+        primary_deity TEXT NOT NULL,
+        influence_score INTEGER NOT NULL DEFAULT 50 CHECK(influence_score BETWEEN 0 AND 100),
+        hostility_status TEXT NOT NULL DEFAULT 'Neutral'
+      )
+    ''');
+    await db.execute('''
+      CREATE TABLE IF NOT EXISTS canon_locations (
+        location_id TEXT PRIMARY KEY,
+        location_name TEXT NOT NULL,
+        region_type TEXT NOT NULL,
+        controlling_faction_id TEXT,
+        danger_level REAL NOT NULL,
+        is_discovered INTEGER NOT NULL DEFAULT 0 CHECK(is_discovered IN (0, 1)),
+        FOREIGN KEY (controlling_faction_id) REFERENCES canon_factions(faction_id)
+      )
+    ''');
+    const factions = <List<Object?>>[
+      ['house_baenre', 'House Baenre of Menzoberranzan', 'Chaotic Evil', 'Lolth', 95, 'Hostile'],
+      ['promenade_eilistraee', 'The Dark Maiden Concordat', 'Chaotic Good', 'Eilistraee', 40, 'Allied'],
+      ['chosen_ghaunadaur', 'The Ooze-Bound Covenant', 'Chaotic Evil', 'Ghaunadaur', 60, 'Hostile'],
+      ['underdark_merchants', 'Deep Realm Trade Syndicate', 'True Neutral', 'None', 70, 'Neutral'],
+      ['harpers_underground', 'The Harpers (Underdark Cell)', 'Neutral Good', 'Mielikki / Mystra', 50, 'Allied'],
+    ];
+    for (final row in factions) {
+      await db.rawInsert('INSERT OR IGNORE INTO canon_factions (faction_id, faction_name, canonical_alignment, primary_deity, influence_score, hostility_status) VALUES (?, ?, ?, ?, ?, ?)', row);
+    }
+    const locations = <List<Object?>>[
+      ['menzoberranzan', 'Menzoberranzan (City of Spiders)', 'Underdark City', 'house_baenre', 22.0, 1],
+      ['promenade_grove', 'Promenade of the Dark Maiden', 'Underdark Sanctuary', 'promenade_eilistraee', 12.0, 1],
+      ['ghaunadaur_spire', 'Abyssal Spore-Spire', 'Far Realm Sanctum', 'chosen_ghaunadaur', 24.0, 0],
+      ['blingdenstone', 'Blingdenstone (Svirfneblin Enclave)', 'Underdark City', 'underdark_merchants', 10.0, 0],
+      ['undermountain', "Halaster's Undermountain (Level 23)", 'Dungeon Labyrinth', null, 26.0, 0],
+    ];
+    for (final row in locations) {
+      await db.rawInsert('INSERT OR IGNORE INTO canon_locations (location_id, location_name, region_type, controlling_faction_id, danger_level, is_discovered) VALUES (?, ?, ?, ?, ?, ?)', row);
+    }
+  }
+
+  static Future<void> _upgrade(Database db: int oldVersion, int newVersion) async {
     if (oldVersion < 2) {
       await _createV2(db);
       // Preserve every legacy event, including its original ID and payload.
@@ -95,6 +141,7 @@ class DatabaseHelper {
         }
       }
     }
+    if (oldVersion < 5) await _createV5(db);
   }
 
   Future<Database> get database async {
@@ -102,8 +149,8 @@ class DatabaseHelper {
     final location = _databasePath ??
         join(await _factory.getDatabasesPath(), 'moonveil_universe.db');
     _db = await _factory.openDatabase(location,
-        options: OpenDatabaseOptions(version: 2,
-            onCreate: (db, version) => _createV2(db),
+        options: OpenDatabaseOptions(version: 5,
+            onCreate: (db, version) async { await _createV2(db); await _createV5(db); },
             onUpgrade: _upgrade));
     return _db!;
   }
