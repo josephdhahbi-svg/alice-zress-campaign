@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "project": "Moonveil Heart Without Chains",
+  "scene_id": "K1-001",
+  "title": "Ashes of the Last Goodbye",
+  "status": "prototype data only",
+  "continuity": {
+    "karlach_alive": true,
+    "karlach_location": "Avernus",
+    "engine_repaired": false,
+    "wyll": "unknown",
+    "bg3_protagonist": "unknown",
+    "romance": "unknown"
+  },
+  "choices": [
+    {
+      "id": "K1-ENG",
+      "title": "Trace the infernal engine",
+      "morality": "BLUE Good",
+      "action": "Engineering Investigation",
+      "recommended": true,
+      "known_effects": [
+        "find a repair lead",
+        "risk infernal attention"
+      ],
+      "unknown_effects": [
+        "what powers the engine"
+      ],
+      "check": "Intelligence with applicable tool proficiency, DC pending approved sheet"
+    },
+    {
+      "id": "K1-HERO",
+      "title": "Protect the fleeing souls",
+      "morality": "BLUE Good",
+      "action": "Defense Rescue",
+      "known_effects": [
+        "protect civilians",
+        "delay engine research"
+      ],
+      "unknown_effects": [
+        "identity of pursuers"
+      ]
+    },
+    {
+      "id": "K1-DIP",
+      "title": "Question the infernal broker",
+      "morality": "GREEN Neutral",
+      "action": "Diplomacy Utility",
+      "known_effects": [
+        "possible information",
+        "possible obligation"
+      ],
+      "unknown_effects": [
+        "broker allegiance"
+      ]
+    },
+    {
+      "id": "K1-STEALTH",
+      "title": "Scout the fortress",
+      "morality": "GREEN Neutral",
+      "action": "Stealth Exploration",
+      "known_effects": [
+        "possible safe route",
+        "risk detection"
+      ],
+      "unknown_effects": [
+        "what is inside"
+      ]
+    },
+    {
+      "id": "K1-EVIL",
+      "title": "Trade refugees for Karlach's location",
+      "morality": "RED Evil",
+      "action": "Betrayal Villain",
+      "known_effects": [
+        "endangers innocents",
+        "damages compassionate companion trust"
+      ],
+      "unknown_effects": [
+        "broker honesty"
+      ]
+    }
+  ],
+  "acceptance_tests": [
+    "five distinct choices",
+    "all morality labeled",
+    "each previews foreseeable consequences",
+    "no romance without consent flags",
+    "no unearned dice outcomes",
+    "resume scene state exactly"
+  ],
+  "test_status": "not executed"
+}
