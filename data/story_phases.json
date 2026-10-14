@@ -1,0 +1,30 @@
+[
+  {
+    "id": "prologue",
+    "title": "Foundational Eilistraee trilogy",
+    "order": 1,
+    "books": [
+      "That Which Lurks",
+      "The Labyrinth of the Elder Eye",
+      "The Return of the Avatar of Ghaunador"
+    ],
+    "chronology": "DR dates pending verification",
+    "status": "planned"
+  },
+  {
+    "id": "alice-origin",
+    "title": "Alice's origin and Underdark journey",
+    "order": 2,
+    "books": [],
+    "chronology": "after foundational events; exact DR date pending",
+    "status": "planned"
+  },
+  {
+    "id": "abyss",
+    "title": "Abyss arc",
+    "order": 3,
+    "books": [],
+    "chronology": "after Alice's arrival; exact dates pending",
+    "status": "planned"
+  }
+]
