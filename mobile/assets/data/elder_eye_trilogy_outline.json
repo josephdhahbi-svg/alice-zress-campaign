@@ -1,0 +1,621 @@
+{
+  "schema": "elder_eye_trilogy_outline_v1",
+  "campaignId": "elder_eye",
+  "name": "The Elder Eye Trilogy",
+  "protagonist": "Alice Z'ress",
+  "booksPerTraversal": 30,
+  "maxTraversals": 7,
+  "structure": "3-3-1",
+  "parts": [
+    {
+      "name": "Underdark",
+      "books": [
+        1,
+        10
+      ]
+    },
+    {
+      "name": "Abyss",
+      "books": [
+        11,
+        20
+      ]
+    },
+    {
+      "name": "Avernus",
+      "books": [
+        21,
+        30
+      ]
+    }
+  ],
+  "rules": {
+    "choicesPerSceneMax": 5,
+    "heroicCompletionist": true,
+    "choiceOutcomePersistence": true,
+    "canonicalVerificationRequired": true,
+    "book30Next": {
+      "traversals1to6": {
+        "book": 1,
+        "incrementTraversal": true
+      },
+      "traversal7": {
+        "endgame": true,
+        "ascensionFlag": "elder_eye_final_ascension_earned"
+      }
+    },
+    "copyright": "Original narrative only; no copied PDF text or art"
+  },
+  "books": [
+    {
+      "book": 1,
+      "part": "Underdark",
+      "title": "The Stalactite Road",
+      "premise": "Alice escapes a Baenre patrol; five paths expose faith, patron influence, trade, surrender, and the fissure.",
+      "mission": 1,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 1
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 2,
+      "part": "Underdark",
+      "title": "House of Spiders",
+      "premise": "Investigate House Baenre patrol orders; protect captives and uncover a Lolthite purge.",
+      "mission": 2,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 2
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 3,
+      "part": "Underdark",
+      "title": "The Hidden Song",
+      "premise": "Find Eilistraeen allies and earn sanctuary through rescue rather than unquestioning loyalty.",
+      "mission": 3,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 3
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 4,
+      "part": "Underdark",
+      "title": "The Elder Eye Below",
+      "premise": "Trace Ghaunadaur's influence; resist coercion and establish the limits of Alice's pact.",
+      "mission": 4,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 4
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 5,
+      "part": "Underdark",
+      "title": "The Svirfneblin Accord",
+      "premise": "Negotiate aid for Blingdenstone and secure a route for refugees.",
+      "mission": 5,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 5
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 6,
+      "part": "Underdark",
+      "title": "The Myconid Covenant",
+      "premise": "Resolve spore-corruption without destroying the friendly colony.",
+      "mission": 6,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 6
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 7,
+      "part": "Underdark",
+      "title": "The Mind Flayer Parley",
+      "premise": "Meet Omeluum and Grazilaxx; weigh dangerous knowledge against consent and trust.",
+      "mission": 7,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 7
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 8,
+      "part": "Underdark",
+      "title": "The Web and the Moon",
+      "premise": "Expose Lolthite infiltration and protect the shrine without sacrificing innocents.",
+      "mission": 8,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 8
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 9,
+      "part": "Underdark",
+      "title": "The Pit of Ghaunadaur",
+      "premise": "Confront the patron's manifestation; rescue prisoners and reveal the Abyssal route.",
+      "mission": 9,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 9
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 10,
+      "part": "Underdark",
+      "title": "The Underdark Exodus",
+      "premise": "Lead allies out of a collapsing conflict; choose the campaign's first major political settlement.",
+      "mission": 10,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 10
+      },
+      "geography": {
+        "plane": "Material Plane",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 11,
+      "part": "Abyss",
+      "title": "The Abyssal Threshold",
+      "premise": "Enter the Abyss, establish safe routes and negotiate uneasy passage.",
+      "mission": 11,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 11
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 12,
+      "part": "Abyss",
+      "title": "The Endless Maze",
+      "premise": "Chart Baphomet's maze and survive the first minotaur champion confrontation.",
+      "mission": 12,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 12
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 13,
+      "part": "Abyss",
+      "title": "The Slime Court",
+      "premise": "Challenge Ghaunadaur's cult and distinguish unwilling servants from committed villains.",
+      "mission": 13,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 13
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 14,
+      "part": "Abyss",
+      "title": "The Broken Labyrinth",
+      "premise": "Free captives and defeat the second minotaur champion encounter.",
+      "mission": 14,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 14
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 15,
+      "part": "Abyss",
+      "title": "The Demon Lords' Bargain",
+      "premise": "Navigate demon rivalries without accepting irreversible corruption.",
+      "mission": 15,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 15
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 16,
+      "part": "Abyss",
+      "title": "The Moonlit Rebellion",
+      "premise": "Unite escapees and Eilistraeen agents against the maze's prison network.",
+      "mission": 16,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 16
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 17,
+      "part": "Abyss",
+      "title": "The Eldritch Threshold",
+      "premise": "Investigate the lich transformation ritual; prerequisites and moral costs remain explicit.",
+      "mission": 17,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 17
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 18,
+      "part": "Abyss",
+      "title": "The Third Horn",
+      "premise": "Defeat the minotaur champion's final challenge and secure a route beyond the maze.",
+      "mission": 18,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 18
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 19,
+      "part": "Abyss",
+      "title": "The Severed Pact",
+      "premise": "Confront patron influence while protecting Alice's agency and companions.",
+      "mission": 19,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 19
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 20,
+      "part": "Abyss",
+      "title": "The Abyssal Dawn",
+      "premise": "Resolve the Abyss arc and open the infernal crossing with consequences carried forward.",
+      "mission": 20,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 20
+      },
+      "geography": {
+        "plane": "Abyss",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 21,
+      "part": "Avernus",
+      "title": "Ashes of Avernus",
+      "premise": "Arrive in Avernus and establish refuge amid infernal warfare.",
+      "mission": 21,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 21
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 22,
+      "part": "Avernus",
+      "title": "The Iron Contracts",
+      "premise": "Investigate infernal bargains and free souls through legitimate loopholes.",
+      "mission": 22,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 22
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 23,
+      "part": "Avernus",
+      "title": "The War Machine Road",
+      "premise": "Escort civilians across contested terrain; logistics and supplies matter.",
+      "mission": 23,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 23
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 24,
+      "part": "Avernus",
+      "title": "The Fallen Standard",
+      "premise": "Investigate Zariel's history and competing accounts of her fall.",
+      "mission": 24,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 24
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 25,
+      "part": "Avernus",
+      "title": "The Sword and the Oath",
+      "premise": "Seek relics and redemption prerequisites without prematurely granting ascension.",
+      "mission": 25,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 25
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 26,
+      "part": "Avernus",
+      "title": "The Ninefold Embassy",
+      "premise": "Navigate infernal factions and make the costs of every alliance explicit.",
+      "mission": 26,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 26
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 27,
+      "part": "Avernus",
+      "title": "The Chains of Elturel",
+      "premise": "Resolve a major rescue operation with enduring political consequences.",
+      "mission": 27,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 27
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 28,
+      "part": "Avernus",
+      "title": "The Mercy Trial",
+      "premise": "Offer earned redemption to eligible foes; preserve meaningful refusal and accountability.",
+      "mission": 28,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 28
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 29,
+      "part": "Avernus",
+      "title": "The Last Infernal Gate",
+      "premise": "Confront the trilogy's infernal power structure and determine the return route.",
+      "mission": 29,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 29
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    },
+    {
+      "book": 30,
+      "part": "Avernus",
+      "title": "The Eye That Returns",
+      "premise": "Resolve the finale; traversals 1–6 loop to Book 1, traversal 7 completes endgame ascension.",
+      "mission": 30,
+      "sceneStatus": "outline_only",
+      "canonStatus": "original_campaign",
+      "chronology": {
+        "dr": "TBD",
+        "sequence": 30
+      },
+      "geography": {
+        "plane": "Nine Hells",
+        "location": "TBD"
+      },
+      "sourcePages": [],
+      "playable": false
+    }
+  ]
+}
