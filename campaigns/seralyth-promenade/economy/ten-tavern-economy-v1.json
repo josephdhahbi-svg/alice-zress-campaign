@@ -1,0 +1,469 @@
+{
+  "version": 1,
+  "language": "English",
+  "status": "homebrew price and inventory registry; not live engine",
+  "coin": {
+    "cp_per_sp": 10,
+    "cp_per_gp": 100
+  },
+  "prices_source": "user-proposed homebrew, not verified official 5e price index",
+  "venues": [
+    {
+      "id": "TV01",
+      "name": "The Velvet Spire",
+      "location": "Waterdeep Trades Ward",
+      "book": 1,
+      "staff": [
+        "Lady Cassia",
+        "Corin"
+      ],
+      "inventory": [
+        {
+          "name": "Fine Elven Wine",
+          "price_cp": 1200,
+          "stock": 14
+        },
+        {
+          "name": "Distilled Sunstream Spirit",
+          "price_cp": 500,
+          "stock": 8
+        },
+        {
+          "name": "Roast Hippogriff Breast",
+          "price_cp": 300,
+          "stock": 6
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Imperial Suite",
+          "price_cp": 500,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Elyssa",
+        "Trixie"
+      ],
+      "optional_private_hosting_rate_cp": 1500,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    },
+    {
+      "id": "TV02",
+      "name": "The Spider's Caress",
+      "location": "Menzoberranzan outskirts",
+      "book": 1,
+      "staff": [
+        "Jarlaxle (historical role unverified)",
+        "Varna"
+      ],
+      "inventory": [
+        {
+          "name": "Mushroom Stout",
+          "price_cp": 80,
+          "stock": 45
+        },
+        {
+          "name": "Black-Spidervine Wine",
+          "price_cp": 800,
+          "stock": 12
+        },
+        {
+          "name": "Deep-Rothe Steak",
+          "price_cp": 150,
+          "stock": 20
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Underdark Pod",
+          "price_cp": 100,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Xani",
+        "Vanya",
+        "Malice"
+      ],
+      "optional_private_hosting_rate_cp": 2000,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    },
+    {
+      "id": "TV03",
+      "name": "The Iron Maiden",
+      "location": "Waterdeep Dock Ward",
+      "book": 1,
+      "staff": [
+        "Smitty",
+        "Tressa"
+      ],
+      "inventory": [
+        {
+          "name": "Gutter Ale",
+          "price_cp": 3,
+          "stock": 200
+        },
+        {
+          "name": "Spiced Fire-Whiskey",
+          "price_cp": 10,
+          "stock": 50
+        },
+        {
+          "name": "Herring and Hardtack",
+          "price_cp": 4,
+          "stock": 100
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Common Floor",
+          "price_cp": 3,
+          "stock": "not yet specified"
+        },
+        {
+          "name": "Private Cellar",
+          "price_cp": 6,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Ruby",
+        "Cora"
+      ],
+      "optional_private_hosting_rate_cp": 200,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    },
+    {
+      "id": "TV04",
+      "name": "The Ruby Lantern",
+      "location": "Baldur's Gate Lower City",
+      "book": 2,
+      "staff": [
+        "Julian",
+        "Brandon"
+      ],
+      "inventory": [
+        {
+          "name": "Honey-Mead",
+          "price_cp": 20,
+          "stock": 80
+        },
+        {
+          "name": "Ruby Port Wine",
+          "price_cp": 150,
+          "stock": 30
+        },
+        {
+          "name": "Chionthar Salmon",
+          "price_cp": 80,
+          "stock": 25
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Modest Room",
+          "price_cp": 50,
+          "stock": "not yet specified"
+        },
+        {
+          "name": "Bathhouse Suite",
+          "price_cp": 80,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Lyra",
+        "Safiya"
+      ],
+      "optional_private_hosting_rate_cp": 500,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    },
+    {
+      "id": "TV05",
+      "name": "The Comet's Tail",
+      "location": "Baldur's Gate Outer City",
+      "book": 2,
+      "staff": [
+        "Grub",
+        "Unit 4"
+      ],
+      "inventory": [
+        {
+          "name": "Battery-Juice Ale",
+          "price_cp": 2,
+          "stock": 150
+        },
+        {
+          "name": "Moonshine Gin",
+          "price_cp": 5,
+          "stock": 90
+        },
+        {
+          "name": "Meat Skewers",
+          "price_cp": 2,
+          "stock": 60
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Hammock",
+          "price_cp": 3,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Jinx",
+        "Zephyr"
+      ],
+      "optional_private_hosting_rate_cp": 100,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    },
+    {
+      "id": "TV06",
+      "name": "The Siren's Rest",
+      "location": "Chionthar Riverfront",
+      "book": 2,
+      "staff": [
+        "Melody",
+        "Silas"
+      ],
+      "inventory": [
+        {
+          "name": "River-Breeze Lager",
+          "price_cp": 5,
+          "stock": 120
+        },
+        {
+          "name": "Amnian White Wine",
+          "price_cp": 40,
+          "stock": 40
+        },
+        {
+          "name": "Crab Claws",
+          "price_cp": 60,
+          "stock": 30
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Over-Water Cabin",
+          "price_cp": 80,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Nari",
+        "Talia"
+      ],
+      "optional_private_hosting_rate_cp": 400,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    },
+    {
+      "id": "TV07",
+      "name": "The Gilded Cage",
+      "location": "Baldur's Gate Upper City",
+      "book": 2,
+      "staff": [
+        "Valerius",
+        "Vivienne"
+      ],
+      "inventory": [
+        {
+          "name": "Acorean Champagne",
+          "price_cp": 2500,
+          "stock": 6
+        },
+        {
+          "name": "Liquid Gold Liqueur",
+          "price_cp": 1000,
+          "stock": 10
+        },
+        {
+          "name": "Manticore Loin",
+          "price_cp": 500,
+          "stock": 4
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Penthouse",
+          "price_cp": 1000,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Commander Vael",
+        "Onyx"
+      ],
+      "optional_private_hosting_rate_cp": 2500,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    },
+    {
+      "id": "TV08",
+      "name": "The Oasis of Desires",
+      "location": "Calimport",
+      "book": 3,
+      "staff": [
+        "Rashid",
+        "Samir"
+      ],
+      "inventory": [
+        {
+          "name": "Pomegranate Wine",
+          "price_cp": 200,
+          "stock": 50
+        },
+        {
+          "name": "Desert-Fire Vodka",
+          "price_cp": 100,
+          "stock": 40
+        },
+        {
+          "name": "Saffron Camel Feast",
+          "price_cp": 120,
+          "stock": 35
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Silk Tent",
+          "price_cp": 200,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Shani",
+        "Aziza",
+        "Kaelen"
+      ],
+      "optional_private_hosting_rate_cp": 1200,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    },
+    {
+      "id": "TV09",
+      "name": "The Obsidian Rose",
+      "location": "Shadowfell border",
+      "book": 3,
+      "staff": [
+        "The Countess",
+        "Damien"
+      ],
+      "inventory": [
+        {
+          "name": "Grave-Dust Absinthe",
+          "price_cp": 100,
+          "stock": 25
+        },
+        {
+          "name": "Crimson Wine",
+          "price_cp": 300,
+          "stock": 30
+        },
+        {
+          "name": "Dire-Boar Tartare",
+          "price_cp": 150,
+          "stock": 15
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Gothic Vault",
+          "price_cp": 100,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Mistress Laura",
+        "Seraphina",
+        "Whisper"
+      ],
+      "optional_private_hosting_rate_cp": 1500,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    },
+    {
+      "id": "TV10",
+      "name": "The Brass Lamp",
+      "location": "Desert Outpost 9",
+      "book": 3,
+      "staff": [
+        "Zeke",
+        "Jax"
+      ],
+      "inventory": [
+        {
+          "name": "Rocket-Fuel Moonshine",
+          "price_cp": 10,
+          "stock": 80
+        },
+        {
+          "name": "Astral Lager",
+          "price_cp": 6,
+          "stock": 110
+        },
+        {
+          "name": "Space-Beef Stew",
+          "price_cp": 30,
+          "stock": 70
+        }
+      ],
+      "rooms": [
+        {
+          "name": "Bunk Cabin",
+          "price_cp": 50,
+          "stock": "not yet specified"
+        }
+      ],
+      "associated_npcs": [
+        "Zora",
+        "Dale",
+        "Mire"
+      ],
+      "optional_private_hosting_rate_cp": 300,
+      "notes": "Adult NPCs retain agency and consent; a rate does not purchase romantic or sexual consent. Homebrew venue, chronology and staffing subject to review."
+    }
+  ],
+  "trade_rules": {
+    "debit_only_after_player_confirmation": true,
+    "inventory_decrement_once": true,
+    "idempotent_transaction_ids": true,
+    "insufficient_funds_reject": true,
+    "approval_not_purchased": true,
+    "services_require_mutual_agreement": true
+  },
+  "choice_matrix": {
+    "base_count": 9,
+    "locked_tenth_requires": [
+      "Countdown Cargo",
+      "Harbor Alliance",
+      "Moonlit Ward"
+    ],
+    "secret_eleventh_requires": "all three quests plus hidden nonviolent rescue achievement",
+    "default_secret_visible": false
+  },
+  "silk_harbor_level1": {
+    "starting_ledger": "No PC gold balance, inventory or transactions established; show only venue menu and prices until character sheet loaded",
+    "example_menu": [
+      {
+        "name": "Gutter Ale at nearby Iron Maiden",
+        "price_cp": 3
+      },
+      {
+        "name": "Velvet Spire Imperial Suite",
+        "price_cp": 500
+      }
+    ],
+    "npc_approval": {
+      "Vesper": 0,
+      "Kira": 0,
+      "Zenna": 0
+    }
+  },
+  "limitations": [
+    "Not all room capacities known",
+    "Jarlaxle role is speculative",
+    "Venue locations and dates unverified",
+    "Price balance not playtested",
+    "No live mobile backend"
+  ]
+}
