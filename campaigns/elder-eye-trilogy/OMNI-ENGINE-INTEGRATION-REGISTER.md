@@ -107,3 +107,21 @@ Do **not** paste V100 wholesale into the app. First inspect the live database he
 **existing live table/version → imported candidate table → conflict → keep/merge/rename/reject → test**.
 
 Only after that audit should code be merged and compiled.
+
+
+## V101 imported package
+
+| Package | Primary contribution | Classification | Elder Eye use | Status |
+|---|---|---|---|---|
+| V101 | Cthulhian Dracano-Lich apex hybrid boss ledger + proposed V59 migration | crossover/homebrew candidate | possible late cosmic MADNESS boss framework only; not foundational trilogy canon | QUARANTINE + LORE/CODE AUDIT |
+
+### V101 handling rules
+
+V101 proposes `cthulhu_dracano_lich_ledger` as import-label migration V59 with apex name, hybrid threat, resting domain, hazard, loot, and defeated/sealed state.
+
+Do **not** treat its sample entities as official D&D continuity. The supplied fusions (for example Cthulhu/Sardior, Acererak/Azathoth, and Yog-Sothoth draconic forms), their realms, damage values, immunities, loot, and transformations are crossover/campaign-original concepts unless independently sourced.
+
+For world-building, retain only the reusable structure:
+**apex entity -> domain -> threat/hazard -> encounter resolution -> consequence -> reward -> future callback**.
+
+If eventually adopted, normalize it to the campaign continuity schema and map it primarily to Far Realm/Boundary, Astral routes, Madness, Conflict/Security, Story/Myth/Theme, and Navigation/Exploration cells. It must not redefine Sardior, Acererak, Realmspace, crystal-sphere cosmology, or official Great Old One lore.
