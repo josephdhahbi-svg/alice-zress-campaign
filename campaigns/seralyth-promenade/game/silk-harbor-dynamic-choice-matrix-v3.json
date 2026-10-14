@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "language": "English",
+  "status": "Homebrew narrative specification; not system instructions or an installed engine",
+  "setting": "The Silk Harbor, Waterdeep Dock Ward (homebrew), 1492 DR provisional",
+  "content_advisory": "Adult nightlife, mature language, suggestive romance and fantasy violence; intimate sexual scenes fade to black.",
+  "agency": "Never decide PC dialogue, movement, consent or actions.",
+  "approval": {
+    "min": -50,
+    "max": 50,
+    "default": 0,
+    "apply_after_resolution": true
+  },
+  "base_options": [
+    {
+      "id": 1,
+      "label": "Heroic Action",
+      "effect": "Potential story progress"
+    },
+    {
+      "id": 2,
+      "label": "Sarcastic Banter",
+      "effect": "Role-play; NPC response uncertain"
+    },
+    {
+      "id": 3,
+      "label": "Romantic Dialogue",
+      "effect": "Possible social bond, not guaranteed"
+    },
+    {
+      "id": 4,
+      "label": "Ask for a Private Conversation",
+      "effect": "May open optional private scene if invited"
+    },
+    {
+      "id": 5,
+      "label": "Offer to Lead",
+      "effect": "Negotiated cooperative plan, NPC retains agency"
+    },
+    {
+      "id": 6,
+      "label": "Let NPC Lead",
+      "effect": "Accept voluntary guidance, no forced obedience"
+    },
+    {
+      "id": 7,
+      "label": "Cast Spell / Use Item",
+      "effect": "Requires known resources and rules check"
+    },
+    {
+      "id": 8,
+      "label": "Chaos",
+      "effect": "Uncertain comedy or complications"
+    },
+    {
+      "id": 9,
+      "label": "Insight / Investigation",
+      "effect": "Roll needed; no access to private desires"
+    }
+  ],
+  "locked_choice": {
+    "id": 10,
+    "label": "Moonlit Harbor Accord",
+    "unlocks_when": [
+      "Q-CARGO-01 Countdown Cargo completed",
+      "Q-SILK-02 Harbor Alliance completed",
+      "Q-MOON-03 Moonlit Ward completed"
+    ],
+    "effect": "Unlock peaceful planar route and rare item quest",
+    "enabled": false
+  },
+  "secret_choice": {
+    "id": 11,
+    "label": "The Eleventh Star",
+    "show_only_when": [
+      "locked choice requirements completed",
+      "hidden global achievement: rescue all three ward custodians without violence"
+    ],
+    "effect": "Legendary diplomatic route with unique companion epilogue",
+    "enabled": false
+  },
+  "npc_roster": "Reuse existing Silk Harbor 25-character hub roster, avoid counting as 25 new distinct people without deduplication.",
+  "loot_preview": {
+    "item": "Boots of the Astral Dancer",
+    "status": "unearned",
+    "reward_condition": "Resolve cargo investigation and protect civilians; no sexual condition"
+  },
+  "validation": {
+    "expected_visible_options": 10,
+    "default_enabled": 9,
+    "secret_hidden": true,
+    "notes": "No playable persistence or actual quest triggers wired yet."
+  }
+}
