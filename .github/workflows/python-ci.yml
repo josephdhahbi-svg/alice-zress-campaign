@@ -1,0 +1,19 @@
+name: Moonveil Python CI
+on:
+  push:
+    branches: [main, master, feature/moonveil-playable-core]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Validate scene JSON
+        run: python -m json.tool moonveil-game/data/scenes.json > /dev/null
+      - name: Compile Python
+        run: python -m compileall -q moonveil-game world/city
+      - name: Run unit tests
+        run: python -m unittest discover -s moonveil-game/tests -v
