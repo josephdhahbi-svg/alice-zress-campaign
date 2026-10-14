@@ -1,0 +1,50 @@
+[
+  {
+    "id": "alice-eldritch-lich",
+    "name": "Alice's Eldritch Lich ascension",
+    "category": "ritual",
+    "era": "campaign era TBD",
+    "canon_date_dr": "unknown",
+    "campaign_timestamp": "locked_until_level_17",
+    "location": "undetermined ritual site",
+    "plane": "unknown",
+    "earliest_available": "level 17 AND completed quest",
+    "latest_available": "unknown",
+    "duration": "unknown",
+    "activation_time": "unknown",
+    "prerequisites": [
+      "level 17",
+      "personal quest completion",
+      "ritual materials TBD",
+      "DM approval"
+    ],
+    "source": "campaign homebrew",
+    "canon_status": "homebrew",
+    "continuity_status": "pending_review",
+    "notes": "Do not represent as an official class feature; track ritual start/end and participant list."
+  },
+  {
+    "id": "alice-arch-eldritch-lich",
+    "name": "Alice's Arch Eldritch Lich ascension",
+    "category": "ritual",
+    "era": "campaign era TBD",
+    "canon_date_dr": "unknown",
+    "campaign_timestamp": "locked_until_level_20",
+    "location": "undetermined ritual site",
+    "plane": "unknown",
+    "earliest_available": "level 20 AND completed quest",
+    "latest_available": "unknown",
+    "duration": "unknown",
+    "activation_time": "unknown",
+    "prerequisites": [
+      "level 20",
+      "Eldritch Lich ascension",
+      "additional quest TBD",
+      "DM approval"
+    ],
+    "source": "campaign homebrew",
+    "canon_status": "homebrew",
+    "continuity_status": "pending_review",
+    "notes": "Record prerequisites, components, ritual duration and consequences when designed."
+  }
+]
