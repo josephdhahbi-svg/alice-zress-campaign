@@ -56,22 +56,13 @@ class _MoonveilScreenState extends State<MoonveilScreen> {
     }
   }
 
-  bool allowed(int id) {
-    final approval = (state?['approval']?['lyra_solaria'] as num?)?.toInt() ?? 0;
-    final flags = (state?['flags'] as Map?) ?? {};
-    if (id == 10) return approval >= 40 && flags['shared_vulnerability'] == true;
-    if (id == 11) return approval >= 40 && flags['vow_spoken'] == true &&
-      flags['sanctuary_restored'] == true && flags['mutual_covenant_ready'] == true;
-    return true;
-  }
+  bool allowed(int id) => state != null && DatabaseHelper.isAllowed(id, state!);
 
   Future<void> choose((int, String, int, String) choice) async {
     if (busy || !allowed(choice.$1)) return;
     setState(() => busy = true);
     try {
-      final saved = await DatabaseHelper.instance.applyChoice(
-        eventId: 'moonlight_tent:${choice.$1}', choiceId: choice.$1,
-        approvalDelta: choice.$3, flag: choice.$4);
+      final saved = await DatabaseHelper.instance.applyChoice(choiceId: choice.$1);
       await refresh();
       if (mounted) setState(() => feedback = saved ? 'Choice recorded and saved.' : 'Choice already recorded.');
     } catch (e) {
