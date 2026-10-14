@@ -1,0 +1,885 @@
+{
+  "schema_version": 1,
+  "scope": "Seralyth Promenade Book I",
+  "status": "Original homebrew proposals; NOT confirmed Forgotten Realms canon or implemented game state",
+  "timeline": {
+    "era": "pre-BG3 campaign",
+    "dr_date": "TBD, chronology verification required",
+    "timestamps": "dayparts only; exact dates pending"
+  },
+  "map": {
+    "id": "MAP-PROMENADE-CITY-DRAFT",
+    "coordinates": "not surveyed",
+    "districts": [
+      {
+        "id": "D01",
+        "name": "Moonlit Market",
+        "residents": [
+          "C01",
+          "C02",
+          "C08",
+          "C13"
+        ]
+      },
+      {
+        "id": "D02",
+        "name": "Lantern Gate",
+        "residents": [
+          "C03",
+          "C06",
+          "C11"
+        ]
+      },
+      {
+        "id": "D03",
+        "name": "Fungal Arcade",
+        "residents": [
+          "C04",
+          "C09",
+          "C18"
+        ]
+      },
+      {
+        "id": "D04",
+        "name": "Skullport Trade Steps",
+        "residents": [
+          "C05",
+          "C17"
+        ]
+      },
+      {
+        "id": "D05",
+        "name": "Arts and Hearth",
+        "residents": [
+          "C07",
+          "C14",
+          "C16",
+          "C19"
+        ]
+      },
+      {
+        "id": "D06",
+        "name": "Scholars' Rise",
+        "residents": [
+          "C10",
+          "C12",
+          "C15",
+          "C20"
+        ]
+      }
+    ]
+  },
+  "characters": [
+    {
+      "id": "C01",
+      "name": "Seren Moonbrook",
+      "workplace": "Moonlit Supply Counter",
+      "profession": "shopkeeper",
+      "morality_rank": 1,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-REFUGE-07",
+      "world_flag": "refugees_warm",
+      "personal_goal": "wants to build a permanent sanctuary",
+      "schedule": "quiet evenings at supply courtyard",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C02",
+      "name": "Dara Bellwright",
+      "workplace": "Bellwright's Bench",
+      "profession": "artisan",
+      "morality_rank": 2,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-BELL-01",
+      "world_flag": "bell_repaired",
+      "personal_goal": "protects inherited workshop and missing mentor's reputation",
+      "schedule": "forge closes at dusk",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C03",
+      "name": "Velis Duskward",
+      "workplace": "Underdark Lanterns",
+      "profession": "route guide",
+      "morality_rank": 3,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-ROUTE-02",
+      "world_flag": "route_safe",
+      "personal_goal": "wants independence from competing merchant guilds",
+      "schedule": "night watch on outer path",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C04",
+      "name": "Nymm",
+      "workplace": "Mushroom Exchange",
+      "profession": "myconid trader",
+      "morality_rank": 3,
+      "age_category": "adult",
+      "relationship_track": "friendship",
+      "quest_id": "Q-SPORE-03",
+      "world_flag": "medicine_delivered",
+      "personal_goal": "restore threatened fungal gardens",
+      "schedule": "spore market in twilight",
+      "romance": {
+        "eligible": false,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C05",
+      "name": "Rusk Ironhook",
+      "workplace": "Skullport Salvage",
+      "profession": "salvager",
+      "morality_rank": 4,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-SALVAGE-04",
+      "world_flag": "rescued_workers",
+      "personal_goal": "make restitution for exploitative contracts",
+      "schedule": "late shift in salvage yard",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C06",
+      "name": "Tella Quickstep",
+      "workplace": "Deepway Courier",
+      "profession": "courier",
+      "morality_rank": 1,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-COURIER-05",
+      "world_flag": "letters_recovered",
+      "personal_goal": "reunite separated families",
+      "schedule": "morning routes, evening tea",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C07",
+      "name": "Elen Songglass",
+      "workplace": "Quiet Strings Music House",
+      "profession": "musician",
+      "morality_rank": 2,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-SONG-06",
+      "world_flag": "song_found",
+      "personal_goal": "compose a song that can calm the bell",
+      "schedule": "tavern stage after sundown",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C08",
+      "name": "Jessa Threadwell",
+      "workplace": "Silver Thread Tailors",
+      "profession": "tailor",
+      "morality_rank": 1,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-REFUGE-07",
+      "world_flag": "refugees_warm",
+      "personal_goal": "rebuild refugee community",
+      "schedule": "atelier in daytime",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C09",
+      "name": "Harrin Vale",
+      "workplace": "Old Gate Apothecary",
+      "profession": "healer",
+      "morality_rank": 3,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-HEAL-08",
+      "world_flag": "antidote_supply",
+      "personal_goal": "find a cure without becoming indebted to a patron",
+      "schedule": "clinic before midnight",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C10",
+      "name": "Orren Ink",
+      "workplace": "Watchful Ledger",
+      "profession": "archivist",
+      "morality_rank": 3,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-LEDGER-09",
+      "world_flag": "trade_records_expose_faction",
+      "personal_goal": "expose corrupt finances while protecting sources",
+      "schedule": "archive in afternoons",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C11",
+      "name": "Captain Ilyra Fen",
+      "workplace": "City Watch Post",
+      "profession": "watch captain",
+      "morality_rank": 1,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-WATCH-10",
+      "world_flag": "watch_reformed",
+      "personal_goal": "reform corrupt watch officers",
+      "schedule": "patrol by day, barracks by night",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C12",
+      "name": "Neris Valecrest",
+      "workplace": "Starfall Observatory",
+      "profession": "astronomer",
+      "morality_rank": 2,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-STARS-11",
+      "world_flag": "observatory_restored",
+      "personal_goal": "chart dangerous planar conjunctions",
+      "schedule": "observatory at night",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C13",
+      "name": "Bex Copperwhistle",
+      "workplace": "Clockwork Café",
+      "profession": "inventor",
+      "morality_rank": 2,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-GEARS-12",
+      "world_flag": "cafe_power_restored",
+      "personal_goal": "make safe low-cost magitech",
+      "schedule": "café mornings, workshop afternoons",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C14",
+      "name": "Maris Thorne",
+      "workplace": "River Lantern Tavern",
+      "profession": "tavern keeper",
+      "morality_rank": 3,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-TAVERN-13",
+      "world_flag": "tavern_safe",
+      "personal_goal": "protect patrons without becoming a spy",
+      "schedule": "tavern evenings",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C15",
+      "name": "Aurel Dusk",
+      "workplace": "Temple of Three Lights",
+      "profession": "priest",
+      "morality_rank": 1,
+      "age_category": "adult",
+      "relationship_track": "friendship",
+      "quest_id": "Q-SHELTER-14",
+      "world_flag": "shelter_open",
+      "personal_goal": "maintain refuge for displaced people",
+      "schedule": "temple at dawn",
+      "romance": {
+        "eligible": false,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C16",
+      "name": "Pell Rook",
+      "workplace": "Street Theatre",
+      "profession": "actor",
+      "morality_rank": 3,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-STAGE-15",
+      "world_flag": "theatre_funded",
+      "personal_goal": "keep art independent of wealthy patrons",
+      "schedule": "theatre evenings",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C17",
+      "name": "Sable Quill",
+      "workplace": "Guild Exchange",
+      "profession": "broker",
+      "morality_rank": 4,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-GUILD-16",
+      "world_flag": "guild_reformed",
+      "personal_goal": "escape a coercive trade contract",
+      "schedule": "guild weekdays",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C18",
+      "name": "Fenna Oakshade",
+      "workplace": "Rooftop Gardens",
+      "profession": "druid",
+      "morality_rank": 2,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-GARDEN-17",
+      "world_flag": "garden_restored",
+      "personal_goal": "restore urban ecology",
+      "schedule": "gardens at sunrise",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C19",
+      "name": "Riven Ash",
+      "workplace": "Lower Gate Kitchen",
+      "profession": "cook",
+      "morality_rank": 3,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-FEAST-18",
+      "world_flag": "food_delivered",
+      "personal_goal": "feed everyone without serving a faction",
+      "schedule": "kitchen noon to dusk",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    },
+    {
+      "id": "C20",
+      "name": "Torra Flint",
+      "workplace": "Arena Infirmary",
+      "profession": "fighter medic",
+      "morality_rank": 1,
+      "age_category": "adult",
+      "relationship_track": "romance",
+      "quest_id": "Q-ARENA-19",
+      "world_flag": "arena_reformed",
+      "personal_goal": "end dangerous coerced combat",
+      "schedule": "infirmary after arena bouts",
+      "romance": {
+        "eligible": true,
+        "consent_required": true,
+        "orientation": "player chemistry and individual consent; not gender locked",
+        "stages": [
+          "acquaintance",
+          "friendship",
+          "trust",
+          "optional courtship",
+          "commitment"
+        ],
+        "approval_start": 0,
+        "thresholds": [
+          15,
+          30,
+          45
+        ],
+        "no_forced_romance": true
+      },
+      "home": "TBD",
+      "source": "original Moonveil homebrew",
+      "status": "proposed"
+    }
+  ],
+  "social_links": [
+    {
+      "a": "C02",
+      "b": "C07",
+      "type": "bell restoration collaborators"
+    },
+    {
+      "a": "C04",
+      "b": "C09",
+      "type": "medicine supply partners"
+    },
+    {
+      "a": "C01",
+      "b": "C08",
+      "type": "refugee relief network"
+    },
+    {
+      "a": "C03",
+      "b": "C06",
+      "type": "rival trade-route scouts"
+    },
+    {
+      "a": "C10",
+      "b": "C17",
+      "type": "financial investigation tension"
+    },
+    {
+      "a": "C11",
+      "b": "C14",
+      "type": "watch and tavern information exchange"
+    },
+    {
+      "a": "C12",
+      "b": "C13",
+      "type": "arcane engineering collaborators"
+    },
+    {
+      "a": "C18",
+      "b": "C19",
+      "type": "community food supply"
+    }
+  ],
+  "public_events": [
+    {
+      "id": "EV01",
+      "name": "Lantern Market Night",
+      "schedule": "every seventh in-world evening (proposal)",
+      "effects": [
+        "merchant restock rumors",
+        "new friendship encounters"
+      ]
+    },
+    {
+      "id": "EV02",
+      "name": "Moonlit Music Gathering",
+      "schedule": "after Q-SONG-06 resolution",
+      "effects": [
+        "camp-like relationship scenes",
+        "city morale"
+      ]
+    },
+    {
+      "id": "EV03",
+      "name": "Relief Kitchen",
+      "schedule": "each day at dusk",
+      "effects": [
+        "refugee support",
+        "volunteer companion interactions"
+      ]
+    }
+  ],
+  "integration": {
+    "existing_shop_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10"
+    ],
+    "existing_quest_ids": [
+      "Q-BELL-01",
+      "Q-ROUTE-02",
+      "Q-SPORE-03",
+      "Q-SALVAGE-04",
+      "Q-COURIER-05",
+      "Q-SONG-06",
+      "Q-REFUGE-07",
+      "Q-HEAL-08",
+      "Q-LEDGER-09"
+    ],
+    "notes": "C01 is a new proposal replacing the earlier S01 merchant Mira Silverskein; reconcile merchant identity before runtime. Other C02-C10 are narrative proposals aligned with existing draft names except any mismatches; require automated ID reconciliation. C11-C20 quests are placeholders, not implemented."
+  },
+  "quality": {
+    "design_created": true,
+    "live_npcs": false,
+    "automated_tests_executed": 0,
+    "playtests": 0,
+    "known_gaps": [
+      "DR dates",
+      "map coordinates",
+      "full homes",
+      "quest content",
+      "shop roster reconciliation",
+      "dialogue and actual approval engine"
+    ]
+  }
+}
