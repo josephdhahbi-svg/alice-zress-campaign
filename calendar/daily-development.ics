@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Alice Zress Campaign//Daily Development//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:alice-zress-daily-development-20261014@campaign.local
+DTSTAMP:20261014T000000Z
+DTSTART;TZID=America/Los_Angeles:20261015T080000
+DTEND;TZID=America/Los_Angeles:20261015T083000
+RRULE:FREQ=DAILY
+SUMMARY:Alice Z'ress - Daily Campaign Development
+DESCRIPTION:Review five trilogies; decisions; changes; GitHub commits; DR chronology; next actions. Log notes in meetings/YYYY/MM.
+END:VEVENT
+END:VCALENDAR
