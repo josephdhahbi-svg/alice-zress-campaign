@@ -18,6 +18,9 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 - `scripts/validate.py` — schema completeness check (`python scripts/validate.py`).
 - `game/index.html` — offline five-choice prototype with local browser save.
 
+## Active development priority
+The current writing/continuity priority is the **foundational Elder Eye Trilogy**. Its working headquarters is `campaigns/elder-eye-trilogy/README.md`. Complete and verify this trilogy before allowing downstream Alice/Underdark material to rewrite its history.
+
 ## Status
 Early-stage scaffolding. Dates and official historical facts still need source verification. The game demo is not a full D&D rules engine. Lich ascensions and crossover material are homebrew unless specifically sourced.
 
