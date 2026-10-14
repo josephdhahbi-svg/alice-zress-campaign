@@ -210,3 +210,68 @@ To reach >=82:
 7. Boss/player fusion rewards must be earned and balanced against campaign progression.
 
 Expected architecture score after these changes: **86-89/100**. Keep as a future experimental subsystem; do not activate during foundational Elder Eye production.
+
+
+## V114-V117 batch intake — 2026-10-14
+
+### Deduplication
+Five supplied documents reduce to **three unique packages**:
+- V114 Omni-Synthesis Master Archive.
+- V115 Elder Eye Trilogy & Omni-Engine (two identical copies supplied).
+- V117 Omni-Planar Culmination & Elder Eye Nexus Chronicles (two identical copies supplied).
+
+Duplicate copies are references only and must not create duplicate canon/database records.
+
+### V114 — architecture bundle
+V114 claims a single cumulative V35-V80 migration coordinator and unified HUD for 35+ modules. Treat the "production-ready" label as **unverified** until compiled against the actual repository.
+
+**Keep:** module inventory, hub/navigation concept, migration inventory as an audit checklist.
+**Quarantine:** Top-25 deity rankings, Five-Pillar cosmology as official fact, crossover Cthulhu/Carcosa/Xoriat material, instant hybrid unlocks, and any claim that all modules are already synchronized.
+**Action:** do not paste the cumulative migration coordinator into production; compare each table/version against the real DB first.
+
+### V115 — Elder Eye narrative proposal
+V115's proposed plot is **NOT the foundational trilogy master canon**. It conflicts with the locked historical trilogy titles and purpose:
+1. That Which Lurks — Discovery.
+2. The Labyrinth of the Elder Eye — Descent/Understanding.
+3. The Return of the Avatar of Ghaunador — Consequence.
+
+The useful escalation pattern is retained as a **candidate late-game echo**: local manifestation -> containment problem -> planar/cosmic consequence.
+
+Rejected for foundational canon:
+- Alice already being a level-20 Eldritch Lich in Book I.
+- Book I climax predetermined as dropping a temple roof on Ghaunadaur.
+- Book II automatically using Far Realm artifacts/non-Euclidean trapping.
+- Book III requiring a ranked Top-25 deity power grid.
+- Treating generated book-specific SQLite tables as authoritative story structure.
+
+### V117 — culmination proposal
+V117 escalates the V115 proposal into an omni-planar convergence. It is classified **ENDGAME CANDIDATE / CROSSOVER-HOMEBREW**, not foundational trilogy canon.
+
+Potentially reusable: distributed anchor-point finale, cross-faction emergency cooperation, campaign-wide callbacks, world-state culmination.
+Quarantine: Ao issuing an omniversal decree, Eilistraee/Alice scene specifics, Platinum Draco-Lich alliance, Five-Pillar ontology, "all 40+ engines synchronized" claim.
+
+### Design-lab scores
+Weighted 100-point evaluation, where >=82 is promotion threshold.
+
+| Package/use | Score | Decision |
+|---|---:|---|
+| V114 pasted directly into production | 51 | REJECT |
+| V114 as architecture/audit inventory | 84 | PROMOTE AS REFERENCE |
+| V115 as replacement foundational Elder Eye trilogy | 39 | REJECT |
+| V115 escalation pattern only | 87 | PROMOTE AS DESIGN PATTERN |
+| V117 as foundational story | 31 | REJECT |
+| V117 as optional final-traversal/endgame inspiration | 85 | PROMOTE AS ENDGAME REFERENCE |
+
+### Improved integration rule
+Generated "omni-master" files never become authoritative merely because they are newer or cumulative. Promotion requires:
+1. deduplicate;
+2. classify official/homebrew/crossover/unverified;
+3. continuity check;
+4. compare against locked campaign canon;
+5. schema/version collision audit;
+6. compile/test if code is proposed for production;
+7. simulate player experience;
+8. score >=82 for its intended role;
+9. promote only the useful layer.
+
+This preserves the strong ideas while preventing version-number escalation from overwriting the Elder Eye foundation.
