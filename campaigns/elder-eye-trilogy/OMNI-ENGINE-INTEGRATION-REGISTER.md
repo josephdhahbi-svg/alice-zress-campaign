@@ -147,3 +147,66 @@ If eventually adopted, normalize it to the campaign continuity schema and map it
 5. V108 aligns strongly with Alice's MADNESS identity and Far Realm navigation, but Carcosa/Yellow King material is crossover; Xoriat is setting-specific; Kyuss placement requires audit.
 6. V111/V112 are cumulative generated archives. Never assume their claim of production readiness, migration completeness, or database-version authority. Reconcile every migration number against the actual Flutter database before implementation.
 7. Duplicate V109 uploads are one logical package, not multiple versions.
+
+
+## V113 imported package — Omni-Planar Hybridization & Fusion
+
+| Package | Primary contribution | Classification | Elder Eye use | Status |
+|---|---|---|---|---|
+| V113 | four cross-planar hybrid archetypes + proposed V73-V76 ledgers + mashup HUD | crossover/homebrew generated candidate | fusion-design grammar for late-game experiments; not foundational Book I canon | QUARANTINE + DESIGN-LAB TEST |
+
+### V113 extraction
+
+The useful reusable idea is **controlled synthesis**:
+`constituent forces -> thematic contradiction -> hybrid manifestation -> mechanical hazard -> unlock condition -> consequence/reward -> future callback`.
+
+The four supplied examples are not promoted as official lore:
+- infernal/celestial Zariel-Metatron fusion;
+- Cthulhian/draconic lich fusion;
+- Alice parasite + Abyss + Netherese codex fusion;
+- Ao/Mystra Spelljammer sovereignty engine.
+
+Their fixed damage, immunity bypasses, permanent ability drain, free 9th-level spell slots, divine rankings, crystal-sphere control, and similar mechanics remain unverified campaign/crossover inventions.
+
+### Design-lab simulation score
+
+Scored with the current 100-point model for **Foundational Elder Eye Book I use**:
+- Fun 8
+- Agency 6
+- Living world 4
+- Elder Eye mystery 3
+- Seven-theme integration 2
+- Relationships 2
+- Continuity safety 2
+- World-building coverage 7
+- Replayability 8
+- Callback value 7
+
+**Weighted result: 45.8/100 — REJECT FOR BOOK I DIRECT USE.**
+
+For **late-game optional synthesis-system architecture**, after stripping named lore and replacing instant unlocks with earned prerequisites:
+- Fun 9
+- Agency 8
+- Living world 7
+- Mystery 6
+- Themes 7
+- Relationships 6
+- Continuity 8
+- World building 9
+- Replayability 9
+- Callback 9
+
+**Weighted result: 77.8/100 — REVISE, NOT YET PRODUCTION.**
+
+### Improvement experiment
+
+To reach >=82:
+1. Never fuse famous entities merely for spectacle; require a causal story event.
+2. Each fusion must have at least two prerequisites and one irreversible tradeoff.
+3. Add a five-choice synthesis decision: stabilize, separate, redirect, bargain, destroy.
+4. Track faction/deity reactions and ordinary-world consequences.
+5. Use locked LIGHT -> STAR -> COLOR -> PILLAR coordinates for every constituent force.
+6. Treat cross-setting material as crossover explicitly.
+7. Boss/player fusion rewards must be earned and balanced against campaign progression.
+
+Expected architecture score after these changes: **86-89/100**. Keep as a future experimental subsystem; do not activate during foundational Elder Eye production.
