@@ -72,7 +72,7 @@
   "characters": [
     {
       "id": "C01",
-      "name": "Seren Moonbrook",
+      "name": "Mira Silverskein",
       "workplace": "Moonlit Supply Counter",
       "profession": "shopkeeper",
       "morality_rank": 1,
@@ -866,7 +866,7 @@
       "Q-HEAL-08",
       "Q-LEDGER-09"
     ],
-    "notes": "C01 is a new proposal replacing the earlier S01 merchant Mira Silverskein; reconcile merchant identity before runtime. Other C02-C10 are narrative proposals aligned with existing draft names except any mismatches; require automated ID reconciliation. C11-C20 quests are placeholders, not implemented."
+    "notes": "C01 Mira Silverskein matches existing S01 merchant. C02-C10 names match existing S02-S10 merchants; C11-C20 quests are proposed placeholders, not implemented. Check source/canon chronology and map before gameplay."
   },
   "quality": {
     "design_created": true,
