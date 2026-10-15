@@ -1,0 +1,143 @@
+{
+  "version": "0.1.0",
+  "status": "proposed_noncanonical_connections",
+  "rules": {
+    "every_character_requires": [
+      "origin",
+      "arrival",
+      "reason",
+      "departure",
+      "sourcebook_connection",
+      "chronology_check",
+      "travel_method",
+      "unlock_gate"
+    ],
+    "no_instant_travel": true,
+    "no_player_state_mutation": true,
+    "sourcebook_connection_is_not_published_character_canon": true,
+    "era_dr": "UNSET; must resolve before activation",
+    "departure_is_not_automatic": true
+  },
+  "characters": [
+    {
+      "id": "seralyth",
+      "name": "Seralyth Moonveil",
+      "origin": {
+        "place": "Candlekeep",
+        "region": "Sword Coast",
+        "book": "Candlekeep Mysteries",
+        "type": "homebrew_origin_link"
+      },
+      "arrival": {
+        "place": "Dagger Falls",
+        "method": "overland scholarly journey",
+        "reason": "Mystryl chronology and cipher",
+        "entry_node": "N01"
+      },
+      "departure": [
+        {
+          "place": "Candlekeep",
+          "book": "Candlekeep Mysteries",
+          "hook": "Return time-fracture evidence for independent verification",
+          "gate": "N06 resolved; chronology approved"
+        }
+      ]
+    },
+    {
+      "id": "kaelis",
+      "name": "Kaelis Silverstep",
+      "origin": {
+        "place": "Waterdeep",
+        "region": "Sword Coast",
+        "book": "Waterdeep: Dragon Heist",
+        "type": "homebrew_origin_link"
+      },
+      "arrival": {
+        "place": "Dagger Falls",
+        "method": "overland pursuit of forged documents",
+        "reason": "Trace stolen Netherese cipher",
+        "entry_node": "N01"
+      },
+      "departure": [
+        {
+          "place": "Waterdeep",
+          "book": "Waterdeep: Dragon Heist",
+          "hook": "Follow counterfeit seal to an urban faction",
+          "gate": "N06 resolved; timeline and factions checked"
+        }
+      ]
+    },
+    {
+      "id": "brinna",
+      "name": "Brinna Dawnward",
+      "origin": {
+        "place": "Elturel",
+        "region": "Western Heartlands",
+        "book": "Baldur's Gate: Descent into Avernus",
+        "type": "homebrew_origin_link"
+      },
+      "arrival": {
+        "place": "Dagger Falls",
+        "method": "overland escort and search",
+        "reason": "Find missing travelers",
+        "entry_node": "N01"
+      },
+      "departure": [
+        {
+          "place": "Elturel or Baldur's Gate",
+          "book": "Baldur's Gate: Descent into Avernus",
+          "hook": "Investigate an infernal clue after rescuing a traveler",
+          "gate": "N06 resolved; verify Elturel's status for chosen DR year"
+        }
+      ]
+    },
+    {
+      "id": "nym",
+      "name": "Nym Tinkerspark",
+      "origin": {
+        "place": "Lantan",
+        "region": "Trackless Sea",
+        "book": "Spelljammer: Adventures in Space",
+        "type": "homebrew_origin_link"
+      },
+      "arrival": {
+        "place": "Dagger Falls",
+        "method": "sea voyage then overland journey",
+        "reason": "Study Netherese engineering",
+        "entry_node": "N01"
+      },
+      "departure": [
+        {
+          "place": "Wildspace port TBD",
+          "book": "Spelljammer: Adventures in Space",
+          "hook": "Seek a safe power system for a planar vessel",
+          "gate": "N06 resolved; vessel and port access earned"
+        }
+      ]
+    },
+    {
+      "id": "vaelis",
+      "name": "Vaelis Duskwatch",
+      "origin": {
+        "place": "Underdark",
+        "region": "Faerun underground",
+        "book": "Out of the Abyss",
+        "type": "homebrew_origin_link"
+      },
+      "arrival": {
+        "place": "Dagger Falls",
+        "method": "Underdark passage then surface route",
+        "reason": "Investigate patron disturbance",
+        "entry_node": "N01"
+      },
+      "departure": [
+        {
+          "place": "Underdark passage TBD",
+          "book": "Out of the Abyss",
+          "hook": "Trace a recurring psychic signal",
+          "gate": "N06 resolved; safe passage discovered"
+        }
+      ]
+    }
+  ]
+}
