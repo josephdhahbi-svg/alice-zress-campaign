@@ -1,0 +1,354 @@
+{
+  "schema_version": "1.0",
+  "source": "User-provided Gemini Omni-Engine cumulative master manifest Parts 1-17",
+  "status": "PROPOSED_ONLY_NOT_CODE_VERIFIED",
+  "date_received": "2026-10-15",
+  "count": 42,
+  "modules": [
+    {
+      "index": 1,
+      "id": "database",
+      "path": "backend/db/database.js",
+      "priority": "P0",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 2,
+      "id": "characters",
+      "path": "backend/routes/characters.js",
+      "priority": "P0",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 3,
+      "id": "combat",
+      "path": "backend/routes/combat.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 4,
+      "id": "telemetry",
+      "path": "backend/routes/telemetry.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 5,
+      "id": "savestates",
+      "path": "backend/routes/savestates.js",
+      "priority": "P0",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 6,
+      "id": "party",
+      "path": "backend/routes/party.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 7,
+      "id": "rules",
+      "path": "backend/routes/rules.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 8,
+      "id": "encounters",
+      "path": "backend/routes/encounters.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 9,
+      "id": "lore",
+      "path": "backend/routes/lore.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 10,
+      "id": "cronEvents",
+      "path": "backend/routes/cronEvents.js",
+      "priority": "HOLD",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 11,
+      "id": "artAssets",
+      "path": "backend/routes/artAssets.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 12,
+      "id": "resting",
+      "path": "backend/routes/resting.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 13,
+      "id": "spells",
+      "path": "backend/routes/spells.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 14,
+      "id": "cosmology",
+      "path": "backend/routes/cosmology.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 15,
+      "id": "shops",
+      "path": "backend/routes/shops.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 16,
+      "id": "itemToggles",
+      "path": "backend/routes/itemToggles.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 17,
+      "id": "inspection",
+      "path": "backend/routes/inspection.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 18,
+      "id": "visualCodex",
+      "path": "backend/routes/visualCodex.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 19,
+      "id": "universe_provider",
+      "path": "frontend/lib/providers/universe_provider.dart",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 20,
+      "id": "handshakeController",
+      "path": "backend/sockets/handshakeController.js",
+      "priority": "P0",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 21,
+      "id": "backup_db",
+      "path": "scripts/backup_db.sh",
+      "priority": "P0",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 22,
+      "id": "moonveil_ci",
+      "path": ".github/workflows/moonveil_ci.yml",
+      "priority": "P0",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 23,
+      "id": "deploy_production",
+      "path": "scripts/deploy_production.sh",
+      "priority": "HOLD",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 24,
+      "id": "server.test",
+      "path": "backend/tests/server.test.js",
+      "priority": "P0",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 25,
+      "id": "weatherTriggers",
+      "path": "backend/routes/weatherTriggers.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 26,
+      "id": "webhookDispatcher",
+      "path": "backend/routes/webhookDispatcher.js",
+      "priority": "HOLD",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 27,
+      "id": "github_autosync",
+      "path": "scripts/github_autosync.sh",
+      "priority": "HOLD",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 28,
+      "id": "encounterGenerator",
+      "path": "backend/routes/encounterGenerator.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 29,
+      "id": "portalSync",
+      "path": "backend/routes/portalSync.js",
+      "priority": "P0",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 30,
+      "id": "diceRoller",
+      "path": "backend/routes/diceRoller.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 31,
+      "id": "alignmentMatrix",
+      "path": "backend/routes/alignmentMatrix.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 32,
+      "id": "planarShifts",
+      "path": "backend/routes/planarShifts.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 33,
+      "id": "auditPurge",
+      "path": "backend/routes/auditPurge.js",
+      "priority": "REJECT_AS_DESCRIBED",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 34,
+      "id": "hazardModifiers",
+      "path": "backend/routes/hazardModifiers.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 35,
+      "id": "traitMatrix",
+      "path": "backend/routes/traitMatrix.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 36,
+      "id": "ringBuffer",
+      "path": "backend/sockets/ringBuffer.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 37,
+      "id": "craftingMatrix",
+      "path": "backend/routes/craftingMatrix.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 38,
+      "id": "postalRelay",
+      "path": "backend/routes/postalRelay.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 39,
+      "id": "loreRepository",
+      "path": "backend/routes/loreRepository.js",
+      "priority": "P1",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 40,
+      "id": "macroAutomation",
+      "path": "backend/routes/macroAutomation.js",
+      "priority": "HOLD",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 41,
+      "id": "resonanceDampeners",
+      "path": "backend/routes/resonanceDampeners.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    },
+    {
+      "index": 42,
+      "id": "factionWars",
+      "path": "backend/routes/factionWars.js",
+      "priority": "P2",
+      "implementation_status": "unverified",
+      "tests_status": "not_run"
+    }
+  ],
+  "rules": [
+    "Do not assume module files exist solely from this manifest",
+    "DR dates are per entity and era; 1495 DR is not a universal epoch",
+    "Immutable historical events cannot be deleted by gameplay endpoints",
+    "No automated commit/push/deployment or autonomous player action without separate review",
+    "All writes must be authenticated, authorized, transactional and idempotent",
+    "ChatGPT creates artwork; engineering modules consume approved asset manifests",
+    "Preserve Alice Level 1, choices unselected and routes locked"
+  ]
+}
