@@ -38,3 +38,12 @@ Status: verified repository inventory and user-confirmed design decisions. This 
 - Play in this exact order: Pit of Ghaunadaur -> Rabbit Hole (adventure starts) -> Hall of Infinite Doors -> Door of Ghaunadaur -> Eye of Infinite Mazes labyrinth trial -> emerge/ooze out -> Netherese storyline begins.
 - Netherese arc occurs AFTER the Eye of Infinite Mazes, not before. Preserve the sequence and do not insert a different trilogy between them.
 - Before the fall, Alice remains in character-creation/prologue state; first playable level begins with the rabbit-hole fall. No unearned advancement or loot.
+
+## Rabbit-hole cinematic and level 1-4 opening (user direction, 2026-10-14)
+- Alice possesses the **Skilled** feat before reaching/falling into the rabbit hole (user-confirmed homebrew character setup; legality/skill selections still to validate).
+- At the rabbit-hole fall, Alice gains **Magic Initiate** (source/implementation to verify; distinguish from her Acolyte origin feat to avoid double-granting).
+- Cinematic sequence: Mystra reaches out and grants **Shield**; Ghaunadaur's acid rains toward Alice; Eilistraee's sword crosses overhead, manifesting **Blade Ward** and shielding Alice from the acid. Blade Ward, NOT Light.
+- Alice falls through to the **Hall of Infinite Doors**, sees **Larloch** (user pronounced 'Lor Kar'), a lich distinguished by a halo of colored gems, and glimpses an additional major boss described by user as 'the guy with the T' (identity UNCONFIRMED; do not guess).
+- Mystra appears amid a **falling Netherese city** and a **multiverse-ending crisis**. Treat this as an ominous vision/foreshadowing until its chronology, identity and relation to the subsequent Netherese arc are established; don't silently move the Netherese playable arc ahead of Eye of Infinite Mazes.
+- Play order remains Pit -> Rabbit Hole -> Infinite Doors -> Door of Ghaunadaur -> Eye of Infinite Mazes/pact -> ooze emergence -> Netherese adventure.
+- No scene has been played or rewards actually earned merely by recording this cinematic design.
