@@ -67,3 +67,6 @@ Solar ascension is custom and requires quests; not automatic creature-type stack
 - MAGIC / WEAVE = BLUE (#3B82F6 proposed UI hex).
 - FIEND / NINE HELLS = color not yet chosen; infernal red is only a suggestion, not approved.
 These are essence/UI coding colors and must remain separate from NPC morality colors (BLUE hero, RED villain, GREEN neutral/mixed). Use labels/icons alongside color to avoid ambiguity and for accessibility.
+
+## Vecna's three-artifact chain — user-directed campaign adaptation
+Vecna's custom campaign objective includes obtaining and uniting three published D&D artifacts: (1) Book of Vile Darkness (forbidden secrets), (2) Hand of Vecna (necromantic might), (3) Eye of Vecna (supernatural sight/secrets). Their combined role in enabling his multiverse-remaking plan is HOMEBREW CAMPAIGN PLOT, not a claimed printed prerequisite of Vecna: Eve of Ruin's Ritual of Remaking. Alice's heroic counter-quest tracks each artifact separately: discover -> confront guardian/Vecna agent -> secure -> study -> purify or safeguard, with prerequisites and continuity metadata. None acquired at Level 1. Clarify later whether Vecna starts with any of the three or is seeking all three; user phrased 'His chain is to get the book and eye and hand'.
