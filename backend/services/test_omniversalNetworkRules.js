@@ -1,0 +1,14 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {MODES,validateDispatch,projectJammer,geopoliticalTicker}=require('./omniversalNetworkRules');
+const base={characterId:'alice-zress',originSectorId:'safehouse',destinationSectorId:'deep_tunnels',transitModeKey:'telecom_ley_line',energyAvailable:30,unlockedModes:['telecom_ley_line']};
+test('known modes have distinct kinds',()=>assert.equal(new Set(Object.values(MODES).map(m=>m.kind)).size,3));
+test('unlocked communication is available',()=>assert.equal(validateDispatch(base).allowed,true));
+test('locked modes denied',()=>assert.equal(validateDispatch({...base,unlockedModes:[]}).reason,'LOCKED'));
+test('energy requirements enforced',()=>assert.equal(validateDispatch({...base,energyAvailable:0}).reason,'INSUFFICIENT_ENERGY'));
+test('high jammer blocks signal',()=>assert.equal(validateDispatch({...base,jammers:[{sectorId:'safehouse',status:'ACTIVE',severity:'HIGH'}]}).reason,'SIGNAL_JAMMED'));
+test('low jammer does not block',()=>assert.equal(validateDispatch({...base,jammers:[{sectorId:'safehouse',status:'ACTIVE',severity:'LOW'}]}).allowed,true));
+test('jammer deploy and clear are pure',()=>{const a={},b=projectJammer(a,{type:'JAMMER_DEPLOYED',sectorId:'safehouse',severity:'CRITICAL'}),c=projectJammer(b,{type:'JAMMER_CLEARED',sectorId:'safehouse'});assert.equal(b.safehouse.status,'ACTIVE');assert.equal(c.safehouse.status,'CLEARED');assert.deepEqual(a,{});});
+test('physical transit is not blocked by comm jammer',()=>assert.equal(validateDispatch({...base,transitModeKey:'transit_doom_buggy',unlockedModes:['transit_doom_buggy'],jammers:[{sectorId:'safehouse',status:'ACTIVE',severity:'HIGH'}]}).allowed,true));
+test('invalid modes rejected',()=>assert.throws(()=>validateDispatch({...base,transitModeKey:'teleport_everywhere'})));
+test('ticker reports missing data instead of inventing lore',()=>assert.equal(geopoliticalTicker({}).politicalClimate,'Unreported'));
