@@ -1,0 +1,14 @@
+'use strict';
+const test=require('node:test');const assert=require('node:assert/strict');
+const {CHOICES,initialWorld,reduceWorld,replay}=require('./worldReducer');
+const e=(choiceId,revision=1)=>({type:'HEROIC_CHOICE_COMMITTED',sceneId:'U01_SILVER_COURIER',choiceId,revision,eventId:'ev_'+revision,commandId:'cmd_'+revision});
+test('five choices are in canonical order',()=>assert.deepEqual(CHOICES,['LAWFUL_GOOD','NEUTRAL_GOOD','CHAOTIC_GOOD','UTILITY','ACTION']));
+for(const choice of CHOICES)test(choice+' changes the city and preserves Alice locks',()=>{const a=initialWorld(),b=reduceWorld(a,e(choice));assert.notDeepEqual(a.city,b.city);assert.equal(b.alice.level,1);assert.equal(b.alice.items.length,0);assert.equal(b.alice.wishesSpent,0);assert.equal(b.alice.companionUnlocked,false);assert.equal(a.revision,0);});
+test('replay produces deterministic state',()=>{const events=[e('UTILITY',1),e('ACTION',2)];assert.deepEqual(replay(events),reduceWorld(reduceWorld(initialWorld(),events[0]),events[1]));});
+test('rejects duplicate event ID',()=>{const a=reduceWorld(initialWorld(),e('UTILITY'));assert.throws(()=>reduceWorld(a,{...e('ACTION',2),eventId:'ev_1'}));});
+test('rejects duplicate command ID',()=>{const a=reduceWorld(initialWorld(),e('UTILITY'));assert.throws(()=>reduceWorld(a,{...e('ACTION',2),commandId:'cmd_1'}));});
+test('rejects missing revision',()=>assert.throws(()=>reduceWorld(initialWorld(),e('UTILITY',2))));
+test('rejects evil choice',()=>assert.throws(()=>reduceWorld(initialWorld(),e('EVIL'))));
+test('rejects unrecognized event',()=>assert.throws(()=>reduceWorld(initialWorld(),{...e('UTILITY'),type:'ADMIN_GRANT'})));
+test('clamps city metrics',()=>{let s=initialWorld();s.city.safety=100;s.city.intel=100;s=reduceWorld(s,e('UTILITY'));assert.equal(s.city.intel,100);});
+test('original snapshot stays unchanged',()=>{const a=initialWorld();reduceWorld(a,e('UTILITY'));assert.equal(a.history.length,0);assert.equal(a.city.intel,0);});
