@@ -138,3 +138,49 @@ Do not expose raw vector-clock mechanics as lore unless intentionally represente
 
 Separate campaign content additionally uses:
 **BRAINSTORM -> CONTINUITY-CHECKED -> SOURCE-VERIFIED -> BUILT -> SIMULATED -> AUTOPSIED -> CANONIZED**.
+
+
+# Ultimate Omni-Edition Intake — 2026-10-14
+
+Status: **NEWER USER-SUPPLIED BRAINSTORM / PROPOSED ARCHITECTURE + COSMOLOGY. NOT AUTOMATICALLY IMPLEMENTED OR CANONIZED.**
+
+## Newly proposed cosmology
+- Material Realm (Books 1–12) -> proposed Netherese Cities layer -> Astral Orrery (Books 13–22) -> Primary Archive (Books 23–30).
+- Six proposed Prime Architects: Vaellus/WHO, Khaenos/WHAT, Aeridia/WHERE, Chronosis/WHEN, Mystavel/WHY, Methodis/HOW.
+- Proposed Great Desync and Aethelgard storyline.
+- Proposed Mystryl + Vecna + Mok'slyk paradox.
+- Proposed legendary item: Compilation-Eye.
+
+These are **Moonveil-original/candidate constructs unless independently source-verified**. They do not override the established ten-trilogy roadmap, the canon-guarded Mystryl integration, the unresolved Patchwork Architect, or the Book 30 Convergence brainstorm.
+
+The names **Khaen, Valdek, Nyx, Deep Drift** are not accepted here as verified Netherese cities. They require provenance/source review before historical placement.
+
+## Book 30 candidate mechanics
+Aethelgard remains a candidate homebrew boss:
+- proposed CR 26;
+- proposed HP 680;
+- proposed AC 22;
+- damage-over-80 rollback;
+- DC 22 Wisdom / 10 Sanity-per-turn aura;
+- three-round Master Ledger Purge;
+- four proposed commits WHO / WHAT / WHERE / WHEN.
+
+Before CANONIZED, reconcile this with the richer existing final ledger:
+WHO -> WHAT -> WHERE -> WHEN -> WHY -> HOW -> COST -> EVIDENCE -> CONNECTION -> CONSEQUENCE -> CHOICE.
+
+The four-node purge can therefore work as **Phase 3's emergency stabilization puzzle**, while the eleven-node ledger remains the full narrative resolution.
+
+## Synchronization correction remains mandatory
+The supplied `resolveConflict()` still compares scalar counters. It is not yet a complete vector-clock algorithm despite the specification label.
+
+Required implementation model:
+- clock = map of node_id -> counter;
+- component-wise causal comparison;
+- component-wise max on merge;
+- explicit CONCURRENT state;
+- entity-specific conflict policy;
+- idempotency/event IDs;
+- no generic JSON-spread resolution for gold, inventory, unique artifacts, deaths, quest completion or provenance.
+
+## Implementation truth
+This Omni-Edition block updates the **target specification only**. No database migration, backend service, Flutter debug screen, Socket.io synchronization, Kubernetes deployment, Prometheus/Grafana stack, Aethelgard encounter implementation, or new cosmology data is marked implemented by this intake.
