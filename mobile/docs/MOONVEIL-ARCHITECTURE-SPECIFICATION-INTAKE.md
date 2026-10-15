@@ -1,167 +1,140 @@
 # Moonveil Universe — Architecture Specification Intake
 
 Status: **PROPOSED / NOT YET IMPLEMENTED**
-Source: user-supplied consolidated architecture specification, 2026-10-14.
+Updated source: user-supplied master specification, 2026-10-14.
 Scope: 30-book Moonveil campaign ecosystem.
 
-> Important: this file records the intended architecture. It does not claim that every table, service, Flutter widget, Kubernetes resource, backup, monitor, or CI/CD pipeline currently exists in the repository.
+> This records intended architecture and candidate encounter data. It does not claim the listed schemas, backend, vector synchronization, UI, Kubernetes resources, monitoring, or Book 30 mechanics are implemented or canonized.
 
 ## Target architecture
-
-High-performance, offline-first, cross-platform RPG ecosystem.
-
-- Flutter client.
-- Local SQLite with FTS5.
-- Transactional outbox synchronization.
-- Proposed Node.js / Express / Socket.io backend.
+- Flutter offline-first client.
+- Local SQLite + FTS5.
+- Transactional outbox over Socket.io.
+- **Vector clocks / causal consistency proposal.**
+- Proposed Express.js + better-sqlite3 backend.
 - Proposed Kubernetes deployment.
-- GitHub Actions CI/CD.
-- Proposed better-sqlite3 server-side persistence/backup tooling.
-- Proposed Prometheus/Grafana observability.
+- Proposed Prometheus/Grafana monitoring.
 
-## 5W1H world-state ledger
+Core design law: **single-player/offline gameplay remains functional when all remote services are unavailable.**
 
-Proposed table: `world_entities_5w1h`
+## Proposed database additions
 
-Core fields:
-- entity_id
-- entity_name
-- campaign_book_number
-- status
-- who_actor
-- what_action
-- where_location
-- when_epoch
-- why_motivation
-- how_method
-- metadata_json
-- updated_at
+### world_entities_5w1h
+Tracks entity identity, book, status and WHO / WHAT / WHERE / WHEN / WHY / HOW plus metadata and timestamps.
 
-Proposed FTS5 index: `world_entities_5w1h_fts` across identity and 5W1H narrative fields.
+### district_state_modifiers
+Proposed fields:
+district_id; district_name; active_crisis_type; economy_price_multiplier; hospital_sanity_multiplier; updated_at.
 
-### Integration with current Moonveil trackers
+### city_shops / banking_accounts / player_vital_states
+City services and economy state. The supplied specification currently uses HP and a custom Sanity resource. Sanity is therefore a **Moonveil game subsystem candidate**, not a claim about core D&D rules.
 
-5W1H should become a common query layer over:
-- Character Tracker
-- Story Tracker
-- Artifact Puzzle Tracker
-- Map/Road graph
-- WEB / WEAVE / LIGHT
-- Economy Ledger
-- History/chronology
-- Monster migration
-- Document/scroll archaeology
+### entity_vector_clocks
+Proposed fields:
+entity_id; node_id; logical_counter; vector_state_json; updated_at.
 
-A tracked event should be answerable as:
-**WHO + WHAT + WHERE + WHEN + WHY + HOW + COST + EVIDENCE + CONSEQUENCE + NEXT CONNECTION.**
+### sync_outbox
+Expanded proposal:
+outbox_id; event_type; payload_json; node_id; logical_counter; status; retry_count; created_at; updated_at.
 
-## City economy proposal
+## Vector synchronization review
 
-Proposed tables:
-- `city_shops`
-- `shop_inventories`
-- `banking_accounts`
-- `healthcare_records`
+The supplied `resolveConflict` function is useful as a prototype but is **not yet a true vector-clock implementation**. It compares one scalar `incomingCounter` against one stored scalar `logical_counter`. Equal scalar counters from different nodes do not, by themselves, establish vector-clock concurrency.
 
-Initial shop categories supplied:
-HOSPITAL | HERBALIST | ALCHEMIST | ASTRONOMER.
+Before implementation:
+1. Store a vector such as `{nodeA: 4, nodeB: 7}`.
+2. Compare vectors component-wise to determine BEFORE / AFTER / EQUAL / CONCURRENT.
+3. Increment only the local node's component for local events.
+4. Merge clocks using component-wise maxima.
+5. Define entity-specific conflict policies rather than generic object spread.
+6. Never silently merge money, inventory quantities, unique-item ownership, deaths, quest completion, or artifact provenance.
+7. Add event/idempotency IDs so retried outbox messages cannot duplicate rewards.
+8. Preserve conflict records for debugging and player/GM resolution where necessary.
 
-These should later expand through reference tables rather than hard-coded assumptions so Moonveil can support smiths, inns, temples, shipyards, booksellers, cartographers, engineers, magical services, guilds, markets and planar merchants.
+This is particularly important because Moonveil's persistent archaeology depends on trustworthy custody and chronology.
 
-Economy integration must preserve the existing Moonveil transaction-ledger requirement: every purchase, sale, toll, wage, treatment, repair, crafting expense and treasure conversion receives a transaction record and reconciles balances.
+## Hospital/economy service review
 
-## Atomic shop purchase service
+The supplied treatment transaction:
+- finds a hospital and district modifiers;
+- computes price and Sanity restoration;
+- checks bank funds;
+- debits the player;
+- credits the hospital;
+- restores HP/Sanity.
 
-Supplied design uses a better-sqlite3 transaction:
-1. fetch inventory row;
-2. reject insufficient stock;
-3. calculate total;
-4. fetch player bank account;
-5. reject insufficient funds;
-6. debit player;
-7. credit shop;
-8. decrement stock;
-9. return success/error.
+Required hardening:
+- explicit hospital bank account rather than assuming shop ID is an account owner;
+- treatment-type validation;
+- receipt/TXN ID;
+- before/after balances;
+- idempotency key;
+- audit/event record;
+- defined rounding rules;
+- local/offline conflict behavior;
+- campaign rules for HP/Sanity restoration and caps.
 
-### Required hardening before production
-- Validate quantity as positive bounded integer.
-- Resolve account identity explicitly rather than assuming `owner_id = shopId`.
-- Add transaction/receipt ID.
-- Record price-at-purchase.
-- Record before/after balances.
-- Add idempotency key for synchronized retries.
-- Add audit/event row.
-- Define concurrency/version semantics.
-- Connect to offline outbox and server acknowledgement.
-- Preserve item provenance for unique/artifact items.
-- Never treat priceless artifacts as ordinary shop inventory without explicit story rules.
+## Flutter target
 
-## Flutter target components
+New proposed screen:
+### DebugSyncScreen
+Developer inspector for:
+- local outbox packets;
+- node IDs;
+- vector state/counters;
+- retries;
+- force flush;
+- conflicts.
 
-### MoonveilSyncEngine
-Offline SQLite outbox; connectivity detection; in-flight locking; Socket.io transmission; `sync_ack` purge.
+Production safety: destructive purge controls should be debug/admin gated and should not allow silent deletion of unsynchronized player history.
 
-### WorldState5W1HScreen
-Searchable 5W1H world ledger.
+Existing target UI remains:
+WorldState5W1HScreen; CityEconomyScreen; ShopCheckoutBottomSheet; Character Tracker; Story Tracker; Artifact Puzzle Tracker; Maps/Roads; Documents/Scrolls; Treasure Markings.
 
-### CityEconomyScreen
-Municipal services, shops, banks and economic information.
+## Book 30 candidate integration
 
-### ShopCheckoutBottomSheet
-Quantity adjustment, live totals and purchase submission.
+The supplied architecture proposes:
+**Aethelgard, Arch-Architect of the Void**
+candidate CR 26; HP 680; AC 22.
 
-### Existing tracker UI that must join this architecture
-- Characters: who is still on the board.
-- Story: active/dormant/resolved narrative threads.
-- Artifact Puzzles: discovered knowledge vs hidden GM truth.
-- Maps/Roads: physical, planar and historical movement.
-- Documents/Scrolls: papers and evidence left by prior adventures.
+Candidate phases:
+- Atomic Transaction Integrity / rollback;
+- Sanity Corruption Aura;
+- Master Ledger Purge;
+- final node commitment.
 
-## DevOps target
+This is **HOME BREW / UNBALANCED CANDIDATE DATA**, not established D&D canon and not yet the locked identity of the Patchwork Architect or final Moonveil antagonist.
 
-Proposed GitHub Actions:
-- backend Jest tests;
-- native better-sqlite3 build/test;
-- Flutter unit/integration tests;
-- container build;
-- staging rollout;
-- production rollout with explicit safety gates.
+The strongest concept to preserve is the **Master Ledger climax**. Instead of only four database-like nodes, Moonveil can ultimately require reconciliation of:
 
-Proposed Kubernetes:
-- backend workload;
-- persistent storage;
-- scheduled SQLite hot backups every six hours.
+**WHO -> WHAT -> WHERE -> WHEN -> WHY -> HOW -> COST -> EVIDENCE -> CONNECTION -> CONSEQUENCE -> CHOICE**
 
-Proposed monitoring:
-- Prometheus metrics;
-- Grafana dashboards;
-- PVC utilization alert above 85%;
-- backup CronJob health.
+That makes Book 30 pay off the actual campaign record rather than merely a programming metaphor.
 
-## Architecture caution
+## Campaign tier overlay supplied
 
-The current Moonveil project has been developed primarily as an offline Flutter/SQLite game. The Node/Express/Socket.io/Kubernetes layer supplied here is a **target architecture proposal**, not automatically a replacement for the offline-first core.
+Candidate overlay only; it does not replace the ten-trilogy roadmap:
+- Tier 1 / Books 1–5 / Levels 1–4: local services and rumors.
+- Tier 2 / Books 6–12 / Levels 5–10: district crises, healthcare/economy, heists.
+- Tier 3 / Books 13–22 / Levels 11–16: world ledger, Void Spire ruins, observatories.
+- Tier 4 / Books 23–30 / Levels 17–20+: Primary Archive, ledger re-stitching, ascension.
 
-Design principle:
-**Single-player/offline gameplay must remain functional when every remote service is unavailable.**
+**Oakhaven, Void Spire, Primary Archive and Aethelgard remain candidate locations/entities until reconciled with the established campaign map and chronology.**
 
-Remote infrastructure should add synchronization, backup, shared-world or administrative capabilities without making core campaign play dependent on a server.
+## Persistent-universe connection
 
-## Connection to persistent universe archaeology
+Vector clocks are not merely backend infrastructure. If implemented correctly, they can support the campaign's fiction-facing chronology:
+- which party changed an entity first;
+- whether two offline campaigns made concurrent changes;
+- whether a scroll was edited before or after an artifact moved;
+- whether two claimed owners conflict;
+- which world-state facts are authoritative vs unresolved.
 
-The 5W1H ledger should eventually store adventure footprints and historical evidence:
-- who left an item;
-- what happened;
-- where it was abandoned;
-- when it occurred;
-- why it mattered;
-- how it reached its later location.
-
-This lets a scroll written during the Avatar era, damaged during the Spellplague, sold in Waterdeep, transported to Avernus and rediscovered in a later adventure remain one queryable object with a complete custody/history chain.
+Do not expose raw vector-clock mechanics as lore unless intentionally represented through the 5W1H Master Ledger, Redactor, Fate Engine, Patchwork Archive or another explicit story device.
 
 ## Implementation states
 
-Every architecture component should use:
 **PROPOSED -> SCHEMA-DESIGNED -> IMPLEMENTED -> MIGRATED -> TESTED -> INTEGRATED -> PLAYTESTED -> PRODUCTION-READY**
 
-Never promote a component merely because its specification exists.
+Separate campaign content additionally uses:
+**BRAINSTORM -> CONTINUITY-CHECKED -> SOURCE-VERIFIED -> BUILT -> SIMULATED -> AUTOPSIED -> CANONIZED**.
