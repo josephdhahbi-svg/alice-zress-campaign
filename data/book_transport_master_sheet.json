@@ -1,0 +1,86 @@
+{
+  "version": "0.1.0",
+  "status": "template_with_example_records",
+  "scope": "all 30 books / ten trilogies",
+  "columns": [
+    "book_id",
+    "route_id",
+    "origin_location_id",
+    "destination_location_id",
+    "entry_or_exit",
+    "travel_mode",
+    "service_id",
+    "distance",
+    "estimated_duration",
+    "fare",
+    "currency",
+    "capacity",
+    "schedule",
+    "prerequisites",
+    "hazards",
+    "availability_dr",
+    "source_status",
+    "owner_faction",
+    "messaging_link_ids",
+    "continuity_review",
+    "notes"
+  ],
+  "routes": [
+    {
+      "book_id": null,
+      "route_id": "NET_STAGECOACH_PROPOSAL_01",
+      "origin_location_id": "LOC_WATERDEEP",
+      "destination_location_id": "LOC_DAGGER_FALLS",
+      "entry_or_exit": "entry",
+      "travel_mode": "coach_or_caravan",
+      "service_id": "SERVICE_COACH_PENDING",
+      "distance": null,
+      "estimated_duration": null,
+      "fare": null,
+      "currency": "gp",
+      "capacity": null,
+      "schedule": null,
+      "prerequisites": [
+        "Verify geography and road conditions",
+        "Confirm historical period and operator"
+      ],
+      "hazards": [
+        "Road and weather conditions TBD"
+      ],
+      "availability_dr": null,
+      "source_status": "homebrew proposal",
+      "owner_faction": null,
+      "messaging_link_ids": [
+        "POSTAL_CORRIDOR_01"
+      ],
+      "continuity_review": "pending",
+      "notes": "Conceptual corridor only; not a confirmed continuous stagecoach service."
+    }
+  ],
+  "route_modes": [
+    "walk",
+    "horse",
+    "wagon",
+    "stagecoach",
+    "caravan",
+    "riverboat",
+    "seagoing_ship",
+    "airship",
+    "spelljammer",
+    "mine_cart",
+    "subway_homebrew",
+    "portal",
+    "teleportation",
+    "planar_gateway"
+  ],
+  "availability_states": [
+    "operational",
+    "seasonal",
+    "disrupted",
+    "under_construction",
+    "locked",
+    "historical_only",
+    "proposed"
+  ],
+  "book_route_status": "Book IDs are unassigned until roadmap and geography verified"
+}
