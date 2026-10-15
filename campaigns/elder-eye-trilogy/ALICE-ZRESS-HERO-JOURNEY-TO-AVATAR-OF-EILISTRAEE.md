@@ -118,9 +118,41 @@ Reward:
 Transformation question:
 **Can Alice use the architecture of a curse without becoming its prisoner?**
 
-# ACT V — ARCH ELDRITCH LICH
+# ACT V — ARCH ELDRITCH LICH / ANGEL REVEAL
 
 Target milestone: **Level 20 / endgame quest**.
+
+## THE LEVEL-20 TWIST — THE ANGEL INSIDE THE ARCHLICH
+
+At Level 20, Alice completes her Arch Eldritch Lich transformation — and the Watcher discovers the hidden result of twenty levels of moral choices.
+
+Across Levels 1–20, major moral decisions can present five meaningful paths. **Three are GOOD/HEROIC choices** and two are non-good/darker alternatives where the scene supports that structure. The game tracks Alice's actual decisions without revealing the final transformation in advance.
+
+### Angel qualification
+If Alice selected **at least one of the three GOOD/HEROIC choices at every required Level 1–20 moral checkpoint**, she qualifies for the **HERO ENDING**.
+
+This is a continuity chain, not a simple total-score threshold: each required level must contain at least one qualifying heroic resolution chosen by the Watcher. Missing a required checkpoint prevents this specific ending unless a later redemption/repair quest explicitly restores that broken link.
+
+At Level 20, the apparent Arch Eldritch Lich transformation begins normally: eldritch darkness, Eye resonance, lich-state manifestation and the expectation that Alice has reached the final form of her pact-shaped evolution.
+
+Then moonlight breaks through it.
+
+Silver-white wings unfold from the Archlich form.
+
+Alice has not stopped being an Arch Eldritch Lich. **She has become an ANGELIC ARCH ELDRITCH LICH** — the first visible proof that her repeated free heroic choices transformed what her eldritch immortality means.
+
+This is the twist the Watcher earns rather than being told in advance during normal play.
+
+### HERO ENDING — one of three good endings
+The three GOOD choice lanes can culminate in three heroic Level-20 ending expressions. All preserve the Angelic Arch Eldritch Lich reveal, but the dominant pattern of Alice's choices determines the cinematic emphasis:
+
+1. **MERCY / REDEMPTION HERO ENDING** — the angel who keeps the road home open.
+2. **COURAGE / PROTECTION HERO ENDING** — the angel who stands between the innocent and the dark.
+3. **FREEDOM / HOPE HERO ENDING** — the angel who breaks chains and teaches others to choose their own road.
+
+The Watcher sees **one of these three hero endings** based on the journey actually played. Ties are resolved by the final Level-20 choice and accumulated consequence ledger, not randomly.
+
+The angel reveal does not automatically make Alice the Avatar of Eilistraee. It is the Level-20 bridge that makes her later **Aspect of the Moon -> Avatar of Eilistraee** journey possible.
 
 Ordinary immortality is not enough. Alice must prove she can carry enormous eldritch power without becoming a new tyrant.
 
@@ -204,7 +236,7 @@ This is a Moonveil-earned divine state. Exact mechanical relationship to Eilistr
 2. **Hero of the Promenade** — community hero.
 3. **Champion of Eilistraee** — recognized heroic servant by choice.
 4. **Eldritch Lich** — ethical eldritch immortality.
-5. **Arch Eldritch Lich** — sovereign mastery of her transformed state.
+5. **Angelic Arch Eldritch Lich** — Level-20 hero-ending revelation: sovereign eldritch mastery transformed by an unbroken chain of heroic choices.
 6. **Aspect of the Moon** — living embodiment of chosen lunar ideals.
 7. **Avatar of Eilistraee** — highest freely chosen divine representation.
 
