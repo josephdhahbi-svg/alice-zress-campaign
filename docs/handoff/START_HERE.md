@@ -164,3 +164,8 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 ## Team Meeting 11 Gemini + Copilot deliveries intake
 - `a1d4606` added `docs/handoff/meeting-11-gemini-copilot-integration-review.md`. Both deliveries are design/source proposals, **not integrated operational systems**. Gemini's unverified test claims do not establish secure functionality; its quest router is blocked by missing auth, optional revision, timestamp IDs and universal 1495 DR. Copilot's U01 cavern/courier are unverified homebrew proposals, not approved lore; normalize entity IDs, canon-status enums and protected U01 scene ID.
 - No tests executed for these deliveries. Alice Level 1 and five unselected options unchanged. Next prioritize secure command/ledger and synthetic WorldOS continuity tests before any gameplay mutation.
+
+## Team Meeting 12 — Alice browser preview
+- `37f1082` added `web/alice_u01_preview.html`: standalone responsive, read-only scene with Level 1 Alice, custom origin gifts, five disabled choices, unknown DR and locked travel. No backend/save connection and no artwork file.
+- `43c76ce` added `tests/test_alice_u01_html.py`: eight static HTML content checks. An equivalent eight-test suite was executed locally: **8 passed**. Full repository execution and real browser testing remain unverified.
+- Gemini Meeting 11 quest commands remain blocked; Copilot's homebrew NPCs/locations remain unverified. Next: browser testing, versioned read projection integration, security and canon checks before enabling choices.
