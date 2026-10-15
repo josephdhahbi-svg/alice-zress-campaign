@@ -1,0 +1,18 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {projectStoryReplay}=require('./storyReplayProjector');
+const options={profileId:'alice-zress',sceneId:'U01_SILVER_COURIER'};
+const event=(eventId,worldTick,type,data={})=>({eventId,worldTick,type,profileId:options.profileId,sceneId:options.sceneId,data});
+test('empty replay is valid',()=>assert.equal(projectStoryReplay([],options).panelCount,0));
+test('choice is retained without choosing for player',()=>assert.equal(projectStoryReplay([event('E_1',1,'CHOICE_COMMITTED',{choiceId:'LAWFUL_GOOD'})],options).beats[0].choiceId,'LAWFUL_GOOD'));
+test('dice is projected',()=>assert.equal(projectStoryReplay([event('E_1',1,'DICE_RESOLVED',{total:17})],options).beats[0].diceTotal,17));
+test('other profiles filtered',()=>assert.equal(projectStoryReplay([{...event('E_1',1,'SCENE_OPENED'),profileId:'other'}],options).panelCount,0));
+test('unknown event ignored',()=>assert.equal(projectStoryReplay([event('E_1',1,'INVENTORY_CHANGED')],options).panelCount,0));
+test('duplicate IDs rejected',()=>assert.throws(()=>projectStoryReplay([event('E_1',1,'SCENE_OPENED'),event('E_1',2,'SCENE_CLOSED')],options)));
+test('out of order ticks rejected',()=>assert.throws(()=>projectStoryReplay([event('E_1',2,'SCENE_OPENED'),event('E_2',1,'SCENE_CLOSED')],options)));
+test('invalid choice rejected',()=>assert.throws(()=>projectStoryReplay([event('E_1',1,'CHOICE_COMMITTED',{choiceId:'EVIL'})],options)));
+test('invalid dice rejected',()=>assert.throws(()=>projectStoryReplay([event('E_1',1,'DICE_RESOLVED',{total:-1})],options)));
+test('unverified artwork remains missing',()=>assert.equal(projectStoryReplay([event('E_1',1,'SCENE_OPENED')],options).requiresArt,true));
+test('asset references preserved',()=>assert.equal(projectStoryReplay([event('E_1',1,'SCENE_OPENED',{visualAssetId:'ART_1'})],options).beats[0].visualAssetId,'ART_1'));
+test('no source mutation',()=>{const a=[event('E_1',1,'SCENE_OPENED',{dialogue:'Hello'})];const before=JSON.stringify(a);projectStoryReplay(a,options);assert.equal(JSON.stringify(a),before)});
+test('not a video renderer',()=>assert.equal(projectStoryReplay([],options).status,'STORYBOARD_DATA_ONLY'));
