@@ -13,6 +13,7 @@ REGISTRIES = {
     "book_transport_master_sheet.json": ("columns", "routes", "route_modes"),
     "world_communications_network.json": ("channels",),
     "all_30_books_transport_and_mail.json": ("books", "transport_modes", "messaging_services"),
+    "temporal_route_scenarios.json": ("scenarios",),
 }
 for file in sorted((ROOT / "data").glob("*.json")):
     if file.name == "schema.json":
