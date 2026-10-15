@@ -1,0 +1,4 @@
+# Transactional Scene Engine (integration Lego)
+This module joins the existing SQLite event_ledger_schema.sql, heroicSceneContract.js, worldReducer.js and eventOutbox.js. Run base schema migration first, then sceneCommandEngine.init(db), then resolve(db, command) for an authenticated Alice Level 1 command.
+All writes occur in a single better-sqlite3 transaction: game_commands, immutable event_ledger, scene_snapshots, profile world_tick, and outbox. Repeated command IDs with same payload return the prior event; conflicting payloads throw; stale revisions throw. audit() replays events and compares to snapshot. Use outbox.since() for authorized WebSocket reconnect.
+Caution: the caller MUST authenticate and authorize the profile before calling resolve; this module is not an HTTP route. No game is deployed. This is a prototype vertical slice; the city NPC/trade projections still need transactional integration. Future epic Level 21+ features are not enabled.
