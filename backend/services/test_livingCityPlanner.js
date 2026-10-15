@@ -1,0 +1,16 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {planCityTurn}=require('./livingCityPlanner');
+const {initialBeliefs}=require('./knowledgeBeliefEngine');
+const city={revision:2,tradeReliability:60,publicTrust:50,rumorPressure:30,jammers:{J1:{sectorId:'SECTOR_1',status:'ACTIVE',severity:'CRITICAL'}}};
+const npc=(id,role)=>({id,role,needs:{hunger:10,fatigue:10,funds:20},goals:{immediate:'WORK'}});
+const args={city,npcs:[npc('NPC_C','COURIER'),npc('NPC_E','ENGINEER'),npc('NPC_M','MERCHANT'),npc('NPC_S','SCHOLAR')],beliefs:initialBeliefs(),hour:24};
+test('engineer investigates',()=>assert.equal(planCityTurn(args).proposals.find(p=>p.npcId==='NPC_E').proposedAction,'INVESTIGATE'));
+test('courier delivers',()=>assert.equal(planCityTurn(args).proposals.find(p=>p.npcId==='NPC_C').proposedAction,'TRAVEL'));
+test('merchant reroutes',()=>assert.equal(planCityTurn(args).proposals.find(p=>p.npcId==='NPC_M').proposedAction,'TRAVEL'));
+test('scholar verifies rumors',()=>assert.equal(planCityTurn(args).proposals.find(p=>p.npcId==='NPC_S').proposedAction,'INVESTIGATE'));
+test('incident offers heroic quest',()=>assert.equal(planCityTurn(args).questHooks[0].heroic,true));
+test('deterministic ordering',()=>assert.deepEqual(planCityTurn(args).proposals.map(p=>p.npcId),['NPC_C','NPC_E','NPC_M','NPC_S']));
+test('no source mutation',()=>{const before=JSON.stringify(args);planCityTurn(args);assert.equal(JSON.stringify(args),before)});
+test('duplicate IDs rejected',()=>assert.throws(()=>planCityTurn({...args,npcs:[npc('NPC_A','COURIER'),npc('NPC_A','ENGINEER')]})));
+test('does not commit outcomes',()=>assert.equal(planCityTurn(args).status,'PROPOSALS_ONLY'));
