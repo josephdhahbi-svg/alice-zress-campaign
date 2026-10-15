@@ -109,3 +109,10 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - **Execution blocked:** a container `git clone --depth 1 --branch dev/alice-three-chosen-roadmap https://github.com/josephdhahbi-svg/alice-zress-campaign.git ...` failed with `Could not resolve host: github.com`. No full checkout validators or unittest run; do not claim tests passed.
 - Next: run `python scripts/validate.py`, `python scripts/validate_living_world.py`, `python scripts/validate_netheril_routes.py`, `python scripts/validate_temporal_scenarios.py`, `python scripts/route_planner.py --demo`, and `python -m unittest discover -s tests -v` on a complete checkout; fix any failures.
 - Build first **read-only** Alice Underdark UI; continue source-verified Visual Codex artwork, no route unlocks or Alice save changes. Gemini/Copilot new deliverables remain pending.
+
+## Gemini Engineering Batch 2 intake (2026-10-15)
+- User supplied source proposal for `backend/db/migrations/batch2_schema.sql`, `backend/services/encounterScaler.js`, `backend/routes/craftingMatrix.js`, `backend/services/webhookDispatcher.js`, and `backend/tests/batch2.test.js`.
+- `783bcf4` added `docs/handoff/gemini-engineering-batch-2-review.md`. All three Lego concepts are **retained for redesign**: opt-in homebrew encounter previews, server-authoritative crafting, and secure outbox webhook relay.
+- Repo audit: Batch 1B database and Batch 2 service files are absent from branch. No test executed here; Gemini's “ALL TESTS PASSED” assertion has no independent evidence.
+- Blocking: unauthenticated crafting, optional revision, ignored alignment requirement, hardcoded 1495 DR, unsafe inventory semantics, fake webhook HTTP 200, no actual delivery, unvalidated destinations, absent dependency API. **Do not integrate pasted source unchanged.**
+- Next: implement pure read-only encounter and crafting eligibility previews, independently test them, then add mutation endpoints only after authenticated event-ledger/migration foundation. No Alice save changes or rewards.
