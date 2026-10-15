@@ -116,3 +116,12 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Repo audit: Batch 1B database and Batch 2 service files are absent from branch. No test executed here; Gemini's “ALL TESTS PASSED” assertion has no independent evidence.
 - Blocking: unauthenticated crafting, optional revision, ignored alignment requirement, hardcoded 1495 DR, unsafe inventory semantics, fake webhook HTTP 200, no actual delivery, unvalidated destinations, absent dependency API. **Do not integrate pasted source unchanged.**
 - Next: implement pure read-only encounter and crafting eligibility previews, independently test them, then add mutation endpoints only after authenticated event-ledger/migration foundation. No Alice save changes or rewards.
+
+## Batch 2 read-only previews and secure outbox contract (2026-10-15)
+- `b277eaa` added `scripts/preview_encounter.py`: pure, bounded preview preserving base stats and labeling optional scaling as homebrew; no CR recalculation or gameplay mutation.
+- `6dd4f50` added `scripts/preview_crafting.py`: conservative read-only eligibility for actor permissions, explicit choice, source status, DR date, time window, location, plane, timeline, quest events, level, resonance, earned alignment tier, and aggregated ingredient quantities.
+- `6637eaf` added `tests/test_batch2_previews.py`: ten unittest methods for safe preview and exploit-related denials.
+- `b79e728` added `docs/architecture/crafting-event-outbox-contract-v1.md`: mandatory auth/revision/idempotency and transactional crafting + secure asynchronous webhook outbox design; not implemented.
+- **Tests not independently executed** in this session. GitHub file commits are verified; full checkout still needed for all validators and tests. No production server, network webhook, item grant, or Alice save mutation.
+- Known prototype limitation: read-only Python eligibility trusts passed actor dict and `confirmed_choice` as input, so only a server-authoritative authenticated command handler may use it for future actual crafting. Review stricter input schema and recipe validity before integration.
+- Next: run `python -m unittest discover -s tests -v` plus all validators on full checkout, fix issues, build Batch 1B event-ledger service, then implement crafting command and outbox under tests. Continue D&D canon research and Visual Codex.
