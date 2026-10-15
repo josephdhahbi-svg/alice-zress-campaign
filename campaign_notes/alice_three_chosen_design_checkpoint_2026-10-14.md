@@ -49,3 +49,6 @@ Use GitHub as durable project record; read existing files before modifications, 
 - Endings are determined by cumulative choices, which rewards and quests Alice pursued/completed, relationships and moral conduct, and decisive final actions. Do not reduce endings to raw deity pick counts. Choosing aberrant powers alone is not proof of evil alignment.
 - Proposed (not canon-locked) ending families: Herald of the Beyond, Guardian of the Weave, Champion of the Dark Maiden, and difficult secret Threefold Ascendant. Design heroic, redemption, sacrifice and corruption variants after user review.
 - Implement a traceable event ledger: scene_id, offer_event_id, category, deity, chosen_offer_id, rejected_offer_ids, lock_timestamp/sequence, quest_id, quest_status, reward_acquired, use/consequence flags, relationship deltas, ending flags, DR/plane/location and source. Never retroactively grant rewards or invent completed quests.
+
+## Confirmed epic milestone revision
+User confirmed: Level 20 = Chosen of Eilistraee (completion of 1–20 path); Level 21 = Visage of the Dark Maiden (first epic divine transformation, homebrew). Supersedes prior provisional Level 20 Visage entry. Level 21 mechanics, prerequisites and parallel Mystra/Ghaunadaur epic paths remain to be designed. No transformation has been earned.
