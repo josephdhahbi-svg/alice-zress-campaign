@@ -1,0 +1,13 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {parseClientFrame,handleClientFrame}=require('./websocketMessageGuard');
+test('answers heartbeat with nonce',()=>assert.deepEqual(parseClientFrame('{"type":"PING_HEARTBEAT","nonce":"abc"}'),{type:'PONG_HEARTBEAT',nonce:'abc'}));
+test('rejects forged combat event',()=>assert.throws(()=>parseClientFrame('{"type":"DAMAGE_APPLIED","amount":999}')));
+test('rejects forged choice',()=>assert.throws(()=>parseClientFrame('{"type":"HEROIC_CHOICE_COMMITTED"}')));
+test('rejects unknown payload fields',()=>assert.throws(()=>parseClientFrame('{"type":"PING_HEARTBEAT","nonce":"n1","admin":true}')));
+test('rejects malformed JSON',()=>assert.throws(()=>parseClientFrame('{')));
+test('rejects arrays',()=>assert.throws(()=>parseClientFrame('[]')));
+test('rejects oversize payload',()=>assert.throws(()=>parseClientFrame('x'.repeat(2049))));
+test('rejects invalid nonce',()=>assert.throws(()=>parseClientFrame('{"type":"PING_HEARTBEAT","nonce":"<script>"}')));
+test('sends heartbeat only to requesting client',()=>{const sent=[];assert.equal(handleClientFrame({readyState:1,send:x=>sent.push(JSON.parse(x))},'{"type":"PING_HEARTBEAT","nonce":"n1"}'),true);assert.equal(sent.length,1);assert.equal(sent[0].nonce,'n1')});
+test('does not send rejected event',()=>{const sent=[];assert.equal(handleClientFrame({readyState:1,send:x=>sent.push(x)},'{"type":"LEVEL_UP"}'),false);assert.equal(sent.length,0)});
