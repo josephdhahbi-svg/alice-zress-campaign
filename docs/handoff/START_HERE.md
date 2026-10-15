@@ -102,3 +102,10 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Do not integrate pasted routers unchanged: unauthenticated writes, client-controlled level/resources, spoofable portal keys, unsafe restores, unverified Alice 1495 DR seeding, mutable audit, missing server.js, persistent test DB, and unsupported “tests verified” assertion.
 - Keep SQLite WAL/foreign keys, dependency-injected router factories, default-closed portals, transaction patterns and Copilot audit-first charter **as design inputs**.
 - Next: implement a **test-only** pure domain policy + isolated SQLite migrations with authenticated, event-sourced commands and no player save writes. Require full test logs before claiming operational.
+
+## 2026-10-15: Living World registry validation
+- `1630b66` created `scripts/validate_living_world.py`, a read-only validator for the proposed 30-book/7-traversal world schema, four Visual Codex planned records, and 42 unverified Gemini modules. Does not mutate gameplay.
+- `03b1a3e` created `tests/test_living_world_validation.py` with six unittest cases: current registry, unknown-date gate, duplicate asset ID, fictional asset file path, unverified module promotion, and traversal count.
+- **Execution blocked:** a container `git clone --depth 1 --branch dev/alice-three-chosen-roadmap https://github.com/josephdhahbi-svg/alice-zress-campaign.git ...` failed with `Could not resolve host: github.com`. No full checkout validators or unittest run; do not claim tests passed.
+- Next: run `python scripts/validate.py`, `python scripts/validate_living_world.py`, `python scripts/validate_netheril_routes.py`, `python scripts/validate_temporal_scenarios.py`, `python scripts/route_planner.py --demo`, and `python -m unittest discover -s tests -v` on a complete checkout; fix any failures.
+- Build first **read-only** Alice Underdark UI; continue source-verified Visual Codex artwork, no route unlocks or Alice save changes. Gemini/Copilot new deliverables remain pending.
