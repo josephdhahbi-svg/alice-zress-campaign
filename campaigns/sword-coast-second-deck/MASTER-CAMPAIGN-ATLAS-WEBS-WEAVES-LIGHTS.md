@@ -292,3 +292,99 @@ WORLD-STATE UPDATE
    ↺ back into LIGHT / WEB / WEAVE / MAP.
 
 This loop is the campaign's living-world tracking engine.
+
+
+## 14. Eleven-category Living World Connection Matrix
+
+The campaign now uses **11 connected categories**. The original mapping/tracking layers remain; these eleven are the content categories that must exchange information and consequences.
+
+| # | Category | Symbol | Tracks | Must connect to |
+|---|---|---|---|---|
+| 1 | People & Relationships | 👥 | PCs, NPCs, families, allies, rivals, promises, romance, reputation | quests, factions, locations, culture |
+| 2 | Quests & Choices | 📜 | main quests, side quests, morality choices, failures, callbacks | people, artifacts, history, economy |
+| 3 | Places & Routes | 🗺 | cities, roads, ruins, dungeons, portals, planes, tactical maps | economy, factions, ecology, quests |
+| 4 | Artifacts & Collections | 💎 | Netherese magic, Deck objects, Old One candidates, relics, books, paintings, comics | history, quests, economy, cosmology |
+| 5 | Economy & Trade | 💰 | prices, shops, wages, treasure, taxes, tolls, trade routes, scarcity, transactions | government, professions, routes, artifacts |
+| 6 | Factions, Government & Law | 🏛 | rulers, guilds, armies, law, diplomacy, territorial control, civic services | economy, people, cities, conflict |
+| 7 | Culture, Faith & Arts | 🎭 | religion, philosophy, music, dance, language, food, customs, stories, education | people, history, factions, clues |
+| 8 | Ecology, Creatures & Environment | 🌿 | monsters, animals, plants, climate, resources, hazards, habitats | settlements, trade, professions, travel |
+| 9 | STEAM, Professions & Infrastructure | ⚙ | science, technology, engineering, arts, mathematics, tools, jobs, roads, communications | economy, puzzles, settlements, artifacts |
+| 10 | History, Chronology & Memory | ⏳ | eras, dates, ruins, provenance, altered history, records, continuity | artifacts, factions, culture, Redactor |
+| 11 | Cosmos, Planes & The Unknown | ✨ | stars, gods, planes, Far Realm, Old Ones, portals, observation, cosmic navigation | history, artifacts, magic, routes |
+
+### Connection law
+No major entry may remain isolated. Every important record must connect to **at least two other categories**, and major campaign discoveries should eventually touch **five or more**.
+
+### Eleven-link campaign circuit
+The default living-world circuit is:
+
+**👥 PEOPLE**
+→ receive/create **📜 QUESTS**
+→ move through **🗺 PLACES**
+→ discover/use **💎 ARTIFACTS**
+→ alter **💰 ECONOMY**
+→ pressure **🏛 FACTIONS/GOVERNMENT**
+→ change **🎭 CULTURE/FAITH/ARTS**
+→ affect **🌿 ECOLOGY/CREATURES**
+→ require/build **⚙ STEAM/PROFESSIONS/INFRASTRUCTURE**
+→ become part of **⏳ HISTORY/MEMORY**
+→ reveal something about **✨ COSMOS/UNKNOWN**
+→ which changes **👥 PEOPLE** again.
+
+This is a loop, not a one-way railroad.
+
+### Example: Blank Vault eleven-way connection
+1. 👥 Saelra, Vhaera, Rook, Velis and the party dispute stewardship.
+2. 📜 Return the Collection asks what to do with displaced objects.
+3. 🗺 The Blank Vault occupies the threshold between Underdark routes and the Far Realm path.
+4. 💎 Its collection contains Deck evidence, possible Netherese objects and Old One candidates.
+5. 💰 Restitution, sale, security and preservation alter wealth and markets.
+6. 🏛 Governments/guilds/factions can claim jurisdiction or custody.
+7. 🎭 Paintings, songs, books and sacred/cultural objects belong to living traditions.
+8. 🌿 Reopening routes can alter migration, food, monsters and underground habitats.
+9. ⚙ Conservation, vault security, engineering, printing and provenance analysis solve practical problems.
+10. ⏳ The Redactor's erasures create a contested historical record.
+11. ✨ The catalogue coordinate opens the Far Realm reverse path.
+Then the Far Realm discovery changes what the characters believe about the original Blank Vault decision.
+
+### Cross-category ID links
+Add to every major record:
+`CATEGORY_PRIMARY`
+`CATEGORY_LINKS[]`
+`WEB_IDS[]`
+`WEAVE_IDS[]`
+`LIGHT_IDS[]`
+`MAP_IDS[]`
+`QUEST_IDS[]`
+`CHAR_IDS[]`
+`ITEM_IDS[]`
+`ECON_IDS[]`
+`FACTION_IDS[]`
+`HISTORY_IDS[]`
+`COSMOS_IDS[]`
+
+### Dashboard expansion
+Add:
+- **DASH-FACTION** — government, guilds, law, territory and diplomacy.
+- **DASH-CULTURE** — faith, languages, arts, customs, education and cultural ownership.
+- **DASH-ECOLOGY** — habitats, resources, creatures, environmental changes and migration.
+- **DASH-STEAM** — professions, infrastructure, experiments, inventions and repairs.
+- **DASH-HISTORY** — chronology, provenance, contradictions, erased/restored memory.
+- **DASH-COSMOS** — stars, planes, deities, Far Realm signals, portals and observation boundaries.
+
+### Web/Weave/Light rule for all eleven
+- **WEB** answers: What is factually connected?
+- **WEAVE** answers: What changes because of choices and relationships?
+- **LIGHT** answers: How strong is the evidence?
+- **MAP** answers: Where is it?
+- **TIME** answers: When is it?
+- **LEDGER** answers: Who owns/pays/owes what?
+
+A fully tracked campaign node therefore becomes:
+**WHO + WHAT + WHERE + WHEN + WHY + COST + EVIDENCE + CONNECTION + CONSEQUENCE + NEXT PATH.**
+
+### Rabbit-hole expansion
+Each category can open the next:
+Person → Quest → Place → Artifact → Economy → Government → Culture → Ecology → STEAM → History → Cosmos → Person.
+
+This makes the eleven categories one connected campaign organism rather than eleven separate filing systems.
