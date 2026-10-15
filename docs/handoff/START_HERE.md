@@ -177,3 +177,12 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Ran a **locally reconstructed equivalent fixture + test suite** using `python -m unittest discover -s tests -v`: **8 passed, 0 failed**. This is not the exact GitHub checkout and not a browser test.
 - Existing HTML remains a prototype; no live API, save, command, dice, combat, or travel enabled. Gemini security blockers and Copilot canon verification remain open.
 - Next: full checkout/CI tests; actual browser test; fix data-driven UI robustness; secure read-only API; source-verify U01 content; create approved standalone Alice portrait asset.
+
+## Team Meeting 13 — shared read-model and backlog
+- `abb5a64` added `data/alice_u01_read_model_v1.json` as the versioned, synthetic U01 projection.
+- `a8406e1` updated `web/alice_u01_preview.html` to load the JSON fixture from `../data/alice_u01_read_model_v1.json` when the repo root is served over HTTP; it fails closed and keeps choices disabled when loading/validation fails.
+- `29da32c` added `tests/test_alice_u01_contract.py`; **8 locally reconstructed tests passed**. This is not a full checkout test or browser test.
+- `8550c22` added `docs/architecture/u01-read-api-contract-v1.md`; GET API is proposed only, not implemented.
+- `3651304` added `docs/development/meeting-13-backlog.md` with verified status and dependencies for 15 tasks.
+- No authenticated backend, command endpoint, save/reload, browser test, canon-verified U01 locations/NPCs, or approved portrait has been completed. Alice remains Level 1; five choices unselected; routes locked; no save mutation.
+- Next: run the exact tests on a complete checkout, do real browser tests, review Gemini's actual secure backend files, obtain source-attributed Copilot U01 records, then create/approve portrait asset.
