@@ -70,3 +70,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - A first visual Underdark atlas concept was generated in chat, not yet added to GitHub. **It is illustrative and not canon-verified**; speculative route lines, distance scale, dates, book numbers, and availability labels must not enter gameplay or canonical maps. Treat as layout inspiration only.
 - User prioritizes **Dungeons & Dragons canon first**, with all homebrew and crossover content labeled. ChatGPT leads artwork and integration; Gemini and Copilot contribute coding, tests, writing, and lore. Preserve user control over decisions and releases.
 - Next: execute full repository validators; add temporal availability unit tests; audit route schema and source-status enum; implement immutable event ledger contract; verify geographic anchors and DR windows; produce source-checked map art; map book slots only after authoritative roadmap verification.
+
+## 2026-10-15 continued: automated tests and event ledger
+- `a79b0f7` added `tests/test_temporal_route_planner.py` with seven unittest methods for directed routes, locks/disruptions, DR windows, missing events, player confirmation, character restrictions, forbidden events, and unknown locations. **Tests committed, NOT executed on a full checkout.**
+- `d80daf7` added `docs/architecture/immutable-event-ledger-v1.md`, a proposed append-only event ledger across DR chronology, campaign tick, timeline, and seven traversals. This is a design, not an operational database.
+- `4f8e155` registered `data/temporal_route_scenarios.json` in `scripts/validate.py` to prevent false registry errors.
+- Run: `python scripts/validate.py`; `python scripts/validate_netheril_routes.py`; `python scripts/validate_temporal_scenarios.py`; `python scripts/route_planner.py --demo`; `python -m unittest discover -s tests -v`. Do not claim these passed until executed.
+- The route planner remains a static same-DR-year planning prototype, not a departure/arrival-time-aware transport solver. Before production, require explicit `continuity_review=approved` and allowlisted `source_status` rather than merely excluding some values; test unknown status fail-closed.
+- Source-verification priority: published Underdark geography and Promenade chronology; never treat visual concept route lines or fictional book assignments as canonical.
