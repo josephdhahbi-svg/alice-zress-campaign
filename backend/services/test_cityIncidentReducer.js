@@ -1,0 +1,15 @@
+'use strict';
+const test=require('node:test');const assert=require('node:assert/strict');
+const {initialCityNetwork,applyCityIncident,replayCityIncidents}=require('./cityIncidentReducer');
+const deploy={eventId:'ev1',commandId:'cmd1',sectorId:'safehouse',revision:1,type:'JAMMER_DEPLOYED',severity:'HIGH'};
+const clear={eventId:'ev2',commandId:'cmd2',sectorId:'safehouse',revision:2,type:'JAMMER_CLEARED'};
+test('deployment reduces trade reliability and trust',()=>{const a=applyCityIncident(initialCityNetwork(),deploy);assert.equal(a.tradeReliability,64);assert.equal(a.publicTrust,47);assert.equal(a.rumorPressure,26);});
+test('clearing a jammer restores communications',()=>{const a=replayCityIncidents([deploy,clear]);assert.equal(a.jammers.safehouse.status,'CLEARED');assert.equal(a.tradeReliability,67);});
+test('replay deterministic',()=>assert.deepEqual(replayCityIncidents([deploy,clear]),replayCityIncidents([deploy,clear])));
+test('duplicate incident rejected',()=>assert.throws(()=>applyCityIncident(applyCityIncident(initialCityNetwork(),deploy),{...clear,eventId:'ev1'})));
+test('revision gap rejected',()=>assert.throws(()=>applyCityIncident(initialCityNetwork(),{...deploy,revision:2})));
+test('cannot clear missing jammer',()=>assert.throws(()=>applyCityIncident(initialCityNetwork(),{...clear,revision:1})));
+test('cannot deploy twice to same sector',()=>assert.throws(()=>applyCityIncident(applyCityIncident(initialCityNetwork(),deploy),{...deploy,eventId:'ev2',commandId:'cmd2',revision:2})));
+test('does not mutate prior state',()=>{const a=initialCityNetwork();applyCityIncident(a,deploy);assert.deepEqual(a.jammers,{});});
+test('unknown severity rejected',()=>assert.throws(()=>applyCityIncident(initialCityNetwork(),{...deploy,severity:'EXTREME'})));
+test('unrelated city sectors remain intact',()=>{const a=applyCityIncident(initialCityNetwork(),deploy);assert.throws(()=>applyCityIncident(a,{...clear,sectorId:'other'}));});
