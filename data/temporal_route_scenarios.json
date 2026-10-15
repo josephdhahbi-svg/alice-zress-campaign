@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "status": "design_test_fixtures_not_playable",
+  "calendar": "DR",
+  "scenarios": [
+    {
+      "scenario_id": "TIME_GATE_01",
+      "name": "One-way historic portal",
+      "origin_location_id": "LOC_DAGGER_FALLS",
+      "destination_location_id": "LOC_CANDLEKEEP",
+      "mode": "portal",
+      "source_status": "homebrew_test_fixture",
+      "route_status": "locked",
+      "direction": "one_way",
+      "valid_from_dr": null,
+      "valid_until_dr": null,
+      "required_events": [
+        "QUEST_PORTAL_DISCOVERED",
+        "QUEST_PORTAL_STABILIZED"
+      ],
+      "forbidden_events": [
+        "PORTAL_COLLAPSED"
+      ],
+      "required_player_confirmation": true,
+      "expected_initial_access": false
+    },
+    {
+      "scenario_id": "MAIL_01",
+      "name": "Courier must have operating service",
+      "origin_location_id": "LOC_WATERDEEP",
+      "destination_location_id": "LOC_DAGGER_FALLS",
+      "mode": "courier",
+      "source_status": "homebrew_test_fixture",
+      "route_status": "proposed",
+      "required_events": [
+        "COURIER_SERVICE_ESTABLISHED"
+      ],
+      "required_player_confirmation": true,
+      "expected_initial_access": false
+    },
+    {
+      "scenario_id": "TIME_NPC_01",
+      "name": "Late-arriving traveler",
+      "entity_type": "npc",
+      "location_id": "LOC_DAGGER_FALLS",
+      "source_status": "homebrew_test_fixture",
+      "arrival_dr": null,
+      "departure_dr": null,
+      "required_events": [
+        "TRAVELER_ARRIVED"
+      ],
+      "expected_initial_access": false
+    },
+    {
+      "scenario_id": "TIME_REWARD_01",
+      "name": "Missable timed reward",
+      "entity_type": "reward",
+      "source_status": "homebrew_test_fixture",
+      "deadline_dr": null,
+      "required_events": [
+        "QUEST_FINISHED_BEFORE_DEADLINE"
+      ],
+      "required_player_confirmation": true,
+      "expected_initial_access": false
+    }
+  ],
+  "rules": {
+    "unknown_dates_block_automatic_unlock": true,
+    "missing_events_block_unlock": true,
+    "reverse_routes_require_separate_record": true,
+    "client_cannot_mutate_player_state": true
+  },
+  "notes": "Test scenarios only; do not grant player rewards, open routes, or infer DR dates."
+}
