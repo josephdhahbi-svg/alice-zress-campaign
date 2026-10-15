@@ -1,0 +1,44 @@
+# Alice Z'ress — Three Chosen System: Design Checkpoint
+Date: 2026-10-14
+Status: USER-DIRECTED DESIGN; NOT IMPLEMENTED GAME MECHANICS; no reward acquired.
+Branch: dev/alice-three-chosen-roadmap
+
+## Character continuity
+Alice Z'ress is a level-1 female drow Great Old One Warlock, Acolyte, devoted to Eilistraee, with Mystra's protection and Ghaunadaur as established patron. Do not replace the Warlock foundation. Skilled feat, lyre and proficiency commitments must be reconciled with original character sheet. Rabbit-hole sequence not yet played. Three separate cinematic origin gifts: Mystra Shield; Ghaunadaur Acid Splash; Eilistraee Blade Ward. Do not conflate these with standard Magic Initiate spell picks.
+
+## Three independent homebrew Chosen progressions (each level 1-20)
+- LEFT: Ghaunadaur / Elder Eye / Far Realm — aberrations, psychic damage, ranged Eldritch Blast, summoning, control.
+- CENTER: Mystra / Weave — magical intelligence, healing, protection, restoration, utility; minimal damage. Most frequent contact; intermediary between Alice and the other two.
+- RIGHT: Eilistraee / Moon and Light — swords, armor, melee damage, sword dance, radiant techniques; second-most frequent contact.
+- Ghaunadaur contact is rare, generally through an incomprehensible avatar. Do not portray direct ordinary conversation with its true form.
+- The term Ganador has appeared separately as a Prime Architect in older drafts; do not silently merge it with Ghaunadaur. Current Alice left pillar is Ghaunadaur pending any explicit revision.
+
+## Level-up rule
+At each level, Alice is offered one Chosen advancement from each of the three paths and selects ONLY ONE. The other two options for that level are forfeited. This is a separate custom progression to be balanced against baseline 2024 Warlock rules. Features listed in prior chat roadmap are draft titles, not approved mechanics. Keep chosen, offered, forfeited, quest_pending, quest_completed and acquired distinct.
+
+## Feat-level divine treasury
+Proposed feat-level checkpoints: 4, 8, 12, 16, 19 (reconcile 2024 Warlock feat and Epic Boon rules).
+At each checkpoint each deity offers a candidate in EACH category:
+1. feat
+2. boon
+3. magic item
+4. spell
+5. spell gem
+6. ring
+7. blessing (PROVISIONAL interpretation of user's second 'feat' mention; confirm if distinct).
+21 candidates = 3 deities x 7 categories per checkpoint. Alice may mix deities across categories, but selects ONE candidate per category. On CONFIRMED choice, competing two candidates in that category at that checkpoint become unavailable. Selection creates a quest; reward is NOT acquired until quest completion and prerequisites are met. Keep declined offers and acquisition logs for continuity. Proposed counts: 5 checkpoints, 35 quests selected, 105 candidate offers.
+Every record should carry level, deity, category, source/homebrew status, prerequisites, acquisition quest, timeline/DR/plane/location, selection and lock status, reward ownership, cooldown and duration as relevant.
+
+## Story and interface requirements
+Mobile-friendly clickable three-column cards, images, clear labels and color, one-click choices, explicit confirmation before irreversible lock. Comic pages: four story panels above a full-width five-choice decision panel (Lawful Good, Neutral Good, Chaotic Good, Utility, Action). Blue=hero, red=villain, green=neutral/mixed for NPC moral classification, not divine-tree color.
+Do not advance story or award rewards during character creation. Do not claim any code implementation or testing before it happens.
+
+## Workflow
+Use GitHub as durable project record; read existing files before modifications, work on development branch, commit incremental design/code/tests, read back after writes, and report commit and status. GitHub is not a continuous memory or runtime by itself; future sessions should reopen this checkpoint and related canonical files. No background coding without a scheduled automation or active session.
+
+## Next implementation milestones
+1. Draft data schema and three 20-level progression catalogs.
+2. Draft seven-category offers at feat levels and quest prerequisites.
+3. Implement choice exclusivity and quest-unlock logic with automated tests.
+4. Build mobile selection UI and connect to persistent game state.
+5. Review balance, chronology and canon/homebrew distinction before merging to main.
