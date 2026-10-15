@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "status": "research_candidates_not_traversable",
+  "purpose": "Geographical art and source-verification queue; does not add operational routes or modify player saves.",
+  "locations": [
+    {"id":"CAND_UNDERDARK_MENZOBERRANZAN","name":"Menzoberranzan","setting":"Forgotten Realms","region":"Northdark, Underdark","source_status":"published_location_reference","source_to_verify":["Menzoberranzan: City of Intrigue","Out of the Abyss"],"era_dr":null,"map_asset_id":"map_menzoberranzan_research","verification":"pending_edition_and_date"},
+    {"id":"CAND_UNDERDARK_PROMENADE","name":"Promenade of Eilistraee","setting":"Forgotten Realms","region":"Undermountain beneath Waterdeep","source_status":"published_location_reference","source_to_verify":["Demihuman Deities","The Seven Sisters"],"era_dr":null,"map_asset_id":"map_promenade_research","verification":"pending_edition_and_date"},
+    {"id":"CAND_UNDERDARK_GHAUNADAUR_PIT","name":"Pit of Ghaunadaur (Alice origin scene)","setting":"Forgotten Realms","region":"exact site unresolved","source_status":"campaign_scene_location_needs_canon_check","source_to_verify":["Demihuman Deities"],"era_dr":null,"map_asset_id":"map_ghaunadaur_pit_research","verification":"pending_exact_site"},
+    {"id":"CAND_WATERDEEP","name":"Waterdeep","setting":"Forgotten Realms","region":"Sword Coast","source_status":"published_location_reference","source_to_verify":["Waterdeep: Dragon Heist","Sword Coast Adventurer's Guide"],"era_dr":null,"map_asset_id":"map_waterdeep_research","verification":"pending_edition_and_date"},
+    {"id":"CAND_DAGGER_FALLS","name":"Dagger Falls","setting":"Forgotten Realms","region":"Daggerdale, Dalelands","source_status":"published_location_reference","source_to_verify":["The Dalelands"],"era_dr":null,"map_asset_id":"map_dagger_falls_research","verification":"pending_edition_and_date"},
+    {"id":"CAND_BAROVIA_KREZK","name":"Krezk","setting":"Ravenloft","region":"Barovia, Domains of Dread","source_status":"published_location_reference","source_to_verify":["Curse of Strahd","Van Richten's Guide to Ravenloft"],"era_dr":null,"map_asset_id":"map_krezk_research","verification":"pending_setting_calendar"}
+  ],
+  "candidate_connections": [
+    {"from":"CAND_UNDERDARK_PROMENADE","to":"CAND_WATERDEEP","status":"research_only","question":"Verify access points and availability for the campaign era; no route asserted."},
+    {"from":"CAND_WATERDEEP","to":"CAND_DAGGER_FALLS","status":"research_only","question":"Identify documented intermediate roads, dates, and transport operators; no through-coach asserted."},
+    {"from":"CAND_UNDERDARK_MENZOBERRANZAN","to":"CAND_UNDERDARK_GHAUNADAUR_PIT","status":"research_only","question":"Alice's narrative journey requires specific site, distance, and chronology review."}
+  ],
+  "rendering_rules": {
+    "canonical_geography":"draw only after map-source review",
+    "candidate_connection":"dashed line, research label, never selectable",
+    "verified_operational_connection":"solid line only after explicit source and runtime approval",
+    "portal":"separate layer with era and direction",
+    "unverified_coordinate":"do not invent precise map position"
+  }
+}
