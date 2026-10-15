@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "status": "framework",
+  "scope": {
+    "trilogies": 10,
+    "books": 30,
+    "traversals": 7
+  },
+  "rules": {
+    "every_book_has": [
+      "book_id",
+      "trilogy_id",
+      "chronology",
+      "entry_routes",
+      "exit_routes",
+      "location_ids",
+      "character_ids",
+      "faction_ids",
+      "source_status"
+    ],
+    "every_route_has": [
+      "origin_location_id",
+      "destination_location_id",
+      "travel_mode",
+      "prerequisites",
+      "time_window",
+      "source_status",
+      "player_choice_required"
+    ],
+    "shared_locations_not_duplicated": true,
+    "chronology_validation_required": true,
+    "book_crossover_not_canon_by_default": true,
+    "player_state_immutable_without_action": true,
+    "locked_routes_not_traversable": true
+  },
+  "books": [],
+  "locations": [],
+  "routes": [],
+  "characters": [],
+  "factions": [],
+  "crossovers": [],
+  "seed_imports": [
+    {
+      "file": "data/netheril_route_graph.json",
+      "purpose": "quest node edges"
+    },
+    {
+      "file": "data/netheril_character_travel_network.json",
+      "purpose": "five test character origins and exits"
+    }
+  ],
+  "design_notes": "Populate all 30 book IDs from authoritative campaign roadmap before assigning names or chronological order. No inferred official adventure travel links."
+}
