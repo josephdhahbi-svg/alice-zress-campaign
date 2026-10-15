@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "status": "proposed_noncanonical",
+    "book_mapping": "pending_verification",
+    "player_level": 1
+  },
+  "nodes": [
+    {
+      "id": "U_SAFE",
+      "book": 1,
+      "plane": "Material",
+      "name": "Eilistraeen safehouse",
+      "canon": "homebrew placement"
+    },
+    {
+      "id": "U_TRADE",
+      "book": 1,
+      "plane": "Material",
+      "name": "Mantol-Derith",
+      "canon": "published setting"
+    },
+    {
+      "id": "U_OBS",
+      "book": 1,
+      "plane": "Material",
+      "name": "Illithid observatory",
+      "canon": "homebrew"
+    },
+    {
+      "id": "A_WAY",
+      "book": 2,
+      "plane": "Abyss",
+      "name": "Abyss border waystation",
+      "canon": "homebrew"
+    },
+    {
+      "id": "A_MAZE",
+      "book": 2,
+      "plane": "Abyss",
+      "name": "Endless Maze",
+      "canon": "published setting"
+    },
+    {
+      "id": "V_FOOT",
+      "book": 3,
+      "plane": "Nine Hells/Avernus",
+      "name": "Avernus foothold",
+      "canon": "homebrew"
+    },
+    {
+      "id": "V_DEPOT",
+      "book": 3,
+      "plane": "Nine Hells/Avernus",
+      "name": "Infernal war-machine depot",
+      "canon": "homebrew"
+    }
+  ],
+  "edges": [
+    {
+      "id": "R1",
+      "from": "U_SAFE",
+      "to": "U_TRADE",
+      "method": "caravan tunnel",
+      "prerequisites": [
+        "guide"
+      ],
+      "risk": "drow patrol",
+      "alternative": "hidden smuggler tunnel"
+    },
+    {
+      "id": "R2",
+      "from": "U_TRADE",
+      "to": "U_OBS",
+      "method": "psychic waypoint",
+      "prerequisites": [
+        "decoded map",
+        "ward"
+      ],
+      "risk": "mental intrusion",
+      "alternative": "infiltration"
+    },
+    {
+      "id": "R3",
+      "from": "U_OBS",
+      "to": "A_WAY",
+      "method": "keyed planar portal",
+      "prerequisites": [
+        "coordinate lens",
+        "Mystra ward"
+      ],
+      "risk": "portal instability",
+      "alternative": "return anchor"
+    },
+    {
+      "id": "R4",
+      "from": "A_WAY",
+      "to": "A_MAZE",
+      "method": "maze gate",
+      "prerequisites": [
+        "maze token"
+      ],
+      "risk": "minotaur pursuit",
+      "alternative": "astral detour"
+    },
+    {
+      "id": "R5",
+      "from": "A_WAY",
+      "to": "V_FOOT",
+      "method": "Blood War portal",
+      "prerequisites": [
+        "gate key",
+        "route intelligence"
+      ],
+      "risk": "fiend ambush",
+      "alternative": "neutral planar guide"
+    },
+    {
+      "id": "R6",
+      "from": "V_FOOT",
+      "to": "V_DEPOT",
+      "method": "wasteland track",
+      "prerequisites": [
+        "safe transport"
+      ],
+      "risk": "raiders",
+      "alternative": "stealth route"
+    }
+  ]
+}
