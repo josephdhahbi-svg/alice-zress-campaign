@@ -160,3 +160,7 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - **Executed eight tests locally: 8 passed, 0 failed**, in a locally reconstructed equivalent two-file subset; not a complete GitHub checkout or complete test suite.
 - Gemini Batch 3 remains HOLD for authentication/consent/privacy. Copilot WorldOS remains proposed pending verified historical data. No live save connector, art asset, UI frontend, secure command service or gameplay mutation created.
 - Next: verify exact GitHub file tests on full checkout; implement responsive U01 preview UI, secure command/event ledger, versioned read projections, and source-grounded Underdark continuity.
+
+## Team Meeting 11 Gemini + Copilot deliveries intake
+- `a1d4606` added `docs/handoff/meeting-11-gemini-copilot-integration-review.md`. Both deliveries are design/source proposals, **not integrated operational systems**. Gemini's unverified test claims do not establish secure functionality; its quest router is blocked by missing auth, optional revision, timestamp IDs and universal 1495 DR. Copilot's U01 cavern/courier are unverified homebrew proposals, not approved lore; normalize entity IDs, canon-status enums and protected U01 scene ID.
+- No tests executed for these deliveries. Alice Level 1 and five unselected options unchanged. Next prioritize secure command/ledger and synthetic WorldOS continuity tests before any gameplay mutation.
