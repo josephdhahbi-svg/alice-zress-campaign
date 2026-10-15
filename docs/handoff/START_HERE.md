@@ -145,3 +145,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - No tests executed in this intake. Synthetic fixture file creation was attempted but blocked; do not claim fixture integration.
 - Key fixes: preserve `canon_status`, separate static source registries from mutable event ledger, reject invented live travel metrics, support legitimate post-death appearances, retain seven traversal IDs and five unselected Alice choices.
 - Next: synthetic chronology/geography fixture integration, negative tests, versioned read APIs, secure backend foundation. Motto: EVERYTHING IS LEGOS.
+
+## Directive 08: synthetic WorldOS validation (2026-10-15)
+- `c1c093b` created `scripts/validate_worldos_synthetic.py` (pure read-only chronology, directed geography, and 30-book/seven-traversal checks).
+- `64a648e` created `tests/test_worldos_synthetic.py` with 10 unittest methods. A locally reconstructed matching copy was executed via `python -m unittest discover -s tests -v`: **10 passed, 0 failed**. The exact GitHub checkout was not executed.
+- Full `git clone` again failed because the local environment could not resolve `github.com`; GitHub connector file fetch/create remains available.
+- This synthetic validator is not a live portal authority, does not confer source verification, and does not modify Alice, unlock routes, or add event-ledger/database services.
+- Copilot's reviewed proposals remain design inputs. Gemini's secure Batch 1B implementation was not supplied this turn.
+- Next: run complete checkout tests when available; integrate synthetic fixture registry, strengthen input type validation, repair general `scripts/validate.py` registry handling, implement secure SQLite migrations/event ledger, build U01 read-only projection and standalone canon-reviewed art.
