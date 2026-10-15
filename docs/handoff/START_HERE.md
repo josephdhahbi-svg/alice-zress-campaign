@@ -125,3 +125,9 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - **Tests not independently executed** in this session. GitHub file commits are verified; full checkout still needed for all validators and tests. No production server, network webhook, item grant, or Alice save mutation.
 - Known prototype limitation: read-only Python eligibility trusts passed actor dict and `confirmed_choice` as input, so only a server-authoritative authenticated command handler may use it for future actual crafting. Review stricter input schema and recipe validity before integration.
 - Next: run `python -m unittest discover -s tests -v` plus all validators on full checkout, fix issues, build Batch 1B event-ledger service, then implement crafting command and outbox under tests. Continue D&D canon research and Visual Codex.
+
+## Gemini 100-item synchronization manifest review (2026-10-15)
+- **Official project motto: EVERYTHING IS LEGOS.** Preserve plural spelling in future docs and instructions.
+- `3267dc8` added `docs/architecture/master-100-item-audit-decisions-v1.md`, reviewing checklist items 1–75 and answering architecture questions 76–100. This is an architectural review, **not** evidence that all systems exist.
+- Critical decisions: immutable gameplay events must not be purged; 1495 DR is not universal; 3000 BCE Netheril is not a verified universal era; cron world mutation, automated Git push, and production deploy remain HOLD; voice/transcripts require consent and privacy review; homebrew encounter scaling cannot silently alter official monster CR; five narrative choices are not automatic alignment scores; webhook `DISPATCHED` requires real HTTP delivery evidence.
+- No tests or deployments executed during this architecture review. Continue with complete checkout tests, isolated database/ledger foundation, safe preview integrations, and Visual Codex.
