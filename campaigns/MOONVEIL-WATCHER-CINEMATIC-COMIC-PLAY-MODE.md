@@ -144,3 +144,59 @@ Do not claim clickable movie UI, synchronized voice playback, rendered comics or
 # NORTH STAR
 
 The player should be able to sit back like a movie watcher, listen to the story, look at the characters/world, press a meaningful button when it is their turn to decide, and finish the adventure by opening a comic book showing the story they actually created.
+
+
+# CONTINUOUS AUDIO-COMIC MODE — LOCKED EXPERIENCE TARGET
+
+The preferred Watcher presentation is not a stop-start illustrated recap. It is a **flowing movie told through sequential photorealistic comic frames while one continuous narration track carries the Watcher through the same exact story**.
+
+Core playback:
+**VOICE STARTS -> FRAME 1 -> FRAME 2 -> FRAME 3 -> ... -> DECISION (only when necessary) -> VOICE RESUMES -> END-COMIC/CHAPTER**
+
+## Audio and image synchronization
+Every narration beat has a matching panel/frame ID. The spoken narration and visible frame must describe the same moment, characters, location, action, emotion and evidence.
+
+Example timing script:
+- 00:00–00:12 FRAME 01 — establishing shot beneath Waterdeep.
+- 00:12–00:25 FRAME 02 — Promenade/refugees.
+- 00:25–00:38 FRAME 03 — wounded scout arrives.
+- 00:38–00:55 FRAME 04 — child in danger.
+- 00:55–01:15 FRAME 05 — Alice steps between child and threat.
+- 01:15–01:35 FRAME 06 — eldritch attack.
+- 01:35–01:55 FRAME 07 — rescue.
+- 01:55–02:15 FRAME 08 — Eye mark discovered.
+- 02:15–02:30 FRAME 09 — Eye opens / chapter hook.
+
+Transitions should feel cinematic: slow push, cut, close-up, wide reveal, reaction shot, action beat, aftermath, fade/cut to black.
+
+## Voice-writing rule
+Write narration for the ear first:
+- natural flowing sentences;
+- dialogue embedded cleanly;
+- minimal stat/rules interruption;
+- no reading database metadata aloud;
+- enough visual description to follow without staring at text;
+- no duplicate narration and caption text unless accessibility mode requests it.
+
+## Photorealistic visual rule
+Watcher art target: **cinematic photorealism / realistic live-action fantasy photography**, consistent actors/character appearance, costumes, lighting, weapons, locations and injuries from frame to frame.
+
+Published-canon visual/lore details should be source-verified where required. Moonveil-original characters, transformations, Eye artifacts and events must remain visibly labeled homebrew/Moonveil canon in production records rather than presented as official published D&D canon.
+
+## Continuous comic construction
+Instead of one dense page, prefer a sequence of large readable frames/pages suitable for phone playback. Each frame receives:
+**FRAME ID | timestamp | camera | visual prompt | narrator line | dialogue | SFX | continuity state | canon/evidence status**
+
+The final comic is assembled from those same frames. Therefore the comic and narrated movie cannot drift into different versions of events.
+
+## Automatic Hero Mode
+Routine heroic choices can remain automated under the selected Courage/Protection route. Playback only pauses when a decision is designated DESTINY-LOCK, irreversible, or specifically reserved for the Watcher.
+
+## Accessibility / follow-along
+Target controls:
+**PLAY/PAUSE VOICE | PREVIOUS FRAME | NEXT FRAME | REPLAY LINE | SUBTITLES | AUTO-ADVANCE | COMIC VIEW**
+
+AUTO-ADVANCE changes the visible frame at the narration timestamp. COMIC VIEW lets the Watcher scroll the exact same frames manually.
+
+## Production truth
+This specification locks the desired presentation format. Actual synchronized audio playback, automatic frame timing and rendered photorealistic frame continuity are not called IMPLEMENTED until the app code, assets and tests exist.
