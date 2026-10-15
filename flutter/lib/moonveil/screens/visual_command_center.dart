@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/codex_item.dart';
 import '../services/dice_roller.dart';
+import '../widgets/artifact_artwork.dart';
 
 /// Standalone MVP. Replace preview [items] with validated backend state later.
 class VisualCommandCenter extends StatefulWidget {
@@ -50,9 +51,9 @@ class _VisualCommandCenterState extends State<VisualCommandCenter> {
                   Expanded(child: ClipRRect(
                     borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
                     child: item.imageUrl == null
-                      ? _imageFallback(item)
+                      ? ArtifactArtwork(item: item)
                       : Image.network(item.imageUrl!, fit: BoxFit.cover,
-                          errorBuilder: (_, __, ___) => _imageFallback(item)),
+                          errorBuilder: (_, __, ___) => ArtifactArtwork(item: item)),
                   )),
                   Padding(
                     padding: const EdgeInsets.all(10),
