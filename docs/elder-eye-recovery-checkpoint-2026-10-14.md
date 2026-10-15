@@ -32,3 +32,9 @@ Status: verified repository inventory and user-confirmed design decisions. This 
 3. After each actual played decision, write an event/checkpoint with quest ID, traversal, book, choice, roll, timestamp/sequence, location, world-state delta and consequences; verify GitHub write by re-reading.
 4. Do not claim automatic continuous synchronization, a completed mobile UI, or a successful save without confirmation.
 5. Never overwrite established city engine or Seralyth quests when building Alice's three routes.
+
+## User-locked immediate play sequence (2026-10-14, latest)
+- Fast-forward pre-Pit travel without treating skipped material as played quests or earned rewards.
+- Play in this exact order: Pit of Ghaunadaur -> Rabbit Hole (adventure starts) -> Hall of Infinite Doors -> Door of Ghaunadaur -> Eye of Infinite Mazes labyrinth trial -> emerge/ooze out -> Netherese storyline begins.
+- Netherese arc occurs AFTER the Eye of Infinite Mazes, not before. Preserve the sequence and do not insert a different trilogy between them.
+- Before the fall, Alice remains in character-creation/prologue state; first playable level begins with the rabbit-hole fall. No unearned advancement or loot.
