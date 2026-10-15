@@ -1,0 +1,16 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {initialBeliefs,receive,beliefsAt,competingClaims}=require('./knowledgeBeliefEngine');
+const base={id:'MSG_1',recipientId:'NPC_1',eventId:'EVENT_1',source:'RUMOR',claim:'Bandits attacked the caravan',receivedHour:5};
+test('starts with no beliefs',()=>assert.deepEqual(initialBeliefs().people,{}));
+test('rumor adds uncertain belief',()=>assert.equal(receive(initialBeliefs(),base).people.NPC_1[0].confidence,35));
+test('duplicate message is idempotent',()=>{const a=receive(initialBeliefs(),base);assert.strictEqual(receive(a,base),a)});
+test('same claim reinforced by new message',()=>{const a=receive(initialBeliefs(),base),b=receive(a,{...base,id:'MSG_2'});assert.equal(b.people.NPC_1[0].confidence,44)});
+test('contradictory claims coexist',()=>{const a=receive(initialBeliefs(),base),b=receive(a,{...base,id:'MSG_2',source:'WITNESS',claim:'A dragon attacked the caravan'});assert.equal(competingClaims(b,'NPC_1','EVENT_1').length,2);assert.equal(competingClaims(b,'NPC_1','EVENT_1')[0].confidence,100)});
+test('people do not magically share beliefs',()=>assert.equal(beliefsAt(receive(initialBeliefs(),base),'NPC_2',5).length,0));
+test('confidence decays slowly',()=>assert.equal(beliefsAt(receive(initialBeliefs(),base),'NPC_1',341)[0].confidence,33));
+test('past query does not boost confidence',()=>assert.equal(beliefsAt(receive(initialBeliefs(),base),'NPC_1',0)[0].confidence,35));
+test('state is immutable',()=>{const a=initialBeliefs();receive(a,base);assert.deepEqual(a.people,{})});
+test('unknown source rejected',()=>assert.throws(()=>receive(initialBeliefs(),{...base,source:'OMNISCIENT'})));
+test('invalid recipient rejected',()=>assert.throws(()=>receive(initialBeliefs(),{...base,recipientId:'../root'})));
+test('unbounded claims rejected',()=>assert.throws(()=>receive(initialBeliefs(),{...base,claim:'x'.repeat(501)})));
