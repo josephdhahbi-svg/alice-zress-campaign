@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "status": "DESIGN_ONLY_NO_LIVE_SAVE",
+  "scene_id": "U01_SILVER_COURIER",
+  "character": {
+    "character_id": "CHAR_ALICE_ZRESS",
+    "name": "Alice Z'ress",
+    "species": "Drow",
+    "class": "Great Old One Warlock",
+    "level": 1,
+    "patron": "Ghaunadaur",
+    "acolyte_influence": "Eilistraee",
+    "origin_gifts": [
+      {
+        "spell": "Shield",
+        "source": "Mystra",
+        "status": "custom_origin_gift"
+      },
+      {
+        "spell": "Acid Splash",
+        "source": "Ghaunadaur",
+        "status": "custom_origin_gift"
+      },
+      {
+        "spell": "Light",
+        "source": "Eilistraee",
+        "status": "custom_origin_gift"
+      }
+    ]
+  },
+  "historical_context": {
+    "dr_year": null,
+    "date_precision": "unknown",
+    "timeline_id": null
+  },
+  "choices": [
+    {
+      "id": "LAWFUL_GOOD",
+      "label": "Lawful Good",
+      "selected": false,
+      "enabled": false
+    },
+    {
+      "id": "NEUTRAL_GOOD",
+      "label": "Neutral Good",
+      "selected": false,
+      "enabled": false
+    },
+    {
+      "id": "CHAOTIC_GOOD",
+      "label": "Chaotic Good",
+      "selected": false,
+      "enabled": false
+    },
+    {
+      "id": "UTILITY",
+      "label": "Utility",
+      "selected": false,
+      "enabled": false
+    },
+    {
+      "id": "ACTION",
+      "label": "Action",
+      "selected": false,
+      "enabled": false
+    }
+  ],
+  "routes": {
+    "status": "locked_unverified",
+    "travel_enabled": false
+  },
+  "art": {
+    "asset_id": "ART_ALICE_L1_PORTRAIT_V1",
+    "state": "planned",
+    "file_path": null
+  },
+  "capabilities": {
+    "dice": false,
+    "combat": false,
+    "save": false,
+    "travel": false,
+    "choice_submission": false
+  },
+  "mutates_game_state": false
+}
