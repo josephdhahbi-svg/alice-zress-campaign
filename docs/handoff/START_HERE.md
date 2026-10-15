@@ -169,3 +169,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - `37f1082` added `web/alice_u01_preview.html`: standalone responsive, read-only scene with Level 1 Alice, custom origin gifts, five disabled choices, unknown DR and locked travel. No backend/save connection and no artwork file.
 - `43c76ce` added `tests/test_alice_u01_html.py`: eight static HTML content checks. An equivalent eight-test suite was executed locally: **8 passed**. Full repository execution and real browser testing remain unverified.
 - Gemini Meeting 11 quest commands remain blocked; Copilot's homebrew NPCs/locations remain unverified. Next: browser testing, versioned read projection integration, security and canon checks before enabling choices.
+
+## Team Meeting 13 — UI projection integration (2026-10-15)
+- `abb5a64` added `data/alice_u01_read_model_v1.json`, a versioned **synthetic read-only fixture**. Alice is Level 1, her three custom origin gifts are sourced, DR/timeline remain unknown, five choices are unselected/disabled, routes remain locked, art remains planned, and gameplay capabilities are false.
+- `a8406e1` updated `web/alice_u01_preview.html` to load the JSON fixture via `../data/alice_u01_read_model_v1.json`, validate the preview-only status and non-mutation flag, render the five disabled choices, and fail closed if the fixture cannot load. Requires serving repository root over HTTP; opening the HTML directly as file:// will usually block fetch.
+- `29da32c` added `tests/test_alice_u01_contract.py` with eight tests for schema identity, Alice's protected level/class/gifts, five choices, unknown date, locked routes, no mutation/capabilities, planned artwork, and UI fixture wiring.
+- Ran a **locally reconstructed equivalent fixture + test suite** using `python -m unittest discover -s tests -v`: **8 passed, 0 failed**. This is not the exact GitHub checkout and not a browser test.
+- Existing HTML remains a prototype; no live API, save, command, dice, combat, or travel enabled. Gemini security blockers and Copilot canon verification remain open.
+- Next: full checkout/CI tests; actual browser test; fix data-driven UI robustness; secure read-only API; source-verify U01 content; create approved standalone Alice portrait asset.
