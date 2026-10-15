@@ -42,3 +42,10 @@ Use GitHub as durable project record; read existing files before modifications, 
 3. Implement choice exclusivity and quest-unlock logic with automated tests.
 4. Build mobile selection UI and connect to persistent game state.
 5. Review balance, chronology and canon/homebrew distinction before merging to main.
+
+## Scene choices, items, quests, and ending causality — confirmed design direction
+- During relevant story scenes as well as level-ups, offer differentiated choices tied to Ghaunadaur, Mystra and Eilistraee. Offers may include items, rings, spell gems, spells, feats, boons, blessings and quest opportunities. Distinguish ordinary five-choice story panels from three-deity reward selection screens.
+- A confirmed reward selection closes the other two deity offers for that same category and offer event. It creates a quest, not immediate ownership. On completion and prerequisite verification, grant the selected reward and record how Alice obtained and used it.
+- Endings are determined by cumulative choices, which rewards and quests Alice pursued/completed, relationships and moral conduct, and decisive final actions. Do not reduce endings to raw deity pick counts. Choosing aberrant powers alone is not proof of evil alignment.
+- Proposed (not canon-locked) ending families: Herald of the Beyond, Guardian of the Weave, Champion of the Dark Maiden, and difficult secret Threefold Ascendant. Design heroic, redemption, sacrifice and corruption variants after user review.
+- Implement a traceable event ledger: scene_id, offer_event_id, category, deity, chosen_offer_id, rejected_offer_ids, lock_timestamp/sequence, quest_id, quest_status, reward_acquired, use/consequence flags, relationship deltas, ending flags, DR/plane/location and source. Never retroactively grant rewards or invent completed quests.
