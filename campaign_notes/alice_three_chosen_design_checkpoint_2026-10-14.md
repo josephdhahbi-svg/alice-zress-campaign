@@ -59,3 +59,11 @@ USER CORRECTED PREVIOUS TRIADS: ALL THREE heroines share UNDEAD (each becomes a 
 2. Female Aasimar Paladin: UNDEAD + LIGHT + FIEND / NINE HELLS (Zariel's absorbed infernal essence; Zariel is an archdevil of Avernus, not an Abyss demon). Supersedes earlier LIGHT+FIRE+ABYSS interpretation. The paladin remains female, main tank, redemption-focused.
 3. Female Dhampir Undead Warlock / Moonveil Witch: UNDEAD + LIGHT + MAGIC (Mystra/Weave as third essence); preserve previously established Selune patron/devotion unless user explicitly changes it.
 Solar ascension is custom and requires quests; not automatic creature-type stacking. Preserve existing differing timelines, especially Moonveil's final full Solar only after Mission 30. Alice's proposed Level 21 Solar/Visage remains distinct. This correction is authoritative over earlier triad draft.
+
+## Confirmed supernatural power palette (2026-10-14)
+- FAR REALM = PURPLE (#8B5CF6 proposed UI hex).
+- UNDEAD = GREEN (#22C55E proposed UI hex).
+- LIGHT / SOLAR = WHITE (#FFFFFF).
+- MAGIC / WEAVE = BLUE (#3B82F6 proposed UI hex).
+- FIEND / NINE HELLS = color not yet chosen; infernal red is only a suggestion, not approved.
+These are essence/UI coding colors and must remain separate from NPC morality colors (BLUE hero, RED villain, GREEN neutral/mixed). Use labels/icons alongside color to avoid ambiguity and for accessibility.
