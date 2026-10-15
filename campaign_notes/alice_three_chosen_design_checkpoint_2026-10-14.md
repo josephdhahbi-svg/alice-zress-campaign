@@ -52,3 +52,10 @@ Use GitHub as durable project record; read existing files before modifications, 
 
 ## Confirmed epic milestone revision
 User confirmed: Level 20 = Chosen of Eilistraee (completion of 1–20 path); Level 21 = Visage of the Dark Maiden (first epic divine transformation, homebrew). Supersedes prior provisional Level 20 Visage entry. Level 21 mechanics, prerequisites and parallel Mystra/Ghaunadaur epic paths remain to be designed. No transformation has been earned.
+
+## OVERRIDING CORRECTION — universal three-heroine ascension (2026-10-14)
+USER CORRECTED PREVIOUS TRIADS: ALL THREE heroines share UNDEAD (each becomes a lich) and LIGHT (each eventually becomes an angel/Solar); each has exactly ONE distinct third essence.
+1. Alice Z'ress: UNDEAD + LIGHT + FAR REALM (Ghaunadaur/aberrant eldritch).
+2. Female Aasimar Paladin: UNDEAD + LIGHT + FIEND / NINE HELLS (Zariel's absorbed infernal essence; Zariel is an archdevil of Avernus, not an Abyss demon). Supersedes earlier LIGHT+FIRE+ABYSS interpretation. The paladin remains female, main tank, redemption-focused.
+3. Female Dhampir Undead Warlock / Moonveil Witch: UNDEAD + LIGHT + MAGIC (Mystra/Weave as third essence); preserve previously established Selune patron/devotion unless user explicitly changes it.
+Solar ascension is custom and requires quests; not automatic creature-type stacking. Preserve existing differing timelines, especially Moonveil's final full Solar only after Mission 30. Alice's proposed Level 21 Solar/Visage remains distinct. This correction is authoritative over earlier triad draft.
