@@ -78,3 +78,12 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Run: `python scripts/validate.py`; `python scripts/validate_netheril_routes.py`; `python scripts/validate_temporal_scenarios.py`; `python scripts/route_planner.py --demo`; `python -m unittest discover -s tests -v`. Do not claim these passed until executed.
 - The route planner remains a static same-DR-year planning prototype, not a departure/arrival-time-aware transport solver. Before production, require explicit `continuity_review=approved` and allowlisted `source_status` rather than merely excluding some values; test unknown status fail-closed.
 - Source-verification priority: published Underdark geography and Promenade chronology; never treat visual concept route lines or fictional book assignments as canonical.
+
+## Gemini Omni-Engine cumulative manifest intake (Parts 1–17)
+- User supplied a **42-module file-path and description manifest only**, not module source code, tests, migrations, or proof of runtime operation. Do not call it 42 implemented endpoints.
+- `97335b3` created `data/gemini_omni_engine_module_registry.json` listing all 42 proposed paths, engineering priority, and unverified status. `78f12a7` registered the new JSON registry in `scripts/validate.py`.
+- Engineering order: P0 database/migrations, character state, saves, socket auth, backups, CI, tests, portal chronology; P1 remaining gameplay systems and visual asset integration; P2 optional world simulation.
+- HOLD: `cronEvents.js`, `deploy_production.sh`, `webhookDispatcher.js`, `github_autosync.sh`, `macroAutomation.js` pending explicit security and player-agency review. `auditPurge.js` is REJECTED AS DESCRIBED: immutable gameplay audit history cannot be purged via a routine gameplay endpoint.
+- The manifest asserts a universal 1495 DR epoch. **Reject universal 1495 DR assumption**: DR chronology must be per-event, with separate monotonic campaign sequence and UTC audit clock. Ancient Netheril (e.g. -339 DR) is not in 1495 DR.
+- The next intake must request actual Gemini code in reviewable batches (start with `backend/db/database.js`, `backend/routes/characters.js`, `backend/routes/savestates.js`, `backend/routes/portalSync.js`, `backend/tests/server.test.js`, `package.json` and migrations). Review source before integration.
+- Do not assert any of these 42 modules exist or are operational until independently fetched and tested. Existing Alice Level 1 save and all five player options remain unchanged.
