@@ -12,6 +12,7 @@ REGISTRIES = {
     "netheril_character_travel_network.json": ("characters",),
     "book_transport_master_sheet.json": ("columns", "routes", "route_modes"),
     "world_communications_network.json": ("channels",),
+    "all_30_books_transport_and_mail.json": ("books", "transport_modes", "messaging_services"),
 }
 for file in sorted((ROOT / "data").glob("*.json")):
     if file.name == "schema.json":
@@ -28,6 +29,13 @@ for file in sorted((ROOT / "data").glob("*.json")):
         for key in REGISTRIES[file.name]:
             if not isinstance(records.get(key), list):
                 errors.append(f"{file.name}: expected list at {key}")
+        if file.name == "all_30_books_transport_and_mail.json":
+            books = records.get("books", [])
+            expected = [f"B{i:02d}" for i in range(1, 31)]
+            if not isinstance(books, list) or [b.get("book_id") for b in books if isinstance(b, dict)] != expected:
+                errors.append(f"{file.name}: expected ordered book slots B01 through B30")
+            if len({m.get("mode_id") for m in records.get("transport_modes", []) if isinstance(m, dict)}) != len(records.get("transport_modes", [])):
+                errors.append(f"{file.name}: duplicate transport mode")
         continue
     if not isinstance(records, list):
         errors.append(f"{file.name}: expected list of entity records (register new registry explicitly)")
