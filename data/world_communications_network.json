@@ -1,0 +1,69 @@
+{
+  "version": "0.1.0",
+  "status": "design_only",
+  "channels": [
+    {
+      "id": "POSTAL_01",
+      "type": "physical_courier",
+      "origin": "LOC_WATERDEEP",
+      "destination": "LOC_DAGGER_FALLS",
+      "route_id": "NET_STAGECOACH_PROPOSAL_01",
+      "operator": "unassigned",
+      "travel_time": null,
+      "fare_gp": null,
+      "availability": "proposed",
+      "source_status": "homebrew",
+      "notes": "No confirmed direct postal service; verify geography and timetable"
+    },
+    {
+      "id": "SENDING_01",
+      "type": "spell",
+      "origin": "caster_location",
+      "destination": "recipient_location",
+      "route_id": null,
+      "operator": "qualified_caster",
+      "travel_time": "per spell rules",
+      "fare_gp": null,
+      "availability": "rules_and_resources_required",
+      "source_status": "official spell concept; edition pending",
+      "notes": "Verify spell wording, planar limitations and costs for selected rules edition"
+    },
+    {
+      "id": "OTHLOS_01",
+      "type": "arcane_telecom",
+      "origin": "Abbey of Three Lights",
+      "destination": "future relay node",
+      "route_id": null,
+      "operator": "Abbey research project",
+      "travel_time": null,
+      "fare_gp": null,
+      "availability": "not_constructed",
+      "source_status": "homebrew",
+      "notes": "Future infrastructure only; not accessible in current Alice save"
+    }
+  ],
+  "delivery_statuses": [
+    "queued",
+    "in_transit",
+    "delivered",
+    "delayed",
+    "lost",
+    "returned"
+  ],
+  "message_metadata_fields": [
+    "message_id",
+    "sender_id",
+    "recipient_id",
+    "channel_id",
+    "origin",
+    "destination",
+    "sent_at",
+    "delivered_at",
+    "delivery_status"
+  ],
+  "rules": {
+    "no_live_message_payloads_in_repository": true,
+    "player_authorization_required": true,
+    "network_unavailable_until_constructed": true
+  }
+}
