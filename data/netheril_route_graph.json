@@ -1,0 +1,237 @@
+{
+  "version": "0.1.0",
+  "status": "design_only",
+  "source": "Netheril's Fall: Level 3 adventure hooks; Level 1, 2, 4 original bridges",
+  "nodes": [
+    {
+      "id": "N01",
+      "name": "The Scholar's Letter",
+      "level": 1,
+      "origin": "homebrew_bridge",
+      "routes": [
+        "N02"
+      ],
+      "hooks": [
+        "Krazbrax Nixel",
+        "Netherese cipher"
+      ],
+      "entry_for": [
+        "Seralyth",
+        "Kaelis",
+        "Brinna",
+        "Nym",
+        "Vaelis"
+      ]
+    },
+    {
+      "id": "N02",
+      "name": "The Road to Fool's Needle",
+      "level": 2,
+      "origin": "homebrew_bridge",
+      "routes": [
+        "N03",
+        "N04",
+        "N05"
+      ],
+      "hooks": [
+        "Dagger Falls",
+        "Fool's Needle",
+        "gate preparations"
+      ],
+      "entry_for": [
+        "all test characters"
+      ]
+    },
+    {
+      "id": "N03",
+      "name": "A Point of Pride",
+      "level": 3,
+      "origin": "Netheril's Fall",
+      "routes": [
+        "N06"
+      ],
+      "hooks": [
+        "Krazbrax Nixel",
+        "Eileanar",
+        "Netherese gate"
+      ],
+      "entry_for": [
+        "Seralyth",
+        "Kaelis",
+        "Nym"
+      ]
+    },
+    {
+      "id": "N04",
+      "name": "The Missing Gnome",
+      "level": 3,
+      "origin": "Netheril's Fall",
+      "routes": [
+        "N06"
+      ],
+      "hooks": [
+        "Zalneen",
+        "Vigglestern",
+        "Forgotten Chamber"
+      ],
+      "entry_for": [
+        "Brinna",
+        "Kaelis"
+      ]
+    },
+    {
+      "id": "N05",
+      "name": "Attack of the Phaerimm",
+      "level": 3,
+      "origin": "Netheril's Fall",
+      "routes": [
+        "N06"
+      ],
+      "hooks": [
+        "Tyvern",
+        "Conch",
+        "phaerimm attack"
+      ],
+      "entry_for": [
+        "Vaelis",
+        "Seralyth"
+      ]
+    },
+    {
+      "id": "N06",
+      "name": "The Proof and the Paradox",
+      "level": 4,
+      "origin": "homebrew_bridge",
+      "routes": [
+        "FUTURE_NETHERIL",
+        "ALICE_CROSSOVER_GATE_LOCKED"
+      ],
+      "hooks": [
+        "Mystryl chronology",
+        "sealed research",
+        "consequences"
+      ],
+      "entry_for": [
+        "all test characters"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "N01",
+      "to": "N02",
+      "condition": "quest completion or alternate resolution",
+      "automatic": false
+    },
+    {
+      "from": "N02",
+      "to": "N03",
+      "condition": "quest completion or alternate resolution",
+      "automatic": false
+    },
+    {
+      "from": "N02",
+      "to": "N04",
+      "condition": "quest completion or alternate resolution",
+      "automatic": false
+    },
+    {
+      "from": "N02",
+      "to": "N05",
+      "condition": "quest completion or alternate resolution",
+      "automatic": false
+    },
+    {
+      "from": "N03",
+      "to": "N06",
+      "condition": "quest completion or alternate resolution",
+      "automatic": false
+    },
+    {
+      "from": "N04",
+      "to": "N06",
+      "condition": "quest completion or alternate resolution",
+      "automatic": false
+    },
+    {
+      "from": "N05",
+      "to": "N06",
+      "condition": "quest completion or alternate resolution",
+      "automatic": false
+    },
+    {
+      "from": "N06",
+      "to": "FUTURE_NETHERIL",
+      "condition": "quest completion or alternate resolution",
+      "automatic": false
+    },
+    {
+      "from": "N06",
+      "to": "ALICE_CROSSOVER_GATE_LOCKED",
+      "condition": "requires future story approval and timeline validation",
+      "automatic": false
+    }
+  ],
+  "character_routes": [
+    {
+      "id": "SERALYTH",
+      "route": [
+        "N01",
+        "N02",
+        "N03",
+        "N06"
+      ],
+      "specialty": "Mystryl chronology and magical evidence"
+    },
+    {
+      "id": "KAELIS",
+      "route": [
+        "N01",
+        "N02",
+        "N03",
+        "N06"
+      ],
+      "alternate": [
+        "N04"
+      ],
+      "specialty": "forged documents, hidden entrances and safe bypasses"
+    },
+    {
+      "id": "BRINNA",
+      "route": [
+        "N01",
+        "N02",
+        "N04",
+        "N06"
+      ],
+      "specialty": "rescue, protection and moral consequences"
+    },
+    {
+      "id": "NYM",
+      "route": [
+        "N01",
+        "N02",
+        "N03",
+        "N06"
+      ],
+      "specialty": "gate safety, arcane engineering and artifact containment"
+    },
+    {
+      "id": "VAELIS",
+      "route": [
+        "N01",
+        "N02",
+        "N05",
+        "N06"
+      ],
+      "specialty": "patron temptation and temporal danger"
+    }
+  ],
+  "safety": {
+    "no_save_mutation": true,
+    "no_rewards_granted": true,
+    "no_auto_story_progress": true,
+    "alice_crossover_locked": true,
+    "combat_not_simulated": true
+  }
+}
