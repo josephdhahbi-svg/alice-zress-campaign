@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "status": "PROPOSED_NOT_OPERATIONAL",
+  "scope": {
+    "books": 30,
+    "traversals": 7
+  },
+  "entity_types": [
+    "character",
+    "npc",
+    "location",
+    "region",
+    "plane",
+    "timeline",
+    "quest",
+    "event",
+    "route",
+    "postal_service",
+    "faction",
+    "inventory_item",
+    "merchant",
+    "art_asset"
+  ],
+  "shared_fields": [
+    "entity_id",
+    "entity_type",
+    "canon_status",
+    "source_reference",
+    "timeline_id",
+    "plane_id",
+    "location_id",
+    "dr_start",
+    "dr_end",
+    "date_precision",
+    "availability_status",
+    "prerequisite_event_ids",
+    "created_event_id"
+  ],
+  "relations": [
+    {
+      "name": "present_at",
+      "from": "character_or_npc",
+      "to": "location",
+      "time_scoped": true
+    },
+    {
+      "name": "connects",
+      "from": "route",
+      "to": "location_pair",
+      "time_scoped": true,
+      "directed": true
+    },
+    {
+      "name": "unlocks",
+      "from": "event",
+      "to": "quest_or_route_or_item",
+      "time_scoped": true
+    },
+    {
+      "name": "affiliated_with",
+      "from": "character_or_npc",
+      "to": "faction",
+      "time_scoped": true
+    },
+    {
+      "name": "depicts",
+      "from": "art_asset",
+      "to": "entity",
+      "time_scoped": true
+    },
+    {
+      "name": "delivers_via",
+      "from": "postal_service",
+      "to": "route",
+      "time_scoped": true
+    }
+  ],
+  "availability": {
+    "default": "locked_unverified",
+    "allowed": [
+      "available",
+      "locked",
+      "expired",
+      "not_yet_existing",
+      "unverified",
+      "disrupted"
+    ],
+    "unknown_dates_never_auto_unlock": true,
+    "player_confirmed_choice_required_for_mutation": true
+  },
+  "source_statuses": [
+    "official_verified",
+    "homebrew_approved",
+    "crossover_approved",
+    "unverified"
+  ],
+  "rules": [
+    "No universal 1495 DR epoch",
+    "No inferred reverse routes",
+    "Historical dates and real UTC audit timestamps remain separate",
+    "Immutable append-only gameplay events",
+    "Server-authoritative inventory, money and reward changes",
+    "Art cannot confer route or quest availability",
+    "Player choices require explicit user confirmation"
+  ],
+  "notes": "Integration contract only. No gameplay mutation or verified canon claims."
+}
