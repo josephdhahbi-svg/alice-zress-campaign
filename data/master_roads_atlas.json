@@ -31,7 +31,9 @@
     "chronology_validation_required": true,
     "book_crossover_not_canon_by_default": true,
     "player_state_immutable_without_action": true,
-    "locked_routes_not_traversable": true
+    "locked_routes_not_traversable": true,
+    "transport_and_mail_use_shared_world_graph": true,
+    "mail_delivery_requires_route_or_valid_magic_channel": true
   },
   "books": [
     {
@@ -50,7 +52,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B01"
     },
     {
       "book_id": "B02",
@@ -68,7 +71,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B02"
     },
     {
       "book_id": "B03",
@@ -86,7 +90,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B03"
     },
     {
       "book_id": "B04",
@@ -104,7 +109,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B04"
     },
     {
       "book_id": "B05",
@@ -122,7 +128,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B05"
     },
     {
       "book_id": "B06",
@@ -140,7 +147,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B06"
     },
     {
       "book_id": "B07",
@@ -158,7 +166,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B07"
     },
     {
       "book_id": "B08",
@@ -176,7 +185,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B08"
     },
     {
       "book_id": "B09",
@@ -194,7 +204,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B09"
     },
     {
       "book_id": "B10",
@@ -212,7 +223,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B10"
     },
     {
       "book_id": "B11",
@@ -230,7 +242,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B11"
     },
     {
       "book_id": "B12",
@@ -248,7 +261,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B12"
     },
     {
       "book_id": "B13",
@@ -266,7 +280,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B13"
     },
     {
       "book_id": "B14",
@@ -284,7 +299,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B14"
     },
     {
       "book_id": "B15",
@@ -302,7 +318,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B15"
     },
     {
       "book_id": "B16",
@@ -320,7 +337,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B16"
     },
     {
       "book_id": "B17",
@@ -338,7 +356,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B17"
     },
     {
       "book_id": "B18",
@@ -356,7 +375,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B18"
     },
     {
       "book_id": "B19",
@@ -374,7 +394,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B19"
     },
     {
       "book_id": "B20",
@@ -392,7 +413,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B20"
     },
     {
       "book_id": "B21",
@@ -410,7 +432,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B21"
     },
     {
       "book_id": "B22",
@@ -428,7 +451,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B22"
     },
     {
       "book_id": "B23",
@@ -446,7 +470,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B23"
     },
     {
       "book_id": "B24",
@@ -464,7 +489,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B24"
     },
     {
       "book_id": "B25",
@@ -482,7 +508,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B25"
     },
     {
       "book_id": "B26",
@@ -500,7 +527,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B26"
     },
     {
       "book_id": "B27",
@@ -518,7 +546,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B27"
     },
     {
       "book_id": "B28",
@@ -536,7 +565,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B28"
     },
     {
       "book_id": "B29",
@@ -554,7 +584,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B29"
     },
     {
       "book_id": "B30",
@@ -572,7 +603,8 @@
       "character_ids": [],
       "faction_ids": [],
       "source_status": "unassigned_placeholder",
-      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified.",
+      "infrastructure_sheet_ref": "data/all_30_books_transport_and_mail.json#B30"
     }
   ],
   "locations": [
@@ -954,6 +986,10 @@
     {
       "file": "data/netheril_character_travel_network.json",
       "purpose": "five test character origins and exits"
+    },
+    {
+      "file": "data/all_30_books_transport_and_mail.json",
+      "purpose": "all book transport and mail planning sheets"
     }
   ],
   "design_notes": "Thirty indexed campaign-book slots (titles intentionally unassigned), five test-character entries, ten locked travel links. Cross-book labels are proposals, not published canon. Must resolve DR date, geography, gates, and authoritative trilogy book titles before activation."
