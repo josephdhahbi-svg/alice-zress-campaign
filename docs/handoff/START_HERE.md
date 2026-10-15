@@ -153,3 +153,10 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - This synthetic validator is not a live portal authority, does not confer source verification, and does not modify Alice, unlock routes, or add event-ledger/database services.
 - Copilot's reviewed proposals remain design inputs. Gemini's secure Batch 1B implementation was not supplied this turn.
 - Next: run complete checkout tests when available; integrate synthetic fixture registry, strengthen input type validation, repair general `scripts/validate.py` registry handling, implement secure SQLite migrations/event ledger, build U01 read-only projection and standalone canon-reviewed art.
+
+## Team Meeting 11 — Alice read-only implementation (2026-10-15)
+- `15f9d8a` added `scripts/preview_alice_u01.py`, a pure U01 scene projection with Alice Level 1, three origin gifts, five unselected/disabled choices, unknown DR, locked travel and planned portrait.
+- `13ead96` added `tests/test_alice_u01_preview.py`, eight `unittest` cases for protected state and read-only purity.
+- **Executed eight tests locally: 8 passed, 0 failed**, in a locally reconstructed equivalent two-file subset; not a complete GitHub checkout or complete test suite.
+- Gemini Batch 3 remains HOLD for authentication/consent/privacy. Copilot WorldOS remains proposed pending verified historical data. No live save connector, art asset, UI frontend, secure command service or gameplay mutation created.
+- Next: verify exact GitHub file tests on full checkout; implement responsive U01 preview UI, secure command/event ledger, versioned read projections, and source-grounded Underdark continuity.
