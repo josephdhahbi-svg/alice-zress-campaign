@@ -94,3 +94,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - `b4437bb`: added `docs/architecture/living-world-integration-v1.md` covering event-driven living-city projections and first read-only Underdark vertical slice.
 - Generated one Moonveil Living World infographic in the chat. It is **concept art only**: displayed years, availability, character designs, quest names, city faction rosters, and route lines are not verified canon or gameplay data. The infographic has not been uploaded to the repository and must not be treated as an authoritative source. In particular, Alice remains Level 1 with unchosen U01 Silver Courier options; any pictured "locked" level is UI decoration, not an in-game change.
 - Next: review and correct infographic factual labels before production use; execute repository validation in a checkout; register new JSON schemas in master validator; create asset metadata validators; source-check Promenade chronology and Menzoberranzan maps; implement an actual read-only location UI.
+
+## Gemini Engineering Batch 1 + Copilot charter intake
+- User supplied proposed `backend/package.json`, `backend/db/database.js`, `backend/routes/characters.js`, `backend/routes/savestates.js`, `backend/routes/portalSync.js`, `backend/tests/server.test.js`, plus a Copilot governance charter.
+- Verified these six backend paths are **absent** on the working branch at intake. **No tests executed.**
+- `ac19dc1` added `docs/handoff/gemini-copilot-engineering-batch-1-review.md`, with 12 integration blockers and acceptance tests.
+- Do not integrate pasted routers unchanged: unauthenticated writes, client-controlled level/resources, spoofable portal keys, unsafe restores, unverified Alice 1495 DR seeding, mutable audit, missing server.js, persistent test DB, and unsupported “tests verified” assertion.
+- Keep SQLite WAL/foreign keys, dependency-injected router factories, default-closed portals, transaction patterns and Copilot audit-first charter **as design inputs**.
+- Next: implement a **test-only** pure domain policy + isolated SQLite migrations with authenticated, event-sourced commands and no player save writes. Require full test logs before claiming operational.
