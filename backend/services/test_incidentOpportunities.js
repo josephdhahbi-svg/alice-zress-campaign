@@ -1,0 +1,15 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {incidentOpportunities}=require('./incidentOpportunities');
+const {initialCityNetwork,applyCityIncident}=require('./cityIncidentReducer');
+const initial=initialCityNetwork();
+const incident={eventId:'ev1',commandId:'cmd1',sectorId:'safehouse',revision:1,type:'JAMMER_DEPLOYED',severity:'HIGH'};
+test('healthy city has no incident jobs',()=>assert.deepEqual(incidentOpportunities(initial),{jobs:[],quests:[],rumors:[]}));
+test('blackout opens heroic repair quest',()=>assert.equal(incidentOpportunities(applyCityIncident(initial,incident)).quests[0].heroic,true));
+test('blackout creates engineer job',()=>assert(incidentOpportunities(applyCityIncident(initial,incident)).jobs.some(j=>j.npcRole==='ENGINEER')));
+test('blackout creates courier job',()=>assert(incidentOpportunities(applyCityIncident(initial,incident)).jobs.some(j=>j.npcRole==='COURIER')));
+test('trade interruption creates merchant job',()=>assert(incidentOpportunities(applyCityIncident(initial,incident)).jobs.some(j=>j.npcRole==='MERCHANT')));
+test('rumor pressure creates scholar job',()=>assert(incidentOpportunities(applyCityIncident(initial,incident)).jobs.some(j=>j.npcRole==='SCHOLAR')));
+test('cleared jammer removes active repair quest',()=>{const a=applyCityIncident(initial,incident),b=applyCityIncident(a,{eventId:'ev2',commandId:'cmd2',sectorId:'safehouse',revision:2,type:'JAMMER_CLEARED'});assert.equal(incidentOpportunities(b).quests.length,0);});
+test('opportunity projection does not mutate city',()=>{const a=applyCityIncident(initial,incident);incidentOpportunities(a);assert.equal(a.jammers.safehouse.status,'ACTIVE');});
+test('bad city rejected',()=>assert.throws(()=>incidentOpportunities({})));
