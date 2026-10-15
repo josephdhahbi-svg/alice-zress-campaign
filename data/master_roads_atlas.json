@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.1.0",
-  "status": "framework",
+  "schema_version": "0.2.0",
+  "status": "seeded_design_graph",
   "scope": {
     "trilogies": 10,
     "books": 30,
@@ -33,12 +33,919 @@
     "player_state_immutable_without_action": true,
     "locked_routes_not_traversable": true
   },
-  "books": [],
-  "locations": [],
-  "routes": [],
-  "characters": [],
+  "books": [
+    {
+      "book_id": "B01",
+      "trilogy_id": "T01",
+      "sequence": 1,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B02",
+      "trilogy_id": "T01",
+      "sequence": 2,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B03",
+      "trilogy_id": "T01",
+      "sequence": 3,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B04",
+      "trilogy_id": "T02",
+      "sequence": 4,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B05",
+      "trilogy_id": "T02",
+      "sequence": 5,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B06",
+      "trilogy_id": "T02",
+      "sequence": 6,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B07",
+      "trilogy_id": "T03",
+      "sequence": 7,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B08",
+      "trilogy_id": "T03",
+      "sequence": 8,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B09",
+      "trilogy_id": "T03",
+      "sequence": 9,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B10",
+      "trilogy_id": "T04",
+      "sequence": 10,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B11",
+      "trilogy_id": "T04",
+      "sequence": 11,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B12",
+      "trilogy_id": "T04",
+      "sequence": 12,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B13",
+      "trilogy_id": "T05",
+      "sequence": 13,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B14",
+      "trilogy_id": "T05",
+      "sequence": 14,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B15",
+      "trilogy_id": "T05",
+      "sequence": 15,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B16",
+      "trilogy_id": "T06",
+      "sequence": 16,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B17",
+      "trilogy_id": "T06",
+      "sequence": 17,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B18",
+      "trilogy_id": "T06",
+      "sequence": 18,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B19",
+      "trilogy_id": "T07",
+      "sequence": 19,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B20",
+      "trilogy_id": "T07",
+      "sequence": 20,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B21",
+      "trilogy_id": "T07",
+      "sequence": 21,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B22",
+      "trilogy_id": "T08",
+      "sequence": 22,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B23",
+      "trilogy_id": "T08",
+      "sequence": 23,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B24",
+      "trilogy_id": "T08",
+      "sequence": 24,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B25",
+      "trilogy_id": "T09",
+      "sequence": 25,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B26",
+      "trilogy_id": "T09",
+      "sequence": 26,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B27",
+      "trilogy_id": "T09",
+      "sequence": 27,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B28",
+      "trilogy_id": "T10",
+      "sequence": 28,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B29",
+      "trilogy_id": "T10",
+      "sequence": 29,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    },
+    {
+      "book_id": "B30",
+      "trilogy_id": "T10",
+      "sequence": 30,
+      "title": null,
+      "chronology": {
+        "dr_start": null,
+        "dr_end": null,
+        "verification": "pending"
+      },
+      "entry_routes": [],
+      "exit_routes": [],
+      "location_ids": [],
+      "character_ids": [],
+      "faction_ids": [],
+      "source_status": "unassigned_placeholder",
+      "notes": "Slot only; do not equate a published adventure with this campaign book until roadmap verified."
+    }
+  ],
+  "locations": [
+    {
+      "location_id": "LOC_CANDLEKEEP",
+      "name": "Candlekeep",
+      "plane": "Material Plane or pending verification",
+      "dr_availability": "pending",
+      "source_status": "proposed crossover",
+      "geography_status": "place reference only"
+    },
+    {
+      "location_id": "LOC_DAGGER_FALLS",
+      "name": "Dagger Falls",
+      "plane": "Material Plane or pending verification",
+      "dr_availability": "pending",
+      "source_status": "proposed crossover",
+      "geography_status": "place reference only"
+    },
+    {
+      "location_id": "LOC_WATERDEEP",
+      "name": "Waterdeep",
+      "plane": "Material Plane or pending verification",
+      "dr_availability": "pending",
+      "source_status": "proposed crossover",
+      "geography_status": "place reference only"
+    },
+    {
+      "location_id": "LOC_ELTUREL",
+      "name": "Elturel",
+      "plane": "Material Plane or pending verification",
+      "dr_availability": "pending",
+      "source_status": "proposed crossover",
+      "geography_status": "place reference only"
+    },
+    {
+      "location_id": "LOC_ELTUREL_OR_BALDUR_S_GATE",
+      "name": "Elturel or Baldur's Gate",
+      "plane": "Material Plane or pending verification",
+      "dr_availability": "pending",
+      "source_status": "proposed crossover",
+      "geography_status": "unresolved"
+    },
+    {
+      "location_id": "LOC_LANTAN",
+      "name": "Lantan",
+      "plane": "Material Plane or pending verification",
+      "dr_availability": "pending",
+      "source_status": "proposed crossover",
+      "geography_status": "place reference only"
+    },
+    {
+      "location_id": "LOC_WILDSPACE_PORT_TBD",
+      "name": "Wildspace port TBD",
+      "plane": "Material Plane or pending verification",
+      "dr_availability": "pending",
+      "source_status": "proposed crossover",
+      "geography_status": "unresolved"
+    },
+    {
+      "location_id": "LOC_UNDERDARK",
+      "name": "Underdark",
+      "plane": "Material Plane or pending verification",
+      "dr_availability": "pending",
+      "source_status": "proposed crossover",
+      "geography_status": "place reference only"
+    },
+    {
+      "location_id": "LOC_UNDERDARK_PASSAGE_TBD",
+      "name": "Underdark passage TBD",
+      "plane": "Material Plane or pending verification",
+      "dr_availability": "pending",
+      "source_status": "proposed crossover",
+      "geography_status": "unresolved"
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "R_SERALYTH_IN",
+      "character_id": "seralyth",
+      "origin_location_id": "LOC_CANDLEKEEP",
+      "destination_location_id": "LOC_DAGGER_FALLS",
+      "travel_mode": "overland scholarly journey",
+      "prerequisites": [
+        "era verification",
+        "geographic path verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "entry_quest_node": "N01"
+    },
+    {
+      "route_id": "R_SERALYTH_OUT_1",
+      "character_id": "seralyth",
+      "origin_location_id": "LOC_DAGGER_FALLS",
+      "destination_location_id": "LOC_CANDLEKEEP",
+      "travel_mode": "to be mapped",
+      "prerequisites": [
+        "N06 resolved; chronology approved",
+        "chronology and travel verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "destination_sourcebook": "Candlekeep Mysteries",
+      "story_hook": "Return time-fracture evidence for independent verification"
+    },
+    {
+      "route_id": "R_KAELIS_IN",
+      "character_id": "kaelis",
+      "origin_location_id": "LOC_WATERDEEP",
+      "destination_location_id": "LOC_DAGGER_FALLS",
+      "travel_mode": "overland pursuit of forged documents",
+      "prerequisites": [
+        "era verification",
+        "geographic path verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "entry_quest_node": "N01"
+    },
+    {
+      "route_id": "R_KAELIS_OUT_1",
+      "character_id": "kaelis",
+      "origin_location_id": "LOC_DAGGER_FALLS",
+      "destination_location_id": "LOC_WATERDEEP",
+      "travel_mode": "to be mapped",
+      "prerequisites": [
+        "N06 resolved; timeline and factions checked",
+        "chronology and travel verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "destination_sourcebook": "Waterdeep: Dragon Heist",
+      "story_hook": "Follow counterfeit seal to an urban faction"
+    },
+    {
+      "route_id": "R_BRINNA_IN",
+      "character_id": "brinna",
+      "origin_location_id": "LOC_ELTUREL",
+      "destination_location_id": "LOC_DAGGER_FALLS",
+      "travel_mode": "overland escort and search",
+      "prerequisites": [
+        "era verification",
+        "geographic path verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "entry_quest_node": "N01"
+    },
+    {
+      "route_id": "R_BRINNA_OUT_1",
+      "character_id": "brinna",
+      "origin_location_id": "LOC_DAGGER_FALLS",
+      "destination_location_id": "LOC_ELTUREL_OR_BALDUR_S_GATE",
+      "travel_mode": "to be mapped",
+      "prerequisites": [
+        "N06 resolved; verify Elturel's status for chosen DR year",
+        "chronology and travel verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "destination_sourcebook": "Baldur's Gate: Descent into Avernus",
+      "story_hook": "Investigate an infernal clue after rescuing a traveler"
+    },
+    {
+      "route_id": "R_NYM_IN",
+      "character_id": "nym",
+      "origin_location_id": "LOC_LANTAN",
+      "destination_location_id": "LOC_DAGGER_FALLS",
+      "travel_mode": "sea voyage then overland journey",
+      "prerequisites": [
+        "era verification",
+        "geographic path verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "entry_quest_node": "N01"
+    },
+    {
+      "route_id": "R_NYM_OUT_1",
+      "character_id": "nym",
+      "origin_location_id": "LOC_DAGGER_FALLS",
+      "destination_location_id": "LOC_WILDSPACE_PORT_TBD",
+      "travel_mode": "to be mapped",
+      "prerequisites": [
+        "N06 resolved; vessel and port access earned",
+        "chronology and travel verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "destination_sourcebook": "Spelljammer: Adventures in Space",
+      "story_hook": "Seek a safe power system for a planar vessel"
+    },
+    {
+      "route_id": "R_VAELIS_IN",
+      "character_id": "vaelis",
+      "origin_location_id": "LOC_UNDERDARK",
+      "destination_location_id": "LOC_DAGGER_FALLS",
+      "travel_mode": "Underdark passage then surface route",
+      "prerequisites": [
+        "era verification",
+        "geographic path verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "entry_quest_node": "N01"
+    },
+    {
+      "route_id": "R_VAELIS_OUT_1",
+      "character_id": "vaelis",
+      "origin_location_id": "LOC_DAGGER_FALLS",
+      "destination_location_id": "LOC_UNDERDARK_PASSAGE_TBD",
+      "travel_mode": "to be mapped",
+      "prerequisites": [
+        "N06 resolved; safe passage discovered",
+        "chronology and travel verification"
+      ],
+      "time_window": {
+        "dr_start": null,
+        "dr_end": null
+      },
+      "source_status": "original crossover proposal",
+      "player_choice_required": true,
+      "route_status": "locked_pending_verification",
+      "destination_sourcebook": "Out of the Abyss",
+      "story_hook": "Trace a recurring psychic signal"
+    }
+  ],
+  "characters": [
+    {
+      "character_id": "seralyth",
+      "name": "Seralyth Moonveil",
+      "source_status": "original_test_character",
+      "origin_location_id": "LOC_CANDLEKEEP",
+      "arrival_location_id": "LOC_DAGGER_FALLS",
+      "entry_quest_node": "N01",
+      "reason": "Mystryl chronology and cipher",
+      "origin_sourcebook": "Candlekeep Mysteries",
+      "exit_count": 1
+    },
+    {
+      "character_id": "kaelis",
+      "name": "Kaelis Silverstep",
+      "source_status": "original_test_character",
+      "origin_location_id": "LOC_WATERDEEP",
+      "arrival_location_id": "LOC_DAGGER_FALLS",
+      "entry_quest_node": "N01",
+      "reason": "Trace stolen Netherese cipher",
+      "origin_sourcebook": "Waterdeep: Dragon Heist",
+      "exit_count": 1
+    },
+    {
+      "character_id": "brinna",
+      "name": "Brinna Dawnward",
+      "source_status": "original_test_character",
+      "origin_location_id": "LOC_ELTUREL",
+      "arrival_location_id": "LOC_DAGGER_FALLS",
+      "entry_quest_node": "N01",
+      "reason": "Find missing travelers",
+      "origin_sourcebook": "Baldur's Gate: Descent into Avernus",
+      "exit_count": 1
+    },
+    {
+      "character_id": "nym",
+      "name": "Nym Tinkerspark",
+      "source_status": "original_test_character",
+      "origin_location_id": "LOC_LANTAN",
+      "arrival_location_id": "LOC_DAGGER_FALLS",
+      "entry_quest_node": "N01",
+      "reason": "Study Netherese engineering",
+      "origin_sourcebook": "Spelljammer: Adventures in Space",
+      "exit_count": 1
+    },
+    {
+      "character_id": "vaelis",
+      "name": "Vaelis Duskwatch",
+      "source_status": "original_test_character",
+      "origin_location_id": "LOC_UNDERDARK",
+      "arrival_location_id": "LOC_DAGGER_FALLS",
+      "entry_quest_node": "N01",
+      "reason": "Investigate patron disturbance",
+      "origin_sourcebook": "Out of the Abyss",
+      "exit_count": 1
+    }
+  ],
   "factions": [],
-  "crossovers": [],
+  "crossovers": [
+    {
+      "character_id": "seralyth",
+      "origin_sourcebook": "Candlekeep Mysteries",
+      "destination_sourcebooks": [
+        "Candlekeep Mysteries"
+      ],
+      "status": "proposed; not a published adventure connection"
+    },
+    {
+      "character_id": "kaelis",
+      "origin_sourcebook": "Waterdeep: Dragon Heist",
+      "destination_sourcebooks": [
+        "Waterdeep: Dragon Heist"
+      ],
+      "status": "proposed; not a published adventure connection"
+    },
+    {
+      "character_id": "brinna",
+      "origin_sourcebook": "Baldur's Gate: Descent into Avernus",
+      "destination_sourcebooks": [
+        "Baldur's Gate: Descent into Avernus"
+      ],
+      "status": "proposed; not a published adventure connection"
+    },
+    {
+      "character_id": "nym",
+      "origin_sourcebook": "Spelljammer: Adventures in Space",
+      "destination_sourcebooks": [
+        "Spelljammer: Adventures in Space"
+      ],
+      "status": "proposed; not a published adventure connection"
+    },
+    {
+      "character_id": "vaelis",
+      "origin_sourcebook": "Out of the Abyss",
+      "destination_sourcebooks": [
+        "Out of the Abyss"
+      ],
+      "status": "proposed; not a published adventure connection"
+    }
+  ],
   "seed_imports": [
     {
       "file": "data/netheril_route_graph.json",
@@ -49,5 +956,5 @@
       "purpose": "five test character origins and exits"
     }
   ],
-  "design_notes": "Populate all 30 book IDs from authoritative campaign roadmap before assigning names or chronological order. No inferred official adventure travel links."
+  "design_notes": "Thirty indexed campaign-book slots (titles intentionally unassigned), five test-character entries, ten locked travel links. Cross-book labels are proposals, not published canon. Must resolve DR date, geography, gates, and authoritative trilogy book titles before activation."
 }
