@@ -1,0 +1,18 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {planNpc}=require('./npcDecisionEngine');
+const {initialBeliefs,receive}=require('./knowledgeBeliefEngine');
+const npc={id:'NPC_001',role:'ENGINEER',needs:{hunger:20,fatigue:20,funds:20},goals:{immediate:'WORK',shortTerm:'OPEN_SHOP'}};
+const context={hour:1,beliefs:initialBeliefs(),jobs:[]};
+test('working engineer defaults to work',()=>assert.equal(planNpc(npc,context).proposedAction,'WORK'));
+test('fatigued NPC rests',()=>assert.equal(planNpc({...npc,needs:{...npc.needs,fatigue:95}},context).proposedAction,'REST'));
+test('hungry NPC trades for food',()=>assert.equal(planNpc({...npc,needs:{...npc.needs,hunger:95}},context).proposedAction,'TRADE'));
+test('engineer investigates signal incident',()=>assert.equal(planNpc(npc,{...context,jobs:[{npcRole:'ENGINEER',activity:'DIAGNOSE_SIGNAL'}]}).proposedAction,'INVESTIGATE'));
+test('courier travels for delivery',()=>assert.equal(planNpc({...npc,role:'COURIER'}, {...context,jobs:[{npcRole:'COURIER',activity:'DELIVER_MESSAGE_PHYSICALLY'}]}).proposedAction,'TRAVEL'));
+test('rumors below confidence threshold not used',()=>{const beliefs=receive(initialBeliefs(),{id:'MSG_1',recipientId:npc.id,eventId:'EVENT_1',source:'RUMOR',claim:'Bandits',receivedHour:1});assert.deepEqual(planNpc(npc,{...context,beliefs}).knowledgeEventIds,[])});
+test('witness knowledge used',()=>{const beliefs=receive(initialBeliefs(),{id:'MSG_1',recipientId:npc.id,eventId:'EVENT_1',source:'WITNESS',claim:'Dragon',receivedHour:1});assert.deepEqual(planNpc(npc,{...context,beliefs}).knowledgeEventIds,['EVENT_1'])});
+test('other NPC knowledge not shared',()=>{const beliefs=receive(initialBeliefs(),{id:'MSG_1',recipientId:'NPC_002',eventId:'EVENT_1',source:'WITNESS',claim:'Dragon',receivedHour:1});assert.deepEqual(planNpc(npc,{...context,beliefs}).knowledgeEventIds,[])});
+test('invalid needs rejected',()=>assert.throws(()=>planNpc({...npc,needs:{...npc.needs,fatigue:101}},context)));
+test('does not mutate inputs',()=>{const before=JSON.stringify({npc,context});planNpc(npc,context);assert.equal(JSON.stringify({npc,context}),before)});
+test('repeatable tie-break',()=>assert.deepEqual(planNpc(npc,context),planNpc(npc,context)));
+test('proposals never claim committed state',()=>assert.equal(planNpc(npc,context).status,'PROPOSAL_ONLY'));
