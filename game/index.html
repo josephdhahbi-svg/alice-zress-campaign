@@ -1,20 +1,58 @@
 <!doctype html>
-<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alice Z'ress — Choice Prototype</title>
-<style>body{font:16px system-ui;background:#101020;color:#eee;max-width:700px;margin:3rem auto;padding:1rem}h1{color:#c5b7ff}button{display:block;width:100%;padding:1rem;margin:.7rem 0;background:#242747;color:#fff;border:1px solid #8880d6;border-radius:12px;text-align:left;font:inherit}button:hover{background:#343968}#status{color:#b5dfc2}small{color:#aaa}</style>
-<h1>Alice Z'ress — The Elder Eye</h1><p><small>Playable choice-system prototype · Original fiction · Not yet a full D&D rules engine</small></p>
-<h2 id="scene">The Moonlit Crossroads</h2><p>Five paths lead away from the sanctuary. Your choices are recorded for later chapters.</p><div id="choices"></div><p id="status" aria-live="polite"></p><button id="reset">Reset this prototype save</button>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elder Eye — Campaign Save</title>
+<style>
+body{font:16px system-ui;background:#101020;color:#f1efff;max-width:740px;margin:auto;padding:20px}h1,h2{color:#cbbaff}section{border:1px solid #575579;border-radius:14px;padding:16px;margin:14px 0}label{display:block;margin:10px 0}input,select,textarea,button{font:inherit;border-radius:8px;padding:10px;background:#252640;color:white;border:1px solid #8985ba}input,select,textarea{max-width:100%;box-sizing:border-box}button{cursor:pointer;margin:5px}button:focus{outline:3px solid #d8ccff}small{color:#bcb8cf}#choices button{display:block;width:100%;text-align:left}#message{color:#b5e6c4}textarea{width:100%;height:85px}
+</style>
+<h1>Alice Z'ress — Elder Eye</h1><p>Local, offline campaign prototype. Create a hero, record quests, and resume saved progress on this device. Export saves to move between devices.</p>
+<section><h2>Character creation</h2>
+<label>Character name <input id="name" maxlength="80" value="Alice Z'ress"></label>
+<label>Ancestry <input id="ancestry" maxlength="80" value="Drow"></label>
+<label>Class <input id="className" maxlength="80" value="Warlock"></label>
+<label>Patron <input id="patron" maxlength="80" value="Ghaunadaur"></label>
+<label>Faith <input id="faith" maxlength="80" value="Eilistraee"></label>
+<label>Background <input id="background" maxlength="80" value="Acolyte"></label>
+<label>Level <input id="level" type="number" min="1" max="20" value="1"></label>
+<label>Location <input id="location" maxlength="120" value="Promenade of the Dark Maiden"></label>
+<button id="saveCharacter">Create / save character</button><button id="newCharacter">New character</button><select id="roster" aria-label="Saved characters"></select><button id="loadCharacter">Load selected</button>
+</section>
+<section><h2>Adventure and quest journal</h2><p id="summary">No character selected.</p>
+<label>Quest title <input id="quest" maxlength="140" value="The Rabbit Hole"></label>
+<label>Quest notes <textarea id="notes">Alice falls into the Pit of Ghaunadaur. Adventure not yet played.</textarea></label>
+<label>Quest status <select id="questStatus"><option>planned</option><option>active</option><option>completed</option></select></label>
+<button id="recordQuest">Record quest</button><div id="journal"></div>
+</section>
+<section><h2>Five-choice DM scene</h2><p>Sample scene only. The Dungeon Master determines outcomes; this demo does not automate D&D combat or canon rulings.</p><div id="choices"></div></section>
+<section><h2>Save management</h2><button id="export">Export save JSON</button><label>Import save JSON <input id="import" type="file" accept=".json,application/json"></label><button id="reset">Delete local saves</button><p id="message" role="status"></p><small>Data stays in this browser until exported. GitHub and ChatGPT are not automatically synchronized.</small></section>
 <script>
-const options=[
-["Protect the refugees","main","The sanctuary remembers your protection."],
-["Investigate the Elder Eye sigil","main","A forbidden symbol enters your journal."],
-["Speak to the Harper courier","mid","A discreet ally shares a lead."],
-["Repair a musician's lyre","low","A song is restored to the community."],
-["Follow the silver moth","mid","A moonlit omen leads you onward."]
-];
-const key="alice-zress-prototype-v1";
-let history=JSON.parse(localStorage.getItem(key)||"[]");
-const box=document.getElementById("choices"),status=document.getElementById("status");
-function render(){box.replaceChildren();options.forEach(([label,tier,result],index)=>{const b=document.createElement("button");b.textContent=(index+1)+". "+label+" ["+tier+"]";b.onclick=()=>{history.push({choice:index,label,tier,result,at:new Date().toISOString()});localStorage.setItem(key,JSON.stringify(history));status.textContent=result+" Saved choices: "+history.length;};box.append(b)});status.textContent="Saved choices: "+history.length;}
-document.getElementById("reset").onclick=()=>{history=[];localStorage.removeItem(key);render()};render();
+"use strict";
+const KEY="elder-eye-save-v2";const $=id=>document.getElementById(id);
+const fields=["name","ancestry","className","patron","faith","background","level","location"];
+let state={version:2,characters:[],activeId:null};
+try{const raw=JSON.parse(localStorage.getItem(KEY));if(raw&&raw.version===2&&Array.isArray(raw.characters))state=raw;}catch(e){}
+const message=s=>$("message").textContent=s;
+const persist=()=>{localStorage.setItem(KEY,JSON.stringify(state));render();};
+const current=()=>state.characters.find(c=>c.id===state.activeId);
+function render(){
+ $("roster").replaceChildren();state.characters.forEach(c=>{const o=document.createElement("option");o.value=c.id;o.textContent=c.name+" (level "+c.level+")";$("roster").append(o);});
+ if(state.activeId)$("roster").value=state.activeId;
+ const c=current();$("summary").textContent=c?c.name+" — level "+c.level+" "+c.className+" — "+c.location:"Create or load a character to begin.";
+ $("journal").replaceChildren();if(c)c.quests.forEach(q=>{const p=document.createElement("p");p.textContent=q.title+" ["+q.status+"] — "+q.notes;$("journal").append(p);});
+}
+function load(c){fields.forEach(k=>$(k).value=c[k]??"");state.activeId=c.id;render();message("Loaded "+c.name+".");}
+$("saveCharacter").onclick=()=>{
+ const name=$("name").value.trim();if(!name){message("Character name required.");return;}
+ const level=Number($("level").value);if(!Number.isInteger(level)||level<1||level>20){message("Level must be 1–20.");return;}
+ let c=current();if(!c){c={id:crypto.randomUUID(),quests:[],choices:[],createdAt:new Date().toISOString()};state.characters.push(c);}
+ fields.forEach(k=>c[k]=k==="level"?level:$(k).value.trim());state.activeId=c.id;persist();message("Character saved locally.");
+};
+$("newCharacter").onclick=()=>{state.activeId=null;$("name").value="";$("level").value=1;render();message("Enter a new character and save.");};
+$("loadCharacter").onclick=()=>{const c=state.characters.find(c=>c.id===$("roster").value);if(c)load(c);};
+$("recordQuest").onclick=()=>{const c=current();if(!c){message("Save a character first.");return;}const title=$("quest").value.trim();if(!title){message("Quest title required.");return;}c.quests.push({id:crypto.randomUUID(),title,notes:$("notes").value,status:$("questStatus").value,at:new Date().toISOString()});persist();message("Quest recorded.");};
+const choices=[["Lawful Good","Protect those endangered by the fall."],["Neutral Good","Offer help without demanding allegiance."],["Chaotic Good","Defy the cult and seek a safe route."],["Utility","Examine the tunnel and collect clues."],["Action","Advance cautiously into the Pit."]];
+choices.forEach(([kind,desc],i)=>{const b=document.createElement("button");b.textContent=(i+1)+". "+kind+" — "+desc;b.onclick=()=>{const c=current();if(!c){message("Save a character first.");return;}c.choices.push({scene:"rabbit-hole-preview",choice:i+1,kind,description:desc,at:new Date().toISOString()});persist();message("Choice logged. Awaiting Dungeon Master resolution.");};$("choices").append(b);});
+$("export").onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="elder-eye-save.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);message("Save exported.");};
+$("import").onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const incoming=JSON.parse(await f.text());if(incoming.version!==2||!Array.isArray(incoming.characters)||incoming.characters.some(c=>typeof c.id!=="string"||typeof c.name!=="string"||!Array.isArray(c.quests)||!Array.isArray(c.choices)))throw Error("Invalid save format");if(!confirm("Replace all local characters with this imported save?"))return;state=incoming;persist();message("Save imported.");}catch(err){message("Import failed: "+err.message);}};
+$("reset").onclick=()=>{if(!confirm("Delete all local character saves? Export first if needed."))return;state={version:2,characters:[],activeId:null};persist();message("Local saves deleted.");};
+render();
 </script></html>
