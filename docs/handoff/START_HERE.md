@@ -131,3 +131,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - `3267dc8` added `docs/architecture/master-100-item-audit-decisions-v1.md`, reviewing checklist items 1–75 and answering architecture questions 76–100. This is an architectural review, **not** evidence that all systems exist.
 - Critical decisions: immutable gameplay events must not be purged; 1495 DR is not universal; 3000 BCE Netheril is not a verified universal era; cron world mutation, automated Git push, and production deploy remain HOLD; voice/transcripts require consent and privacy review; homebrew encounter scaling cannot silently alter official monster CR; five narrative choices are not automatic alignment scores; webhook `DISPATCHED` requires real HTTP delivery evidence.
 - No tests or deployments executed during this architecture review. Continue with complete checkout tests, isolated database/ledger foundation, safe preview integrations, and Visual Codex.
+
+## Directive 06 execution (2026-10-15)
+- Verified master handoff, atlas, Visual Codex manifest, Living World validator, and Batch 2 tests by GitHub connector.
+- Local full `git clone` failed: `Could not resolve host: github.com`. Therefore **zero tests executed** and no complete checkout verification. Do not claim tests passed.
+- `2559a5a` created `docs/architecture/alice-u01-read-only-slice-v1.md`: design-only U01 projection, five unselected choices, L1 and custom gifts preserved, no save mutation, no route unlock.
+- A concept infographic was generated in conversation only; **not committed to Visual Codex**, and its depicted test counts, file lists, repository status badges and art approval claims are **fictional placeholder text, not factual engineering evidence**. Do not use it as a report or approved asset. A verified standalone Alice portrait remains pending.
+- Gemini secure backend and Copilot WorldOS implementation deliverables not supplied in this turn; no integration claimed.
+- Next: actual checkout/test baseline, secure Batch 1B migrations, read-only U01 projection tests, verified standalone art, WorldOS contracts.
