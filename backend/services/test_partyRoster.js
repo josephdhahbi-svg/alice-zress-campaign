@@ -1,0 +1,16 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {createPartyRoster,partyView}=require('./partyRoster');
+const base=()=>({partyId:'moonveil_party',leaderId:'Alice_Zress',members:[{characterId:'Alice_Zress',status:'ACTIVE',moralRole:'BLUE'},{characterId:'Little_Gonnador',status:'LOCKED',moralRole:'GREEN'}],questRefs:['U01_SILVER_COURIER']});
+test('creates active leader and locked companion',()=>{const r=createPartyRoster(base());assert.equal(r.members[1].status,'LOCKED')});
+test('view never promotes locked companion',()=>{const v=partyView(createPartyRoster(base()));assert.equal(v.members[1].status,'LOCKED')});
+test('rejects duplicate character',()=>{const b=base();b.members.push(b.members[0]);assert.throws(()=>createPartyRoster(b))});
+test('rejects leader not active',()=>{const b=base();b.members[0].status='LOCKED';assert.throws(()=>createPartyRoster(b))});
+test('rejects absent leader',()=>{const b=base();b.leaderId='SomeoneElse';assert.throws(()=>createPartyRoster(b))});
+test('rejects unknown status',()=>{const b=base();b.members[1].status='RECRUITED';assert.throws(()=>createPartyRoster(b))});
+test('rejects invalid moral role',()=>{const b=base();b.members[0].moralRole='EVIL';assert.throws(()=>createPartyRoster(b))});
+test('relationships are descriptive, not quest commands',()=>{const b=base();b.relationships=[{from:'Alice_Zress',to:'Little_Gonnador',label:'Future companion'}];const r=createPartyRoster(b);assert.equal(r.relationships[0].label,'Future companion');assert.equal(r.members[1].status,'LOCKED')});
+test('rejects duplicate quest references',()=>{const b=base();b.questRefs.push('U01_SILVER_COURIER');assert.throws(()=>createPartyRoster(b))});
+test('does not mutate inputs',()=>{const b=base();createPartyRoster(b);assert.equal(b.members[1].status,'LOCKED')});
+test('roster is immutable',()=>{const r=createPartyRoster(base());assert.equal(Object.isFrozen(r.members[0]),true)});
+test('view shows known character name only',()=>{const v=partyView(createPartyRoster(base()),{Alice_Zress:{name:'Alice Zress'}});assert.equal(v.members[0].name,'Alice Zress');assert.equal(v.members[1].name,null)});
