@@ -1,0 +1,6 @@
+# Omniversal Network Lego — integration checkpoint
+New pure rules adapter combines user-supplied transit registry, ley-line jammers and geopolitical ticker.
+Mode access is gated by unlockedModes and available energy; Level 1 Alice is NOT automatically granted portals, vehicles or comms. Communications and physical transit have distinct kinds and simulation tick durations. HIGH/CRITICAL active jammers prevent ley-line comms, but do not automatically block rail vehicles or Far Realm portals.
+Jammers are projected from events rather than ephemeral Map state, so the future event ledger can replay them. Ticker data comes from supplied world-state fields, not invented canonical nation-state data.
+The supplied server examples had unsafe unauthenticated endpoints, global WS rebroadcast, swallowed database errors and Math.random jammer IDs; do not deploy them unmodified. Persist events and resource costs transactionally with command idempotency and authorization, then notify authorized clients through outbox. The supplied Flutter localhost and socket lifecycle also require repair.
+Run tests: node --test backend/services/test_omniversalNetworkRules.js. No claim of deployment or end-to-end integration.
