@@ -14,6 +14,7 @@ REGISTRIES = {
     "world_communications_network.json": ("channels",),
     "all_30_books_transport_and_mail.json": ("books", "transport_modes", "messaging_services"),
     "temporal_route_scenarios.json": ("scenarios",),
+    "gemini_omni_engine_module_registry.json": ("modules",),
 }
 for file in sorted((ROOT / "data").glob("*.json")):
     if file.name == "schema.json":
