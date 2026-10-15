@@ -184,3 +184,40 @@ Required implementation model:
 
 ## Implementation truth
 This Omni-Edition block updates the **target specification only**. No database migration, backend service, Flutter debug screen, Socket.io synchronization, Kubernetes deployment, Prometheus/Grafana stack, Aethelgard encounter implementation, or new cosmology data is marked implemented by this intake.
+
+
+# Ultimate Omni-Edition + 10 Trilogies & 9-Alignment Pantheon — Intake
+
+Status: **USER-SUPPLIED ALTERNATE SPEC / BRAINSTORM. NOT AUTOMATICALLY CANON OR IMPLEMENTED.**
+
+The supplied specification introduces:
+- proposed Level 21–30 Epic Mod;
+- proposed Elder Eye Audit Daemon;
+- alternate three-hero structure: Kaelen Vance (Books 1–10), Lyra Nightwhisper (Books 11–20), Infinite Company (Books 21–30);
+- proposed nine-alignment pantheon using Prime Architects, Elder Eye, Aethelgard, Mok'slyk and Unbound Weave;
+- Book 30 seven-phase Convergence structure.
+
+## Continuity ruling
+
+This does **not** replace the established Moonveil 10-trilogy / 30-book roadmap or its principal cast. Kaelen Vance and Lyra Nightwhisper are retained as candidate NPCs, alternate protagonists, historical figures, or modular-campaign leads pending later placement.
+
+The Elder Eye is **not locked as True Neutral**, a software daemon, the source of all madness, or the objective final cosmic enemy. In narrative canon its identity and relationship to Ghaunadaur/Far Realm remain deliberately unresolved. A technical service may be nicknamed `elderEyeDaemon` without proving cosmological identity.
+
+The nine-alignment matrix is retained as a candidate symbolic/gameplay matrix, not objective divine hierarchy.
+
+The supplied claim that Mystryl returns in Phase 5 remains a hypothesis/ending branch, not established fact. The Patchwork Architect likewise remains unresolved.
+
+## Technical ruling
+
+The shown `elderEyeDaemon.js` is a proposed audit service. It quarantines repeatedly failing outbox packets and checks negative scalar counters; it does not establish true vector-clock causal auditing.
+
+The existing synchronization correction remains required:
+- per-node vector maps;
+- component-wise comparison;
+- explicit concurrent state;
+- component-wise max merge;
+- entity-specific conflict resolution;
+- idempotency;
+- no generic merge for currency, unique items, deaths, quest completion, custody or provenance.
+
+No code from this pasted specification is marked deployed or implemented merely by recording this intake.
