@@ -1,0 +1,14 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {createCharacter,characterSheet}=require('./characterRegistry');
+const alice={id:'alice-zress',name:"Alice Z'ress",species:'Drow',characterClass:'Great Old One Warlock',level:1,moralRole:'BLUE',inventory:[{itemId:'LYRE_1',status:'OWNED'},{itemId:'EYE_1',status:'LOCKED'},{itemId:'MOONBLADE_1',status:'CONCEPT'}]};
+test('creates stable level one character',()=>assert.equal(createCharacter(alice).level,1));
+test('retains class',()=>assert.equal(createCharacter(alice).characterClass,'Great Old One Warlock'));
+test('projects owned gear',()=>assert.deepEqual(characterSheet(createCharacter(alice)).equipment,['LYRE_1']));
+test('does not grant locked artifact',()=>assert.deepEqual(characterSheet(createCharacter(alice)).lockedRewards,['EYE_1']));
+test('concept item is not owned',()=>assert.equal(characterSheet(createCharacter(alice)).equipment.includes('MOONBLADE_1'),false));
+test('rejects duplicate item',()=>assert.throws(()=>createCharacter({...alice,inventory:[alice.inventory[0],alice.inventory[0]]})));
+test('rejects invalid moral role',()=>assert.throws(()=>createCharacter({...alice,moralRole:'PURPLE'})));
+test('rejects invalid level',()=>assert.throws(()=>createCharacter({...alice,level:0})));
+test('immutable top-level record',()=>assert.equal(Object.isFrozen(createCharacter(alice)),true));
+test('does not mutate input',()=>{const before=JSON.stringify(alice);createCharacter(alice);assert.equal(JSON.stringify(alice),before)});
