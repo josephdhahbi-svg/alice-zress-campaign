@@ -388,3 +388,51 @@ Each category can open the next:
 Person → Quest → Place → Artifact → Economy → Government → Culture → Ecology → STEAM → History → Cosmos → Person.
 
 This makes the eleven categories one connected campaign organism rather than eleven separate filing systems.
+
+
+## 15. The Eleven Patron Paintings — Wealthy Ruler Trophy Quest (ROUGH DRAFT)
+
+Design rule: the eleven category paintings are not lying around as ordinary loot. Each is a prestigious trophy, inheritance, commission, stolen cultural work, or protected heirloom held by a **wealthy ruler/lord** in a major estate, fortress, palace, city, domain, or planar court. Vampire lords are one model, but the eleven rulers should vary so the campaign does not become eleven copies of the same boss.
+
+To claim a painting, the party must **face and defeat the ruler's challenge**. “Defeat” can mean combat, exposing the ruler, breaking a curse, winning a legal/political contest, completing a trial, forcing surrender, or redeeming the ruler when a legitimate path exists. The painting is only awarded/transferred when its quest condition is satisfied.
+
+### Eleven painting/ruler concepts
+
+| ID | Painting | Category | Wealthy ruler / domain concept | Victory theme | Painting boon |
+|---|---|---|---|---|---|
+| PNT-011-A | **The Joined Hands** | 👥 People & Relationships | **Countess Veyra Nocturne**, vampire aristocrat in a moonlit manor | break her system of fear, debt and enthralled loyalty | **+1 Charisma** |
+| PNT-011-B | **The Unfinished Scroll** | 📜 Quests & Choices | **Prince Othmar the Oathkeeper**, immortal quest-lord in a contract palace | prove choice matters more than imposed destiny | **+1 Wisdom** |
+| PNT-011-C | **The Road With No Border** | 🗺 Places & Routes | **Duke Caldran Waylock**, wealthy gate-lord controlling roads and tolls | reopen the roads / defeat his monopoly | **+1 Dexterity** |
+| PNT-011-D | **The Hand Around the Relic** | 💎 Artifacts & Collections | **Lady Seraxa Gilt**, dragon-blooded collector in a treasure citadel | solve provenance claims and overcome her vault | **+1 Intelligence** |
+| PNT-011-E | **The Golden Scales** | 💰 Economy & Trade | **Merchant-King Varro Coincrown**, ruler of a fortified market city | defeat manipulation of prices, debt and supply | **+1 Charisma** |
+| PNT-011-F | **The Empty Throne** | 🏛 Factions, Government & Law | **Lord Magistrate Aurel Vane**, autocratic ruler of a marble court | expose/correct the law he weaponized | **+1 Wisdom** |
+| PNT-011-G | **The Moonlit Song** | 🎭 Culture, Faith & Arts | **Duchess Miralune**, immortal patron who owns artists' work and identities | free the court's creative voices | **+1 Charisma** |
+| PNT-011-H | **The Garden Behind the Wall** | 🌿 Ecology & Creatures | **Baron Thornwake**, ancient beast-lord ruling a walled hunting preserve | restore ecological balance and stop exploitation | **+1 Constitution** |
+| PNT-011-I | **The Impossible Engine** | ⚙ STEAM, Professions & Infrastructure | **Archon Ferrix Brass**, industrial mage-lord in a mechanized fortress | outbuild/outthink the engine and protect its workers | **+1 Intelligence** |
+| PNT-011-J | **The City Beneath Yesterday** | ⏳ History, Chronology & Memory | **Marquis Edraven the Remembered**, deathless historian-ruler | restore deliberately suppressed history | **+1 Intelligence** |
+| PNT-011-K | **The Eye Among the Stars** | ✨ Cosmos, Planes & Unknown | **The Astral Regent**, wealthy planar sovereign in an observatory-palace | survive the final observation trial and establish boundaries | **+1 Wisdom** |
+
+Names, exact species/stat blocks, cities/domains, chronology and official/homebrew status remain provisional until source/continuity review.
+
+### Boon rules — provisional
+Each recovered painting grants a **Painting Boon: +1 to the listed ability score** to its attuned/recognized bearer.
+- Treat this as **Moonveil homebrew**, not an official D&D rule.
+- Default maximum after the boon is **20** unless a later endgame rule explicitly raises it.
+- One character cannot stack duplicate copies of the same painting.
+- Painting ownership and boon bearer are separate fields: a community may own the art while a hero retains a supernatural blessing.
+- If balance testing shows permanent ability-score stacking is too strong, preserve the narrative reward but revise the mechanical expression before CANONIZED status.
+
+### Collection payoff
+Recovering all eleven forms **SET-PNT-011 — THE ELEVEN LIGHTS**.
+The eleven paintings physically arrange into a circular gallery. Their painted roads line up and reveal the hidden Eye/road-loop image from the original *Eleven Lights* concept.
+
+Collection equation:
+**11 RULERS -> 11 DOMAINS -> 11 PAINTINGS -> 11 +1 BOONS -> 11 CATEGORIES -> 1 CONNECTED MAP.**
+
+The completed gallery does not automatically prove the Eye is Ghaunadaur or an Old One. It produces a **PRISM-LIGHT candidate clue** that must be cross-checked against Deck, Netherese, historical and Far Realm evidence.
+
+### Required trackers for each painting
+PNT-ID | ruler CHAR-ID | domain LOCATION-ID | estate SITE-MAP | quest ID | ruler wealth/economy | source status | challenge type | victory condition | painting provenance | category | +1 boon | current owner | current bearer | attunement/recognition | LIGHT IDs | WEB IDs | WEAVE IDs | later callback.
+
+### Campaign-map placement rule
+Spread the eleven ruler domains across the campaign rather than putting them in one city. Each ruler must affect surrounding economics, government, culture, ecology, infrastructure or history before the party reaches the estate. Players should hear rumors, see taxes/trade goods, meet refugees/artists/workers/agents, and find earlier clues so every ruler feels embedded in a living region rather than appearing as an isolated boss room.
