@@ -143,6 +143,16 @@ CREATE TABLE IF NOT EXISTS vtt_settlement_trade_audit (
  FOREIGN KEY(campaign_id,settlement_id,commodity_id) REFERENCES vtt_settlement_markets(campaign_id,settlement_id,commodity_id),
  FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
 );
+` },
+  { version:8, name:"explicit deterministic settlement market pulses", sql:`
+CREATE TABLE IF NOT EXISTS vtt_settlement_market_pulses (
+ campaign_id TEXT NOT NULL REFERENCES vtt_campaigns(campaign_id) ON DELETE CASCADE,
+ pulse_id TEXT NOT NULL, actor_id TEXT NOT NULL,
+ changes_json TEXT NOT NULL, result_json TEXT NOT NULL,
+ occurred_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,pulse_id),
+ FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
 ` }
 ];
 function migrate(db) {
