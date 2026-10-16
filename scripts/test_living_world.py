@@ -62,6 +62,20 @@ def main():
                        'localStorage'):
             check(marker in battle, f"tactical war table missing {marker}")
         check('tactical-war-table.html' in page, "adventure war room missing tactical link")
+    deck = ROOT / "game" / "tactical-command-deck.html"
+    check(deck.exists(), "tactical command deck missing")
+    if deck.exists():
+        deck_html = deck.read_text(encoding="utf-8")
+        for marker in ('id="macros"', 'id="glyphActions"', 'id="journal"',
+                       'id="export"', 'id="reset"', 'id="clear"',
+                       'moonveil-command-deck-pins-v1', 'localStorage',
+                       'ROLL_INITIATIVE', 'OPEN_TACTICAL_MAP',
+                       'ATTUNE_ALTAR', 'SUPPORT', 'ATTACK',
+                       'DEFEND', 'CONTROL', 'SCAN'):
+            check(marker in deck_html, f"command deck missing {marker}")
+        if tactical.exists():
+            check('tactical-command-deck.html' in battle,
+                  "tactical war table missing command deck link")
     if errors:
         print("\n".join("FAIL: " + e for e in errors))
         print(f"FAILED: {len(errors)} Living World Engine check(s).")
