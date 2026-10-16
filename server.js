@@ -1,3 +1,4 @@
+const sceneActions=require("./backend/scene-interaction-catalog");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
 const express = require("express");
@@ -743,6 +744,21 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
       return res.status(409).json({success:false,error:"ATTESTATION_CONFLICT"});
     }
+  });
+  // Read-only spell, equipment and environmental proposals. No inventory or combat writes.
+  app.get("/api/campaigns/:campaignId/scenes/:sceneId/actions",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    if(!id(req.params.campaignId)||!id(req.params.sceneId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(req.params.campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    try{return res.json({success:true,actions:sceneActions.listSceneActions(req.params.sceneId),advisoryOnly:true});}
+    catch{return res.status(400).json({success:false,error:"INVALID_INPUT"});}
+  });
+  app.get("/api/campaigns/:campaignId/scenes/:sceneId/actions/:actionId",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    if(!id(req.params.campaignId)||!id(req.params.sceneId)||!id(req.params.actionId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(req.params.campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    const preview=sceneActions.previewSceneAction(req.params.sceneId,req.params.actionId);
+    return preview?res.json({success:true,preview}):res.status(404).json({success:false,error:"NOT_FOUND"});
   });
   // Read-only LEGO chain planning; never registers, completes or unlocks quests.
   app.get("/api/campaigns/:campaignId/quests/multiverse-chains",(req,res)=>{
