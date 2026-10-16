@@ -157,7 +157,7 @@ $("clear").onclick=()=>{if(!confirm("Clear all entities from the current world? 
 $("applyEdit").onclick=applyEdits;$("removeSelected").onclick=vanish;
 world.addEventListener("click",e=>{if(e.target===world){state.selectedId=null;renderEditor();renderList();world.querySelectorAll(".entity.selected").forEach(el=>el.classList.remove("selected"));}});
 window.addEventListener("resize",()=>{state.entities=state.entities.map(e=>({...e,...normalizePosition(e.x,e.y)}));markDirty();render();});
-function init(){try{const raw=localStorage.getItem(SAVE_KEY);if(raw){const restored=JSON.parse(raw);if(validateState(restored)){state=restored;dirty=false;}else{say("Saved world was incompatible; starting a new scene.");}}}catch(e){say("Saved world could not be loaded; starting a new scene.");}if(!state.entities.length){const b=bounds();makeEntity("character","Alice Z'ress",b.w*.22,b.h*.3,ASSETS.alice);makeEntity("enemy","Hallway Wraith",b.w*.65,b.h*.35,ASSETS.wraith);state.scene="pit";dirty=true;}render();log("Living World Engine initialized locally.");}
+function init(){let restoredFromSave=false;try{const raw=localStorage.getItem(SAVE_KEY);if(raw){const restored=JSON.parse(raw);if(validateState(restored)){state=restored;dirty=false;restoredFromSave=true;}else{say("Saved world was incompatible; starting a new scene.");}}}catch(e){say("Saved world could not be loaded; starting a new scene.");}if(!restoredFromSave){const b=bounds();makeEntity("character","Alice Z'ress",b.w*.22,b.h*.3,ASSETS.alice);makeEntity("enemy","Hallway Wraith",b.w*.65,b.h*.35,ASSETS.wraith);state.scene="pit";dirty=true;}render();log("Living World Engine initialized locally.");}
 init();
 })();
 </script>
