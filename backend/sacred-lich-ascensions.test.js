@@ -30,7 +30,9 @@ test("Alice leads the three ascensions and parasite origin is narrative, not an 
 test("Alice's Far Realm origin and Convergence demiplane remain narrative, not automatic travel access",()=>{
  const alice=getSacredAscension("alice_zress");
  assert.equal(alice.eldritchSourcePlane,"FAR_REALM");
- assert.equal(alice.demiplane,"ALICE_TRINITY_CONVERGENCE");
+ assert.equal(alice.demiplane,"RABBIT_HOLE");
+ assert.equal(alice.demiplaneEntrance,"PIT_OF_GHAUNADAUR_UNDERDARK");
+ assert.equal(alice.demiplaneIdentity,"THE_HOLE_ITSELF");
  assert.ok(alice.linkedPlanes.includes("SHADOWFELL"));
  assert.equal(evaluateSacredAscension("alice_zress",{level:30,dmApproved:true,divineReviewApproved:true,verifiedObjectives:[true,true,true,true,true]}).allowed,false);
 });
