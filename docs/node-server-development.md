@@ -19,8 +19,7 @@ For optional hourly faction pulses, set `MOONVEIL_ENABLE_CRON=1`.
 Run only **one** cron-owning server process per database.
 
 Admin routes require `Authorization: Bearer <MOONVEIL_DEV_TOKEN>`. A trusted local admin can issue expiring actor-bound development tokens via `POST /api/admin/sessions` with JSON `{actorId,ttlSeconds}`. Use the returned token as `Authorization: Bearer <accessToken>` on campaign event routes. Actor session tokens cannot call admin routes. An `X-Moonveil-Actor` header is ignored for actor sessions, preventing header-based impersonation. Admin-token campaign event calls still accept that header for local compatibility.
-The WebSocket endpoint is `/events` and uses the development token as
-a WebSocket subprotocol. This mechanism is for trusted local testing only;
+The WebSocket endpoint is `/events?campaignId=<id>` and accepts an actor session token as WebSocket subprotocol `moonveil.<accessToken>`. The server verifies actor membership and filters campaign notifications; the administrator token cannot open a campaign socket. This mechanism is for trusted local testing only;
 production needs proper user identity, per-campaign authorization, TLS,
 origin checks, audit logging, and WebSocket session authentication.
 
@@ -43,7 +42,7 @@ origin checks, audit logging, and WebSocket session authentication.
   narrative consent is required before romance or intimacy.
 - Shrine tables are created but no attunement endpoint is exposed until
   prerequisites and deity canon are defined.
-- WebSocket remains **admin-only** and global; campaign event broadcasts are disabled to prevent cross-campaign leakage. Campaign-scoped sockets need real user authentication and authorization.
+- WebSocket connections are campaign-scoped and receive only committed event notices from their own campaign. The local admin can still mint any actor token; this is not a public multiplayer identity system. Legacy global faction/equipment notifications are disabled.
 - Faction and territory tables start empty until explicitly seeded.
 - No Flutter application or widget files are installed yet.
 - No deployment, dependency installation, end-to-end test pass, or browser
@@ -64,3 +63,10 @@ These actor sessions authenticate an **actor identifier** issued by a trusted lo
 - `POST /api/admin/sessions/revoke` — admin only; JSON `{accessToken}` revokes an unexpired actor token.
 - Revocations are stored as SHA-256 token hashes in migration v2. Never store raw access tokens in game data, logs, or source control.
 - This does **not** implement a user login provider, rate limiting, public hosting, or scoped WebSocket sessions.
+
+## WebSocket development example
+```js
+const socket = new WebSocket("ws://127.0.0.1:3000/events?campaignId=alice", ["moonveil." + actorAccessToken]);
+socket.addEventListener("message", event => console.log(JSON.parse(event.data)));
+```
+The socket sends a `CONNECTED` acknowledgement and `CAMPAIGN_EVENT` notifications with revision numbers; clients fetch full events through the authorized HTTP endpoint. Existing localStorage saves remain separate. Token use in a subprotocol is local-development only and requires a stronger browser session architecture for public deployment.
