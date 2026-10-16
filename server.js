@@ -10,6 +10,7 @@ const { migrate } = require("./backend/migrations");
 const { createSessionAuth } = require("./backend/session-auth");
 const { createBackupService } = require("./backend/backup-service");
 const { resolveD20 } = require("./backend/dice-rules");
+const { createFactionDisputeEngine } = require("./backend/faction-dispute-engine");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -46,6 +47,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
 `);
   migrate(db);
   const pulse = initializeFactionPulseEngine(db);
+  const disputes = createFactionDisputeEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
   const isRevoked=db.prepare("SELECT 1 FROM vtt_revoked_sessions WHERE token_hash=?");
@@ -186,6 +188,19 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const factions=db.prepare("SELECT * FROM factions ORDER BY faction_id").all();
     const territories=db.prepare("SELECT * FROM territory_control ORDER BY territory_id").all();
     res.json({success:true,factions,territories});
+  });
+  // Local development DM token only. Never accept self-asserted player roles.
+  app.post("/api/war-table/dispute",adminOnly,(req,res)=>{
+    const {territoryId,aggressorFactionId}=req.body||{};
+    if(!id(territoryId)||!id(aggressorFactionId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    try{return res.json({success:true,...disputes.triggerDispute(territoryId,aggressorFactionId)});}
+    catch(error){return res.status(409).json({success:false,error:"DISPUTE_CONFLICT"});}
+  });
+  app.post("/api/war-table/resolve",adminOnly,(req,res)=>{
+    const {disputeId,winningFactionId}=req.body||{};
+    if(!id(disputeId)||!id(winningFactionId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    try{return res.json({success:true,...disputes.resolveDispute(disputeId,winningFactionId)});}
+    catch(error){return res.status(409).json({success:false,error:"DISPUTE_CONFLICT"});}
   });
   app.post("/api/items/equip-advanced",adminOnly,(req,res)=>{
     const {entityId,itemId,slot}=req.body||{};
