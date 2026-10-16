@@ -18,6 +18,7 @@ async function port(){
 function connect(url,session){
   return new Promise((resolve,reject)=>{
     const ws=new WebSocket(url,["moonveil."+session]);
+    ws.initialMessage=message(ws);
     const timer=setTimeout(()=>{ws.terminate();reject(new Error("WebSocket timeout"));},3000);
     ws.once("open",()=>{clearTimeout(timer);resolve(ws);});
     ws.once("error",e=>{clearTimeout(timer);reject(e);});
@@ -53,7 +54,7 @@ test("WebSocket event delivery is restricted to authenticated campaign members",
     await assert.rejects(connect(url+"a",bob),/denied|403/i);
     await assert.rejects(connect(url+"b",alice),/denied|403/i);
     ws=await connect(url+"a",alice);
-    const connected=await message(ws);
+    const connected=await ws.initialMessage;
     assert.equal(connected.campaignId,"a");
     const next=message(ws);
     const sent=await fetch(base+"/api/campaigns/a/events",{method:"POST",
