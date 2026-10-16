@@ -114,6 +114,35 @@ CREATE TABLE IF NOT EXISTS vtt_world_economy_adjustments (
  FOREIGN KEY(campaign_id,commodity_id) REFERENCES vtt_world_economy(campaign_id,commodity_id),
  FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
 );
+` },
+  { version:7, name:"settlement trade price baseline", sql:`
+CREATE TABLE IF NOT EXISTS vtt_settlements (
+ campaign_id TEXT NOT NULL REFERENCES vtt_campaigns(campaign_id) ON DELETE CASCADE,
+ settlement_id TEXT NOT NULL, name TEXT NOT NULL,
+ plane_id TEXT NOT NULL, region_id TEXT NOT NULL,
+ created_by_actor_id TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,settlement_id),
+ FOREIGN KEY(campaign_id,created_by_actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
+CREATE TABLE IF NOT EXISTS vtt_settlement_markets (
+ campaign_id TEXT NOT NULL, settlement_id TEXT NOT NULL, commodity_id TEXT NOT NULL,
+ stock_units INTEGER NOT NULL CHECK(stock_units BETWEEN 0 AND 1000000000),
+ local_price_copper INTEGER NOT NULL CHECK(local_price_copper BETWEEN 1 AND 1000000000),
+ revision INTEGER NOT NULL DEFAULT 0 CHECK(revision>=0),
+ PRIMARY KEY(campaign_id,settlement_id,commodity_id),
+ FOREIGN KEY(campaign_id,settlement_id) REFERENCES vtt_settlements(campaign_id,settlement_id) ON DELETE CASCADE,
+ FOREIGN KEY(campaign_id,commodity_id) REFERENCES vtt_world_economy(campaign_id,commodity_id)
+);
+CREATE TABLE IF NOT EXISTS vtt_settlement_trade_audit (
+ campaign_id TEXT NOT NULL, trade_id TEXT NOT NULL,
+ settlement_id TEXT NOT NULL, commodity_id TEXT NOT NULL, actor_id TEXT NOT NULL,
+ units_delta INTEGER NOT NULL CHECK(units_delta BETWEEN -1000000 AND 1000000 AND units_delta != 0),
+ old_stock INTEGER NOT NULL, new_stock INTEGER NOT NULL,
+ reason TEXT NOT NULL, occurred_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,trade_id),
+ FOREIGN KEY(campaign_id,settlement_id,commodity_id) REFERENCES vtt_settlement_markets(campaign_id,settlement_id,commodity_id),
+ FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
 ` }
 ];
 function migrate(db) {
