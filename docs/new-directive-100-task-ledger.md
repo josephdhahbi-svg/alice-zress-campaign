@@ -187,3 +187,11 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Blocked invalid Glyph actions and no-target healing/attacks; sandbox remains isolated from authoritative Alice saves (`1367968`).
 - Extended static checks for preview labeling, supported actions, and target guards (`bd3ff3f`). New CI outcome pending; manual browser QA and automated DOM interaction testing remain.
 - T082/T083 remain PARTIAL; T040 Glyph rules prototype remains PARTIAL and non-canonical. No production-ready claims.
+
+## Batch 13 — d20 macro and Glyph invalid-state hardening
+- Verified command deck safety checks in [CI 38847307426](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847307426), success at `bd3ff3f`.
+- Added bounded roll modifier (-10..20), difficulty class (1..40), and logged d20 totals and outcomes to the local command deck (`405a25e`); [CI 38847423183](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847423183) succeeded.
+- Extended static deck regression checks for roll controls and outcome messages (`4d0c1cc`); latest CI pending.
+- Hardened isolated Glyph prototype against malformed HP and nonfinite random rolls (`04f0bde`), with new edge-case unit test (`723451f`); latest CI pending.
+- Parallel art/asset commits appeared on main during this batch; none of the art/asset files were overwritten.
+- Browser-based interaction QA and authoritative campaign macro execution remain unimplemented; no Flutter integration or production readiness claim.
