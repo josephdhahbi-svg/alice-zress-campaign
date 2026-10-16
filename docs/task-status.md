@@ -98,3 +98,32 @@ Updated:
 
 Latest relevant commit: `140a6de43b4f92c936805a986dc1d27f35636e8a` — cross-file references and five-choice scene order.
 A combined commit-status lookup returned no reported statuses. Do not interpret that as a passing CI run.
+
+
+## Update — CI verification and Book 1 regression tests
+GitHub Actions run: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38836895815  
+Head commit: `0e4794aab128d6a4d0039b4b4617fecfd2ca19f8`
+
+Observed job steps:
+- `Validate JSON record metadata` — success.
+- `Check deterministic encounter simulation` — success.
+- `Check Book 1 scene and browser prototype` — success.
+
+At the time checked, the job was still `in_progress` during post-job cleanup; therefore the individual test steps succeeded, but the overall workflow conclusion had not yet been reported.
+
+| Task | Status | Evidence / remaining work |
+|---|---|---|
+| 038 Continuity validator | PARTIAL | GitHub Actions validator step succeeded for the recorded commit; chronology and full entity relationship validation remain future work. |
+| 064 Interactive story scenes | PARTIAL | Scene data and browser prototype exist; actual interactive browser QA remains. |
+| 065 Five-choice system | PARTIAL | Automated test step succeeded; manual keyboard/mobile browser test remains. |
+| 066 Animated dice | PARTIAL | d20 check and result logging exist; animation and approved full rules profile remain. |
+| 078 Reliable synchronization | TODO | Current scene save is local browser storage only. |
+| 081 Automated data checks | PARTIAL | Validator and scene regression steps succeeded in the recorded CI run; overall workflow was still finalizing at last check. |
+| 085 Save/restore tests | PARTIAL | Automated structural checks exist; manually test export/import/reload in a browser. |
+| 086 UI tests | TODO | No real browser automation or mobile layout test has been run. |
+| 089 CI pipeline | PARTIAL | CI now runs validator, simulation, and Book 1 regression script. Confirm overall workflow conclusion and keep it green on future changes. |
+| 091 Book 1 vertical slice | IN_PROGRESS | Data and standalone scene prototype exist; browser QA and character/journal integration remain. |
+
+New:
+- `scripts/test_book1.py` — regression checks for the Book 1 data contract and expected browser controls.
+- `.github/workflows/validate.yml` — runs the Book 1 regression script after the existing validation and simulation steps.
