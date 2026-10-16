@@ -201,3 +201,9 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - **Test execution:** 9 tests passed in a locally reconstructed minimal test workspace (9 passed, 0 failed). The test's static UI checks were run against a reconstructed minimal HTML snippet, not the exact full repository HTML or a real browser. Full checkout and browser execution remain pending.
 - Rules/canon cautions: the mechanics are user-supplied homebrew, not official D&D rules. Alice is Level 1 and cannot normally cast 2nd-level spells; null-resonance is not an actionable penalty for her current spell list. “3d6 trauma” is undefined; exhaustion needs an edition-specific rule decision. No exact Skullport depth, geological strata, route geometry, or Promenade accessibility has been asserted.
 - Copilot task: research source-grounded geography/relative depth/strata near Skullport and Promenade, and keep route conditional until continuity review. Do not fabricate coordinates or unlock travel.
+
+## CI workflow and Meeting 12 final handoff
+- `cf8925b` added `.github/workflows/moonveil_ci.yml`: Python 3.11/3.12 matrix, JSON registry validator, Netheril route validator, route planner `--demo`, and unittest discovery; runs on pushes/PRs to main and dev branch, plus manual dispatch.
+- The supplied sample referenced `test_alice_state_attunement.py`, which was not found in the branch, so CI uses actual existing validators and discovers `tests/test_*.py` instead.
+- `133a730` added `docs/handoff/meeting-12-ci-final-handoff.md` with exact commands and guardrails.
+- Workflow commit is verified; **no GitHub Actions run result is verified yet**. Do not call CI passing until actual runs finish for both Python versions.
