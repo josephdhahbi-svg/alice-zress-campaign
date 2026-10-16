@@ -71,3 +71,30 @@ Updated:
 - `scripts/validate.py`
 - `README.md`
 - `docs/master-development-board.md`
+
+
+## Update — Book 1 vertical slice started
+| Task | Status | Evidence / remaining work |
+|---|---|---|
+| 001 Master inventory | PARTIAL | Key files and workflows inspected; a repository inventory exists. Full script/workflow behavior audit remains. |
+| 019 Setup/payoff ledger | PARTIAL | Six cross-book links exist; causal mechanisms remain proposed. |
+| 038 Continuity validator | PARTIAL | Dedicated record-family profiles and cross-file references added. Structural checks mirrored against repository JSON; local Python execution and CI run still unverified. |
+| 064 Interactive story scenes | PARTIAL | `data/scenes.json` contains one opening scene contract with five options. Browser implementation is in `game/book1.html`. |
+| 065 Five-choice system | PARTIAL | Five ordered options are present in scene data and prototype. Browser interaction still needs direct testing. |
+| 066 Animated dice | PARTIAL | Book 1 prototype has a d20 roll and outcome display; animation and full rules profile are not implemented in this slice. |
+| 069 Quest journal | PARTIAL | The original offline prototype has a journal; Book 1 event log stores local choice and roll results. Unified journal integration remains. |
+| 071 Repository inventory | PARTIAL | Inventory document created; remaining source/workflow checks are tracked. |
+| 072 Data schema | PARTIAL | Scene schema and cross-file references added to validator; more reference families and richer chronology validation remain. |
+| 081 Automated data checks | VERIFY | Manual structural review covered 13 JSON files and 65 records, including five-choice order and book/location/payoff references, with zero issues. This is not a local run of `scripts/validate.py`. |
+| 091 Book 1 vertical slice | IN_PROGRESS | Scene data and standalone browser prototype created; browser, save/export/import, accessibility, and regression tests remain. |
+
+New:
+- `data/scenes.json` — Book 1 opening scene contract.
+- `game/book1.html` — standalone interactive scene prototype.
+
+Updated:
+- `data/locations.json` — added Pit of Ghaunadaur location record.
+- `scripts/validate.py` — added scene validation and cross-file book/location/setup-payoff checks.
+
+Latest relevant commit: `140a6de43b4f92c936805a986dc1d27f35636e8a` — cross-file references and five-choice scene order.
+A combined commit-status lookup returned no reported statuses. Do not interpret that as a passing CI run.
