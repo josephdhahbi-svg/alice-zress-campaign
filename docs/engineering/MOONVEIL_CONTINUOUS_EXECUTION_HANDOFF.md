@@ -45,3 +45,11 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Added `backend/living-world-pulse.test.js` (commit `30c97e76089e21edc34768b0bf57a1d63b21a76b`): tests for DM-only, cross-campaign isolation, duplicates, invalid faction and rollback.
 - **Pending:** GitHub Actions execution of new tests; safe API route wiring with signed actor sessions; scheduler design with single-worker lock and explicit campaign policy. Do not mark T081–T090 complete without CI and task-specific acceptance evidence.
 - The user-proposed Python while-loop was **not installed or launched**. If implementing it, require bounded iterations/cost, sandboxed allowlisted commands, explicit approvals for destructive actions, persistent resumability and proof-based completion.
+
+## 2026-10-16 — Signed Living World API integration
+- Previous Living World CI runs **PASSED**: Omniversal verification `38919397721`; Validate campaign records `38919397158`.
+- Implemented `POST /api/campaigns/:campaignId/world/pulses` and `GET /api/campaigns/:campaignId/world/ledger` in `server.js`, commit `206d88ce85fd74b4acba8735d1db9fc996cc75c0`. Requires signed actor session; POST requires campaign DM role; GET requires membership. Admin shared token intentionally rejected. Explicit DR date, no implicit cron.
+- Added `backend/living-world-api.integration.test.js`, commit `5faad09ada9b6f967ca6e4fa6231b8b713841cbf`. Covers admin rejection, player and outsider denial, spoofed actor header, invalid faction, idempotent duplicate, audit ledger, invalid query and cross-campaign isolation.
+- **Awaiting CI**: runs `38919615246` (Omniversal) and `38919615249` (Validate) were queued at last check. Fix failures before claiming integration complete.
+- World factions/territories are intentionally not provisioned by API yet; seed through trusted campaign setup. No auto-advancing DR and no cron activated.
+- Next: validate CI; add restart persistence and transactional quest ownership and rewards. Update master charter only for matching acceptance evidence.
