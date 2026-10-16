@@ -18,7 +18,7 @@ Server listens on `127.0.0.1:3000`. The SQLite database defaults to
 For optional hourly faction pulses, set `MOONVEIL_ENABLE_CRON=1`.
 Run only **one** cron-owning server process per database.
 
-All HTTP routes require `Authorization: Bearer <MOONVEIL_DEV_TOKEN>`.
+Admin routes require `Authorization: Bearer <MOONVEIL_DEV_TOKEN>`. A trusted local admin can issue expiring actor-bound development tokens via `POST /api/admin/sessions` with JSON `{actorId,ttlSeconds}`. Use the returned token as `Authorization: Bearer <accessToken>` on campaign event routes. Actor session tokens cannot call admin routes. An `X-Moonveil-Actor` header is ignored for actor sessions, preventing header-based impersonation. Admin-token campaign event calls still accept that header for local compatibility.
 The WebSocket endpoint is `/events` and uses the development token as
 a WebSocket subprotocol. This mechanism is for trusted local testing only;
 production needs proper user identity, per-campaign authorization, TLS,
@@ -35,8 +35,7 @@ origin checks, audit logging, and WebSocket session authentication.
   delta is an integer from -20 through 20; total approval clamps to [-100,100].
 
 ## Critical limitations
-- There is no account or character ownership model. The single token grants
-  access to **all** local data and admin routes; do not expose the port publicly.
+- There is no account login, revocation service, or character ownership model. The local admin token can mint sessions for any actor; do not expose the port publicly. Actor tokens expire, but there is no server-side revocation before expiry.
 - Equipment is not yet validated against ownership, proficiency, attunement,
   slot restrictions or level prerequisites. Do not use for authoritative rewards.
 - Approval is a numerical relationship tracker, **not consent**. Romance is
@@ -44,10 +43,18 @@ origin checks, audit logging, and WebSocket session authentication.
   narrative consent is required before romance or intimacy.
 - Shrine tables are created but no attunement endpoint is exposed until
   prerequisites and deity canon are defined.
-- WebSocket broadcasts do not yet filter by campaign.
+- WebSocket remains **admin-only** and global; campaign event broadcasts are disabled to prevent cross-campaign leakage. Campaign-scoped sockets need real user authentication and authorization.
 - Faction and territory tables start empty until explicitly seeded.
 - No Flutter application or widget files are installed yet.
 - No deployment, dependency installation, end-to-end test pass, or browser
   integration has been verified.
 
 Existing static pages and saved campaigns remain unchanged.
+
+## Campaign event API (local prototype)
+- `POST /api/campaigns` — admin-only; `{campaignId,name,actorId}` creates a campaign with initial DM membership.
+- `POST /api/admin/sessions` — admin-only; `{actorId,ttlSeconds?}` creates an HMAC-signed, expiring actor token (default 1 hour, max 24 hours).
+- `GET /api/campaigns/:campaignId/events?after=0` — authorized member only; returns up to 100 events, a revision cursor and `hasMore`.
+- `POST /api/campaigns/:campaignId/events` — authorized DM/PLAYER only; `{eventId,expectedRevision,eventType,payload}`; duplicate event IDs are idempotent only for matching actor/type/payload.
+
+These actor sessions authenticate an **actor identifier** issued by a trusted local administrator; they do not authenticate a real-world player or establish a secure public identity provider. Existing Python event storage and browser local saves are unchanged.
