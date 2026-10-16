@@ -9,6 +9,7 @@ const omniversalCatalog=require("./backend/omniversal-quest-character-catalog");
 const tavernCatalog=require("./backend/omniversal-tavern-catalog");
 const divineCatalog=require("./backend/divine-shrine-catalog");
 const weaveChronology=require("./backend/weave-chronology-tracker");
+const autonomousWorld=require("./backend/autonomous-world-director");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
 const express = require("express");
@@ -858,6 +859,15 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   // Authenticated read-only tavern and refuge catalog; no automatic rest or transactions.
   // Divine sites and historical cameo previews are advisory, never auto-awards.
   // Three-era historical tracker, with dates and placements marked unresolved.
+  // Read-only autonomous simulation previews; no mutations or scheduling.
+  app.get("/api/campaigns/:campaignId/world/autonomous-preview",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{
+      const result=autonomousWorld.simulateTick({campaignId,book:Number(req.query.book),traversal:req.query.traversal===undefined?1:Number(req.query.traversal),tickKey:req.query.tickKey,drYear:req.query.drYear===undefined?null:Number(req.query.drYear),limit:req.query.limit===undefined?12:Number(req.query.limit)});
+      return res.json({success:true,...result});
+    }catch{return res.status(400).json({success:false,error:"INVALID_SIMULATION_QUERY"});}
+  });
   app.get("/api/campaigns/:campaignId/chronology/weave",(req,res)=>{
     const campaignId=req.params.campaignId;
     if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
