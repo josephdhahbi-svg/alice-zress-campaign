@@ -37,6 +37,8 @@ function initializeFactionPulseEngine(db, { random = Math.random } = {}) {
   const setInfluence = db.prepare("UPDATE factions SET influence_score = ? WHERE faction_id = ?");
   const territories = db.prepare("SELECT territory_id, controlling_faction_id FROM territory_control ORDER BY territory_id");
   const setOwner = db.prepare("UPDATE territory_control SET controlling_faction_id = ? WHERE territory_id = ?");
+  // Keep autonomous pulses from overriding DM-managed contested territories.
+  const disputedTerritories = db.prepare("SELECT territory_id FROM faction_disputes WHERE status IN (\'PENDING\',\'ESCALATED\')");
   const insertLog = db.prepare("INSERT INTO world_pulse_audit_log(tick_key,timestamp,event_summary) VALUES(?,?,?)");
   const priorLog = db.prepare("SELECT pulse_id FROM world_pulse_audit_log WHERE tick_key = ?");
   const pulse = db.transaction((tickKey, timestamp) => {
@@ -57,7 +59,9 @@ function initializeFactionPulseEngine(db, { random = Math.random } = {}) {
     // This is a provisional homebrew mechanic, not official D&D canon.
     const ownership = [];
     const contenders = [...influence.entries()].sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0]));
+    const disputed = new Set(disputedTerritories.all().map(row=>row.territory_id));
     for (const territory of territories.all()) {
+      if (disputed.has(territory.territory_id)) continue;
       const leader = contenders[0];
       if (!leader) break;
       const owner = territory.controlling_faction_id;
