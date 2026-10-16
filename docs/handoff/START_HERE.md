@@ -283,3 +283,5 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - The fixture connection target `HAZ_SEISMIC_TREMORS` is still only a referenced ID, not a registered standalone entity; the test intentionally records that it requires target resolution before integration.
 - CI run for `8046708` is pending observation. This new test has not been independently run in a full local checkout. No patch has been applied to the encounter; no route unlocked; Alice's save unchanged.
 - Next: verify the new CI run; then ask Gemini to map `patch_applied` to the real event ledger with compare-and-swap semantics, and ask Copilot to align its proposed patch/connection fields to actual WorldOS schemas.
+
+- **New fixture-shape CI verified:** run `38830892065` for commit `8046708` completed successfully on both Python 3.11 and 3.12. Registry validation, Netheril route validation, route-planner demo, and Python unit test discovery all passed. https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38830892065
