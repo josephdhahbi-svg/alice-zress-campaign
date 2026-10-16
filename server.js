@@ -11,6 +11,7 @@ const { createSessionAuth } = require("./backend/session-auth");
 const { createBackupService } = require("./backend/backup-service");
 const { resolveD20 } = require("./backend/dice-rules");
 const { createFactionDisputeEngine } = require("./backend/faction-dispute-engine");
+const { createLivingWorldEngine } = require("./backend/living-world-pulse");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -49,6 +50,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   // Create faction base tables before disputes, then initialize pulse queries.
   db.exec(require("./backend/faction-pulse").CREATE_TABLES);
   const disputes = createFactionDisputeEngine(db);
+  const livingWorld = createLivingWorldEngine(db);
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
@@ -285,6 +287,36 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     if(result.error)return res.status(result.status).json({success:false,...result});
     if(!result.duplicate)broadcastCampaign(campaignId,{type:"CAMPAIGN_EVENT",campaignId,revision:result.revision,eventType});
     res.status(result.status).json({success:true,campaignId,...result});
+  });
+  // Living World endpoints: signed DM actor identity only; never trust a supplied actor ID.
+  // No cron or automatic DR advancement. World factions/territories must be provisioned separately.
+  app.post("/api/campaigns/:campaignId/world/pulses",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    if(!id(campaignId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    const membership=memberRole.get(campaignId,req.auth.actorId);
+    if(!membership||membership.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    const {pulseId,drDate,shifts}=req.body||{};
+    if(!id(pulseId)||typeof drDate!=="string"||!Array.isArray(shifts)||shifts.length>100||
+       shifts.some(x=>!x||!id(x.territoryId)||!id(x.newFactionId)))
+      return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    try{
+      const result=livingWorld.executePulse({campaignId,pulseId,actorId:req.auth.actorId,drDate,shifts});
+      return res.status(result.duplicate?200:201).json({success:true,campaignId,...result});
+    }catch(error){
+      if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
+      if(error.message==="DM_REQUIRED")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+      return res.status(409).json({success:false,error:"PULSE_CONFLICT"});
+    }
+  });
+  app.get("/api/campaigns/:campaignId/world/ledger",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    if(!id(campaignId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    const limit=req.query.limit===undefined?50:Number(req.query.limit);
+    if(!Number.isSafeInteger(limit)||limit<1||limit>100)return res.status(400).json({success:false,error:"INVALID_LIMIT"});
+    return res.json({success:true,campaignId,events:livingWorld.getLedger(campaignId,limit)});
   });
   app.post("/api/admin/world-pulse",adminOnly,(req,res)=>{
     const result=pulse.runPulse();
