@@ -182,3 +182,20 @@ Updated:
 | 070 Visual quality | PARTIAL | Transparent PNG package generated; inspect edge quality and commit binaries to repository. |
 | 081 Automated data checks | DONE for current CI checks | Run #72's three test steps succeeded; keep checking final workflow result. |
 | 091 Book 1 vertical slice | IN_PROGRESS | Data/prototype/assets prepared; manual browser QA and character/journal persistence remain. |
+
+
+## Update — Living World Engine v1
+- Created `game/living-world.html` with entity spawn, pointer drag, teleport, animation, vanish/remove, scene switching, runtime editing, local save/load, JSON import/export, and event log.
+- Added `scripts/test_living_world.py`; GitHub Actions run #74 succeeded: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38839518450
+- Updated `.github/workflows/validate.yml` to run Living World tests and trigger on changes under `game/**`.
+- Aligned Alice/Wraith/Infinite Hallway asset paths with the filenames in `data/assets.json`. The path alignment commit has a fresh CI run pending.
+- Actual browser QA remains unperformed. The engine is local-only; no WebSocket/multiplayer or backend persistence is implemented here.
+| Task | Status | Evidence / remaining work |
+|---|---|---|
+| 061 VTT requirements | PARTIAL | Standalone sandbox requirements are implemented as a prototype; cross-platform requirements remain. |
+| 064 Interactive story scenes | PARTIAL | Book 1 scene remains separate; Living World sandbox is a new interactive component. |
+| 068 Inventory and equipment | TODO | Item interactions are not yet implemented in this engine. |
+| 070 Visual quality | PARTIAL | Fallback tokens work without image files; seven cleaned assets still need repository integration and browser review. |
+| 078 Reliable synchronization | TODO | localStorage only; no server sync. |
+| 081 Automated data checks | PARTIAL | CI includes validator, encounter simulation, Book 1 regression, and Living World regression checks. |
+| 086 UI tests | PARTIAL | Static regression tests exist; no real-browser automation/manual QA yet. |
