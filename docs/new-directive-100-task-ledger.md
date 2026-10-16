@@ -173,3 +173,10 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Added isolated `backend/glyph-tactics.js` with bounded, explicitly prototype actions and expiring defense/control effects; no persistent character-sheet changes (`de56163`).
 - Added Glyph tests for injured ally support, damage bounds, expiry and incapacitation (`8040cb5`), wired into CI (`8c8fb52`). Latest test CI pending.
 - T093 backup and restore PARTIAL until full operational restore procedure, offsite retention and encrypted backup handling. T040 combat PARTIAL prototype only, not official 2024 D&D mechanics. T087 Flutter deck still NOT STARTED.
+
+## Batch 11 — backup restore verification and browser tactical command deck
+- Verified real SQLite WAL backup restore and Glyph prototype test suites via [CI 38847046225](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847046225), success at `8c8fb52`.
+- Added `game/tactical-command-deck.html`: clickable command macros, versioned local pin preferences, dice sandbox, isolated Glyph support/attack/defend/control/scan actions, status display and JSON export (`5a8d24e`). No authoritative campaign save modifications.
+- Linked the deck from the tactical war table (`9f79949`).
+- Extended `scripts/test_living_world.py` static checks to cover the deck controls, navigation and macro persistence (`0f90c34`). CI for the new browser deck is pending; no manual browser QA yet.
+- T082 and T083 UI controls PARTIAL; T087 Flutter widgets NOT STARTED (browser deck is not Flutter). T040 Glyph remains sandbox-only and is not official D&D rules. T093 local backup restore test verified, but operational recovery, encryption and offsite rotation remain.
