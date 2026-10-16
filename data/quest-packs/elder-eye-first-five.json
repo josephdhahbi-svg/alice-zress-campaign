@@ -1,0 +1,116 @@
+{
+  "packId": "elder_eye_first_five",
+  "status": "DRAFT_DM_APPROVAL_REQUIRED",
+  "book": 1,
+  "trilogy": 1,
+  "traversal": 1,
+  "drDate": "UNRESOLVED",
+  "quests": [
+    {
+      "id": "ee_q001",
+      "title": "The Fall and the First Light",
+      "map": "pit_ghaunadaur",
+      "objectives": [
+        "Survey rabbit-hole entrance",
+        "Illuminate and locate the captive",
+        "Rescue captive and document route"
+      ],
+      "encounters": [
+        "Cavern ooze",
+        "Chest mimic"
+      ],
+      "rewardCandidates": [
+        "Copper cache",
+        "Refuge clue"
+      ]
+    },
+    {
+      "id": "ee_q002",
+      "title": "Oath of the Moonstone Refuge",
+      "map": "moonstone_refuge",
+      "objectives": [
+        "Find sanctuary",
+        "Learn moon oath",
+        "Restore protective ward"
+      ],
+      "encounters": [
+        "Shadow raider",
+        "Prayer-book mimic"
+      ],
+      "rewardCandidates": [
+        "Moon-oath rubbing",
+        "Silver thread"
+      ],
+      "revisitSecret": "sanctuary_archive"
+    },
+    {
+      "id": "ee_q003",
+      "title": "The Bridge That Breathes",
+      "map": "spore_bridge",
+      "objectives": [
+        "Study spores",
+        "Secure crossing",
+        "Find missing pilgrims"
+      ],
+      "encounters": [
+        "Fungal hunter",
+        "Supply-crate mimic"
+      ],
+      "rewardCandidates": [
+        "Spore specimen",
+        "Trail marker"
+      ],
+      "revisitSecret": "underbridge_relic"
+    },
+    {
+      "id": "ee_q004",
+      "title": "The Echoes That Remember",
+      "map": "pit_ghaunadaur",
+      "objectives": [
+        "Record echo",
+        "Interview witnesses",
+        "Decode inscription"
+      ],
+      "encounters": [
+        "Cavern ooze",
+        "Statue mimic"
+      ],
+      "rewardCandidates": [
+        "Echo transcript",
+        "Stone fragment"
+      ],
+      "revisitSecret": "echo_memory"
+    },
+    {
+      "id": "ee_q005",
+      "title": "The Silver Route Out",
+      "map": "pit_ghaunadaur",
+      "objectives": [
+        "Scout exits",
+        "Evacuate refugees",
+        "Deliver evidence",
+        "Request route approval"
+      ],
+      "encounters": [
+        "Cult scouts",
+        "Chest mimic"
+      ],
+      "rewardCandidates": [
+        "Route sketch",
+        "Cult insignia"
+      ]
+    }
+  ],
+  "rules": {
+    "loot": "DM_APPROVAL",
+    "combat": "DM_APPROVAL",
+    "chronology": "VERIFY",
+    "choices": [
+      "LAWFUL_GOOD",
+      "NEUTRAL_GOOD",
+      "CHAOTIC_GOOD",
+      "UTILITY",
+      "ACTION"
+    ]
+  }
+}
