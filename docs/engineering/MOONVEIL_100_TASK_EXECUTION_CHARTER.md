@@ -50,7 +50,7 @@
 ## Phase 4: Artifacts & Crafting
 - [ ] T031 — Catalog existing Mistral-Netherese pair per trilogy
 - [ ] T032 — Preserve separate 111-relic ledger until reconciled
-- [ ] T033 — Catalog five incoming v46 candidate artifacts
+- [x] T033 — Catalog five incoming v46 candidate artifacts
 - [ ] T034 — Resolve proposed artifact mapping without conflation
 - [ ] T035 — Define official versus homebrew item metadata
 - [ ] T036 — Define rarity, attunement and ownership
@@ -130,6 +130,12 @@
 - [ ] T098 — Review accessibility and image licensing boundaries
 - [ ] T099 — Publish release notes with known limitations
 - [ ] T100 — Close only evidence-backed tasks and hand off remaining work
+
+## Execution evidence — Batch 1 (2026-10-16)
+- **T033 VERIFIED DONE**: five v46 candidate artifacts and proposed fusion documented in `docs/engineering/INCOMING_V46_QUEST_WORKBENCH_SPATIAL_REVIEW.md` (commit `164dc07022e5ffe2abd6598111fc0e4123c4a802`). Candidate-only; not earned items.
+- **T049 IN PROGRESS**: `backend/quest-core.js` validates finite numeric 3D coordinates and radius <=1000, but API integration remains outstanding (commit `7311e4983f42a5d0b3f1b29dc65c561bce851350`).
+- **T023/T030/T037/T040/T091 IN PROGRESS**: pure validation and tests exist in `backend/quest-core.js` and `backend/quest-core.test.js` (commit `c8928f3e8da03cef14153f9febdea200a77677e4`). Local `node --test /mnt/data/moonveil_batch/quest-core.test.js`: 4 passed, 0 failed. No persistent transaction or server-side objective authority yet.
+- **Blockers**: ownership and durable DB transactions, actual API integration, concurrency tests, full CI validation, artifact canon reconciliation.
 
 ## Completion evidence template
 `T### | status | changed files | commit SHA | tests and results | outstanding risks`
