@@ -76,3 +76,12 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - `backend/combat-attack.integration.test.js` commit `6b1b9ff388dd1f23a394e2cb6ed443b856ccb755` tests critical dice, bounded HP, action exhaustion, replay without reroll, invalid input and RNG rollback.
 - **Pending:** GitHub Actions CI outcome for integration test commit. No completion count increase until verification.
 - Limitations: DM enters AC and bonuses (not yet derived from trusted character sheets); no player-controlled attack API, spell slots, bonus actions, reactions or condition effects. Do not mark T074 complete.
+
+## 2026-10-16 — Quest evidence and completion implementation
+- Added `backend/quest-evidence-engine.js`, commit `5d10ebeb8956c84e7a6f2971b031965f5a950a8e`: campaign/character owner or DM authorization; objective verification requires exact campaign journal proof `QUEST_OBJECTIVE_VERIFIED` with matching IDs; completion requires DM-authored `QUEST_COMPLETION_APPROVED` event, matching full required objective set, and persisted objective evidence; both transactional and idempotent.
+- Added `backend/quest-evidence-engine.test.js`, commit `d36302dfe6ccfd55770ef5a72e33127b2a7bf18d`: ownership, isolation, missing evidence, rollback, duplicate and conflicting submissions.
+- Integrated signed-actor routes `POST /api/campaigns/:campaignId/quests/objectives/verify` and `POST /api/campaigns/:campaignId/quests/complete` into `server.js`, commit `b311f9316f315f7bee2c7dd15ee9a913291d7c6b`. Existing campaign journal now restricts reserved quest proof/approval event types to DMs.
+- Added `backend/quest-evidence-api.integration.test.js`, commit `aa607842d8d19567f37d83624eabdfc9d3deadb4`: rejects player-forged proof and unauthorized ownership; verifies objective and completion APIs and confirms zero artifacts awarded.
+- **No artifact reward system activated**: v46 artifact list remains candidate-only. Completion returns `awardedArtifacts: []`. No Alice progression or loot changed.
+- **CI pending for latest batch**. Maintain 12/100 verified until GitHub Actions succeeds and charter acceptance is checked.
+- Known gap: full quest catalog/required objective sets are not yet trusted server-defined records; DM approval payload currently defines required set. Future quest definitions must prevent deliberately incomplete approval sets.
