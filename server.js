@@ -4,6 +4,7 @@ const {previewRandomEncounter}=require("./backend/random-encounter-loot");
 const {createDiscoveryLedger}=require("./backend/discovery-ledger");
 const {createLoreArchive}=require("./backend/lore-archive");
 const {createWorldEventBus}=require("./backend/world-event-bus");
+const {createOmniversalMemory}=require("./backend/omniversal-memory");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
 const express = require("express");
@@ -92,6 +93,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const discoveryLedger = createDiscoveryLedger(db);
   const loreArchive = createLoreArchive(db);
   const worldEventBus = createWorldEventBus(db);
+  const omniversalMemory = createOmniversalMemory(db);
   const journalQuestBridge = createJournalQuestBridge(db);
   const chronosReviews = createChronosReviewEngine(db);
   const pulse = initializeFactionPulseEngine(db);
@@ -754,6 +756,20 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     }
   });
   // Persistent, campaign-scoped discovery notes. Only DMs may attest prerequisites.
+  app.get("/api/campaigns/:campaignId/memory",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{return res.json({success:true,memories:omniversalMemory.recall({campaignId,actorId,subjectId:req.query.subjectId||actorId}),readOnly:true});}
+    catch{return res.status(400).json({success:false,error:"INVALID_RECALL"});}
+  });
+  app.post("/api/campaigns/:campaignId/memory",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const result=omniversalMemory.record({...req.body,campaignId,actorId});
+      return res.status(result.duplicate?200:201).json({success:true,...result,effects:"NONE"});
+    }catch(error){return res.status(error instanceof TypeError?400:409).json({success:false,error:error instanceof TypeError?"INVALID_MEMORY":error.message});}
+  });
   app.get("/api/campaigns/:campaignId/world/events",(req,res)=>{
     const campaignId=req.params.campaignId,actorId=req.auth.actorId;
     if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
