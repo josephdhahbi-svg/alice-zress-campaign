@@ -149,3 +149,11 @@ Continue Elder Eye autonomous development on feature/elder-eye-admin-foundation.
 - EE-T074: Adapter writes to existing vtt_campaign_events with revision/idempotency controls; full event sourcing and replay projections pending.
 - EE-T085: Added six service regression tests and six earlier scene-contract tests; execution not verified.
 - Architectural decision: elder-eye/admin/INTEGRATION_DECISION.md. Do not run duplicate draft admin schema on live database.
+
+## Session 003 partial progress (tests not yet verified)
+- EE-T066: Authenticated HTTP choice endpoint committed; client integration/browser QA remains.
+- EE-T074: Existing vtt_campaign_events journal used with transaction, revision and replay handling; projections pending.
+- EE-T077: Scene GET and campaign choice POST added to server.js; live API smoke test pending.
+- EE-T085: Scene contract and journal service regression tests included in CI workflow; no passing run confirmed.
+- EE-T078: Shared dice-rule validation used; character ability modifier provenance still requires verification.
+- Full completion count remains 0/100 until acceptance criteria and tests are verified.
