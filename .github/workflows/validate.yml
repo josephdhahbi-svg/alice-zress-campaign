@@ -56,5 +56,7 @@ jobs:
         run: node --test backend/backup-restore.integration.test.js
       - name: Check Faction Territory Pulse Engine
         run: node --test backend/faction-pulse.test.js
+      - name: Test isolated Glyph companion tactics
+        run: node --test backend/glyph-tactics.test.js
       - name: Check Automaton FSM
         run: node --test backend/automaton_fsm.test.js
