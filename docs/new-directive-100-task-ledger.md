@@ -166,3 +166,10 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Added dedicated CI backup test step (`5dfbbae`); its outcome pending at ledger update time.
 - Documented safe integration decisions, Flutter proposals, and provisional Glyph TypeScript combat prototype (`15452d2`).
 - T093 backups: PARTIAL (online local backups, no restore drill, encryption or offsite rotation). T087–T089 Flutter features: NOT STARTED. T040 combat/rules: NOT STARTED for attached Glyph prototype. Do not call these production-ready.
+
+## Batch 10 — verified backup restore and isolated Glyph tactical prototype
+- Dedicated backup-service CI succeeded [38846873816](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38846873816) at `5dfbbae`.
+- Added actual better-sqlite3 WAL backup restore integration test: verifies database integrity, migrated schema, campaign membership and Alice's `CHOICE_RESOLVED` event survives reopening the backup (`c429bbb`); wired into CI (`d691b57`). Check its latest CI before marking fully verified.
+- Added isolated `backend/glyph-tactics.js` with bounded, explicitly prototype actions and expiring defense/control effects; no persistent character-sheet changes (`de56163`).
+- Added Glyph tests for injured ally support, damage bounds, expiry and incapacitation (`8040cb5`), wired into CI (`8c8fb52`). Latest test CI pending.
+- T093 backup and restore PARTIAL until full operational restore procedure, offsite retention and encrypted backup handling. T040 combat PARTIAL prototype only, not official 2024 D&D mechanics. T087 Flutter deck still NOT STARTED.
