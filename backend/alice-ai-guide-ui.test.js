@@ -22,3 +22,16 @@ test("AI UI checks signed availability and guards against stale disconnected res
  assert.match(js,/AI offline: server key not configured/);
  assert.doesNotMatch(js,/innerHTML|localStorage|sessionStorage/);
 });
+
+test("DM UI exposes review, attestation, and safe DOM-only rendering",()=>{
+ const html=fs.readFileSync(path.join(__dirname,"../prototype/alice-room-atlas.html"),"utf8");
+ const js=fs.readFileSync(path.join(__dirname,"../prototype/alice-room-atlas.js"),"utf8");
+ assert.match(html,/id="dm-refresh"/);
+ assert.match(html,/id="dm-queue"/);
+ assert.match(js,/async function refreshDmQueue\(\)/);
+ assert.match(js,/\/quests\/objectives\/attest-journal/);
+ assert.match(js,/ACKNOWLEDGED/);
+ assert.match(js,/DECLINED/);
+ assert.match(js,/Session changed/);
+ assert.doesNotMatch(js,/innerHTML|localStorage|sessionStorage/);
+});
