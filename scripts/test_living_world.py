@@ -29,6 +29,15 @@ def main():
         check("restoredFromSave" in html, "automatic saved-world restore missing")
         check("confirm(" in html, "clear-world confirmation missing")
         check("does not synchronize with a server" in html, "local-only limitation must be explicit")
+    war = ROOT / "game" / "faction-war.html"
+    check(war.exists(), "faction war dashboard is missing")
+    if war.exists():
+        dashboard = war.read_text(encoding="utf-8")
+        for feature in ('id="pulse"', 'id="territories"', 'id="factions"',
+                        'id="audit"', 'localStorage', 'JSON.stringify',
+                        'moonveil-faction-war-demo-v1', 'does not run hourly'):
+            check(feature in dashboard, f"faction war dashboard missing {feature}")
+        check('faction-war.html' in html, "Living World missing war dashboard link")
     if errors:
         print("\n".join("FAIL: " + e for e in errors))
         print(f"FAILED: {len(errors)} Living World Engine check(s).")
