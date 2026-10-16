@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moonveil — Rabbit Hole Room Atlas</title><link rel="stylesheet" href="./moonveil-theme.css"></head>
+<body><main class="mv-shell">
+<header class="mv-header"><div><p class="mv-eyebrow">Moonveil · Alice Z'ress · Signed campaign preview</p><h1 class="mv-title">The Rabbit Hole Atlas</h1><p class="mv-subtitle">Five rooms inside the hole itself, anchored at the Pit of Ghaunadaur. Exploration remains locked until authorized by the DM.</p></div></header>
+<section class="mv-decisions" aria-label="Campaign connection"><h2>Connect to a local Moonveil server</h2>
+<p class="mv-subtitle">Use an existing signed actor session. Credentials are kept in this page's memory only, never in URLs or local storage. The server must permit same-origin API access.</p>
+<form id="connect" class="mv-connect"><label>Campaign ID <input id="campaign" required maxlength="100" pattern="[A-Za-z0-9:_-]+" autocomplete="off"></label>
+<label>Signed actor token <input id="token" required type="password" autocomplete="off"></label><button class="mv-choice" type="submit">Load room atlas</button><button class="mv-choice" id="disconnect" type="button">Disconnect</button></form>
+<p class="mv-status" id="connection-status" role="status" aria-live="polite">Not connected. No data has been changed.</p></section>
+<section class="mv-decisions" aria-label="Room selection"><h2>Room atlas</h2><div id="rooms" class="mv-room-list"><p class="mv-subtitle">Connect to view authoritative room descriptions.</p></div></section>
+<section class="mv-grid" aria-label="Four cinematic story panels">
+<article class="mv-panel"><span class="mv-chip mv-map">I · Entrance</span><h2>Stone &amp; Stars</h2><p>The Pit of Ghaunadaur is the physical entrance.</p></article>
+<article class="mv-panel"><span class="mv-chip mv-villain">II · Parasite</span><h2>The Elder Eye</h2><p>Ghaunadaur's scar remembers Alice's fall.</p></article>
+<article class="mv-panel"><span class="mv-chip mv-magic">III · Far Realm</span><h2>Alien Resonance</h2><p>The Far Realm influences the hole without replacing it.</p></article>
+<article class="mv-panel"><span class="mv-chip mv-hero">IV · Free Will</span><h2>The Silver Light</h2><p>Alice's heroic choices remain her own.</p></article></section>
+<section class="mv-decisions"><h2 id="room-title">Choose a room</h2><p class="mv-subtitle" id="room-description">Room choices are previews only.</p>
+<div id="choices" class="mv-choice-grid" aria-label="Five room choices"></div>
+<p class="mv-status" id="choice-status" role="status" aria-live="polite">No choice submitted.</p></section>
+</main><script>
+"use strict";
+const byId=id=>document.getElementById(id);
+let session=null,rooms=[],active=null;
+const labels=["Lawful Good","Neutral Good","Chaotic Good","Utility","Action"];
+function status(message){byId("connection-status").textContent=message}
+function reset(){session=null;rooms=[];active=null;byId("token").value="";byId("rooms").replaceChildren();byId("choices").replaceChildren();byId("room-title").textContent="Choose a room";byId("room-description").textContent="Room choices are previews only.";byId("choice-status").textContent="No choice submitted."}
+async function api(path,options={}){
+ if(!session)throw Error("Connect first");
+ const response=await fetch("/api/campaigns/"+encodeURIComponent(session.campaign)+"/world/alice-demiplane/"+path,{
+ method:options.method||"GET",headers:{"Authorization":"Bearer "+session.token,...(options.body?{"Content-Type":"application/json"}:{})},body:options.body?JSON.stringify(options.body):undefined,cache:"no-store",credentials:"omit"});
+ const data=await response.json();if(!response.ok)throw Error("Server rejected request ("+response.status+"): "+(data.error||data.reason||"unknown"));return data;
+}
+function showRoom(room){
+ active=room;byId("room-title").textContent=room.name;byId("room-description").textContent=room.description+" · Risk: "+room.risk+" · Access: "+room.access;
+ const root=byId("choices");root.replaceChildren();
+ room.choices.forEach((choice,i)=>{const button=document.createElement("button");button.className="mv-choice";button.type="button";button.textContent=(i+1)+" · "+labels[i]+": "+choice;button.addEventListener("click",async()=>{
+ byId("choice-status").textContent="Requesting read-only adjudication preview…";
+ try{const result=await api("rooms/"+encodeURIComponent(room.id)+"/preview",{method:"POST",body:{choiceNumber:i+1}});
+ byId("choice-status").textContent=result.reason+": "+result.text+". No character state or rewards changed."}
+ catch(error){byId("choice-status").textContent=error.message}});root.append(button)});
+ byId("choice-status").textContent="Read-only preview; movement and rewards remain locked.";
+}
+byId("connect").addEventListener("submit",async event=>{
+ event.preventDefault();reset();const campaign=byId("campaign").value.trim(),token=byId("token").value;
+ if(!/^[A-Za-z0-9:_-]{1,100}$/.test(campaign)||!token){status("Invalid campaign ID or missing token.");return}
+ session={campaign,token};status("Loading room atlas…");
+ try{const data=await api("rooms");if(!Array.isArray(data.rooms))throw Error("Invalid room response");
+ rooms=data.rooms;const root=byId("rooms");root.replaceChildren();
+ rooms.forEach(room=>{const button=document.createElement("button");button.type="button";button.className="mv-choice";button.textContent=room.name+" · "+room.status;button.addEventListener("click",()=>showRoom(room));root.append(button)});
+ status("Loaded "+rooms.length+" rooms from the signed campaign API. Preview only.");if(rooms.length)showRoom(rooms[0]);
+ }catch(error){reset();status(error.message)}
+});
+byId("disconnect").addEventListener("click",()=>{reset();status("Disconnected. Session cleared from this page.")});
+</script></body></html>
