@@ -28,7 +28,7 @@ byId("connect").addEventListener("submit",async event=>{
  try{const data=await api("rooms");if(!Array.isArray(data.rooms))throw Error("Invalid room response");
  rooms=data.rooms;const root=byId("rooms");root.replaceChildren();
  rooms.forEach(room=>{const button=document.createElement("button");button.type="button";button.className="mv-choice";button.textContent=room.name+" · "+room.status;button.addEventListener("click",()=>showRoom(room));root.append(button)});
- status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;byId("dm-refresh").disabled=false;byId("quest-chains-refresh").disabled=false;await refreshAiStatus();if(rooms.length)showRoom(rooms[0]);await refreshJournal();
+ status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;byId("dm-refresh").disabled=false;byId("quest-chains-refresh").disabled=false;byId("scene-actions-refresh").disabled=false;await refreshAiStatus();if(rooms.length)showRoom(rooms[0]);await refreshJournal();
  }catch(error){reset();status(error.message)}
 });
 byId("disconnect").addEventListener("click",()=>{reset();status("Disconnected. Session cleared from this page.")});
@@ -198,3 +198,37 @@ async function refreshMultiverseQuestAtlas(){
  }catch(error){if(epoch===sessionEpoch)byId("quest-chains-status").textContent=error.message}
 }
 byId("quest-chains-refresh").addEventListener("click",refreshMultiverseQuestAtlas);
+
+async function refreshSceneActions(){
+ if(!session)return;
+ const current=session,epoch=sessionEpoch,root=byId("scene-actions-list");
+ root.replaceChildren();byId("scene-actions-status").textContent="Loading scene interactions…";
+ try{
+  const base="/api/campaigns/"+encodeURIComponent(current.campaign)+"/scenes/pit_ghaunadaur/actions";
+  const headers={"Authorization":"Bearer "+current.token};
+  const response=await fetch(base,{headers,cache:"no-store",credentials:"omit"});
+  const data=await response.json();
+  if(epoch!==sessionEpoch)return;
+  if(!response.ok||!Array.isArray(data.actions))throw Error(data.error||"Scene actions unavailable");
+  for(const action of data.actions){
+   const card=document.createElement("article");card.className="mv-journal-entry";
+   const title=document.createElement("h3");title.textContent=action.kind+" · "+action.name;
+   const detail=document.createElement("p");detail.textContent=action.result+" · Access: "+action.access+" · "+action.check;
+   const button=document.createElement("button");button.className="mv-choice";button.type="button";button.textContent="Preview "+action.name;
+   button.addEventListener("click",async()=>{
+    button.disabled=true;
+    try{
+     const reply=await fetch(base+"/"+encodeURIComponent(action.id),{headers,cache:"no-store",credentials:"omit"});
+     const result=await reply.json();
+     if(epoch!==sessionEpoch)return;
+     if(!reply.ok)throw Error(result.error||"Preview unavailable");
+     byId("scene-actions-status").textContent=action.name+": "+result.preview.action.result+". DM approval required; no spell cast, item consumed or world changed.";
+    }catch(error){if(epoch===sessionEpoch)byId("scene-actions-status").textContent=error.message}
+    finally{button.disabled=false}
+   });
+   card.append(title,detail,button);root.append(card);
+  }
+  byId("scene-actions-status").textContent=data.actions.length+" interactions available as read-only previews.";
+ }catch(error){if(epoch===sessionEpoch)byId("scene-actions-status").textContent=error.message}
+}
+byId("scene-actions-refresh").addEventListener("click",refreshSceneActions);
