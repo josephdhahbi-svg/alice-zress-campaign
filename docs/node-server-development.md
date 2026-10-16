@@ -73,3 +73,13 @@ The socket sends a `CONNECTED` acknowledgement and `CAMPAIGN_EVENT` notification
 
 ## Reconnection and event recovery
 Connect to `/events?campaignId=alice&after=<lastAppliedRevision>`. The server sends `CONNECTED` with the current journal revision. If there are newer events it also sends `CATCH_UP_REQUIRED` with the last applied revision and current revision. Fetch `GET /api/campaigns/alice/events?after=<lastAppliedRevision>` repeatedly until caught up, applying each revision once. Persist the last applied revision only after applying the corresponding event successfully. Reconnect notifications are not a replacement for the journal; always re-fetch after network loss. This does not yet synchronize browser localStorage with server saves automatically.
+
+## Opt-in SQLite online backups
+Set `MOONVEIL_BACKUP_DIR` to a writable private folder before starting the local Node server. The server then uses `better-sqlite3`'s online `db.backup()` every six hours, including committed WAL data, with 14 retained snapshots by default. Override count using `MOONVEIL_BACKUP_RETAIN` (1–1000). Without the environment variable, no background backup runs. Backups are **not** encrypted, offsite, or automatically restored; protect the directory and test restores separately. The backup timer stops on normal server shutdown. This service does not modify existing browser saves.
+
+## Supplied LEGO bundles — review status
+- Reused the online SQLite backup concept with retention, opt-in configuration, error handling and CI tests; existing migrations and authenticated WebSockets remain the source of truth.
+- Rejected replacing the server with the supplied globally broadcasting WebSocket hub: that would permit unauthenticated cross-campaign event injection and leak private activity.
+- Rejected the second SQL-file migration runner as a competing schema ledger; `backend/migrations.js` already tracks versioned migrations.
+- Flutter speech, audio, vibration, macro pinning and ambient tracks are **proposals**, not verified working features: packages, permissions, platform support, actual assets and app wiring are not yet supplied.
+- The attached TypeScript Glyph combat/robot bundle is **prototype gameplay logic**, not official 2024 D&D rules. It requires a build configuration, validation, balanced turn economy, stat-cap controls, pathfinding and tests before being attached to authoritative Alice saves. Keep Glyph provisional and Alice's established Warlock canon unchanged.
