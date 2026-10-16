@@ -23,6 +23,7 @@ test("escalation is bounded and only one dispute remains active",()=>{
  assert.equal(last.status,"ESCALATED");assert.equal(last.escalationScore,100);
  assert.equal(last.disputeId,first.disputeId);
  assert.equal(db.prepare("SELECT count(*) n FROM faction_disputes").get().n,1);
+ assert.equal(db.prepare("SELECT count(*) n FROM faction_dispute_audit").get().n,9);
  db.close();
 });
 test("resolution updates ownership atomically and never resets garrison",()=>{
@@ -34,6 +35,7 @@ test("resolution updates ownership atomically and never resets garrison",()=>{
  assert.equal(db.prepare("SELECT controlling_faction_id FROM territory_control WHERE territory_id='pit'").get().controlling_faction_id,"blue");
  assert.throws(()=>engine.resolveDispute(first.disputeId,"blue"),/resolved/);
  assert.equal(engine.getDispute(first.disputeId).status,"RESOLVED");
+ assert.deepEqual(db.prepare("SELECT action FROM faction_dispute_audit ORDER BY audit_id").all().map(x=>x.action),["CREATED","RESOLVED"]);
  db.close();
 });
 test("invalid requests and changed territory ownership cannot silently settle",()=>{
@@ -44,5 +46,6 @@ test("invalid requests and changed territory ownership cannot silently settle",(
  db.prepare("UPDATE territory_control SET controlling_faction_id='green' WHERE territory_id='pit'").run();
  assert.throws(()=>engine.resolveDispute(first.disputeId,"blue"),/ownership changed/);
  assert.equal(engine.getDispute(first.disputeId).status,"PENDING");
+ assert.equal(db.prepare("SELECT count(*) n FROM faction_dispute_audit").get().n,1);
  db.close();
 });
