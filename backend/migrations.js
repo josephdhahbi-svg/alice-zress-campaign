@@ -153,6 +153,26 @@ CREATE TABLE IF NOT EXISTS vtt_settlement_market_pulses (
  PRIMARY KEY(campaign_id,pulse_id),
  FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
 );
+ ` },
+  { version:9, name:"audited character time-space travel", sql:`
+CREATE TABLE IF NOT EXISTS vtt_character_locations (
+ campaign_id TEXT NOT NULL, character_id TEXT NOT NULL,
+ node_id TEXT NOT NULL, dr_year INTEGER, revision INTEGER NOT NULL DEFAULT 0 CHECK(revision>=0),
+ PRIMARY KEY(campaign_id,character_id),
+ FOREIGN KEY(campaign_id,character_id) REFERENCES vtt_characters(campaign_id,character_id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS vtt_character_travel_events (
+ campaign_id TEXT NOT NULL, travel_id TEXT NOT NULL,
+ character_id TEXT NOT NULL, actor_id TEXT NOT NULL,
+ from_node TEXT NOT NULL, to_node TEXT NOT NULL,
+ departure_dr INTEGER, arrival_dr INTEGER,
+ method TEXT NOT NULL, evidence TEXT NOT NULL,
+ previous_revision INTEGER NOT NULL, resulting_revision INTEGER NOT NULL,
+ occurred_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,travel_id),
+ FOREIGN KEY(campaign_id,character_id) REFERENCES vtt_characters(campaign_id,character_id) ON DELETE CASCADE,
+ FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
 ` }
 ];
 function migrate(db) {
