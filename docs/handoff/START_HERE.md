@@ -350,3 +350,9 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Copilot geography: `data/transport_geography_research_queue_v1.json` remains research-only; no source-attributed confirmation for the proposed enclave impact site or Skullport-to-Promenade route. Routes remain locked.
 - Visual Codex: UI still contains placeholder art; no actual image binary committed in this step.
 - Alice remains Level 1, with Shield/Acid Splash/Light and five choices unselected; no state mutation or route unlock.
+
+## Copilot LEGO master bundle — machine-readable fixtures (2026-10-16)
+- `77c8f9e` added `tests/fixtures/copilot_lego_master_bundle_v1.json` (85 KB). It contains 10 Alice milestone proposals, the 30-book index with hazard references, 51 unique hazard reference records, 9 unapplied patch examples, 9 unintegrated connection examples, 3 locked route records, and 5 negative fixtures.
+- `854f618` added `tests/test_copilot_lego_master_bundle.py` with 10 tests for JSON loading, expected counts, 3-tier vs 7-traversal separation, book indexing, non-mutating milestones, unapplied/versioned patches, unresolved connections, locked routes, and negative fixture inventory.
+- All content is synthetic design-only and `unverified`; the referenced hazard/location/deity targets are not all registered authoritative entities. Patches have no ledger event and are not applied. Routes remain locked/non-traversable. The milestone records do not change Alice's save.
+- CI run for `854f618` is pending verification. No local full checkout/test execution claimed. Existing schema field mapping needs review before promotion from fixtures into production registries.
