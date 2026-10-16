@@ -14,7 +14,7 @@ function setup(){
 test("migration v7 and settlement trade: idempotent, bounded, campaign-scoped",()=>{
  const db=setup();
  try{
-  assert.equal(MIGRATIONS.at(-1).version,7);
+  assert.ok(MIGRATIONS.some(m=>m.version===7));
   const e=createSettlementTradeEngine(db);
   const s={campaignId:"c",actorId:"dm",settlementId:"s1",name:"Silver Refuge",planeId:"material",regionId:"underdark"};
   assert.equal(e.createSettlement(s).duplicate,false);
