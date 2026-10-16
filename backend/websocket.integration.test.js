@@ -84,6 +84,19 @@ test("WebSocket event delivery is restricted to authenticated campaign members",
         eventType:"SCENE_STARTED",payload:{scene:"alternate"}})});
     assert.equal(staleResponse.status,409);
     assert.equal((await staleResponse.json()).error,"REVISION_CONFLICT");
+    // Concurrent requests with the same expected revision: one commit only.
+    const requests=["first","second"].map(label=>fetch(base+"/api/campaigns/a/events",{
+      method:"POST",headers:{Authorization:"Bearer "+alice,"Content-Type":"application/json"},
+      body:JSON.stringify({eventId:"concurrent-"+label,expectedRevision:1,
+        eventType:"SCENE_STARTED",payload:{scene:label}})}));
+    const responses=await Promise.all(requests);
+    assert.deepEqual(responses.map(response=>response.status).sort(),[201,409]);
+    const journalResponse=await fetch(base+"/api/campaigns/a/events?after=0",{
+      headers:{Authorization:"Bearer "+alice}});
+    assert.equal(journalResponse.status,200);
+    const journal=(await journalResponse.json()).events;
+    assert.equal(journal.length,2);
+    assert.equal(journal[1].revision,2);
     const logout=await fetch(base+"/api/sessions/logout",{method:"POST",headers:{Authorization:"Bearer "+alice}});
     assert.equal(logout.status,200);
     await assert.rejects(connect(url+"a",alice),/denied|403/i);
