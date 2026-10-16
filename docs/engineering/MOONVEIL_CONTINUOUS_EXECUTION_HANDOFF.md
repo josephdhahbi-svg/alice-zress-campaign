@@ -285,3 +285,6 @@ Created `backend/sacred-lich-ascensions.js` (`176f5fef`), tests (`a125c396`), an
 
 ## 2026-10-16 — Art QA automation and Alice dashboard concept
 New image concept ART-UI-005 generated in chat and registered in `docs/administration/MOONVEIL_ART_ASSET_INTAKE_REGISTER.md` (`d48d15f3`); no image bytes committed to repository and concept mock inventory is not actual Alice inventory. Added `backend/art-asset-registry.js` (`74006bd7`) with safe asset status/provenance/path checks, and tests `backend/art-asset-registry.test.js` (`34d582de`). No installed art claim, no verified charter closure until CI and UI rendering evidence.
+
+## 2026-10-16 — Alice's Rabbit Hole demiplane code
+`backend/alice-demiplane-catalog.js` (`30ee9f92`) and tests (`99d2c3cc`) define Alice's personal Eldritch demiplane as **the Rabbit Hole itself**, with physical entrance `pit_ghaunadaur` in the Material Underdark. Far Realm is the Eldritch influence, not the demiplane's replacement location. Every access preview fails closed even with a supplied approval boolean, pending authoritative travel and DM evidence. Signed member read-only API in `server.js` (`d9697102`) GET `/api/campaigns/:campaignId/world/alice-demiplane`. No free warp, rewards, or transformation; charter unchanged pending CI.
