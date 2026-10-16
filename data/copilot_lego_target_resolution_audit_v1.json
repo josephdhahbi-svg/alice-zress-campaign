@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "status": "read_only_target_resolution_audit",
+  "canon_status": "unverified",
+  "source_bundle": "tests/fixtures/copilot_lego_master_bundle_v1.json",
+  "existing_schema": "data/living_world_integration_schema_v1.json",
+  "existing_book_atlas": "data/master_roads_atlas.json",
+  "summary": {
+    "bundle_books": 30,
+    "book_slots_mappable_by_book_number": 30,
+    "hazard_reference_ids": 51,
+    "hazard_ids_registered_in_authoritative_atlas": 0,
+    "connection_records": 9,
+    "connection_targets_resolved": 0,
+    "proposed_route_records": 3,
+    "proposed_routes_traversable": 0
+  },
+  "book_mapping": {
+    "method": "Explicit bundle book_number + book_id validated against existing atlas slots B01-B30",
+    "migration_required": false,
+    "promotion_allowed": false,
+    "note": "Adapter output preserves atlas source_status as unassigned_placeholder and does not copy proposed titles into the authoritative atlas."
+  },
+  "hazards": {
+    "status": "all_reference_only_unregistered",
+    "registered_target_ids": [],
+    "resolution_rule": "Do not auto-create authoritative hazard entities. Create candidate stubs only in a separate proposal registry after review; no mechanics become active."
+  },
+  "connections": [
+    {"connection_id":"conn_netherese_seismic","from_mapping":"book_02 -> B02 by book_number","target_id":"haz_seismic_tremor_v1","target_status":"unresolved","integrated":false},
+    {"connection_id":"conn_elder_eye_ghaunadaur","from_mapping":"book_03 -> B03 by book_number","target_id":"deity_ghaunadaur","target_status":"unresolved_in_current_atlas","integrated":false},
+    {"connection_id":"conn_labyrinth_transit","from_mapping":"book_10 -> B10 by book_number","target_id":"transit_nodes","target_status":"unresolved","integrated":false},
+    {"connection_id":"conn_avernus_contracts","from_mapping":"book_12 -> B12 by book_number","target_id":"infernal_contracts","target_status":"unresolved","integrated":false},
+    {"connection_id":"conn_bg_lich","from_mapping":"book_17 -> B17 by book_number","target_id":"evt_alice_eldritch_lich_v17","target_status":"unresolved_event_not_recorded","integrated":false},
+    {"connection_id":"conn_phlogiston_volatility","from_mapping":"book_20 -> B20 by book_number","target_id":"haz_cosmic_volatility_v1","target_status":"unresolved","integrated":false},
+    {"connection_id":"conn_astral_cord_sea","from_mapping":"book_22 -> B22 by book_number","target_id":"astral_sea","target_status":"unresolved","integrated":false},
+    {"connection_id":"conn_barovia_ravenloft","from_mapping":"book_27 -> B27 by book_number","target_id":"ravenloft","target_status":"unresolved_in_current_atlas","integrated":false},
+    {"connection_id":"conn_eve_alustra","from_mapping":"book_30 -> B30 by book_number","target_id":"deity_alustra","target_status":"unresolved_campaign_proposal","integrated":false}
+  ],
+  "routes": [
+    {"route_id":"route_subterranean_escape_v1","status":"locked_unverified","reason":"No verified origin/destination IDs or availability window"},
+    {"route_id":"route_planar_ascent_v1","status":"locked_unverified","reason":"No verified origin/destination IDs or availability window"},
+    {"route_id":"route_outer_shell_v1","status":"locked_unverified","reason":"No verified origin/destination IDs or availability window"}
+  ],
+  "required_follow_up": [
+    "Register and source-review hazard targets before integrating connections.",
+    "Resolve all connection endpoints to existing entity IDs.",
+    "Adapt route proposals to master_roads_atlas required fields only after source verification.",
+    "Keep all route status locked while dates, endpoints, or prerequisites are unknown.",
+    "Do not promote proposed book titles into the authoritative atlas without owner approval."
+  ]
+}
