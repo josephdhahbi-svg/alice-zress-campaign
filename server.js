@@ -18,6 +18,7 @@ const { createSettlementTradeEngine } = require("./backend/settlement-trade-engi
 const { createSettlementMarketPulseEngine } = require("./backend/settlement-market-pulse");
 const { createCombatEngine } = require("./backend/combat-engine");
 const { createQuestEvidenceEngine } = require("./backend/quest-evidence-engine");
+const { createJournalQuestBridge } = require("./backend/journal-quest-bridge");
 const { listAscensionPaths, getAscensionPath } = require("./backend/ascension-path-catalog");
 const { getMultiverseAdventureIndex, availableRouteLeads } = require("./backend/multiverse-adventure-index");
 const { planTimeSpaceJourney, listTimeSpaceEras, listTravelMethods } = require("./backend/rabbit-hole-time-space");
@@ -81,6 +82,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const questEvidence = createQuestEvidenceEngine(db);
   const chronalTravel = createChronalTravelEngine(db);
   const aliceJournal = createAliceExplorationJournal(db);
+  const journalQuestBridge = createJournalQuestBridge(db);
   const chronosReviews = createChronosReviewEngine(db);
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
@@ -724,6 +726,21 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
       if(error.message==="NOT_AUTHORIZED"||error.message==="DM_REQUIRED")return res.status(403).json({success:false,error:"FORBIDDEN"});
       return res.status(409).json({success:false,error:"STATE_CONFLICT"});
+    }
+  });
+  app.post("/api/campaigns/:campaignId/quests/objectives/attest-journal",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    const campaignId=req.params.campaignId,dmActorId=req.auth.actorId;
+    if(!id(campaignId)||memberRole.get(campaignId,dmActorId)?.role!=="DM")
+      return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const {entryId,characterId,questId,objectiveId,eventId}=req.body||{};
+      const result=journalQuestBridge.attest({campaignId,entryId,characterId,questId,objectiveId,eventId,dmActorId});
+      if(!result.duplicate)broadcastCampaign(campaignId,{type:"CAMPAIGN_EVENT",campaignId,revision:result.revision,eventType:"QUEST_OBJECTIVE_VERIFIED"});
+      return res.status(result.duplicate?200:201).json({success:true,...result});
+    }catch(error){
+      if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
+      return res.status(409).json({success:false,error:"ATTESTATION_CONFLICT"});
     }
   });
   // Quest evidence is derived only from campaign journal events authored by a DM.
