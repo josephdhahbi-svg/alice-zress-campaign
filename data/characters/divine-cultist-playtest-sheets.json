@@ -1,0 +1,219 @@
+{
+  "schema": "moonveil.divine-cultist-playtest.v1",
+  "status": "ORIGINAL_HOMEBREW_UNTESTED",
+  "note": "Four fully seeded mechanical prototypes, not copied published stat blocks. CR and attacks are provisional.",
+  "sheets": [
+    {
+      "id": "moonveil_cultist_prototype_1",
+      "name": "Eye-Pit Devotee",
+      "deity": "Ghaunadaur",
+      "canonStatus": "ORIGINAL_HOMEBREW_NOT_PUBLISHED_NPC",
+      "sourceInspiration": "Forgotten Realms divine themes; mechanics entirely original",
+      "alignmentRole": "RED",
+      "statBlock": {
+        "system": "5e-inspired provisional NPC",
+        "species": "Humanoid (drow)",
+        "armorClass": 13,
+        "hitPoints": 27,
+        "challengeRating": "PROVISIONAL 1",
+        "speedFeet": 30,
+        "abilityScores": {
+          "STR": 10,
+          "DEX": 14,
+          "CON": 12,
+          "INT": 11,
+          "WIS": 13,
+          "CHA": 12
+        },
+        "actions": [
+          "Acid Dagger: melee +4 to hit, 1d4+2 piercing plus 1d4 acid.",
+          "Eye Spit (Recharge 5-6): ranged spell +3 to hit, 2d6 acid."
+        ],
+        "blessing": "One use per day: advantage on saving throw against acid effect.",
+        "spellcasting": "No spell slots; listed magical actions only",
+        "proficiencyBonus": 2
+      },
+      "inventory": {
+        "currencyGP": 0,
+        "items": [
+          "mundane equipment appropriate to role"
+        ],
+        "attuned": [],
+        "lootPolicy": "DM_APPROVAL"
+      },
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "location": "PROPOSED_UNDERDARK_ATLAS",
+        "presenceApproved": false
+      },
+      "questFlags": [],
+      "roleplay": {
+        "motivation": "Protect faction interests while responding to Alice's decisions",
+        "dialogue": "Original dialogue pending"
+      },
+      "combatReady": false,
+      "balanceReview": "REQUIRED",
+      "rewardsGranted": false
+    },
+    {
+      "id": "moonveil_cultist_prototype_2",
+      "name": "Moonlit Sanctuary Guardian",
+      "deity": "Eilistraee",
+      "canonStatus": "ORIGINAL_HOMEBREW_NOT_PUBLISHED_NPC",
+      "sourceInspiration": "Forgotten Realms divine themes; mechanics entirely original",
+      "alignmentRole": "BLUE",
+      "statBlock": {
+        "system": "5e-inspired provisional NPC",
+        "species": "Humanoid (drow)",
+        "armorClass": 15,
+        "hitPoints": 32,
+        "challengeRating": "PROVISIONAL 1",
+        "speedFeet": 30,
+        "abilityScores": {
+          "STR": 12,
+          "DEX": 16,
+          "CON": 12,
+          "INT": 11,
+          "WIS": 14,
+          "CHA": 13
+        },
+        "actions": [
+          "Silver Blade: melee +5 to hit, 1d8+3 slashing.",
+          "Moonbeam Aid (1/day): ally within 30 feet regains 1d8+2 hit points."
+        ],
+        "blessing": "One use per day: end frightened condition on self.",
+        "spellcasting": "No spell slots; listed magical actions only",
+        "proficiencyBonus": 2
+      },
+      "inventory": {
+        "currencyGP": 0,
+        "items": [
+          "mundane equipment appropriate to role"
+        ],
+        "attuned": [],
+        "lootPolicy": "DM_APPROVAL"
+      },
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "location": "PROPOSED_UNDERDARK_ATLAS",
+        "presenceApproved": false
+      },
+      "questFlags": [],
+      "roleplay": {
+        "motivation": "Protect faction interests while responding to Alice's decisions",
+        "dialogue": "Original dialogue pending"
+      },
+      "combatReady": false,
+      "balanceReview": "REQUIRED",
+      "rewardsGranted": false
+    },
+    {
+      "id": "moonveil_cultist_prototype_3",
+      "name": "Web-Court Inquisitor",
+      "deity": "Lolth",
+      "canonStatus": "ORIGINAL_HOMEBREW_NOT_PUBLISHED_NPC",
+      "sourceInspiration": "Forgotten Realms divine themes; mechanics entirely original",
+      "alignmentRole": "RED",
+      "statBlock": {
+        "system": "5e-inspired provisional NPC",
+        "species": "Humanoid (drow)",
+        "armorClass": 15,
+        "hitPoints": 39,
+        "challengeRating": "PROVISIONAL 2",
+        "speedFeet": 30,
+        "abilityScores": {
+          "STR": 12,
+          "DEX": 16,
+          "CON": 14,
+          "INT": 12,
+          "WIS": 13,
+          "CHA": 14
+        },
+        "actions": [
+          "Venom Rapier: melee +5 to hit, 1d8+3 piercing plus 1d4 poison.",
+          "Web Snare (1/day): target within 30 feet DC 12 Dexterity save or restrained until end of next turn."
+        ],
+        "blessing": "Advantage on one Stealth check in dim light or darkness per day.",
+        "spellcasting": "No spell slots; listed magical actions only",
+        "proficiencyBonus": 2
+      },
+      "inventory": {
+        "currencyGP": 0,
+        "items": [
+          "mundane equipment appropriate to role"
+        ],
+        "attuned": [],
+        "lootPolicy": "DM_APPROVAL"
+      },
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "location": "PROPOSED_UNDERDARK_ATLAS",
+        "presenceApproved": false
+      },
+      "questFlags": [],
+      "roleplay": {
+        "motivation": "Protect faction interests while responding to Alice's decisions",
+        "dialogue": "Original dialogue pending"
+      },
+      "combatReady": false,
+      "balanceReview": "REQUIRED",
+      "rewardsGranted": false
+    },
+    {
+      "id": "moonveil_cultist_prototype_4",
+      "name": "Whispered Archive Initiate",
+      "deity": "Vecna",
+      "canonStatus": "ORIGINAL_HOMEBREW_NOT_PUBLISHED_NPC",
+      "sourceInspiration": "Forgotten Realms divine themes; mechanics entirely original",
+      "alignmentRole": "RED",
+      "statBlock": {
+        "system": "5e-inspired provisional NPC",
+        "species": "Humanoid",
+        "armorClass": 12,
+        "hitPoints": 22,
+        "challengeRating": "PROVISIONAL 1/2",
+        "speedFeet": 30,
+        "abilityScores": {
+          "STR": 9,
+          "DEX": 12,
+          "CON": 11,
+          "INT": 15,
+          "WIS": 12,
+          "CHA": 11
+        },
+        "actions": [
+          "Secret Bolt: ranged spell +4 to hit, 2d6 necrotic.",
+          "Veiled Page (1/day): impose disadvantage on one Investigation check by a creature within 30 feet."
+        ],
+        "blessing": "One use per day: advantage on Arcana check concerning undead.",
+        "spellcasting": "No spell slots; listed magical actions only",
+        "proficiencyBonus": 2
+      },
+      "inventory": {
+        "currencyGP": 0,
+        "items": [
+          "mundane equipment appropriate to role"
+        ],
+        "attuned": [],
+        "lootPolicy": "DM_APPROVAL"
+      },
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "location": "PROPOSED_UNDERDARK_ATLAS",
+        "presenceApproved": false
+      },
+      "questFlags": [],
+      "roleplay": {
+        "motivation": "Protect faction interests while responding to Alice's decisions",
+        "dialogue": "Original dialogue pending"
+      },
+      "combatReady": false,
+      "balanceReview": "REQUIRED",
+      "rewardsGranted": false
+    }
+  ]
+}
