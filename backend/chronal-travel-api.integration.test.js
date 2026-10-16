@@ -40,7 +40,7 @@ test("signed Rabbit Hole travel API: owner isolation, DM authority, replay and n
   assert.equal((await get(url+"/location",alice)).body.location.node_id,"pit_ghaunadaur");
   const travel={travelId:"rabbit1",to:"sigil",arrivalDr:1492,method:"CHRONAL_GATE",evidence:"DM approved historical route and portal key",expectedRevision:0};
   assert.equal((await post(url+"/travel",alice,travel)).status,403);
-  assert.equal((await post(url+"/travel",dm,{...travel,arrivalDr:Infinity})).status,400);
+  assert.equal((await post(url+"/travel",dm,{...travel,arrivalDr:"not-a-year"})).status,400);
   assert.equal((await post(url+"/travel",dm,travel)).status,201);
   assert.equal((await post(url+"/travel",dm,travel)).status,200);
   assert.equal((await post(url+"/travel",dm,{...travel,to:"abyss"})).status,409);
