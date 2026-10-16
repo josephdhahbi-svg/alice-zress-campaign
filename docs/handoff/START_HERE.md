@@ -260,3 +260,9 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 
 - **CI GREEN:** GitHub Actions run `38829938540` for commit `965e0d0` completed successfully on Python 3.11 and 3.12. Both jobs passed registry validation, Netheril route validation, route-planner demo checks, and unit test discovery. Run: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38829938540.
 - Test fixes: `da0be21` adjusted choice assertions to inspect the structured JSON read model; `965e0d0` corrected the fail-closed UI text assertion. The previous failing run `38829931684` failed because it ran after only the first of those two commits, so the second stale assertion remained. The complete run on `965e0d0` passed.
+
+## Copilot LEGO integration pattern received (2026-10-16)
+- `9a19982` added `docs/architecture/universal-lego-integration-pattern-v1.md`, translating Copilot's Entity/Patch/Connection/Status/Version/Extensions pattern into a proposed shared contract.
+- Important reconciliation: “everything editable” means versioned/reviewed patches, not rewriting immutable event history or automatically enabling gameplay. Workflow status remains separate from the existing `canon_status` enum. Unknown dates stay unknown; unverified routes stay locked; Alice saves and player choices remain protected.
+- Responsibilities reaffirmed: Gemini owns authoritative mutable gameplay state; Copilot owns source-attributed WorldOS definitions/read models; ChatGPT integrates canon, rules, adventure, UI, and art; player retains choice/progression/release authority.
+- No tests executed for this documentation-only contract. Next: request Copilot to map its proposed pattern onto actual existing schemas and provide one compatible synthetic entity/patch/connection fixture; request Gemini to confirm event ledger/patch compatibility.
