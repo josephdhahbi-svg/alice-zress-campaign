@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_7",
+  "setting": "Wildspace",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_061",
+      "title": "The Drifting Lighthouse",
+      "giver": "Captain Lio the navigator",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 19,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Captain Lio the navigator needs adventurers: relight a floating beacon.",
+      "objectives": [
+        "Meet Captain Lio the navigator and verify the request",
+        "Relight a floating beacon",
+        "Investigate the complication: Its light attracts void scavengers",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its light attracts void scavengers",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_062",
+      "title": "The Lost Cargo Manifest",
+      "giver": "Pexa the quartermaster",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 19,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Pexa the quartermaster needs adventurers: reconcile missing cargo.",
+      "objectives": [
+        "Meet Pexa the quartermaster and verify the request",
+        "Reconcile missing cargo",
+        "Investigate the complication: The crates contain emergency medicine",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The crates contain emergency medicine",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_063",
+      "title": "The Silent Astrolabe",
+      "giver": "Jori the astronomer",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 19,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Jori the astronomer needs adventurers: repair a navigation instrument.",
+      "objectives": [
+        "Meet Jori the astronomer and verify the request",
+        "Repair a navigation instrument",
+        "Investigate the complication: It points toward a forgotten home",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "It points toward a forgotten home",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_064",
+      "title": "The Meteor Garden",
+      "giver": "Suri the botanist",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 19,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Suri the botanist needs adventurers: recover seeds from a meteor field.",
+      "objectives": [
+        "Meet Suri the botanist and verify the request",
+        "Recover seeds from a meteor field",
+        "Investigate the complication: The seeds are alive and frightened",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The seeds are alive and frightened",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_065",
+      "title": "The Starwhale's Path",
+      "giver": "Mira the sailor",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 20,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Mira the sailor needs adventurers: protect a migrating starwhale.",
+      "objectives": [
+        "Meet Mira the sailor and verify the request",
+        "Protect a migrating starwhale",
+        "Investigate the complication: Hunters misread its signals as attacks",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Hunters misread its signals as attacks",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_066",
+      "title": "The Broken Air Bell",
+      "giver": "Tovan the engineer",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 20,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Tovan the engineer needs adventurers: restore a ship's atmosphere warning.",
+      "objectives": [
+        "Meet Tovan the engineer and verify the request",
+        "Restore a ship's atmosphere warning",
+        "Investigate the complication: The sensor was sabotaged to hide a leak",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The sensor was sabotaged to hide a leak",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_067",
+      "title": "The Moonbridge Relay",
+      "giver": "Iven the technician",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 20,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Iven the technician needs adventurers: reconnect a damaged relay.",
+      "objectives": [
+        "Meet Iven the technician and verify the request",
+        "Reconnect a damaged relay",
+        "Investigate the complication: An ion storm has trapped the maintenance crew",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "An ion storm has trapped the maintenance crew",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_068",
+      "title": "The Empty Dock",
+      "giver": "Cora the dockmaster",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 21,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Cora the dockmaster needs adventurers: locate a missing shuttle.",
+      "objectives": [
+        "Meet Cora the dockmaster and verify the request",
+        "Locate a missing shuttle",
+        "Investigate the complication: Its crew rescued stranded travelers",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its crew rescued stranded travelers",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_069",
+      "title": "The Astral Post",
+      "giver": "Wynn the courier",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 21,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Wynn the courier needs adventurers: deliver messages across the void.",
+      "objectives": [
+        "Meet Wynn the courier and verify the request",
+        "Deliver messages across the void",
+        "Investigate the complication: One message is addressed to the sender's future self",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "One message is addressed to the sender's future self",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_070",
+      "title": "The Compass That Lies",
+      "giver": "Fenn the pilot",
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 21,
+      "trilogy": 7,
+      "levelRange": [
+        20,
+        25
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Fenn the pilot needs adventurers: test a suspicious compass.",
+      "objectives": [
+        "Meet Fenn the pilot and verify the request",
+        "Test a suspicious compass",
+        "Investigate the complication: Its readings change near a planar fracture",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its readings change near a planar fracture",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}
