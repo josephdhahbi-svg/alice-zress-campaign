@@ -49,6 +49,8 @@ jobs:
         run: node --check server.js
       - name: Install Node backend dependencies
         run: npm install --no-audit --no-fund
+      - name: Verify canon invariants and SQLite migration v3
+        run: node --test backend/alice-canon-registry.test.js backend/quest-core.test.js backend/migrations-v3.test.js
       - name: Test authenticated SQLite server
         run: node --test backend/server.integration.test.js
       - name: Test campaign WebSocket isolation
