@@ -17,5 +17,24 @@
     "canon_status": "official",
     "continuity_status": "pending_review",
     "notes": "Check construction, leadership, destruction and access by date."
+  },
+  {
+    "id": "pit-of-ghaunadaur",
+    "name": "Pit of Ghaunadaur",
+    "category": "location",
+    "era": "campaign era TBD",
+    "canon_date_dr": "unknown",
+    "campaign_timestamp": "Book 1 / opening location",
+    "location": "Underdark; exact relationship to Menzoberranzan and Promenade requires scene-level continuity review",
+    "plane": "Material Plane / planar anomaly status unresolved",
+    "earliest_available": "Book 1 opening; exact historical date unverified",
+    "latest_available": "unknown",
+    "duration": "not_applicable",
+    "activation_time": "not_applicable",
+    "prerequisites": [],
+    "source": "Moonveil campaign homebrew; source/canon status requires verification",
+    "canon_status": "homebrew",
+    "continuity_status": "pending_review",
+    "notes": "Opening location in Alice's custom origin. The infinite hallway and exact transit mechanism are homebrew until specified and tested."
   }
 ]
