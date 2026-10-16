@@ -1,7 +1,7 @@
 """Regression tests for the isolated campaign event ledger."""
 import sqlite3
 import unittest
-from campaign_store import initialize, append_event
+from campaign_store import initialize, append_event, create_campaign, campaign_snapshot
 
 class CampaignStoreTests(unittest.TestCase):
     def setUp(self):
@@ -35,6 +35,24 @@ class CampaignStoreTests(unittest.TestCase):
     def test_payload_validation(self):
         with self.assertRaises(ValueError):
             append_event(self.db,"alice","e1","k1","CHOICE_RESOLVED",[],0)
+    def test_snapshot_and_cursor(self):
+        append_event(self.db,"alice","e1","k1","CHOICE_RESOLVED",{"choice":"LG"},0)
+        append_event(self.db,"alice","e2","k2","CHOICE_RESOLVED",{"choice":"NG"},1)
+        full = campaign_snapshot(self.db,"alice")
+        self.assertEqual(full["revision"],2)
+        self.assertEqual([e["payload"]["choice"] for e in full["events"]],["LG","NG"])
+        later = campaign_snapshot(self.db,"alice",after_revision=1)
+        self.assertEqual([e["event_id"] for e in later["events"]],["e2"])
+    def test_campaign_creation_and_isolation(self):
+        create_campaign(self.db,"second")
+        append_event(self.db,"second","e2","k2","CHOICE_RESOLVED",{},0)
+        self.assertEqual(campaign_snapshot(self.db,"alice")["events"],[])
+        self.assertEqual(campaign_snapshot(self.db,"second")["revision"],1)
+        with self.assertRaises(sqlite3.IntegrityError):
+            create_campaign(self.db,"second")
+    def test_invalid_cursor(self):
+        with self.assertRaises(ValueError):
+            campaign_snapshot(self.db,"alice",True)
     def test_invalid_revision(self):
         with self.assertRaises(ValueError):
             append_event(self.db,"alice","e1","k1","CHOICE_RESOLVED",{},True)
