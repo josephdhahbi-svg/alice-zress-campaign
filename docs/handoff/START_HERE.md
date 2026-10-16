@@ -301,3 +301,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - CI run `38831847259` for `76081f1` passed; run `38831869675` for `9ebdc3b` was in progress at last check, so the new ten-test suite is not yet declared passing.
 - No real Gemini ledger code or Copilot source-attributed geography was included in this turn. Ledger remains unimplemented here; these validators are design-time checks only and do not apply patches, write events, unlock routes, or mutate saves.
 - Alice remains Level 1, gifts Shield/Acid Splash/Light, five choices unselected. Unknown U01 date/location/causality/traversal remain unresolved.
+
+## Directive 21 — proposed cosmic-to-U01 causal chain (2026-10-16)
+- `b49ed2d` added `data/proposed_cosmic_to_u01_causal_chain_v1.json`, a design-only chain: Pitch disturbance → proposed enclave collapse → proposed Underdark hazards → locked Alice investigation opportunity. All events are `unverified`, dates/timeline/location/book/traversal remain null, and state effect is none.
+- `21f8d76` added `tests/test_proposed_cosmic_u01_causal_chain.py` (6 tests) for read-only status, unknown dates, reference integrity, reciprocal cause/consequence links, and the confirmed-choice prerequisite.
+- CI for `21f8d76` is pending at time of this note; do not claim the six tests pass until the run completes.
+- Actual Gemini backend paths such as `backend/db/database.js`, `backend/services/patchApplicationService.js`, and `backend/services/ledgerWriter.js` were checked and returned NOT_FOUND on the target branch. Thus no real patch ledger/concurrency implementation was available to integrate; continue treating proposed validators as design-time only.
+- `data/transport_geography_research_queue_v1.json` exists but location verification remains pending; no source-attributed Copilot geography delivery was provided in this turn.
+- Existing CI run `38831869675` passed for `9ebdc3b`; run `38831898813` passed for `b23e05e`. No new tests were executed locally; rely on GitHub Actions once the current run completes.
