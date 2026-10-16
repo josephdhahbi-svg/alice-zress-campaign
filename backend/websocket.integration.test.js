@@ -18,7 +18,7 @@ async function port(){
 function connect(url,session){
   return new Promise((resolve,reject)=>{
     const ws=new WebSocket(url,["moonveil."+session]);
-    ws.initialMessage=message(ws);
+    ws.initialMessage=new Promise(resolve=>ws.once("message",buf=>resolve(JSON.parse(String(buf)))));
     const timer=setTimeout(()=>{ws.terminate();reject(new Error("WebSocket timeout"));},3000);
     ws.once("open",()=>{clearTimeout(timer);resolve(ws);});
     ws.once("error",e=>{clearTimeout(timer);reject(e);});
