@@ -257,3 +257,12 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - CI **PASSED**: Validate campaign records `38929425056`; Omniversal verification `38929425122`.
 - Test suite `backend/chronal-travel-api.integration.test.js` commit `4b5c20afe40e3afcfcc31c4d24578b6f7d7ea370` covers signed DM-only travel, character owner reads, cross-campaign denial, replay/conflict, invalid year, no artifacts.
 - Charter remains 18/100. No automatic time travel, no live UI session, and no Alice state mutation.
+
+## 2026-10-16 — Gemini three-file integration review and dialogue vertical slice
+Reviewed three user-supplied Gemini Markdown payloads proposing v10–v15 SQL, a replacement Rabbit Hole module, dialogue, crafting and static cinematic HTML. These submissions are largely duplicates, not 100 independently implemented tasks. **Rejected direct migration/replacement**: caller-supplied `portalKeyVerified` bypass, destructive `INSERT OR REPLACE` Alice reset, default 100 gold for every wallet, non-campaign-scoped crafting, and inert UI buttons. Existing migrations v1–v9, chronal travel and Alice progress remain authoritative.
+Approved and adapted dialogue concept:
+- `backend/dialogue-engine.js` `e98307f80000fa8dbea5443e300740786eaf6eae`: five canonical ordered choices, original opening scene, immutable metadata, explicit no-side-effects DM preview.
+- `backend/dialogue-engine.test.js` `68ab2397199af072b4161a8bd6df5572f7458531`: order, invalid choice, unknown scene, fail-closed behavior.
+- `server.js` `4475a38f2db8efb4201becce1ce266f83d0a1256`: signed campaign member GET dialogue and POST preview routes.
+- `backend/dialogue-api.integration.test.js` `51376712d4902fefff00b6d0a8daa11ea3250601`: signed session, member isolation, choice order, zero mutation.
+CI outcome must be checked before declaring verification. This is a **read-only dialogue slice**, not a full quest consequence engine. Charter remains 18/100 until evidence supports closing a specific task.
