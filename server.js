@@ -12,6 +12,7 @@ const { createBackupService } = require("./backend/backup-service");
 const { resolveD20 } = require("./backend/dice-rules");
 const { createFactionDisputeEngine } = require("./backend/faction-dispute-engine");
 const { createLivingWorldEngine } = require("./backend/living-world-pulse");
+const { createCombatEngine } = require("./backend/combat-engine");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -51,6 +52,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   db.exec(require("./backend/faction-pulse").CREATE_TABLES);
   const disputes = createFactionDisputeEngine(db);
   const livingWorld = createLivingWorldEngine(db);
+  const combat = createCombatEngine(db);
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
@@ -287,6 +289,42 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     if(result.error)return res.status(result.status).json({success:false,...result});
     if(!result.duplicate)broadcastCampaign(campaignId,{type:"CAMPAIGN_EVENT",campaignId,revision:result.revision,eventType});
     res.status(result.status).json({success:true,campaignId,...result});
+  });
+  // Combat is DM-authoritative. Signed actor sessions are required; client actor IDs are ignored.
+  app.post("/api/campaigns/:campaignId/combat/encounters",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const {encounterId,combatants}=req.body||{};
+      const result=combat.createEncounter({campaignId,encounterId,actorId,combatants});
+      return res.status(201).json({success:true,encounter:result});
+    }catch(error){
+      if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
+      return res.status(409).json({success:false,error:"ENCOUNTER_CONFLICT"});
+    }
+  });
+  app.post("/api/campaigns/:campaignId/combat/encounters/:encounterId/actions",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    const campaignId=req.params.campaignId,encounterId=req.params.encounterId,actorId=req.auth.actorId;
+    if(!id(campaignId)||!id(encounterId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const {actionId,kind,targetId,amount,condition}=req.body||{};
+      const result=combat.applyAction({campaignId,encounterId,actorId,actionId,kind,targetId,amount,condition});
+      return res.status(result.duplicate?200:201).json({success:true,encounter:result});
+    }catch(error){
+      if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
+      return res.status(409).json({success:false,error:"COMBAT_CONFLICT"});
+    }
+  });
+  app.get("/api/campaigns/:campaignId/combat/encounters/:encounterId",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    const campaignId=req.params.campaignId,encounterId=req.params.encounterId;
+    if(!id(campaignId)||!id(encounterId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    const encounter=combat.getEncounter(campaignId,encounterId);
+    if(!encounter)return res.status(404).json({success:false,error:"NOT_FOUND"});
+    return res.json({success:true,encounter});
   });
   // Living World endpoints: signed DM actor identity only; never trust a supplied actor ID.
   // No cron or automatic DR advancement. World factions/territories must be provisioned separately.
