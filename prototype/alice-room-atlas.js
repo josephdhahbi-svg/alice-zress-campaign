@@ -265,7 +265,20 @@ async function refreshChronologicalMaps(){
     }catch(error){if(epoch===sessionEpoch)hooks.textContent=error.message}
     finally{button.disabled=false}
    });
-   card.append(title,grid,legend,date,button,hooks);root.append(card);
+   const encounterButton=document.createElement("button");encounterButton.className="mv-choice";encounterButton.type="button";encounterButton.textContent="Roll random encounter / mimic";
+   const encounterInfo=document.createElement("p");
+   encounterButton.addEventListener("click",async()=>{
+    encounterButton.disabled=true;
+    try{
+     const response=await fetch(base+"/"+encodeURIComponent(map.id)+"/encounters/preview",{method:"POST",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify({era:byId("map-era").value,level:Number(byId("map-level").value),visitSequence:Number(byId("map-visit").value),seed:"moonveil-"+String(byId("map-visit").value)}),credentials:"omit",cache:"no-store"});
+     const data=await response.json();if(epoch!==sessionEpoch)return;
+     if(!response.ok)throw Error(data.error||"Encounter unavailable");
+     const p=data.preview;
+     encounterInfo.textContent=p.encounter?p.encounter.kind+" — "+p.encounter.name+" at "+p.encounter.location+" · Potential loot: "+p.encounter.lootCandidates.join(", ")+" · DM approval required.":"No encounter on this roll.";
+    }catch(error){if(epoch===sessionEpoch)encounterInfo.textContent=error.message}
+    finally{encounterButton.disabled=false}
+   });
+   card.append(title,grid,legend,date,button,hooks,encounterButton,encounterInfo);root.append(card);
   }
   byId("maps-status").textContent=data.maps.length+" grid maps loaded. Returning is a DM-reviewed preview, not time travel.";
  }catch(error){if(epoch===sessionEpoch)byId("maps-status").textContent=error.message}
