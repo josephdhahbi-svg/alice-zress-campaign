@@ -136,3 +136,12 @@ Current technical decision: treat Flutter + Node.js + SQLite WAL as the target a
 
 ## Newly created component records
 The first batch creates structured "Lego" records rather than only brainstorming prose. Next steps are to extend the validator for uniqueness/references, run it against every data JSON file, add acceptance criteria and tests to each component, and connect the five-choice Book 1 slice to stable book and scene IDs.
+
+
+## Connected story and administration records
+- `data/setup_payoffs.json` now records six proposed cross-book setup/payoff links: the Lens, U01 packets, Guvner Axioms, Infinite Hallway, expanding Mists, and Lord Car.
+- `data/decisions.json` records four unresolved architecture decisions: traversal structure, foundational titles, level model, and software-stack implementation status.
+- `docs/project-inventory.md` documents inspected repository assets and gaps.
+- `docs/task-status.md` tracks the 100-task work order using evidence-based status labels.
+- `scripts/validate.py` now has dedicated profiles for lore records, relationship edges, story phases, setup/payoff records, decisions, and the component registry. It also checks that setup/payoff records reference known book IDs.
+- A structural validation pass against the current JSON returned 12 data files, 63 records, and zero issues in the checks mirrored during this review. This was not a local execution of the Python validator or a verified GitHub Actions run.
