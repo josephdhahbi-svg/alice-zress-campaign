@@ -1,0 +1,201 @@
+{
+  "schema_version": "0.1.0",
+  "description": "Reusable Moonveil development components. Planning metadata only; statuses do not claim implementation.",
+  "status_values": [
+    "LOCKED_CANON",
+    "WORKING_CANON",
+    "PROPOSED",
+    "SOURCE_CHECK_REQUIRED",
+    "RULES_CHECK_REQUIRED",
+    "IMPLEMENTATION_TODO",
+    "BLOCKED",
+    "CONFLICT",
+    "TESTED",
+    "DEPRECATED"
+  ],
+  "components": [
+    {
+      "id": "COMP-BOOK-CATALOG",
+      "name": "30-Book Catalog",
+      "type": "data",
+      "priority": "P0",
+      "status": "WORKING_CANON",
+      "dependencies": [],
+      "purpose": "Stable book IDs, trilogy mapping, approved titles, and continuity status.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-CANON-LEDGER",
+      "name": "Canon Decision Ledger",
+      "type": "administration",
+      "priority": "P0",
+      "status": "IMPLEMENTATION_TODO",
+      "dependencies": [
+        "COMP-BOOK-CATALOG"
+      ],
+      "purpose": "Record decisions, source evidence, conflicts, approvals, and superseded variants.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-CHRONOLOGY",
+      "name": "Chronology and Geography",
+      "type": "lore",
+      "priority": "P0",
+      "status": "IMPLEMENTATION_TODO",
+      "dependencies": [
+        "COMP-CANON-LEDGER"
+      ],
+      "purpose": "Separate historical DR dates from campaign sequence; validate era, location, plane, travel, and availability.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-LOOP-LEDGER",
+      "name": "Airtight Loop Ledger",
+      "type": "narrative",
+      "priority": "P1",
+      "status": "PROPOSED",
+      "dependencies": [
+        "COMP-BOOK-CATALOG",
+        "COMP-CHRONOLOGY"
+      ],
+      "purpose": "Connect early setup to later payoff and record paradox risks.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-U01-PACKET-LEDGER",
+      "name": "U01 Packet Ledger",
+      "type": "rules",
+      "priority": "P1",
+      "status": "IMPLEMENTATION_TODO",
+      "dependencies": [
+        "COMP-LOOP-LEDGER"
+      ],
+      "purpose": "Record packet grants, spending, reversals, costs, and final reconciliation.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-LENS-LIFECYCLE",
+      "name": "Weeping Obsidian Lens Lifecycle",
+      "type": "artifact",
+      "priority": "P1",
+      "status": "PROPOSED",
+      "dependencies": [
+        "COMP-CHRONOLOGY",
+        "COMP-LOOP-LEDGER"
+      ],
+      "purpose": "Track origin, limitations, appearances, owners, transformations, and payoff.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-GUVNER-AXIOMS",
+      "name": "Guvner Universal Axioms",
+      "type": "rules",
+      "priority": "P1",
+      "status": "PROPOSED",
+      "dependencies": [
+        "COMP-CHRONOLOGY"
+      ],
+      "purpose": "Define cosmic-law jurisdiction, loopholes, costs, and limitations.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-CHOICE-ENGINE",
+      "name": "Five-Choice Scene Engine",
+      "type": "gameplay",
+      "priority": "P2",
+      "status": "IMPLEMENTATION_TODO",
+      "dependencies": [
+        "COMP-BOOK-CATALOG"
+      ],
+      "purpose": "Present five meaningful options and log choices and consequences.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-DICE-ENGINE",
+      "name": "Dice Check Engine",
+      "type": "gameplay",
+      "priority": "P2",
+      "status": "IMPLEMENTATION_TODO",
+      "dependencies": [
+        "COMP-CHOICE-ENGINE"
+      ],
+      "purpose": "Separate animation from rule result; record DC, modifiers, roll, outcome, and timestamp.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-SAVE-SYNC",
+      "name": "Save and Sync",
+      "type": "software",
+      "priority": "P1",
+      "status": "IMPLEMENTATION_TODO",
+      "dependencies": [
+        "COMP-BOOK-CATALOG"
+      ],
+      "purpose": "Persist campaign state safely, validate API requests, queue retries, and hydrate saves.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-LIVING-WORLD",
+      "name": "Living World State",
+      "type": "simulation",
+      "priority": "P3",
+      "status": "PROPOSED",
+      "dependencies": [
+        "COMP-CHRONOLOGY",
+        "COMP-CHOICE-ENGINE"
+      ],
+      "purpose": "Track culture, politics, trade, resources, safety, trust, and reactive world changes.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    },
+    {
+      "id": "COMP-QUALITY-GATES",
+      "name": "Quality Gates",
+      "type": "testing",
+      "priority": "P1",
+      "status": "IMPLEMENTATION_TODO",
+      "dependencies": [
+        "COMP-CANON-LEDGER",
+        "COMP-CHRONOLOGY",
+        "COMP-SAVE-SYNC"
+      ],
+      "purpose": "Validate schemas, references, chronology, mechanics, migrations, and save/restore.",
+      "dependents": [],
+      "acceptance_criteria": [],
+      "tests": [],
+      "notes": "Planning record; implementation status must be confirmed by tests."
+    }
+  ]
+}
