@@ -11,7 +11,7 @@ test("signed ascension catalog: membership, isolation, unknown path and no grant
   const admin={Authorization:"Bearer "+token,"Content-Type":"application/json"};
   const post=async(url,headers,body)=>{
    const response=await fetch(base+url,{method:"POST",headers,body:JSON.stringify(body)});
-   return {status:response.status,body:await response.json()};
+   const raw=await response.text();return {status:response.status,body:raw.startsWith("{")?JSON.parse(raw):raw};
   };
   const get=async(url,headers)=>{
    const response=await fetch(base+url,{headers});
