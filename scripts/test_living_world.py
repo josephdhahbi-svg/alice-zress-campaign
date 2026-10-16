@@ -68,12 +68,13 @@ def main():
         deck_html = deck.read_text(encoding="utf-8")
         for marker in ('id="macros"', 'id="glyphActions"', 'id="journal"',
                        'id="export"', 'id="reset"', 'id="clear"',
+                       'id="rollModifier"', 'id="rollDC"',
                        'moonveil-command-deck-pins-v1', 'localStorage',
                        'ROLL_INITIATIVE', 'OPEN_TACTICAL_MAP',
                        'ATTUNE_ALTAR', 'SUPPORT', 'ATTACK',
                        'DEFEND', 'CONTROL', 'SCAN'):
             check(marker in deck_html, f"command deck missing {marker}")
-        for marker in ('preview only', 'implemented=new Set', 'eligibleSupport', 'eligibleAttack', 'new Set(p.filter'):
+        for marker in ('preview only', 'implemented=new Set', 'eligibleSupport', 'eligibleAttack', 'new Set(p.filter', 'Roll rejected:', 'SUCCESS', 'FAILURE'):
             check(marker in deck_html, f"command deck safety guard missing {marker}")
         if tactical.exists():
             check('tactical-command-deck.html' in battle,
