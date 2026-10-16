@@ -314,3 +314,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - GitHub Actions runs `38832827842` and `38832810466` failed at registry validation because `data/proposed_cosmic_to_u01_causal_chain_v1.json` was not registered as an object document. Logs confirmed the exact error: `expected list of entity records (register new registry explicitly)`.
 - `7cc2e59` registers the proposed causal-chain document with `scripts/validate.py` and checks that it remains `PROPOSED_CAUSAL_CHAIN_READ_ONLY`, `state_effect: none`, and uses an allowed canon status.
 - New CI runs `38832901088` and `38832901124` are queued; await results before declaring the fix verified.
+
+## Directive 22 — causal graph validation (2026-10-16)
+- Confirmed CI runs `38832901088` and `38832901124` both succeeded for commit `7cc2e59`; run `38832921984` succeeded for handoff commit `8706457`. The initial causal-chain commit had failed because the validator did not recognize the object-shaped document; the registration fix resolved that failure.
+- `4353283` added `validate_causal_chain()` to `moonveil_sphere/integration/contract_validation.py`. It checks event ID uniqueness, allowed canon statuses, cause/consequence/prerequisite references, reciprocal causal edges, player-choice prerequisite gating, unknown date consistency, and no state effects.
+- `1d3d534` adds four causal-chain integration tests (valid chain, unknown reference, non-reciprocal link, forbidden state effect). GitHub Actions run `38833183222` is queued; tests for this newest commit are not yet verified.
+- Backend status unchanged: the checked Gemini patch/ledger source paths returned 404/NOT_FOUND. No operational immutable ledger or optimistic concurrency implementation was integrated.
+- Geography status unchanged: candidate locations/routes remain research-only; no source-attributed Copilot delivery in this session.
+- Alice remains Level 1 with Shield/Acid Splash/Light and five choices unselected. No save changes or route unlocks.
