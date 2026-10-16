@@ -340,3 +340,13 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Gemini backend files checked at `backend/db/database.js`, `backend/services/patchApplicationService.js`, `backend/services/ledgerWriter.js`, and `backend/routes/patches.js` remain NOT_FOUND. No operational immutable event ledger or concurrency implementation was available to review.
 - Copilot geography queue remains candidate-only; exact date, location, and route availability unresolved. No image binary was added in this step; Visual Codex asset file paths remain pending.
 - Alice remains Level 1, with Shield/Acid Splash/Light and five choices unselected. No save changes or route unlocks.
+
+## Directive 25 — CI verified and causal chain UI checked (2026-10-16)
+- Verified GitHub Actions run `38833679165` completed successfully for commit `5a09d1f`; the U01 contract regression assertions for the causal-chain panel passed. https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38833679165
+- Verified run `38833708682` completed successfully for handoff commit `fd85927`. https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38833708682
+- `scripts/validate.py` already includes the proposed causal-chain document and validates unique event IDs, canon statuses, event references, reciprocal causal links, player-choice gate, read-only status, and unknown-date consistency.
+- Browser limitation: the current CI confirms static/unit contracts, not a real browser session. No browser-based end-to-end test was executed.
+- Gemini backend: checked `backend/db/database.js`, `backend/services/patchApplicationService.js`, `backend/services/ledgerWriter.js`, and `backend/routes/patches.js`; all returned NOT_FOUND on this branch. Operational ledger/concurrency remains blocked pending actual source delivery.
+- Copilot geography: `data/transport_geography_research_queue_v1.json` remains research-only; no source-attributed confirmation for the proposed enclave impact site or Skullport-to-Promenade route. Routes remain locked.
+- Visual Codex: UI still contains placeholder art; no actual image binary committed in this step.
+- Alice remains Level 1, with Shield/Acid Splash/Light and five choices unselected; no state mutation or route unlock.
