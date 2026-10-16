@@ -293,3 +293,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - GitHub Actions runs for the package helper commits passed: `38831331270` for `15029e2`, `38831324546` for `2b1d135`, and `38831318762` for `53ae1db`; the run for `c326a94` (`38831349140`) was queued at last check. Do not claim the new eight-test suite passed until that run completes.
 - No SQLite ledger engine implemented: the supplied snippet does not enforce append-only immutability, lacks event schema/foreign keys/concurrency controls, and in-memory SQLite does not demonstrate WAL behavior. Defer until secure transactional design is ready.
 - Alice remains Level 1, gifts Shield/Acid Splash/Light, five choices unselected. No save mutations or route unlocks.
+
+## Directive 20 — spherical-space-time / LEGO validation integration (2026-10-16)
+- Confirmed GitHub Actions run `38831349140` for `c326a94` completed successfully. https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38831349140
+- `76081f1` added `moonveil_sphere/integration/contract_validation.py`, a pure read-only validator for the four space-time axes, unknown-date consistency, traversal 1..7, book B01..B30, entity canon status, patch base version/protected fields, and connection endpoints.
+- `95db4e8` added integration package initializer; `9ebdc3b` added `tests/test_spherical_lego_integration.py` with 10 tests for U01 contract validity, unknown dates, traversal/book bounds, entity shape, stale patch rejection, protected state fields, missing connection targets, and Alice's protected state.
+- CI run `38831847259` for `76081f1` passed; run `38831869675` for `9ebdc3b` was in progress at last check, so the new ten-test suite is not yet declared passing.
+- No real Gemini ledger code or Copilot source-attributed geography was included in this turn. Ledger remains unimplemented here; these validators are design-time checks only and do not apply patches, write events, unlock routes, or mutate saves.
+- Alice remains Level 1, gifts Shield/Acid Splash/Light, five choices unselected. Unknown U01 date/location/causality/traversal remain unresolved.
