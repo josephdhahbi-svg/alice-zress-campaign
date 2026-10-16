@@ -5,6 +5,7 @@ on:
       - 'data/**'
       - 'scripts/**'
       - 'game/**'
+      - 'assets/**'
       - 'backend/**'
       - 'server.js'
       - 'package.json'
@@ -42,6 +43,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Validate Visual Codex art manifest
+        run: node scripts/validate-art.js && node --test backend/art-validation.test.js backend/art-catalog.test.js
       - name: Check server syntax
         run: node --check server.js
       - name: Install Node backend dependencies
