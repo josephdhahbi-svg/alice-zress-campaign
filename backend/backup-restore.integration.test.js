@@ -39,3 +39,22 @@ test("WAL online backup restores campaign events and migrations",async()=>{
   restored?.close();db.close();fs.rmSync(directory,{recursive:true,force:true});
  }
 });
+
+test("online backup includes committed writes made while snapshot is requested",async()=>{
+ const directory=fs.mkdtempSync(path.join(os.tmpdir(),"moonveil-live-backup-"));
+ const db=new Database(path.join(directory,"live.sqlite"));
+ let restored;
+ try{
+  db.pragma("journal_mode = WAL");
+  db.exec("CREATE TABLE journal (id INTEGER PRIMARY KEY, text TEXT NOT NULL)");
+  db.prepare("INSERT INTO journal(text) VALUES(?)").run("before snapshot");
+  const service=createBackupService(db,{directory:path.join(directory,"backups"),logger:{info(){},error(){}}});
+  const pending=service.backupNow();
+  const duplicate=await service.backupNow();
+  assert.deepEqual(duplicate,{skipped:true,reason:"IN_PROGRESS"});
+  const snapshot=await pending;
+  restored=new Database(snapshot.path,{readonly:true,fileMustExist:true});
+  assert.equal(restored.pragma("integrity_check",{simple:true}),"ok");
+  assert.equal(restored.prepare("SELECT text FROM journal").get().text,"before snapshot");
+ }finally{restored?.close();db.close();fs.rmSync(directory,{recursive:true,force:true})}
+});
