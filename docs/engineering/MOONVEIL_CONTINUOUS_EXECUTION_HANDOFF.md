@@ -85,3 +85,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - **No artifact reward system activated**: v46 artifact list remains candidate-only. Completion returns `awardedArtifacts: []`. No Alice progression or loot changed.
 - **CI pending for latest batch**. Maintain 12/100 verified until GitHub Actions succeeds and charter acceptance is checked.
 - Known gap: full quest catalog/required objective sets are not yet trusted server-defined records; DM approval payload currently defines required set. Future quest definitions must prevent deliberately incomplete approval sets.
+
+## 2026-10-16 — Authoritative quest catalog implementation
+- `backend/quest-evidence-engine.js` commit `cbcbc25c0ad291be44f19e1740d554fa603a5e77` creates campaign-scoped immutable DM-registered quest definitions; objective verification rejects unknown quest/objective and completion checks the full registered required-objective set before accepting journal approval. Existing quest rewards remain disabled.
+- `server.js` commit `09a3e325909c112a1e2cb97c34992d34ae5b3b55` adds signed DM-only `POST /api/campaigns/:campaignId/quests/catalog`. Registration is idempotent only for identical objective sets.
+- Updated `backend/quest-evidence-engine.test.js` commit `36d6ebb1ca44b0fe3b84fc9709d7a25a0cb4e3b6` and `backend/quest-evidence-api.integration.test.js` commit `70ae79bee99fd85d353da70ae4c19385b2d1dac2` to require catalog registration and test immutability and player denial.
+- CI runs `38921730562` and `38921730504` were in progress when written; verify and fix before closing T023. Current verified baseline 15/100.
+- Next: catalog lifecycle/versioning, audit journal for definitions, secure reward catalog with explicit approval, combat resources.
