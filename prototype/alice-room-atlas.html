@@ -41,7 +41,7 @@ function showRoom(room){
  byId("choice-status").textContent="Read-only preview; movement and rewards remain locked.";
 }
 byId("connect").addEventListener("submit",async event=>{
- event.preventDefault();reset();const campaign=byId("campaign").value.trim(),token=byId("token").value;
+ event.preventDefault();const campaign=byId("campaign").value.trim(),token=byId("token").value;reset();
  if(!/^[A-Za-z0-9:_-]{1,100}$/.test(campaign)||!token){status("Invalid campaign ID or missing token.");return}
  session={campaign,token};status("Loading room atlas…");
  try{const data=await api("rooms");if(!Array.isArray(data.rooms))throw Error("Invalid room response");
