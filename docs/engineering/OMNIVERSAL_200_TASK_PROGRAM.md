@@ -1,6 +1,6 @@
 # Omniversal VTT — 200-task evidence-based development program
 
-**State:** Planning backlog. No task below is claimed complete by this document.
+**State:** In progress. Only explicitly evidenced inspection tasks are marked passed; code changes remain unverified by runtime tests.
 
 **Execution policy:** Do not automatically run destructive operations, deploy, edit secrets, or restore production data. Execute allowlisted checks only. A status of PASSED requires test or review evidence, with commit SHA and timestamp. Do not equate an item in this document with an executable check. The current four-check runner remains separate until each task is implemented.
 
@@ -213,3 +213,11 @@
 
 ## Release decision
 A go/no-go decision must be based on actual test evidence, recovery validation, security review, and observed deployment status. The number of completed tasks alone is insufficient.
+
+## Execution checkpoint — 2026-10-16
+- GitHub branch: `feature/verified-automation-phase-a` (draft PR #2).
+- Implemented four-check runner, three runner unit tests, evidence-based post-execution audit, and five audit unit tests.
+- GitHub commit evidence: `0058f4379c4f45f963158b787340248ba00bfcc5`, `46d2ecba1cb40296427e14a1e04696f3e028afe5`, `73499cbc931d23777ea9b6ae792f3274fa409e22`, `5f6b134134ed6b1182840abc28aa5cecdda15645`.
+- Runtime tests: NOT RUN. Container git clone failed due DNS resolution of github.com; no successful CI test run observed.
+- No production deployment or production database access attempted.
+- Next: establish a runnable checkout or CI, run npm test and node automation_100_tasks.js, fix failures, then expand real checks.
