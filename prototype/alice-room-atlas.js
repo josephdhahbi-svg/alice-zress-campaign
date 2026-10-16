@@ -28,7 +28,7 @@ byId("connect").addEventListener("submit",async event=>{
  try{const data=await api("rooms");if(!Array.isArray(data.rooms))throw Error("Invalid room response");
  rooms=data.rooms;const root=byId("rooms");root.replaceChildren();
  rooms.forEach(room=>{const button=document.createElement("button");button.type="button";button.className="mv-choice";button.textContent=room.name+" · "+room.status;button.addEventListener("click",()=>showRoom(room));root.append(button)});
- status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;byId("dm-refresh").disabled=false;await refreshAiStatus();if(rooms.length)showRoom(rooms[0]);await refreshJournal();
+ status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;byId("dm-refresh").disabled=false;byId("quest-chains-refresh").disabled=false;await refreshAiStatus();if(rooms.length)showRoom(rooms[0]);await refreshJournal();
  }catch(error){reset();status(error.message)}
 });
 byId("disconnect").addEventListener("click",()=>{reset();status("Disconnected. Session cleared from this page.")});
@@ -171,3 +171,30 @@ async function refreshDmQueue(){
  }catch(error){if(epoch===sessionEpoch)byId("dm-status").textContent=error.message}
 }
 byId("dm-refresh").addEventListener("click",refreshDmQueue);
+
+async function refreshMultiverseQuestAtlas(){
+ if(!session)return;
+ const current=session,epoch=sessionEpoch,root=byId("quest-chains-list");
+ root.replaceChildren();byId("quest-chains-status").textContent="Loading multiverse quest chains…";
+ try{
+  const response=await fetch("/api/campaigns/"+encodeURIComponent(current.campaign)+"/quests/multiverse-chains",{
+   headers:{"Authorization":"Bearer "+current.token},cache:"no-store",credentials:"omit"
+  });
+  const data=await response.json();
+  if(epoch!==sessionEpoch)return;
+  if(!response.ok)throw Error(data.error||"Quest chains unavailable");
+  if(!Array.isArray(data.chains))throw Error("Invalid quest chain response");
+  for(const chain of data.chains){
+   const card=document.createElement("article");card.className="mv-journal-entry";
+   const title=document.createElement("h3");title.textContent=chain.title;
+   const meta=document.createElement("p");meta.textContent=chain.setting+" · "+chain.plane+" · Levels "+chain.minLevel+"–"+chain.maxLevel+" · "+chain.status+" · "+chain.canonStatus;
+   const gate=document.createElement("p");gate.textContent="Era: "+chain.era+" · DR: "+chain.drDate+" · DM approval required";
+   const stages=document.createElement("ol");
+   for(const stage of chain.stages){const item=document.createElement("li");item.textContent=stage.label;stages.append(item)}
+   const dependencies=document.createElement("p");dependencies.textContent="Prerequisites: "+(chain.prerequisites.join(", ")||"None")+" · Factions: "+chain.factions.join(", ");
+   card.append(title,meta,gate,stages,dependencies);root.append(card);
+  }
+  byId("quest-chains-status").textContent=data.chains.length+" quest chains · advisory previews only. No travel or rewards unlocked.";
+ }catch(error){if(epoch===sessionEpoch)byId("quest-chains-status").textContent=error.message}
+}
+byId("quest-chains-refresh").addEventListener("click",refreshMultiverseQuestAtlas);
