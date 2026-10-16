@@ -11,6 +11,8 @@ const { createSessionAuth } = require("./backend/session-auth");
 const { createBackupService } = require("./backend/backup-service");
 const { resolveD20 } = require("./backend/dice-rules");
 const { createFactionDisputeEngine } = require("./backend/faction-dispute-engine");
+const { createElderEyeSceneService } = require("./backend/elder-eye-scene-service");
+const elderEyeScenes = require("./data/scenes.json");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -49,6 +51,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   // Create faction base tables before disputes, then initialize pulse queries.
   db.exec(require("./backend/faction-pulse").CREATE_TABLES);
   const disputes = createFactionDisputeEngine(db);
+  const elderEye = createElderEyeSceneService(db,{scenes:elderEyeScenes});
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
@@ -124,6 +127,29 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const actorFor=req=>req.auth.kind==="actor"?req.auth.actorId:req.get("X-Moonveil-Actor");
   // Signed campaign member rolls are server-generated and recorded in the journal.
   // This is a development API, not a cryptographic fairness protocol.
+  // Server-authenticated Elder Eye choices; raw rolls are never accepted from clients.
+  app.get("/api/elder-eye/scenes/:sceneId",(req,res)=>{
+    const scene=elderEye.getScene(req.params.sceneId);
+    if(!scene)return res.status(404).json({success:false,error:"SCENE_NOT_FOUND"});
+    res.json({success:true,scene});
+  });
+  app.post("/api/campaigns/:campaignId/scenes/:sceneId/choices",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=actorFor(req);
+    const {eventId,expectedRevision,option,modifier}=req.body||{};
+    if(!id(campaignId)||!id(actorId)||!id(eventId)||
+       !Number.isSafeInteger(expectedRevision)||expectedRevision<0||
+       !Number.isInteger(option)||option<1||option>5||
+       !Number.isSafeInteger(modifier)||modifier< -10||modifier>20)
+      return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    const scene=elderEye.getScene(req.params.sceneId);
+    if(!scene)return res.status(404).json({success:false,error:"SCENE_NOT_FOUND"});
+    const result=elderEye.submit({campaignId,actorId,eventId,expectedRevision,
+      sceneId:scene.id,option,modifier,roll:crypto.randomInt(1,21)});
+    if(result.error)return res.status(result.status).json({success:false,...result});
+    if(!result.duplicate)broadcastCampaign(campaignId,{type:"CAMPAIGN_EVENT",campaignId,
+      revision:result.revision,eventType:"ELDER_EYE_CHOICE"});
+    return res.status(result.status).json({success:true,campaignId,...result});
+  });
   app.post("/api/campaigns/:campaignId/rolls", (req,res)=>{
     const campaignId=req.params.campaignId,actorId=actorFor(req);
     if(!id(campaignId)||!id(actorId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
