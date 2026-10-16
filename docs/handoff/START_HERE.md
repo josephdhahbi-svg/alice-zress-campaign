@@ -380,3 +380,10 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Both CI workflows then passed for `b8d243b`: `38834921210` (Python 3.11 and 3.12 registry, route, route-planner, and unit tests) and `38834921273` (JSON metadata and deterministic encounter validation). Links: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38834921210 and https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38834921273.
 - Level 21-30 entries are explicitly flagged for homebrew rules review. Cross-setting transitions and named campaign concepts remain unverified; no dates, routes, or rewards inferred. Three tiers remain separate from seven traversals.
 - Alice remains Level 1 with Shield, Acid Splash, Light and five unselected choices. No live save mutation.
+
+## Team Meeting 12 — U01 bundle contract validation
+- `94eede1` added `scripts/validate_u01_read_model.py` to fail closed on protected Alice identity/level/gifts, unknown DR, five disabled choices, locked routes, planned art, disabled capabilities, proposed encounter/casual-graph state safety, dangling event references, and HTML data-fetch hooks.
+- `19bd163` added `tests/test_u01_read_model_validator.py` with 10 synthetic positive/negative tests.
+- **10/10 tests passed** using a local reconstructed test workspace containing the same validator logic and synthetic fixtures. This does **not** establish the full repository suite passes or validate all live JSON files; run the committed validator against the complete checkout next.
+- Existing browser page already fetches `data/alice_u01_read_model_v1.json`, `data/encounter_netherese_enclave_collapse_v1.json`, and `data/proposed_cosmic_to_u01_causal_chain_v1.json`; page is read-only and choices disabled. Serve repository root over HTTP for fetch-based preview; opening with `file://` may block fetch.
+- Next: run `python scripts/validate_u01_read_model.py` and full `python -m unittest discover -s tests -v` from a complete checkout; test actual browsers/mobile; then add accessible error/loading states and secure read API only after Gemini auth/ledger contracts are verified. No player state changed.
