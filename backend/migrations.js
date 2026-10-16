@@ -51,6 +51,32 @@ CREATE TABLE IF NOT EXISTS vtt_character_artifacts (
  FOREIGN KEY(campaign_id,character_id) REFERENCES vtt_characters(campaign_id,character_id) ON DELETE CASCADE
 );
 CREATE INDEX IF NOT EXISTS idx_vtt_artifact_quest ON vtt_character_artifacts(campaign_id,character_id,source_quest_id);
+` },
+  { version:4, name:"versioned quest definitions and audit ledger", sql:`
+CREATE TABLE IF NOT EXISTS vtt_quest_catalog (
+ campaign_id TEXT NOT NULL REFERENCES vtt_campaigns(campaign_id) ON DELETE CASCADE,
+ quest_id TEXT NOT NULL,
+ required_objectives_json TEXT NOT NULL,
+ created_by_actor_id TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,quest_id),
+ FOREIGN KEY(campaign_id,created_by_actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
+CREATE TABLE IF NOT EXISTS vtt_quest_definition_audit (
+ campaign_id TEXT NOT NULL, quest_id TEXT NOT NULL,
+ revision INTEGER NOT NULL CHECK(revision > 0),
+ actor_id TEXT NOT NULL, event_type TEXT NOT NULL CHECK(event_type IN ('REGISTERED','APPROVED')),
+ objective_snapshot_json TEXT NOT NULL, occurred_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,quest_id,revision),
+ FOREIGN KEY(campaign_id,quest_id) REFERENCES vtt_quest_catalog(campaign_id,quest_id) ON DELETE CASCADE,
+ FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
+CREATE TABLE IF NOT EXISTS vtt_quest_approvals (
+ campaign_id TEXT NOT NULL, quest_id TEXT NOT NULL,
+ approved_by_actor_id TEXT NOT NULL, approved_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,quest_id),
+ FOREIGN KEY(campaign_id,quest_id) REFERENCES vtt_quest_catalog(campaign_id,quest_id) ON DELETE CASCADE,
+ FOREIGN KEY(campaign_id,approved_by_actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
 ` }
 ];
 function migrate(db) {
