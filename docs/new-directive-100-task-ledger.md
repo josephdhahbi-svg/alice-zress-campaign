@@ -202,3 +202,10 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Added campaign-scoped `POST /api/campaigns/:campaignId/rolls` endpoint: server-side crypto random die, authenticated member authorization, observer restriction, journal revision and idempotent retry (`7ff575c`); [CI 38847752196](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847752196) passed existing tests.
 - Extended HTTP integration test with roll replay, invalid input and outsider isolation (`e324d57`); newest CI outcome pending.
 - Documented development API and limitations (`e14abf9`). T017/T018/T032 partial; browser macro remains local-only, no server linkage or official combat effects. Production authentication/fairness remains unimplemented.
+
+## Batch 15 — secure client groundwork
+- Verified server roll integration tests: [CI 38847778798](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847778798), success at `e324d572`.
+- Created `game/roll-client.js`: explicit HTTPS/loopback URL validation, actor bearer token only in Authorization header, bounded dice parameters, no token persistence and no automatic retry after revision conflict (`6f669aa`).
+- Added client contract tests for requests, URL validation, invalid inputs and conflict reporting (`09fd2cd`), added dedicated CI step (`7349175`). [CI 38847910015](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847910015) passed.
+- Documented usage and blockers (`d3dc8a0`). The tactical command deck HTML was **not changed** this batch; UI wiring and cross-origin deployment are still unresolved. Do not claim end-to-end multiplayer dice are available on GitHub Pages.
+- T019 API contracts PARTIAL; T088 client API groundwork PARTIAL, not Flutter; T089 recovery PARTIAL.
