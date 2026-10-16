@@ -51,6 +51,17 @@ def main():
                        'state.book===30', 'state.traversal===7'):
             check(marker in page, f"adventure war room missing {marker}")
         check('adventure-war-room.html' in dashboard, "faction war dashboard missing adventure link")
+    tactical = ROOT / "game" / "tactical-war-table.html"
+    check(tactical.exists(), "tactical war table missing")
+    if tactical.exists():
+        battle = tactical.read_text(encoding="utf-8")
+        for marker in ('id="board"', 'id="units"', 'id="nextTurn"',
+                       'id="defend"', 'id="newBattle"', 'id="export"',
+                       'moonveil-tactical-war-v1', 'function attack(',
+                       'function advance(', 'function handle(', 'const queue=',
+                       'localStorage'):
+            check(marker in battle, f"tactical war table missing {marker}")
+        check('tactical-war-table.html' in page, "adventure war room missing tactical link")
     if errors:
         print("\n".join("FAIL: " + e for e in errors))
         print(f"FAILED: {len(errors)} Living World Engine check(s).")
