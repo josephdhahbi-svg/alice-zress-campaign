@@ -1,10 +1,10 @@
 "use strict";
 /** Proposed heroic lich ascension dossiers. No transformations are granted here. */
 const ASCENSIONS=Object.freeze([
+ {id:"alice_zress",name:"Alice Z'ress",patron:"Eilistraee",sacrifice:"FREEDOM",parasiteOrigin:"GHAUNADAUR_TOUCH_AT_RABBIT_HOLE_ARRIVAL",parasiteStatus:"NARRATIVE_ORIGIN_UNRESOLVED_MECHANICS",parasiteQuest:"CONFRONT_OR_REDEEM_PARASITE_DURING_ELDRITCH_LICH_ASCENSION",title:"The Sacrifice of Freedom",path:["ELDRITCH_LICH","ARCH_ELDRITCH_LICH","CHOSEN","CELESTIAL_ASPECT"],levelGate:17,canonStatus:"HOMEBREW_PROPOSAL",approved:false,
+  objectives:["Liberate captive souls without sacrificing innocents","Choose the cost with full knowledge and free will","Reject coercion and the temptation to dominate","Protect the newly freed through lasting action","Receive independently adjudicated divine recognition"]},
  {id:"moonveil_witch",name:"Moonveil Witch",patron:"Selune",sacrifice:"PROTECTION",title:"The Sacrifice of Protection",path:["LICH","ARCHLICH","CHOSEN","CELESTIAL_ASPECT"],levelGate:17,canonStatus:"HOMEBREW_PROPOSAL",approved:false,
   objectives:["Protect innocent lives from a catastrophic threat","Make an informed irreversible personal sacrifice","Survive the consequences without exploiting others","Demonstrate sustained compassion and restraint","Receive independently adjudicated divine recognition"]},
- {id:"alice_zress",name:"Alice Z'ress",patron:"Eilistraee",sacrifice:"FREEDOM",title:"The Sacrifice of Freedom",path:["ELDRITCH_LICH","ARCH_ELDRITCH_LICH","CHOSEN","CELESTIAL_ASPECT"],levelGate:17,canonStatus:"HOMEBREW_PROPOSAL",approved:false,
-  objectives:["Liberate captive souls without sacrificing innocents","Choose the cost with full knowledge and free will","Reject coercion and the temptation to dominate","Protect the newly freed through lasting action","Receive independently adjudicated divine recognition"]},
  {id:"starweave_necromancer",name:"Starweave Necromancer",patron:"Mystra",sacrifice:"KNOWLEDGE",title:"The Sacrifice of Knowledge",path:["LICH","ARCHLICH","CHOSEN","CELESTIAL_ASPECT"],levelGate:17,canonStatus:"HOMEBREW_PROPOSAL",approved:false,
   objectives:["Preserve endangered knowledge of the Weave","Sacrifice personal mortality to avert catastrophe","Prevent the protected knowledge from enabling atrocities","Teach and safeguard magic for the benefit of others","Receive independently adjudicated divine recognition"]}
 ].map(x=>Object.freeze({...x,path:Object.freeze(x.path),objectives:Object.freeze(x.objectives)})));
