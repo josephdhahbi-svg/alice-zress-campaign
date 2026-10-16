@@ -47,6 +47,28 @@ function createQuestEvidenceEngine(db){
   const owner=character.get(campaignId,characterId)?.owner_actor_id;
   if(!role||!owner||(role!=="DM"&&owner!==actorId))throw new Error("NOT_AUTHORIZED");
  };
+ const state=db.prepare("SELECT status,revision FROM vtt_quest_states WHERE campaign_id=? AND character_id=? AND quest_id=?");
+ const transition=db.transaction(({campaignId,characterId,questId,actorId,toStatus,reason,expectedRevision})=>{
+  check(campaignId,characterId,actorId);
+  if(!valid(questId)||!["BLOCKED","ACTIVE","FAILED"].includes(toStatus)||
+     !Number.isSafeInteger(expectedRevision)||expectedRevision<0||
+     typeof reason!=="string"||reason.trim().length<3||reason.length>500)
+   throw new TypeError("INVALID_TRANSITION");
+  if(member.get(campaignId,actorId)?.role!=="DM")throw new Error("DM_REQUIRED");
+  if(!catalog.get(campaignId,questId)||!approval.get(campaignId,questId))throw new Error("QUEST_NOT_APPROVED");
+  const previous=state.get(campaignId,characterId,questId);
+  const revision=previous?.revision??0;
+  if(revision!==expectedRevision)throw new Error("REVISION_CONFLICT");
+  if(previous?.status==="COMPLETE"||completed.get(campaignId,characterId,questId))throw new Error("QUEST_ALREADY_COMPLETE");
+  const allowed={NONE:["BLOCKED","ACTIVE"],BLOCKED:["ACTIVE","FAILED"],ACTIVE:["BLOCKED","FAILED"],FAILED:["ACTIVE"]};
+  if(!allowed[previous?.status??"NONE"].includes(toStatus))throw new Error("INVALID_STATE_EDGE");
+  const next=revision+1,now=new Date().toISOString();
+  db.prepare("INSERT INTO vtt_quest_states VALUES(?,?,?,?,?,?) ON CONFLICT(campaign_id,character_id,quest_id) DO UPDATE SET status=excluded.status,revision=excluded.revision,updated_at=excluded.updated_at")
+    .run(campaignId,characterId,questId,toStatus,next,now);
+  db.prepare("INSERT INTO vtt_quest_state_audit VALUES(?,?,?,?,?,?,?,?)")
+    .run(campaignId,characterId,questId,next,actorId,previous?.status??null,toStatus,reason.trim(),now);
+  return {status:toStatus,revision:next};
+ });
  const verify=db.transaction(({campaignId,characterId,actorId,questId,objectiveId,eventId})=>{
   check(campaignId,characterId,actorId);
   if(![questId,objectiveId,eventId].every(valid))throw new TypeError("INVALID_ID");
@@ -98,9 +120,14 @@ function createQuestEvidenceEngine(db){
    throw new Error("APPROVAL_MISMATCH");
   for(const objectiveId of requiredObjectiveIds)
    if(!objective.get(campaignId,characterId,questId,objectiveId))throw new Error("OBJECTIVES_UNVERIFIED");
-  db.prepare("INSERT INTO vtt_quest_completions VALUES(?,?,?,?,?)").run(campaignId,characterId,questId,completionEventId,new Date().toISOString());
+  const priorState=state.get(campaignId,characterId,questId);
+  if(priorState?.status!=="ACTIVE")throw new Error("QUEST_NOT_ACTIVE");
+  const now=new Date().toISOString();
+  db.prepare("INSERT INTO vtt_quest_completions VALUES(?,?,?,?,?)").run(campaignId,characterId,questId,completionEventId,now);
+  db.prepare("UPDATE vtt_quest_states SET status='COMPLETE',revision=?,updated_at=? WHERE campaign_id=? AND character_id=? AND quest_id=?").run(priorState.revision+1,now,campaignId,characterId,questId);
+  db.prepare("INSERT INTO vtt_quest_state_audit VALUES(?,?,?,?,?,?,?,?)").run(campaignId,characterId,questId,priorState.revision+1,actorId,"ACTIVE","COMPLETE","DM_APPROVED:"+completionEventId,now);
   return {duplicate:false,awardedArtifacts:[]};
  });
- return {registerQuest:x=>register(x),approveQuest:x=>approve(x),verifyObjective:x=>verify(x),completeQuest:x=>complete(x)};
+ return {registerQuest:x=>register(x),approveQuest:x=>approve(x),transitionQuest:x=>transition(x),verifyObjective:x=>verify(x),completeQuest:x=>complete(x)};
 }
 module.exports={createQuestEvidenceEngine};
