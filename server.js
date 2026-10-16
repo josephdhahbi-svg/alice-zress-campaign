@@ -117,9 +117,10 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     ["/play/alice",["alice-room-atlas.html","text/html; charset=utf-8"]],
     ["/play/moonveil-theme.css",["moonveil-theme.css","text/css; charset=utf-8"]],
     ["/play/alice-room-atlas.js",["alice-room-atlas.js","text/javascript; charset=utf-8"]],
-    ["/play/moonveil-underdark-original.svg",["moonveil-underdark-original.svg","image/svg+xml"]]
+    ["/play/moonveil-underdark-original.svg",["moonveil-underdark-original.svg","image/svg+xml"]],
+    ["/play/moonveil-media.js",["moonveil-media.js","text/javascript; charset=utf-8"]]
   ]);
-  app.get(["/play/alice","/play/moonveil-theme.css","/play/alice-room-atlas.js","/play/moonveil-underdark-original.svg"],(req,res)=>{
+  app.get(["/play/alice","/play/moonveil-theme.css","/play/alice-room-atlas.js","/play/moonveil-underdark-original.svg","/play/moonveil-media.js"],(req,res)=>{
     const asset=publicPages.get(req.path);
     if(!asset)return res.status(404).end();
     res.set("Cache-Control","no-store");
