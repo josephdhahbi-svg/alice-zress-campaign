@@ -94,7 +94,7 @@ def validate_components(path, document):
 
 
 def main():
-    global checked_files
+    global checked_files, checked_records
     lore_enums = {
         "canon_status": schema["allowed_canon_status"],
         "continuity_status": schema["allowed_continuity_status"],
