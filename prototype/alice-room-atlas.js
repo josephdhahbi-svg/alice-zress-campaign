@@ -71,7 +71,7 @@ byId("ai-guide-form").addEventListener("submit",async event=>{
  byId("ai-guide-status").textContent="Consulting the AI Story Guide…";
  byId("ai-guide-reply").textContent="";
  try{
-  const response=await fetch("/api/campaigns/"+encodeURIComponent(session.campaign)+"/ai/ask",{
+  const response=await fetch("/api/campaigns/"+encodeURIComponent(session.campaign)+"/ai/chat",{
    method:"POST",headers:{"Authorization":"Bearer "+session.token,"Content-Type":"application/json"},
    body:JSON.stringify({message,mode}),cache:"no-store",credentials:"omit"
   });
