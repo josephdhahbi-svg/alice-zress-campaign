@@ -155,3 +155,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Validate campaign records run `38923952035` **SUCCESS**.
 - Verified charter **18/100**, open **82/100**; no task closure because this is infrastructure increment rather than a fully accepted 100-task charter deliverable.
 - Next: multi-process lock with stale-lock recovery, CLI integration tests, versioned economy migration, authenticated economy API tests, trusted combat resources and approved reward catalog. No automatic game progression.
+
+## 2026-10-16 — CLI cross-process lock
+- Added exclusive filesystem lock `backend/draft-worker-lock.js` commit `d30c47bc7df22ec7093285994749fd20b69afa77`. A concurrent CLI call fails closed with WORKER_LOCKED. Locks are removed after normal/exceptional completion if token still matches.
+- CLI lock integration commit `61baef4555ab351fa1c4b373352a2ac0a1a95e5c`, JSON newline correction `01a4a5ee44ce72bb02f0f53a1e08934f468db303`.
+- Process-spawning integration tests `backend/draft-worker-cli.integration.test.js` commit `8cf438d899440f4188306e2e7fecf6fb7f5c5fa6`: process restarts, contention, exception unlock and stale-lock fail-closed.
+- **Stale lock is NOT automatically removed**: operator must inspect process and lock before manual removal; avoids unsafe lock stealing. Queue not autonomous; no AI generation or publishing.
+- CI pending; charter remains **18/100**, **82 open**.
