@@ -110,7 +110,7 @@ def main():
     phase_required = ("id", "title", "order", "books", "chronology", "status")
     payoff_required = ("id", "name", "category", "from_book_id", "to_book_id", "setup", "payoff", "mechanism", "paradox_risk", "status", "canon_status", "continuity_status", "source", "notes")
     decision_required = ("id", "question", "status", "options", "current_policy", "evidence", "affected_ids", "decision", "owner_role", "notes")
-    scene_required = ("id", "book_id", "scene_number", "title", "status", "canon_status", "continuity_status", "location_id", "historical_date_dr", "campaign_timestamp", "purpose", "opening_text", "origin_gifts", "choice_order", "choices", "dice_policy", "state_effects", "prerequisites", "source", "notes")
+    scene_required = ("id", "book_id", "character_id", "scene_number", "title", "status", "canon_status", "continuity_status", "location_id", "historical_date_dr", "campaign_timestamp", "purpose", "opening_text", "origin_gifts", "choice_order", "choices", "dice_policy", "state_effects", "prerequisites", "source", "notes")
 
     for path in sorted(DATA.glob("*.json")):
         if path.name == "schema.json":
@@ -141,6 +141,23 @@ def main():
                 "status": ("PROPOSED", "IN_PROGRESS", "LOCKED_CANON", "BLOCKED", "DEPRECATED"),
                 **lore_enums,
             })
+        elif path.name == "assets.json":
+            if not isinstance(document, dict) or not isinstance(document.get("assets"), list):
+                fail("assets.json: expected an object with an assets list")
+            else:
+                asset_ids = set()
+                for i, asset in enumerate(document["assets"]):
+                    checked_records += 1
+                    label = f"assets.json.assets[{i}]"
+                    for field in ("id", "name", "category", "filename", "planned_repository_path", "source", "status", "background_status", "transparency_status", "notes"):
+                        if field not in asset:
+                            fail(f"{label}: missing {field}")
+                    aid = asset.get("id")
+                    if not isinstance(aid, str) or not aid.strip():
+                        fail(f"{label}: id must be a non-empty string")
+                    elif aid in asset_ids:
+                        fail(f"{label}: duplicate asset id {aid!r}")
+                    asset_ids.add(aid)
         elif isinstance(document, list) and not document:
             # Empty starter collection: valid, but contains no records to validate.
             continue
@@ -152,7 +169,9 @@ def main():
     locations_doc = load_json(DATA / "locations.json") if (DATA / "locations.json").exists() else []
     payoffs_doc = load_json(DATA / "setup_payoffs.json") if (DATA / "setup_payoffs.json").exists() else []
     scenes_doc = load_json(DATA / "scenes.json") if (DATA / "scenes.json").exists() else []
+    characters_doc = load_json(DATA / "characters.json") if (DATA / "characters.json").exists() else []
     book_ids = {item.get("id") for item in books_doc if isinstance(item, dict)} if isinstance(books_doc, list) else set()
+    character_ids = {item.get("id") for item in characters_doc if isinstance(item, dict)} if isinstance(characters_doc, list) else set()
     location_ids = {item.get("id") for item in locations_doc if isinstance(item, dict)} if isinstance(locations_doc, list) else set()
     payoff_ids = {item.get("id") for item in payoffs_doc if isinstance(item, dict)} if isinstance(payoffs_doc, list) else set()
 
@@ -174,6 +193,8 @@ def main():
             label = f"scenes.json[{i}]"
             if scene.get("book_id") not in book_ids:
                 fail(f"{label}: unknown book_id {scene.get('book_id')!r}")
+            if scene.get("character_id") not in character_ids:
+                fail(f"{label}: unknown character_id {scene.get('character_id')!r}")
             if scene.get("location_id") not in location_ids:
                 fail(f"{label}: unknown location_id {scene.get('location_id')!r}")
             if scene.get("choice_order") != required_order:
