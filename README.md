@@ -28,7 +28,7 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 - `data/books.json` — initial structured 30-book catalog; continuity review remains pending.
 - `data/setup_payoffs.json` — proposed cross-book setup/payoff links.
 - `data/scenes.json` — structured Book 1 opening scene with five choices, check definitions, and state-effect rules.
-- `data/assets.json` — seven-entry Moonveil art manifest; generated image files are not yet committed.
+- `data/assets.json` — seven-entry Moonveil art manifest; cleaned PNG files are generated locally but are not yet committed to the repository.
 - `data/decisions.json` — explicit unresolved decisions; no conflicts are silently overwritten.
 - `data/development_components.json` — reusable component registry.
 - `data/characters.json`, `data/locations.json`, `data/rituals.json`, `data/relationships.json`, `data/story_phases.json` — current starter lore and relationship records.
