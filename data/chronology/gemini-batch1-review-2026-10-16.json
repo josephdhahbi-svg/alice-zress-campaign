@@ -1,0 +1,118 @@
+{
+  "schema": "moonveil.gemini-batch1-review.v1",
+  "status": "QUARANTINED_RESEARCH_SEED",
+  "received": "2026-10-16",
+  "source": "User-pasted Gemini Batch 1; no files attached",
+  "scopeClaim": "1974–2026",
+  "actualProvidedRecords": 9,
+  "records": [
+    {
+      "id": "PUB-1974-ODD",
+      "title": "Dungeons & Dragons (3-Volume Boxed Set)",
+      "publicationYear": 1974,
+      "publicationDate": null,
+      "datePrecision": "YEAR_ONLY_PENDING_SOURCE",
+      "edition": "OD&D",
+      "sourceStatus": "GEMINI_UNVERIFIED",
+      "usableForChronologicalSorting": false
+    },
+    {
+      "id": "PUB-1977-BASIC",
+      "title": "D&D Basic Set (Holmes Edition)",
+      "publicationYear": 1977,
+      "publicationDate": null,
+      "datePrecision": "YEAR_ONLY_PENDING_SOURCE",
+      "edition": "Basic",
+      "sourceStatus": "GEMINI_UNVERIFIED",
+      "usableForChronologicalSorting": false
+    },
+    {
+      "id": "PUB-1978-PHB",
+      "title": "Player's Handbook (AD&D 1e)",
+      "publicationYear": 1978,
+      "publicationDate": null,
+      "datePrecision": "YEAR_ONLY_PENDING_SOURCE",
+      "edition": "AD&D 1e",
+      "sourceStatus": "GEMINI_UNVERIFIED",
+      "usableForChronologicalSorting": false
+    },
+    {
+      "id": "PUB-1987-FR1",
+      "title": "Waterdeep and the North (FR1)",
+      "publicationYear": 1987,
+      "publicationDate": null,
+      "datePrecision": "YEAR_ONLY_PENDING_SOURCE",
+      "edition": "AD&D 1e",
+      "sourceStatus": "GEMINI_UNVERIFIED",
+      "usableForChronologicalSorting": false
+    },
+    {
+      "id": "PUB-1989-2E-PHB",
+      "title": "Player's Handbook (AD&D 2e)",
+      "publicationYear": 1989,
+      "publicationDate": null,
+      "datePrecision": "YEAR_ONLY_PENDING_SOURCE",
+      "edition": "AD&D 2e",
+      "sourceStatus": "GEMINI_UNVERIFIED",
+      "usableForChronologicalSorting": false
+    },
+    {
+      "id": "PUB-2000-3E-PHB",
+      "title": "Player's Handbook (D&D 3rd Edition)",
+      "publicationYear": 2000,
+      "publicationDate": null,
+      "datePrecision": "YEAR_ONLY_PENDING_SOURCE",
+      "edition": "3e",
+      "sourceStatus": "GEMINI_UNVERIFIED",
+      "usableForChronologicalSorting": false
+    },
+    {
+      "id": "PUB-2008-4E-PHB",
+      "title": "Player's Handbook (D&D 4th Edition)",
+      "publicationYear": 2008,
+      "publicationDate": null,
+      "datePrecision": "YEAR_ONLY_PENDING_SOURCE",
+      "edition": "4e",
+      "sourceStatus": "GEMINI_UNVERIFIED",
+      "usableForChronologicalSorting": false
+    },
+    {
+      "id": "PUB-2014-5E-PHB",
+      "title": "Player's Handbook (D&D 5th Edition)",
+      "publicationYear": 2014,
+      "publicationDate": null,
+      "datePrecision": "YEAR_ONLY_PENDING_SOURCE",
+      "edition": "5e",
+      "sourceStatus": "GEMINI_UNVERIFIED",
+      "usableForChronologicalSorting": false
+    },
+    {
+      "id": "PUB-2024-5E-REV",
+      "title": "Player's Handbook (2024 Revised Edition)",
+      "publicationYear": 2024,
+      "publicationDate": null,
+      "datePrecision": "YEAR_ONLY_PENDING_SOURCE",
+      "edition": "5e (2024)",
+      "sourceStatus": "GEMINI_UNVERIFIED",
+      "usableForChronologicalSorting": false
+    }
+  ],
+  "issues": [
+    "Malformed JSON author string David \"Zeb\" Cook",
+    "Unverified full dates; some dates appear placeholders",
+    "Incomplete bibliography",
+    "Fictional Greyhawk Wars test event incorrectly uses year 576 CY",
+    "SQL schema foreign keys and JS initializer disagree",
+    "Tests write to production-named database",
+    "CommonJS vs ESM mismatch",
+    "No test execution evidence",
+    "No primary-source bibliography"
+  ],
+  "existingModules": [
+    "backend/dnd-publication-catalog.js",
+    "backend/weave-chronology-tracker.js",
+    "data/chronology/moonveil-three-eras-30-books.json"
+  ],
+  "integrationDecision": "NO_MERGE_TO_CANON_OR_LIVE_DB",
+  "requiredNext": "Source-verify individual entries, extend existing publication catalog rather than replace; tests isolated in memory"
+}
