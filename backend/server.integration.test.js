@@ -60,6 +60,13 @@ test("local server protects APIs and persists bounded relationship updates", {ti
     assert.deepEqual((await war.json()).territories,[]);
     const factions=await fetch(base+"/api/factions",{headers});
     assert.deepEqual((await factions.json()).factions,[]);
+    // Disputes are DM-only; a signed actor cannot invoke admin war routes.
+    const disputeDenied=await fetch(base+"/api/war-table/dispute",{method:"POST",body:JSON.stringify({territoryId:"pit",aggressorFactionId:"blue"}),headers:{"Content-Type":"application/json"}});
+    assert.equal(disputeDenied.status,401);
+    const disputeBad=await fetch(base+"/api/war-table/dispute",{method:"POST",headers,body:JSON.stringify({territoryId:"bad/id",aggressorFactionId:"blue"})});
+    assert.equal(disputeBad.status,400);
+    const disputeUnknown=await fetch(base+"/api/war-table/dispute",{method:"POST",headers,body:JSON.stringify({territoryId:"pit",aggressorFactionId:"blue"})});
+    assert.equal(disputeUnknown.status,409);
     const created=await fetch(base+"/api/campaigns",{method:"POST",headers,
       body:JSON.stringify({campaignId:"test-campaign",name:"Local Test",actorId:"dm-1"})});
     assert.equal(created.status,201);
@@ -69,6 +76,10 @@ test("local server protects APIs and persists bounded relationship updates", {ti
     const sessionToken=(await issue.json()).accessToken;
     const actorHeaders={"Authorization":"Bearer "+sessionToken,"Content-Type":"application/json",
       "X-Moonveil-Actor":"intruder"};
+    const actorDispute=await fetch(base+"/api/war-table/dispute",{method:"POST",headers:actorHeaders,body:JSON.stringify({territoryId:"pit",aggressorFactionId:"blue"})});
+    assert.equal(actorDispute.status,403);
+    const actorResolve=await fetch(base+"/api/war-table/resolve",{method:"POST",headers:actorHeaders,body:JSON.stringify({disputeId:"disp_missing",winningFactionId:"blue"})});
+    assert.equal(actorResolve.status,403);
     const blockedAdmin=await fetch(base+"/api/admin/world-pulse",{method:"POST",headers:actorHeaders,body:"{}"});
     assert.equal(blockedAdmin.status,403);
     const forged=await fetch(base+"/api/campaigns/test-campaign/events",{headers:actorHeaders});
