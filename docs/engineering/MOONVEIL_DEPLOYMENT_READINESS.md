@@ -4,7 +4,7 @@
 
 ## Repository and local play
 Repository: `josephdhahbi-svg/alice-zress-campaign`, development branch `feature/verified-automation-phase-a`.
-Use Node.js 22+, then `npm ci` and `npm test`. Start only with a locally generated secret of at least 24 characters:
+Use Node.js 22+, then `npm install --no-audit --no-fund` and `npm test`. A committed lockfile is not yet present; generate and commit a reviewed `package-lock.json` before switching to reproducible `npm ci` builds. Start only with a locally generated secret of at least 24 characters:
 ```powershell
 $env:MOONVEIL_DEV_TOKEN = [guid]::NewGuid().ToString("N") + [guid]::NewGuid().ToString("N")
 $env:MOONVEIL_DB_PATH = "moonveil_vtt.db"
