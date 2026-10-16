@@ -1,0 +1,15 @@
+# Node / SQLite local development
+node_modules/
+.env
+.env.*
+!.env.example
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+npm-debug.log*
+coverage/
+.DS_Store
+__pycache__/
+*.pyc
