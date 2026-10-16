@@ -187,3 +187,12 @@ The first batch creates structured "Lego" records rather than only brainstorming
 - The UI frame center aperture was cleaned separately to remove checkerboard pixels inside the frame.
 - Visual review of a contact sheet indicates the background is largely removed, but edge halos and light-colored subject details still need manual review.
 - CI run #72 passed the validator, simulation, and Book 1 regression steps after the manifest/test status update: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38838143586
+
+
+## Living World Engine v1
+- Added `game/living-world.html`: standalone browser sandbox with draggable/pointer-operated entities, selection, teleport, pulse animation, spawn, vanish/remove, scene switching, editable name/type/coordinates/asset path, entity registry, local save/load, JSON export/import, and clear confirmation.
+- Entity asset paths now match the canonical filenames planned in `data/assets.json` for Alice, Wraith, and Infinite Hallway; if the PNG binaries are not present, fallback tokens render.
+- Save state uses a versioned localStorage key and automatically restores compatible saves at startup, including intentionally empty saved worlds.
+- Added `scripts/test_living_world.py` and CI execution; run #74 passed all checks on commit `213dd06098573ebad0ba20ce9779f87a81568dc1`.
+- Follow-up asset-path alignment commit `bc254b323ebe9c68ce2512d13667ea84058a3406` has a new validation run pending at last check.
+- Limitation: this is a local browser prototype, not a multiplayer/server-synchronized engine; actual art binaries are not committed yet.
