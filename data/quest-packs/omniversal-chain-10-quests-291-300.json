@@ -1,0 +1,1022 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "wave": 3,
+  "chainId": "mv_chain_10",
+  "title": "The Fellowship of Unfinished Promises",
+  "continuesFrom": "mv_side_200",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_10_member_1",
+      "name": "Aster Vale Moon",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_2",
+      "name": "Brin Copper Moon",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_3",
+      "name": "Celia Moss Moon",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_4",
+      "name": "Dorian Quill Moon",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_5",
+      "name": "Edda Stone Moon",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_6",
+      "name": "Fenn Ash Moon",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_7",
+      "name": "Galia Reed Moon",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_8",
+      "name": "Hale Meridian Moon",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_9",
+      "name": "Iris Thorn Moon",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_10",
+      "name": "Joren Star Moon",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_291",
+      "number": 291,
+      "title": "The Reopened Passage: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 11,
+      "previousQuestId": "mv_side_191",
+      "earliestQuestId": "mv_side_010",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Selda",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_4",
+        "chain_10_member_8"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 1,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 010 and 191",
+        "Search the reopened tunnel for a witness who disappeared in the first expedition",
+        "Investigate the complication: A rescue site conceals a community that refuses relocation",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "A rescue site conceals a community that refuses relocation",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Underdark ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_292"
+    },
+    {
+      "id": "mv_side_292",
+      "number": 292,
+      "title": "The Ledger of Consequences: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 12,
+      "previousQuestId": "mv_side_192",
+      "earliestQuestId": "mv_side_020",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Dorian Quill Moon",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_2",
+        "chain_10_member_5",
+        "chain_10_member_9"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 4,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 020 and 192",
+        "Interview merchants and refugees about a newly discovered ledger",
+        "Investigate the complication: A former antagonist has begun making restitution",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "A former antagonist has begun making restitution",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Sword Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_293"
+    },
+    {
+      "id": "mv_side_293",
+      "number": 293,
+      "title": "The Council's Second Witness: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 13,
+      "previousQuestId": "mv_side_193",
+      "earliestQuestId": "mv_side_030",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Edda Stone Moon",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_3",
+        "chain_10_member_6",
+        "chain_10_member_10"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 7,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 030 and 193",
+        "Compare testimony against the council's archived evidence",
+        "Investigate the complication: A forged seal was used to protect a frightened hatchling",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "A forged seal was used to protect a frightened hatchling",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Dragon Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_294"
+    },
+    {
+      "id": "mv_side_294",
+      "number": 294,
+      "title": "A Memory in the Mist: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 14,
+      "previousQuestId": "mv_side_194",
+      "earliestQuestId": "mv_side_040",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Fenn Ash Moon",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_4",
+        "chain_10_member_7",
+        "chain_10_member_1"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 10,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 040 and 194",
+        "Recover a missing record from a village trapped in the mists",
+        "Investigate the complication: The record documents a visit that has not happened yet",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "The record documents a visit that has not happened yet",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Barovia ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_295"
+    },
+    {
+      "id": "mv_side_295",
+      "number": 295,
+      "title": "The Contract's Missing Clause: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 15,
+      "previousQuestId": "mv_side_195",
+      "earliestQuestId": "mv_side_050",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Galia Reed Moon",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_5",
+        "chain_10_member_8",
+        "chain_10_member_2"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 13,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 050 and 195",
+        "Challenge a contract built upon an earlier falsehood",
+        "Investigate the complication: The contract holder is trying to free a dependent",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "The contract holder is trying to free a dependent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Avernus ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_296"
+    },
+    {
+      "id": "mv_side_296",
+      "number": 296,
+      "title": "The Story Nobody Told: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 16,
+      "previousQuestId": "mv_side_196",
+      "earliestQuestId": "mv_side_060",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Hale Meridian Moon",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_6",
+        "chain_10_member_9",
+        "chain_10_member_3"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 16,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 060 and 196",
+        "Negotiate access to a story that was removed from public memory",
+        "Investigate the complication: The storyteller cannot distinguish two traversals",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "The storyteller cannot distinguish two traversals",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Feywild ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_297"
+    },
+    {
+      "id": "mv_side_297",
+      "number": 297,
+      "title": "The Ship of Returning Voices: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 17,
+      "previousQuestId": "mv_side_197",
+      "earliestQuestId": "mv_side_070",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Iris Thorn Moon",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_7",
+        "chain_10_member_10",
+        "chain_10_member_4"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 19,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 070 and 197",
+        "Locate a ship carrying evidence from an abandoned expedition",
+        "Investigate the complication: The ship's crew believes the quest was completed already",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "The ship's crew believes the quest was completed already",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Wildspace ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_298"
+    },
+    {
+      "id": "mv_side_298",
+      "number": 298,
+      "title": "The Door of Confession: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 18,
+      "previousQuestId": "mv_side_198",
+      "earliestQuestId": "mv_side_080",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Joren Star Moon",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_8",
+        "chain_10_member_1",
+        "chain_10_member_5"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 22,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 080 and 198",
+        "Trace the evidence through a gate registry and witness exchange",
+        "Investigate the complication: The correct portal opens only for a truthful confession",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "The correct portal opens only for a truthful confession",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Sigil ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_299"
+    },
+    {
+      "id": "mv_side_299",
+      "number": 299,
+      "title": "The Witness in Shadow: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 19,
+      "previousQuestId": "mv_side_199",
+      "earliestQuestId": "mv_side_090",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Aster Vale Moon",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_9",
+        "chain_10_member_2",
+        "chain_10_member_6"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 25,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 090 and 199",
+        "Restore a damaged memory without rewriting anyone's identity",
+        "Investigate the complication: The forgotten witness is protecting an apparent villain",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "The forgotten witness is protecting an apparent villain",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Shadowfell ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_300"
+    },
+    {
+      "id": "mv_side_300",
+      "number": 300,
+      "title": "The Legacy Beyond the Loop: Oath",
+      "chainId": "mv_chain_10",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 20,
+      "previousQuestId": "mv_side_200",
+      "earliestQuestId": "mv_side_100",
+      "previousArcFinale": "mv_side_200",
+      "questGiver": "Brin Copper Moon",
+      "recurringCastIds": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_10_member_10",
+        "chain_10_member_3",
+        "chain_10_member_7"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 28,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier oath investigations, old promises return as binding planar obligations.",
+      "objectives": [
+        "Review verified evidence from quests 100 and 200",
+        "Present the chain's evidence and decide what survives the next return",
+        "Investigate the complication: one oath was imposed without the promiser's consent",
+        "Record the consequences and secure a lead for the next oath quest"
+      ],
+      "complication": "one oath was imposed without the promiser's consent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate oath clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Oath testimony fragment",
+        "Multiversal Convergence ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": null
+    }
+  ]
+}
