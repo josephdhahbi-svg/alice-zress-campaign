@@ -15,6 +15,10 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 - [100-task status tracker](docs/task-status.md) — evidence-based progress and blockers.
 - [Repository inventory](docs/project-inventory.md) — inspected assets and current gaps.
 - [Administration and build operations](docs/administration-build-operations.md) — Lego workflow, component contract, and definition of done.
+- [Project inventory](docs/project-inventory.md) — inspected repository assets and gaps.
+- [100-task status tracker](docs/task-status.md) — evidence-based execution status.
+- [Setup/payoff ledger](data/setup_payoffs.json) — proposed cross-book story connections.
+- [Decision ledger](data/decisions.json) — unresolved structure and technical decisions.
 - [VTT technical blueprint audit](docs/vtt-technical-blueprint-audit.md) — target stack and implementation risks.
 - [Continuity policy](docs/continuity.md) — chronology, canon status, and source requirements.
 - [Story roadmap](docs/story-roadmap.md) — earlier foundational trilogy and campaign phases.
@@ -22,10 +26,12 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 ## Data and tools
 - `data/schema.json` — lore-record requirements and allowed status values.
 - `data/books.json` — initial structured 30-book catalog; continuity review remains pending.
+- `data/setup_payoffs.json` — proposed cross-book setup/payoff links.
+- `data/decisions.json` — explicit unresolved decisions; no conflicts are silently overwritten.
 - `data/development_components.json` — reusable component registry.
 - `data/characters.json`, `data/locations.json`, `data/rituals.json`, `data/relationships.json`, `data/story_phases.json` — current starter lore and relationship records.
 - `data/spells.json`, `data/items.json`, `data/quests.json` — starter collections.
-- `scripts/validate.py` — record-family validation; run with `python scripts/validate.py`.
+- `scripts/validate.py` — record-family validation; run with `python scripts/validate.py`; CI status must be checked separately.
 - `game/index.html` — offline five-choice browser prototype with local character/quest save and import/export.
 - `.github/workflows/validate.yml` — CI validation and deterministic simulation check.
 
