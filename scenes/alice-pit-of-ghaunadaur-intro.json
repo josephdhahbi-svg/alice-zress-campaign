@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "sceneId": "alice-pit-of-ghaunadaur-intro",
+  "title": "The Rabbit Hole and the Pit",
+  "era": "unknown",
+  "drDate": null,
+  "sequence": "alice-level-1-transition",
+  "plane": "Material Plane",
+  "location": "Underdark / Pit of Ghaunadaur",
+  "canonStatus": "homebrew campaign scene",
+  "backgroundAssetId": "ENV001",
+  "characterAssetIds": [
+    "C001",
+    "C002"
+  ],
+  "enemyAssetIds": [
+    "E005"
+  ],
+  "optionalAssetIds": [
+    "ENV003"
+  ],
+  "assetPolicy": "Missing or pending art displays placeholder; do not fabricate completed assets.",
+  "characterRules": {
+    "alice": {
+      "class": "Great Old One Warlock",
+      "background": "Acolyte",
+      "patron": "Ghaunadaur",
+      "customOriginGifts": [
+        {
+          "deity": "Mystra",
+          "spell": "Shield"
+        },
+        {
+          "deity": "Ghaunadaur",
+          "spell": "Acid Splash"
+        },
+        {
+          "deity": "Eilistraee",
+          "spell": "Light"
+        }
+      ]
+    }
+  },
+  "lockedRewards": [
+    "divine-treasury-endgame"
+  ]
+}
