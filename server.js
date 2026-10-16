@@ -17,6 +17,7 @@ const { createSettlementTradeEngine } = require("./backend/settlement-trade-engi
 const { createSettlementMarketPulseEngine } = require("./backend/settlement-market-pulse");
 const { createCombatEngine } = require("./backend/combat-engine");
 const { createQuestEvidenceEngine } = require("./backend/quest-evidence-engine");
+const { listAscensionPaths, getAscensionPath } = require("./backend/ascension-path-catalog");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -86,6 +87,21 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const server = http.createServer(app);
   const id = value => typeof value==="string" && /^[a-zA-Z0-9:_-]{1,100}$/.test(value);
   const memberRole=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?");
+  // Read-only proposal catalog; membership required. No ritual/reward mutation endpoint.
+  app.get("/api/campaigns/:campaignId/ascension/paths",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,paths:listAscensionPaths(),rewardApproved:false});
+  });
+  app.get("/api/campaigns/:campaignId/ascension/paths/:pathId",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const path=getAscensionPath(req.params.pathId);
+    if(!path)return res.status(404).json({success:false,error:"UNKNOWN_PATH"});
+    return res.json({success:true,path,rewardApproved:false});
+  });
   // Opt-in economy only: never auto-advance DR or mutate markets from cron.
   app.get("/api/campaigns/:campaignId/world/economy",(req,res)=>{
     const campaignId=req.params.campaignId;
