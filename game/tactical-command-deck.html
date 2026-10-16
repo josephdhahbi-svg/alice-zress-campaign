@@ -7,7 +7,7 @@
 main{max-width:1050px;margin:auto;padding:18px}a{color:#c9baff}h1{margin:.4em 0}
 p{line-height:1.5;color:#cbbddd}.panel{background:#1c172c;border:1px solid #6a5487;border-radius:14px;padding:16px;margin:14px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
-button{font:inherit;cursor:pointer;border-radius:9px;padding:12px;color:#f9f4ff;background:#35234c;border:1px solid #8b6caf}
+input{font:inherit;border:1px solid #8b6caf;border-radius:8px;padding:9px;color:#f9f4ff;background:#35234c}button{font:inherit;cursor:pointer;border-radius:9px;padding:12px;color:#f9f4ff;background:#35234c;border:1px solid #8b6caf}
 button:focus-visible,a:focus-visible{outline:3px solid #f2d78b;outline-offset:3px}
 button:hover{background:#51366b}.macro{display:flex;gap:8px;align-items:stretch}
 .macro button:first-child{flex:1;text-align:left}.pin{min-width:44px}.pinned{border-color:#e5b953}
@@ -20,7 +20,7 @@ button:hover{background:#51366b}.macro{display:flex;gap:8px;align-items:stretch}
 <h1>🌙 Omni-Tactical Command Deck</h1>
 <p>Playable local command sandbox. No server connection, microphone recording, official combat automation, or changes to Alice's character sheet.</p>
 <section class="panel"><h2>Quick-access macros</h2><p class="small">Select a command or pin your favorites. Pins persist in this browser only.</p>
-<div class="grid" id="macros"></div><p class="small" id="macroHelp">Available commands are clearly marked when not yet connected.</p></section>
+<div class="grid" id="macros"></div><div class="row" style="margin-top:12px"><label>Roll modifier <input id="rollModifier" type="number" min="-10" max="20" value="0" style="width:90px"></label><label>Difficulty class (DC) <input id="rollDC" type="number" min="1" max="40" value="15" style="width:90px"></label></div><p class="small" id="macroHelp">Available commands are clearly marked when not yet connected.</p></section>
 <section class="panel"><h2>⚙️ Glyph Companion — Experimental Sandbox</h2>
 <div class="row"><div class="stat" id="aliceHp"></div><div class="stat" id="glyphHp"></div><div class="stat" id="enemyHp"></div></div>
 <p class="small">Glyph is an optional experimental companion. These prototype actions are not official D&D rules and do not modify your campaign save.</p>
@@ -46,7 +46,7 @@ function log(message){journal.unshift(new Date().toLocaleTimeString()+" · "+mes
 function pin(code){pins=pins.includes(code)?pins.filter(x=>x!==code):[...pins,code];try{localStorage.setItem(PIN_KEY,JSON.stringify(pins));}catch{}renderMacros();}
 function command(code){
  if(code==="OPEN_TACTICAL_MAP"){location.href="tactical-war-table.html";return;}
- if(code==="ROLL_INITIATIVE"){log("Initiative: d20 = "+(Math.floor(Math.random()*20)+1)+" (unmodified sandbox roll)");return;}
+ if(code==="ROLL_INITIATIVE"){const modifier=Number($("rollModifier").value),dc=Number($("rollDC").value);if(!Number.isInteger(modifier)||modifier< -10||modifier>20||!Number.isInteger(dc)||dc<1||dc>40){log("Roll rejected: modifier must be -10..20 and DC must be 1..40.");return;}const roll=Math.floor(Math.random()*20)+1,total=roll+modifier;log("Sandbox d20: "+roll+" + ("+modifier+") = "+total+" vs DC "+dc+" · "+(total>=dc?"SUCCESS":"FAILURE")+" (no campaign effect)");return;}
  log(code.replaceAll("_"," ")+" is a preview only — no world state or campaign resources changed.");
 }
 function renderMacros(){
