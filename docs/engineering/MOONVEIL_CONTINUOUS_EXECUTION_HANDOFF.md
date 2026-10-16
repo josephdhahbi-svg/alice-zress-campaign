@@ -251,3 +251,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Added `backend/chronal-travel-api.integration.test.js` commit `4b5c20afe40e3afcfcc31c4d24578b6f7d7ea370`: actual HTTP signed actor sessions; DM-only initialization/travel, owner-only location reads, outsider and cross-campaign denial, duplicate travel replay, conflicting replay, invalid year and no artifact grants.
 - Validate campaign records `38929340901` and Omniversal verification `38929341064` were queued at authoring time; inspect final CI before claiming success.
 - Current charter 18/100 verified. The full player UI, verified portal discovery and paradox simulation remain open. Do not grant Alice rewards or move her by documentation.
+
+### Chronal travel HTTP integration — CI verified
+- Initial Omniversal `38929341064` failed on test serialization of `Infinity` to JSON `null`; corrected to invalid string in commit `e569469e0e40c2f310ffe81e8edeaacae728f3f6`.
+- CI **PASSED**: Validate campaign records `38929425056`; Omniversal verification `38929425122`.
+- Test suite `backend/chronal-travel-api.integration.test.js` commit `4b5c20afe40e3afcfcc31c4d24578b6f7d7ea370` covers signed DM-only travel, character owner reads, cross-campaign denial, replay/conflict, invalid year, no artifacts.
+- Charter remains 18/100. No automatic time travel, no live UI session, and no Alice state mutation.
