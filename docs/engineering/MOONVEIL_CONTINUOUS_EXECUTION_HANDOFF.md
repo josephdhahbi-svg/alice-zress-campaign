@@ -173,3 +173,8 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - `backend/world-economy.js` commit `d1b1ac076f91a84d86fa533b46a2a8166115b945` now fails closed if schema migration was skipped instead of creating tables ad hoc.
 - `backend/world-economy-migration.test.js` commit `54a02e7a43a95728878c3bfac5b331673c40d38b`: migration requirement, replay, preserved prices and audit records.
 - CI pending. Verified charter baseline **18/100**, **82 open**; economy HTTP integration tests and full settlement economy baseline still outstanding.
+
+### Economy migration CI
+- Omniversal verification `38925202319`: SUCCESS.
+- Validate campaign records `38925202498`: SUCCESS.
+- No new charter closure. Verified **18/100**, open **82/100**. Next: signed economy HTTP integration tests and settlement trade baseline; preserve opt-in time progression and unearned-reward restrictions.
