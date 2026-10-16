@@ -44,6 +44,10 @@ jobs:
           node-version: '22'
       - name: Check server syntax
         run: node --check server.js
+      - name: Install Node backend dependencies
+        run: npm install --no-audit --no-fund
+      - name: Test authenticated SQLite server
+        run: node --test backend/server.integration.test.js
       - name: Check Faction Territory Pulse Engine
         run: node --test backend/faction-pulse.test.js
       - name: Check Automaton FSM
