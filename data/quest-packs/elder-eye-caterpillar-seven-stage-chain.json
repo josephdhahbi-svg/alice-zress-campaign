@@ -1,0 +1,702 @@
+{
+  "schema": "moonveil.caterpillar-eye-chain.v1",
+  "title": "Who Are You, Alice? — The Elder Eye's Caterpillar",
+  "canonPolicy": "Ghaunadaur is an established Forgotten Realms deity; the caterpillar appearance, seeing-stone connection and dialogue are original Moonveil homebrew. Attribution of a manifested avatar requires DM approval and timeline verification.",
+  "avatar": {
+    "identityClaim": "GHAUNADAUR",
+    "verification": "UNCONFIRMED_UNTIL_DM_REVIEW",
+    "moralRole": "RED_EVIL",
+    "visual": "photorealistic giant pale segmented caterpillar with dark blue-black patterns, an eye-shaped halo, seated on a fungal column above the Pit; uncanny, not cartoon",
+    "communication": "Warlock seeing-stone / eye projection",
+    "rules": "No automatic pact, level, item, or divine favor granted"
+  },
+  "stages": [
+    {
+      "id": "eye_caterpillar_1",
+      "sequence": 1,
+      "title": "The Eye Opens",
+      "sceneId": "pit_caterpillar_stage_1",
+      "setting": "Forgotten Realms",
+      "region": "Underdark",
+      "location": "Pit of Ghaunadaur",
+      "plane": "Material Plane — pending date and map verification",
+      "drYear": null,
+      "era": "UNRESOLVED",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "appearance": "HOME BREW CATERPILLAR SHAPED PROJECTION; NOT OFFICIAL GHAUNADAUR AVATAR FORM",
+      "prerequisites": [
+        "ALICE_RETURN_TO_PIT",
+        "WARLOCK_SEEING_STONE_PRESENT_OR_DM_APPROVED_PROXY"
+      ],
+      "openingNarration": "At the Pit's edge Alice's seeing-stone projects a vast unblinking eye. A caterpillar-shaped silhouette coils around a broken column.",
+      "dialogue": [
+        {
+          "speaker": "Caterpillar Avatar",
+          "text": "You have walked far, little fallen thing. Tell me: are you the same creature that first dropped through the dark?"
+        },
+        {
+          "speaker": "Alice",
+          "text": "I remember the fall. I do not accept your claim over what followed."
+        },
+        {
+          "speaker": "The Caterpillar",
+          "text": "Memory is not ownership. Neither is refusal. Yet both are interesting."
+        }
+      ],
+      "objective": "Find the missing eye-shaped keystone before the apparition will answer a second question.",
+      "interactables": [
+        "Moonstone",
+        "Eye-shaped keystone"
+      ],
+      "environmentActions": [
+        "Inspect the lens without touching the ooze",
+        "Trace the voice to the stone's far side"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Request terms openly and protect all witnesses.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help the vulnerable before answering the riddle.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Reject any demand that Alice surrender her identity.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "UTILITY",
+          "text": "Study the eye and compare its magic with earlier encounters.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "ACTION",
+          "text": "Prepare a defensive spell if the avatar attacks.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        }
+      ],
+      "branches": [
+        {
+          "id": "compassionate",
+          "effect": "Record rescue outcomes; future witnesses may remember Alice"
+        },
+        {
+          "id": "defiant",
+          "effect": "Record refusal of coercion; avatar's future rhetoric changes"
+        },
+        {
+          "id": "investigative",
+          "effect": "Unlock evidence for a later chronological review"
+        },
+        {
+          "id": "return_later",
+          "effect": "Preserve unresolved clues and a revisit marker"
+        }
+      ],
+      "revisit": {
+        "differentEraAllowed": "ONLY_AFTER_CHRONOLOGY_REVIEW",
+        "newDialogue": "STATE_DEPENDENT_FUTURE_DRAFT",
+        "hiddenItem": "LOCKED_UNTIL_EVIDENCE_AND_DM_APPROVAL"
+      },
+      "rewards": "NONE_AUTOMATIC",
+      "completion": "DM_ATTESTED_ONLY"
+    },
+    {
+      "id": "eye_caterpillar_2",
+      "sequence": 2,
+      "title": "The Question of Names",
+      "sceneId": "pit_caterpillar_stage_2",
+      "setting": "Forgotten Realms",
+      "region": "Underdark",
+      "location": "Pit of Ghaunadaur",
+      "plane": "Material Plane — pending date and map verification",
+      "drYear": null,
+      "era": "UNRESOLVED",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "appearance": "HOME BREW CATERPILLAR SHAPED PROJECTION; NOT OFFICIAL GHAUNADAUR AVATAR FORM",
+      "prerequisites": [
+        "eye_caterpillar_1"
+      ],
+      "openingNarration": "A ring of blue-black mushrooms marks a dry island above the ooze.",
+      "dialogue": [
+        {
+          "speaker": "Caterpillar Avatar",
+          "text": "What is a name when its owner has changed? If you leave yours behind, what shall I call you?"
+        },
+        {
+          "speaker": "Alice",
+          "text": "Call me Alice. That is my decision."
+        },
+        {
+          "speaker": "The Caterpillar",
+          "text": "A decision is a shell. We shall see what hatches."
+        }
+      ],
+      "objective": "Recover three witnesses' accounts of the Pit without surrendering Alice's name.",
+      "interactables": [
+        "Witness testimony",
+        "Fungal ring"
+      ],
+      "environmentActions": [
+        "Compare conflicting names in the records",
+        "Avoid breathing disturbed spores"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Ask for a lawful witness to establish the truth.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Protect those whose names were erased.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Defy the cult's attempt to rename the captives.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "UTILITY",
+          "text": "Compare records, runes, and testimony.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "ACTION",
+          "text": "Break the mechanism enforcing false identities.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        }
+      ],
+      "branches": [
+        {
+          "id": "compassionate",
+          "effect": "Record rescue outcomes; future witnesses may remember Alice"
+        },
+        {
+          "id": "defiant",
+          "effect": "Record refusal of coercion; avatar's future rhetoric changes"
+        },
+        {
+          "id": "investigative",
+          "effect": "Unlock evidence for a later chronological review"
+        },
+        {
+          "id": "return_later",
+          "effect": "Preserve unresolved clues and a revisit marker"
+        }
+      ],
+      "revisit": {
+        "differentEraAllowed": "ONLY_AFTER_CHRONOLOGY_REVIEW",
+        "newDialogue": "STATE_DEPENDENT_FUTURE_DRAFT",
+        "hiddenItem": "LOCKED_UNTIL_EVIDENCE_AND_DM_APPROVAL"
+      },
+      "rewards": "NONE_AUTOMATIC",
+      "completion": "DM_ATTESTED_ONLY"
+    },
+    {
+      "id": "eye_caterpillar_3",
+      "sequence": 3,
+      "title": "Smoke Without Fire",
+      "sceneId": "pit_caterpillar_stage_3",
+      "setting": "Forgotten Realms",
+      "region": "Underdark",
+      "location": "Pit of Ghaunadaur",
+      "plane": "Material Plane — pending date and map verification",
+      "drYear": null,
+      "era": "UNRESOLVED",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "appearance": "HOME BREW CATERPILLAR SHAPED PROJECTION; NOT OFFICIAL GHAUNADAUR AVATAR FORM",
+      "prerequisites": [
+        "eye_caterpillar_2"
+      ],
+      "openingNarration": "The avatar exhales a dark ribbon that resembles smoke but refuses to rise.",
+      "dialogue": [
+        {
+          "speaker": "Caterpillar Avatar",
+          "text": "Some doors are locked by fear. Others are locked by what you are willing to forget."
+        },
+        {
+          "speaker": "Alice",
+          "text": "Then I will remember the people you would erase."
+        },
+        {
+          "speaker": "The Caterpillar",
+          "text": "How inconvenient. Memory gives the lost somewhere to return."
+        }
+      ],
+      "objective": "Follow the ribbon to a forgotten rescue chamber and release its surviving captives.",
+      "interactables": [
+        "Sealed rescue chamber",
+        "Dark vapor"
+      ],
+      "environmentActions": [
+        "Vent the chamber safely",
+        "Use Light to reveal the emergency latch"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Negotiate a safe rescue corridor.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Free the captives and provide supplies.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose the lie that rescue requires sacrifice.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "UTILITY",
+          "text": "Inspect vents and map the sealed chamber.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "ACTION",
+          "text": "Open the emergency exit while guarding against ooze.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        }
+      ],
+      "branches": [
+        {
+          "id": "compassionate",
+          "effect": "Record rescue outcomes; future witnesses may remember Alice"
+        },
+        {
+          "id": "defiant",
+          "effect": "Record refusal of coercion; avatar's future rhetoric changes"
+        },
+        {
+          "id": "investigative",
+          "effect": "Unlock evidence for a later chronological review"
+        },
+        {
+          "id": "return_later",
+          "effect": "Preserve unresolved clues and a revisit marker"
+        }
+      ],
+      "revisit": {
+        "differentEraAllowed": "ONLY_AFTER_CHRONOLOGY_REVIEW",
+        "newDialogue": "STATE_DEPENDENT_FUTURE_DRAFT",
+        "hiddenItem": "LOCKED_UNTIL_EVIDENCE_AND_DM_APPROVAL"
+      },
+      "rewards": "NONE_AUTOMATIC",
+      "completion": "DM_ATTESTED_ONLY"
+    },
+    {
+      "id": "eye_caterpillar_4",
+      "sequence": 4,
+      "title": "The Glass of Possible Selves",
+      "sceneId": "pit_caterpillar_stage_4",
+      "setting": "Forgotten Realms",
+      "region": "Underdark",
+      "location": "Pit of Ghaunadaur",
+      "plane": "Material Plane — pending date and map verification",
+      "drYear": null,
+      "era": "UNRESOLVED",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "appearance": "HOME BREW CATERPILLAR SHAPED PROJECTION; NOT OFFICIAL GHAUNADAUR AVATAR FORM",
+      "prerequisites": [
+        "eye_caterpillar_3"
+      ],
+      "openingNarration": "The seeing-stone shows three reflections of Alice from incompatible eras.",
+      "dialogue": [
+        {
+          "speaker": "Caterpillar Avatar",
+          "text": "Which one of these is real? The child who fell, the witch who rose, or the stranger who has yet to arrive?"
+        },
+        {
+          "speaker": "Alice",
+          "text": "None of them can decide for me."
+        },
+        {
+          "speaker": "The Caterpillar",
+          "text": "Then you understand the burden of becoming."
+        }
+      ],
+      "objective": "Separate an illusion from a verifiable time echo without rewriting campaign chronology.",
+      "interactables": [
+        "Three reflections",
+        "Time-marked inscriptions"
+      ],
+      "environmentActions": [
+        "Cross-check inscriptions against the chronology index",
+        "Refuse the false shortcut to an unearned level"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Demand proof before accepting a historical claim.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help a reflection's apparent victim without altering the timeline.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Refuse the false prophecy and its reward.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "UTILITY",
+          "text": "Verify the calendar, plane, and Weave incarnation.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "ACTION",
+          "text": "Disrupt the hostile illusion if it threatens the party.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        }
+      ],
+      "branches": [
+        {
+          "id": "compassionate",
+          "effect": "Record rescue outcomes; future witnesses may remember Alice"
+        },
+        {
+          "id": "defiant",
+          "effect": "Record refusal of coercion; avatar's future rhetoric changes"
+        },
+        {
+          "id": "investigative",
+          "effect": "Unlock evidence for a later chronological review"
+        },
+        {
+          "id": "return_later",
+          "effect": "Preserve unresolved clues and a revisit marker"
+        }
+      ],
+      "revisit": {
+        "differentEraAllowed": "ONLY_AFTER_CHRONOLOGY_REVIEW",
+        "newDialogue": "STATE_DEPENDENT_FUTURE_DRAFT",
+        "hiddenItem": "LOCKED_UNTIL_EVIDENCE_AND_DM_APPROVAL"
+      },
+      "rewards": "NONE_AUTOMATIC",
+      "completion": "DM_ATTESTED_ONLY"
+    },
+    {
+      "id": "eye_caterpillar_5",
+      "sequence": 5,
+      "title": "The Feast of Forgotten Promises",
+      "sceneId": "pit_caterpillar_stage_5",
+      "setting": "Forgotten Realms",
+      "region": "Underdark",
+      "location": "Pit of Ghaunadaur",
+      "plane": "Material Plane — pending date and map verification",
+      "drYear": null,
+      "era": "UNRESOLVED",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "appearance": "HOME BREW CATERPILLAR SHAPED PROJECTION; NOT OFFICIAL GHAUNADAUR AVATAR FORM",
+      "prerequisites": [
+        "eye_caterpillar_4"
+      ],
+      "openingNarration": "A banquet of polished stones surrounds a starving captive.",
+      "dialogue": [
+        {
+          "speaker": "Caterpillar Avatar",
+          "text": "A promise can be eaten, Alice. Most mortals discover that too late."
+        },
+        {
+          "speaker": "Alice",
+          "text": "A promise is kept through actions, not appetite."
+        },
+        {
+          "speaker": "The Caterpillar",
+          "text": "Then feed the one who waits. We shall measure your answer."
+        }
+      ],
+      "objective": "Gather supplies and secure the captive's safe return before bargaining.",
+      "interactables": [
+        "Stone banquet",
+        "Captive"
+      ],
+      "environmentActions": [
+        "Offer ordinary food and water",
+        "Investigate the captive's identity and timeline"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Document the bargain and reject coercive clauses.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Feed the captive and organize shelter.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Defy the avatar's cruel test without attacking bystanders.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "UTILITY",
+          "text": "Check food safety and the captive's identity.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "ACTION",
+          "text": "Defend the rescue party from an immediate hazard.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        }
+      ],
+      "branches": [
+        {
+          "id": "compassionate",
+          "effect": "Record rescue outcomes; future witnesses may remember Alice"
+        },
+        {
+          "id": "defiant",
+          "effect": "Record refusal of coercion; avatar's future rhetoric changes"
+        },
+        {
+          "id": "investigative",
+          "effect": "Unlock evidence for a later chronological review"
+        },
+        {
+          "id": "return_later",
+          "effect": "Preserve unresolved clues and a revisit marker"
+        }
+      ],
+      "revisit": {
+        "differentEraAllowed": "ONLY_AFTER_CHRONOLOGY_REVIEW",
+        "newDialogue": "STATE_DEPENDENT_FUTURE_DRAFT",
+        "hiddenItem": "LOCKED_UNTIL_EVIDENCE_AND_DM_APPROVAL"
+      },
+      "rewards": "NONE_AUTOMATIC",
+      "completion": "DM_ATTESTED_ONLY"
+    },
+    {
+      "id": "eye_caterpillar_6",
+      "sequence": 6,
+      "title": "The Eye and the Door",
+      "sceneId": "pit_caterpillar_stage_6",
+      "setting": "Forgotten Realms",
+      "region": "Underdark",
+      "location": "Pit of Ghaunadaur",
+      "plane": "Material Plane — pending date and map verification",
+      "drYear": null,
+      "era": "UNRESOLVED",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "appearance": "HOME BREW CATERPILLAR SHAPED PROJECTION; NOT OFFICIAL GHAUNADAUR AVATAR FORM",
+      "prerequisites": [
+        "eye_caterpillar_5"
+      ],
+      "openingNarration": "The avatar stretches across the cavern, each segment framing a different locked gate.",
+      "dialogue": [
+        {
+          "speaker": "Caterpillar Avatar",
+          "text": "You seek an exit. I offer six. Only one will leave the others unharmed."
+        },
+        {
+          "speaker": "Alice",
+          "text": "Then I will look for the seventh."
+        },
+        {
+          "speaker": "The Caterpillar",
+          "text": "There. That is why I keep asking questions."
+        }
+      ],
+      "objective": "Find a non-sacrificial route using prior clues, companions, and environmental interactions.",
+      "interactables": [
+        "Six false gates",
+        "Hidden seventh path"
+      ],
+      "environmentActions": [
+        "Combine Light with reflected moonstone to reveal a passage",
+        "Coordinate companions to stabilize the bridge"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Insist that no captive be exchanged for passage.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Bring companions together to search for another way.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Challenge the avatar's false dilemma.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "UTILITY",
+          "text": "Combine moonlight, maps, and environmental clues.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "ACTION",
+          "text": "Hold the bridge while others escape.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        }
+      ],
+      "branches": [
+        {
+          "id": "compassionate",
+          "effect": "Record rescue outcomes; future witnesses may remember Alice"
+        },
+        {
+          "id": "defiant",
+          "effect": "Record refusal of coercion; avatar's future rhetoric changes"
+        },
+        {
+          "id": "investigative",
+          "effect": "Unlock evidence for a later chronological review"
+        },
+        {
+          "id": "return_later",
+          "effect": "Preserve unresolved clues and a revisit marker"
+        }
+      ],
+      "revisit": {
+        "differentEraAllowed": "ONLY_AFTER_CHRONOLOGY_REVIEW",
+        "newDialogue": "STATE_DEPENDENT_FUTURE_DRAFT",
+        "hiddenItem": "LOCKED_UNTIL_EVIDENCE_AND_DM_APPROVAL"
+      },
+      "rewards": "NONE_AUTOMATIC",
+      "completion": "DM_ATTESTED_ONLY"
+    },
+    {
+      "id": "eye_caterpillar_7",
+      "sequence": 7,
+      "title": "The Unclaimed Answer",
+      "sceneId": "pit_caterpillar_stage_7",
+      "setting": "Forgotten Realms",
+      "region": "Underdark",
+      "location": "Pit of Ghaunadaur",
+      "plane": "Material Plane — pending date and map verification",
+      "drYear": null,
+      "era": "UNRESOLVED",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "appearance": "HOME BREW CATERPILLAR SHAPED PROJECTION; NOT OFFICIAL GHAUNADAUR AVATAR FORM",
+      "prerequisites": [
+        "eye_caterpillar_6"
+      ],
+      "openingNarration": "The caterpillar uncoils; the great eye closes without blinking.",
+      "dialogue": [
+        {
+          "speaker": "Caterpillar Avatar",
+          "text": "One final question. If I gave you power without a price, would you still call it mine?"
+        },
+        {
+          "speaker": "Alice",
+          "text": "Power does not decide whom I serve."
+        },
+        {
+          "speaker": "The Caterpillar",
+          "text": "Then go. I have not finished wondering about you."
+        }
+      ],
+      "objective": "Resolve the encounter by protecting the Pit's inhabitants, refusing coercion, or negotiating a verified nonharmful escape.",
+      "interactables": [
+        "Seeing-stone",
+        "Pit threshold"
+      ],
+      "environmentActions": [
+        "Record the avatar's claims as unverified",
+        "Preserve a return route for later traversals"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Seek a binding guarantee of safe passage.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Ensure every surviving captive can leave.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Refuse to owe the Elder Eye allegiance.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "UTILITY",
+          "text": "Record the vision for later chronological review.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        },
+        {
+          "type": "ACTION",
+          "text": "Withdraw safely if the manifestation turns hostile.",
+          "requires": "DM_ADJUDICATION",
+          "autoReward": false
+        }
+      ],
+      "branches": [
+        {
+          "id": "compassionate",
+          "effect": "Record rescue outcomes; future witnesses may remember Alice"
+        },
+        {
+          "id": "defiant",
+          "effect": "Record refusal of coercion; avatar's future rhetoric changes"
+        },
+        {
+          "id": "investigative",
+          "effect": "Unlock evidence for a later chronological review"
+        },
+        {
+          "id": "return_later",
+          "effect": "Preserve unresolved clues and a revisit marker"
+        }
+      ],
+      "revisit": {
+        "differentEraAllowed": "ONLY_AFTER_CHRONOLOGY_REVIEW",
+        "newDialogue": "STATE_DEPENDENT_FUTURE_DRAFT",
+        "hiddenItem": "LOCKED_UNTIL_EVIDENCE_AND_DM_APPROVAL"
+      },
+      "rewards": "NONE_AUTOMATIC",
+      "completion": "DM_ATTESTED_ONLY"
+    }
+  ]
+}
