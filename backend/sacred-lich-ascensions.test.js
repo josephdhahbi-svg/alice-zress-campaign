@@ -4,7 +4,7 @@ const {listSacredAscensions,getSacredAscension,evaluateSacredAscension}=require(
 test("three distinct sacrifice paths are proposals and never grant transformations",()=>{
  const all=listSacredAscensions();
  assert.equal(all.length,3);
- assert.deepEqual(all.map(x=>x.sacrifice),["PROTECTION","FREEDOM","KNOWLEDGE"]);
+ assert.deepEqual(all.map(x=>x.sacrifice),["FREEDOM","PROTECTION","KNOWLEDGE"]);
  assert.ok(all.every(x=>x.approved===false&&x.canonStatus==="HOMEBREW_PROPOSAL"&&x.objectives.length===5));
  assert.deepEqual(getSacredAscension("alice_zress").path,["ELDRITCH_LICH","ARCH_ELDRITCH_LICH","CHOSEN","CELESTIAL_ASPECT"]);
  assert.equal(evaluateSacredAscension("alice_zress",{level:1}).reason,"LEVEL_GATE_UNMET");
@@ -16,4 +16,13 @@ test("three distinct sacrifice paths are proposals and never grant transformatio
  assert.equal(evaluateSacredAscension("unknown",{level:30}).reason,"UNKNOWN_ASCENSION");
  all[0].objectives[0]="changed";
  assert.notEqual(getSacredAscension("moonveil_witch").objectives[0],"changed");
+});
+
+test("Alice leads the three ascensions and parasite origin is narrative, not an automatic lich trigger",()=>{
+ const paths=listSacredAscensions();
+ assert.deepEqual(paths.map(x=>x.id),["alice_zress","moonveil_witch","starweave_necromancer"]);
+ assert.equal(paths[0].parasiteOrigin,"GHAUNADAUR_TOUCH_AT_RABBIT_HOLE_ARRIVAL");
+ assert.equal(paths[0].parasiteStatus,"NARRATIVE_ORIGIN_UNRESOLVED_MECHANICS");
+ assert.equal(evaluateSacredAscension("alice_zress",{level:1,parasitePresent:true}).allowed,false);
+ assert.ok(paths.every(x=>x.path.includes("CELESTIAL_ASPECT")));
 });
