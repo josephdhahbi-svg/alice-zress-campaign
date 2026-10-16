@@ -128,11 +128,16 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   // Signed campaign member rolls are server-generated and recorded in the journal.
   // This is a development API, not a cryptographic fairness protocol.
   // Server-authenticated Elder Eye choices; raw rolls are never accepted from clients.
-  app.get("/api/elder-eye/scenes/:sceneId",(req,res)=>{
+  app.get("/api/campaigns/:campaignId/scenes/:sceneId",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=actorFor(req);
+    if(!id(campaignId)||!id(actorId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(campaignId,actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
     const scene=elderEye.getScene(req.params.sceneId);
     if(!scene)return res.status(404).json({success:false,error:"SCENE_NOT_FOUND"});
     res.json({success:true,scene});
   });
+  // Unscoped scene previews can expose unpublished content; require a campaign context.
+  app.get("/api/elder-eye/scenes/:sceneId",(_req,res)=>res.status(410).json({success:false,error:"CAMPAIGN_CONTEXT_REQUIRED"}));
   app.post("/api/campaigns/:campaignId/scenes/:sceneId/choices",(req,res)=>{
     const campaignId=req.params.campaignId,actorId=actorFor(req);
     const {eventId,expectedRevision,option,modifier}=req.body||{};
@@ -292,6 +297,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       !payload||typeof payload!=="object"||Array.isArray(payload)||
       JSON.stringify(payload).length>16000)
       return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(eventType==="ELDER_EYE_CHOICE")return res.status(403).json({success:false,error:"PROTECTED_EVENT_TYPE"});
     const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?").get(campaignId,actorId);
     if(!member||member.role==="OBSERVER")return res.status(403).json({success:false,error:"FORBIDDEN"});
     const append=db.transaction(()=>{
