@@ -132,3 +132,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Initial Omniversal `38923255002` failed because economy-only test incorrectly queried the optional world pulse table without initializing the separate pulse engine. Fixed test to inspect `sqlite_master`, commit `226484b27880d27b88109df8d91f5595ce50214b`.
 - **PASS:** Omniversal `38923338531`; Validate campaign records `38923338471`.
 - No charter task marked done: this is an incremental safe economy foundation, not complete world/economy simulation. Verified total remains **18/100**. Next: versioned migration for economy schema, HTTP integration tests, market history, opt-in controlled pulses and task acceptance review.
+
+## 2026-10-16 — Opt-in file-writing worker
+- User-supplied auto-worker was a local prototype, not an AI agent: it only wrote static queued strings and random placeholder modules, lacked persistent queue state, and could overwrite project files.
+- Implemented `backend/ai-auto-worker-file-writer.js` commit `226f8dcd8b0597598b760ff906a455fe7b67d759`: explicit input "1", allowlisted draft directories, no overwrites, symlink directory rejection, content-size bounds, queue exhaustion, SHA-256 evidence and proposal-only quest rewards. **Not wired into server, cron, or unattended automation.**
+- Added `backend/ai-auto-worker-file-writer.test.js` commit `7dd9275d6ae37916736e15af7bdbcfcbafec7c9e`: confirmation, queue order, safe drafts, traversal, overwrite, duplicate IDs, symlinks.
+- CI pending. Verified charter remains **18/100** until acceptance criteria met. No autonomous AI generation, durable queue, GitHub-to-local sync, or canonical lore changes.
