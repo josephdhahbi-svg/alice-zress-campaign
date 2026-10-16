@@ -132,6 +132,23 @@ test("local server protects APIs and persists bounded relationship updates", {ti
       body:JSON.stringify({...payload,payload:{scene:"different"}})});
     assert.equal(changedRetry.status,409);
     assert.equal((await changedRetry.json()).error,"IDEMPOTENCY_CONFLICT");
+    // Server-generated d20 rolls are immutable, scoped and idempotent.
+    const rollInput={eventId:"roll-1",expectedRevision:2,modifier:2,dc:15};
+    const rolled=await fetch(base+"/api/campaigns/test-campaign/rolls",{method:"POST",headers:actorHeaders,body:JSON.stringify(rollInput)});
+    assert.equal(rolled.status,201);
+    const firstRoll=await rolled.json();
+    assert.equal(firstRoll.revision,3);
+    assert.equal(firstRoll.roll.total,firstRoll.roll.rawRoll+2);
+    assert.ok(firstRoll.roll.rawRoll>=1&&firstRoll.roll.rawRoll<=20);
+    const replayRoll=await fetch(base+"/api/campaigns/test-campaign/rolls",{method:"POST",headers:actorHeaders,body:JSON.stringify(rollInput)});
+    assert.equal(replayRoll.status,200);
+    assert.deepEqual((await replayRoll.json()).roll,firstRoll.roll);
+    const conflictingRoll=await fetch(base+"/api/campaigns/test-campaign/rolls",{method:"POST",headers:actorHeaders,body:JSON.stringify({...rollInput,dc:20})});
+    assert.equal(conflictingRoll.status,409);
+    const outsiderRoll=await fetch(base+"/api/campaigns/test-campaign/rolls",{method:"POST",headers:{...headers,Authorization:"Bearer "+outsiderToken},body:JSON.stringify({...rollInput,eventId:"roll-outside"})});
+    assert.equal(outsiderRoll.status,403);
+    const invalidRoll=await fetch(base+"/api/campaigns/test-campaign/rolls",{method:"POST",headers:actorHeaders,body:JSON.stringify({...rollInput,eventId:"roll-invalid",dc:41})});
+    assert.equal(invalidRoll.status,400);
     const logout=await fetch(base+"/api/sessions/logout",{method:"POST",headers:actorHeaders,body:"{}"});
     assert.equal(logout.status,200);
     const afterLogout=await fetch(base+"/api/campaigns/test-campaign/events",{headers:actorHeaders});
