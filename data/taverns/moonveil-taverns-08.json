@@ -1,0 +1,890 @@
+{
+  "schema": "moonveil.tavern-pack.v1",
+  "region": "Sigil",
+  "firstBook": 22,
+  "lastBook": 24,
+  "count": 10,
+  "status": "AUTHORED_DRAFT",
+  "taverns": [
+    {
+      "id": "mv_tavern_071",
+      "name": "The Doorless Door",
+      "book": 22,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_071",
+      "kind": "roadside inn",
+      "proprietor": {
+        "name": "Mell Ember",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Doorless Door is a roadside inn serving travelers in Sigil. Warm stew and private booths.",
+      "signatureService": "Warm stew and private booths",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_071",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_171",
+        "wave3QuestId": "mv_side_271",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Doorless Door. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_072",
+      "name": "The Turnkey Tavern",
+      "book": 23,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_072",
+      "kind": "guildhouse tavern",
+      "proprietor": {
+        "name": "Zed Hearth",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Turnkey Tavern is a guildhouse tavern serving travelers in Sigil. Fresh bread and herbal tea.",
+      "signatureService": "Fresh bread and herbal tea",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_072",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_172",
+        "wave3QuestId": "mv_side_272",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Turnkey Tavern. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_073",
+      "name": "The Clockwork Cup",
+      "book": 24,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_073",
+      "kind": "refuge canteen",
+      "proprietor": {
+        "name": "Vori Kettle",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Clockwork Cup is a refuge canteen serving travelers in Sigil. Medicinal broth and quiet alcoves.",
+      "signatureService": "Medicinal broth and quiet alcoves",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_073",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_173",
+        "wave3QuestId": "mv_side_273",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Clockwork Cup. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_074",
+      "name": "The Three Keys",
+      "book": 22,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_074",
+      "kind": "scholars' hostel",
+      "proprietor": {
+        "name": "Unit Seven Moss",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Three Keys is a scholars' hostel serving travelers in Sigil. Map exchange and research table.",
+      "signatureService": "Map exchange and research table",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_074",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_174",
+        "wave3QuestId": "mv_side_274",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Three Keys. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_075",
+      "name": "The Wandering Street",
+      "book": 23,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_075",
+      "kind": "crafting lodge",
+      "proprietor": {
+        "name": "Aela Stone",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Wandering Street is a crafting lodge serving travelers in Sigil. Shared forge and repair benches.",
+      "signatureService": "Shared forge and repair benches",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_075",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_175",
+        "wave3QuestId": "mv_side_275",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Wandering Street. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_076",
+      "name": "The Paper Embassy",
+      "book": 24,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_076",
+      "kind": "pilgrim rest",
+      "proprietor": {
+        "name": "Renn Wick",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Paper Embassy is a pilgrim rest serving travelers in Sigil. Simple meals and shrine alcove.",
+      "signatureService": "Simple meals and shrine alcove",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_076",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_176",
+        "wave3QuestId": "mv_side_276",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Paper Embassy. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_077",
+      "name": "The Neutral Table",
+      "book": 22,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_077",
+      "kind": "caravanserai",
+      "proprietor": {
+        "name": "Loma Reed",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Neutral Table is a caravanserai serving travelers in Sigil. Pack animal shelter and supply crates.",
+      "signatureService": "Pack animal shelter and supply crates",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_077",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_177",
+        "wave3QuestId": "mv_side_277",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Neutral Table. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_078",
+      "name": "The Modron's Pause",
+      "book": 23,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_078",
+      "kind": "river or dock inn",
+      "proprietor": {
+        "name": "Neri Copper",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Modron's Pause is a river or dock inn serving travelers in Sigil. Cargo lockers and traveler noticeboard.",
+      "signatureService": "Cargo lockers and traveler noticeboard",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_078",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_178",
+        "wave3QuestId": "mv_side_278",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Modron's Pause. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_079",
+      "name": "The Honest Witness",
+      "book": 24,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_079",
+      "kind": "hidden safehouse",
+      "proprietor": {
+        "name": "Pava Vale",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Honest Witness is a hidden safehouse serving travelers in Sigil. Discreet entrance and warded meeting room.",
+      "signatureService": "Discreet entrance and warded meeting room",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_079",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_179",
+        "wave3QuestId": "mv_side_279",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Honest Witness. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_080",
+      "name": "The Lantern Concord",
+      "book": 22,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands / Sigil",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_080",
+      "kind": "community hearth",
+      "proprietor": {
+        "name": "Hess Dawn",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Lantern Concord is a community hearth serving travelers in Sigil. Community kitchen and rescue bulletin.",
+      "signatureService": "Community kitchen and rescue bulletin",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_080",
+        "chainId": "mv_chain_08",
+        "wave2QuestId": "mv_side_180",
+        "wave3QuestId": "mv_side_280",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Lantern Concord. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Sigil roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    }
+  ]
+}
