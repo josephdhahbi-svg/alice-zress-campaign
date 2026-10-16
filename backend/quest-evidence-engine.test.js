@@ -27,6 +27,10 @@ test("quest evidence requires authorized journal proof and DM completion approva
   assert.equal(q.approveQuest({campaignId:"a",questId:"Q1",actorId:"dm"}).duplicate,true);
   assert.equal(db.prepare("SELECT COUNT(*) AS n FROM vtt_quest_definition_audit WHERE campaign_id='a'").get().n,2);
   assert.throws(()=>q.approveQuest({campaignId:"a",questId:"Q1",actorId:"alice"}),/DM_REQUIRED/);
+  const transition={campaignId:"a",characterId:"alice",questId:"Q1",actorId:"dm"};
+  assert.equal(q.transitionQuest({...transition,toStatus:"ACTIVE",reason:"Quest opened",expectedRevision:0}).revision,1);
+  assert.throws(()=>q.transitionQuest({...transition,toStatus:"FAILED",reason:"Stale state",expectedRevision:0}),/REVISION_CONFLICT/);
+  assert.throws(()=>q.transitionQuest({...transition,toStatus:"ACTIVE",reason:"Duplicate edge",expectedRevision:1}),/INVALID_STATE_EDGE/);
   const args={campaignId:"a",characterId:"alice",actorId:"alice",questId:"Q1",objectiveId:"rescue",eventId:"proof"};
   assert.throws(()=>q.verifyObjective(args),/EVIDENCE_REQUIRED/);
   append("b","proof","dm","QUEST_OBJECTIVE_VERIFIED",{characterId:"alice",questId:"Q1",objectiveId:"rescue"});
@@ -46,6 +50,8 @@ test("quest evidence requires authorized journal proof and DM completion approva
   const result=q.completeQuest(done);
   assert.deepEqual(result,{duplicate:false,awardedArtifacts:[]});
   assert.equal(q.completeQuest(done).duplicate,true);
+  assert.equal(db.prepare("SELECT status FROM vtt_quest_states WHERE campaign_id='a' AND quest_id='Q1'").get().status,"COMPLETE");
+  assert.deepEqual(db.prepare("SELECT to_status FROM vtt_quest_state_audit WHERE campaign_id='a' ORDER BY revision").all().map(x=>x.to_status),["ACTIVE","COMPLETE"]);
   assert.throws(()=>q.completeQuest({...done,completionEventId:"different"}),/COMPLETION_CONFLICT/);
   assert.equal(db.prepare("SELECT COUNT(*) AS n FROM vtt_character_artifacts").get().n,0);
   assert.equal(db.prepare("SELECT COUNT(*) AS n FROM vtt_quest_completions WHERE campaign_id='b'").get().n,0);
