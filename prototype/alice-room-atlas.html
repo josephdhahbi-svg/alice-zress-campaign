@@ -24,6 +24,13 @@
 <button class="mv-choice" id="refresh-journal" type="button" disabled>Refresh journal</button>
 <div id="journal-entries" class="mv-journal-list" aria-live="polite"><p class="mv-subtitle">Connect to load journal entries.</p></div>
 </section>
+<section class="mv-decisions" aria-label="Dungeon Master journal review">
+<h2>DM review &amp; quest evidence</h2>
+<p class="mv-subtitle">Only signed Dungeon Masters may acknowledge discoveries and attest approved quest objectives. Evidence never grants rewards automatically.</p>
+<button class="mv-choice" id="dm-refresh" type="button" disabled>Load DM review queue</button>
+<p class="mv-status" id="dm-status" role="status" aria-live="polite">Connect with a DM session to review.</p>
+<div id="dm-queue" class="mv-journal-list"></div>
+</section>
 <section class="mv-decisions" aria-label="Moonveil AI Story Guide">
 <h2>Moonveil AI Story Guide</h2><p class="mv-subtitle">Ask for lore or guidance. AI suggestions are advisory only; they never change your character, inventory, quests, or timeline. Requires a configured server AI key.</p>
 <form id="ai-guide-form" class="mv-connect"><label>Guide mode <select id="ai-guide-mode"><option value="GUIDE">Story Guide</option><option value="LORE">Lore</option></select></label>
