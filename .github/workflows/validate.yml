@@ -50,6 +50,8 @@ jobs:
         run: node --test backend/server.integration.test.js
       - name: Test campaign WebSocket isolation
         run: node --test backend/campaign-websocket.test.js
+      - name: Test SQLite online backup service
+        run: node --test backend/backup-service.test.js
       - name: Check Faction Territory Pulse Engine
         run: node --test backend/faction-pulse.test.js
       - name: Check Automaton FSM
