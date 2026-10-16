@@ -16,12 +16,12 @@
 - [ ] T002 — Build chronology ledger with DR dates and source status
 - [ ] T003 — Separate published lore, homebrew, proposals and gameplay outcomes
 - [ ] T004 — Validate Alice Great Old One Warlock Acolyte origin
-- [ ] T005 — Record five gifts with three confirmed and two pending
+- [x] T005 — Record five gifts with three confirmed and two pending
 - [ ] T006 — Define Mistral/Mystryl/Mystra spelling and identity decision register
 - [ ] T007 — Track Ghaunadaur and Lolth roles across eras
-- [ ] T008 — Reconcile seven traversals and 30-book circular structure
+- [x] T008 — Reconcile seven traversals and 30-book circular structure
 - [ ] T009 — Define source evidence and contradiction review procedure
-- [ ] T010 — Produce canonical baseline checkpoint with no invented acquisitions
+- [x] T010 — Produce canonical baseline checkpoint with no invented acquisitions
 
 ## Phase 2: Elder Eye Narrative
 - [ ] T011 — Create complete trilogy story bible
@@ -139,3 +139,6 @@
 
 ## Completion evidence template
 `T### | status | changed files | commit SHA | tests and results | outstanding risks`
+
+## 2026-10-16 canon deliverable verification
+T005, T008 and T010: baseline written and committed in docs/campaign/ALICE_CANON_BASELINE_AND_CONTINUITY.md at 36dd131770eca1fd90edf67fc750d1c57a09aa94. These are documentary completions, not gameplay progression or automated test results. The full historical source audit remains open.
