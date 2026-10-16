@@ -6,6 +6,7 @@ const { WebSocketServer, WebSocket } = require("ws");
 const Database = require("better-sqlite3");
 const { initializeFactionPulseEngine, scheduleFactionPulse } = require("./backend/faction-pulse");
 const crypto = require("node:crypto");
+const path = require("node:path");
 const { migrate } = require("./backend/migrations");
 const { createSessionAuth } = require("./backend/session-auth");
 const { createBackupService } = require("./backend/backup-service");
@@ -60,6 +61,8 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const app = express();
   app.disable("x-powered-by");
   app.use(express.json({ limit: "32kb" }));
+  // Public static shell only. All scene data and mutations still require signed actor authentication.
+  app.get("/elder-eye",(_req,res)=>res.sendFile(path.join(__dirname,"game","elder-eye-live.html")));
   app.use((req,res,next) => {
     res.set("Cache-Control", "no-store");
     const supplied = req.get("Authorization") || "";
