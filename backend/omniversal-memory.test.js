@@ -18,6 +18,6 @@ test("memories persist across all books and traversals without leaking private k
   assert.equal(memory.recall({campaignId:"moonveil",actorId:"bob",subjectId:"alice"}).length,1);
   assert.throws(()=>memory.record({...base,memoryId:"bad",trilogy:2}),TypeError);
   assert.throws(()=>memory.record({...base,memoryId:"bad",actorId:"alice"}),/DM_REQUIRED/);
-  assert.throws(()=>memory.record({...base,description:"Changed"}),/MEMORY_CONFLICT/);
+  assert.throws(()=>memory.record({...base,description:"Changed memory description with valid length"}),/MEMORY_CONFLICT/);
  }finally{db.close()}
 });
