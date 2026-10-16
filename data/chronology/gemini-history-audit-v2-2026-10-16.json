@@ -1,0 +1,81 @@
+{
+  "schema": "moonveil.gemini-history-audit.v2",
+  "status": "QUARANTINED_UNVERIFIED",
+  "received": "2026-10-16",
+  "actualFileContentsProvided": [
+    "data/dd_publication_bibliography.json",
+    "schemas/chronology_engine.schema.sql",
+    "backend/engines/chronologyEngine.js",
+    "tests/chronology.test.js"
+  ],
+  "claimedScope": "1974-present",
+  "actualPublications": 5,
+  "entries": [
+    {
+      "submittedCode": "TSR1001",
+      "title": "Dungeons & Dragons (Original Edition - 3-Volume Box Set)",
+      "year": 1974,
+      "edition": "OD&D",
+      "datePrecision": "YEAR_ONLY_UNTIL_VERIFIED",
+      "exactPublicationDate": null,
+      "sourceStatus": "SOURCE_VERIFICATION_REQUIRED",
+      "productCodeStatus": "UNVERIFIED"
+    },
+    {
+      "submittedCode": "TSR2011",
+      "title": "Advanced Dungeons & Dragons - Player's Handbook",
+      "year": 1978,
+      "edition": "AD&D 1e",
+      "datePrecision": "YEAR_ONLY_UNTIL_VERIFIED",
+      "exactPublicationDate": null,
+      "sourceStatus": "SOURCE_VERIFICATION_REQUIRED",
+      "productCodeStatus": "CONFLICT_REVIEW_REQUIRED"
+    },
+    {
+      "submittedCode": "TSR2010",
+      "title": "Advanced Dungeons & Dragons - Dungeon Master's Guide",
+      "year": 1979,
+      "edition": "AD&D 1e",
+      "datePrecision": "YEAR_ONLY_UNTIL_VERIFIED",
+      "exactPublicationDate": null,
+      "sourceStatus": "SOURCE_VERIFICATION_REQUIRED",
+      "productCodeStatus": "CONFLICT_REVIEW_REQUIRED"
+    },
+    {
+      "submittedCode": "WTC17730000",
+      "title": "Dungeons & Dragons - Player's Handbook (5th Edition)",
+      "year": 2014,
+      "edition": "D&D 5e",
+      "datePrecision": "YEAR_ONLY_UNTIL_VERIFIED",
+      "exactPublicationDate": null,
+      "sourceStatus": "SOURCE_VERIFICATION_REQUIRED",
+      "productCodeStatus": "UNVERIFIED"
+    },
+    {
+      "submittedCode": "WTCC37050000",
+      "title": "Out of the Abyss",
+      "year": 2015,
+      "edition": "D&D 5e",
+      "datePrecision": "YEAR_ONLY_UNTIL_VERIFIED",
+      "exactPublicationDate": null,
+      "sourceStatus": "SOURCE_VERIFICATION_REQUIRED",
+      "productCodeStatus": "UNVERIFIED"
+    }
+  ],
+  "findings": [
+    "AD&D 1e Player's Handbook TSR 2010 and Dungeon Masters Guide TSR 2011: Gemini swapped product codes",
+    "Five records cannot substantiate complete 1974-present bibliography",
+    "No primary-source URLs or citations substantiate VERIFIED claims",
+    "1974-01-01 is a fabricated day when only year is established",
+    "Constructor opens database and runs migrations; violates injected connection policy",
+    "WAL PRAGMA inappropriate for memory database and should be configured at production bootstrap",
+    "INSERT OR REPLACE overwrites records and may affect foreign keys",
+    "SQL schema loses authors setting date precision and source provenance",
+    "Historical eras have one calendar system and no setting namespace",
+    "Tests only insert and retrieve one publication; no fictional chronology checks",
+    "No evidence test actually executed",
+    "Existing publication index and weave chronology modules must not be replaced"
+  ],
+  "integration": "NO_LIVE_DB_MUTATION",
+  "next": "Add read-only validator, independent tests, source-backed bibliographic review"
+}
