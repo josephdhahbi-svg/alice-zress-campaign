@@ -154,3 +154,10 @@ The first batch creates structured "Lego" records rather than only brainstorming
 - `scripts/validate.py`: now includes scene schema checks plus references from scenes to books, locations, and setup/payoff IDs. Setup/payoff records are checked against the book catalog.
 
 **Validation evidence:** a structural review mirrored against the current repository JSON checked 13 data files and 65 records, including scene choice ordering and cross-file references, with zero issues. The Python validator has not yet been executed in a local checkout, browser testing is still pending, and GitHub Actions status was not available from the inspected commit status response.
+
+
+## Automated Book 1 checks added
+- `scripts/test_book1.py` checks the 30-book catalog, Book 1 scene ID, five-choice order, choice outcomes/check definitions, three origin gifts, book/location/payoff references, and browser prototype controls.
+- `.github/workflows/validate.yml` now runs this test after the validator and deterministic encounter simulation.
+- GitHub Actions run `38836895815` reported success for all three test steps: metadata validation, encounter simulation, and Book 1 regression checks. At the last status read, the job was still finalizing post-job cleanup, so overall workflow conclusion was not yet available.
+- Manual browser testing, mobile/keyboard QA, and save/export/import verification remain open.
