@@ -121,7 +121,7 @@
 
 ## Phase 10: Release & Evidence
 - [x] T091 — Build automated unit tests for quest logic
-- [ ] T092 — Build API integration tests for auth and state
+- [x] T092 — Build API integration tests for auth and state
 - [ ] T093 — Build database restart and concurrency tests
 - [ ] T094 — Build artifact reward ledger invariant tests
 - [ ] T095 — Build story canon contradiction checks
@@ -154,3 +154,8 @@ T005, T008 and T010: baseline written and committed in docs/campaign/ALICE_CANON
 - **T084 VERIFIED DONE (faction influence and territory tracking):** Existing faction pulse tables and new campaign-scoped `backend/living-world-pulse.js` track faction influence and territory changes in SQLite, with immutable pulse ledger; `server.js` adds signed DM-only pulse execution and campaign-member ledger reads. Commits `24988cca90cb6d035326a168dff6f016101086bb`, `206d88ce85fd74b4acba8735d1db9fc996cc75c0`. Automated tests in `backend/living-world-pulse.test.js` and `backend/living-world-api.integration.test.js` passed in Omniversal run `38919615246`.
 - **T097 VERIFIED DONE (run CI on development branch and capture results):** GitHub Actions Omniversal verification run `38919615246` **success**; Validate campaign records run `38919615249` **success** on integration commit `5faad09ada9b6f967ca6e4fa6231b8b713841cbf`. No deployment claimed.
 - **Current verified checklist: 9/100.** Do not conflate T084 with T089 deterministic replay; T089 remains open. T092/T093 and quest transaction tasks remain open pending their broader acceptance criteria.
+
+## 2026-10-16 — Combat API verification
+- **T092 VERIFIED DONE (API integration tests for auth and state):** `backend/living-world-api.integration.test.js` and `backend/combat-api.integration.test.js` test signed actor authorization, player/outsider denial, cross-campaign isolation, idempotent actions, and state reads. Omniversal verification run `38920078593` passed; Validate campaign records run `38920078591` passed after combat integration test commit `1d31db1e6d1d4aa4c3abd620a9f63a0896a16d2f`.
+- **Combat v1 implementation in progress:** `backend/combat-engine.js` commit `169974456b14a7893068dd8f13088118935349e1`; unit tests commit `03abd19c853c4a05e741401f66aa3fdfc277ab82`; server routes commit `42b08e62514b85647d4b2384e1e47813afb393ad`. T074 remains open until spell slots and full combat-resource rules are implemented.
+- **Verified total: 10/100**. No production deployment or in-game rewards.
