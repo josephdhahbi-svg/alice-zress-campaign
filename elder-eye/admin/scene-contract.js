@@ -1,4 +1,5 @@
 "use strict";
+const {resolveD20}=require("../../backend/dice-rules");
 const CHOICE_ORDER=Object.freeze(["lawful_good","neutral_good","chaotic_good","utility","action"]);
 function validateScene(scene){
   const errors=[];
@@ -22,8 +23,8 @@ function resolveSceneChoice(scene,option,roll,modifier){
   const check=choice.check;
   if(!check)return {sceneId:scene.id,choiceId:choice.id,option,outcome:choice.success??null,requiresRoll:false,tags:choice.consequence_tags??[]};
   if(!Number.isInteger(roll)||roll<1||roll>20)throw new RangeError("A d20 result of 1-20 is required");
-  if(!Number.isInteger(modifier)||modifier< -30||modifier>30)throw new RangeError("Verified ability modifier required (-30 to 30)");
-  const total=roll+modifier,success=total>=check.dc;
+  if(!Number.isSafeInteger(modifier))throw new RangeError("Verified ability modifier required");
+  const {total,success}=resolveD20({rawRoll:roll,modifier,dc:check.dc});
   return {sceneId:scene.id,choiceId:choice.id,option,ability:check.ability,skill:check.skill,dc:check.dc,roll,modifier,total,success,outcome:success?choice.success:choice.failure,tags:choice.consequence_tags??[]};
 }
 module.exports={CHOICE_ORDER,validateScene,resolveSceneChoice};
