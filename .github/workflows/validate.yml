@@ -56,6 +56,8 @@ jobs:
         run: node --test backend/backup-restore.integration.test.js
       - name: Check Faction Territory Pulse Engine
         run: node --test backend/faction-pulse.test.js
+      - name: Test transactional faction disputes
+        run: node --test backend/faction-dispute-engine.test.js
       - name: Test authenticated browser roll client
         run: node --test backend/roll-client.test.js
       - name: Test deterministic d20 resolution
