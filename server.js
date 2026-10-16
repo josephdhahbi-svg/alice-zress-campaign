@@ -46,8 +46,10 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
 );
 `);
   migrate(db);
-  const pulse = initializeFactionPulseEngine(db);
+  // Create faction base tables before disputes, then initialize pulse queries.
+  db.exec(require("./backend/faction-pulse").CREATE_TABLES);
   const disputes = createFactionDisputeEngine(db);
+  const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
   const isRevoked=db.prepare("SELECT 1 FROM vtt_revoked_sessions WHERE token_hash=?");
