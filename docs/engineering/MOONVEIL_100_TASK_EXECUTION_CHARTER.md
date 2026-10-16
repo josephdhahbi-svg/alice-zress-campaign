@@ -62,10 +62,10 @@
 ## Phase 5: Backend & Data
 - [ ] T041 — Inventory current Express API and module boundaries
 - [ ] T042 — Review migration conventions and database schema
-- [ ] T043 — Create durable quest and inventory migrations
+- [x] T043 — Create durable quest and inventory migrations
 - [ ] T044 — Enable and verify actual SQLite WAL where suitable
 - [ ] T045 — Add transaction rollback and restart recovery tests
-- [ ] T046 — Introduce character campaign foreign-key relationships
+- [x] T046 — Introduce character campaign foreign-key relationships
 - [ ] T047 — Persist positions with plane/world coordinate frames
 - [ ] T048 — Add spatial grid or indexed proximity strategy
 - [ ] T049 — Validate coordinates and radius against NaN/Infinity
@@ -120,7 +120,7 @@
 - [ ] T090 — Test living-world consistency across missions
 
 ## Phase 10: Release & Evidence
-- [ ] T091 — Build automated unit tests for quest logic
+- [x] T091 — Build automated unit tests for quest logic
 - [ ] T092 — Build API integration tests for auth and state
 - [ ] T093 — Build database restart and concurrency tests
 - [ ] T094 — Build artifact reward ledger invariant tests
@@ -142,3 +142,10 @@
 
 ## 2026-10-16 canon deliverable verification
 T005, T008 and T010: baseline written and committed in docs/campaign/ALICE_CANON_BASELINE_AND_CONTINUITY.md at 36dd131770eca1fd90edf67fc750d1c57a09aa94. These are documentary completions, not gameplay progression or automated test results. The full historical source audit remains open.
+
+## 2026-10-16 verified CI evidence
+- T043 and T046 VERIFIED DONE for the scoped durable v3 schema and character-to-campaign foreign-key relationships in `backend/migrations.js` (commit `628aabe21a7df09e16d5b227d484d803fef20f8d`). Both GitHub Actions workflows passed at commit `f38aed444a6bf327ec41edd292f0bd9becf5ccc9`: Validate campaign records run `38919073074`; Omniversal verification run `38919073075` (includes `npm test`). Scope excludes secure API reward implementation.
+- T091 VERIFIED DONE: `backend/quest-core.test.js` is included in `npm test`, which passed in Omniversal verification run `38919073075`. Scope is existing quest-core unit coverage, not complete API integration.
+- Fixed migration count regression in `backend/backup-restore.integration.test.js` at commit `f38aed444a6bf327ec41edd292f0bd9becf5ccc9`.
+- Added explicit CI step for canon/quest/migration tests in `.github/workflows/validate.yml` at commit `8abb3b6216a63efde9981c0aa89379dd946566ec`; its latest run was pending when this entry was written.
+- Evidence-backed checklist count now 6/100: T005, T008, T010, T033, T043, T046, T091 = **7/100**. This count supersedes earlier 5/100 reports; T091 was not previously checked in the checklist despite earlier reported success.
