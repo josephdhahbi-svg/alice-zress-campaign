@@ -1,0 +1,921 @@
+{
+  "schema_version": "1.0",
+  "roadmap_id": "MOONVEIL_30_BOOK_10_TRILOGY_PROPOSAL_V1",
+  "status": "proposed_campaign_roadmap_not_authoritative_atlas",
+  "canon_status": "unverified",
+  "source_reference": "user_supplied_master_architectural_prompt",
+  "principles": {
+    "book_count": 30,
+    "trilogy_count": 10,
+    "books_per_trilogy": 3,
+    "level_labels_are_proposed": true,
+    "levels_21_plus_requires_homebrew_rules_review": true,
+    "seven_traversals_remain_separate": true,
+    "closed_loop_is_narrative_structure_not_historical_date_rewrite": true,
+    "route_unlocks_enabled": false,
+    "player_state_mutation": false
+  },
+  "trilogies": [
+    {
+      "trilogy_id": "TRILOGY_01",
+      "trilogy_number": 1,
+      "title": "The Underdark & Primeval Roots",
+      "book_ids": [
+        "B01",
+        "B02",
+        "B03"
+      ],
+      "status": "proposed"
+    },
+    {
+      "trilogy_id": "TRILOGY_02",
+      "trilogy_number": 2,
+      "title": "The Elemental & Tectonic Shift",
+      "book_ids": [
+        "B04",
+        "B05",
+        "B06"
+      ],
+      "status": "proposed"
+    },
+    {
+      "trilogy_id": "TRILOGY_03",
+      "trilogy_number": 3,
+      "title": "The Age of Floating Empires",
+      "book_ids": [
+        "B07",
+        "B08",
+        "B09"
+      ],
+      "status": "proposed"
+    },
+    {
+      "trilogy_id": "TRILOGY_04",
+      "trilogy_number": 4,
+      "title": "Prophecy & The Early Mists",
+      "book_ids": [
+        "B10",
+        "B11",
+        "B12"
+      ],
+      "status": "proposed"
+    },
+    {
+      "trilogy_id": "TRILOGY_05",
+      "trilogy_number": 5,
+      "title": "Divine Fracture & Blood War",
+      "book_ids": [
+        "B13",
+        "B14",
+        "B15"
+      ],
+      "status": "proposed"
+    },
+    {
+      "trilogy_id": "TRILOGY_06",
+      "trilogy_number": 6,
+      "title": "The Great Realignment",
+      "book_ids": [
+        "B16",
+        "B17",
+        "B18"
+      ],
+      "status": "proposed"
+    },
+    {
+      "trilogy_id": "TRILOGY_07",
+      "trilogy_number": 7,
+      "title": "The Astral Void & Epic Magic",
+      "book_ids": [
+        "B19",
+        "B20",
+        "B21"
+      ],
+      "status": "proposed"
+    },
+    {
+      "trilogy_id": "TRILOGY_08",
+      "trilogy_number": 8,
+      "title": "Entropy & The Return Journey",
+      "book_ids": [
+        "B22",
+        "B23",
+        "B24"
+      ],
+      "status": "proposed"
+    },
+    {
+      "trilogy_id": "TRILOGY_09",
+      "trilogy_number": 9,
+      "title": "The Expanding Mists & Convergence",
+      "book_ids": [
+        "B25",
+        "B26",
+        "B27"
+      ],
+      "status": "proposed"
+    },
+    {
+      "trilogy_id": "TRILOGY_10",
+      "trilogy_number": 10,
+      "title": "The U01 Awakening & Ravenloft Endgame",
+      "book_ids": [
+        "B28",
+        "B29",
+        "B30"
+      ],
+      "status": "proposed"
+    }
+  ],
+  "books": [
+    {
+      "book_id": "B01",
+      "book_number": 1,
+      "trilogy_id": "TRILOGY_01",
+      "proposed_level": 1,
+      "title": "The Pit of Ghaunadaur (The Fall)",
+      "summary": "The plunge from the Promenade, initial survival, and infinite hallway transit.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B02",
+      "book_number": 2,
+      "trilogy_id": "TRILOGY_01",
+      "proposed_level": 2,
+      "title": "The Weeping Obsidian Archives",
+      "summary": "Unlocking transitional arcanocraft and acquiring the Weeping Obsidian Lens.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B03",
+      "book_number": 3,
+      "trilogy_id": "TRILOGY_01",
+      "proposed_level": 3,
+      "title": "The Crown Wars & Elven Splendor",
+      "summary": "Navigating ancient elven strata and early dimensional tears.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B04",
+      "book_number": 4,
+      "trilogy_id": "TRILOGY_02",
+      "proposed_level": 4,
+      "title": "The Dawn War Primordial",
+      "summary": "Entering raw elemental chaos and the clash of gods and primordials.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B05",
+      "book_number": 5,
+      "trilogy_id": "TRILOGY_02",
+      "proposed_level": 5,
+      "title": "The Subterranean Tectonic Fault",
+      "summary": "Surviving deep fault lines as early planar tremors crack the lower board.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B06",
+      "book_number": 6,
+      "trilogy_id": "TRILOGY_02",
+      "proposed_level": 6,
+      "title": "The Threshold of the Surface",
+      "summary": "Breaking through the upper crust to reach the coastal beachhead.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B07",
+      "book_number": 7,
+      "trilogy_id": "TRILOGY_03",
+      "proposed_level": 7,
+      "title": "The Fall of Netheril",
+      "summary": "Exploring floating enclaves and the cataclysmic shattering of the Weave (linked to the Lens).",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B08",
+      "book_number": 8,
+      "trilogy_id": "TRILOGY_03",
+      "proposed_level": 8,
+      "title": "The Greyhawk Convergence",
+      "summary": "Navigating Oerth's tactical maps and artifact containment (Eye and Hand of Vecna).",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B09",
+      "book_number": 9,
+      "trilogy_id": "TRILOGY_03",
+      "proposed_level": 9,
+      "title": "The Dragonlance Cataclysm",
+      "summary": "Traversing the fiery skies of Krynn during divine wrath and dragon armies.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B10",
+      "book_number": 10,
+      "trilogy_id": "TRILOGY_04",
+      "proposed_level": 10,
+      "title": "The Eberron Prophecy Engine",
+      "summary": "Interfacing with the Draconic Prophecy and time-locked mechanics.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B11",
+      "book_number": 11,
+      "trilogy_id": "TRILOGY_04",
+      "proposed_level": 11,
+      "title": "The Early Mists of Barovia",
+      "summary": "First experimental brushes with the creeping mists of the Demiplane of Dread.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B12",
+      "book_number": 12,
+      "trilogy_id": "TRILOGY_04",
+      "proposed_level": 12,
+      "title": "The Planescape Confluence",
+      "summary": "Ascending to Sigil, the City of Doors, securing the Guvner Universal Axioms ledger.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B13",
+      "book_number": 13,
+      "trilogy_id": "TRILOGY_05",
+      "proposed_level": 13,
+      "title": "The Cracking of Mount Celestia",
+      "summary": "Witnessing upper-plane spires fracture under cosmic pressure.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B14",
+      "book_number": 14,
+      "trilogy_id": "TRILOGY_05",
+      "proposed_level": 14,
+      "title": "The Abyssal Sinkholes",
+      "summary": "Descending into infinite layers of chaotic demon-slaughter.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B15",
+      "book_number": 15,
+      "trilogy_id": "TRILOGY_05",
+      "proposed_level": 15,
+      "title": "The Iron Trenches of Baator",
+      "summary": "Negotiating calculated hellscapes under Asmodeus for tactical alliances.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B16",
+      "book_number": 16,
+      "trilogy_id": "TRILOGY_06",
+      "proposed_level": 16,
+      "title": "The Spellplague Tides",
+      "summary": "Traversing the volatile era where divine death reshaped magic and geography.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B17",
+      "book_number": 17,
+      "trilogy_id": "TRILOGY_06",
+      "proposed_level": 17,
+      "title": "The Second Sundering",
+      "summary": "Navigating tectonic world-healing as the multiverse separates and reconnects.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B18",
+      "book_number": 18,
+      "trilogy_id": "TRILOGY_06",
+      "proposed_level": 18,
+      "title": "The Far Realm Incursion",
+      "summary": "Facing alien, non-Euclidean oceans where sanity and geometry break down.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B19",
+      "book_number": 19,
+      "trilogy_id": "TRILOGY_07",
+      "proposed_level": 19,
+      "title": "The Spelljammer Void",
+      "summary": "Sailing the astral sea between crystal spheres aboard magical helm-ships.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B20",
+      "book_number": 20,
+      "trilogy_id": "TRILOGY_07",
+      "proposed_level": 20,
+      "title": "The Dweomer Singularity",
+      "summary": "Harnessing high-tier epic magic to stabilize collapsing ley-lines.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "pending_rules_and_chronology_review"
+    },
+    {
+      "book_id": "B21",
+      "book_number": 21,
+      "trilogy_id": "TRILOGY_07",
+      "proposed_level": 21,
+      "title": "The Archfey Courts",
+      "summary": "Navigating the whimsical, deadly politics of the Feywild where time moves sideways.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    },
+    {
+      "book_id": "B22",
+      "book_number": 22,
+      "trilogy_id": "TRILOGY_08",
+      "proposed_level": 22,
+      "title": "The Shadowfell Entropy",
+      "summary": "Confronting the mirror-dark reflection of the material world to harvest shadow-stuff.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    },
+    {
+      "book_id": "B23",
+      "book_number": 23,
+      "trilogy_id": "TRILOGY_08",
+      "proposed_level": 23,
+      "title": "Re-entering the Infinite Hallway",
+      "summary": "Climbing back up the vertical time-space corridor with high-tier mastery.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    },
+    {
+      "book_id": "B24",
+      "book_number": 24,
+      "trilogy_id": "TRILOGY_08",
+      "proposed_level": 24,
+      "title": "The Sighting of Lord Car",
+      "summary": "Reaching the upper architectural threshold of existence.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    },
+    {
+      "book_id": "B25",
+      "book_number": 25,
+      "trilogy_id": "TRILOGY_09",
+      "proposed_level": 25,
+      "title": "The Expanding Mists",
+      "summary": "Ravenloft's mists break borders, pulling prior campaign settings into the Svalich Woods.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    },
+    {
+      "book_id": "B26",
+      "book_number": 26,
+      "trilogy_id": "TRILOGY_09",
+      "proposed_level": 26,
+      "title": "The Siege of Vallaki",
+      "summary": "Unifying all gathered factions into a defensive front against Strahd's legions.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    },
+    {
+      "book_id": "B27",
+      "book_number": 27,
+      "trilogy_id": "TRILOGY_09",
+      "proposed_level": 27,
+      "title": "The God-War at the Gates",
+      "summary": "Deploying the Guvner legal-ontological grid outside Castle Ravenloft.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    },
+    {
+      "book_id": "B28",
+      "book_number": 28,
+      "trilogy_id": "TRILOGY_10",
+      "proposed_level": 28,
+      "title": "The U01 Ontological Awakening",
+      "summary": "Spending accumulated choice packets to shatter the Dark Powers' contract.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    },
+    {
+      "book_id": "B29",
+      "book_number": 29,
+      "trilogy_id": "TRILOGY_10",
+      "proposed_level": 29,
+      "title": "The Heart of Castle Ravenloft",
+      "summary": "The Level 30 cinematic climax defeating Strahd von Zarovich.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    },
+    {
+      "book_id": "B30",
+      "book_number": 30,
+      "trilogy_id": "TRILOGY_10",
+      "proposed_level": 30,
+      "title": "Closing the Loop & The Cosmic Showdown",
+      "summary": "The mists part, revealing the ultimate God-War against outer-planar entropy; Alice anchors reality and descends one final time back to the Pit of Ghaunadaur.",
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_master_architectural_prompt",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null
+      },
+      "locations": [],
+      "routes": [],
+      "hazards": [],
+      "artifact_refs": [],
+      "prerequisite_event_ids": [],
+      "state_effect": "none",
+      "rules_review_status": "homebrew_level_21_plus_review_required"
+    }
+  ],
+  "continuity_gates": [
+    {
+      "id": "GATE_LEVEL_CAP",
+      "issue": "Levels 21-30 are beyond the ordinary D&D 5e character-level ceiling and require explicit homebrew progression rules.",
+      "applies_to_books": [
+        "B21",
+        "B22",
+        "B23",
+        "B24",
+        "B25",
+        "B26",
+        "B27",
+        "B28",
+        "B29",
+        "B30"
+      ]
+    },
+    {
+      "id": "GATE_HISTORICAL_EPOCHS",
+      "issue": "Crown Wars, Netheril, Spellplague, Second Sundering, and other epochs require source-backed dates and character availability."
+    },
+    {
+      "id": "GATE_CROSSOVER_SETTINGS",
+      "issue": "Greyhawk, Dragonlance, Eberron, Spelljammer, Planescape, and Ravenloft links are campaign crossover proposals until each transition is verified/approved."
+    },
+    {
+      "id": "GATE_CLOSED_LOOP",
+      "issue": "Book 30 to Book 1 may close the narrative loop without rewinding or rewriting historical DR dates."
+    },
+    {
+      "id": "GATE_NAMED_PROPOSALS",
+      "issue": "Weeping Obsidian Lens, Guvner Universal Axioms ledger, Lord Car, and Alustra-related concepts require individual source/canon classification."
+    }
+  ],
+  "notes": [
+    "This proposal does not replace data/master_roads_atlas.json.",
+    "The three-tier/ten-trilogy organization is distinct from the seven-traversal system.",
+    "No historical date, location, route, reward, or milestone is inferred as verified."
+  ]
+}
