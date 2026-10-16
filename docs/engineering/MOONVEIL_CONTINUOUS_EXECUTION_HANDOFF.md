@@ -167,3 +167,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Omniversal verification `38924261089` SUCCESS.
 - Validate campaign records `38924261076` SUCCESS.
 - No charter closure: verified remains **18/100**, open **82/100**. Worker remains explicit/manual and drafts-only. Stale lock requires operator inspection and manual clearing. Next priority: versioned economy migration and signed HTTP economy integration tests.
+
+## 2026-10-16 — Versioned economy migration
+- `backend/migrations.js` migration v6 adds `vtt_world_economy` and `vtt_world_economy_adjustments`, commit `5c2d69675473cb08f9173bf6a93828b5d548f4f0`.
+- `backend/world-economy.js` commit `d1b1ac076f91a84d86fa533b46a2a8166115b945` now fails closed if schema migration was skipped instead of creating tables ad hoc.
+- `backend/world-economy-migration.test.js` commit `54a02e7a43a95728878c3bfac5b331673c40d38b`: migration requirement, replay, preserved prices and audit records.
+- CI pending. Verified charter baseline **18/100**, **82 open**; economy HTTP integration tests and full settlement economy baseline still outstanding.
