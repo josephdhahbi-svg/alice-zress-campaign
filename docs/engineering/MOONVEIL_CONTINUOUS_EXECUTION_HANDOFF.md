@@ -107,3 +107,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - **Verified PASS**: Omniversal run `38922191588`; Validate campaign records run `38922191598`. Both jobs completed successfully after fix.
 - Charter remains **16/100**: approval/audit is real and tested, but T029 covers broader quest state transitions, not merely catalog registration/approval; keep it open. No reward catalog approved and no artifacts granted.
 - Next: versioned quest status transitions and audit; reviewed artifact metadata/approval design; atomic rewards only after explicit rule approval; combat resources.
+
+## 2026-10-16 — Audited quest state transitions batch
+- Migration v5 in `backend/migrations.js` commit `ed96af51f29f5bd4064d8fa0d03d0ed627a8689e` adds per-character quest states (BLOCKED/ACTIVE/FAILED/COMPLETE), revision and append-only transition audit.
+- `backend/quest-evidence-engine.js` commit `a5c9851285d2ab8f58a59fe3e40fe165a38bb2ee`: DM-only state machine with expected-revision optimistic concurrency, reason, valid transition graph, transactionally logged transitions. Completion requires ACTIVE and records COMPLETE audit in the same transaction as completion.
+- `server.js` commit `85e3b51b562d7ecdb5da22160f71a5f1ae58aba5`: signed DM-only POST `/api/campaigns/:campaignId/quests/:questId/state`.
+- Tests updated: `backend/quest-evidence-engine.test.js` `4cb393d2a40a74c4ea2bcd11d0e8c17c6319a3a2`, `backend/quest-evidence-api.integration.test.js` `e8bab6454b7ee8c98335cd20b46d83c3e50db5e8`; new `backend/quest-state-transitions.test.js` `2049116a43c8edcb93ed30c630d4ba4af3f5c031`.
+- **CI pending at time of handoff**; verified count remains 16/100 until confirmed. Do not award artifacts or modify Alice.
