@@ -38,7 +38,7 @@
 ## Phase 3: Quest Systems
 - [ ] T021 — Model quests with prerequisite state machine
 - [ ] T022 — Separate story beats from verified quest completions
-- [ ] T023 — Add objectives and evidence-based completion checks
+- [x] T023 — Add objectives and evidence-based completion checks
 - [x] T024 — Require server-side character and campaign ownership
 - [ ] T025 — Support failed, blocked, active and complete statuses
 - [ ] T026 — Track repeatability and cooldowns explicitly
@@ -172,3 +172,7 @@ T005, T008 and T010: baseline written and committed in docs/campaign/ALICE_CANON
 - **T030 VERIFIED DONE:** `backend/quest-evidence-engine.test.js` and `backend/quest-evidence-api.integration.test.js` verify missing evidence, forged player events, wrong owner, duplicate objectives and completion, conflicting retry and rollback. Integration test commit `aa607842d8d19567f37d83624eabdfc9d3deadb4`.
 - Omniversal CI run `38921424225` SUCCESS and Validate campaign records run `38921424168` SUCCESS.
 - **Verified total: 15/100.** T023 remains open pending trusted quest-catalog objective requirements, and artifact-award tasks remain open. No in-game rewards.
+
+## 2026-10-16 — T023 verified
+- **T023 VERIFIED DONE:** `backend/quest-evidence-engine.js` now enforces DM-registered, immutable, campaign-scoped required objective definitions. Unknown quests/objectives and incomplete objective sets cannot be completed; exact DM-authored journal evidence is required. `server.js` exposes signed DM-only catalog registration. Tests in `backend/quest-evidence-engine.test.js` and `backend/quest-evidence-api.integration.test.js` passed GitHub Actions Omniversal run `38921730504` and Validate campaign records run `38921730562`. Commits: `cbcbc25c0ad291be44f19e1740d554fa603a5e77`, `09a3e325909c112a1e2cb97c34992d34ae5b3b55`.
+- **Verified total 16/100**. No artifact awards, no Alice level or inventory changes. Remaining 84 tasks open.
