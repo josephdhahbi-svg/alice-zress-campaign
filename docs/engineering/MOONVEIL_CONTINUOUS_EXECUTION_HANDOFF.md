@@ -271,3 +271,8 @@ CI outcome must be checked before declaring verification. This is a **read-only 
 - Omniversal verification run `38930351829`: **SUCCESS**.
 - Validate campaign records run `38930351801`: **SUCCESS**.
 - Safe read-only dialogue slice merged on development branch; no quest completion or artifact grants. Charter still 18/100 until task acceptance audit.
+
+## 2026-10-16 — Art administration intake
+Created `docs/administration/MOONVEIL_ART_ASSET_INTAKE_REGISTER.md` in commit `5944679835fd0f4cfe06c02321c00a14d5887ffe`.
+Two new ChatGPT-generated dashboard concept PNGs exist as conversation artifacts (ART-ADM-001 and ART-ADM-002), **not** committed to GitHub and **not** connected to the VTT. Concepts include illustrative/invented UI statistics and must not be imported as game state.
+Art paperwork records proposed 15+ asset work orders, mandatory provenance/rights/canon checks, exact asset-path verification, and approval form. Existing portrait files across GitHub have NOT yet been exhaustively audited. No charter task closed. Next: audit repo asset paths, transfer approved binary art via supported binary-capable tool, integrate actual UI references and test rendering.
