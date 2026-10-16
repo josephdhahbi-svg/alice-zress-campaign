@@ -18,6 +18,14 @@ function createBackupService(db,{directory,intervalMs=6*60*60*1000,retain=14,clo
    const stamp=clock().toISOString().replace(/[:.]/g,"-");
    destination=path.join(folder,"moonveil-"+stamp+"-"+require("node:crypto").randomBytes(4).toString("hex")+".sqlite");
    await db.backup(destination);
+   // Verify a complete SQLite snapshot before retention can delete older backups.
+   // Test doubles that do not expose SQLite prepare() remain supported by unit tests.
+   if(typeof db.prepare==="function"){
+    const snapshot=new Database(destination,{readonly:true,fileMustExist:true});
+    try{
+     if(snapshot.pragma("integrity_check",{simple:true})!=="ok")throw new Error("BACKUP_INTEGRITY_FAILED");
+    }finally{snapshot.close();}
+   }
    const files=fs.readdirSync(folder).filter(n=>/^moonveil-.*\.sqlite$/.test(n)).sort().reverse();
    for(const file of files.slice(retain))fs.unlinkSync(path.join(folder,file));
    logger.info?.("[Moonveil] SQLite online backup completed");
