@@ -1,0 +1,1458 @@
+{
+  "schema": "moonveil.wonderland-divine-25.v1",
+  "status": "STORY_PRIORITY_CAST_NOT_OFFICIAL_POWER_RANKING",
+  "settingPolicy": "Cross-setting manifestations require DM approval, chronology, deity incarnation and planar-access verification",
+  "characterPolicy": "Alice Z'ress remains protagonist, outside the 25 symbolic roles",
+  "casting": [
+    {
+      "priority": 1,
+      "wonderland": "Red King",
+      "deity": "Ao",
+      "moralRole": "GREEN",
+      "theme": "dream and cosmological law",
+      "questId": "wonderland_throne_01",
+      "questTitle": "The Dreaming King",
+      "questHook": "Alice encounters a Red King motif connected to Ao's influence over dream and cosmological law. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Red King guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand dream and cosmological law?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the dream and cosmological law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the dream and cosmological law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the dream and cosmological law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the dream and cosmological law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the dream and cosmological law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 2,
+      "wonderland": "Caterpillar",
+      "deity": "Ghaunadaur",
+      "moralRole": "RED",
+      "theme": "identity and eldritch hunger",
+      "questId": "wonderland_throne_02",
+      "questTitle": "The Elder Eye's Question",
+      "questHook": "Alice encounters a Caterpillar motif connected to Ghaunadaur's influence over identity and eldritch hunger. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Caterpillar guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand identity and eldritch hunger?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the identity and eldritch hunger dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the identity and eldritch hunger dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the identity and eldritch hunger dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the identity and eldritch hunger dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the identity and eldritch hunger dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 3,
+      "wonderland": "White Queen",
+      "deity": "Eilistraee",
+      "moralRole": "BLUE",
+      "theme": "mercy and freedom",
+      "questId": "wonderland_throne_03",
+      "questTitle": "The Moonlit Sanctuary",
+      "questHook": "Alice encounters a White Queen motif connected to Eilistraee's influence over mercy and freedom. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "White Queen guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand mercy and freedom?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the mercy and freedom dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the mercy and freedom dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the mercy and freedom dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the mercy and freedom dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the mercy and freedom dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 4,
+      "wonderland": "Queen of Hearts",
+      "deity": "Lolth",
+      "moralRole": "RED",
+      "theme": "tyranny and trials",
+      "questId": "wonderland_throne_04",
+      "questTitle": "The Court of Hearts",
+      "questHook": "Alice encounters a Queen of Hearts motif connected to Lolth's influence over tyranny and trials. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Queen of Hearts guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand tyranny and trials?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the tyranny and trials dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the tyranny and trials dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the tyranny and trials dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the tyranny and trials dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the tyranny and trials dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 5,
+      "wonderland": "Cheshire Cat",
+      "deity": "Shar",
+      "moralRole": "RED",
+      "theme": "loss and disappearing memory",
+      "questId": "wonderland_throne_05",
+      "questTitle": "The Vanishing Path",
+      "questHook": "Alice encounters a Cheshire Cat motif connected to Shar's influence over loss and disappearing memory. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Cheshire Cat guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand loss and disappearing memory?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the loss and disappearing memory dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the loss and disappearing memory dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the loss and disappearing memory dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the loss and disappearing memory dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the loss and disappearing memory dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 6,
+      "wonderland": "White Rabbit",
+      "deity": "Mystra",
+      "moralRole": "BLUE",
+      "theme": "time and magical eras",
+      "questId": "wonderland_throne_06",
+      "questTitle": "The Clockwork Weave",
+      "questHook": "Alice encounters a White Rabbit motif connected to Mystra's influence over time and magical eras. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "White Rabbit guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand time and magical eras?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the time and magical eras dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the time and magical eras dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the time and magical eras dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the time and magical eras dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the time and magical eras dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 7,
+      "wonderland": "Mad Hatter",
+      "deity": "Corellon",
+      "moralRole": "BLUE",
+      "theme": "creative magic",
+      "questId": "wonderland_throne_07",
+      "questTitle": "The Impossible Tea Party",
+      "questHook": "Alice encounters a Mad Hatter motif connected to Corellon's influence over creative magic. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Mad Hatter guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand creative magic?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the creative magic dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the creative magic dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the creative magic dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the creative magic dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the creative magic dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 8,
+      "wonderland": "Red Queen",
+      "deity": "Bane",
+      "moralRole": "RED",
+      "theme": "rules and domination",
+      "questId": "wonderland_throne_08",
+      "questTitle": "The Red Queen's Race",
+      "questHook": "Alice encounters a Red Queen motif connected to Bane's influence over rules and domination. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Red Queen guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand rules and domination?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the rules and domination dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the rules and domination dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the rules and domination dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the rules and domination dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the rules and domination dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 9,
+      "wonderland": "White Knight",
+      "deity": "Bahamut",
+      "moralRole": "BLUE",
+      "theme": "honor and protection",
+      "questId": "wonderland_throne_09",
+      "questTitle": "The White Knight's Promise",
+      "questHook": "Alice encounters a White Knight motif connected to Bahamut's influence over honor and protection. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "White Knight guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand honor and protection?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the honor and protection dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the honor and protection dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the honor and protection dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the honor and protection dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the honor and protection dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 10,
+      "wonderland": "Red Knight",
+      "deity": "Tiamat",
+      "moralRole": "RED",
+      "theme": "conquest",
+      "questId": "wonderland_throne_10",
+      "questTitle": "The Dragon's Challenge",
+      "questHook": "Alice encounters a Red Knight motif connected to Tiamat's influence over conquest. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Red Knight guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand conquest?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the conquest dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the conquest dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the conquest dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the conquest dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the conquest dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 11,
+      "wonderland": "Humpty Dumpty",
+      "deity": "Vecna",
+      "moralRole": "RED",
+      "theme": "secrets and language",
+      "questId": "wonderland_throne_11",
+      "questTitle": "The Broken Word",
+      "questHook": "Alice encounters a Humpty Dumpty motif connected to Vecna's influence over secrets and language. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Humpty Dumpty guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand secrets and language?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the secrets and language dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the secrets and language dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the secrets and language dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the secrets and language dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the secrets and language dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 12,
+      "wonderland": "Dormouse",
+      "deity": "Jergal",
+      "moralRole": "GREEN",
+      "theme": "memory and death records",
+      "questId": "wonderland_throne_12",
+      "questTitle": "The Sleeping Archive",
+      "questHook": "Alice encounters a Dormouse motif connected to Jergal's influence over memory and death records. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Dormouse guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand memory and death records?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the memory and death records dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the memory and death records dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the memory and death records dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the memory and death records dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the memory and death records dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 13,
+      "wonderland": "March Hare",
+      "deity": "Cyric",
+      "moralRole": "RED",
+      "theme": "madness and lies",
+      "questId": "wonderland_throne_13",
+      "questTitle": "The Madness of Noon",
+      "questHook": "Alice encounters a March Hare motif connected to Cyric's influence over madness and lies. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "March Hare guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand madness and lies?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the madness and lies dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the madness and lies dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the madness and lies dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the madness and lies dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the madness and lies dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 14,
+      "wonderland": "Duchess",
+      "deity": "Talona",
+      "moralRole": "RED",
+      "theme": "poison and corruption",
+      "questId": "wonderland_throne_14",
+      "questTitle": "The Poisoned Household",
+      "questHook": "Alice encounters a Duchess motif connected to Talona's influence over poison and corruption. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Duchess guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand poison and corruption?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the poison and corruption dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the poison and corruption dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the poison and corruption dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the poison and corruption dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the poison and corruption dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 15,
+      "wonderland": "Gryphon",
+      "deity": "Tyr",
+      "moralRole": "BLUE",
+      "theme": "justice",
+      "questId": "wonderland_throne_15",
+      "questTitle": "The Gryphon's Trial",
+      "questHook": "Alice encounters a Gryphon motif connected to Tyr's influence over justice. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Gryphon guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand justice?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the justice dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the justice dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the justice dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the justice dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the justice dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 16,
+      "wonderland": "Mock Turtle",
+      "deity": "Ilmater",
+      "moralRole": "BLUE",
+      "theme": "compassion and suffering",
+      "questId": "wonderland_throne_16",
+      "questTitle": "The Mock Turtle's Tears",
+      "questHook": "Alice encounters a Mock Turtle motif connected to Ilmater's influence over compassion and suffering. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Mock Turtle guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand compassion and suffering?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the compassion and suffering dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the compassion and suffering dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the compassion and suffering dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the compassion and suffering dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the compassion and suffering dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 17,
+      "wonderland": "King of Hearts",
+      "deity": "Asmodeus",
+      "moralRole": "RED",
+      "theme": "contracts and infernal law",
+      "questId": "wonderland_throne_17",
+      "questTitle": "The King's Contract",
+      "questHook": "Alice encounters a King of Hearts motif connected to Asmodeus's influence over contracts and infernal law. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "King of Hearts guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand contracts and infernal law?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the contracts and infernal law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the contracts and infernal law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the contracts and infernal law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the contracts and infernal law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the contracts and infernal law dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 18,
+      "wonderland": "Knave of Hearts",
+      "deity": "Mask",
+      "moralRole": "GREEN",
+      "theme": "theft and disguise",
+      "questId": "wonderland_throne_18",
+      "questTitle": "The Stolen Tarts",
+      "questHook": "Alice encounters a Knave of Hearts motif connected to Mask's influence over theft and disguise. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Knave of Hearts guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand theft and disguise?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the theft and disguise dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the theft and disguise dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the theft and disguise dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the theft and disguise dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the theft and disguise dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 19,
+      "wonderland": "Dodo",
+      "deity": "Oghma",
+      "moralRole": "GREEN",
+      "theme": "knowledge and stories",
+      "questId": "wonderland_throne_19",
+      "questTitle": "The Caucus Race",
+      "questHook": "Alice encounters a Dodo motif connected to Oghma's influence over knowledge and stories. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Dodo guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand knowledge and stories?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the knowledge and stories dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the knowledge and stories dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the knowledge and stories dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the knowledge and stories dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the knowledge and stories dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 20,
+      "wonderland": "Mouse",
+      "deity": "Selune",
+      "moralRole": "BLUE",
+      "theme": "moonlit guidance",
+      "questId": "wonderland_throne_20",
+      "questTitle": "The Moonlit Crossing",
+      "questHook": "Alice encounters a Mouse motif connected to Selune's influence over moonlit guidance. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Mouse guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand moonlit guidance?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the moonlit guidance dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the moonlit guidance dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the moonlit guidance dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the moonlit guidance dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the moonlit guidance dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 21,
+      "wonderland": "Walrus",
+      "deity": "Umberlee",
+      "moralRole": "RED",
+      "theme": "dangerous sea bargains",
+      "questId": "wonderland_throne_21",
+      "questTitle": "The Walrus's Bargain",
+      "questHook": "Alice encounters a Walrus motif connected to Umberlee's influence over dangerous sea bargains. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Walrus guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand dangerous sea bargains?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the dangerous sea bargains dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the dangerous sea bargains dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the dangerous sea bargains dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the dangerous sea bargains dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the dangerous sea bargains dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 22,
+      "wonderland": "Carpenter",
+      "deity": "Moradin",
+      "moralRole": "BLUE",
+      "theme": "craftsmanship",
+      "questId": "wonderland_throne_22",
+      "questTitle": "The Carpenter's Workshop",
+      "questHook": "Alice encounters a Carpenter motif connected to Moradin's influence over craftsmanship. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Carpenter guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand craftsmanship?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the craftsmanship dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the craftsmanship dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the craftsmanship dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the craftsmanship dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the craftsmanship dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 23,
+      "wonderland": "Lion",
+      "deity": "Tempus",
+      "moralRole": "GREEN",
+      "theme": "war and courage",
+      "questId": "wonderland_throne_23",
+      "questTitle": "The Lion's War",
+      "questHook": "Alice encounters a Lion motif connected to Tempus's influence over war and courage. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Lion guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand war and courage?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the war and courage dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the war and courage dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the war and courage dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the war and courage dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the war and courage dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 24,
+      "wonderland": "Unicorn",
+      "deity": "Lathander",
+      "moralRole": "BLUE",
+      "theme": "dawn and renewal",
+      "questId": "wonderland_throne_24",
+      "questTitle": "The Unicorn's Dawn",
+      "questHook": "Alice encounters a Unicorn motif connected to Lathander's influence over dawn and renewal. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Unicorn guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand dawn and renewal?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the dawn and renewal dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the dawn and renewal dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the dawn and renewal dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the dawn and renewal dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the dawn and renewal dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    },
+    {
+      "priority": 25,
+      "wonderland": "Tiger-lily",
+      "deity": "Silvanus",
+      "moralRole": "GREEN",
+      "theme": "wild nature",
+      "questId": "wonderland_throne_25",
+      "questTitle": "The Garden's Judgment",
+      "questHook": "Alice encounters a Tiger-lily motif connected to Silvanus's influence over wild nature. Determine whether it is a vision, an emissary, a deception, or an era-appropriate manifestation.",
+      "dialogueSeed": [
+        {
+          "speaker": "Tiger-lily guise (attribution unverified)",
+          "text": "Alice Z'ress, what would you surrender to understand wild nature?"
+        },
+        {
+          "speaker": "Alice Z'ress",
+          "text": "First tell me whose question I am answering."
+        }
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "action": "Pursue a lawful good response to the wild nature dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "action": "Pursue a neutral good response to the wild nature dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "action": "Pursue a chaotic good response to the wild nature dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "UTILITY",
+          "action": "Pursue a utility response to the wild nature dilemma",
+          "outcome": "DM_ADJUDICATED"
+        },
+        {
+          "type": "ACTION",
+          "action": "Pursue a action response to the wild nature dilemma",
+          "outcome": "DM_ADJUDICATED"
+        }
+      ],
+      "branches": [
+        "rescue_or_reconciliation",
+        "faction_consequence",
+        "historical_evidence",
+        "return_after_new_item"
+      ],
+      "era": "UNRESOLVED",
+      "drYear": null,
+      "manifestationApproved": false,
+      "canonStatus": "ORIGINAL_HOMEBREW_SYMBOLIC_CASTING",
+      "rewards": "NONE_AUTOMATIC"
+    }
+  ]
+}
