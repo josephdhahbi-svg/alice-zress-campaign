@@ -331,3 +331,12 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Alice remains Level 1 with Shield/Acid Splash/Light and five unselected choices. Causal chain is proposed/read-only, date and locations unknown.
 
 - CI log review found four test errors in `tests/test_spherical_lego_integration.py`: `setUpClass` loaded U01 and LEGO fixtures but did not load `self.chain`, so the four causal-chain tests raised `AttributeError`. `b240bc0` fixes test setup by loading `data/proposed_cosmic_to_u01_causal_chain_v1.json`. New CI run is pending; do not mark tests passing until it completes.
+
+## Directive 24 — causal chain connected to read-only U01 UI (2026-10-16)
+- Verified prior run `38833468118` passed for handoff commit `cd66397`; run `38833451607` passed for integration test commit `b240bc0`.
+- `fb9bb6c` updates `web/alice_u01_preview.html` to fetch `data/proposed_cosmic_to_u01_causal_chain_v1.json` and render each proposed event in a dedicated read-only causal-chain panel. It fails closed if status/canon/state-effect checks do not match; unavailable graph shows an inactive message.
+- `5a09d1f` updates `tests/test_alice_u01_contract.py` to assert the causal JSON is loaded and the read-only renderer/fail-closed message are wired. CI run `38833679165` is queued; new assertion is not yet verified.
+- The HTML causal panel is a presentation of proposed events only; no player event is written and the U01 choice buttons remain disabled.
+- Gemini backend files checked at `backend/db/database.js`, `backend/services/patchApplicationService.js`, `backend/services/ledgerWriter.js`, and `backend/routes/patches.js` remain NOT_FOUND. No operational immutable event ledger or concurrency implementation was available to review.
+- Copilot geography queue remains candidate-only; exact date, location, and route availability unresolved. No image binary was added in this step; Visual Codex asset file paths remain pending.
+- Alice remains Level 1, with Shield/Acid Splash/Light and five choices unselected. No save changes or route unlocks.
