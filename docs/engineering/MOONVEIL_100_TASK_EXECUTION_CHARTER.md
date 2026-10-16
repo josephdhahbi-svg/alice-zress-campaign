@@ -148,4 +148,4 @@ T005, T008 and T010: baseline written and committed in docs/campaign/ALICE_CANON
 - T091 VERIFIED DONE: `backend/quest-core.test.js` is included in `npm test`, which passed in Omniversal verification run `38919073075`. Scope is existing quest-core unit coverage, not complete API integration.
 - Fixed migration count regression in `backend/backup-restore.integration.test.js` at commit `f38aed444a6bf327ec41edd292f0bd9becf5ccc9`.
 - Added explicit CI step for canon/quest/migration tests in `.github/workflows/validate.yml` at commit `8abb3b6216a63efde9981c0aa89379dd946566ec`; its latest run was pending when this entry was written.
-- Evidence-backed checklist count now 6/100: T005, T008, T010, T033, T043, T046, T091 = **7/100**. This count supersedes earlier 5/100 reports; T091 was not previously checked in the checklist despite earlier reported success.
+- Evidence-backed checklist count now 7/100: T005, T008, T010, T033, T043, T046, T091 = **7/100**. This count supersedes earlier 5/100 reports; T091 was not previously checked in the checklist despite earlier reported success.
