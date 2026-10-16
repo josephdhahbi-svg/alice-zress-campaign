@@ -22,6 +22,11 @@ test("quest evidence requires authorized journal proof and DM completion approva
   q.registerQuest({campaignId:"a",questId:"Q1",actorId:"dm",requiredObjectiveIds:["rescue","seal"]});
   assert.equal(q.registerQuest({campaignId:"a",questId:"Q1",actorId:"dm",requiredObjectiveIds:["seal","rescue"]}).duplicate,true);
   assert.throws(()=>q.registerQuest({campaignId:"a",questId:"Q1",actorId:"dm",requiredObjectiveIds:["rescue"]}),/IMMUTABLE/);
+  assert.equal(db.prepare("SELECT COUNT(*) AS n FROM vtt_quest_definition_audit WHERE campaign_id='a'").get().n,1);
+  assert.equal(q.approveQuest({campaignId:"a",questId:"Q1",actorId:"dm"}).duplicate,false);
+  assert.equal(q.approveQuest({campaignId:"a",questId:"Q1",actorId:"dm"}).duplicate,true);
+  assert.equal(db.prepare("SELECT COUNT(*) AS n FROM vtt_quest_definition_audit WHERE campaign_id='a'").get().n,2);
+  assert.throws(()=>q.approveQuest({campaignId:"a",questId:"Q1",actorId:"alice"}),/DM_REQUIRED/);
   const args={campaignId:"a",characterId:"alice",actorId:"alice",questId:"Q1",objectiveId:"rescue",eventId:"proof"};
   assert.throws(()=>q.verifyObjective(args),/EVIDENCE_REQUIRED/);
   append("b","proof","dm","QUEST_OBJECTIVE_VERIFIED",{characterId:"alice",questId:"Q1",objectiveId:"rescue"});
