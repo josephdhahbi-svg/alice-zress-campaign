@@ -179,3 +179,11 @@ The first batch creates structured "Lego" records rather than only brainstorming
 - CI initially found an `UnboundLocalError` after the validator began counting asset records. Fixed the scope declaration.
 - Verified GitHub Actions run #70 completed successfully: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38837871070
 - Remaining: commit actual image files, remove checkerboard backgrounds, manually test the browser prototype, and connect persistent scene outcomes to character/journal state.
+
+
+## Transparent art export
+- Generated cleaned PNG versions of all seven assets and packaged them as `moonveil_art_assets_transparent.zip` in the current session.
+- The manifest records cleaned-but-not-committed status honestly; binary files are not yet present in GitHub.
+- The UI frame center aperture was cleaned separately to remove checkerboard pixels inside the frame.
+- Visual review of a contact sheet indicates the background is largely removed, but edge halos and light-colored subject details still need manual review.
+- CI run #72 passed the validator, simulation, and Book 1 regression steps after the manifest/test status update: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38838143586
