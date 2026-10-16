@@ -1,0 +1,660 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "chainId": "mv_chain_06",
+  "title": "The Well of Shared Waters",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_06_member_1",
+      "name": "Aster Vale River",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_2",
+      "name": "Brin Copper River",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_3",
+      "name": "Celia Moss River",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_4",
+      "name": "Dorian Quill River",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_5",
+      "name": "Edda Stone River",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_6",
+      "name": "Fenn Ash River",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_7",
+      "name": "Galia Reed River",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_8",
+      "name": "Hale Meridian River",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_9",
+      "name": "Iris Thorn River",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_10",
+      "name": "Joren Star River",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_151",
+      "number": 151,
+      "title": "The First Thread: Water Signal",
+      "chainId": "mv_chain_06",
+      "chainStage": 1,
+      "previousQuestId": "mv_side_006",
+      "previousChainQuestId": null,
+      "questGiver": "Meren",
+      "featuredPartyMembers": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_6"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 3,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Find the first clue among displaced travelers.",
+      "objectives": [
+        "Consult Aster Vale River about the evidence from quest 006",
+        "Find the first clue among displaced travelers",
+        "Investigate: A witness remembers a different version of the event",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "A witness remembers a different version of the event",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Aster Vale River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_152",
+      "number": 152,
+      "title": "The Coastward Ledger: Water Witness",
+      "chainId": "mv_chain_06",
+      "chainStage": 2,
+      "previousQuestId": "mv_side_016",
+      "previousChainQuestId": "mv_side_151",
+      "questGiver": "Brin Copper River",
+      "featuredPartyMembers": [
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_7"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 6,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Follow the evidence into merchant and refugee networks.",
+      "objectives": [
+        "Consult Brin Copper River about the evidence from quest 016",
+        "Follow the evidence into merchant and refugee networks",
+        "Investigate: A merchant's records contradict the first witness",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "A merchant's records contradict the first witness",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Brin Copper River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_153",
+      "number": 153,
+      "title": "The Scales of Testimony: Water Seal",
+      "chainId": "mv_chain_06",
+      "chainStage": 3,
+      "previousQuestId": "mv_side_026",
+      "previousChainQuestId": "mv_side_152",
+      "questGiver": "Celia Moss River",
+      "featuredPartyMembers": [
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_8"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 9,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Present the evidence before a disputed council.",
+      "objectives": [
+        "Consult Celia Moss River about the evidence from quest 026",
+        "Present the evidence before a disputed council",
+        "Investigate: A forged seal implicates an innocent ally",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "A forged seal implicates an innocent ally",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Celia Moss River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_154",
+      "number": 154,
+      "title": "Mistbound Reappearance: Water Echo",
+      "chainId": "mv_chain_06",
+      "chainStage": 4,
+      "previousQuestId": "mv_side_036",
+      "previousChainQuestId": "mv_side_153",
+      "questGiver": "Dorian Quill River",
+      "featuredPartyMembers": [
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_9"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 12,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Recover a lost witness beyond the mists.",
+      "objectives": [
+        "Consult Dorian Quill River about the evidence from quest 036",
+        "Recover a lost witness beyond the mists",
+        "Investigate: The witness has aged differently from the party",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "The witness has aged differently from the party",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Dorian Quill River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_155",
+      "number": 155,
+      "title": "The Ashen Bargain: Water Contract",
+      "chainId": "mv_chain_06",
+      "chainStage": 5,
+      "previousQuestId": "mv_side_046",
+      "previousChainQuestId": "mv_side_154",
+      "questGiver": "Edda Stone River",
+      "featuredPartyMembers": [
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_10"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 15,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Challenge a contract exploiting the unresolved mystery.",
+      "objectives": [
+        "Consult Edda Stone River about the evidence from quest 046",
+        "Challenge a contract exploiting the unresolved mystery",
+        "Investigate: The contract can be broken without violence",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "The contract can be broken without violence",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Edda Stone River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_156",
+      "number": 156,
+      "title": "The Court of Unfinished Stories: Water Memory",
+      "chainId": "mv_chain_06",
+      "chainStage": 6,
+      "previousQuestId": "mv_side_056",
+      "previousChainQuestId": "mv_side_155",
+      "questGiver": "Fenn Ash River",
+      "featuredPartyMembers": [
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_1"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 18,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Trade favors for a missing account of the mystery.",
+      "objectives": [
+        "Consult Fenn Ash River about the evidence from quest 056",
+        "Trade favors for a missing account of the mystery",
+        "Investigate: The account exists in two contradictory versions",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "The account exists in two contradictory versions",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Fenn Ash River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_157",
+      "number": 157,
+      "title": "The Starborne Crossing: Water Beacon",
+      "chainId": "mv_chain_06",
+      "chainStage": 7,
+      "previousQuestId": "mv_side_066",
+      "previousChainQuestId": "mv_side_156",
+      "questGiver": "Galia Reed River",
+      "featuredPartyMembers": [
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_2"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 21,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Trace the mystery through a damaged relay route.",
+      "objectives": [
+        "Consult Galia Reed River about the evidence from quest 066",
+        "Trace the mystery through a damaged relay route",
+        "Investigate: A vessel carries evidence from a future journey",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "A vessel carries evidence from a future journey",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Galia Reed River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_158",
+      "number": 158,
+      "title": "The Door That Remembers: Water Key",
+      "chainId": "mv_chain_06",
+      "chainStage": 8,
+      "previousQuestId": "mv_side_076",
+      "previousChainQuestId": "mv_side_157",
+      "questGiver": "Hale Meridian River",
+      "featuredPartyMembers": [
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_3"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 24,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Locate the portal that connects the scattered clues.",
+      "objectives": [
+        "Consult Hale Meridian River about the evidence from quest 076",
+        "Locate the portal that connects the scattered clues",
+        "Investigate: Its key is an earlier act of mercy",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "Its key is an earlier act of mercy",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Hale Meridian River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_159",
+      "number": 159,
+      "title": "The Shadow of the Original: Water Shadow",
+      "chainId": "mv_chain_06",
+      "chainStage": 9,
+      "previousQuestId": "mv_side_086",
+      "previousChainQuestId": "mv_side_158",
+      "questGiver": "Iris Thorn River",
+      "featuredPartyMembers": [
+        "chain_06_member_9",
+        "chain_06_member_10",
+        "chain_06_member_4"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 27,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Confront the hidden architect of the mystery.",
+      "objectives": [
+        "Consult Iris Thorn River about the evidence from quest 086",
+        "Confront the hidden architect of the mystery",
+        "Investigate: The apparent antagonist was protecting someone",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "The apparent antagonist was protecting someone",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Iris Thorn River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_160",
+      "number": 160,
+      "title": "The Seventh Return: Water Legacy",
+      "chainId": "mv_chain_06",
+      "chainStage": 10,
+      "previousQuestId": "mv_side_096",
+      "previousChainQuestId": "mv_side_159",
+      "questGiver": "Joren Star River",
+      "featuredPartyMembers": [
+        "chain_06_member_10",
+        "chain_06_member_1",
+        "chain_06_member_5"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 30,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Meren's original case returns: a stolen source of clean water feeding ten worlds. Resolve the mystery and preserve testimony for future traversals.",
+      "objectives": [
+        "Consult Joren Star River about the evidence from quest 096",
+        "Resolve the mystery and preserve testimony for future traversals",
+        "Investigate: The final choice changes who remembers the truth",
+        "Resolve the local dispute and preserve the water evidence for the next stage"
+      ],
+      "complication": "the source is guarded by innocent spirits",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the water evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Water evidence fragment",
+        "Contact favor from Joren Star River"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    }
+  ]
+}
