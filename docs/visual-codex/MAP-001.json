@@ -1,0 +1,33 @@
+{
+  "schema": "moonveil.visual-codex.v1",
+  "id": "MAP-001",
+  "title": "Pit of Ghaunadaur — Cinematic Grid Atlas",
+  "type": "MAP_ART",
+  "status": "GENERATED_ART_PENDING_REPOSITORY_ASSET_IMPORT",
+  "sourceStatus": "HOMEBREW_VISUALIZATION",
+  "protagonist": "Alice Z'ress",
+  "region": "Underdark",
+  "canonicalMapId": "pit_ghaunadaur",
+  "imageGenerationId": "e3f8eebb-20a1-44c0-af48-034b747d379e",
+  "imageFilename": "a_detailed_high_resolution_fantasy_map_infographi.png",
+  "imageStoredInGitHub": false,
+  "coordinateSystem": {
+    "columns": "A-T",
+    "rows": "1-15",
+    "scale": "ILLUSTRATIVE_NOT_VERIFIED",
+    "gridType": "SQUARE"
+  },
+  "pointOfInterestCount": 12,
+  "chronology": {
+    "dates": "ILLUSTRATIVE_UNVERIFIED",
+    "time": "ILLUSTRATIVE_UNVERIFIED",
+    "requiresDMApproval": true
+  },
+  "gameIntegration": {
+    "mapGridSource": "backend/chronological-map-atlas.js",
+    "hiddenDiscoverySource": "backend/chronological-map-atlas.js",
+    "ledgerSource": "backend/discovery-ledger.js",
+    "warning": "Artwork and authored schematic grid are separate. Do not use illustration coordinates as authoritative game coordinates until reviewed."
+  },
+  "next": "MAP-002"
+}
