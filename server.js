@@ -1,4 +1,5 @@
 const sceneActions=require("./backend/scene-interaction-catalog");
+const atlasMaps=require("./backend/chronological-map-atlas");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
 const express = require("express");
@@ -744,6 +745,21 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
       return res.status(409).json({success:false,error:"ATTESTATION_CONFLICT"});
     }
+  });
+  app.get("/api/campaigns/:campaignId/maps",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    if(!id(req.params.campaignId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(req.params.campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    return res.json({success:true,maps:atlasMaps.listAtlasMaps(),advisoryOnly:true});
+  });
+  app.post("/api/campaigns/:campaignId/maps/:mapId/visits/preview",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    if(!id(req.params.campaignId)||!id(req.params.mapId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(req.params.campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    try{
+      const result=atlasMaps.previewAtlasVisit(req.params.mapId,req.body||{});
+      return result?res.json({success:true,visit:result}):res.status(404).json({success:false,error:"NOT_FOUND"});
+    }catch{return res.status(400).json({success:false,error:"INVALID_INPUT"});}
   });
   // Read-only spell, equipment and environmental proposals. No inventory or combat writes.
   app.get("/api/campaigns/:campaignId/scenes/:sceneId/actions",(req,res)=>{
