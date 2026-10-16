@@ -84,14 +84,15 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const prototypeDir=path.join(__dirname,"prototype");
   const publicPages=new Map([
     ["/play/alice",["alice-room-atlas.html","text/html; charset=utf-8"]],
-    ["/play/moonveil-theme.css",["moonveil-theme.css","text/css; charset=utf-8"]]
+    ["/play/moonveil-theme.css",["moonveil-theme.css","text/css; charset=utf-8"]],
+    ["/play/alice-room-atlas.js",["alice-room-atlas.js","text/javascript; charset=utf-8"]]
   ]);
-  app.get(["/play/alice","/play/moonveil-theme.css"],(req,res)=>{
+  app.get(["/play/alice","/play/moonveil-theme.css","/play/alice-room-atlas.js"],(req,res)=>{
     const asset=publicPages.get(req.path);
     if(!asset)return res.status(404).end();
     res.set("Cache-Control","no-store");
     res.set("X-Content-Type-Options","nosniff");
-    res.set("Content-Security-Policy","default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self'; connect-src 'self'; img-src 'self'; base-uri 'none'; object-src 'none'; form-action 'self'; frame-ancestors 'none'");
+    res.set("Content-Security-Policy","default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; base-uri 'none'; object-src 'none'; form-action 'self'; frame-ancestors 'none'");
     return res.type(asset[1]).sendFile(path.join(prototypeDir,asset[0]));
   });
   app.use((req,res,next) => {
