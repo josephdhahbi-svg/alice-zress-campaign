@@ -318,6 +318,20 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       return res.status(409).json({success:false,error:"QUEST_APPROVAL_CONFLICT"});
     }
   });
+  app.post("/api/campaigns/:campaignId/quests/:questId/state",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    const campaignId=req.params.campaignId,questId=req.params.questId,actorId=req.auth.actorId;
+    if(!id(campaignId)||!id(questId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const {characterId,toStatus,reason,expectedRevision}=req.body||{};
+      const result=questEvidence.transitionQuest({campaignId,characterId,questId,actorId,toStatus,reason,expectedRevision});
+      return res.status(201).json({success:true,...result});
+    }catch(error){
+      if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
+      if(error.message==="NOT_AUTHORIZED"||error.message==="DM_REQUIRED")return res.status(403).json({success:false,error:"FORBIDDEN"});
+      return res.status(409).json({success:false,error:"STATE_CONFLICT"});
+    }
+  });
   // Quest evidence is derived only from campaign journal events authored by a DM.
   // No candidate artifacts are automatically awarded.
   app.post("/api/campaigns/:campaignId/quests/objectives/verify",(req,res)=>{
