@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "status": "SYNTHETIC_ONLY_NOT_CANON",
+  "fixtures": [
+    {
+      "id": "TRAVERSAL_B30_TO_B01",
+      "space": {"plane_id": null, "location_id": null},
+      "time": {"timeline_id": null, "dr_epoch_date": null, "date_precision": "unknown"},
+      "traversal": {"from_book": "B30", "from_traversal": 2, "to_book": "B01", "to_traversal": 3},
+      "expected": "valid_structural_transition_without_historical_date_change"
+    },
+    {
+      "id": "TRAVERSAL_EIGHT_REJECTED",
+      "traversal": {"from_book": "B30", "from_traversal": 7, "to_book": "B01", "to_traversal": 8},
+      "expected": "reject_invalid_traversal"
+    },
+    {
+      "id": "UNKNOWN_DATE_STAYS_UNKNOWN",
+      "time": {"dr_epoch_date": null, "date_precision": "unknown"},
+      "expected": "preserve_null_and_do_not_unlock"
+    },
+    {
+      "id": "UNVERIFIED_ROUTE_BLOCKED",
+      "route": {"route_id": "ROUTE_TEST_UNVERIFIED", "source_status": "unverified", "route_status": "locked"},
+      "expected": "not_traversable"
+    },
+    {
+      "id": "ART_DOES_NOT_UNLOCK_ROUTE",
+      "asset": {"asset_id": "ART_TEST", "depicts": "LOC_TEST", "state": "concept"},
+      "route": {"route_id": "ROUTE_TEST", "route_status": "locked"},
+      "expected": "route_remains_locked"
+    },
+    {
+      "id": "ALICE_CHOICES_UNSELECTED",
+      "character_id": "CHAR_ALICE_ZRESS",
+      "level": 1,
+      "choices": [
+        {"id": "LAWFUL_GOOD", "selected": false},
+        {"id": "NEUTRAL_GOOD", "selected": false},
+        {"id": "CHAOTIC_GOOD", "selected": false},
+        {"id": "UTILITY", "selected": false},
+        {"id": "ACTION", "selected": false}
+      ],
+      "expected": "no_player_state_mutation"
+    }
+  ]
+}
