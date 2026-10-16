@@ -35,3 +35,10 @@ dialog.mv-modal::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(6px)}
 .mv-connect>.mv-choice{min-height:46px;flex:1 1 140px}
 .mv-room-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px}
 .mv-room-list .mv-choice{min-height:65px}
+
+/* Narrative journal: clearly distinguish pending and reviewed entries */
+.mv-journal-list{display:grid;gap:10px;margin-top:14px}
+.mv-journal-entry{padding:12px 16px;border:1px solid var(--mv-line);border-left:4px solid var(--mv-magic);border-radius:10px;background:#101a2c}
+.mv-journal-entry p{margin:6px 0 0;color:var(--mv-muted)}
+.mv-choice:disabled{opacity:.5;cursor:not-allowed;transform:none}
+#submit-choice,#refresh-journal{margin-top:10px;min-height:46px}
