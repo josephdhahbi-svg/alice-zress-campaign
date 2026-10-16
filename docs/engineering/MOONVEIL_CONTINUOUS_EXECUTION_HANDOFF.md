@@ -188,3 +188,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Omniversal verification `38925477392`: SUCCESS.
 - Validate campaign records `38925477471`: SUCCESS.
 - No charter task closed: verified **18/100**, open **82/100**. Next: settlement trade schema, deterministic authorized market pulses, and secure artifact metadata/catalog; maintain Alice progression lock.
+
+## 2026-10-16 — Settlement economy increment
+- Migration v7 `cc0ae7df1475217f72aef2e7b3d0eff1e59cee50`: settlement locations (plane/region), markets, bounded stock and auditable trades.
+- Trade engine `d5340ab370cc2e6c626084065cae9d246c87bff1`; engine tests `b5b9cf22e41ab2041f9ccc692a93ab6af1300b17`.
+- Signed settlement HTTP API `6a7fb2c0f847e85faea6d24d7672048750e2f33a`; HTTP tests `c41e7c2cd7fd7e08e80507e1e7a0e8e03bcb54a0`.
+- Initial Omniversal CI `38925863160` FAILED: ten-column audit insertion had nine placeholders and old economy migration test assumed v6 was latest. Corrected in `e19bdef065020ad0f8deea0e91a50e0bd62a9240` and `5d076fabaf596ecffc8374c9b1b23231beda1caa`. Validate campaign records `38925863264` succeeded. Await new CI.
+- No autonomous trade, no player currency/item transfer, no game clock movement. Charter remains 18/100 pending verification and full T085 acceptance.
