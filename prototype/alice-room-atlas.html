@@ -8,6 +8,17 @@
 <form id="connect" class="mv-connect"><label>Campaign ID <input id="campaign" required maxlength="100" pattern="[A-Za-z0-9:_-]+" autocomplete="off"></label>
 <label>Signed actor token <input id="token" required type="password" autocomplete="off"></label><button class="mv-choice" type="submit">Load room atlas</button><button class="mv-choice" id="disconnect" type="button">Disconnect</button></form>
 <p class="mv-status" id="connection-status" role="status" aria-live="polite">Not connected. No data has been changed.</p></section>
+<section class="mv-decisions" aria-label="Chronological map atlas">
+<h2>Chronological Grid Atlas</h2>
+<p class="mv-subtitle">Choose a location, era, visit number, and optional Forgotten Realms date. Return with new items, spells, or dialogue later. Dates are proposed until the DM verifies chronology.</p>
+<div class="mv-connect"><label>Era <select id="map-era"><option value="ORIGIN">Origin</option><option value="REVISIT">Return visit</option><option value="LATER_ERA">Later era</option><option value="ENDGAME">Endgame</option></select></label>
+<label>Level <input id="map-level" type="number" min="1" max="30" value="1"></label>
+<label>Visit number <input id="map-visit" type="number" min="1" max="100000" value="1"></label>
+<label>Year (DR) <input id="map-year" type="number" min="1" max="99999" placeholder="Unverified"></label></div>
+<button class="mv-choice" id="maps-refresh" type="button" disabled>Load world maps</button>
+<p id="maps-status" class="mv-status" role="status" aria-live="polite">Connect to browse maps.</p>
+<div id="maps-list" class="mv-journal-list"></div>
+</section>
 <section class="mv-decisions" aria-label="Room selection"><h2>Room atlas</h2><div id="rooms" class="mv-room-list"><p class="mv-subtitle">Connect to view authoritative room descriptions.</p></div></section>
 <section class="mv-grid" aria-label="Four cinematic story panels">
 <article class="mv-panel"><span class="mv-chip mv-map">I · Entrance</span><h2>Stone &amp; Stars</h2><p>The Pit of Ghaunadaur is the physical entrance.</p></article>
