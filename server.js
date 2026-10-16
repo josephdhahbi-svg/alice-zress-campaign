@@ -12,6 +12,7 @@ const { createBackupService } = require("./backend/backup-service");
 const { resolveD20 } = require("./backend/dice-rules");
 const { createFactionDisputeEngine } = require("./backend/faction-dispute-engine");
 const { createLivingWorldEngine } = require("./backend/living-world-pulse");
+const { createWorldEconomyEngine } = require("./backend/world-economy");
 const { createCombatEngine } = require("./backend/combat-engine");
 const { createQuestEvidenceEngine } = require("./backend/quest-evidence-engine");
 
@@ -53,6 +54,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   db.exec(require("./backend/faction-pulse").CREATE_TABLES);
   const disputes = createFactionDisputeEngine(db);
   const livingWorld = createLivingWorldEngine(db);
+  const worldEconomy = createWorldEconomyEngine(db);
   const combat = createCombatEngine(db);
   const questEvidence = createQuestEvidenceEngine(db);
   const pulse = initializeFactionPulseEngine(db);
@@ -80,6 +82,37 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const server = http.createServer(app);
   const id = value => typeof value==="string" && /^[a-zA-Z0-9:_-]{1,100}$/.test(value);
   const memberRole=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?");
+  // Opt-in economy only: never auto-advance DR or mutate markets from cron.
+  app.get("/api/campaigns/:campaignId/world/economy",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,commodities:worldEconomy.getPrices(campaignId)});
+  });
+  app.post("/api/campaigns/:campaignId/world/economy/commodities",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")
+      return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const {commodityId,priceCopper}=req.body||{};
+      const result=worldEconomy.defineCommodity({campaignId,actorId,commodityId,priceCopper});
+      return res.status(result.duplicate?200:201).json({success:true,...result});
+    }catch(error){
+      return res.status(error instanceof TypeError?400:409).json({success:false,error:"COMMODITY_CONFLICT"});
+    }
+  });
+  app.post("/api/campaigns/:campaignId/world/economy/adjustments",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")
+      return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const {adjustmentId,commodityId,expectedRevision,changeBasisPoints,reason}=req.body||{};
+      const result=worldEconomy.adjustPrice({campaignId,actorId,adjustmentId,commodityId,expectedRevision,changeBasisPoints,reason});
+      return res.status(result.duplicate?200:201).json({success:true,...result});
+    }catch(error){
+      return res.status(error instanceof TypeError?400:409).json({success:false,error:"PRICE_CONFLICT"});
+    }
+  });
   // Campaign-scoped sockets use signed actor sessions, never the shared admin token.
   // The URL carries no token; browsers pass it via WebSocket subprotocol.
   const wss = new WebSocketServer({noServer:true});
