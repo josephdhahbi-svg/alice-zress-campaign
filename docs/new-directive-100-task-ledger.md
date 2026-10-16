@@ -20,13 +20,13 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 | T012 | Verify SQLite WAL and constraints | PARTIAL | WAL, foreign keys, busy_timeout configured; startup and migration verification pending |
 | T013 | Versioned database migrations | NOT STARTED | Transactional v1 migrations implemented in backend/migrations.js; upgrade/rollback scenarios still pending |
 | T014 | Campaign and session identifiers | NOT STARTED | Campaign IDs and DM membership records implemented; secure player sessions not yet implemented |
-| T015 | Player and DM authentication | NOT STARTED | Implementation and verification pending |
-| T016 | Per-campaign authorization | NOT STARTED | Membership checks exist but actor header can be spoofed by any shared-token holder; NOT secure multiplayer |
+| T015 | Player and DM authentication | NOT STARTED | Expiring HMAC actor sessions added for local development; real player login and token revocation remain outstanding |
+| T016 | Per-campaign authorization | NOT STARTED | Actor session identity bound cryptographically; membership checked per campaign; admin can mint any actor, so not public-ready |
 | T017 | Revision and idempotency checks | PARTIAL | SQLite revision conflicts and event idempotency implemented; cross-actor retry guard added |
 | T018 | Authoritative event journal integration | PARTIAL | Node campaign event journal implemented; Python ledger not yet unified |
-| T019 | Validated API contracts | PARTIAL | Basic input validation and bounded 100-event cursor paging; full schema validation pending |
+| T019 | Validated API contracts | PARTIAL | Campaign event API has signed actor session support, validation and cursor paging; full typed contracts pending |
 | T020 | Recovery and concurrency tests | NOT STARTED | Implementation and verification pending |
-| T021 | WebSocket authentication | PARTIAL | Shared-token WebSocket authentication only; campaign events deliberately not broadcast to unscoped clients |
+| T021 | WebSocket authentication | PARTIAL | WebSocket still admin-only; campaign broadcasts disabled; scoped sockets not implemented |
 | T022 | Campaign-scoped broadcasts | NOT STARTED | Implementation and verification pending |
 | T023 | Reconnect and resync | NOT STARTED | Implementation and verification pending |
 | T024 | Authoritative movement | NOT STARTED | Implementation and verification pending |
@@ -101,7 +101,7 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 | T093 | Backups and restore | NOT STARTED | Implementation and verification pending |
 | T094 | Logging and diagnostics | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
 | T095 | Deployment workflow | NOT STARTED | Implementation and verification pending |
-| T096 | Security tests | NOT STARTED | Integration checks cover unauthorized HTTP, invalid approval, revision conflicts and cursor; deeper threat model pending |
+| T096 | Security tests | NOT STARTED | Added tampering, header spoofing and admin escalation tests; latest CI for these tests pending |
 | T097 | End-to-end regression | NOT STARTED | Implementation and verification pending |
 | T098 | Release and DM documentation | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
 | T099 | Evidence-based completion audit | NOT STARTED | Implementation and verification pending |
@@ -126,3 +126,11 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Added bounded cursor-based campaign event reads (100 events per page), stricter duplicate-event actor matching, and corresponding integration tests. Commit `5db7a2b`.
 - Preserve browser local saves and Python ledger; no migration performed.
 - The latest GitHub Actions outcome for these security changes must be checked before marking their tests verified.
+
+## Batch 5 — actor-bound development sessions
+- Baseline GitHub Actions run [38845715063](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38845715063) passed on `5db7a2b`.
+- Added `backend/session-auth.js` with HMAC-SHA256 signed, expiring actor tokens (commit `0a937b9`).
+- Server now distinguishes local administrator token from actor tokens, limits admin routes to administrator, and ignores spoofed actor headers for signed actor sessions (commit `6def2c7`). CI [38845812678](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38845812678) passed for this server commit.
+- Extended integration tests for token tampering, forged actor headers and actor-to-admin privilege escalation (commit `31b813f`). Their latest CI run must be checked before calling these test cases verified.
+- Updated server setup docs with session issuance and boundaries (commit `8dd3f96`).
+- Remaining: genuine player identity provider, actor session revocation, per-campaign WebSocket authorization, rate limiting, equipment ownership and real-world deployment security.
