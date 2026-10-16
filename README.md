@@ -35,8 +35,11 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 - `data/spells.json`, `data/items.json`, `data/quests.json` — starter collections.
 - `scripts/validate.py` — record-family validation; run with `python scripts/validate.py`.
 - `scripts/test_book1.py` — Book 1 scene and prototype regression checks; run with `python scripts/test_book1.py`.
+- `scripts/test_living_world.py` — Living World Engine regression checks; run with `python scripts/test_living_world.py`.
 - `game/index.html` — offline campaign prototype with local character/quest save and import/export.
 - `game/book1.html` — standalone Book 1 opening scene prototype with five choices, d20 checks, local event history, and scene save import/export.
+- `game/living-world.html` — standalone Living World Engine sandbox for draggable entities, teleportation, animation, spawn/vanish, scene switching, edit controls, local save/load, and JSON export/import.
+- `scripts/test_living_world.py` — regression checks for Living World Engine controls and local-only persistence.
 - `scripts/test_book1.py` — regression checks for scene, Alice linkage, art manifest, and browser controls.
 - `.github/workflows/validate.yml` — CI validation and deterministic simulation check.
 
