@@ -63,8 +63,25 @@ test("local server protects APIs and persists bounded relationship updates", {ti
     const created=await fetch(base+"/api/campaigns",{method:"POST",headers,
       body:JSON.stringify({campaignId:"test-campaign",name:"Local Test",actorId:"dm-1"})});
     assert.equal(created.status,201);
+    const issue=await fetch(base+"/api/admin/sessions",{method:"POST",headers,
+      body:JSON.stringify({actorId:"dm-1",ttlSeconds:3600})});
+    assert.equal(issue.status,201);
+    const sessionToken=(await issue.json()).accessToken;
+    const actorHeaders={"Authorization":"Bearer "+sessionToken,"Content-Type":"application/json",
+      "X-Moonveil-Actor":"intruder"};
+    const blockedAdmin=await fetch(base+"/api/admin/world-pulse",{method:"POST",headers:actorHeaders,body:"{}"});
+    assert.equal(blockedAdmin.status,403);
+    const forged=await fetch(base+"/api/campaigns/test-campaign/events",{headers:actorHeaders});
+    assert.equal(forged.status,200);
+    const invalidToken=await fetch(base+"/api/campaigns/test-campaign/events",{
+      headers:{"Authorization":"Bearer "+sessionToken+"tampered","X-Moonveil-Actor":"dm-1"}});
+    assert.equal(invalidToken.status,401);
     const memberHeaders={...headers,"X-Moonveil-Actor":"dm-1"};
-    const outsider=await fetch(base+"/api/campaigns/test-campaign/events",{headers:{...headers,"X-Moonveil-Actor":"intruder"}});
+    const outsiderSession=await fetch(base+"/api/admin/sessions",{method:"POST",headers,
+      body:JSON.stringify({actorId:"intruder"})});
+    const outsiderToken=(await outsiderSession.json()).accessToken;
+    const outsider=await fetch(base+"/api/campaigns/test-campaign/events",{
+      headers:{"Authorization":"Bearer "+outsiderToken,"X-Moonveil-Actor":"dm-1"}});
     assert.equal(outsider.status,403);
     const payload={eventId:"event-1",expectedRevision:0,eventType:"SCENE_STARTED",payload:{scene:"pit"}};
     const first=await fetch(base+"/api/campaigns/test-campaign/events",{method:"POST",headers:memberHeaders,body:JSON.stringify(payload)});
