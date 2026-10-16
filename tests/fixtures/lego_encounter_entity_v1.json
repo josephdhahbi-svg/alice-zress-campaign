@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "entity_id": "ENC_NETHERESE_ENCLAVE_COLLAPSE",
+  "entity_type": "encounter",
+  "version": 1,
+  "status": "proposed",
+  "canon_status": "unverified",
+  "source_reference": "user_supplied_encounter_brief",
+  "title": "Netherese Enclave Collapse (Synthetic Fixture)",
+  "timeline_id": null,
+  "plane_id": null,
+  "location_id": null,
+  "dr_start": null,
+  "dr_end": null,
+  "date_precision": "unknown",
+  "extensions": {
+    "revision_notes": "Synthetic validation fixture only; not an operational encounter definition.",
+    "visual_codex_refs": ["ART_ENC_NETHERESE_COLLAPSE_CONCEPT_V1"]
+  }
+}
