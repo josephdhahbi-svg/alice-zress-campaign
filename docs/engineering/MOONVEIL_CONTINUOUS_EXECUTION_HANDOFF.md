@@ -213,3 +213,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Omniversal verification `38926336338`: SUCCESS.
 - Validate campaign records `38926336312`: SUCCESS.
 - Verified charter **18/100**, open **82/100**. Market pulse engine is an opt-in component; broader T089 acceptance and HTTP pulse-specific integration tests remain. No Alice progression or loot changes.
+
+## 2026-10-16 — Market pulse HTTP and file-backed persistence verification
+- `backend/settlement-market-pulse-api.integration.test.js` commit `b2e3df64ae66170ca799f64f969cd779b0849475`: actual signed HTTP test covering DM-only pulse, admin/player/outsider denial, replay, revision conflict, bounds, rollback, campaign isolation and no artifact grants.
+- `backend/settlement-market-pulse-persistence.test.js` commit `79d4f525c5ce0c5e52c216a45511dde445652e9d`: file-backed SQLite close/reopen, two simultaneous connections, duplicate replay and stale revision.
+- Omniversal verification `38926825833`: SUCCESS; Validate campaign records `38926825846`: SUCCESS.
+- Verified charter **18/100**, open **82/100**. T085/T089 remain incomplete: intersettlement routes and inventory transfers, currency settlement, mission-consistent world event integration, multi-process stress tests.
+- No automatic pulses, time advancement, or unearned artifacts.
