@@ -21,7 +21,10 @@ CREATE TABLE IF NOT EXISTS vtt_world_economy_adjustments (
 `;
 function createWorldEconomyEngine(db){
  if(!db||typeof db.transaction!=="function")throw new TypeError("SQLITE_REQUIRED");
- db.exec(SCHEMA);
+ // Migration v6 owns the schema; reject unmigrated databases.
+ for(const table of ["vtt_world_economy","vtt_world_economy_adjustments"]){
+  if(!db.prepare("SELECT name FROM sqlite_master WHERE type=? AND name=?").get("table",table))throw new Error("ECONOMY_MIGRATION_REQUIRED");
+ }
  const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?");
  const price=db.prepare("SELECT price_copper,revision FROM vtt_world_economy WHERE campaign_id=? AND commodity_id=?");
  const prior=db.prepare("SELECT commodity_id,old_price_copper,new_price_copper,reason FROM vtt_world_economy_adjustments WHERE campaign_id=? AND adjustment_id=?");
