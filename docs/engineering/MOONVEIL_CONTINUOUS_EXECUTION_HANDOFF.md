@@ -231,3 +231,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Initial Omniversal run `38927506368` failed because test expected JSON from Express's HTML 404; production route was correctly absent. Test fixed in `f1856e0eada8eb559a6bc8d04f0b71615da190bc`.
 - Omniversal `38927610194`: SUCCESS. Validate campaign records `38927610252`: SUCCESS.
 - Charter **18/100 verified, 82 open**; no new checklist closure for read-only catalog. Future: reputation and dialogue predicates, server-authoritative quest integration, and explicit DM approval of rituals; review T085/T089/T093 acceptance with tests.
+
+## 2026-10-16 — Playable-looking ascension UI prototype and art concept
+- Added `prototype/ascension-paths.html` commit `5b58e6a297c25e5c581982fa8898dd006bb22ecb`: responsive navy/violet/gold/cyan static game interface with seven selectable path cards, Alice's immutable baseline, journal, four story panels and five clickable moral choices. Interactions are previews only and are not connected to authoritative backend.
+- Generated cinematic Moonveil UI concept artwork in conversation (not checked into repository). Do not claim art asset integration.
+- CI runs `38928109722` and `38928109708` pending at time of handoff. Charter stays 18/100 until evidence-backed acceptance and CI. UI tasks T061-T065/T068/T069 have a prototype foundation, not production completion.
+- Next: verify CI; integrate concept artwork only after approved asset path and licensing; implement connected read-only ascension screen and a persistent server-authorized choice/event path, then test mobile and keyboard.
