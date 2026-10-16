@@ -235,3 +235,10 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - `1f96a35` connected `data/alice_u01_read_model_v1.json` to the spherical space-time contract using a `space_time_context` object with separate space/time/causality/traversal dimensions. Unknown location, timeline, DR date, causal links, book, and traversal intentionally remain null/unresolved.
 - `4888d28` added regression assertions for the new read-model context. Tests are committed but **not executed** due the checkout/network blocker.
 - Next: obtain an actual CI run/logs through GitHub Actions; run tests from a complete checkout; review actual Gemini and Copilot source deliveries. No game-state changes.
+
+## Directive 18 — validator compatibility repair (2026-10-16)
+- Reviewed current `scripts/validate.py`, `data/schema.json`, `data/living_world_integration_schema_v1.json`, `data/alice_u01_read_model_v1.json`, `data/visual_codex_manifest_v1.json`, `data/encounter_netherese_enclave_collapse_v1.json`, `tests/test_spherical_space_time_contract.py`, and `.github/workflows/moonveil_ci.yml` on the target branch.
+- Found a compatibility defect: `scripts/validate.py` treated every JSON file not listed as a registry as a list of entity records. New object-shaped schema/manifest/read-model documents would therefore be rejected as `expected list of entity records`.
+- `1fc6e3c` updates `scripts/validate.py` with explicit object-document contracts for the living-world schema, Visual Codex manifest, Alice U01 read model, and Netherese encounter model. It checks required keys and guards Alice Level 1, five-choice order, non-mutation, and read-only encounter status.
+- **Tests not executed:** full checkout still blocked by DNS resolution failure for github.com. A new push should trigger CI, but no run/status is verified in this handoff. Check GitHub Actions for the run from `1fc6e3c`; fix any real failures from logs.
+- Next: verify CI run; execute full validators/tests from a complete checkout; then integrate Gemini secure API and Copilot sourced geography. Alice's state and all five choices remain unchanged.
