@@ -134,3 +134,11 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Extended integration tests for token tampering, forged actor headers and actor-to-admin privilege escalation (commit `31b813f`). Their latest CI run must be checked before calling these test cases verified.
 - Updated server setup docs with session issuance and boundaries (commit `8dd3f96`).
 - Remaining: genuine player identity provider, actor session revocation, per-campaign WebSocket authorization, rate limiting, equipment ownership and real-world deployment security.
+
+## Batch 6 — persistent actor session revocation
+- Verified GitHub Actions baseline [38845905630](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38845905630) passed at `9ec92358`.
+- Implemented SQLite migration v2 for hashed revoked actor sessions (`c660350`). Its CI run [38845935834](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38845935834) passed.
+- Added `POST /api/sessions/logout` and admin-only `POST /api/admin/sessions/revoke` and reject revoked tokens in middleware (`0ff9a4c`).
+- Added HTTP regression tests for logout and admin revocation (`204cb7d`). Latest test CI outcome pending.
+- Updated local development documentation (`2665d35`).
+- Security limitations: development admin may mint actor identities; no production identity provider, campaign-scoped WebSocket sessions, or rate limiting. SQLite revoked-token records need expiry cleanup.
