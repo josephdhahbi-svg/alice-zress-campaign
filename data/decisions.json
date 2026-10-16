@@ -1,0 +1,88 @@
+[
+  {
+    "id": "DEC-STRUCT-001",
+    "question": "How do the 30-book loop and seven circular traversals relate?",
+    "status": "CONFLICT",
+    "options": [
+      "30-book sequence is one traversal within a seven-traversal structure",
+      "30 books are the entire loop and seven traversals are an older draft",
+      "The seven traversals are an outer meta-structure around repeated 30-book cycles"
+    ],
+    "current_policy": "Preserve both models and do not rewrite either until a decision is approved.",
+    "evidence": [
+      "README.md says ten trilogies / 30 books and seven circular traversals",
+      "Moonveil master outline describes a final return to the Pit after Book 30"
+    ],
+    "affected_ids": [
+      "COMP-BOOK-CATALOG",
+      "COMP-LOOP-LEDGER"
+    ],
+    "decision": null,
+    "owner_role": "Universe architect",
+    "notes": "Need user approval after outlining consequences."
+  },
+  {
+    "id": "DEC-TITLES-001",
+    "question": "How do the two foundational trilogy title sets relate?",
+    "status": "CONFLICT",
+    "options": [
+      "Alternate titles/subtitles for the same three books",
+      "Older prologue trilogy followed by the numbered 30-book saga",
+      "One set is superseded but retained in history"
+    ],
+    "current_policy": "Keep both title sets documented; do not delete or merge without approval.",
+    "evidence": [
+      "README.md and docs/story-roadmap.md list That Which Lurks; The Labyrinth of the Elder Eye; The Return of the Avatar of Ghaunador",
+      "Moonveil 30-book outline starts with The Pit of Ghaunadaur; The Weeping Obsidian Archives; The Crown Wars & Elven Splendor"
+    ],
+    "affected_ids": [
+      "COMP-BOOK-CATALOG",
+      "COMP-CANON-LEDGER"
+    ],
+    "decision": null,
+    "owner_role": "Universe architect / canon editor",
+    "notes": "Need title mapping and timeline comparison."
+  },
+  {
+    "id": "DEC-LEVELS-001",
+    "question": "What does Levels 1–30 mean?",
+    "status": "CONFLICT",
+    "options": [
+      "Books 1–30 only; character progression remains separately defined",
+      "Narrative tiers 1–30 with standard character level capped separately",
+      "Homebrew character progression extends to level 30"
+    ],
+    "current_policy": "Do not imply standard D&D character progression supports levels 21–30 without explicit homebrew rules.",
+    "evidence": [
+      "Master prompt calls levels 1 through 30",
+      "Existing character progression notes include epic homebrew beyond level 20"
+    ],
+    "affected_ids": [
+      "COMP-BOOK-CATALOG",
+      "COMP-CHRONOLOGY"
+    ],
+    "decision": null,
+    "owner_role": "Rules editor",
+    "notes": "Requires explicit rules and terminology decision."
+  },
+  {
+    "id": "DEC-STACK-001",
+    "question": "Is Flutter + Express + SQLite WAL implemented or target architecture?",
+    "status": "SOURCE_CHECK_REQUIRED",
+    "options": [
+      "Target architecture until source and tests are verified",
+      "Existing implementation located in a separate project directory/repository"
+    ],
+    "current_policy": "The inspected repository shows an offline browser prototype; do not claim backend sync is operational without source/test evidence.",
+    "evidence": [
+      "game/index.html states saves are local to browser and not automatically synchronized",
+      "docs/vtt-technical-blueprint-audit.md records inspected paths and risks"
+    ],
+    "affected_ids": [
+      "COMP-SAVE-SYNC"
+    ],
+    "decision": null,
+    "owner_role": "Technical architect",
+    "notes": "Locate or create backend/client source and verify CI."
+  }
+]
