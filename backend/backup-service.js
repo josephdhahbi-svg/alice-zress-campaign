@@ -2,6 +2,7 @@
 /** Opt-in SQLite online backups. Uses better-sqlite3 backup() so WAL pages are included. */
 const fs=require("node:fs");
 const path=require("node:path");
+const Database=require("better-sqlite3");
 function createBackupService(db,{directory,intervalMs=6*60*60*1000,retain=14,clock=()=>new Date(),logger=console}={}){
  if(!db||typeof db.backup!=="function")throw new TypeError("SQLite backup() required");
  if(typeof directory!=="string"||!directory.trim())throw new TypeError("Backup directory required");
