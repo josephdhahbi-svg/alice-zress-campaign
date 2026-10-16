@@ -202,3 +202,21 @@ The first batch creates structured "Lego" records rather than only brainstorming
 - Added `docs/living-world-100-task-build-order.md`, containing exactly 100 numbered tasks across eight phases: browser QA; world-state contracts; canonical campaign data; realistic art pipeline; scene mechanics; living-world simulation; backend/multiplayer/security; release/governance.
 - Treat it as the detailed execution checklist; the master board and task-status tracker remain the high-level summary.
 - Start at Task 001. Mark tasks complete only with actual implementation/test evidence; browser QA is not complete until performed in a real browser.
+
+
+## Full-stack robotics/FSM briefing — verification audit (2026-10-15)
+
+The newly supplied Node/Express, Flutter, SQLite WAL, WebSocket, Docker, Nginx, and CI/CD package is a **proposed architecture**, not a verified deployed stack.
+
+Repository root inspection found no `server.js`, `client/`, `Dockerfile.backend`, `Dockerfile.frontend`, or `docker-compose.yml`. Workflow directory currently contains `analytics.yml` and `validate.yml`, not `flutter_ci.yml`.
+
+Code-review blockers in supplied snippets:
+- `server.js` references undefined `app` and `db`; the FSM controller module is not shown.
+- Raw `ws` and Socket.IO routing are conflated; standardize on one transport and path.
+- Flutter manager sets connected=true before confirming connection, and lacks full stream subscription disposal/reconnect guards.
+- Control commands need authorization, input validation, rate limits, state-transition guards, and telemetry event IDs.
+- Docker runtime image must include controller, migrations, config, and other required source files.
+- CI example does not implement the claimed container publish, backup, metrics, and webhook workflows.
+- Never place real secrets in documentation or source.
+
+Suggested next LEGO batch: `backend/` containing a deterministic pure FSM, allowed-transition table, validated command envelope, tests, and documented integration contract; keep UNIT-VANGUARD-09 provisional/homebrew until canon review. Preserve the existing `game/` prototype and do not claim multiplayer functionality until tested.
