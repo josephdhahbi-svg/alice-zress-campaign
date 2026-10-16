@@ -18,6 +18,7 @@ const SCENES=Object.freeze({
   ])
  })
 });
+const EXPANDED=Object.freeze(Object.fromEntries(["moonstone_refuge","spore_bridge"].map((id)=>[id,Object.freeze({id,name:id.replaceAll("_"," "),plane:"MATERIAL",region:"Underdark",drYear:null,sourceStatus:"HOMEBREW_PROPOSAL",prerequisites:["DM_APPROVED_EXPLORATION"],choices:Object.freeze(ORDER.map((type)=>Object.freeze({type,text:"Investigate "+id+" using "+type,preview:"DM review required",check:"DM_ADJUDICATED"})))})])));
 function getDialogueScene(nodeId){return Object.hasOwn(SCENES,nodeId)?SCENES[nodeId]:(Object.hasOwn(EXPANDED,nodeId)?EXPANDED[nodeId]:null);}
 function getDialogueChoices(nodeId){
  const scene=getDialogueScene(nodeId);
