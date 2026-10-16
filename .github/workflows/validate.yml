@@ -5,6 +5,7 @@ on:
       - 'data/**'
       - 'scripts/**'
       - 'game/**'
+      - 'backend/**'
       - '.github/workflows/validate.yml'
   pull_request:
     paths:
@@ -30,3 +31,5 @@ jobs:
         run: python scripts/test_book1.py
       - name: Check Living World Engine
         run: python scripts/test_living_world.py
+      - name: Check Automaton FSM
+        run: node --test backend/automaton_fsm.test.js
