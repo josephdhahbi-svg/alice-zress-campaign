@@ -26,6 +26,7 @@ OBJECT_DOCUMENTS = {
     "alice_u01_read_model_v1.json": ("schema_version", "status", "scene_id", "character", "historical_context", "choices", "routes", "art", "capabilities", "mutates_game_state", "space_time_context"),
     "encounter_netherese_enclave_collapse_v1.json": ("schema_version", "status", "encounter_id", "hazards", "objectives", "outcomes", "interface_rules"),
     "transport_geography_research_queue_v1.json": ("schema_version", "status", "locations", "candidate_connections", "rendering_rules"),
+    "proposed_cosmic_to_u01_causal_chain_v1.json": ("schema_version", "status", "canon_status", "events", "validation_rules", "state_effect"),
 }
 for file in sorted((ROOT / "data").glob("*.json")):
     if file.name == "schema.json":
@@ -84,6 +85,11 @@ for file in sorted((ROOT / "data").glob("*.json")):
                 errors.append(f"{file.name}: read model must not mutate game state")
             if records.get("character", {}).get("level") != 1:
                 errors.append(f"{file.name}: protected Alice level must remain 1")
+        if file.name == "proposed_cosmic_to_u01_causal_chain_v1.json":
+            if records.get("status") != "PROPOSED_CAUSAL_CHAIN_READ_ONLY" or records.get("state_effect") != "none":
+                errors.append(f"{file.name}: causal chain must remain proposed and read-only")
+            if records.get("canon_status") not in schema["allowed_canon_status"]:
+                errors.append(f"{file.name}: invalid canon status")
         if file.name == "transport_geography_research_queue_v1.json":
             if records.get("status") != "research_candidates_not_traversable":
                 errors.append(f"{file.name}: candidates must remain non-traversable")
