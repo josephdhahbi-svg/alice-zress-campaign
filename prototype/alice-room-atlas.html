@@ -8,7 +8,13 @@
 <form id="connect" class="mv-connect"><label>Campaign ID <input id="campaign" required maxlength="100" pattern="[A-Za-z0-9:_-]+" autocomplete="off"></label>
 <label>Signed actor token <input id="token" required type="password" autocomplete="off"></label><button class="mv-choice" type="submit">Load room atlas</button><button class="mv-choice" id="disconnect" type="button">Disconnect</button></form>
 <p class="mv-status" id="connection-status" role="status" aria-live="polite">Not connected. No data has been changed.</p></section>
-<section class="mv-decisions" aria-label="Chronological map atlas">
+<section class="mv-hud" aria-label="Alice character dashboard">
+ <div class="mv-hud-portrait" role="img" aria-label="Original atmospheric illustration of a moonlit Underdark cavern"><span>THE ELDER EYE · ACT I</span></div>
+ <div class="mv-hud-details"><p class="mv-eyebrow">The Moonveil Witch's Chronicle</p><h2>Alice Z'ress</h2><p>Female Drow · Acolyte · Level 1 Great Old One Warlock</p><div class="mv-stats"><div><strong>HP</strong><span>View signed character sheet</span></div><div><strong>Spells</strong><span>Shield · Acid Splash · Light</span></div><div><strong>Origin</strong><span>Pit of Ghaunadaur</span></div></div><p class="mv-subtitle">Live HP, inventory and combat require an authorized campaign session. No invented character statistics or rewards are displayed.</p></div>
+ </section>
+ <nav class="mv-quicknav" aria-label="Game sections"><a href="#story">Story</a><a href="#choices-panel">Five choices</a><a href="#maps-panel">Maps</a><a href="#journal-panel">Save journal</a><a href="#quest-panel">Quests</a><a href="#scene-panel">Actions</a></nav>
+ <section class="mv-decisions mv-inventory" aria-label="Inventory and combat status"><h2>Character resources</h2><div class="mv-resources"><article><h3>Inventory</h3><p>Unverified divine treasures are locked. Open your signed character record for owned equipment.</p></article><article><h3>Combat</h3><p>Combat controls are not available in this room-atlas preview. Use the authenticated game API when enabled.</p></article><article><h3>Save / Resume</h3><p>Journal submissions are saved server-side after you connect. Refresh the journal to resume your investigation.</p></article></div></section>
+ <section class="mv-decisions" id="maps-panel" aria-label="Chronological map atlas">
 <h2>Chronological Grid Atlas</h2>
 <p class="mv-subtitle">Choose a location, era, visit number, and optional Forgotten Realms date. Return with new items, spells, or dialogue later. Dates are proposed until the DM verifies chronology.</p>
 <div class="mv-connect"><label>Era <select id="map-era"><option value="ORIGIN">Origin</option><option value="REVISIT">Return visit</option><option value="LATER_ERA">Later era</option><option value="ENDGAME">Endgame</option></select></label>
@@ -20,17 +26,17 @@
 <div id="maps-list" class="mv-journal-list"></div>
 </section>
 <section class="mv-decisions" aria-label="Discovery history"><h2>Discovery Ledger</h2><p class="mv-subtitle">Return visits, clues, and revealed secrets recorded by the Dungeon Master. No items are automatically collected.</p><button class="mv-choice" id="discoveries-refresh" type="button" disabled>Load discovery history</button><p id="discoveries-status" class="mv-status" role="status" aria-live="polite">Connect to view discoveries.</p><div id="discoveries-list" class="mv-journal-list"></div></section><section class="mv-decisions" aria-label="Room selection"><h2>Room atlas</h2><div id="rooms" class="mv-room-list"><p class="mv-subtitle">Connect to view authoritative room descriptions.</p></div></section>
-<section class="mv-grid" aria-label="Four cinematic story panels">
+<section class="mv-grid" id="story" aria-label="Four cinematic story panels">
 <article class="mv-panel"><span class="mv-chip mv-map">I · Entrance</span><h2>Stone &amp; Stars</h2><p>The Pit of Ghaunadaur is the physical entrance.</p></article>
 <article class="mv-panel"><span class="mv-chip mv-villain">II · Parasite</span><h2>The Elder Eye</h2><p>Ghaunadaur's scar remembers Alice's fall.</p></article>
 <article class="mv-panel"><span class="mv-chip mv-magic">III · Far Realm</span><h2>Alien Resonance</h2><p>The Far Realm influences the hole without replacing it.</p></article>
 <article class="mv-panel"><span class="mv-chip mv-hero">IV · Free Will</span><h2>The Silver Light</h2><p>Alice's heroic choices remain her own.</p></article></section>
-<section class="mv-decisions"><h2 id="room-title">Choose a room</h2><p class="mv-subtitle" id="room-description">Room choices are previews only.</p>
+<section class="mv-decisions mv-decision-focus" id="choices-panel"><h2 id="room-title">Choose a room</h2><p class="mv-subtitle" id="room-description">Room choices are previews only.</p>
 <div id="choices" class="mv-choice-grid" aria-label="Five room choices"></div>
 <p class="mv-status" id="choice-status" role="status" aria-live="polite">No choice submitted.</p>
 <button class="mv-choice" id="submit-choice" type="button" disabled>Submit selected choice to journal</button>
 </section>
-<section class="mv-decisions" aria-label="Exploration journal">
+<section class="mv-decisions" id="journal-panel" aria-label="Exploration journal">
 <h2>Exploration journal</h2><p class="mv-subtitle">Story proposals are recorded; DM review never grants travel, rewards, or transformations.</p>
 <button class="mv-choice" id="refresh-journal" type="button" disabled>Refresh journal</button>
 <div id="journal-entries" class="mv-journal-list" aria-live="polite"><p class="mv-subtitle">Connect to load journal entries.</p></div>
@@ -42,8 +48,8 @@
 <p class="mv-status" id="dm-status" role="status" aria-live="polite">Connect with a DM session to review.</p>
 <div id="dm-queue" class="mv-journal-list"></div>
 </section>
-<section class="mv-decisions" aria-label="Multiverse quest chain atlas"><h2>Multiverse Quest Atlas</h2><button class="mv-choice" id="quest-chains-refresh" type="button" disabled>Explore quest chains</button><p id="quest-chains-status" class="mv-status">Connect to browse quests.</p><div id="quest-chains-list" class="mv-journal-list"></div></section>
-<section class="mv-decisions" aria-label="Spell item and environment actions"><h2>Interactive Scene Actions</h2><button class="mv-choice" id="scene-actions-refresh" type="button" disabled>Explore scene interactions</button><p id="scene-actions-status" class="mv-status">Connect to explore.</p><div id="scene-actions-list" class="mv-journal-list"></div></section>
+<section class="mv-decisions" id="quest-panel" aria-label="Multiverse quest chain atlas"><h2>Multiverse Quest Atlas</h2><button class="mv-choice" id="quest-chains-refresh" type="button" disabled>Explore quest chains</button><p id="quest-chains-status" class="mv-status">Connect to browse quests.</p><div id="quest-chains-list" class="mv-journal-list"></div></section>
+<section class="mv-decisions" id="scene-panel" aria-label="Spell item and environment actions"><h2>Interactive Scene Actions</h2><button class="mv-choice" id="scene-actions-refresh" type="button" disabled>Explore scene interactions</button><p id="scene-actions-status" class="mv-status">Connect to explore.</p><div id="scene-actions-list" class="mv-journal-list"></div></section>
 <section class="mv-decisions" aria-label="Moonveil AI Story Guide">
 <h2>Moonveil AI Story Guide</h2><p class="mv-subtitle">Ask for lore or guidance. AI suggestions are advisory only; they never change your character, inventory, quests, or timeline. Requires a configured server AI key.</p>
 <form id="ai-guide-form" class="mv-connect"><label>Guide mode <select id="ai-guide-mode"><option value="GUIDE">Story Guide</option><option value="LORE">Lore</option></select></label>
