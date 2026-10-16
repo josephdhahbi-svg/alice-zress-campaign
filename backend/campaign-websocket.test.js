@@ -55,6 +55,26 @@ test("campaign sockets isolate events and reject unauthorized actors",{timeout:2
   assert.equal((await notice).revision,1);
   await new Promise(r=>setTimeout(r,150));
   assert.equal(leaked,false);
+  // Reconnecting from revision zero should signal a missed event, while
+  // reconnecting from revision one should not.
+  const replayMessages=[];
+  const replaySocket=new WebSocket(wsBase+"/events?campaignId=alice&after=0",["moonveil."+a]);
+  replaySocket.on("message",raw=>replayMessages.push(JSON.parse(raw.toString())));
+  await new Promise((resolve,reject)=>{replaySocket.once("open",resolve);replaySocket.once("error",reject);});
+  await new Promise(r=>setTimeout(r,80));
+  assert.equal(replayMessages[0].type,"CONNECTED");
+  assert.equal(replayMessages[0].revision,1);
+  assert.equal(replayMessages[1].type,"CATCH_UP_REQUIRED");
+  replaySocket.terminate();
+  const caughtUp=[];
+  const currentSocket=new WebSocket(wsBase+"/events?campaignId=alice&after=1",["moonveil."+a]);
+  currentSocket.on("message",raw=>caughtUp.push(JSON.parse(raw.toString())));
+  await new Promise((resolve,reject)=>{currentSocket.once("open",resolve);currentSocket.once("error",reject);});
+  await new Promise(r=>setTimeout(r,80));
+  assert.equal(caughtUp.length,1);
+  assert.equal(caughtUp[0].revision,1);
+  currentSocket.terminate();
+  await assert.rejects(connect(wsBase+"/events?campaignId=alice&after=-1","moonveil."+a));
   assert.equal((await post("/api/admin/sessions/revoke",{accessToken:a})).status,200);
   const rejected=await post("/api/campaigns/alice/events",
    {eventId:"e2",expectedRevision:1,eventType:"SCENE_STARTED",payload:{}},
