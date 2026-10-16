@@ -1,0 +1,177 @@
+[
+  {
+    "id": "scene-book01-rabbit-hole-01",
+    "book_id": "book-01-pit-of-ghaunadaur",
+    "scene_number": 1,
+    "title": "The Rabbit Hole: First Breath in the Pit",
+    "status": "PROPOSED",
+    "canon_status": "homebrew",
+    "continuity_status": "pending_review",
+    "location_id": "pit-of-ghaunadaur",
+    "historical_date_dr": "unknown",
+    "campaign_timestamp": "Book 1 / opening scene / sequence 1",
+    "purpose": "Establish Alice's survival, the three custom divine origin gifts, the first player choice, and the first persistent consequence.",
+    "opening_text": "Alice falls through an impossible corridor of time and space and strikes the black stone at the edge of the Pit of Ghaunadaur. The last traces of Mystra's Shield shimmer around her; acidic droplets hiss nearby, and a blade-shaped glimmer marks Eilistraee's intervention. The hallway still pulses above her like a wound in reality.",
+    "origin_gifts": [
+      {
+        "id": "gift-mystra-shield",
+        "name": "Mystra's Shield",
+        "effect": "Custom origin gift: a brief protective ward during the fall.",
+        "mechanical_status": "homebrew narrative effect; no duration or numeric bonus locked"
+      },
+      {
+        "id": "gift-ghaunadaur-acid-splash",
+        "name": "Ghaunadaur's Acid Splash",
+        "effect": "Custom origin gift: acid manifests as Alice reaches the Pit.",
+        "mechanical_status": "homebrew origin event; ordinary spell rules apply only if separately granted"
+      },
+      {
+        "id": "gift-eilistraee-blade-ward",
+        "name": "Eilistraee's Blade Ward",
+        "effect": "Custom origin gift: a blade interposes itself and turns aside the acid.",
+        "mechanical_status": "homebrew narrative effect; do not assume a normal Blade Ward spell was cast"
+      }
+    ],
+    "choice_order": [
+      "lawful_good",
+      "neutral_good",
+      "chaotic_good",
+      "utility",
+      "action"
+    ],
+    "choices": [
+      {
+        "id": "choice-b01-s01-lg",
+        "order": 1,
+        "kind": "lawful_good",
+        "label": "Protect the vulnerable",
+        "description": "Call out to anyone else trapped nearby and place yourself between them and the acid.",
+        "check": {
+          "ability": "Charisma",
+          "skill": "Persuasion",
+          "dc": 12
+        },
+        "success": "A frightened survivor answers and trusts Alice enough to follow her signals.",
+        "failure": "The survivor stays hidden, but Alice learns where the voice came from.",
+        "consequence_tags": [
+          "compassion",
+          "survivor-clue"
+        ]
+      },
+      {
+        "id": "choice-b01-s01-ng",
+        "order": 2,
+        "kind": "neutral_good",
+        "label": "Offer help carefully",
+        "description": "Speak calmly and offer a safe route without demanding that anyone trust you.",
+        "check": {
+          "ability": "Wisdom",
+          "skill": "Insight",
+          "dc": 12
+        },
+        "success": "Alice identifies the safest approach to the voice.",
+        "failure": "She avoids escalating the danger but cannot yet read the survivor's intentions.",
+        "consequence_tags": [
+          "caution",
+          "survivor-clue"
+        ]
+      },
+      {
+        "id": "choice-b01-s01-cg",
+        "order": 3,
+        "kind": "chaotic_good",
+        "label": "Defy the Pit",
+        "description": "Reject the cult's control, disrupt the nearest ritual trace, and make a quick escape route.",
+        "check": {
+          "ability": "Dexterity",
+          "skill": "Acrobatics",
+          "dc": 13
+        },
+        "success": "Alice reaches a narrow ledge and discovers a broken sigil.",
+        "failure": "The route remains possible, but Alice leaves a visible trace.",
+        "consequence_tags": [
+          "defiance",
+          "sigil-clue",
+          "exposure-risk"
+        ]
+      },
+      {
+        "id": "choice-b01-s01-utility",
+        "order": 4,
+        "kind": "utility",
+        "label": "Study the impossible corridor",
+        "description": "Examine the hallway residue, acidic stone, and the first signs of the Weeping Obsidian phenomenon.",
+        "check": {
+          "ability": "Intelligence",
+          "skill": "Arcana",
+          "dc": 12
+        },
+        "success": "Alice records a repeatable clue about the corridor's pulse.",
+        "failure": "She learns the corridor is unstable but not how to control it.",
+        "consequence_tags": [
+          "investigation",
+          "loop-seed"
+        ]
+      },
+      {
+        "id": "choice-b01-s01-action",
+        "order": 5,
+        "kind": "action",
+        "label": "Move now",
+        "description": "Advance cautiously toward the nearest cover before the Pit changes again.",
+        "check": {
+          "ability": "Dexterity",
+          "skill": "Stealth",
+          "dc": 12
+        },
+        "success": "Alice reaches cover without attracting attention.",
+        "failure": "She reaches cover, but something in the Pit notices her arrival.",
+        "consequence_tags": [
+          "survival",
+          "threat-clock"
+        ]
+      }
+    ],
+    "dice_policy": {
+      "die": "d20",
+      "modifier_source": "character sheet; do not infer missing ability modifiers",
+      "success_rule": "total >= DC",
+      "natural_1_20": "not specially handled by this scene schema; follow the campaign rules profile once approved",
+      "log_fields": [
+        "scene_id",
+        "choice_id",
+        "ability",
+        "skill",
+        "dc",
+        "raw_roll",
+        "modifier",
+        "total",
+        "success",
+        "timestamp"
+      ],
+      "mechanical_status": "proposed checks; review against selected D&D edition before locking"
+    },
+    "state_effects": {
+      "always": [
+        "record selected choice",
+        "record dice result if a check is rolled",
+        "add a journal entry with the outcome"
+      ],
+      "conditional": [
+        "add clue or survivor lead according to selected choice and check result"
+      ],
+      "prohibited": [
+        "do not spend or grant U01 packets in this scene unless an explicit rule and prerequisite are approved"
+      ]
+    },
+    "setup_payoff_ids": [
+      "PAYOFF-HALLWAY-001"
+    ],
+    "prerequisites": [
+      "Alice's approved level-one identity",
+      "custom origin gifts treated as homebrew narrative events"
+    ],
+    "source": "User-supplied Moonveil Universe handoff and established Alice origin decisions; scene text and checks are homebrew",
+    "notes": "First playable-slice candidate. Outcomes are authored examples, not yet wired into game/index.html. Verify the location ID, ability modifiers, check DCs, and rules edition before mechanical lock."
+  }
+]
