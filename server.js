@@ -18,6 +18,7 @@ const { createSettlementMarketPulseEngine } = require("./backend/settlement-mark
 const { createCombatEngine } = require("./backend/combat-engine");
 const { createQuestEvidenceEngine } = require("./backend/quest-evidence-engine");
 const { listAscensionPaths, getAscensionPath } = require("./backend/ascension-path-catalog");
+const { getMultiverseAdventureIndex, availableRouteLeads } = require("./backend/multiverse-adventure-index");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -87,6 +88,22 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const server = http.createServer(app);
   const id = value => typeof value==="string" && /^[a-zA-Z0-9:_-]{1,100}$/.test(value);
   const memberRole=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?");
+  // Discoverable routes only: no implicit teleport, date progression or character mutation.
+  app.get("/api/campaigns/:campaignId/world/adventures",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,...getMultiverseAdventureIndex()});
+  });
+  app.get("/api/campaigns/:campaignId/world/adventures/:nodeId/leads",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const nodeId=req.params.nodeId;
+    if(!id(nodeId)||!getMultiverseAdventureIndex().nodes.some(n=>n.id===nodeId))
+      return res.status(404).json({success:false,error:"UNKNOWN_LOCATION"});
+    return res.json({success:true,nodeId,leads:availableRouteLeads(nodeId)});
+  });
   // Read-only proposal catalog; membership required. No ritual/reward mutation endpoint.
   app.get("/api/campaigns/:campaignId/ascension/paths",(req,res)=>{
     const campaignId=req.params.campaignId;
