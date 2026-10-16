@@ -17,6 +17,13 @@ test("local Alice atlas serves only allowlisted assets and signed room API stays
   assert.equal(page.status,200);assert.match(page.headers.get("content-type"),/text\/html/);
   assert.match(page.body,/Rabbit Hole Room Atlas/);
   assert.match(page.headers.get("content-security-policy"),/frame-ancestors 'none'/);
+  assert.match(page.body,/src="\.\/alice-room-atlas\.js"/);
+  assert.doesNotMatch(page.body,/<script>/);
+  assert.doesNotMatch(page.headers.get("content-security-policy"),/unsafe-inline/);
+  const script=await req("GET","/play/alice-room-atlas.js");
+  assert.equal(script.status,200);
+  assert.match(script.headers.get("content-type"),/javascript/);
+  assert.match(script.body,/DM adjudication|read-only adjudication/i);
   const css=await req("GET","/play/moonveil-theme.css");
   assert.equal(css.status,200);assert.match(css.body,/--mv-hero:#478DFF/);
   assert.equal((await req("GET","/play/not-allowed")).status,401);
