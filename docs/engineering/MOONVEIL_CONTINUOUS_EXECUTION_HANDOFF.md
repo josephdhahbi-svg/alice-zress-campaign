@@ -309,3 +309,6 @@ Previous visual-audit CI succeeded (both workflows at commit `6b76d0fd`). Extern
 
 ## 2026-10-16 — Sprint 06 persistent narrative journal
 Previous Sprint 05 workflows both passed. Added SQLite WAL-compatible `vtt_alice_exploration_journal` table and fail-closed engine (`185b9767`) with unique campaign-scoped entry IDs, idempotent player submissions, origin-room-only proposal gate, and single DM review (ACKNOWLEDGED/DECLINED). Signed actor/member-scoped GET/POST and DM-only review routes in `server.js` (`9b99d28f`). Added unit and integration tests (`0fc99552`, `2f5897af`). DM review **records narrative acknowledgment only**; it never moves Alice, awards resources, resurrects, or unlocks the Eldritch Lich. UI journal controls not yet connected. CI pending.
+
+## 2026-10-16 — Sprint 07 cinematic exploration journal UI
+Previous Sprint 06 CI workflows both passed. The local `/play/alice` atlas now has a player-facing journal panel (`d98f77b1`), signed API submission/refresh controller (`64683528`), and responsive styles (`d9a54e76`). Choices from the ORIGIN room can be saved as PENDING; locked rooms remain non-submittable. Reviewed entries display status and DM note. Added static integration assertions (`46350028`). **DM review is available via signed DM API, not yet a visual DM dashboard.** No movement, rewards, lichdom or resurrection. CI pending.
