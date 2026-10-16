@@ -372,3 +372,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - `5a760ac` registers the audit JSON as an object document in `scripts/validate.py`.
 - `eff4ed3` added `tests/test_copilot_target_resolution_audit.py` (6 tests) for audit status, atlas placeholder preservation, unregistered hazards, unresolved connections, and route locks.
 - CI for the newest audit test commit has not yet been verified. No schema migration or gameplay mutation occurred.
+
+## New 10-trilogy roadmap proposal and CI results (2026-10-16)
+- `9304d66` added `data/proposed_30_book_10_trilogy_roadmap_v1.json` with the user's 30 proposed titles grouped into 10 trilogies, null DR dates/timeline/traversal, unverified status, and explicit rules-review gates. It does not replace `data/master_roads_atlas.json`.
+- `c56285d` added `tests/test_proposed_30_book_10_trilogy_roadmap.py` with 7 tests; `b8d243b` registered the proposal document in `scripts/validate.py`.
+- Initial CI runs `38834877596`, `38834877647`, and `38834904336` failed because the new JSON object had not yet been registered in the general validator. This was fixed in `b8d243b`.
+- Both CI workflows then passed for `b8d243b`: `38834921210` (Python 3.11 and 3.12 registry, route, route-planner, and unit tests) and `38834921273` (JSON metadata and deterministic encounter validation). Links: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38834921210 and https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38834921273.
+- Level 21-30 entries are explicitly flagged for homebrew rules review. Cross-setting transitions and named campaign concepts remain unverified; no dates, routes, or rewards inferred. Three tiers remain separate from seven traversals.
+- Alice remains Level 1 with Shield, Acid Splash, Light and five unselected choices. No live save mutation.
