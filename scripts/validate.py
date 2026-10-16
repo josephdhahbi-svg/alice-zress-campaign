@@ -28,6 +28,7 @@ OBJECT_DOCUMENTS = {
     "transport_geography_research_queue_v1.json": ("schema_version", "status", "locations", "candidate_connections", "rendering_rules"),
     "proposed_cosmic_to_u01_causal_chain_v1.json": ("schema_version", "status", "canon_status", "events", "validation_rules", "state_effect"),
     "copilot_lego_target_resolution_audit_v1.json": ("schema_version", "status", "canon_status", "summary", "hazards", "connections", "routes", "required_follow_up"),
+    "proposed_30_book_10_trilogy_roadmap_v1.json": ("schema_version", "roadmap_id", "status", "canon_status", "principles", "trilogies", "books", "continuity_gates", "notes"),
 }
 for file in sorted((ROOT / "data").glob("*.json")):
     if file.name == "schema.json":
