@@ -16,7 +16,7 @@ function setup(){
 const input={campaignId:"elder-eye",actorId:"alice",eventId:"event-1",expectedRevision:0,sceneId:"scene-1",option:1,roll:12,modifier:0};
 test("records a choice in the existing campaign journal",()=>{const {db,service}=setup();const r=service.submit(input);assert.equal(r.status,201);assert.equal(r.result.success,true);assert.equal(db.prepare("SELECT count(*) n FROM vtt_campaign_events").get().n,1);db.close()});
 test("idempotent replay never writes twice",()=>{const {db,service}=setup();assert.equal(service.submit(input).status,201);assert.equal(service.submit(input).status,200);assert.equal(db.prepare("SELECT count(*) n FROM vtt_campaign_events").get().n,1);db.close()});
-test("rejects changed replay payload",()=>{const {db,service}=setup();service.submit(input);assert.equal(service.submit({...input,roll:3}).error,"IDEMPOTENCY_CONFLICT");db.close()});
+test("rejects changed replay payload",()=>{const {db,service}=setup();service.submit(input);assert.equal(service.submit({...input,modifier:1}).error,"IDEMPOTENCY_CONFLICT");db.close()});
 test("rejects stale revisions",()=>{const {db,service}=setup();service.submit(input);assert.equal(service.submit({...input,eventId:"event-2"}).error,"REVISION_CONFLICT");db.close()});
 test("rejects observer actions",()=>{const {db,service}=setup();assert.equal(service.submit({...input,actorId:"observer"}).status,403);db.close()});
 test("rejects invalid modifiers rather than inventing stats",()=>{const {db,service}=setup();assert.equal(service.submit({...input,modifier:undefined}).status,400);db.close()});
