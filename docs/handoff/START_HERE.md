@@ -248,3 +248,12 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - `e918201` updates `scripts/validate.py` to validate `relationships.json` and `story_phases.json` with their own required fields/status values, registers the geography research queue as an object document, and enforces `research_candidates_not_traversable` / `research_only` statuses.
 - GitHub Actions runs triggered for `e918201`: `38829840073` (Validate campaign records) and `38829840094` (Moonveil CI Validation). They were in progress at last check; result not yet verified. Links: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38829840073 and https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38829840094.
 - Full checkout was not required for this CI diagnosis; tests are running on GitHub's complete checkout. Do not call the fix successful until both runs complete. Alice's state and routes unchanged.
+
+## Directive 18 — actual CI logs and regression fixes (2026-10-16)
+- Retrieved real GitHub Actions logs. Run `38829840073` (Validate campaign records, commit `e918201`) **passed**. The companion Moonveil CI run `38829840094` failed after registry/route validators passed; unittest discovery ran 75 tests and failed exactly two U01 HTML assertions:
+  1. `test_alice_u01_contract.AliceU01ContractTests.test_html_consumes_contract_and_fails_closed` expected literal `Choices remain disabled.` while actual HTML uses `All choices remain disabled.`
+  2. `test_alice_u01_html.PreviewTests.test_choices` expected choice IDs embedded in HTML, but the interface correctly obtains IDs from `data/alice_u01_read_model_v1.json`.
+- Fixed tests to assert the actual fail-closed message and validate choice order in the structured JSON model instead of requiring dynamic IDs to be hardcoded in HTML.
+- `da0be21` updates `tests/test_alice_u01_html.py`; `965e0d0` updates `tests/test_alice_u01_contract.py`.
+- New workflow runs are queued/in progress: `38829931684` (commit `da0be21`) and `38829938540` (commit `965e0d0`). Await completion before declaring suite green.
+- The `Validate campaign records` workflow passed on `e918201`; full Moonveil CI failed on two stale assertions, now corrected. Alice remains protected and no gameplay state changed.
