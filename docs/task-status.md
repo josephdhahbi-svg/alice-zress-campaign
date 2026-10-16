@@ -47,3 +47,27 @@ All other tasks remain `TODO` unless updated here with evidence.
 1. Finish inventory and verify the validator workflow.
 2. Create the canon/decision ledger and connect the catalog to story-phase records without deleting either.
 3. Build the Book 1 five-choice scene as a tested vertical slice with a documented state contract.
+
+
+## Update — 2026-10-15
+| Task | Status | Evidence / remaining work |
+|---|---|---|
+| 001 Master inventory | PARTIAL | Added `docs/project-inventory.md`; full source/workflow review remains. |
+| 005 Canon ledger | PARTIAL | `data/decisions.json` now records four unresolved structural/technical decisions; approval and resolution remain open. |
+| 006 Decision register | PARTIAL | Four decision records created with options, evidence, affected component IDs, and current policy. |
+| 019 Setup/payoff ledger | PARTIAL | `data/setup_payoffs.json` has six proposed cross-book links; causal mechanisms and later-book outcomes need development. |
+| 020 Airtight-loop audit | PARTIAL | Initial high-value links recorded; complete 30-book causal audit not done. |
+| 038 Continuity validator | PARTIAL | Added family-specific data validation and setup/payoff book-reference checks; historical chronology checks remain future work. |
+| 071 Repository inventory | PARTIAL | Key files documented; full source/workflow review and CI result remain. |
+| 072 Data schema | PARTIAL | Added record-family validation profiles; relationship entity references and fuller contracts remain. |
+| 081 Automated data checks | VERIFY | Structural checks mirrored against repository JSON found 12 data files and 63 records with no issues in the checked profiles. Python validator execution and GitHub Actions result are not yet verified. |
+
+New files:
+- `docs/project-inventory.md`
+- `data/setup_payoffs.json`
+- `data/decisions.json`
+
+Updated:
+- `scripts/validate.py`
+- `README.md`
+- `docs/master-development-board.md`
