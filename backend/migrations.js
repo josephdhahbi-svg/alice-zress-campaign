@@ -77,6 +77,26 @@ CREATE TABLE IF NOT EXISTS vtt_quest_approvals (
  FOREIGN KEY(campaign_id,quest_id) REFERENCES vtt_quest_catalog(campaign_id,quest_id) ON DELETE CASCADE,
  FOREIGN KEY(campaign_id,approved_by_actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
 );
+` },
+  { version:5, name:"quest status transitions and audit", sql:`
+CREATE TABLE IF NOT EXISTS vtt_quest_states (
+ campaign_id TEXT NOT NULL, character_id TEXT NOT NULL, quest_id TEXT NOT NULL,
+ status TEXT NOT NULL CHECK(status IN ('BLOCKED','ACTIVE','FAILED','COMPLETE')),
+ revision INTEGER NOT NULL CHECK(revision > 0),
+ updated_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,character_id,quest_id),
+ FOREIGN KEY(campaign_id,character_id) REFERENCES vtt_characters(campaign_id,character_id) ON DELETE CASCADE,
+ FOREIGN KEY(campaign_id,quest_id) REFERENCES vtt_quest_catalog(campaign_id,quest_id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS vtt_quest_state_audit (
+ campaign_id TEXT NOT NULL, character_id TEXT NOT NULL, quest_id TEXT NOT NULL,
+ revision INTEGER NOT NULL CHECK(revision > 0),
+ actor_id TEXT NOT NULL, from_status TEXT, to_status TEXT NOT NULL,
+ reason TEXT NOT NULL, occurred_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,character_id,quest_id,revision),
+ FOREIGN KEY(campaign_id,character_id,quest_id) REFERENCES vtt_quest_states(campaign_id,character_id,quest_id) ON DELETE CASCADE,
+ FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
 ` }
 ];
 function migrate(db) {
