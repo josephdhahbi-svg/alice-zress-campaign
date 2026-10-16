@@ -40,11 +40,11 @@
 - [ ] T022 — Separate story beats from verified quest completions
 - [x] T023 — Add objectives and evidence-based completion checks
 - [x] T024 — Require server-side character and campaign ownership
-- [ ] T025 — Support failed, blocked, active and complete statuses
+- [x] T025 — Support failed, blocked, active and complete statuses
 - [ ] T026 — Track repeatability and cooldowns explicitly
 - [ ] T027 — Define encounter and rescue outcome flags
 - [x] T028 — Implement idempotent quest completion transaction
-- [ ] T029 — Log quest transitions with audit metadata
+- [x] T029 — Log quest transitions with audit metadata
 - [x] T030 — Test bypass and duplicate completion attempts
 
 ## Phase 4: Artifacts & Crafting
@@ -176,3 +176,9 @@ T005, T008 and T010: baseline written and committed in docs/campaign/ALICE_CANON
 ## 2026-10-16 — T023 verified
 - **T023 VERIFIED DONE:** `backend/quest-evidence-engine.js` now enforces DM-registered, immutable, campaign-scoped required objective definitions. Unknown quests/objectives and incomplete objective sets cannot be completed; exact DM-authored journal evidence is required. `server.js` exposes signed DM-only catalog registration. Tests in `backend/quest-evidence-engine.test.js` and `backend/quest-evidence-api.integration.test.js` passed GitHub Actions Omniversal run `38921730504` and Validate campaign records run `38921730562`. Commits: `cbcbc25c0ad291be44f19e1740d554fa603a5e77`, `09a3e325909c112a1e2cb97c34992d34ae5b3b55`.
 - **Verified total 16/100**. No artifact awards, no Alice level or inventory changes. Remaining 84 tasks open.
+
+## 2026-10-16 — Quest status and audit verification
+- **T025 VERIFIED DONE:** migration v5 and `quest-evidence-engine.js` implement BLOCKED/ACTIVE/FAILED/COMPLETE state machine with validated transitions; completion requires ACTIVE and sets COMPLETE transactionally. Commits `ed96af51f29f5bd4064d8fa0d03d0ed627a8689e`, `a5c9851285d2ab8f58a59fe3e40fe165a38bb2ee`.
+- **T029 VERIFIED DONE:** `vtt_quest_state_audit` records campaign/character/quest, sequential revision, DM actor, from/to status, reason and timestamp atomically; stale expected revisions fail. Tests `backend/quest-state-transitions.test.js`, `backend/quest-evidence-engine.test.js`, `backend/quest-evidence-api.integration.test.js`. Signed DM endpoint in `server.js` commit `85e3b51b562d7ecdb5da22160f71a5f1ae58aba5`.
+- CI initially failed due to missing placeholder for audit timestamp; fixed commit `d7b8d03c02e40aaab6ee153fccdf2f4e0181235a`. Omniversal run `38922707170` SUCCESS; Validate run `38922706681` SUCCESS.
+- **Verified total: 18/100.** No artifacts granted. T021 prerequisite dependency graph and T026 cooldowns remain open.
