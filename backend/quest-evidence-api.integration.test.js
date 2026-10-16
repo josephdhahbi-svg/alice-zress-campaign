@@ -24,6 +24,8 @@ test("quest API prevents player-forged proof and unauthorized rewards",{timeout:
    return {Authorization:"Bearer "+x.body.accessToken,"Content-Type":"application/json"};
   };
   const dm=await session("dm"),alice=await session("alice"),intruder=await session("intruder");
+  assert.equal((await send("/api/campaigns/a/quests/catalog",alice,{questId:"Q1",requiredObjectiveIds:["rescue"]})).status,403);
+  assert.equal((await send("/api/campaigns/a/quests/catalog",dm,{questId:"Q1",requiredObjectiveIds:["rescue"]})).status,201);
   const proof={eventId:"proof",expectedRevision:0,eventType:"QUEST_OBJECTIVE_VERIFIED",payload:{characterId:"alice",questId:"Q1",objectiveId:"rescue"}};
   assert.equal((await send("/api/campaigns/a/events",alice,proof)).status,403);
   assert.equal((await send("/api/campaigns/a/events",dm,proof)).status,201);
