@@ -261,7 +261,7 @@ async function refreshChronologicalMaps(){
      const response=await fetch(base+"/"+encodeURIComponent(map.id)+"/visits/preview",{method:"POST",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify(body),cache:"no-store",credentials:"omit"});
      const data=await response.json();if(epoch!==sessionEpoch)return;
      if(!response.ok)throw Error(data.error||"Visit preview unavailable");
-     const v=data.visit;hooks.textContent="Era: "+v.era+" · Visit #"+v.visitSequence+" · "+(v.drDate||"Date unverified")+" · Time: "+v.localTime+" · "+v.hooks.map(x=>x.label+": "+(x.ready?"available to review":"missing prerequisite")).join(" | ")+" · Travel and time remain unchanged.";
+     const v=data.visit;hooks.textContent="Era: "+v.era+" · Visit #"+v.visitSequence+" · "+(v.drDate||"Date unverified")+" · Time: "+v.localTime+" · "+v.hooks.map(x=>x.label+": "+(x.ready?"available to review":"missing prerequisite")).join(" | ")+" · Secrets: "+v.hiddenDiscoveries.map(x=>x.visibility==="HIDDEN"?"Undiscovered":x.visibility==="HINT_ONLY"?"Clue: "+x.hint:"Revealed: "+x.name).join(" | ")+" · No item claimed or time changed.";
     }catch(error){if(epoch===sessionEpoch)hooks.textContent=error.message}
     finally{button.disabled=false}
    });
