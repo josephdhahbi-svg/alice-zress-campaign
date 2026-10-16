@@ -842,6 +842,29 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     if(result.applied)broadcast({type:"FACTION_PULSE",result});
     res.json({success:true,...result});
   });
+  // Explicit opt-in, admin-only local snapshot. Never disclose filesystem paths to clients.
+  // Audit attempts in SQLite; no campaign event, XP, or story state is created.
+  db.exec(`CREATE TABLE IF NOT EXISTS vtt_backup_audit (
+    audit_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    requested_at TEXT NOT NULL,
+    outcome TEXT NOT NULL CHECK(outcome IN ('SUCCESS','IN_PROGRESS','FAILED')),
+    source TEXT NOT NULL DEFAULT 'ADMIN_API'
+  )`);
+  const recordBackupAudit=db.prepare("INSERT INTO vtt_backup_audit(requested_at,outcome) VALUES(?,?)");
+  app.post("/api/admin/backup",adminOnly,async(_req,res)=>{
+    if(!backups)return res.status(503).json({success:false,error:"BACKUPS_NOT_CONFIGURED"});
+    try{
+      const result=await backups.backupNow();
+      const outcome=result.skipped?"IN_PROGRESS":"SUCCESS";
+      recordBackupAudit.run(new Date().toISOString(),outcome);
+      if(result.skipped)return res.status(409).json({success:false,error:"BACKUP_IN_PROGRESS"});
+      return res.status(201).json({success:true,verified:true});
+    }catch(error){
+      try{recordBackupAudit.run(new Date().toISOString(),"FAILED");}catch(auditError){console.error("[Moonveil] backup audit failure",auditError);}
+      console.error("[Moonveil] manual backup failed",error);
+      return res.status(500).json({success:false,error:"BACKUP_FAILED"});
+    }
+  });
   const backups=process.env.MOONVEIL_BACKUP_DIR
     ?createBackupService(db,{directory:process.env.MOONVEIL_BACKUP_DIR,
        retain:Number(process.env.MOONVEIL_BACKUP_RETAIN||14)}):null;
