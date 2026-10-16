@@ -90,6 +90,42 @@ for file in sorted((ROOT / "data").glob("*.json")):
                 errors.append(f"{file.name}: causal chain must remain proposed and read-only")
             if records.get("canon_status") not in schema["allowed_canon_status"]:
                 errors.append(f"{file.name}: invalid canon status")
+            events = records.get("events", [])
+            event_ids = [event.get("event_id") for event in events if isinstance(event, dict)]
+            if len(event_ids) != len(set(event_ids)) or len(event_ids) != len(events):
+                errors.append(f"{file.name}: missing or duplicate event_id")
+            known_event_ids = set(event_ids)
+            for event in events:
+                event_id = event.get("event_id")
+                if event.get("canon_status") not in schema["allowed_canon_status"]:
+                    errors.append(f"{file.name}:{event_id}: invalid event canon status")
+                for field in ("cause_event_ids", "consequence_event_ids", "prerequisite_event_ids"):
+                    refs = event.get(field, [])
+                    if not isinstance(refs, list):
+                        errors.append(f"{file.name}:{event_id}: {field} must be a list")
+                        continue
+                    for ref in refs:
+                        if ref == "PLAYER_CONFIRMED_U01_CHOICE" and field == "prerequisite_event_ids":
+                            continue
+                        if ref not in known_event_ids:
+                            errors.append(f"{file.name}:{event_id}: unknown {field} reference {ref}")
+                if event.get("status") == "locked_preview" and event.get("event_type") == "quest_opportunity":
+                    if "PLAYER_CONFIRMED_U01_CHOICE" not in event.get("prerequisite_event_ids", []):
+                        errors.append(f"{file.name}:{event_id}: quest opportunity missing player-choice gate")
+            for event in events:
+                event_id = event.get("event_id")
+                for cause in event.get("cause_event_ids", []):
+                    if cause in known_event_ids:
+                        parent = next(e for e in events if e.get("event_id") == cause)
+                        if event_id not in parent.get("consequence_event_ids", []):
+                            errors.append(f"{file.name}: non-reciprocal causal link {cause} -> {event_id}")
+                for consequence in event.get("consequence_event_ids", []):
+                    if consequence in known_event_ids:
+                        child = next(e for e in events if e.get("event_id") == consequence)
+                        if event_id not in child.get("cause_event_ids", []):
+                            errors.append(f"{file.name}: non-reciprocal causal link {event_id} -> {consequence}")
+            if records.get("date_precision") == "unknown" and records.get("dr_epoch_date") is not None:
+                errors.append(f"{file.name}: unknown date must remain null")
         if file.name == "transport_geography_research_queue_v1.json":
             if records.get("status") != "research_candidates_not_traversable":
                 errors.append(f"{file.name}: candidates must remain non-traversable")
