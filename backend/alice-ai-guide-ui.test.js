@@ -58,3 +58,14 @@ test("scene action UI is connected and uses safe read-only preview controls",()=
  assert.match(js,/result\.preview\.action\.result/);
  assert.doesNotMatch(js,/innerHTML|localStorage|sessionStorage/);
 });
+
+test("discovery history UI uses signed session and safe DOM rendering",()=>{
+ const html=fs.readFileSync(path.join(__dirname,"../prototype/alice-room-atlas.html"),"utf8");
+ const js=fs.readFileSync(path.join(__dirname,"../prototype/alice-room-atlas.js"),"utf8");
+ assert.match(html,/id="discoveries-refresh"/);
+ assert.match(html,/id="discoveries-list"/);
+ assert.match(js,/async function refreshDiscoveryLedger/);
+ assert.match(js,/\/maps\/discoveries/);
+ assert.match(js,/epoch!==sessionEpoch/);
+ assert.doesNotMatch(js,/innerHTML|localStorage|sessionStorage/);
+});
