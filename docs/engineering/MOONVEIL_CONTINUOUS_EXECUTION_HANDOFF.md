@@ -120,3 +120,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Rerun **Omniversal `38922707170` SUCCESS** and **Validate campaign records `38922706681` SUCCESS**.
 - Charter commit `1e0bc0d2da323e400768b6e96b4ace6b0681a246` closes **T025** and **T029**; verified **18/100**, open **82/100**.
 - Next: trusted prerequisite graph (T021), cooldown/repeatability (T026), outcome flags (T027), artifact metadata and explicitly approved reward catalog; combat resources. No candidate artifact awards.
+
+## 2026-10-16 — Proposed master server economy integration
+- Rejected pasted monolith as a replacement: undefined router, unavailable micro-router files, insecure global in-memory state and minute-by-minute chronology changes.
+- Added opt-in `backend/world-economy.js` commit `99a0fd1b36ae636d1e5c263b01f8a451760fe1c5`, conflict-replay fix `28544450f0b6728afb1b8d5dca68493b621e7ed4`: campaign-scoped SQLite commodity prices in copper, bounded ±500 basis points per DM-authorized adjustment, revision checks, adjustment ledger and idempotent retries. No automatic cron.
+- `server.js` commit `a0f492924c469aaea1949eb133d89c16ab022075`: signed member GET `/api/campaigns/:campaignId/world/economy`; DM-only POST `/api/campaigns/:campaignId/world/economy/commodities` and `/api/campaigns/:campaignId/world/economy/adjustments`.
+- Tests `backend/world-economy.test.js` commit `e9927ed1d48db2273be78cbb1f9791460ef3e432` cover DM restriction, campaign isolation, bounds, revision conflicts, replay, and no implicit pulses.
+- **CI pending**. Verified charter baseline 18/100; do not claim production-grade economics or increment verified count until acceptance and CI. Schema currently initialized by engine, not versioned migration. No changes to Alice or campaign chronology.
