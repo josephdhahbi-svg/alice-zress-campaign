@@ -26,3 +26,11 @@ test("Alice leads the three ascensions and parasite origin is narrative, not an 
  assert.equal(evaluateSacredAscension("alice_zress",{level:1,parasitePresent:true}).allowed,false);
  assert.ok(paths.every(x=>x.path.includes("CELESTIAL_ASPECT")));
 });
+
+test("Alice's Far Realm origin and Convergence demiplane remain narrative, not automatic travel access",()=>{
+ const alice=getSacredAscension("alice_zress");
+ assert.equal(alice.eldritchSourcePlane,"FAR_REALM");
+ assert.equal(alice.demiplane,"ALICE_TRINITY_CONVERGENCE");
+ assert.ok(alice.linkedPlanes.includes("SHADOWFELL"));
+ assert.equal(evaluateSacredAscension("alice_zress",{level:30,dmApproved:true,divineReviewApproved:true,verifiedObjectives:[true,true,true,true,true]}).allowed,false);
+});
