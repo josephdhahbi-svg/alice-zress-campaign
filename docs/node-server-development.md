@@ -70,3 +70,6 @@ const socket = new WebSocket("ws://127.0.0.1:3000/events?campaignId=alice", ["mo
 socket.addEventListener("message", event => console.log(JSON.parse(event.data)));
 ```
 The socket sends a `CONNECTED` acknowledgement and `CAMPAIGN_EVENT` notifications with revision numbers; clients fetch full events through the authorized HTTP endpoint. Existing localStorage saves remain separate. Token use in a subprotocol is local-development only and requires a stronger browser session architecture for public deployment.
+
+## Reconnection and event recovery
+Connect to `/events?campaignId=alice&after=<lastAppliedRevision>`. The server sends `CONNECTED` with the current journal revision. If there are newer events it also sends `CATCH_UP_REQUIRED` with the last applied revision and current revision. Fetch `GET /api/campaigns/alice/events?after=<lastAppliedRevision>` repeatedly until caught up, applying each revision once. Persist the last applied revision only after applying the corresponding event successfully. Reconnect notifications are not a replacement for the journal; always re-fetch after network loss. This does not yet synchronize browser localStorage with server saves automatically.
