@@ -222,3 +222,9 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Added `faction_dispute_audit` with CREATED, ESCALATED and RESOLVED entries inside the same SQLite transactions as state changes (`5603f27`). This is a local audit trail, NOT campaign-scoped event journal or websocket sync.
 - Extended unit tests to assert audit records and rollback on ownership conflict (`324b005`). Latest CI is pending; do not mark these additions verified until it passes.
 - T046 PARTIAL, T049 PARTIAL. Remaining: DM campaign-scoped authorization, full endpoint lifecycle tests, reconciliation with autonomous faction pulses, migration/version strategy, websocket journal synchronization, secure deployment.
+
+## Batch 18 — active-dispute protection in autonomous pulses
+- Verified Batch 17 audit tests [CI 38848682127](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38848682127) SUCCESS.
+- Protected contested territories against autonomous ownership transfers (`b307709`). Adjusted startup table initialization order (`0e0bd78`), added regression test (`8026092`), made dispute-table detection safe for legacy pulse users (`5426093`), and updated fake SQLite adapter (`5d470fa`).
+- Earlier CI runs failed while integration was incomplete ([38848808158](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38848808158)); latest run [38848844172](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38848844172) pending at ledger write. Do not mark fix verified until green.
+- T046/T049 PARTIAL. Open: complete HTTP dispute lifecycle test, durable campaign-scoped journal and socket events, source-compatible migration, prevention of global leader taking unrelated sectors, backup restoration repeat on expanded schema.
