@@ -288,3 +288,6 @@ New image concept ART-UI-005 generated in chat and registered in `docs/administr
 
 ## 2026-10-16 — Alice's Rabbit Hole demiplane code
 `backend/alice-demiplane-catalog.js` (`30ee9f92`) and tests (`99d2c3cc`) define Alice's personal Eldritch demiplane as **the Rabbit Hole itself**, with physical entrance `pit_ghaunadaur` in the Material Underdark. Far Realm is the Eldritch influence, not the demiplane's replacement location. Every access preview fails closed even with a supplied approval boolean, pending authoritative travel and DM evidence. Signed member read-only API in `server.js` (`d9697102`) GET `/api/campaigns/:campaignId/world/alice-demiplane`. No free warp, rewards, or transformation; charter unchanged pending CI.
+
+## 2026-10-16 — Rabbit Hole exploration room atlas
+Created `backend/alice-demiplane-rooms.js` (`ad357400`) with five narrative rooms: Threshold, Gallery of Echoes, Void Observatory, Silver and Azure Nexus, Return Gate. Every room has five DM-adjudicated choices and zero rewards. Added unit tests (`144b3909`) and signed campaign member read-only room/preview API routes (`server.js`, `c98e5967`). This is a room catalog and preview layer, **not** unlocked movement, persistent journal or actual portal travel. CI pending; no charter task closed.
