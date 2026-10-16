@@ -17,6 +17,7 @@ class SphericalLegoIntegrationTests(unittest.TestCase):
         cls.entity = json.loads((fixtures / "lego_encounter_entity_v1.json").read_text(encoding="utf-8"))
         cls.patch = json.loads((fixtures / "lego_encounter_patch_v2.json").read_text(encoding="utf-8"))
         cls.connection = json.loads((fixtures / "lego_encounter_connection_v1.json").read_text(encoding="utf-8"))
+        cls.chain = json.loads((ROOT / "data" / "proposed_cosmic_to_u01_causal_chain_v1.json").read_text(encoding="utf-8"))
 
     def test_u01_space_time_contract_valid(self):
         self.assertEqual(validate_space_time_context(self.u01["space_time_context"]), [])
