@@ -120,3 +120,9 @@ Keep JSON as validated exchange/configuration data; SQLite as structured persist
 3. Audit required metadata against the actual JSON schema and validator.
 4. Choose Book 1 as the first end-to-end playable slice unless a blocker is found.
 5. Update this board after each meaningful milestone, not after every raw brainstorm.
+
+
+## VTT technical blueprint integration
+See `docs/vtt-technical-blueprint-audit.md` for the proposed Flutter → API service → Node.js/Express → SQLite persistence flow, repository evidence, code-level risks, recommended gameplay ledgers, and vertical-slice acceptance tests.
+
+Current technical decision: treat Flutter + Node.js + SQLite WAL as the target architecture until source files and tests confirm the implementation. The browser prototype is an existing offline prototype, not proof of backend synchronization. Resolve the book-table INSERT constraint mismatch, server-side validation, transaction error handling, sync queue/concurrency, and packet ledger before trusting remote persistence.
