@@ -97,6 +97,24 @@ test("WebSocket event delivery is restricted to authenticated campaign members",
     const journal=(await journalResponse.json()).events;
     assert.equal(journal.length,2);
     assert.equal(journal[1].revision,2);
+    // Two live players in different campaigns must receive only their own events.
+    const bobSocket=await connect(url+"b",bob);
+    try {
+      assert.equal((await bobSocket.initialMessage).campaignId,"b");
+      const leaked=[];
+      const capture=buf=>leaked.push(JSON.parse(String(buf)));
+      ws.on("message",capture);
+      const bobEvent=message(bobSocket);
+      const bobWrite=await fetch(base+"/api/campaigns/b/events",{method:"POST",
+        headers:{Authorization:"Bearer "+bob,"Content-Type":"application/json"},
+        body:JSON.stringify({eventId:"bob-only",expectedRevision:0,
+          eventType:"SCENE_STARTED",payload:{scene:"bob-scene"}})});
+      assert.equal(bobWrite.status,201);
+      assert.equal((await bobEvent).campaignId,"b");
+      await new Promise(resolve=>setTimeout(resolve,100));
+      ws.off("message",capture);
+      assert.equal(leaked.length,0,"Alice must not receive Bob's private events");
+    } finally {bobSocket.terminate();}
     const logout=await fetch(base+"/api/sessions/logout",{method:"POST",headers:{Authorization:"Bearer "+alice}});
     assert.equal(logout.status,200);
     await assert.rejects(connect(url+"a",alice),/denied|403/i);
