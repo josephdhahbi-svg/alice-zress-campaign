@@ -115,6 +115,39 @@ test("WebSocket event delivery is restricted to authenticated campaign members",
       ws.off("message",capture);
       assert.equal(leaked.length,0,"Alice must not receive Bob's private events");
     } finally {bobSocket.terminate();}
+    // Alice disconnects while Bob's independent campaign continues.
+    ws.terminate();
+    ws=null;
+    const bobContinues=await fetch(base+"/api/campaigns/b/events",{
+      method:"POST",headers:{Authorization:"Bearer "+bob,"Content-Type":"application/json"},
+      body:JSON.stringify({eventId:"bob-after-alice-left",expectedRevision:1,
+        eventType:"SCENE_STARTED",payload:{scene:"bob-next"}})});
+    assert.equal(bobContinues.status,201);
+    // Alice's campaign journal remains isolated and at revision two.
+    const aliceHistory=await fetch(base+"/api/campaigns/a/events?after=0",{
+      headers:{Authorization:"Bearer "+alice}});
+    assert.equal(aliceHistory.status,200);
+    assert.deepEqual((await aliceHistory.json()).events.map(e=>e.event_id),["evt1",journal[1].event_id]);
+    // An authorized write during disconnection must be recoverable after reconnect.
+    const offlineWrite=await fetch(base+"/api/campaigns/a/events",{
+      method:"POST",headers:{Authorization:"Bearer "+alice,"Content-Type":"application/json"},
+      body:JSON.stringify({eventId:"alice-offline",expectedRevision:2,
+        eventType:"SCENE_STARTED",payload:{scene:"moonlit-refuge"}})});
+    assert.equal(offlineWrite.status,201);
+    ws=await connect(url+"a&after=2",alice);
+    const reconnected=await ws.initialMessage;
+    assert.equal(reconnected.revision,3);
+    const catchup=await message(ws);
+    assert.equal(catchup.type,"CATCH_UP_REQUIRED");
+    assert.equal(catchup.after,2);
+    assert.equal(catchup.revision,3);
+    const recovered=await fetch(base+"/api/campaigns/a/events?after=2",{
+      headers:{Authorization:"Bearer "+alice}});
+    assert.equal(recovered.status,200);
+    const recoveredEvents=(await recovered.json()).events;
+    assert.equal(recoveredEvents.length,1);
+    assert.equal(recoveredEvents[0].event_id,"alice-offline");
+    assert.equal(recoveredEvents[0].revision,3);
     const logout=await fetch(base+"/api/sessions/logout",{method:"POST",headers:{Authorization:"Bearer "+alice}});
     assert.equal(logout.status,200);
     await assert.rejects(connect(url+"a",alice),/denied|403/i);
