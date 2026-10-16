@@ -35,7 +35,10 @@ def main():
         dashboard = war.read_text(encoding="utf-8")
         for feature in ('id="pulse"', 'id="territories"', 'id="factions"',
                         'id="audit"', 'localStorage', 'JSON.stringify',
-                        'moonveil-faction-war-demo-v1', 'does not run hourly'):
+                        'moonveil-faction-war-demo-v1', 'does not run hourly',
+                        'id="powerTable"', 'id="controlTable"',
+                        'id="frontTable"', 'id="supplyTable"',
+                        'renderWarTables'):
             check(feature in dashboard, f"faction war dashboard missing {feature}")
         check('faction-war.html' in html, "Living World missing war dashboard link")
     if errors:
