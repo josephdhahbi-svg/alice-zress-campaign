@@ -16,10 +16,10 @@
       "related_id": "alice-zress",
       "target_aspect_ratio": "3:4",
       "source": "AI-generated concept art",
-      "status": "generated_local_not_committed",
-      "background_status": "checkerboard_baked_in",
-      "transparency_status": "requires_background_removal",
-      "notes": "Generated concept art; character appearance should be checked against Alice's locked visual canon."
+      "status": "cleaned_local_not_committed",
+      "background_status": "checkerboard_removed_or_aperture_cleaned",
+      "transparency_status": "alpha_channel_added; visual_review_required",
+      "notes": "Generated concept art; character appearance should be checked against Alice's locked visual canon. Cleaned transparent PNG generated in session; binary still needs upload to repository. Review edges before production use."
     },
     {
       "id": "asset-hallway-wraith",
@@ -30,10 +30,10 @@
       "related_id": null,
       "target_aspect_ratio": "1:1",
       "source": "AI-generated concept art",
-      "status": "generated_local_not_committed",
-      "background_status": "checkerboard_baked_in",
-      "transparency_status": "requires_background_removal",
-      "notes": "Generated concept art; checkerboard background is baked into image."
+      "status": "cleaned_local_not_committed",
+      "background_status": "checkerboard_removed_or_aperture_cleaned",
+      "transparency_status": "alpha_channel_added; visual_review_required",
+      "notes": "Generated concept art; checkerboard background is baked into image. Cleaned transparent PNG generated in session; binary still needs upload to repository. Review edges before production use."
     },
     {
       "id": "asset-vertical-ascension",
@@ -44,10 +44,10 @@
       "related_id": null,
       "target_aspect_ratio": "1:1",
       "source": "AI-generated concept art",
-      "status": "generated_local_not_committed",
-      "background_status": "checkerboard_baked_in",
-      "transparency_status": "requires_background_removal",
-      "notes": "Generated concept art; checkerboard background is baked into image."
+      "status": "cleaned_local_not_committed",
+      "background_status": "checkerboard_removed_or_aperture_cleaned",
+      "transparency_status": "alpha_channel_added; visual_review_required",
+      "notes": "Generated concept art; checkerboard background is baked into image. Cleaned transparent PNG generated in session; binary still needs upload to repository. Review edges before production use."
     },
     {
       "id": "asset-obsidian-item-card",
@@ -58,10 +58,10 @@
       "related_id": null,
       "target_aspect_ratio": "3:4",
       "source": "AI-generated concept art",
-      "status": "generated_local_not_committed",
-      "background_status": "checkerboard_baked_in",
-      "transparency_status": "requires_background_removal",
-      "notes": "Generated concept art; checkerboard background is baked into image."
+      "status": "cleaned_local_not_committed",
+      "background_status": "checkerboard_removed_or_aperture_cleaned",
+      "transparency_status": "alpha_channel_added; visual_review_required",
+      "notes": "Generated concept art; checkerboard background is baked into image. Cleaned transparent PNG generated in session; binary still needs upload to repository. Review edges before production use."
     },
     {
       "id": "asset-infinite-hallway",
@@ -72,10 +72,10 @@
       "related_id": null,
       "target_aspect_ratio": "16:9",
       "source": "AI-generated concept art",
-      "status": "generated_local_not_committed",
-      "background_status": "checkerboard_baked_in",
-      "transparency_status": "requires_background_removal",
-      "notes": "Generated concept art; checkerboard background is baked into image."
+      "status": "cleaned_local_not_committed",
+      "background_status": "checkerboard_removed_or_aperture_cleaned",
+      "transparency_status": "alpha_channel_added; visual_review_required",
+      "notes": "Generated concept art; checkerboard background is baked into image. Cleaned transparent PNG generated in session; binary still needs upload to repository. Review edges before production use."
     },
     {
       "id": "asset-arcane-ui-frame",
@@ -86,10 +86,10 @@
       "related_id": null,
       "target_aspect_ratio": "3:4",
       "source": "AI-generated concept art",
-      "status": "generated_local_not_committed",
-      "background_status": "checkerboard_baked_in",
-      "transparency_status": "requires_background_removal",
-      "notes": "Generated concept art; checkerboard background is baked into image."
+      "status": "cleaned_local_not_committed",
+      "background_status": "checkerboard_removed_or_aperture_cleaned",
+      "transparency_status": "alpha_channel_added; visual_review_required",
+      "notes": "Generated concept art; checkerboard background is baked into image. Cleaned transparent PNG generated in session; binary still needs upload to repository. Review edges before production use."
     },
     {
       "id": "asset-first-door-sigil",
@@ -100,10 +100,10 @@
       "related_id": "book-01-pit-of-ghaunadaur",
       "target_aspect_ratio": "1:1",
       "source": "AI-generated concept art",
-      "status": "generated_local_not_committed",
-      "background_status": "checkerboard_baked_in",
-      "transparency_status": "requires_background_removal",
-      "notes": "Generated concept art; check the emblem's use against the Book 1 visual style."
+      "status": "cleaned_local_not_committed",
+      "background_status": "checkerboard_removed_or_aperture_cleaned",
+      "transparency_status": "alpha_channel_added; visual_review_required",
+      "notes": "Generated concept art; check the emblem's use against the Book 1 visual style. Cleaned transparent PNG generated in session; binary still needs upload to repository. Review edges before production use."
     }
   ]
 }
