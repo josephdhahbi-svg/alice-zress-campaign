@@ -1,24 +1,37 @@
 # Alice Z'ress — The Elder Eye Campaign
 
-An original interactive Forgotten Realms-inspired D&D campaign development project.
+An original interactive Forgotten Realms-inspired D&D campaign development project. The repository is being expanded into the Moonveil Universe: a connected 30-book story architecture, living lore database, and interactive VTT.
 
 ## Project scope
-- Ten connected trilogies / 30 books; seven circular traversals.
+- Ten connected trilogies / 30-book working catalog.
+- Seven circular traversals remain an unresolved structural decision to reconcile with the current 30-book loop outline.
 - Alice Z'ress: heroic drow Great Old One Warlock, Ghaunadaur patron, Eilistraee goddess.
 - 25 hero and 25 villain roster slots, cult champions, and divine mythology.
-- Foundational books: That Which Lurks; The Labyrinth of the Elder Eye; The Return of the Avatar of Ghaunador.
-- Historical and campaign timestamps, locations, canon sources and availability checks for all records.
-- Five main / five mid / five low consequence design; five clickable options during play.
+- Historical and campaign timestamps, locations, canon sources and availability checks for lore records.
+- Five-choice scene design and meaningful short-, medium-, and long-term consequences.
 
-## Repository contents
-- `docs/continuity.md` — chronology and canon policy.
-- `data/schema.json` — required record fields.
-- `data/characters.json`, `data/locations.json`, `data/rituals.json` — initial example records.
+## Start here
+- [Master development board](docs/master-development-board.md) — current priorities and architecture links.
+- [100-task status tracker](docs/task-status.md) — evidence-based progress and blockers.
+- [Repository inventory](docs/project-inventory.md) — inspected assets and current gaps.
+- [Administration and build operations](docs/administration-build-operations.md) — Lego workflow, component contract, and definition of done.
+- [VTT technical blueprint audit](docs/vtt-technical-blueprint-audit.md) — target stack and implementation risks.
+- [Continuity policy](docs/continuity.md) — chronology, canon status, and source requirements.
+- [Story roadmap](docs/story-roadmap.md) — earlier foundational trilogy and campaign phases.
+
+## Data and tools
+- `data/schema.json` — lore-record requirements and allowed status values.
+- `data/books.json` — initial structured 30-book catalog; continuity review remains pending.
+- `data/development_components.json` — reusable component registry.
+- `data/characters.json`, `data/locations.json`, `data/rituals.json`, `data/relationships.json`, `data/story_phases.json` — current starter lore and relationship records.
 - `data/spells.json`, `data/items.json`, `data/quests.json` — starter collections.
-- `scripts/validate.py` — schema completeness check (`python scripts/validate.py`).
-- `game/index.html` — offline five-choice prototype with local browser save.
+- `scripts/validate.py` — record-family validation; run with `python scripts/validate.py`.
+- `game/index.html` — offline five-choice browser prototype with local character/quest save and import/export.
+- `.github/workflows/validate.yml` — CI validation and deterministic simulation check.
 
-## Status
-Early-stage scaffolding. Dates and official historical facts still need source verification. The game demo is not a full D&D rules engine. Lich ascensions and crossover material are homebrew unless specifically sourced.
+## Current implementation status
+The browser prototype is local/offline and is not automatically synchronized with GitHub or ChatGPT. The Flutter + Node.js/Express + SQLite WAL architecture is a target design until its source files and tests are located and verified. The Python validator has been updated for lore records, relationships, story phases, and the component registry; check the latest GitHub Actions run before describing the validation pipeline as passing.
+
+Historical dates, official lore facts, the relationship between the seven traversals and the 30-book loop, and the foundational trilogy title sets still require review. Book catalog entries are planning records, not assertions that every plot event is official canon or complete.
 
 Fan-made project, not affiliated with or endorsed by Wizards of the Coast. Do not upload copyrighted book content or artwork without appropriate rights.
