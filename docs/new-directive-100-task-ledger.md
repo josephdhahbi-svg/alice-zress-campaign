@@ -209,3 +209,9 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Added client contract tests for requests, URL validation, invalid inputs and conflict reporting (`09fd2cd`), added dedicated CI step (`7349175`). [CI 38847910015](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847910015) passed.
 - Documented usage and blockers (`d3dc8a0`). The tactical command deck HTML was **not changed** this batch; UI wiring and cross-origin deployment are still unresolved. Do not claim end-to-end multiplayer dice are available on GitHub Pages.
 - T019 API contracts PARTIAL; T088 client API groundwork PARTIAL, not Flutter; T089 recovery PARTIAL.
+
+## Faction dispute integration — 2026-10-15
+- Added transactional `backend/faction-dispute-engine.js` using existing `factions` and `territory_control` tables; unique partial index prevents concurrent PENDING/ESCALATED disputes on one territory. UUID dispute IDs and capped escalation. Commits `cedfbfc`, `38509c1`.
+- Added `backend/faction-dispute-engine.test.js` for escalation, participant-only settlement, stale owner rejection, and atomicity (`33e7117`). [Validation at tests commit](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38848321212) succeeded.
+- Added admin-only `POST /api/war-table/dispute` and `POST /api/war-table/resolve` endpoints (`8dd308a`). Uses existing local admin token, not untrusted user-supplied roles. Wired dispute tests into CI (`f87a5c6`). CI on integration commit pending at ledger update; do not claim endpoint integration tests exist yet.
+- T027 faction map PARTIAL, T046 diplomacy/disputes PARTIAL, T049 war event log NOT STARTED for disputes. No campaign-scoped event journal or websocket synchronization yet; not production-ready.
