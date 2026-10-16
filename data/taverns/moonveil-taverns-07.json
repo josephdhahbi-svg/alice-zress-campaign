@@ -1,0 +1,890 @@
+{
+  "schema": "moonveil.tavern-pack.v1",
+  "region": "Wildspace",
+  "firstBook": 19,
+  "lastBook": 21,
+  "count": 10,
+  "status": "AUTHORED_DRAFT",
+  "taverns": [
+    {
+      "id": "mv_tavern_061",
+      "name": "The Starboard Hearth",
+      "book": 19,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_061",
+      "kind": "roadside inn",
+      "proprietor": {
+        "name": "Lio Ember",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Starboard Hearth is a roadside inn serving travelers in Wildspace. Warm stew and private booths.",
+      "signatureService": "Warm stew and private booths",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_061",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_161",
+        "wave3QuestId": "mv_side_261",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Starboard Hearth. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_062",
+      "name": "The Drifting Lantern",
+      "book": 20,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_062",
+      "kind": "guildhouse tavern",
+      "proprietor": {
+        "name": "Pexa Hearth",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Drifting Lantern is a guildhouse tavern serving travelers in Wildspace. Fresh bread and herbal tea.",
+      "signatureService": "Fresh bread and herbal tea",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_062",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_162",
+        "wave3QuestId": "mv_side_262",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Drifting Lantern. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_063",
+      "name": "The Meteor Mug",
+      "book": 21,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_063",
+      "kind": "refuge canteen",
+      "proprietor": {
+        "name": "Jori Kettle",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Meteor Mug is a refuge canteen serving travelers in Wildspace. Medicinal broth and quiet alcoves.",
+      "signatureService": "Medicinal broth and quiet alcoves",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_063",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_163",
+        "wave3QuestId": "mv_side_263",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Meteor Mug. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_064",
+      "name": "The Moonbridge Mess",
+      "book": 19,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_064",
+      "kind": "scholars' hostel",
+      "proprietor": {
+        "name": "Suri Moss",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Moonbridge Mess is a scholars' hostel serving travelers in Wildspace. Map exchange and research table.",
+      "signatureService": "Map exchange and research table",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_064",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_164",
+        "wave3QuestId": "mv_side_264",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Moonbridge Mess. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_065",
+      "name": "The Whale's Rest",
+      "book": 20,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_065",
+      "kind": "crafting lodge",
+      "proprietor": {
+        "name": "Mira Stone",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Whale's Rest is a crafting lodge serving travelers in Wildspace. Shared forge and repair benches.",
+      "signatureService": "Shared forge and repair benches",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_065",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_165",
+        "wave3QuestId": "mv_side_265",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Whale's Rest. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_066",
+      "name": "The Silent Astrolabe",
+      "book": 21,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_066",
+      "kind": "pilgrim rest",
+      "proprietor": {
+        "name": "Tovan Wick",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Silent Astrolabe is a pilgrim rest serving travelers in Wildspace. Simple meals and shrine alcove.",
+      "signatureService": "Simple meals and shrine alcove",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_066",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_166",
+        "wave3QuestId": "mv_side_266",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Silent Astrolabe. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_067",
+      "name": "The Airlock Canteen",
+      "book": 19,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_067",
+      "kind": "caravanserai",
+      "proprietor": {
+        "name": "Iven Reed",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Airlock Canteen is a caravanserai serving travelers in Wildspace. Pack animal shelter and supply crates.",
+      "signatureService": "Pack animal shelter and supply crates",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_067",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_167",
+        "wave3QuestId": "mv_side_267",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Airlock Canteen. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_068",
+      "name": "The Compass Rose",
+      "book": 20,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_068",
+      "kind": "river or dock inn",
+      "proprietor": {
+        "name": "Cora Copper",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Compass Rose is a river or dock inn serving travelers in Wildspace. Cargo lockers and traveler noticeboard.",
+      "signatureService": "Cargo lockers and traveler noticeboard",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_068",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_168",
+        "wave3QuestId": "mv_side_268",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Compass Rose. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_069",
+      "name": "The Astral Posthouse",
+      "book": 21,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_069",
+      "kind": "hidden safehouse",
+      "proprietor": {
+        "name": "Wynn Vale",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Astral Posthouse is a hidden safehouse serving travelers in Wildspace. Discreet entrance and warded meeting room.",
+      "signatureService": "Discreet entrance and warded meeting room",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_069",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_169",
+        "wave3QuestId": "mv_side_269",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Astral Posthouse. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_070",
+      "name": "The Voidward Nest",
+      "book": 19,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_070",
+      "kind": "community hearth",
+      "proprietor": {
+        "name": "Fenn Dawn",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Voidward Nest is a community hearth serving travelers in Wildspace. Community kitchen and rescue bulletin.",
+      "signatureService": "Community kitchen and rescue bulletin",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_070",
+        "chainId": "mv_chain_07",
+        "wave2QuestId": "mv_side_170",
+        "wave3QuestId": "mv_side_270",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Voidward Nest. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Wildspace roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    }
+  ]
+}
