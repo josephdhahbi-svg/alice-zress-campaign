@@ -62,3 +62,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - CI for `42b08e6` passed: Validate run `38920038700`, Omniversal run `38920038661`. **New integration test was committed afterward**; CI runs `38920078593` and `38920078591` must pass before claiming full batch verification.
 - Still needed: verified full-batch CI, file-backed restart test, concurrent action test, server-side dice/attack roll rules, spell slots, turn permission policy, event-journal integration and quest reward transactions.
 - Do not mark T074 complete: full resource/condition coverage is not yet present. Existing 9/100 count unchanged pending task acceptance review.
+
+## 2026-10-16 — Combat durability and attack rules batch
+- Added `backend/combat-persistence.integration.test.js` at commit `845bec8d55d5cdd17ced21c2065fafd7694071dd`: file-backed WAL database, two independent connections, replay idempotency, conflict rejection, restart and recovered HP state.
+- Added pure `backend/combat-attack-rules.js` at `76a06b446f293b4fa698529597f0ff0c7504fe78` and `backend/combat-attack-rules.test.js` at `6ab257064dc84ae4d63670a7487dec5a4b3221f5`: validates bounded inputs, natural 1 miss, natural 20 hit/critical flag, AC comparisons and damage floor.
+- **IMPORTANT:** attack resolver is NOT yet wired to authenticated API or server-generated dice; it accepts a supplied rawRoll for pure deterministic unit testing. Critical damage dice doubling is not implemented. No combat or inventory state was changed for Alice.
+- **CI evidence pending for these commits.** Do not mark T074/T093 verified until passing CI and full acceptance review. Prior verified baseline remains 10/100.
+- Next: verify GitHub Actions, fix failures, connect attack resolver to DM-authorized combat transaction using server-generated cryptographic RNG, enforce per-turn action economy and spell slots, then return to secure quest ownership/objective/reward transaction tasks.
