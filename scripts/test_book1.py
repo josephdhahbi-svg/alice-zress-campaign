@@ -21,6 +21,8 @@ def main():
         locations = json.loads((DATA / "locations.json").read_text(encoding="utf-8"))
         payoffs = json.loads((DATA / "setup_payoffs.json").read_text(encoding="utf-8"))
         scenes = json.loads((DATA / "scenes.json").read_text(encoding="utf-8"))
+        characters = json.loads((DATA / "characters.json").read_text(encoding="utf-8"))
+        assets_manifest = json.loads((DATA / "assets.json").read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         print(f"FAIL: unable to load Book 1 test data: {exc}")
         return 1
@@ -40,7 +42,9 @@ def main():
     book_ids = {item.get("id") for item in books}
     location_ids = {item.get("id") for item in locations}
     payoff_ids = {item.get("id") for item in payoffs}
+    character_ids = {item.get("id") for item in characters}
     check(scene.get("book_id") in book_ids, "scene references an unknown book")
+    check(scene.get("character_id") in character_ids, "scene references an unknown character")
     check(scene.get("location_id") in location_ids, "scene references an unknown location")
     expected = ["lawful_good", "neutral_good", "chaotic_good", "utility", "action"]
     check(scene.get("choice_order") == expected, "scene choice order differs from the established five-choice convention")
@@ -60,6 +64,12 @@ def main():
     check("Ghaunadaur's Acid Splash" in gift_names, "Ghaunadaur's Acid Splash origin gift missing")
     check("Eilistraee's Blade Ward" in gift_names, "Eilistraee's Blade Ward origin gift missing")
 
+    asset_records = assets_manifest.get("assets", []) if isinstance(assets_manifest, dict) else []
+    check(len(asset_records) == 7, "asset registry must contain seven generated asset records")
+    check(len({item.get("id") for item in asset_records}) == len(asset_records), "asset IDs must be unique")
+    check(all(item.get("status") == "generated_local_not_committed" for item in asset_records), "asset registry must accurately mark files not yet committed")
+    check(all(item.get("transparency_status") == "requires_background_removal" for item in asset_records), "asset transparency limitation must be recorded")
+
     check(GAME.exists(), "game/book1.html is missing")
     if GAME.exists():
         html = GAME.read_text(encoding="utf-8")
@@ -74,7 +84,7 @@ def main():
         print("\\n".join(f"FAIL: {message}" for message in errors))
         print(f"FAILED: {len(errors)} Book 1 regression check(s).")
         return 1
-    print(f"PASS: {len(books)} books, {len(choices)} ordered choices, three origin gifts, cross-file references, and browser save/roll controls.")
+    print(f"PASS: {len(books)} books, {len(choices)} ordered choices, three origin gifts, character/location/payoff references, seven asset records, and browser save/roll controls.")
     return 0
 
 
