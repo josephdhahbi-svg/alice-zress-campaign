@@ -8,6 +8,7 @@ const { initializeFactionPulseEngine, scheduleFactionPulse } = require("./backen
 const crypto = require("node:crypto");
 const { migrate } = require("./backend/migrations");
 const { createSessionAuth } = require("./backend/session-auth");
+const { createBackupService } = require("./backend/backup-service");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -238,6 +239,10 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     if(result.applied)broadcast({type:"FACTION_PULSE",result});
     res.json({success:true,...result});
   });
+  const backups=process.env.MOONVEIL_BACKUP_DIR
+    ?createBackupService(db,{directory:process.env.MOONVEIL_BACKUP_DIR,
+       retain:Number(process.env.MOONVEIL_BACKUP_RETAIN||14)}):null;
+  if(backups)backups.start();
   let job;
   if(schedule) {
     const cron=require("node-cron");
@@ -245,7 +250,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   }
   // Loopback only by default. Reverse proxies must supply their own security.
   server.listen(port,"127.0.0.1",()=>console.log("Moonveil local server on http://127.0.0.1:"+port));
-  return {app,server,db,wss,close:()=>{if(job)job.stop();wss.close();server.close(()=>db.close());}};
+  return {app,server,db,wss,backups,close:()=>{if(job)job.stop();backups?.stop();wss.close();server.close(()=>db.close());}};
 }
 if(require.main===module)startMoonveilServer({schedule:process.env.MOONVEIL_ENABLE_CRON==="1"});
 module.exports={startMoonveilServer};
