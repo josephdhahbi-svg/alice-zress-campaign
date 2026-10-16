@@ -69,3 +69,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - **IMPORTANT:** attack resolver is NOT yet wired to authenticated API or server-generated dice; it accepts a supplied rawRoll for pure deterministic unit testing. Critical damage dice doubling is not implemented. No combat or inventory state was changed for Alice.
 - **CI evidence pending for these commits.** Do not mark T074/T093 verified until passing CI and full acceptance review. Prior verified baseline remains 10/100.
 - Next: verify GitHub Actions, fix failures, connect attack resolver to DM-authorized combat transaction using server-generated cryptographic RNG, enforce per-turn action economy and spell slots, then return to secure quest ownership/objective/reward transaction tasks.
+
+## 2026-10-16 — Server-rolled attack integration
+- `backend/combat-engine.js` now accepts `ATTACK` actions with bounded DM-adjudicated attackBonus, armorClass, damageCount (1–10), damageSides (2–100), damageBonus. Server uses `node:crypto.randomInt` for d20 and damage dice; natural 20 doubles damage dice; all results are stored in the same SQLite transaction as HP and action ledger. One ATTACK per initiative turn, enforced by durable `vtt_combat_turn_usage` unique key. Idempotent retries return prior results without rerolling. Commits `53e4356c66730783c234712a841ef2ac4334060b`, `bedff17ce06a4fb45c419dbfe099c136a5d119f5`.
+- `server.js` passes attack parameters to DM-authenticated combat engine, commit `21e668fd01bdfd2d956e159ab9c29231f6ed9c80`. No client-supplied rawRoll accepted.
+- `backend/combat-attack.integration.test.js` commit `6b1b9ff388dd1f23a394e2cb6ed443b856ccb755` tests critical dice, bounded HP, action exhaustion, replay without reroll, invalid input and RNG rollback.
+- **Pending:** GitHub Actions CI outcome for integration test commit. No completion count increase until verification.
+- Limitations: DM enters AC and bonuses (not yet derived from trusted character sheets); no player-controlled attack API, spell slots, bonus actions, reactions or condition effects. Do not mark T074 complete.
