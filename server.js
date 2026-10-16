@@ -31,6 +31,7 @@ const { listPlanarWeatherHazards, previewPlanarWeatherHazard } = require("./back
 const { listFuturePlanarHoldings, previewFuturePlanarHolding } = require("./backend/future-planar-holdings");
 const { listEpicQuestCandidates, previewEpicQuestCandidate } = require("./backend/epic-quest-candidates");
 const { listLichdomRitualVariants, previewLichdomRitualVariant } = require("./backend/lichdom-ritual-variants");
+const { getEpicQuestTemplate } = require("./backend/epic-quest-templates");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -155,6 +156,26 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const plan=planTimeSpaceJourney(req.body||{});
     return res.status(plan.reason==="INVALID_DR_DATE"||plan.reason==="UNKNOWN_LOCATION"||plan.reason==="UNKNOWN_TRAVEL_METHOD"?400:200)
       .json({success:true,...plan});
+  });
+  // Explicit DM planning step: register a candidate's objectives in the existing evidence ledger.
+  app.get("/api/campaigns/:campaignId/world/epic-quest-candidates/:questId/template",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const template=getEpicQuestTemplate(req.params.questId);
+    return template?res.json({success:true,template,mode:"PLANNING_ONLY"}):res.status(404).json({success:false,error:"NOT_FOUND"});
+  });
+  app.post("/api/campaigns/:campaignId/world/epic-quest-candidates/:questId/register-template",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")
+      return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    const template=getEpicQuestTemplate(req.params.questId);
+    if(!template)return res.status(404).json({success:false,error:"NOT_FOUND"});
+    if(!template.registrationAllowed)return res.status(409).json({success:false,error:"FUTURE_QUEST_LOCKED"});
+    try{
+      const result=questEvidence.registerQuest({campaignId,questId:req.params.questId,actorId,requiredObjectiveIds:template.requiredObjectiveIds});
+      return res.status(result.duplicate?200:201).json({success:true,...result,questId:req.params.questId,requiredObjectiveIds:template.requiredObjectiveIds,approved:false,rewards:[],reputationGranted:0});
+    }catch(error){return res.status(error instanceof TypeError?400:409).json({success:false,error:error instanceof TypeError?"INVALID_INPUT":"QUEST_DEFINITION_CONFLICT"});}
   });
   // Proposed quest and ritual LEGOs are inspectable but cannot grant progression.
   app.get("/api/campaigns/:campaignId/world/epic-quest-candidates",(req,res)=>{
