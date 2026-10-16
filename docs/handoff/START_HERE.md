@@ -309,3 +309,8 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Actual Gemini backend paths such as `backend/db/database.js`, `backend/services/patchApplicationService.js`, and `backend/services/ledgerWriter.js` were checked and returned NOT_FOUND on the target branch. Thus no real patch ledger/concurrency implementation was available to integrate; continue treating proposed validators as design-time only.
 - `data/transport_geography_research_queue_v1.json` exists but location verification remains pending; no source-attributed Copilot geography delivery was provided in this turn.
 - Existing CI run `38831869675` passed for `9ebdc3b`; run `38831898813` passed for `b23e05e`. No new tests were executed locally; rely on GitHub Actions once the current run completes.
+
+## Directive 21 — causal-chain validator correction (2026-10-16)
+- GitHub Actions runs `38832827842` and `38832810466` failed at registry validation because `data/proposed_cosmic_to_u01_causal_chain_v1.json` was not registered as an object document. Logs confirmed the exact error: `expected list of entity records (register new registry explicitly)`.
+- `7cc2e59` registers the proposed causal-chain document with `scripts/validate.py` and checks that it remains `PROPOSED_CAUSAL_CHAIN_READ_ONLY`, `state_effect: none`, and uses an allowed canon status.
+- New CI runs `38832901088` and `38832901124` are queued; await results before declaring the fix verified.
