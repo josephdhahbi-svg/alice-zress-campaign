@@ -161,3 +161,12 @@ The first batch creates structured "Lego" records rather than only brainstorming
 - `.github/workflows/validate.yml` now runs this test after the validator and deterministic encounter simulation.
 - GitHub Actions run `38836895815` reported success for all three test steps: metadata validation, encounter simulation, and Book 1 regression checks. The overall GitHub Actions workflow subsequently completed successfully.
 - Manual browser testing, mobile/keyboard QA, and save/export/import verification remain open.
+
+
+## Character and art asset wiring
+- `data/scenes.json` now links the opening scene to character ID `alice-zress`.
+- `scripts/validate.py` now requires scene `character_id` references to resolve to `data/characters.json` and validates the art manifest structure and unique asset IDs.
+- `data/assets.json` registers seven generated art concepts with planned repository paths and explicit local-only status.
+- Art source files currently exist in the generated working-session asset folder, not yet in the GitHub repository. Their checkerboard background is baked in; background removal is required before using them as transparent tokens/overlays.
+- `scripts/test_book1.py` now checks Alice linkage, seven unique asset records, and honest asset availability/transparency status.
+- Manual browser QA and actual image-file commit/integration remain outstanding.
