@@ -9,7 +9,7 @@ function validateArt(manifest,base=root){
   if(!asset||typeof asset.id!=="string"||!/^[A-Z]+[0-9]{3}$/.test(asset.id)){errors.push("Invalid asset ID");continue;}
   if(seen.has(asset.id))errors.push(asset.id+": duplicate ID");seen.add(asset.id);
   if(!["pending","ready"].includes(asset.status))errors.push(asset.id+": invalid status");
-  if(typeof asset.path!=="string"||!/^assets\/[a-z0-9_/-]+\.png$/.test(asset.path)||asset.path.includes("..")){errors.push(asset.id+": unsafe path");continue;}
+  if(typeof asset.path!=="string"||!/^assets\/[A-Za-z0-9_/-]+\.png$/.test(asset.path)||asset.path.includes("..")){errors.push(asset.id+": unsafe path");continue;}
   const full=path.resolve(base,asset.path);
   if(!full.startsWith(path.resolve(base)+path.sep)){errors.push(asset.id+": path escape");continue;}
   const exists=fs.existsSync(full);
