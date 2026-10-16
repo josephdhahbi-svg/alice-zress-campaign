@@ -20,3 +20,25 @@ test("return visits show newly unlocked actions without moving the character",()
  assert.equal(later.timelineChanged,false);
  assert.deepEqual(later.rewards,[]);
 });
+
+test("hidden discoveries emerge on revisits only after verified quest gates",()=>{
+ const first=previewAtlasVisit("pit_ghaunadaur");
+ assert.ok(first.hiddenDiscoveries.every(x=>x.visibility==="HIDDEN"&&x.name===null));
+ const second=previewAtlasVisit("pit_ghaunadaur",{era:"REVISIT",visitSequence:2});
+ assert.equal(second.hiddenDiscoveries[0].visibility,"HINT_ONLY");
+ assert.equal(second.hiddenDiscoveries[0].name,null);
+ const unlocked=previewAtlasVisit("pit_ghaunadaur",{era:"REVISIT",visitSequence:2,availableFlags:["QUEST_ITEM_VERIFIED"]});
+ assert.equal(unlocked.hiddenDiscoveries[0].visibility,"REVEALED");
+ assert.equal(unlocked.hiddenDiscoveries[0].collectible,false);
+ assert.equal(unlocked.hiddenDiscoveries[0].claimed,false);
+ assert.equal(unlocked.worldChanged,false);
+ const later=previewAtlasVisit("pit_ghaunadaur",{era:"LATER_ERA",level:15,visitSequence:3,availableFlags:["DIALOGUE_UNLOCKED","SPELL_KNOWN_VERIFIED"]});
+ assert.equal(later.hiddenDiscoveries[1].visibility,"REVEALED");
+});
+test("every map contains an unclaimed hidden discovery",()=>{
+ for(const map of listAtlasMaps()){
+  const result=previewAtlasVisit(map.id);
+  assert.ok(result.hiddenDiscoveries.length>0);
+  assert.ok(result.hiddenDiscoveries.every(x=>x.dmApprovalRequired&&!x.claimed));
+ }
+});
