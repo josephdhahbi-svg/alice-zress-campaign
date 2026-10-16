@@ -199,3 +199,10 @@ Updated:
 | 078 Reliable synchronization | TODO | localStorage only; no server sync. |
 | 081 Automated data checks | PARTIAL | CI includes validator, encounter simulation, Book 1 regression, and Living World regression checks. |
 | 086 UI tests | PARTIAL | Static regression tests exist; no real-browser automation/manual QA yet. |
+
+
+## Update — 100-task Living World work order
+- Created `docs/living-world-100-task-build-order.md` with exactly 100 numbered tasks across eight phases.
+- The work order prioritizes manual browser QA, strict save-state contracts, canonical character/scene/asset references, realistic asset processing and commit, persistent scene consequences, living-world simulation, multiplayer/backend security, and release governance.
+- The 100 tasks are planned work, not a claim that the tasks are already complete.
+- Next execution step: Task 001 — manually open and test `game/living-world.html` in a real browser.
