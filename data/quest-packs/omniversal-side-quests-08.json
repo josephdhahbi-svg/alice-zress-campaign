@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_8",
+  "setting": "Sigil",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_071",
+      "title": "The Door with No Address",
+      "giver": "Mell the locksmith",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 22,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Mell the locksmith needs adventurers: identify an unregistered portal.",
+      "objectives": [
+        "Meet Mell the locksmith and verify the request",
+        "Identify an unregistered portal",
+        "Investigate the complication: The key is an ordinary apology",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The key is an ordinary apology",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_072",
+      "title": "The Missing Translation",
+      "giver": "Zed the interpreter",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 22,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Zed the interpreter needs adventurers: recover treaty notes.",
+      "objectives": [
+        "Meet Zed the interpreter and verify the request",
+        "Recover treaty notes",
+        "Investigate the complication: The notes contain an intentional omission",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The notes contain an intentional omission",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_073",
+      "title": "The Market of Lost Hours",
+      "giver": "Vori the clock merchant",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 22,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Vori the clock merchant needs adventurers: return stolen time to buyers.",
+      "objectives": [
+        "Meet Vori the clock merchant and verify the request",
+        "Return stolen time to buyers",
+        "Investigate the complication: One buyer refuses to remember the past",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "One buyer refuses to remember the past",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_074",
+      "title": "The Modron's Holiday",
+      "giver": "Unit Seven the modron",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 22,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Unit Seven the modron needs adventurers: find a missing work unit.",
+      "objectives": [
+        "Meet Unit Seven the modron and verify the request",
+        "Find a missing work unit",
+        "Investigate the complication: The unit is studying friendship",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The unit is studying friendship",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_075",
+      "title": "The Witness Exchange",
+      "giver": "Aela the advocate",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 23,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Aela the advocate needs adventurers: protect witnesses from a faction dispute.",
+      "objectives": [
+        "Meet Aela the advocate and verify the request",
+        "Protect witnesses from a faction dispute",
+        "Investigate the complication: Both witnesses tell incomplete truths",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Both witnesses tell incomplete truths",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_076",
+      "title": "The Broken Portal Sign",
+      "giver": "Renn the sign painter",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 23,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Renn the sign painter needs adventurers: repair misleading portal signs.",
+      "objectives": [
+        "Meet Renn the sign painter and verify the request",
+        "Repair misleading portal signs",
+        "Investigate the complication: Someone redirected refugees into danger",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Someone redirected refugees into danger",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_077",
+      "title": "The Three Keys",
+      "giver": "Loma the key broker",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 23,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Loma the key broker needs adventurers: identify the correct gate key.",
+      "objectives": [
+        "Meet Loma the key broker and verify the request",
+        "Identify the correct gate key",
+        "Investigate the complication: Two keys open decoy doors",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Two keys open decoy doors",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_078",
+      "title": "The Paper Embassy",
+      "giver": "Neri the clerk",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 24,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Neri the clerk needs adventurers: recover a vanished embassy charter.",
+      "objectives": [
+        "Meet Neri the clerk and verify the request",
+        "Recover a vanished embassy charter",
+        "Investigate the complication: The charter was folded into a paper bird",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The charter was folded into a paper bird",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_079",
+      "title": "The Lanterns of Concord",
+      "giver": "Pava the peace envoy",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 24,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Pava the peace envoy needs adventurers: keep a negotiation hall neutral.",
+      "objectives": [
+        "Meet Pava the peace envoy and verify the request",
+        "Keep a negotiation hall neutral",
+        "Investigate the complication: One lantern records every lie",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "One lantern records every lie",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_080",
+      "title": "The Street That Moved",
+      "giver": "Hess the city guide",
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 24,
+      "trilogy": 8,
+      "levelRange": [
+        23,
+        28
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Hess the city guide needs adventurers: find a displaced street.",
+      "objectives": [
+        "Meet Hess the city guide and verify the request",
+        "Find a displaced street",
+        "Investigate the complication: Its residents voted to relocate it",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its residents voted to relocate it",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}
