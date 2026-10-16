@@ -1,0 +1,135 @@
+{
+  "schema": "moonveil.historical-cameo-gates.v1",
+  "status": "PENDING_PRIMARY_SOURCE_REVIEW",
+  "cameos": [
+    {
+      "id": "qilue_veladorn",
+      "name": "Qilué Veladorn",
+      "region": "Underdark",
+      "place": "Promenade of the Dark Maiden",
+      "era": "1490s DR",
+      "state": "WEAVEGHOST_REQUIRES_SOURCE_VERIFICATION",
+      "allowedModes": [
+        "WEAVEGHOST_VISION"
+      ],
+      "block": [
+        "ORDINARY_LIVING_APPEARANCE"
+      ],
+      "dateStatus": "REVIEW_REQUIRED",
+      "note": "Do not present as ordinary living leader after 1379 DR."
+    },
+    {
+      "id": "trelasarra_zuind",
+      "name": "Trelasarra Zuind",
+      "region": "Underdark",
+      "place": "Promenade of the Dark Maiden",
+      "era": "1490s DR",
+      "state": "LIVING_LEADER_REQUIRES_SOURCE_VERIFICATION",
+      "allowedModes": [
+        "PRIESTESS_MEETING"
+      ],
+      "block": [
+        "EARLIER_UNVERIFIED_ERAS"
+      ],
+      "dateStatus": "REVIEW_REQUIRED",
+      "note": "Small restored community; check exact date and temple state."
+    },
+    {
+      "id": "drizzt_dourden",
+      "name": "Drizzt Do'Urden",
+      "region": "Sword Coast",
+      "place": "UNVERIFIED",
+      "era": "UNVERIFIED",
+      "state": "UNKNOWN_AT_SELECTED_DATE",
+      "allowedModes": [
+        "RUMOR_ONLY"
+      ],
+      "block": [
+        "PHYSICAL_CAMEO_WITHOUT_VERIFIED_DATE_AND_PLACE"
+      ],
+      "dateStatus": "UNVERIFIED",
+      "note": "Confirm historical location and timeline before any personal appearance."
+    },
+    {
+      "id": "elminster",
+      "name": "Elminster Aumar",
+      "region": "Sword Coast",
+      "place": "UNVERIFIED",
+      "era": "UNVERIFIED",
+      "state": "UNKNOWN_AT_SELECTED_DATE",
+      "allowedModes": [
+        "RUMOR_ONLY"
+      ],
+      "block": [
+        "PHYSICAL_CAMEO_WITHOUT_VERIFIED_DATE_AND_PLACE"
+      ],
+      "dateStatus": "UNVERIFIED",
+      "note": "Do not presume universal availability or unlimited intervention."
+    },
+    {
+      "id": "laezel",
+      "name": "Lae'zel",
+      "region": "Wildspace",
+      "place": "UNVERIFIED",
+      "era": "BG3_ERA_UNVERIFIED",
+      "state": "ENDING_DEPENDENT",
+      "allowedModes": [
+        "RUMOR_ONLY"
+      ],
+      "block": [
+        "PHYSICAL_CAMEO_WITHOUT_VERIFIED_BG3_OUTCOME"
+      ],
+      "dateStatus": "UNVERIFIED",
+      "note": "Verify BG3 continuity and ending before placement."
+    },
+    {
+      "id": "shadowheart",
+      "name": "Shadowheart",
+      "region": "Sword Coast",
+      "place": "UNVERIFIED",
+      "era": "BG3_ERA_UNVERIFIED",
+      "state": "ENDING_DEPENDENT",
+      "allowedModes": [
+        "RUMOR_ONLY"
+      ],
+      "block": [
+        "PHYSICAL_CAMEO_WITHOUT_VERIFIED_BG3_OUTCOME"
+      ],
+      "dateStatus": "UNVERIFIED",
+      "note": "Shar/Selûne allegiance depends on chosen game continuity."
+    },
+    {
+      "id": "karlach",
+      "name": "Karlach",
+      "region": "Avernus",
+      "place": "UNVERIFIED",
+      "era": "BG3_ERA_UNVERIFIED",
+      "state": "ENDING_DEPENDENT",
+      "allowedModes": [
+        "RUMOR_ONLY"
+      ],
+      "block": [
+        "PHYSICAL_CAMEO_WITHOUT_VERIFIED_BG3_OUTCOME"
+      ],
+      "dateStatus": "UNVERIFIED",
+      "note": "Avernus availability depends on chosen BG3 ending."
+    },
+    {
+      "id": "strahd_von_zarovich",
+      "name": "Strahd von Zarovich",
+      "region": "Barovia",
+      "place": "Castle Ravenloft",
+      "era": "DOMAIN_LOCAL_CHRONOLOGY",
+      "state": "DOMAIN_LORD",
+      "allowedModes": [
+        "OMEN_OR_RUMOR"
+      ],
+      "block": [
+        "FR_DR_DATE_ASSUMPTION",
+        "FRIENDLY_CAMEO_WITHOUT_STORY_JUSTIFICATION"
+      ],
+      "dateStatus": "DOMAIN_LOCAL_TIME_REVIEW",
+      "note": "Barovia has domain chronology; do not assign a Forgotten Realms DR year without justified conversion."
+    }
+  ]
+}
