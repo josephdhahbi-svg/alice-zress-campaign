@@ -132,6 +132,19 @@ test("local server protects APIs and persists bounded relationship updates", {ti
       body:JSON.stringify({...payload,payload:{scene:"different"}})});
     assert.equal(changedRetry.status,409);
     assert.equal((await changedRetry.json()).error,"IDEMPOTENCY_CONFLICT");
+    const logout=await fetch(base+"/api/sessions/logout",{method:"POST",headers:actorHeaders,body:"{}"});
+    assert.equal(logout.status,200);
+    const afterLogout=await fetch(base+"/api/campaigns/test-campaign/events",{headers:actorHeaders});
+    assert.equal(afterLogout.status,401);
+    const another=await fetch(base+"/api/admin/sessions",{method:"POST",headers,
+      body:JSON.stringify({actorId:"dm-1"})});
+    const anotherToken=(await another.json()).accessToken;
+    const revoked=await fetch(base+"/api/admin/sessions/revoke",{method:"POST",headers,
+      body:JSON.stringify({accessToken:anotherToken})});
+    assert.equal(revoked.status,200);
+    const afterRevoke=await fetch(base+"/api/campaigns/test-campaign/events",{
+      headers:{"Authorization":"Bearer "+anotherToken}});
+    assert.equal(afterRevoke.status,401);
     const pulse=await fetch(base+"/api/admin/world-pulse",{method:"POST",headers,body:"{}"});
     assert.equal(pulse.status,200);
     const duplicate=await fetch(base+"/api/admin/world-pulse",{method:"POST",headers,body:"{}"});
