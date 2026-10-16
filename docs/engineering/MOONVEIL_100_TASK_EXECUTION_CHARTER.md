@@ -63,8 +63,8 @@
 - [ ] T041 — Inventory current Express API and module boundaries
 - [ ] T042 — Review migration conventions and database schema
 - [x] T043 — Create durable quest and inventory migrations
-- [ ] T044 — Enable and verify actual SQLite WAL where suitable
-- [ ] T045 — Add transaction rollback and restart recovery tests
+- [x] T044 — Enable and verify actual SQLite WAL where suitable
+- [x] T045 — Add transaction rollback and restart recovery tests
 - [x] T046 — Introduce character campaign foreign-key relationships
 - [ ] T047 — Persist positions with plane/world coordinate frames
 - [ ] T048 — Add spatial grid or indexed proximity strategy
@@ -159,3 +159,9 @@ T005, T008 and T010: baseline written and committed in docs/campaign/ALICE_CANON
 - **T092 VERIFIED DONE (API integration tests for auth and state):** `backend/living-world-api.integration.test.js` and `backend/combat-api.integration.test.js` test signed actor authorization, player/outsider denial, cross-campaign isolation, idempotent actions, and state reads. Omniversal verification run `38920078593` passed; Validate campaign records run `38920078591` passed after combat integration test commit `1d31db1e6d1d4aa4c3abd620a9f63a0896a16d2f`.
 - **Combat v1 implementation in progress:** `backend/combat-engine.js` commit `169974456b14a7893068dd8f13088118935349e1`; unit tests commit `03abd19c853c4a05e741401f66aa3fdfc277ab82`; server routes commit `42b08e62514b85647d4b2384e1e47813afb393ad`. T074 remains open until spell slots and full combat-resource rules are implemented.
 - **Verified total: 10/100**. No production deployment or in-game rewards.
+
+## 2026-10-16 — WAL, rollback and restart evidence
+- **T044 VERIFIED DONE:** `server.js` sets SQLite `journal_mode=WAL`, `foreign_keys=ON`, and `busy_timeout`. `backend/combat-persistence.integration.test.js` asserts actual WAL mode from a file-backed database. Omniversal CI run `38920294004` and Validate CI run `38920294219` passed.
+- **T045 VERIFIED DONE:** `backend/combat-engine.test.js` checks invalid actions/participants leave no state mutations; `backend/combat-persistence.integration.test.js` verifies file-backed restart recovery and duplicate replay; `backend/migrations-v3.test.js` verifies migration persistence after reopening. CI run `38920294004` passed. This does not yet establish simultaneous-writer stress tests for T093.
+- Attack resolution modules `backend/combat-attack-rules.js` and `backend/combat-attack-rules.test.js` passed Omniversal run `38920328010` and Validate run `38920328420`. Resolver remains pure and unintegrated; no automatic rewards.
+- **Verified total: 12/100.** T074 and T093 remain open pending full acceptance.
