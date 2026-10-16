@@ -4,7 +4,7 @@ const byId=id=>document.getElementById(id);
 let session=null,rooms=[],active=null,selectedChoice=null,sessionEpoch=0;
 const labels=["Lawful Good","Neutral Good","Chaotic Good","Utility","Action"];
 function status(message){byId("connection-status").textContent=message}
-function reset(){sessionEpoch++;session=null;rooms=[];active=null;selectedChoice=null;byId("submit-choice").disabled=true;byId("refresh-journal").disabled=true;byId("dm-refresh").disabled=true;byId("maps-refresh").disabled=true;byId("maps-list").replaceChildren();byId("maps-status").textContent="Connect to browse maps.";byId("dm-queue").replaceChildren();byId("dm-status").textContent="Connect with a DM session to review.";byId("ai-guide-send").disabled=true;byId("ai-guide-reply").textContent="";byId("ai-guide-status").textContent="Connect to a campaign to ask the AI guide.";byId("journal-entries").replaceChildren();byId("token").value="";byId("rooms").replaceChildren();byId("choices").replaceChildren();byId("room-title").textContent="Choose a room";byId("room-description").textContent="Room choices are previews only.";byId("choice-status").textContent="No choice submitted."}
+function reset(){sessionEpoch++;session=null;rooms=[];active=null;selectedChoice=null;byId("submit-choice").disabled=true;byId("refresh-journal").disabled=true;byId("dm-refresh").disabled=true;byId("maps-refresh").disabled=true;byId("discoveries-refresh").disabled=true;byId("discoveries-list").replaceChildren();byId("discoveries-status").textContent="Connect to view discoveries.";byId("maps-list").replaceChildren();byId("maps-status").textContent="Connect to browse maps.";byId("dm-queue").replaceChildren();byId("dm-status").textContent="Connect with a DM session to review.";byId("ai-guide-send").disabled=true;byId("ai-guide-reply").textContent="";byId("ai-guide-status").textContent="Connect to a campaign to ask the AI guide.";byId("journal-entries").replaceChildren();byId("token").value="";byId("rooms").replaceChildren();byId("choices").replaceChildren();byId("room-title").textContent="Choose a room";byId("room-description").textContent="Room choices are previews only.";byId("choice-status").textContent="No choice submitted."}
 async function api(path,options={}){
  if(!session)throw Error("Connect first");
  const response=await fetch("/api/campaigns/"+encodeURIComponent(session.campaign)+"/world/alice-demiplane/"+path,{
@@ -28,7 +28,7 @@ byId("connect").addEventListener("submit",async event=>{
  try{const data=await api("rooms");if(!Array.isArray(data.rooms))throw Error("Invalid room response");
  rooms=data.rooms;const root=byId("rooms");root.replaceChildren();
  rooms.forEach(room=>{const button=document.createElement("button");button.type="button";button.className="mv-choice";button.textContent=room.name+" · "+room.status;button.addEventListener("click",()=>showRoom(room));root.append(button)});
- status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;byId("dm-refresh").disabled=false;byId("maps-refresh").disabled=false;byId("quest-chains-refresh").disabled=false;byId("scene-actions-refresh").disabled=false;await refreshAiStatus();if(rooms.length)showRoom(rooms[0]);await refreshJournal();
+ status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;byId("dm-refresh").disabled=false;byId("maps-refresh").disabled=false;byId("discoveries-refresh").disabled=false;byId("quest-chains-refresh").disabled=false;byId("scene-actions-refresh").disabled=false;await refreshAiStatus();if(rooms.length)showRoom(rooms[0]);await refreshJournal();
  }catch(error){reset();status(error.message)}
 });
 byId("disconnect").addEventListener("click",()=>{reset();status("Disconnected. Session cleared from this page.")});
@@ -271,3 +271,24 @@ async function refreshChronologicalMaps(){
  }catch(error){if(epoch===sessionEpoch)byId("maps-status").textContent=error.message}
 }
 byId("maps-refresh").addEventListener("click",refreshChronologicalMaps);
+
+async function refreshDiscoveryLedger(){
+ if(!session)return;
+ const current=session,epoch=sessionEpoch,root=byId("discoveries-list");
+ root.replaceChildren();byId("discoveries-status").textContent="Loading recorded discoveries…";
+ try{
+  const response=await fetch("/api/campaigns/"+encodeURIComponent(current.campaign)+"/maps/discoveries",{headers:{Authorization:"Bearer "+current.token},cache:"no-store",credentials:"omit"});
+  const data=await response.json();
+  if(epoch!==sessionEpoch)return;
+  if(!response.ok||!Array.isArray(data.entries))throw Error(data.error||"Discovery history unavailable");
+  for(const entry of data.entries){
+   const card=document.createElement("article");card.className="mv-journal-entry";
+   const heading=document.createElement("h3");heading.textContent=entry.status+" · "+entry.map_id+" · "+entry.discovery_id;
+   const meta=document.createElement("p");meta.textContent=entry.era+" · Visit "+entry.visit_sequence+" · "+(entry.dr_date||"DR unverified")+" · "+entry.local_time;
+   const note=document.createElement("p");note.textContent=entry.note;
+   card.append(heading,meta,note);root.append(card);
+  }
+  byId("discoveries-status").textContent=data.entries.length+" recorded discovery notes. No items automatically granted.";
+ }catch(error){if(epoch===sessionEpoch)byId("discoveries-status").textContent=error.message}
+}
+byId("discoveries-refresh").addEventListener("click",refreshDiscoveryLedger);
