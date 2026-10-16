@@ -226,3 +226,8 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Signed read-only member endpoints in `server.js` commit `32f31e62a7f45c54ef256d2f53b23377b2851d4d`; API integration tests commit `449851e5177e077d9619643f1b2b6c099a6013e1`. New CI pending.
 - No ascension mutations, grants, player-supplied proof acceptance, or character progression. Content is HOMEBREW_PROPOSAL; chronology unresolved.
 - Charter still 18/100 verified, 82 open. T085, T089, T093 and narrative/canon tasks require acceptance review rather than speculative closure.
+
+### Ascension read API CI verified
+- Initial Omniversal run `38927506368` failed because test expected JSON from Express's HTML 404; production route was correctly absent. Test fixed in `f1856e0eada8eb559a6bc8d04f0b71615da190bc`.
+- Omniversal `38927610194`: SUCCESS. Validate campaign records `38927610252`: SUCCESS.
+- Charter **18/100 verified, 82 open**; no new checklist closure for read-only catalog. Future: reputation and dialogue predicates, server-authoritative quest integration, and explicit DM approval of rituals; review T085/T089/T093 acceptance with tests.
