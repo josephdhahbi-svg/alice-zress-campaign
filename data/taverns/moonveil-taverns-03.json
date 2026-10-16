@@ -1,0 +1,890 @@
+{
+  "schema": "moonveil.tavern-pack.v1",
+  "region": "Dragon Coast",
+  "firstBook": 7,
+  "lastBook": 9,
+  "count": 10,
+  "status": "AUTHORED_DRAFT",
+  "taverns": [
+    {
+      "id": "mv_tavern_021",
+      "name": "The Gilded Scale",
+      "book": 7,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_021",
+      "kind": "roadside inn",
+      "proprietor": {
+        "name": "Cera Ember",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Gilded Scale is a roadside inn serving travelers in Dragon Coast. Warm stew and private booths.",
+      "signatureService": "Warm stew and private booths",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_021",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_121",
+        "wave3QuestId": "mv_side_221",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Gilded Scale. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_022",
+      "name": "The Hatchling's Nest",
+      "book": 8,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_022",
+      "kind": "guildhouse tavern",
+      "proprietor": {
+        "name": "Bran Hearth",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Hatchling's Nest is a guildhouse tavern serving travelers in Dragon Coast. Fresh bread and herbal tea.",
+      "signatureService": "Fresh bread and herbal tea",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_022",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_122",
+        "wave3QuestId": "mv_side_222",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Hatchling's Nest. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_023",
+      "name": "The Sapphire Keg",
+      "book": 9,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_023",
+      "kind": "refuge canteen",
+      "proprietor": {
+        "name": "Miri Kettle",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Sapphire Keg is a refuge canteen serving travelers in Dragon Coast. Medicinal broth and quiet alcoves.",
+      "signatureService": "Medicinal broth and quiet alcoves",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_023",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_123",
+        "wave3QuestId": "mv_side_223",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Sapphire Keg. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_024",
+      "name": "The Treaty Cup",
+      "book": 7,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_024",
+      "kind": "scholars' hostel",
+      "proprietor": {
+        "name": "Davin Moss",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Treaty Cup is a scholars' hostel serving travelers in Dragon Coast. Map exchange and research table.",
+      "signatureService": "Map exchange and research table",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_024",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_124",
+        "wave3QuestId": "mv_side_224",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Treaty Cup. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_025",
+      "name": "The Embered Orchard",
+      "book": 8,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_025",
+      "kind": "crafting lodge",
+      "proprietor": {
+        "name": "Rhea Stone",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Embered Orchard is a crafting lodge serving travelers in Dragon Coast. Shared forge and repair benches.",
+      "signatureService": "Shared forge and repair benches",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_025",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_125",
+        "wave3QuestId": "mv_side_225",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Embered Orchard. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_026",
+      "name": "The Dragon's Apron",
+      "book": 9,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_026",
+      "kind": "pilgrim rest",
+      "proprietor": {
+        "name": "Olen Wick",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Dragon's Apron is a pilgrim rest serving travelers in Dragon Coast. Simple meals and shrine alcove.",
+      "signatureService": "Simple meals and shrine alcove",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_026",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_126",
+        "wave3QuestId": "mv_side_226",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Dragon's Apron. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_027",
+      "name": "The Summit Lantern",
+      "book": 7,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_027",
+      "kind": "caravanserai",
+      "proprietor": {
+        "name": "Talia Reed",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Summit Lantern is a caravanserai serving travelers in Dragon Coast. Pack animal shelter and supply crates.",
+      "signatureService": "Pack animal shelter and supply crates",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_027",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_127",
+        "wave3QuestId": "mv_side_227",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Summit Lantern. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_028",
+      "name": "The Seven Talons",
+      "book": 8,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_028",
+      "kind": "river or dock inn",
+      "proprietor": {
+        "name": "Yara Copper",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Seven Talons is a river or dock inn serving travelers in Dragon Coast. Cargo lockers and traveler noticeboard.",
+      "signatureService": "Cargo lockers and traveler noticeboard",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_028",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_128",
+        "wave3QuestId": "mv_side_228",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Seven Talons. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_029",
+      "name": "The Glass Egg",
+      "book": 9,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_029",
+      "kind": "hidden safehouse",
+      "proprietor": {
+        "name": "Heska Vale",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Glass Egg is a hidden safehouse serving travelers in Dragon Coast. Discreet entrance and warded meeting room.",
+      "signatureService": "Discreet entrance and warded meeting room",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_029",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_129",
+        "wave3QuestId": "mv_side_229",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Glass Egg. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_030",
+      "name": "The Banner and Quill",
+      "book": 7,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_030",
+      "kind": "community hearth",
+      "proprietor": {
+        "name": "Korin Dawn",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Banner and Quill is a community hearth serving travelers in Dragon Coast. Community kitchen and rescue bulletin.",
+      "signatureService": "Community kitchen and rescue bulletin",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_030",
+        "chainId": "mv_chain_03",
+        "wave2QuestId": "mv_side_130",
+        "wave3QuestId": "mv_side_230",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Banner and Quill. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Dragon Coast roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    }
+  ]
+}
