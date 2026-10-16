@@ -2,6 +2,8 @@
 /** Campaign-scoped combat state. Only a DM may create or resolve encounters.
  * No automatic loot, levels, spells or relics are awarded.
  */
+const {randomInt}=require("node:crypto");
+const {resolveAttack}=require("./combat-attack-rules");
 const ID=/^[a-zA-Z0-9:_-]{1,100}$/;
 const validId=x=>typeof x==="string"&&ID.test(x);
 const integer=(x,min,max)=>Number.isSafeInteger(x)&&x>=min&&x<=max;
@@ -22,6 +24,12 @@ CREATE TABLE IF NOT EXISTS vtt_combat_combatants (
  FOREIGN KEY(campaign_id,encounter_id) REFERENCES vtt_combat_encounters(campaign_id,encounter_id) ON DELETE CASCADE,
  FOREIGN KEY(campaign_id,owner_actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
 );
+CREATE TABLE IF NOT EXISTS vtt_combat_turn_usage (
+ campaign_id TEXT NOT NULL, encounter_id TEXT NOT NULL, round INTEGER NOT NULL,
+ turn_index INTEGER NOT NULL, action_kind TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,encounter_id,round,turn_index,action_kind),
+ FOREIGN KEY(campaign_id,encounter_id) REFERENCES vtt_combat_encounters(campaign_id,encounter_id) ON DELETE CASCADE
+);
 CREATE TABLE IF NOT EXISTS vtt_combat_actions (
  campaign_id TEXT NOT NULL, encounter_id TEXT NOT NULL, action_id TEXT NOT NULL,
  actor_id TEXT NOT NULL, action_json TEXT NOT NULL, result_json TEXT NOT NULL,
@@ -30,7 +38,7 @@ CREATE TABLE IF NOT EXISTS vtt_combat_actions (
  FOREIGN KEY(campaign_id,encounter_id) REFERENCES vtt_combat_encounters(campaign_id,encounter_id) ON DELETE CASCADE
 );
 `;
-function createCombatEngine(db){
+function createCombatEngine(db,{rollDie=(sides)=>randomInt(1,sides+1)}={}){
  if(!db||typeof db.transaction!=="function")throw new TypeError("SQLite database required");
  db.exec(SCHEMA);
  const membership=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?");
@@ -59,16 +67,30 @@ function createCombatEngine(db){
   for(const c of combatants)insert.run(campaignId,encounterId,c.combatantId,c.ownerActorId??null,c.initiative,c.hp,c.maxHp);
   return get(campaignId,encounterId);
  });
- const act=db.transaction(({campaignId,encounterId,actorId,actionId,kind,targetId,amount,condition})=>{
+ const act=db.transaction(({campaignId,encounterId,actorId,actionId,kind,targetId,amount,condition,attackBonus,armorClass,damageCount,damageSides,damageBonus})=>{
   authorize(campaignId,actorId);
-  if(!validId(encounterId)||!validId(actionId)||!["DAMAGE","HEAL","ADD_CONDITION","REMOVE_CONDITION","END_TURN","END_ENCOUNTER"].includes(kind))throw new TypeError("INVALID_ACTION");
+  if(!validId(encounterId)||!validId(actionId)||!["DAMAGE","HEAL","ADD_CONDITION","REMOVE_CONDITION","END_TURN","END_ENCOUNTER","ATTACK"].includes(kind))throw new TypeError("INVALID_ACTION");
   const prior=db.prepare("SELECT action_json,result_json FROM vtt_combat_actions WHERE campaign_id=? AND encounter_id=? AND action_id=?").get(campaignId,encounterId,actionId);
-  const request=JSON.stringify({kind,targetId:targetId??null,amount:amount??null,condition:condition??null});
+  const request=JSON.stringify({kind,targetId:targetId??null,amount:amount??null,condition:condition??null,attackBonus:attackBonus??null,armorClass:armorClass??null,damageCount:damageCount??null,damageSides:damageSides??null,damageBonus:damageBonus??null});
   if(prior){if(prior.action_json!==request)throw new Error("IDEMPOTENCY_CONFLICT");return {...JSON.parse(prior.result_json),duplicate:true};}
   const encounter=db.prepare("SELECT * FROM vtt_combat_encounters WHERE campaign_id=? AND encounter_id=?").get(campaignId,encounterId);
   if(!encounter||encounter.status!=="ACTIVE")throw new Error("ENCOUNTER_NOT_ACTIVE");
   const members=order(campaignId,encounterId);
-  if(kind==="DAMAGE"||kind==="HEAL"||kind==="ADD_CONDITION"||kind==="REMOVE_CONDITION"){
+  let attackResult=null;
+  if(kind==="ATTACK"){
+   if(!validId(targetId)||!members.some(c=>c.combatant_id===targetId))throw new TypeError("INVALID_TARGET");
+   if(!integer(attackBonus,-20,40)||!integer(armorClass,1,40)||!integer(damageCount,1,20)||!integer(damageSides,2,100)||!integer(damageBonus,-20,40))throw new TypeError("INVALID_ATTACK");
+   if(db.prepare("SELECT 1 FROM vtt_combat_turn_usage WHERE campaign_id=? AND encounter_id=? AND round=? AND turn_index=? AND action_kind='ACTION'").get(campaignId,encounterId,encounter.round,encounter.turn_index))throw new Error("ACTION_ALREADY_USED");
+   const face=rollDie(20);
+   if(!integer(face,1,20))throw new TypeError("INVALID_SERVER_ROLL");
+   const critical=face===20;
+   const dice=Array.from({length:damageCount*(critical?2:1)},()=>rollDie(damageSides));
+   if(dice.some(d=>!integer(d,1,damageSides)))throw new TypeError("INVALID_SERVER_ROLL");
+   attackResult=resolveAttack({rawRoll:face,attackBonus,armorClass,damageDice:dice,damageBonus});
+   const target=members.find(c=>c.combatant_id===targetId);
+   db.prepare("UPDATE vtt_combat_combatants SET hp=? WHERE campaign_id=? AND encounter_id=? AND combatant_id=?").run(Math.max(0,target.hp-attackResult.damage),campaignId,encounterId,targetId);
+   db.prepare("INSERT INTO vtt_combat_turn_usage VALUES(?,?,?,?,?)").run(campaignId,encounterId,encounter.round,encounter.turn_index,"ACTION");
+  }else if(kind==="DAMAGE"||kind==="HEAL"||kind==="ADD_CONDITION"||kind==="REMOVE_CONDITION"){
    if(!validId(targetId))throw new TypeError("INVALID_TARGET");
    const target=members.find(c=>c.combatant_id===targetId);
    if(!target)throw new Error("UNKNOWN_TARGET");
@@ -88,7 +110,7 @@ function createCombatEngine(db){
   }else{
    db.prepare("UPDATE vtt_combat_encounters SET status='ENDED' WHERE campaign_id=? AND encounter_id=?").run(campaignId,encounterId);
   }
-  const result=get(campaignId,encounterId);
+  const result={...get(campaignId,encounterId),...(attackResult?{attack:attackResult}:{})};
   db.prepare("INSERT INTO vtt_combat_actions(campaign_id,encounter_id,action_id,actor_id,action_json,result_json,created_at) VALUES(?,?,?,?,?,?,?)").run(campaignId,encounterId,actionId,actorId,request,JSON.stringify(result),new Date().toISOString());
   return {...result,duplicate:false};
  });
