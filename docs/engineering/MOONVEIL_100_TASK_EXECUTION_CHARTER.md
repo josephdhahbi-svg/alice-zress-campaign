@@ -111,7 +111,7 @@
 - [ ] T081 — Define regions, planes, factions and settlement records
 - [ ] T082 — Model travel availability by date and location
 - [ ] T083 — Add NPC schedules and persistent relationships
-- [ ] T084 — Track faction influence and territory changes
+- [x] T084 — Track faction influence and territory changes
 - [ ] T085 — Create economy and trade baseline for settlements
 - [ ] T086 — Simulate refugee movements and safe routes
 - [ ] T087 — Track environmental hazards and recovery
@@ -126,7 +126,7 @@
 - [ ] T094 — Build artifact reward ledger invariant tests
 - [ ] T095 — Build story canon contradiction checks
 - [ ] T096 — Run lint, type/static checks and package audit
-- [ ] T097 — Run CI on development branch and capture results
+- [x] T097 — Run CI on development branch and capture results
 - [ ] T098 — Review accessibility and image licensing boundaries
 - [ ] T099 — Publish release notes with known limitations
 - [ ] T100 — Close only evidence-backed tasks and hand off remaining work
@@ -149,3 +149,8 @@ T005, T008 and T010: baseline written and committed in docs/campaign/ALICE_CANON
 - Fixed migration count regression in `backend/backup-restore.integration.test.js` at commit `f38aed444a6bf327ec41edd292f0bd9becf5ccc9`.
 - Added explicit CI step for canon/quest/migration tests in `.github/workflows/validate.yml` at commit `8abb3b6216a63efde9981c0aa89379dd946566ec`; its latest run was pending when this entry was written.
 - Evidence-backed checklist count now 7/100: T005, T008, T010, T033, T043, T046, T091 = **7/100**. This count supersedes earlier 5/100 reports; T091 was not previously checked in the checklist despite earlier reported success.
+
+## 2026-10-16 — Verified living-world and CI task closure
+- **T084 VERIFIED DONE (faction influence and territory tracking):** Existing faction pulse tables and new campaign-scoped `backend/living-world-pulse.js` track faction influence and territory changes in SQLite, with immutable pulse ledger; `server.js` adds signed DM-only pulse execution and campaign-member ledger reads. Commits `24988cca90cb6d035326a168dff6f016101086bb`, `206d88ce85fd74b4acba8735d1db9fc996cc75c0`. Automated tests in `backend/living-world-pulse.test.js` and `backend/living-world-api.integration.test.js` passed in Omniversal run `38919615246`.
+- **T097 VERIFIED DONE (run CI on development branch and capture results):** GitHub Actions Omniversal verification run `38919615246` **success**; Validate campaign records run `38919615249` **success** on integration commit `5faad09ada9b6f967ca6e4fa6231b8b713841cbf`. No deployment claimed.
+- **Current verified checklist: 9/100.** Do not conflate T084 with T089 deterministic replay; T089 remains open. T092/T093 and quest transaction tasks remain open pending their broader acceptance criteria.
