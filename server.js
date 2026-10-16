@@ -23,6 +23,7 @@ const { planTimeSpaceJourney, listTimeSpaceEras, listTravelMethods } = require("
 const { createChronalTravelEngine } = require("./backend/chronal-travel-engine");
 const { getDialogueScene, getDialogueChoices, previewDialogueChoice } = require("./backend/dialogue-engine");
 const { listSacredAscensions, getSacredAscension, evaluateSacredAscension } = require("./backend/sacred-lich-ascensions");
+const { getAliceDemiplane, previewAliceDemiplaneAccess } = require("./backend/alice-demiplane-catalog");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -130,6 +131,13 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const plan=planTimeSpaceJourney(req.body||{});
     return res.status(plan.reason==="INVALID_DR_DATE"||plan.reason==="UNKNOWN_LOCATION"||plan.reason==="UNKNOWN_TRAVEL_METHOD"?400:200)
       .json({success:true,...plan});
+  });
+  // Campaign-scoped, read-only Rabbit Hole geography. No warp or reward action.
+  app.get("/api/campaigns/:campaignId/world/alice-demiplane",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,demiplane:getAliceDemiplane(),access:previewAliceDemiplaneAccess({})});
   });
   // Sacred lich dossiers are read-only proposals, never state-changing rewards.
   app.get("/api/campaigns/:campaignId/ascensions/sacred",(req,res)=>{
