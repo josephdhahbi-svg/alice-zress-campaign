@@ -126,8 +126,10 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     if(!id(campaignId)||!id(actorId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
     const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?").get(campaignId,actorId);
     if(!member)return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
-    const events=db.prepare("SELECT revision,event_id,actor_id,event_type,payload_json,occurred_at FROM vtt_campaign_events WHERE campaign_id=? ORDER BY revision LIMIT 1000").all(campaignId);
-    res.json({success:true,campaignId,events:events.map(e=>({...e,payload:JSON.parse(e.payload_json),payload_json:undefined}))});
+    const after=Number(req.query.after ?? 0);
+    if(!Number.isSafeInteger(after)||after<0)return res.status(400).json({success:false,error:"INVALID_CURSOR"});
+    const events=db.prepare("SELECT revision,event_id,actor_id,event_type,payload_json,occurred_at FROM vtt_campaign_events WHERE campaign_id=? AND revision>? ORDER BY revision LIMIT 100").all(campaignId,after);
+    res.json({success:true,campaignId,nextCursor:events.length?events[events.length-1].revision:after,hasMore:events.length===100,events:events.map(e=>({...e,payload:JSON.parse(e.payload_json),payload_json:undefined}))});
   });
   app.post("/api/campaigns/:campaignId/events",(req,res)=>{
     const campaignId=req.params.campaignId,actorId=req.get("X-Moonveil-Actor");
@@ -140,10 +142,10 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?").get(campaignId,actorId);
     if(!member||member.role==="OBSERVER")return res.status(403).json({success:false,error:"FORBIDDEN"});
     const append=db.transaction(()=>{
-      const prior=db.prepare("SELECT revision,event_type,payload_json FROM vtt_campaign_events WHERE campaign_id=? AND event_id=?").get(campaignId,eventId);
+      const prior=db.prepare("SELECT revision,actor_id,event_type,payload_json FROM vtt_campaign_events WHERE campaign_id=? AND event_id=?").get(campaignId,eventId);
       const encoded=JSON.stringify(payload);
       if(prior){
-        if(prior.event_type!==eventType||prior.payload_json!==encoded)return {status:409,error:"IDEMPOTENCY_CONFLICT"};
+        if(prior.actor_id!==actorId||prior.event_type!==eventType||prior.payload_json!==encoded)return {status:409,error:"IDEMPOTENCY_CONFLICT"};
         return {status:200,revision:prior.revision,duplicate:true};
       }
       const current=db.prepare("SELECT COALESCE(MAX(revision),0) AS revision FROM vtt_campaign_events WHERE campaign_id=?").get(campaignId).revision;
@@ -154,7 +156,8 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     });
     const result=append();
     if(result.error)return res.status(result.status).json({success:false,...result});
-    if(!result.duplicate)broadcast({type:"CAMPAIGN_EVENT",campaignId,revision:result.revision,eventType});
+    // No campaign events are broadcast to the global WebSocket channel.
+    // Campaign-scoped sockets require real authenticated player sessions.
     res.status(result.status).json({success:true,campaignId,...result});
   });
   app.post("/api/admin/world-pulse",(req,res)=>{
