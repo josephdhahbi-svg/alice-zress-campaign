@@ -1,0 +1,18 @@
+{
+  "name": "moonveil-vtt-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Opt-in local Moonveil VTT server prototype",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test backend/*.test.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.0.0",
+    "express": "^5.1.0",
+    "ws": "^8.18.0",
+    "node-cron": "^4.2.0"
+  },
+  "engines": {"node": ">=20"}
+}
