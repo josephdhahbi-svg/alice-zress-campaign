@@ -1,6 +1,6 @@
 # Omniversal VTT — 200-task evidence-based development program
 
-**State:** In progress. Only explicitly evidenced inspection tasks are marked passed; code changes remain unverified by runtime tests.
+**State:** In progress. Inspections and repository-file existence can be verified through GitHub; runtime behavior remains unverified until CI executes.
 
 **Execution policy:** Do not automatically run destructive operations, deploy, edit secrets, or restore production data. Execute allowlisted checks only. A status of PASSED requires test or review evidence, with commit SHA and timestamp. Do not equate an item in this document with an executable check. The current four-check runner remains separate until each task is implemented.
 
@@ -13,7 +13,7 @@
 - [ ] **001 · Foundation: Inspect package scripts.** Acceptance: Execute the named check or implementation and attach reproducible evidence; record FAILED, SKIPPED, or UNCONFIGURED when appropriate. Status: PENDING.
 - [ ] **002 · Foundation: Inventory backend modules.** Acceptance: Execute the named check or implementation and attach reproducible evidence; record FAILED, SKIPPED, or UNCONFIGURED when appropriate. Status: PENDING.
 - [ ] **003 · Foundation: Inventory current tests.** Acceptance: Execute the named check or implementation and attach reproducible evidence; record FAILED, SKIPPED, or UNCONFIGURED when appropriate. Status: PENDING.
-- [ ] **004 · Foundation: Inventory GitHub workflows.** Acceptance: Execute the named check or implementation and attach reproducible evidence; record FAILED, SKIPPED, or UNCONFIGURED when appropriate. Status: PENDING.
+- [x] **004 · Foundation: Inventory GitHub workflows.** Acceptance: GitHub path inspection. Status: PASSED (inspection only). Evidence: .github/workflows/omniversal-pipeline.yml absent on development branch; non-deploying .github/workflows/omniversal-verification.yml created in commit dc9c4968cbbf4378b0597b1cab184b3bd1251090; execution not yet confirmed.
 - [ ] **005 · Foundation: Identify existing environment variables.** Acceptance: Execute the named check or implementation and attach reproducible evidence; record FAILED, SKIPPED, or UNCONFIGURED when appropriate. Status: PENDING.
 - [ ] **006 · Foundation: Document runtime dependencies.** Acceptance: Execute the named check or implementation and attach reproducible evidence; record FAILED, SKIPPED, or UNCONFIGURED when appropriate. Status: PENDING.
 - [ ] **007 · Foundation: Document database files.** Acceptance: Execute the named check or implementation and attach reproducible evidence; record FAILED, SKIPPED, or UNCONFIGURED when appropriate. Status: PENDING.
@@ -221,3 +221,10 @@ A go/no-go decision must be based on actual test evidence, recovery validation, 
 - Runtime tests: NOT RUN. Container git clone failed due DNS resolution of github.com; no successful CI test run observed.
 - No production deployment or production database access attempted.
 - Next: establish a runnable checkout or CI, run npm test and node automation_100_tasks.js, fix failures, then expand real checks.
+
+## Continuation checkpoint — 2026-10-16
+- Added `.github/workflows/omniversal-verification.yml` on feature branch (commit `dc9c4968cbbf4378b0597b1cab184b3bd1251090`). No deployment actions included.
+- Inspected `backend/migrations.js`: two forward-only migrations, exported `MIGRATIONS`, version order verified by reading code. No runtime migration test performed.
+- Confirmed `package-lock.json` absent; CI currently uses `npm install` instead of `npm ci`.
+- No completed GitHub Actions workflow run observed for the new commit; test outcomes remain unverified.
+- Next checkpoint: run CI, inspect logs, fix any failures, add committed lockfile, and re-run.
