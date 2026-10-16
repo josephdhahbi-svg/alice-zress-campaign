@@ -183,3 +183,8 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Added `backend/world-economy-api.integration.test.js` commit `6305bc7bfa150db46937664a13fc6aadd61c61d5`. Spins up actual Express server with signed DM, member, outsider, and admin identities across two campaigns.
 - Covers DM-only commodity creation and bounded price adjustments, GET authorization, idempotent retries, stale revisions, cross-campaign isolation, audit ledger cardinality, and zero artifact grants.
 - CI pending. Charter remains 18/100, 82 open. No production economy simulation or progression claims.
+
+### Signed economy HTTP CI verified
+- Omniversal verification `38925477392`: SUCCESS.
+- Validate campaign records `38925477471`: SUCCESS.
+- No charter task closed: verified **18/100**, open **82/100**. Next: settlement trade schema, deterministic authorized market pulses, and secure artifact metadata/catalog; maintain Alice progression lock.
