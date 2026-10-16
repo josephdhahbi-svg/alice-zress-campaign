@@ -20,3 +20,14 @@ test("AI provider response is advisory, bounded and not a game command",async()=
  assert.equal(JSON.parse(sent.options.body).store,false);
  assert.equal(JSON.parse(sent.options.body).input,"What next?");
 });
+
+test("dotted model IDs work while unsafe model identifiers fail closed",async()=>{
+ const models=[];
+ const fetchImpl=async(_url,options)=>{models.push(JSON.parse(options.body).model);return {ok:true,json:async()=>({output:[{content:[{type:"output_text",text:"Advisory lore only."}]}]})};};
+ await askMoonveilAi({message:"Guide Alice",model:"gpt-4.1-mini",apiKey:"test-api-key-123",fetchImpl});
+ assert.deepEqual(models,["gpt-4.1-mini"]);
+ for(const model of ["bad model","../escape","bad\\nmodel",""]){
+  await assert.rejects(askMoonveilAi({message:"Guide Alice",model,apiKey:"test-api-key-123",fetchImpl}),{name:"TypeError",message:"INVALID_AI_CONFIGURATION"});
+ }
+ assert.equal(models.length,1);
+});
