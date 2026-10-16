@@ -29,6 +29,8 @@ const { listAliceDemiplaneRooms, getAliceDemiplaneRoom, previewAliceDemiplaneRoo
 const { createAliceExplorationJournal } = require("./backend/alice-exploration-journal");
 const { listPlanarWeatherHazards, previewPlanarWeatherHazard } = require("./backend/planar-weather-engine");
 const { listFuturePlanarHoldings, previewFuturePlanarHolding } = require("./backend/future-planar-holdings");
+const { listEpicQuestCandidates, previewEpicQuestCandidate } = require("./backend/epic-quest-candidates");
+const { listLichdomRitualVariants, previewLichdomRitualVariant } = require("./backend/lichdom-ritual-variants");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -153,6 +155,35 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const plan=planTimeSpaceJourney(req.body||{});
     return res.status(plan.reason==="INVALID_DR_DATE"||plan.reason==="UNKNOWN_LOCATION"||plan.reason==="UNKNOWN_TRAVEL_METHOD"?400:200)
       .json({success:true,...plan});
+  });
+  // Proposed quest and ritual LEGOs are inspectable but cannot grant progression.
+  app.get("/api/campaigns/:campaignId/world/epic-quest-candidates",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,quests:listEpicQuestCandidates(),mode:"READ_ONLY"});
+  });
+  app.get("/api/campaigns/:campaignId/world/epic-quest-candidates/:questId",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const preview=previewEpicQuestCandidate(req.params.questId);
+    return preview?res.json({success:true,preview}):res.status(404).json({success:false,error:"NOT_FOUND"});
+  });
+  app.get("/api/campaigns/:campaignId/world/lichdom-ritual-variants",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,variants:listLichdomRitualVariants(),mode:"READ_ONLY"});
+  });
+  app.get("/api/campaigns/:campaignId/world/lichdom-ritual-variants/:number",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const number=Number(req.params.number);
+    if(!Number.isInteger(number)||number<1||number>11)return res.status(400).json({success:false,error:"INVALID_PATH_NUMBER"});
+    const preview=previewLichdomRitualVariant(number);
+    return preview?res.json({success:true,preview}):res.status(404).json({success:false,error:"NOT_FOUND"});
   });
   // Future demiplane holdings are lore previews, never a travel or resurrection grant.
   app.get("/api/campaigns/:campaignId/world/future-holdings",(req,res)=>{
