@@ -17,6 +17,8 @@ Branch: feature/verified-automation-phase-a
 | ART-ADM-001 | Wide Moonveil administration dashboard concept | ChatGPT image generation, 2026-10-16 | /mnt/data/a_wide_cinematic_high_detail_fantasy_sci_fi_game.png | PENDING QA; includes fictitious progress and inventory | NO |
 | ART-ADM-002 | Ornate Moonveil art and paperwork dashboard concept | ChatGPT image generation, 2026-10-16 | /mnt/data/a_high_detail_fantasy_game_ui_dashboard_a_moonve.png | PENDING QA; includes fictitious CI/deployment labels | NO |
 
+| ART-UI-005 | Alice character, equipment and party dashboard concept | ChatGPT image generation, 2026-10-16 | /mnt/data/a_highly_detailed_fantasy_game_user_interface_mock.png | PENDING QA: mock inventory, stats and quests are illustrative, NOT Alice's verified game state | NO |
+
 ## Required art inventory and missing-asset work orders
 | ID | Subject | Intended role | Verified image path in repo | Status | Work order |
 | --- | --- | --- | --- | --- | --- |
