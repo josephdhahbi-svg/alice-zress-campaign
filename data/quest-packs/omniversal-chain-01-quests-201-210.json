@@ -1,0 +1,1022 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "wave": 3,
+  "chainId": "mv_chain_01",
+  "title": "The Covenant of Returning Light",
+  "continuesFrom": "mv_side_110",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_01_member_1",
+      "name": "Aster Vale Lantern",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_2",
+      "name": "Brin Copper Lantern",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_3",
+      "name": "Celia Moss Lantern",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_4",
+      "name": "Dorian Quill Lantern",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_5",
+      "name": "Edda Stone Lantern",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_6",
+      "name": "Fenn Ash Lantern",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_7",
+      "name": "Galia Reed Lantern",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_8",
+      "name": "Hale Meridian Lantern",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_9",
+      "name": "Iris Thorn Lantern",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_10",
+      "name": "Joren Star Lantern",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_201",
+      "number": 201,
+      "title": "The Reopened Passage: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 11,
+      "previousQuestId": "mv_side_101",
+      "earliestQuestId": "mv_side_001",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Dessa",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_4",
+        "chain_01_member_8"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 1,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 001 and 101",
+        "Search the reopened tunnel for a witness who disappeared in the first expedition",
+        "Investigate the complication: A rescue site conceals a community that refuses relocation",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "A rescue site conceals a community that refuses relocation",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Underdark ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_202"
+    },
+    {
+      "id": "mv_side_202",
+      "number": 202,
+      "title": "The Ledger of Consequences: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 12,
+      "previousQuestId": "mv_side_102",
+      "earliestQuestId": "mv_side_011",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Dorian Quill Lantern",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_2",
+        "chain_01_member_5",
+        "chain_01_member_9"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 4,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 011 and 102",
+        "Interview merchants and refugees about a newly discovered ledger",
+        "Investigate the complication: A former antagonist has begun making restitution",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "A former antagonist has begun making restitution",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Sword Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_203"
+    },
+    {
+      "id": "mv_side_203",
+      "number": 203,
+      "title": "The Council's Second Witness: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 13,
+      "previousQuestId": "mv_side_103",
+      "earliestQuestId": "mv_side_021",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Edda Stone Lantern",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_3",
+        "chain_01_member_6",
+        "chain_01_member_10"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 7,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 021 and 103",
+        "Compare testimony against the council's archived evidence",
+        "Investigate the complication: A forged seal was used to protect a frightened hatchling",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "A forged seal was used to protect a frightened hatchling",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Dragon Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_204"
+    },
+    {
+      "id": "mv_side_204",
+      "number": 204,
+      "title": "A Memory in the Mist: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 14,
+      "previousQuestId": "mv_side_104",
+      "earliestQuestId": "mv_side_031",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Fenn Ash Lantern",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_4",
+        "chain_01_member_7",
+        "chain_01_member_1"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 10,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 031 and 104",
+        "Recover a missing record from a village trapped in the mists",
+        "Investigate the complication: The record documents a visit that has not happened yet",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "The record documents a visit that has not happened yet",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Barovia ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_205"
+    },
+    {
+      "id": "mv_side_205",
+      "number": 205,
+      "title": "The Contract's Missing Clause: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 15,
+      "previousQuestId": "mv_side_105",
+      "earliestQuestId": "mv_side_041",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Galia Reed Lantern",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_5",
+        "chain_01_member_8",
+        "chain_01_member_2"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 13,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 041 and 105",
+        "Challenge a contract built upon an earlier falsehood",
+        "Investigate the complication: The contract holder is trying to free a dependent",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "The contract holder is trying to free a dependent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Avernus ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_206"
+    },
+    {
+      "id": "mv_side_206",
+      "number": 206,
+      "title": "The Story Nobody Told: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 16,
+      "previousQuestId": "mv_side_106",
+      "earliestQuestId": "mv_side_051",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Hale Meridian Lantern",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_6",
+        "chain_01_member_9",
+        "chain_01_member_3"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 16,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 051 and 106",
+        "Negotiate access to a story that was removed from public memory",
+        "Investigate the complication: The storyteller cannot distinguish two traversals",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "The storyteller cannot distinguish two traversals",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Feywild ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_207"
+    },
+    {
+      "id": "mv_side_207",
+      "number": 207,
+      "title": "The Ship of Returning Voices: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 17,
+      "previousQuestId": "mv_side_107",
+      "earliestQuestId": "mv_side_061",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Iris Thorn Lantern",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_7",
+        "chain_01_member_10",
+        "chain_01_member_4"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 19,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 061 and 107",
+        "Locate a ship carrying evidence from an abandoned expedition",
+        "Investigate the complication: The ship's crew believes the quest was completed already",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "The ship's crew believes the quest was completed already",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Wildspace ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_208"
+    },
+    {
+      "id": "mv_side_208",
+      "number": 208,
+      "title": "The Door of Confession: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 18,
+      "previousQuestId": "mv_side_108",
+      "earliestQuestId": "mv_side_071",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Joren Star Lantern",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_8",
+        "chain_01_member_1",
+        "chain_01_member_5"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 22,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 071 and 108",
+        "Trace the evidence through a gate registry and witness exchange",
+        "Investigate the complication: The correct portal opens only for a truthful confession",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "The correct portal opens only for a truthful confession",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Sigil ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_209"
+    },
+    {
+      "id": "mv_side_209",
+      "number": 209,
+      "title": "The Witness in Shadow: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 19,
+      "previousQuestId": "mv_side_109",
+      "earliestQuestId": "mv_side_081",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Aster Vale Lantern",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_9",
+        "chain_01_member_2",
+        "chain_01_member_6"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 25,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 081 and 109",
+        "Restore a damaged memory without rewriting anyone's identity",
+        "Investigate the complication: The forgotten witness is protecting an apparent villain",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "The forgotten witness is protecting an apparent villain",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Shadowfell ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_210"
+    },
+    {
+      "id": "mv_side_210",
+      "number": 210,
+      "title": "The Legacy Beyond the Loop: Lantern",
+      "chainId": "mv_chain_01",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 20,
+      "previousQuestId": "mv_side_110",
+      "earliestQuestId": "mv_side_091",
+      "previousArcFinale": "mv_side_110",
+      "questGiver": "Brin Copper Lantern",
+      "recurringCastIds": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_01_member_10",
+        "chain_01_member_3",
+        "chain_01_member_7"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 28,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier lantern investigations, a network of lamps reveals who was deliberately abandoned.",
+      "objectives": [
+        "Review verified evidence from quests 091 and 110",
+        "Present the chain's evidence and decide what survives the next return",
+        "Investigate the complication: the hidden lamp keeper was preserving a secret sanctuary",
+        "Record the consequences and secure a lead for the next lantern quest"
+      ],
+      "complication": "the hidden lamp keeper was preserving a secret sanctuary",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate lantern clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Lantern testimony fragment",
+        "Multiversal Convergence ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": null
+    }
+  ]
+}
