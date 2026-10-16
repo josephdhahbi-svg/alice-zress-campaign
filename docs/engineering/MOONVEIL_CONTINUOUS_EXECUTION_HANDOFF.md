@@ -237,3 +237,12 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Generated cinematic Moonveil UI concept artwork in conversation (not checked into repository). Do not claim art asset integration.
 - CI runs `38928109722` and `38928109708` pending at time of handoff. Charter stays 18/100 until evidence-backed acceptance and CI. UI tasks T061-T065/T068/T069 have a prototype foundation, not production completion.
 - Next: verify CI; integrate concept artwork only after approved asset path and licensing; implement connected read-only ascension screen and a persistent server-authorized choice/event path, then test mobile and keyboard.
+
+## 2026-10-16 — Persistent DM-authorized Rabbit Hole travel
+- `backend/migrations.js` v9 commit `6e83afdf78eca0fe15fd621220cfa4eba9122f98`: `vtt_character_locations` and `vtt_character_travel_events`.
+- `backend/chronal-travel-engine.js` commit `7217d05bcbb585666ff623d7a863f4a9e82384e1`: explicit DM-only initialization and travel, audited evidence, optimistic revision, idempotent replay, atomic SQLite transaction.
+- `server.js` commit `2fdb3604fd013480168aa8b540bedf14cd059bbe`: authenticated location read (owner or DM) and DM-only initialize/travel HTTP endpoints.
+- `backend/chronal-travel-engine.test.js` commit `61b9e4aaef93c3e3f3f759fce2188c18ec51cd29`: replay, unauthorized, revision, invalid year, no artifacts.
+- CI **PASSED**: Validate campaign records `38928967430`; Omniversal verification `38928967450`.
+- Caution: evidence string is recorded but not independently cryptographically verified; DM adjudication is trusted. No automatic timeline paradox resolution, travel cost, source chronology reconciliation or UI connection. No character was moved by these code commits.
+- Charter remains 18/100 verified and 82 open; this is meaningful partial progress on chronology, world travel and persistent character state but not complete spatial-coordinate T047 or mission-consistency T090.
