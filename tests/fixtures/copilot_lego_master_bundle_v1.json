@@ -1,0 +1,2847 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "MOONVEIL_COPILOT_LEGO_FIXTURES_V1",
+  "status": "synthetic_design_only_not_integrated",
+  "canon_status": "unverified",
+  "note": "All records are design-only, read-only and non-mutating. IDs referenced by connections/hazards may be unresolved placeholders. Three pass tiers are not seven traversals.",
+  "milestones": [
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_baseline_v1",
+      "entity_type": "milestone",
+      "label": "Level 1 protected baseline",
+      "level_threshold": 1,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_pact_stress_v5",
+      "entity_type": "milestone",
+      "label": "Pact-stress threshold",
+      "level_threshold": 5,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_subterranean_completion_v10",
+      "entity_type": "milestone",
+      "label": "Subterranean completion",
+      "level_threshold": 10,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_demiplane_v15",
+      "entity_type": "milestone",
+      "label": "Demiplane sanctuary anchor",
+      "level_threshold": 15,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_eldritch_lich_v17",
+      "entity_type": "milestone",
+      "label": "Eldritch lich transition",
+      "level_threshold": 17,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_archlich_v20",
+      "entity_type": "milestone",
+      "label": "Arch-lich apex",
+      "level_threshold": 20,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_astral_attunement_v25",
+      "entity_type": "milestone",
+      "label": "Astral attunement",
+      "level_threshold": 25,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_ravenloft_reflection_v28",
+      "entity_type": "milestone",
+      "label": "Ravenloft reflection",
+      "level_threshold": 28,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_timeline_mastery_v30",
+      "entity_type": "milestone",
+      "label": "Timeline mastery",
+      "level_threshold": 30,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "evt_alice_avatar_alustra_vX",
+      "entity_type": "milestone",
+      "label": "Avatar of Alustra future threshold",
+      "level_threshold": null,
+      "record_status": "design_only_read_only",
+      "state_effect": "none",
+      "rewards_granted": [],
+      "route_unlocks": [],
+      "notes": "Narrative proposal only; does not authorize character progression."
+    }
+  ],
+  "books": [
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_01",
+      "entity_type": "book",
+      "book_number": 1,
+      "book_id": "B01",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "The Convergence Nexus",
+      "hazard_refs": [
+        "haz_spatial_echo_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_02",
+      "entity_type": "book",
+      "book_number": 2,
+      "book_id": "B02",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "The Netherese Enclave Collapse",
+      "hazard_refs": [
+        "haz_seismic_tremor_v1",
+        "haz_ooze_surge_v1",
+        "haz_structural_shear_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_03",
+      "entity_type": "book",
+      "book_number": 3,
+      "book_id": "B03",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "The Elder Eye Trilogy: Awakening",
+      "hazard_refs": [
+        "haz_psychic_pressure_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_04",
+      "entity_type": "book",
+      "book_number": 4,
+      "book_id": "B04",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "The Elder Eye Trilogy: The Slime Corridors",
+      "hazard_refs": [
+        "haz_ooze_surge_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_05",
+      "entity_type": "book",
+      "book_number": 5,
+      "book_id": "B05",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "The Elder Eye Trilogy: The Primordial Pit",
+      "hazard_refs": [
+        "haz_gravity_flux_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_06",
+      "entity_type": "book",
+      "book_number": 6,
+      "book_id": "B06",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "Whispers of the Far Realm",
+      "hazard_refs": [
+        "haz_non_euclidean_shift_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_07",
+      "entity_type": "book",
+      "book_number": 7,
+      "book_id": "B07",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "Descent into the Abyssal Tunnels",
+      "hazard_refs": [
+        "haz_chaos_shear_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_08",
+      "entity_type": "book",
+      "book_number": 8,
+      "book_id": "B08",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "The Iron Gate of Pazuzu",
+      "hazard_refs": [
+        "haz_vertical_chasm_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_09",
+      "entity_type": "book",
+      "book_number": 9,
+      "book_id": "B09",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "The Oozing Depths of Shedaklah",
+      "hazard_refs": [
+        "haz_fluidic_pressure_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_10",
+      "entity_type": "book",
+      "book_number": 10,
+      "book_id": "B10",
+      "tier": 1,
+      "pass_tier": 1,
+      "title": "The Labyrinth of Baphomet",
+      "hazard_refs": [
+        "haz_mental_maze_v1"
+      ],
+      "route_refs": [
+        "route_subterranean_escape_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_11",
+      "entity_type": "book",
+      "book_number": 11,
+      "book_id": "B11",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "The Blood War Transit",
+      "hazard_refs": [
+        "haz_infernal_crossfire_v1",
+        "haz_demonic_charge_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_12",
+      "entity_type": "book",
+      "book_number": 12,
+      "book_id": "B12",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "Descent to Avernus",
+      "hazard_refs": [
+        "haz_hellfire_rain_v1",
+        "haz_soul_pressure_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_13",
+      "entity_type": "book",
+      "book_number": 13,
+      "book_id": "B13",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "The Styx Navigation",
+      "hazard_refs": [
+        "haz_memory_wipe_v1",
+        "haz_styx_current_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_14",
+      "entity_type": "book",
+      "book_number": 14,
+      "book_id": "B14",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "The Citadel of Maladomini",
+      "hazard_refs": [
+        "haz_bureaucratic_maze_v1",
+        "haz_infernal_audit_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_15",
+      "entity_type": "book",
+      "book_number": 15,
+      "book_id": "B15",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "The Frozen Throne of Nessus",
+      "hazard_refs": [
+        "haz_absolute_cold_v1",
+        "haz_asmodeus_presence_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_16",
+      "entity_type": "book",
+      "book_number": 16,
+      "book_id": "B16",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "Ascent to the Sword Coast",
+      "hazard_refs": [
+        "haz_surface_break_v1",
+        "haz_crust_shift_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_17",
+      "entity_type": "book",
+      "book_number": 17,
+      "book_id": "B17",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "Shadows over Baldur's Gate",
+      "hazard_refs": [
+        "haz_urban_intrigue_v1",
+        "haz_lich_transition_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_18",
+      "entity_type": "book",
+      "book_number": 18,
+      "book_id": "B18",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "The High Hedge Arcana",
+      "hazard_refs": [
+        "haz_spellbook_flux_v1",
+        "haz_arcane_overload_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_19",
+      "entity_type": "book",
+      "book_number": 19,
+      "book_id": "B19",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "The Spelljamming Port",
+      "hazard_refs": [
+        "haz_wildspace_vacuum_v1",
+        "haz_dock_pressure_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_20",
+      "entity_type": "book",
+      "book_number": 20,
+      "book_id": "B20",
+      "tier": 2,
+      "pass_tier": 2,
+      "title": "Phlogiston Currents",
+      "hazard_refs": [
+        "haz_phlogiston_flare_v1",
+        "haz_cosmic_volatility_v1"
+      ],
+      "route_refs": [
+        "route_planar_ascent_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_21",
+      "entity_type": "book",
+      "book_number": 21,
+      "book_id": "B21",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "The Crystal Sphere of Realmspace",
+      "hazard_refs": [
+        "haz_orbital_radiation_v1",
+        "haz_sphere_pressure_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_22",
+      "entity_type": "book",
+      "book_number": 22,
+      "book_id": "B22",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "The Astral Silver Cord",
+      "hazard_refs": [
+        "haz_psychic_void_v1",
+        "haz_astral_current_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_23",
+      "entity_type": "book",
+      "book_number": 23,
+      "book_id": "B23",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "The Outer Planes Convergence",
+      "hazard_refs": [
+        "haz_planar_overlap_v1",
+        "haz_door_resonance_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_24",
+      "entity_type": "book",
+      "book_number": 24,
+      "book_id": "B24",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "Mechanus Clockwork Realities",
+      "hazard_refs": [
+        "haz_clockwork_precision_v1",
+        "haz_order_overload_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_25",
+      "entity_type": "book",
+      "book_number": 25,
+      "book_id": "B25",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "Limbo's Floating Isles",
+      "hazard_refs": [
+        "haz_raw_chaos_v1",
+        "haz_island_shift_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_26",
+      "entity_type": "book",
+      "book_number": 26,
+      "book_id": "B26",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "The Gateway to Carceri",
+      "hazard_refs": [
+        "haz_red_prison_pressure_v1",
+        "haz_chain_reaction_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_27",
+      "entity_type": "book",
+      "book_number": 27,
+      "book_id": "B27",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "The Mists of Barovia",
+      "hazard_refs": [
+        "haz_gothic_fog_v1",
+        "haz_mist_memory_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_28",
+      "entity_type": "book",
+      "book_number": 28,
+      "book_id": "B28",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "Castle Ravenloft's Keep",
+      "hazard_refs": [
+        "haz_dark_reflection_v1",
+        "haz_psychological_dread_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_29",
+      "entity_type": "book",
+      "book_number": 29,
+      "book_id": "B29",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "Vecna's Observational Spire",
+      "hazard_refs": [
+        "haz_time_observation_v1",
+        "haz_secret_pressure_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "book_30",
+      "entity_type": "book",
+      "book_number": 30,
+      "book_id": "B30",
+      "tier": 3,
+      "pass_tier": 3,
+      "title": "The Eve of Ruin",
+      "hazard_refs": [
+        "haz_outer_shell_collapse_v1",
+        "haz_avatar_pressure_v1"
+      ],
+      "route_refs": [
+        "route_outer_shell_v1"
+      ],
+      "record_status": "placeholder_campaign_outline",
+      "notes": "User-proposed title and hazard references; not verified as official adventure titles or canon geography."
+    }
+  ],
+  "hazard_registry": [
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_spatial_echo_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_seismic_tremor_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_ooze_surge_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_structural_shear_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_psychic_pressure_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_gravity_flux_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_non_euclidean_shift_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_chaos_shear_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_vertical_chasm_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_fluidic_pressure_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_mental_maze_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_infernal_crossfire_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_demonic_charge_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_hellfire_rain_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_soul_pressure_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_memory_wipe_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_styx_current_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_bureaucratic_maze_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_infernal_audit_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_absolute_cold_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_asmodeus_presence_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_surface_break_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_crust_shift_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_urban_intrigue_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_lich_transition_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_spellbook_flux_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_arcane_overload_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_wildspace_vacuum_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_dock_pressure_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_phlogiston_flare_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_cosmic_volatility_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_orbital_radiation_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_sphere_pressure_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_psychic_void_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_astral_current_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_planar_overlap_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_door_resonance_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_clockwork_precision_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_order_overload_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_raw_chaos_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_island_shift_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_red_prison_pressure_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_chain_reaction_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_gothic_fog_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_mist_memory_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_dark_reflection_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_psychological_dread_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_time_observation_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_secret_pressure_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_outer_shell_collapse_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "haz_avatar_pressure_v1",
+      "entity_type": "hazard",
+      "record_status": "reference_only_not_mechanics_approved"
+    }
+  ],
+  "patches": [
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "patch_id": "patch_haz_seismic_tremor_v2",
+      "target_entity_id": "haz_seismic_tremor_v1",
+      "expected_base_version": 1,
+      "new_version": 2,
+      "fields_changed": {
+        "dc": {
+          "from": 14,
+          "to": 15
+        }
+      },
+      "reason": "Synthetic proposal from user-supplied packet; not applied.",
+      "applied": false,
+      "ledger_event_id": null,
+      "forbidden_fields": [
+        "player_state",
+        "inventory",
+        "xp",
+        "route_unlocked"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "patch_id": "patch_haz_ooze_surge_v2",
+      "target_entity_id": "haz_ooze_surge_v1",
+      "expected_base_version": 1,
+      "new_version": 2,
+      "fields_changed": {
+        "advance_rate_ft": {
+          "from": 15,
+          "to": 10
+        }
+      },
+      "reason": "Synthetic proposal from user-supplied packet; not applied.",
+      "applied": false,
+      "ledger_event_id": null,
+      "forbidden_fields": [
+        "player_state",
+        "inventory",
+        "xp",
+        "route_unlocked"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "patch_id": "patch_haz_mental_maze_v2",
+      "target_entity_id": "haz_mental_maze_v1",
+      "expected_base_version": 1,
+      "new_version": 2,
+      "fields_changed": {
+        "dc": {
+          "from": 16,
+          "to": 17
+        }
+      },
+      "reason": "Synthetic proposal from user-supplied packet; not applied.",
+      "applied": false,
+      "ledger_event_id": null,
+      "forbidden_fields": [
+        "player_state",
+        "inventory",
+        "xp",
+        "route_unlocked"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "patch_id": "patch_haz_hellfire_rain_v2",
+      "target_entity_id": "haz_hellfire_rain_v1",
+      "expected_base_version": 1,
+      "new_version": 2,
+      "fields_changed": {
+        "damage_dice": {
+          "from": "2d6",
+          "to": "3d6"
+        }
+      },
+      "reason": "Synthetic proposal from user-supplied packet; not applied.",
+      "applied": false,
+      "ledger_event_id": null,
+      "forbidden_fields": [
+        "player_state",
+        "inventory",
+        "xp",
+        "route_unlocked"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "patch_id": "patch_haz_memory_wipe_v2",
+      "target_entity_id": "haz_memory_wipe_v1",
+      "expected_base_version": 1,
+      "new_version": 2,
+      "fields_changed": {
+        "severity": {
+          "from": "major",
+          "to": "moderate"
+        }
+      },
+      "reason": "Synthetic proposal from user-supplied packet; not applied.",
+      "applied": false,
+      "ledger_event_id": null,
+      "forbidden_fields": [
+        "player_state",
+        "inventory",
+        "xp",
+        "route_unlocked"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "patch_id": "patch_haz_phlogiston_flare_v2",
+      "target_entity_id": "haz_phlogiston_flare_v1",
+      "expected_base_version": 1,
+      "new_version": 2,
+      "fields_changed": {
+        "volatility": {
+          "from": 0.7,
+          "to": 0.9
+        }
+      },
+      "reason": "Synthetic proposal from user-supplied packet; not applied.",
+      "applied": false,
+      "ledger_event_id": null,
+      "forbidden_fields": [
+        "player_state",
+        "inventory",
+        "xp",
+        "route_unlocked"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "patch_id": "patch_haz_astral_current_v2",
+      "target_entity_id": "haz_astral_current_v1",
+      "expected_base_version": 1,
+      "new_version": 2,
+      "fields_changed": {
+        "speed": {
+          "from": 20,
+          "to": 25
+        }
+      },
+      "reason": "Synthetic proposal from user-supplied packet; not applied.",
+      "applied": false,
+      "ledger_event_id": null,
+      "forbidden_fields": [
+        "player_state",
+        "inventory",
+        "xp",
+        "route_unlocked"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "patch_id": "patch_haz_gothic_fog_v2",
+      "target_entity_id": "haz_gothic_fog_v1",
+      "expected_base_version": 1,
+      "new_version": 2,
+      "fields_changed": {
+        "density": {
+          "from": "high",
+          "to": "medium"
+        }
+      },
+      "reason": "Synthetic proposal from user-supplied packet; not applied.",
+      "applied": false,
+      "ledger_event_id": null,
+      "forbidden_fields": [
+        "player_state",
+        "inventory",
+        "xp",
+        "route_unlocked"
+      ]
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "patch_id": "patch_haz_outer_shell_collapse_v2",
+      "target_entity_id": "haz_outer_shell_collapse_v1",
+      "expected_base_version": 1,
+      "new_version": 2,
+      "fields_changed": {
+        "severity": {
+          "from": 0.8,
+          "to": 0.95
+        }
+      },
+      "reason": "Synthetic proposal from user-supplied packet; not applied.",
+      "applied": false,
+      "ledger_event_id": null,
+      "forbidden_fields": [
+        "player_state",
+        "inventory",
+        "xp",
+        "route_unlocked"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "connection_id": "conn_netherese_seismic",
+      "from_entity_id": "book_02",
+      "to_entity_id": "haz_seismic_tremor_v1",
+      "relationship_type": "has_hazard",
+      "source_status": "unresolved_reference",
+      "integrated": false,
+      "requires_target_entity": true,
+      "notes": "Proposed connection; target must be registered and source-reviewed before integration."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "connection_id": "conn_elder_eye_ghaunadaur",
+      "from_entity_id": "book_03",
+      "to_entity_id": "deity_ghaunadaur",
+      "relationship_type": "associated_with",
+      "source_status": "unresolved_reference",
+      "integrated": false,
+      "requires_target_entity": true,
+      "notes": "Proposed connection; target must be registered and source-reviewed before integration."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "connection_id": "conn_labyrinth_transit",
+      "from_entity_id": "book_10",
+      "to_entity_id": "transit_nodes",
+      "relationship_type": "references",
+      "source_status": "unresolved_reference",
+      "integrated": false,
+      "requires_target_entity": true,
+      "notes": "Proposed connection; target must be registered and source-reviewed before integration."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "connection_id": "conn_avernus_contracts",
+      "from_entity_id": "book_12",
+      "to_entity_id": "infernal_contracts",
+      "relationship_type": "features",
+      "source_status": "unresolved_reference",
+      "integrated": false,
+      "requires_target_entity": true,
+      "notes": "Proposed connection; target must be registered and source-reviewed before integration."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "connection_id": "conn_bg_lich",
+      "from_entity_id": "book_17",
+      "to_entity_id": "evt_alice_eldritch_lich_v17",
+      "relationship_type": "narrative_milestone",
+      "source_status": "unresolved_reference",
+      "integrated": false,
+      "requires_target_entity": true,
+      "notes": "Proposed connection; target must be registered and source-reviewed before integration."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "connection_id": "conn_phlogiston_volatility",
+      "from_entity_id": "book_20",
+      "to_entity_id": "haz_cosmic_volatility_v1",
+      "relationship_type": "has_hazard",
+      "source_status": "unresolved_reference",
+      "integrated": false,
+      "requires_target_entity": true,
+      "notes": "Proposed connection; target must be registered and source-reviewed before integration."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "connection_id": "conn_astral_cord_sea",
+      "from_entity_id": "book_22",
+      "to_entity_id": "astral_sea",
+      "relationship_type": "references",
+      "source_status": "unresolved_reference",
+      "integrated": false,
+      "requires_target_entity": true,
+      "notes": "Proposed connection; target must be registered and source-reviewed before integration."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "connection_id": "conn_barovia_ravenloft",
+      "from_entity_id": "book_27",
+      "to_entity_id": "ravenloft",
+      "relationship_type": "located_in",
+      "source_status": "unresolved_reference",
+      "integrated": false,
+      "requires_target_entity": true,
+      "notes": "Proposed connection; target must be registered and source-reviewed before integration."
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "connection_id": "conn_eve_alustra",
+      "from_entity_id": "book_30",
+      "to_entity_id": "deity_alustra",
+      "relationship_type": "references",
+      "source_status": "unresolved_reference",
+      "integrated": false,
+      "requires_target_entity": true,
+      "notes": "Proposed connection; target must be registered and source-reviewed before integration."
+    }
+  ],
+  "routes": [
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "route_subterranean_escape_v1",
+      "entity_type": "route",
+      "label": "Subterranean escape",
+      "tier": 1,
+      "route_status": "locked_unverified",
+      "traversable": false,
+      "origin_id": null,
+      "destination_id": null,
+      "availability_window": null,
+      "prerequisite_event_ids": [],
+      "state_effect": "none"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "route_planar_ascent_v1",
+      "entity_type": "route",
+      "label": "Planar ascent",
+      "tier": 2,
+      "route_status": "locked_unverified",
+      "traversable": false,
+      "origin_id": null,
+      "destination_id": null,
+      "availability_window": null,
+      "prerequisite_event_ids": [],
+      "state_effect": "none"
+    },
+    {
+      "schema_version": "1.0",
+      "record_version": 1,
+      "workflow_status": "proposed",
+      "canon_status": "unverified",
+      "source_reference": "user_supplied_Moonveil_Copilot_packet",
+      "temporal": {
+        "timeline_id": null,
+        "dr_start": null,
+        "dr_end": null,
+        "date_precision": "unknown",
+        "traversal_id": null,
+        "book_id": null
+      },
+      "extensions": {},
+      "entity_id": "route_outer_shell_v1",
+      "entity_type": "route",
+      "label": "Outer shell route",
+      "tier": 3,
+      "route_status": "locked_unverified",
+      "traversable": false,
+      "origin_id": null,
+      "destination_id": null,
+      "availability_window": null,
+      "prerequisite_event_ids": [],
+      "state_effect": "none"
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "case_id": "duplicate_entity_id",
+      "expected": "reject",
+      "fixture": {
+        "ids": [
+          "entity_x",
+          "entity_x"
+        ]
+      }
+    },
+    {
+      "case_id": "missing_connection_endpoint",
+      "expected": "reject",
+      "fixture": {
+        "from_entity_id": "entity_x",
+        "to_entity_id": "missing_entity"
+      }
+    },
+    {
+      "case_id": "stale_patch_version",
+      "expected": "reject",
+      "fixture": {
+        "expected_base_version": 0,
+        "current_version": 1
+      }
+    },
+    {
+      "case_id": "forbidden_save_mutation",
+      "expected": "reject",
+      "fixture": {
+        "fields_changed": [
+          "player_state.level"
+        ]
+      }
+    },
+    {
+      "case_id": "unverified_route_unlock",
+      "expected": "reject",
+      "fixture": {
+        "canon_status": "unverified",
+        "traversable": true
+      }
+    }
+  ]
+}
