@@ -53,3 +53,12 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - **Awaiting CI**: runs `38919615246` (Omniversal) and `38919615249` (Validate) were queued at last check. Fix failures before claiming integration complete.
 - World factions/territories are intentionally not provisioned by API yet; seed through trusted campaign setup. No auto-advancing DR and no cron activated.
 - Next: validate CI; add restart persistence and transactional quest ownership and rewards. Update master charter only for matching acceptance evidence.
+
+## 2026-10-16 — Combat Engine v1 implementation
+- Added `backend/combat-engine.js`, commit `169974456b14a7893068dd8f13088118935349e1`: campaign-scoped SQLite encounter/combatant/action tables, DM role validation, initiative ordering, HP bounds, healing/damage, condition changes, round/turn advance, encounter ending, transactional idempotent actions. No automatic rewards, spells or player-controlled attacks.
+- Added `backend/combat-engine.test.js`, commit `03abd19c853c4a05e741401f66aa3fdfc277ab82`: unit tests for initiative, HP bounds, conditions, idempotency, DM authorization and rollback.
+- Integrated three signed-actor API routes into `server.js`, commit `42b08e62514b85647d4b2384e1e47813afb393ad`: DM-only encounter creation/actions, campaign member read-only state.
+- Added `backend/combat-api.integration.test.js`, commit `1d31db1e6d1d4aa4c3abd620a9f63a0896a16d2f`: API tests for DM authorization, player/outsider denial, duplicate actions and cross-campaign isolation.
+- CI for `42b08e6` passed: Validate run `38920038700`, Omniversal run `38920038661`. **New integration test was committed afterward**; CI runs `38920078593` and `38920078591` must pass before claiming full batch verification.
+- Still needed: verified full-batch CI, file-backed restart test, concurrent action test, server-side dice/attack roll rules, spell slots, turn permission policy, event-journal integration and quest reward transactions.
+- Do not mark T074 complete: full resource/condition coverage is not yet present. Existing 9/100 count unchanged pending task acceptance review.
