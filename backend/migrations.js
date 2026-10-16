@@ -18,6 +18,12 @@ CREATE TABLE IF NOT EXISTS vtt_campaign_events (
  PRIMARY KEY(campaign_id,revision), UNIQUE(campaign_id,event_id)
 );
 CREATE INDEX IF NOT EXISTS idx_vtt_events_actor ON vtt_campaign_events(campaign_id,actor_id);
+` },
+  { version:2, name:"revoked actor sessions", sql:`
+CREATE TABLE IF NOT EXISTS vtt_revoked_sessions (
+ token_hash TEXT PRIMARY KEY, expires_at INTEGER NOT NULL, revoked_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_vtt_revoked_expiry ON vtt_revoked_sessions(expires_at);
 ` }
 ];
 function migrate(db) {
