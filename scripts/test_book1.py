@@ -67,8 +67,8 @@ def main():
     asset_records = assets_manifest.get("assets", []) if isinstance(assets_manifest, dict) else []
     check(len(asset_records) == 7, "asset registry must contain seven generated asset records")
     check(len({item.get("id") for item in asset_records}) == len(asset_records), "asset IDs must be unique")
-    check(all(item.get("status") == "generated_local_not_committed" for item in asset_records), "asset registry must accurately mark files not yet committed")
-    check(all(item.get("transparency_status") == "requires_background_removal" for item in asset_records), "asset transparency limitation must be recorded")
+    check(all(item.get("status") == "cleaned_local_not_committed" for item in asset_records), "asset registry must accurately mark cleaned files not yet committed")
+    check(all(item.get("transparency_status") == "alpha_channel_added; visual_review_required" for item in asset_records), "asset transparency review status must be recorded")
 
     check(GAME.exists(), "game/book1.html is missing")
     if GAME.exists():
