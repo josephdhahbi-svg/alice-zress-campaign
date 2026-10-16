@@ -145,3 +145,12 @@ The first batch creates structured "Lego" records rather than only brainstorming
 - `docs/task-status.md` tracks the 100-task work order using evidence-based status labels.
 - `scripts/validate.py` now has dedicated profiles for lore records, relationship edges, story phases, setup/payoff records, decisions, and the component registry. It also checks that setup/payoff records reference known book IDs.
 - A structural validation pass against the current JSON returned 12 data files, 63 records, and zero issues in the checks mirrored during this review. This was not a local execution of the Python validator or a verified GitHub Actions run.
+
+
+## Book 1 vertical slice — current build
+- `data/scenes.json`: structured opening scene `scene-book01-rabbit-hole-01`, with five choices in the required order, proposed checks, outcomes, and state-effect rules.
+- `data/locations.json`: includes a pending-review homebrew record for the Pit of Ghaunadaur.
+- `game/book1.html`: standalone local browser prototype for selecting an option, rolling a d20, viewing outcomes, and exporting/importing the scene event log.
+- `scripts/validate.py`: now includes scene schema checks plus references from scenes to books, locations, and setup/payoff IDs. Setup/payoff records are checked against the book catalog.
+
+**Validation evidence:** a structural review mirrored against the current repository JSON checked 13 data files and 65 records, including scene choice ordering and cross-file references, with zero issues. The Python validator has not yet been executed in a local checkout, browser testing is still pending, and GitHub Actions status was not available from the inspected commit status response.
