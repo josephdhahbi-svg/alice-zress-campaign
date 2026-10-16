@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "status": "PROPOSED_CAUSAL_CHAIN_READ_ONLY",
+  "canon_status": "unverified",
+  "source_reference": "user_supplied_Moonveil_story_and_Meeting_12_encounter_brief",
+  "timeline_id": null,
+  "dr_epoch_date": null,
+  "date_precision": "unknown",
+  "traversal_id": null,
+  "book_id": null,
+  "state_effect": "none",
+  "events": [
+    {
+      "event_id": "EVT_PITCH_DISTURBANCE_PROPOSAL",
+      "event_type": "cosmic_disturbance",
+      "label": "Pitch of Ganador disturbance",
+      "canon_status": "unverified",
+      "location_id": null,
+      "cause_event_ids": [],
+      "consequence_event_ids": ["EVT_NETHERese_ENCLAVE_COLLAPSE_PROPOSAL"],
+      "prerequisite_event_ids": [],
+      "status": "proposed",
+      "notes": "Campaign cosmology proposal; do not treat as official D&D canon."
+    },
+    {
+      "event_id": "EVT_NETHERese_ENCLAVE_COLLAPSE_PROPOSAL",
+      "event_type": "structural_failure",
+      "label": "Netherese enclave collapse",
+      "canon_status": "unverified",
+      "location_id": null,
+      "cause_event_ids": ["EVT_PITCH_DISTURBANCE_PROPOSAL"],
+      "consequence_event_ids": ["EVT_UNDERDARK_HAZARD_SEQUENCE_PROPOSAL"],
+      "prerequisite_event_ids": [],
+      "status": "proposed",
+      "notes": "Exact enclave identity, date, impact site, and causation require review."
+    },
+    {
+      "event_id": "EVT_UNDERDARK_HAZARD_SEQUENCE_PROPOSAL",
+      "event_type": "environmental_hazard",
+      "label": "Underdark seismic and ooze hazards",
+      "canon_status": "unverified",
+      "location_id": null,
+      "cause_event_ids": ["EVT_NETHERese_ENCLAVE_COLLAPSE_PROPOSAL"],
+      "consequence_event_ids": ["EVT_ALICE_INVESTIGATION_OPPORTUNITY"],
+      "prerequisite_event_ids": [],
+      "status": "proposed",
+      "notes": "Encounter preview only; not an applied condition or damage event."
+    },
+    {
+      "event_id": "EVT_ALICE_INVESTIGATION_OPPORTUNITY",
+      "event_type": "quest_opportunity",
+      "label": "Alice investigates the disturbance",
+      "canon_status": "unverified",
+      "location_id": null,
+      "cause_event_ids": ["EVT_UNDERDARK_HAZARD_SEQUENCE_PROPOSAL"],
+      "consequence_event_ids": [],
+      "prerequisite_event_ids": ["PLAYER_CONFIRMED_U01_CHOICE"],
+      "status": "locked_preview",
+      "notes": "Opportunity only. Alice has made no choice; no event is recorded in her save and no route is unlocked."
+    }
+  ],
+  "validation_rules": [
+    "This graph is a narrative proposal, not a record of events that have occurred.",
+    "Unknown date, timeline, and location fields remain null.",
+    "Causal links are proposed, not canon-verified.",
+    "A quest opportunity does not constitute player consent or a confirmed choice.",
+    "No event in this file mutates Alice, grants rewards, or unlocks routes."
+  ]
+}
