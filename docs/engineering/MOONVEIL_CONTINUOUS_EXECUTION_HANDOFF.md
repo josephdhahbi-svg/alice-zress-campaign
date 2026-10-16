@@ -100,3 +100,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Tests: `backend/quest-evidence-engine.test.js` `89fd3181ae53a66dd1dfc0c5edb48b0c4b2ef846`; `backend/quest-evidence-api.integration.test.js` `8f6a714b25c88b091210a625122545b2ea339955`; new `backend/quest-approval-migration.test.js` `a56e1fa0c80616ff2c868db7b29001e9484ad182`.
 - **CI not yet confirmed for this batch.** Verified charter remains 16/100 until successful workflows and acceptance review. No artifact rewards and no Alice progression changes.
 - Next: CI fixes; check legacy migration tests; assess T029 audit requirements, reward catalog approval and transactional award design; combat spell slots.
+
+### CI resolution and next work
+- First v4 CI runs `38922093940` and `38922093898` failed because `backend/migrations-v3.test.js` expected exactly schema versions [1,2,3].
+- Fixed migration regression assertion to compare with `MIGRATIONS.map(x=>x.version)`, commit `f3bc602c082e59e7d2f509c6b950a417e8a80329`.
+- **Verified PASS**: Omniversal run `38922191588`; Validate campaign records run `38922191598`. Both jobs completed successfully after fix.
+- Charter remains **16/100**: approval/audit is real and tested, but T029 covers broader quest state transitions, not merely catalog registration/approval; keep it open. No reward catalog approved and no artifacts granted.
+- Next: versioned quest status transitions and audit; reviewed artifact metadata/approval design; atomic rewards only after explicit rule approval; combat resources.
