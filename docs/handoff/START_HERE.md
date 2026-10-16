@@ -219,3 +219,6 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - `a5b0134` added `docs/architecture/spherical-space-time-contract-v1.md`.
 - The contract separates Space, Time, Causality, and Traversal; reuses existing `canon_status` values and shared fields; preserves unknown dates; prevents B30→B01 traversal from rewriting DR; and documents ownership boundaries for Copilot, Gemini, ChatGPT, and the player.
 - This is a proposed architecture contract, not an operational engine. No tests were executed in this action. Next: synthetic fixtures, validator integration, and comparison against the actual road atlas and U01 read model.
+
+- `cb6bdc0` added `tests/continuity/spherical_space_time_fixtures_v1.json` with synthetic B30→B01, invalid eighth traversal, unknown-date, locked-route, asset-no-unlock, and Alice-choice cases.
+- `a886c33` added `tests/test_spherical_space_time_contract.py` with eight Python unit tests checking the fixtures and current registry contracts. Tests are **not yet executed against a full checkout**; no passing status claimed.
