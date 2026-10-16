@@ -266,3 +266,8 @@ Approved and adapted dialogue concept:
 - `server.js` `4475a38f2db8efb4201becce1ce266f83d0a1256`: signed campaign member GET dialogue and POST preview routes.
 - `backend/dialogue-api.integration.test.js` `51376712d4902fefff00b6d0a8daa11ea3250601`: signed session, member isolation, choice order, zero mutation.
 CI outcome must be checked before declaring verification. This is a **read-only dialogue slice**, not a full quest consequence engine. Charter remains 18/100 until evidence supports closing a specific task.
+
+### Gemini dialogue integration CI verified
+- Omniversal verification run `38930351829`: **SUCCESS**.
+- Validate campaign records run `38930351801`: **SUCCESS**.
+- Safe read-only dialogue slice merged on development branch; no quest completion or artifact grants. Charter still 18/100 until task acceptance audit.
