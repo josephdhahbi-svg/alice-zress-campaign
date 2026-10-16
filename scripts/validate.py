@@ -108,6 +108,8 @@ def main():
         "location", "plane", "source", "canon_status", "continuity_status",
     )
     phase_required = ("id", "title", "order", "books", "chronology", "status")
+    payoff_required = ("id", "name", "category", "from_book_id", "to_book_id", "setup", "payoff", "mechanism", "paradox_risk", "status", "canon_status", "continuity_status", "source", "notes")
+    decision_required = ("id", "question", "status", "options", "current_policy", "evidence", "affected_ids", "decision", "owner_role", "notes")
 
     for path in sorted(DATA.glob("*.json")):
         if path.name == "schema.json":
@@ -124,6 +126,15 @@ def main():
             validate_records(path, document, relationship_required, lore_enums)
         elif path.name == "story_phases.json":
             validate_records(path, document, phase_required, {"status": ("planned", "active", "completed", "deprecated")})
+        elif path.name == "setup_payoffs.json":
+            validate_records(path, document, payoff_required, {
+                "status": ("PROPOSED", "IN_PROGRESS", "LOCKED_CANON", "BLOCKED", "DEPRECATED"),
+                **lore_enums,
+            })
+        elif path.name == "decisions.json":
+            validate_records(path, document, decision_required, {
+                "status": ("CONFLICT", "SOURCE_CHECK_REQUIRED", "RULES_CHECK_REQUIRED", "APPROVED", "REJECTED", "DEPRECATED"),
+            })
         elif isinstance(document, list) and not document:
             # Empty starter collection: valid, but contains no records to validate.
             continue
