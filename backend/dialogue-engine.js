@@ -18,7 +18,7 @@ const SCENES=Object.freeze({
   ])
  })
 });
-function getDialogueScene(nodeId){return Object.hasOwn(SCENES,nodeId)?SCENES[nodeId]:null;}
+function getDialogueScene(nodeId){return Object.hasOwn(SCENES,nodeId)?SCENES[nodeId]:(Object.hasOwn(EXPANDED,nodeId)?EXPANDED[nodeId]:null);}
 function getDialogueChoices(nodeId){
  const scene=getDialogueScene(nodeId);
  if(!scene)return [];
