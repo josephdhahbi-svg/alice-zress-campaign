@@ -66,11 +66,14 @@ function renderStats(){
  $("enemyHp").textContent="Ooze · "+state.enemy.hp+"/"+state.enemy.maxHp+" HP";
 }
 function glyph(action){
+ if(!actions.includes(action)){log("Unknown Glyph action blocked.");return;}
  if(state.glyph.hp<=0){log("Glyph cannot act.");return;}
  const roll=Math.floor(Math.random()*6)+1,amount=roll+2;
- if(action==="SUPPORT"&&state.alice.hp>0)state.alice.hp=Math.min(state.alice.maxHp,state.alice.hp+amount);
- if(action==="ATTACK"&&state.enemy.hp>0)state.enemy.hp=Math.max(0,state.enemy.hp-amount);
- const description={SUPPORT:state.alice.hp<=0?"Alice is incapacitated; no healing applied":"Prototype support, up to "+amount+" HP",ATTACK:"Prototype attack, up to "+amount+" damage",DEFEND:"Defensive stance (expires end of round)",CONTROL:"Enemy movement lanes marked (expires end of round)",SCAN:"Scanned nearby hazards"}[action];
+ const eligibleSupport=state.alice.hp>0&&state.alice.hp<state.alice.maxHp;
+ const eligibleAttack=state.enemy.hp>0;
+ if(action==="SUPPORT"&&eligibleSupport)state.alice.hp=Math.min(state.alice.maxHp,state.alice.hp+amount);
+ if(action==="ATTACK"&&eligibleAttack)state.enemy.hp=Math.max(0,state.enemy.hp-amount);
+ const description={SUPPORT:eligibleSupport?"Prototype support, up to "+amount+" HP":"No eligible support target",ATTACK:eligibleAttack?"Prototype attack, up to "+amount+" damage":"No living target",DEFEND:"Defensive stance (expires end of round)",CONTROL:"Enemy movement lanes marked (expires end of round)",SCAN:"Scanned nearby hazards"}[action];
  log("Glyph "+action+": "+description);renderStats();
 }
 for(const action of actions){const button=document.createElement("button");button.textContent=action;button.onclick=()=>glyph(action);$("glyphActions").append(button);}
