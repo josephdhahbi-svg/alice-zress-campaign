@@ -33,6 +33,7 @@ const { listEpicQuestCandidates, previewEpicQuestCandidate } = require("./backen
 const { listLichdomRitualVariants, previewLichdomRitualVariant } = require("./backend/lichdom-ritual-variants");
 const { getEpicQuestTemplate } = require("./backend/epic-quest-templates");
 const { listChronosAnomalies, previewChronosStabilization } = require("./backend/chronos-anomaly-catalog");
+const { createChronosReviewEngine } = require("./backend/chronos-review-engine");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -79,6 +80,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const questEvidence = createQuestEvidenceEngine(db);
   const chronalTravel = createChronalTravelEngine(db);
   const aliceJournal = createAliceExplorationJournal(db);
+  const chronosReviews = createChronosReviewEngine(db);
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
@@ -177,6 +179,19 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       const result=questEvidence.registerQuest({campaignId,questId:req.params.questId,actorId,requiredObjectiveIds:template.requiredObjectiveIds});
       return res.status(result.duplicate?200:201).json({success:true,...result,questId:req.params.questId,requiredObjectiveIds:template.requiredObjectiveIds,approved:false,rewards:[],reputationGranted:0});
     }catch(error){return res.status(error instanceof TypeError?400:409).json({success:false,error:error instanceof TypeError?"INVALID_INPUT":"QUEST_DEFINITION_CONFLICT"});}
+  });
+  app.post("/api/campaigns/:campaignId/chronos/reviews",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const result=chronosReviews.review({campaignId,actorId,...(req.body||{})});
+      return res.status(result.duplicate?200:201).json({success:true,...result,timelineMutated:false,rewards:[]});
+    }catch(error){return res.status(error instanceof TypeError?400:409).json({success:false,error:error instanceof TypeError?"INVALID_REVIEW":"REVIEW_CONFLICT"});}
+  });
+  app.get("/api/campaigns/:campaignId/chronos/reviews",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    return res.json({success:true,reviews:chronosReviews.list(campaignId,actorId),mode:"ADJUDICATION_ONLY"});
   });
   app.get("/api/campaigns/:campaignId/chronos/anomalies",(req,res)=>{
     const campaignId=req.params.campaignId;
