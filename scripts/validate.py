@@ -147,6 +147,58 @@ def main():
         else:
             fail(f"{path.name}: no validator profile registered for this data shape")
 
+    # Cross-file reference checks for the narrative graph and Book 1 scene.
+    books_doc = load_json(DATA / "books.json") if (DATA / "books.json").exists() else []
+    locations_doc = load_json(DATA / "locations.json") if (DATA / "locations.json").exists() else []
+    payoffs_doc = load_json(DATA / "setup_payoffs.json") if (DATA / "setup_payoffs.json").exists() else []
+    scenes_doc = load_json(DATA / "scenes.json") if (DATA / "scenes.json").exists() else []
+    book_ids = {item.get("id") for item in books_doc if isinstance(item, dict)} if isinstance(books_doc, list) else set()
+    location_ids = {item.get("id") for item in locations_doc if isinstance(item, dict)} if isinstance(locations_doc, list) else set()
+    payoff_ids = {item.get("id") for item in payoffs_doc if isinstance(item, dict)} if isinstance(payoffs_doc, list) else set()
+
+    if isinstance(payoffs_doc, list):
+        for i, payoff in enumerate(payoffs_doc):
+            if not isinstance(payoff, dict):
+                continue
+            for field in ("from_book_id", "to_book_id"):
+                if payoff.get(field) not in book_ids:
+                    fail(f"setup_payoffs.json[{i}]: {field} references unknown book {payoff.get(field)!r}")
+            if payoff.get("from_book_id") == payoff.get("to_book_id"):
+                fail(f"setup_payoffs.json[{i}]: setup and payoff must reference different books")
+
+    if isinstance(scenes_doc, list):
+        required_order = ["lawful_good", "neutral_good", "chaotic_good", "utility", "action"]
+        for i, scene in enumerate(scenes_doc):
+            if not isinstance(scene, dict):
+                continue
+            label = f"scenes.json[{i}]"
+            if scene.get("book_id") not in book_ids:
+                fail(f"{label}: unknown book_id {scene.get('book_id')!r}")
+            if scene.get("location_id") not in location_ids:
+                fail(f"{label}: unknown location_id {scene.get('location_id')!r}")
+            if scene.get("choice_order") != required_order:
+                fail(f"{label}: choice_order must be {required_order!r}")
+            choices = scene.get("choices")
+            if not isinstance(choices, list) or len(choices) != 5:
+                fail(f"{label}: exactly five choices are required")
+            else:
+                seen_choice_ids = set()
+                for j, choice in enumerate(choices):
+                    if not isinstance(choice, dict):
+                        fail(f"{label}.choices[{j}]: expected an object")
+                        continue
+                    if not isinstance(choice.get("id"), str) or not choice.get("id"):
+                        fail(f"{label}.choices[{j}]: missing choice id")
+                    elif choice["id"] in seen_choice_ids:
+                        fail(f"{label}: duplicate choice id {choice['id']!r}")
+                    else:
+                        seen_choice_ids.add(choice["id"])
+                    if choice.get("order") != j + 1 or choice.get("kind") != required_order[j]:
+                        fail(f"{label}.choices[{j}]: choice order/kind mismatch")
+            for payoff_id in scene.get("setup_payoff_ids", []):
+                if payoff_id not in payoff_ids:
+                    fail(f"{label}: unknown setup/payoff id {payoff_id!r}")
+
     if errors:
         print("\n".join(errors))
         print(f"FAIL: {len(errors)} issue(s) across {checked_files} data file(s), {checked_records} record(s).")
