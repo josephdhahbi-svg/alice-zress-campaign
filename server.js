@@ -18,6 +18,7 @@ const { createSettlementTradeEngine } = require("./backend/settlement-trade-engi
 const { createSettlementMarketPulseEngine } = require("./backend/settlement-market-pulse");
 const { createCombatEngine } = require("./backend/combat-engine");
 const { createQuestEvidenceEngine } = require("./backend/quest-evidence-engine");
+const { listQuestChains, previewQuestChain } = require("./backend/multiverse-quest-chains");
 const { createJournalQuestBridge } = require("./backend/journal-quest-bridge");
 const { listAscensionPaths, getAscensionPath } = require("./backend/ascension-path-catalog");
 const { getMultiverseAdventureIndex, availableRouteLeads } = require("./backend/multiverse-adventure-index");
@@ -742,6 +743,22 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
       return res.status(409).json({success:false,error:"ATTESTATION_CONFLICT"});
     }
+  });
+  // Read-only LEGO chain planning; never registers, completes or unlocks quests.
+  app.get("/api/campaigns/:campaignId/quests/multiverse-chains",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    if(!id(req.params.campaignId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(req.params.campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    return res.json({success:true,chains:listQuestChains(),advisoryOnly:true});
+  });
+  app.get("/api/campaigns/:campaignId/quests/multiverse-chains/:chainId",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    if(!id(req.params.campaignId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(req.params.campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    try{
+      const chain=previewQuestChain(req.params.chainId);
+      return chain?res.json({success:true,chain}):res.status(404).json({success:false,error:"NOT_FOUND"});
+    }catch{return res.status(400).json({success:false,error:"INVALID_INPUT"});}
   });
   // Quest evidence is derived only from campaign journal events authored by a DM.
   // No candidate artifacts are automatically awarded.
