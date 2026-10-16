@@ -34,3 +34,25 @@ the player *before* exposing snapshots or accepting commands. Open SQLite
 connections with a suitable timeout and enable foreign keys on every
 connection. Test actual file-backed concurrency and backup/restore before
 production use. Never treat this prototype as a multiplayer-ready service.
+
+## Faction war prototype
+`faction-pulse.js` is a better-sqlite3-compatible **library**, not a running
+cron service. It provides transactional hourly tick idempotency, bounded
+influence, provisional conquest rules and a world pulse audit. The host
+application must provide a SQLite adapter and an explicitly managed cron
+scheduler; the repository does not currently deploy either.
+
+`game/faction-war.html` is a separate browser-local **demonstration** linked
+from `game/living-world.html`. Its illustrative factions and territories
+are seeded demo data, not approved canon. The demo persists in browser
+localStorage and supports manual ticks and JSON export; it does not
+read or write the backend SQLite database. Do not conflate local manual
+pulses with the server's idempotent UTC hourly ticks.
+
+Test commands:
+```sh
+node --test backend/faction-pulse.test.js
+python scripts/test_living_world.py
+```
+Tests were authored and CI was configured; a passing run has not yet been
+independently verified in this conversation.
