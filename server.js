@@ -21,6 +21,7 @@ const { listAscensionPaths, getAscensionPath } = require("./backend/ascension-pa
 const { getMultiverseAdventureIndex, availableRouteLeads } = require("./backend/multiverse-adventure-index");
 const { planTimeSpaceJourney, listTimeSpaceEras, listTravelMethods } = require("./backend/rabbit-hole-time-space");
 const { createChronalTravelEngine } = require("./backend/chronal-travel-engine");
+const { getDialogueScene, getDialogueChoices, previewDialogueChoice } = require("./backend/dialogue-engine");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -128,6 +129,22 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const plan=planTimeSpaceJourney(req.body||{});
     return res.status(plan.reason==="INVALID_DR_DATE"||plan.reason==="UNKNOWN_LOCATION"||plan.reason==="UNKNOWN_TRAVEL_METHOD"?400:200)
       .json({success:true,...plan});
+  });
+  // Read-only authored dialogue, with actor membership and no character mutation.
+  app.get("/api/campaigns/:campaignId/dialogue/:nodeId",(req,res)=>{
+    const {campaignId,nodeId}=req.params;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const scene=getDialogueScene(nodeId);
+    if(!scene)return res.status(404).json({success:false,error:"UNKNOWN_SCENE"});
+    return res.json({success:true,scene:{id:scene.id,name:scene.name,plane:scene.plane,region:scene.region,drYear:scene.drYear,sourceStatus:scene.sourceStatus},choices:getDialogueChoices(nodeId)});
+  });
+  app.post("/api/campaigns/:campaignId/dialogue/:nodeId/preview",(req,res)=>{
+    const {campaignId,nodeId}=req.params;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const preview=previewDialogueChoice(nodeId,req.body?.choiceType);
+    return res.status(preview.reason==="UNKNOWN_SCENE"?404:preview.reason==="INVALID_CHOICE"?400:200).json({success:true,...preview});
   });
   // Discoverable routes only: no implicit teleport, date progression or character mutation.
   app.get("/api/campaigns/:campaignId/world/adventures",(req,res)=>{
