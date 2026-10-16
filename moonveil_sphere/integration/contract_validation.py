@@ -63,3 +63,51 @@ def validate_connection(connection, known_entity_ids):
     if connection.get("canon_status") not in CANON_STATUSES:
         errors.append("invalid_connection_canon_status")
     return errors
+
+def validate_causal_chain(chain):
+    """Validate a proposed causal graph without applying any event."""
+    errors = []
+    if chain.get("status") != "PROPOSED_CAUSAL_CHAIN_READ_ONLY":
+        errors.append("causal_chain_must_remain_proposed_read_only")
+    if chain.get("state_effect") != "none":
+        errors.append("causal_chain_must_have_no_state_effect")
+    if chain.get("canon_status") not in CANON_STATUSES:
+        errors.append("invalid_causal_chain_canon_status")
+    events = chain.get("events", [])
+    ids = [event.get("event_id") for event in events]
+    if any(not event_id for event_id in ids):
+        errors.append("missing_causal_event_id")
+    if len(ids) != len(set(ids)):
+        errors.append("duplicate_causal_event_id")
+    known = set(ids)
+    for event in events:
+        event_id = event.get("event_id")
+        if event.get("canon_status") not in CANON_STATUSES:
+            errors.append(f"invalid_event_canon_status:{event_id}")
+        for field in ("cause_event_ids", "consequence_event_ids", "prerequisite_event_ids"):
+            refs = event.get(field, [])
+            if not isinstance(refs, list):
+                errors.append(f"invalid_event_reference_list:{event_id}:{field}")
+                continue
+            for ref in refs:
+                # This one token represents a future player action, not an event that already exists.
+                if ref == "PLAYER_CONFIRMED_U01_CHOICE":
+                    if field != "prerequisite_event_ids":
+                        errors.append(f"player_choice_token_not_prerequisite:{event_id}")
+                    continue
+                if ref not in known:
+                    errors.append(f"unknown_event_reference:{event_id}:{ref}")
+        if event.get("status") == "locked_preview" and event.get("event_type") == "quest_opportunity":
+            if "PLAYER_CONFIRMED_U01_CHOICE" not in event.get("prerequisite_event_ids", []):
+                errors.append(f"quest_preview_missing_player_choice_gate:{event_id}")
+    for event in events:
+        event_id = event.get("event_id")
+        for cause in event.get("cause_event_ids", []):
+            if cause in known and event_id not in next(e for e in events if e.get("event_id") == cause).get("consequence_event_ids", []):
+                errors.append(f"causal_link_not_reciprocal:{cause}:{event_id}")
+        for consequence in event.get("consequence_event_ids", []):
+            if consequence in known and event_id not in next(e for e in events if e.get("event_id") == consequence).get("cause_event_ids", []):
+                errors.append(f"causal_link_not_reciprocal:{event_id}:{consequence}")
+    if chain.get("date_precision") == "unknown" and chain.get("dr_epoch_date") is not None:
+        errors.append("unknown_chain_date_must_remain_null")
+    return errors
