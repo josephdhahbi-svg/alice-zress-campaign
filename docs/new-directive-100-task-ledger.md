@@ -157,3 +157,12 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Added reconnect tests for stale/current/invalid revision cursors (`5da85ee`); latest CI outcome pending.
 - Documented HTTP cursor-based journal replay after reconnect (`380108d`).
 - No automatic browser save migration or gameplay state projection yet; the server event ledger remains a local development prototype.
+
+## Batch 9 — user-supplied LEGO bundle integration
+- Latest verified baseline [CI 38846582693](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38846582693) passed at `083eb354`.
+- Added `backend/backup-service.js`: opt-in SQLite online backups via `db.backup()`, default six-hour interval, retention, failure cleanup and no concurrent runs (`72cda95`).
+- Wired `MOONVEIL_BACKUP_DIR` and `MOONVEIL_BACKUP_RETAIN` to local server lifecycle (`1db1aec`); its CI run [38846849378](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38846849378) passed.
+- Added backup service unit tests (`e62730b`); baseline CI [38846861904](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38846861904) passed but the workflow did not yet execute these tests.
+- Added dedicated CI backup test step (`5dfbbae`); its outcome pending at ledger update time.
+- Documented safe integration decisions, Flutter proposals, and provisional Glyph TypeScript combat prototype (`15452d2`).
+- T093 backups: PARTIAL (online local backups, no restore drill, encryption or offsite rotation). T087–T089 Flutter features: NOT STARTED. T040 combat/rules: NOT STARTED for attached Glyph prototype. Do not call these production-ready.
