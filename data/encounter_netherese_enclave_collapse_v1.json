@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "status": "PROPOSED_HOMEBREW_ENCOUNTER_READ_ONLY",
+  "encounter_id": "ENC_NETHERESE_ENCLAVE_COLLAPSE",
+  "title": "Netherese Enclave Collapse Sequence & Ooze Surge",
+  "canon_status": "unverified",
+  "source_reference": "User-supplied Meeting 12 encounter handoff; no published-source citation supplied",
+  "historical_context": {
+    "dr_year": null,
+    "date_precision": "unknown",
+    "timeline_id": null
+  },
+  "geography": {
+    "primary_location_id": null,
+    "near_skullport": false,
+    "promenade_destination_id": "LOC_PROMENADE",
+    "coordinates": null,
+    "depth_feet": null,
+    "geological_strata_status": "unverified_requires_copilot_research"
+  },
+  "player_state_effects_enabled": false,
+  "hazards": [
+    {
+      "hazard_id": "HAZ_SEISMIC_TREMORS",
+      "name": "Seismic Tremors",
+      "classification": "proposed_homebrew",
+      "trigger": "Round 1 onward or GM-triggered tremor",
+      "check": {
+        "type": "Dexterity saving throw",
+        "dc": 14
+      },
+      "failure_effect": "Knocked prone; any additional falling-debris damage is GM-adjudicated and not specified as automatic.",
+      "status": "preview_only"
+    },
+    {
+      "hazard_id": "HAZ_HYDROSTATIC_OOZE_SURGE",
+      "name": "Hydrostatic Ooze Surge",
+      "classification": "proposed_homebrew",
+      "trigger": "Ooze advances once per round",
+      "movement_feet_per_round": 15,
+      "damage": {
+        "dice": "2d6",
+        "type": "acid",
+        "trigger": "On contact or as defined by GM encounter rules; exact trigger unresolved"
+      },
+      "movement_penalty": "Unspecified; must be defined before running encounter.",
+      "fluid_model": "Fictional acidic non-Newtonian slime; parameters not calibrated",
+      "status": "preview_only"
+    },
+    {
+      "hazard_id": "HAZ_ARCANE_NULL_RESONANCE",
+      "name": "Arcane Null-Resonance",
+      "classification": "proposed_homebrew",
+      "trigger": "Casting a spell of 2nd level or higher",
+      "check": {
+        "type": "d20",
+        "trigger_on_result": 1
+      },
+      "failure_effect": "Wild magic fluctuation; exact effect selected by GM from an approved table.",
+      "notes": "Alice's protected current Level 1 character cannot cast 2nd-level spells under normal class progression; hazard is not a current actionable penalty for her.",
+      "status": "preview_only"
+    }
+  ],
+  "objectives": [
+    {
+      "objective_id": "OBJ_STRUCTURAL_SHUTTER",
+      "name": "Structural Shutter",
+      "checks": [
+        {
+          "type": "Carpenter's Tools",
+          "dc": 15
+        },
+        {
+          "type": "Mason's Tools",
+          "dc": 15
+        },
+        {
+          "type": "Arcana",
+          "dc": 15
+        }
+      ],
+      "success": "Stabilize lintels or valves and reduce structural danger.",
+      "failure": "Collapse pressure persists; apply only a preapproved consequence.",
+      "status": "preview_only"
+    },
+    {
+      "objective_id": "OBJ_VECTOR_CALCULATION",
+      "name": "Vector Calculation",
+      "checks": [
+        {
+          "type": "Arcana",
+          "dc": 13
+        },
+        {
+          "type": "Investigation",
+          "dc": 13
+        }
+      ],
+      "success": "Identify a safer route through shifting space.",
+      "failure": "Use a longer or riskier route only if the GM has verified a route.",
+      "status": "preview_only"
+    },
+    {
+      "objective_id": "OBJ_DISRUPTION_VECTOR",
+      "name": "Disruption Vector",
+      "checks": [],
+      "success": "Resolve or redirect displaced subterranean entities through combat, negotiation, or environmental tactics.",
+      "failure": "Entities remain an unresolved threat; exact consequences are GM-authored.",
+      "status": "preview_only"
+    }
+  ],
+  "outcomes": [
+    {
+      "outcome_id": "OUTCOME_SUCCESS",
+      "label": "Success",
+      "status": "proposed",
+      "effects": [
+        "Stabilize critical structures",
+        "Reduce the ooze surge",
+        "A conditional safe-transit route may be reviewed"
+      ],
+      "must_not_do": [
+        "Do not unlock a route without geographic, historical, and player-authorization checks"
+      ]
+    },
+    {
+      "outcome_id": "OUTCOME_PARTIAL",
+      "label": "Partial Success",
+      "status": "proposed",
+      "effects": [
+        "Transit remains possible only after GM review",
+        "A delay, minor damage, or resource cost may be selected"
+      ],
+      "must_not_do": [
+        "Do not invent an operational route or automatic damage"
+      ]
+    },
+    {
+      "outcome_id": "OUTCOME_FAILURE",
+      "label": "Failure",
+      "status": "proposed",
+      "effects": [
+        "A dangerous detour or temporary obstruction may be presented if supported by the encounter state"
+      ],
+      "unresolved": [
+        "User-supplied 3d6 trauma is undefined",
+        "Exhaustion implementation depends on chosen D&D edition and campaign rules",
+        "Promenade accessibility is unverified"
+      ],
+      "must_not_do": [
+        "Do not automatically apply trauma, exhaustion, loss, or route lock to Alice's save"
+      ]
+    }
+  ],
+  "interface_rules": {
+    "read_only": true,
+    "choices_enabled": false,
+    "rolls_enabled": false,
+    "save_mutation": false,
+    "rewards_enabled": false,
+    "route_unlocks_enabled": false
+  },
+  "required_reviews": [
+    "D&D source/era review",
+    "Copilot geography and depth/strata research",
+    "GM review of damage triggers and movement penalty",
+    "D&D edition/ruleset review of exhaustion and trauma",
+    "Player approval before encounter becomes active"
+  ]
+}
