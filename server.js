@@ -32,6 +32,7 @@ const { listFuturePlanarHoldings, previewFuturePlanarHolding } = require("./back
 const { listEpicQuestCandidates, previewEpicQuestCandidate } = require("./backend/epic-quest-candidates");
 const { listLichdomRitualVariants, previewLichdomRitualVariant } = require("./backend/lichdom-ritual-variants");
 const { getEpicQuestTemplate } = require("./backend/epic-quest-templates");
+const { listChronosAnomalies, previewChronosStabilization } = require("./backend/chronos-anomaly-catalog");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -176,6 +177,19 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       const result=questEvidence.registerQuest({campaignId,questId:req.params.questId,actorId,requiredObjectiveIds:template.requiredObjectiveIds});
       return res.status(result.duplicate?200:201).json({success:true,...result,questId:req.params.questId,requiredObjectiveIds:template.requiredObjectiveIds,approved:false,rewards:[],reputationGranted:0});
     }catch(error){return res.status(error instanceof TypeError?400:409).json({success:false,error:error instanceof TypeError?"INVALID_INPUT":"QUEST_DEFINITION_CONFLICT"});}
+  });
+  app.get("/api/campaigns/:campaignId/chronos/anomalies",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,anomalies:listChronosAnomalies(),mode:"READ_ONLY"});
+  });
+  app.post("/api/campaigns/:campaignId/chronos/preview",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{
+      const preview=previewChronosStabilization(req.body||{});
+      return preview?res.json({success:true,preview}):res.status(404).json({success:false,error:"UNKNOWN_ANOMALY"});
+    }catch(error){return res.status(400).json({success:false,error:"INVALID_CHRONOS_INPUT"});}
   });
   // Proposed quest and ritual LEGOs are inspectable but cannot grant progression.
   app.get("/api/campaigns/:campaignId/world/epic-quest-candidates",(req,res)=>{
