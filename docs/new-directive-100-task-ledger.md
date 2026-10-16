@@ -215,3 +215,10 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Added `backend/faction-dispute-engine.test.js` for escalation, participant-only settlement, stale owner rejection, and atomicity (`33e7117`). [Validation at tests commit](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38848321212) succeeded.
 - Added admin-only `POST /api/war-table/dispute` and `POST /api/war-table/resolve` endpoints (`8dd308a`). Uses existing local admin token, not untrusted user-supplied roles. Wired dispute tests into CI (`f87a5c6`). CI on integration commit pending at ledger update; do not claim endpoint integration tests exist yet.
 - T027 faction map PARTIAL, T046 diplomacy/disputes PARTIAL, T049 war event log NOT STARTED for disputes. No campaign-scoped event journal or websocket synchronization yet; not production-ready.
+
+## Batch 17 — faction dispute HTTP guards and audit
+- Verified prior faction dispute CI [38848358238](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38848358238) SUCCESS and Pages [38848393400](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38848393400) SUCCESS.
+- Added real HTTP integration assertions for unauthenticated, malformed, missing-target and signed non-admin dispute/resolve requests (`0858435`). Full successful HTTP dispute lifecycle test remains outstanding.
+- Added `faction_dispute_audit` with CREATED, ESCALATED and RESOLVED entries inside the same SQLite transactions as state changes (`5603f27`). This is a local audit trail, NOT campaign-scoped event journal or websocket sync.
+- Extended unit tests to assert audit records and rollback on ownership conflict (`324b005`). Latest CI is pending; do not mark these additions verified until it passes.
+- T046 PARTIAL, T049 PARTIAL. Remaining: DM campaign-scoped authorization, full endpoint lifecycle tests, reconciliation with autonomous faction pulses, migration/version strategy, websocket journal synchronization, secure deployment.
