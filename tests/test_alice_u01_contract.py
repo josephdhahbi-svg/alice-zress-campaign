@@ -51,6 +51,10 @@ class AliceU01ContractTests(unittest.TestCase):
         self.assertIn("data.status!=='DESIGN_ONLY_NO_LIVE_SAVE'", self.html)
         self.assertIn("btn.disabled=true", self.html)
         self.assertIn("All choices remain disabled.", self.html)
+        self.assertIn("proposed_cosmic_to_u01_causal_chain_v1.json", self.html)
+        self.assertIn("renderCausalChain", self.html)
+        self.assertIn("PROPOSED_CAUSAL_CHAIN_READ_ONLY", self.html)
+        self.assertIn("Causal graph unavailable; no events are active.", self.html)
 
 if __name__ == "__main__":
     unittest.main()
