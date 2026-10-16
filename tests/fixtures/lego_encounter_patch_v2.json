@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "patch_id": "PATCH_ENC_NETHERESE_OOZE_DC_V2",
+  "target_entity": "ENC_NETHERESE_ENCLAVE_COLLAPSE",
+  "base_version": 1,
+  "new_version": 2,
+  "status": "proposed",
+  "canon_status": "unverified",
+  "change_type": "update",
+  "fields_changed": {
+    "hazards.HAZ_HYDROSTATIC_OOZE_SURGE.proposed_dc": {
+      "from": null,
+      "to": 15
+    }
+  },
+  "reason": "Synthetic example to demonstrate reviewable patch structure; not an approved rules change.",
+  "source_reference": "copilot_lego_validation_delivery",
+  "ledger_event_id": null,
+  "requires_review": ["D&D rules", "encounter balance", "project owner"],
+  "applied": false
+}
