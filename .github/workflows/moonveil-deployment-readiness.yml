@@ -1,0 +1,31 @@
+name: Moonveil deployment readiness (no deployment)
+on:
+  push:
+    branches: [feature/verified-automation-phase-a]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run backend tests
+        run: npm test
+      - name: Check frontend JS syntax
+        run: node --check prototype/alice-room-atlas.js
+      - name: Check server syntax
+        run: node --check server.js
+      - name: Verify no public deployment enabled
+        run: |
+          test ! -f render.yaml
+          test ! -f railway.json
+          test ! -f fly.toml
