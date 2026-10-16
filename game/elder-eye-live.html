@@ -33,7 +33,7 @@ label{display:block;margin:12px 0}small,.muted{color:#c5badb}#status{white-space
 "use strict";
 const sceneId="scene-book01-rabbit-hole-01";
 const $=id=>document.getElementById(id);
-let scene=null,revision=0,pendingEventId=null;
+let scene=null,revision=0,pendingEventId=null,pendingOption=null;
 const labels=["Lawful Good","Neutral Good","Chaotic Good","Utility","Action"];
 const status=msg=>$("status").textContent=msg;
 const headers=()=>({Authorization:"Bearer "+$("token").value.trim(),"Content-Type":"application/json"});
@@ -60,12 +60,13 @@ async function submit(option){
  if(!scene)return;
  const modifier=Number($("modifier").value);
  if($("modifier").value.trim()===""||!Number.isSafeInteger(modifier)||modifier< -10||modifier>20)return status("Set a verified character modifier before rolling. Do not guess Alice's stats.");
- if(!pendingEventId)pendingEventId=crypto.randomUUID();
+ if(pendingEventId&&pendingOption!==option)return status("An earlier choice is awaiting confirmation. Retry that same choice.");
+ if(!pendingEventId){pendingEventId=crypto.randomUUID();pendingOption=option;}
  const buttons=[...$("choices").querySelectorAll("button")];buttons.forEach(b=>b.disabled=true);
  try{
   const result=await fetch(base()+"/scenes/"+sceneId+"/choices",{method:"POST",headers:headers(),
    body:JSON.stringify({eventId:pendingEventId,expectedRevision:revision,option,modifier})}).then(jsonResponse);
-  revision=result.revision;pendingEventId=null;
+  revision=result.revision;pendingEventId=null;pendingOption=null;
   $("journal").hidden=false;$("outcome").textContent=result.result.outcome||"Decision recorded.";
   $("revision").textContent="Roll "+result.result.roll+" + "+result.result.modifier+" = "+result.result.total+" vs DC "+result.result.dc+" · revision "+revision;
   status("Choice recorded in VTT journal.");
