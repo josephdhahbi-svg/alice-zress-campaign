@@ -39,13 +39,13 @@
 - [ ] T021 — Model quests with prerequisite state machine
 - [ ] T022 — Separate story beats from verified quest completions
 - [ ] T023 — Add objectives and evidence-based completion checks
-- [ ] T024 — Require server-side character and campaign ownership
+- [x] T024 — Require server-side character and campaign ownership
 - [ ] T025 — Support failed, blocked, active and complete statuses
 - [ ] T026 — Track repeatability and cooldowns explicitly
 - [ ] T027 — Define encounter and rescue outcome flags
-- [ ] T028 — Implement idempotent quest completion transaction
+- [x] T028 — Implement idempotent quest completion transaction
 - [ ] T029 — Log quest transitions with audit metadata
-- [ ] T030 — Test bypass and duplicate completion attempts
+- [x] T030 — Test bypass and duplicate completion attempts
 
 ## Phase 4: Artifacts & Crafting
 - [ ] T031 — Catalog existing Mistral-Netherese pair per trilogy
@@ -165,3 +165,10 @@ T005, T008 and T010: baseline written and committed in docs/campaign/ALICE_CANON
 - **T045 VERIFIED DONE:** `backend/combat-engine.test.js` checks invalid actions/participants leave no state mutations; `backend/combat-persistence.integration.test.js` verifies file-backed restart recovery and duplicate replay; `backend/migrations-v3.test.js` verifies migration persistence after reopening. CI run `38920294004` passed. This does not yet establish simultaneous-writer stress tests for T093.
 - Attack resolution modules `backend/combat-attack-rules.js` and `backend/combat-attack-rules.test.js` passed Omniversal run `38920328010` and Validate run `38920328420`. Resolver remains pure and unintegrated; no automatic rewards.
 - **Verified total: 12/100.** T074 and T093 remain open pending full acceptance.
+
+## 2026-10-16 — Verified quest security and transactional completion
+- **T024 VERIFIED DONE:** `backend/quest-evidence-engine.js` validates campaign membership and owner/DM authorization against `vtt_characters`; API rejects impersonation and cross-campaign evidence. Commits `5d10ebeb8956c84e7a6f2971b031965f5a950a8e`, `b311f9316f315f7bee2c7dd15ee9a913291d7c6b`.
+- **T028 VERIFIED DONE:** SQLite transaction atomically checks DM-authored completion approval, objective evidence and inserts one completion; idempotent repeat returns duplicate and conflicting completion ID is rejected. No artifact grants. `backend/quest-evidence-engine.test.js` commit `d36302dfe6ccfd55770ef5a72e33127b2a7bf18d`.
+- **T030 VERIFIED DONE:** `backend/quest-evidence-engine.test.js` and `backend/quest-evidence-api.integration.test.js` verify missing evidence, forged player events, wrong owner, duplicate objectives and completion, conflicting retry and rollback. Integration test commit `aa607842d8d19567f37d83624eabdfc9d3deadb4`.
+- Omniversal CI run `38921424225` SUCCESS and Validate campaign records run `38921424168` SUCCESS.
+- **Verified total: 15/100.** T023 remains open pending trusted quest-catalog objective requirements, and artifact-award tasks remain open. No in-game rewards.
