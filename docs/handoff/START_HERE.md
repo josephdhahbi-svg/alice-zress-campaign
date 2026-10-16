@@ -186,3 +186,9 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - `3651304` added `docs/development/meeting-13-backlog.md` with verified status and dependencies for 15 tasks.
 - No authenticated backend, command endpoint, save/reload, browser test, canon-verified U01 locations/NPCs, or approved portrait has been completed. Alice remains Level 1; five choices unselected; routes locked; no save mutation.
 - Next: run the exact tests on a complete checkout, do real browser tests, review Gemini's actual secure backend files, obtain source-attributed Copilot U01 records, then create/approve portrait asset.
+
+## Copilot Master 100-task assignment review
+- `9203c01` added `docs/handoff/copilot-master-100-task-assignment-review.md`. Accepted the 100-task plan as a backlog proposal only, not proof of execution.
+- Corrected unsupported claim that Menzoberranzan, Silken Paths, Wormwrithings, Dark Dominion, and Blingdenstone are verified for U01: the pasted relay did not provide source/page/date evidence. Keep each unverified for Alice's scene until sourced.
+- Preserve existing canon-status enum and entity schema. Current master atlas is a seeded design graph with unassigned book titles and empty routes; it must not be represented as operational geography.
+- Next: Copilot actual repo inventory + source-attributed U01 shortlist; Gemini actual authenticated read-projection and secure command source files; ChatGPT UI contract checks, full checkout tests, then approved portrait.
