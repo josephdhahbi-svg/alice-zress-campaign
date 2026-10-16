@@ -31,7 +31,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0003",
+      "id": "src_0002",
       "title": "Blackmoor (Supplement II)",
       "publicationDate": "1975",
       "precision": "YEAR",
@@ -56,7 +56,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0002",
+      "id": "src_0003",
       "title": "Greyhawk (Supplement I)",
       "publicationDate": "1975",
       "precision": "YEAR",
@@ -132,31 +132,6 @@
     },
     {
       "id": "src_0006",
-      "title": "The Palace of the Vampire Queen",
-      "publicationDate": "1976",
-      "precision": "YEAR",
-      "edition": "ODND",
-      "kind": "Adventure",
-      "setting": "Multisetting",
-      "publicationStatus": "RELEASED_AS_OF_2026_10_16",
-      "sourceVerification": "NEEDS_BIBLIOGRAPHIC_CORRECTION",
-      "inWorld": {
-        "calendar": "UNRESOLVED",
-        "era": "UNRESOLVED",
-        "drStart": null,
-        "drEnd": null,
-        "plane": "UNRESOLVED",
-        "domains": [],
-        "factions": [],
-        "characters": [],
-        "deities": [],
-        "events": []
-      },
-      "references": [],
-      "sourceUrl": null
-    },
-    {
-      "id": "src_0008",
       "title": "Dungeons & Dragons Basic Set",
       "publicationDate": "1977",
       "precision": "YEAR",
@@ -206,7 +181,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0011",
+      "id": "src_0008",
       "title": "Against the Giants",
       "publicationDate": "1978",
       "precision": "YEAR",
@@ -281,7 +256,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0012",
+      "id": "src_0011",
       "title": "Dungeon Masters Guide",
       "publicationDate": "1979",
       "precision": "YEAR",
@@ -306,7 +281,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0013",
+      "id": "src_0012",
       "title": "The Village of Hommlet",
       "publicationDate": "1979",
       "precision": "YEAR",
@@ -331,7 +306,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0014",
+      "id": "src_0013",
       "title": "Deities & Demigods",
       "publicationDate": "1980",
       "precision": "YEAR",
@@ -356,7 +331,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0015",
+      "id": "src_0014",
       "title": "The World of Greyhawk Fantasy World Setting",
       "publicationDate": "1980",
       "precision": "YEAR",
@@ -381,7 +356,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0017",
+      "id": "src_0015",
       "title": "Dungeons & Dragons Expert Set",
       "publicationDate": "1981",
       "precision": "YEAR",
@@ -431,7 +406,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0018",
+      "id": "src_0017",
       "title": "The Lost Caverns of Tsojcanth",
       "publicationDate": "1982",
       "precision": "YEAR",
@@ -456,7 +431,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0019",
+      "id": "src_0018",
       "title": "Monster Manual II",
       "publicationDate": "1983",
       "precision": "YEAR",
@@ -481,7 +456,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0020",
+      "id": "src_0019",
       "title": "Ravenloft (I6)",
       "publicationDate": "1983",
       "precision": "YEAR",
@@ -506,7 +481,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0021",
+      "id": "src_0020",
       "title": "Dragonlance: Dragons of Despair",
       "publicationDate": "1984",
       "precision": "YEAR",
@@ -531,7 +506,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0023",
+      "id": "src_0021",
       "title": "Oriental Adventures",
       "publicationDate": "1985",
       "precision": "YEAR",
@@ -581,7 +556,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0024",
+      "id": "src_0023",
       "title": "Forgotten Realms Campaign Set",
       "publicationDate": "1987",
       "precision": "YEAR",
@@ -606,7 +581,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0025",
+      "id": "src_0024",
       "title": "Manual of the Planes",
       "publicationDate": "1987",
       "precision": "YEAR",
@@ -631,7 +606,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0026",
+      "id": "src_0025",
       "title": "Waterdeep and the North",
       "publicationDate": "1988",
       "precision": "YEAR",
@@ -656,7 +631,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0028",
+      "id": "src_0026",
       "title": "Advanced Dungeons & Dragons 2nd Edition Dungeon Master Guide",
       "publicationDate": "1989",
       "precision": "YEAR",
@@ -706,7 +681,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0029",
+      "id": "src_0028",
       "title": "Ravenloft: Realm of Terror",
       "publicationDate": "1990",
       "precision": "YEAR",
@@ -731,7 +706,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0031",
+      "id": "src_0029",
       "title": "Dark Sun Campaign Setting",
       "publicationDate": "1991",
       "precision": "YEAR",
@@ -781,7 +756,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0032",
+      "id": "src_0031",
       "title": "Spelljammer: The Complete Spacefarer's Handbook",
       "publicationDate": "1992",
       "precision": "YEAR",
@@ -806,32 +781,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0033",
-      "title": "Planescape Campaign Setting",
-      "publicationDate": "1993",
-      "precision": "YEAR",
-      "edition": "ADND2",
-      "kind": "Setting",
-      "setting": "Planescape",
-      "publicationStatus": "RELEASED_AS_OF_2026_10_16",
-      "sourceVerification": "NEEDS_BIBLIOGRAPHIC_CORRECTION",
-      "inWorld": {
-        "calendar": "UNRESOLVED",
-        "era": "UNRESOLVED",
-        "drStart": null,
-        "drEnd": null,
-        "plane": "UNRESOLVED",
-        "domains": [],
-        "factions": [],
-        "characters": [],
-        "deities": [],
-        "events": []
-      },
-      "references": [],
-      "sourceUrl": null
-    },
-    {
-      "id": "src_0035",
+      "id": "src_0032",
       "title": "Monstrous Compendium Planescape Appendix",
       "publicationDate": "1994",
       "precision": "YEAR",
@@ -856,7 +806,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0034",
+      "id": "src_0033",
       "title": "Planescape Campaign Setting",
       "publicationDate": "1994",
       "precision": "YEAR",
@@ -881,7 +831,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0036",
+      "id": "src_0034",
       "title": "Player's Option: Combat & Tactics",
       "publicationDate": "1995",
       "precision": "YEAR",
@@ -906,7 +856,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0037",
+      "id": "src_0035",
       "title": "Faiths & Avatars",
       "publicationDate": "1996",
       "precision": "YEAR",
@@ -931,7 +881,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0038",
+      "id": "src_0036",
       "title": "Demihuman Deities",
       "publicationDate": "1998",
       "precision": "YEAR",
@@ -956,7 +906,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0040",
+      "id": "src_0037",
       "title": "Dungeons & Dragons Dungeon Master's Guide (3rd edition)",
       "publicationDate": "2000",
       "precision": "YEAR",
@@ -981,7 +931,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0041",
+      "id": "src_0038",
       "title": "Dungeons & Dragons Monster Manual (3rd edition)",
       "publicationDate": "2000",
       "precision": "YEAR",
@@ -1031,7 +981,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0042",
+      "id": "src_0040",
       "title": "Forgotten Realms Campaign Setting (3rd edition)",
       "publicationDate": "2001",
       "precision": "YEAR",
@@ -1056,7 +1006,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0043",
+      "id": "src_0041",
       "title": "Manual of the Planes (3rd edition)",
       "publicationDate": "2001",
       "precision": "YEAR",
@@ -1081,7 +1031,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0044",
+      "id": "src_0042",
       "title": "Deities and Demigods (3rd edition)",
       "publicationDate": "2002",
       "precision": "YEAR",
@@ -1106,7 +1056,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0045",
+      "id": "src_0043",
       "title": "Dungeons & Dragons Player's Handbook v.3.5",
       "publicationDate": "2003",
       "precision": "YEAR",
@@ -1131,32 +1081,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0046",
-      "title": "Eberron Campaign Setting",
-      "publicationDate": "2003",
-      "precision": "YEAR",
-      "edition": "DND35",
-      "kind": "Setting",
-      "setting": "Eberron",
-      "publicationStatus": "RELEASED_AS_OF_2026_10_16",
-      "sourceVerification": "NEEDS_BIBLIOGRAPHIC_CORRECTION",
-      "inWorld": {
-        "calendar": "UNRESOLVED",
-        "era": "UNRESOLVED",
-        "drStart": null,
-        "drEnd": null,
-        "plane": "UNRESOLVED",
-        "domains": [],
-        "factions": [],
-        "characters": [],
-        "deities": [],
-        "events": []
-      },
-      "references": [],
-      "sourceUrl": null
-    },
-    {
-      "id": "src_0047",
+      "id": "src_0044",
       "title": "Eberron Campaign Setting",
       "publicationDate": "2004",
       "precision": "YEAR",
@@ -1181,7 +1106,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0048",
+      "id": "src_0045",
       "title": "Lords of Madness",
       "publicationDate": "2005",
       "precision": "YEAR",
@@ -1206,7 +1131,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0049",
+      "id": "src_0046",
       "title": "Tome of Magic",
       "publicationDate": "2006",
       "precision": "YEAR",
@@ -1231,7 +1156,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0050",
+      "id": "src_0047",
       "title": "Elder Evils",
       "publicationDate": "2007",
       "precision": "YEAR",
@@ -1256,7 +1181,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0051",
+      "id": "src_0048",
       "title": "Dungeons & Dragons Player's Handbook (4th edition)",
       "publicationDate": "2008",
       "precision": "YEAR",
@@ -1281,7 +1206,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0052",
+      "id": "src_0049",
       "title": "Forgotten Realms Campaign Guide (4th edition)",
       "publicationDate": "2008",
       "precision": "YEAR",
@@ -1306,7 +1231,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0053",
+      "id": "src_0050",
       "title": "Eberron Campaign Guide (4th edition)",
       "publicationDate": "2009",
       "precision": "YEAR",
@@ -1331,7 +1256,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0054",
+      "id": "src_0051",
       "title": "Dark Sun Campaign Setting (4th edition)",
       "publicationDate": "2010",
       "precision": "YEAR",
@@ -1356,7 +1281,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0055",
+      "id": "src_0052",
       "title": "Heroes of the Feywild",
       "publicationDate": "2011",
       "precision": "YEAR",
@@ -1381,7 +1306,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0056",
+      "id": "src_0053",
       "title": "Menzoberranzan: City of Intrigue",
       "publicationDate": "2012",
       "precision": "YEAR",
@@ -1406,7 +1331,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0059",
+      "id": "src_0054",
       "title": "Dungeon Master's Guide (5th edition)",
       "publicationDate": "2014",
       "precision": "YEAR",
@@ -1431,7 +1356,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0058",
+      "id": "src_0055",
       "title": "Monster Manual (5th edition)",
       "publicationDate": "2014",
       "precision": "YEAR",
@@ -1456,7 +1381,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0057",
+      "id": "src_0056",
       "title": "Player's Handbook (5th edition)",
       "publicationDate": "2014",
       "precision": "YEAR",
@@ -1481,7 +1406,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0061",
+      "id": "src_0057",
       "title": "Out of the Abyss",
       "publicationDate": "2015",
       "precision": "YEAR",
@@ -1506,7 +1431,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0060",
+      "id": "src_0058",
       "title": "Princes of the Apocalypse",
       "publicationDate": "2015",
       "precision": "YEAR",
@@ -1531,7 +1456,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0062",
+      "id": "src_0059",
       "title": "Curse of Strahd",
       "publicationDate": "2016",
       "precision": "YEAR",
@@ -1556,7 +1481,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0063",
+      "id": "src_0060",
       "title": "Volo's Guide to Monsters",
       "publicationDate": "2016",
       "precision": "YEAR",
@@ -1581,7 +1506,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0064",
+      "id": "src_0061",
       "title": "Tales from the Yawning Portal",
       "publicationDate": "2017",
       "precision": "YEAR",
@@ -1606,7 +1531,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0065",
+      "id": "src_0062",
       "title": "Xanathar's Guide to Everything",
       "publicationDate": "2017",
       "precision": "YEAR",
@@ -1631,7 +1556,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0066",
+      "id": "src_0063",
       "title": "Mordenkainen's Tome of Foes",
       "publicationDate": "2018",
       "precision": "YEAR",
@@ -1656,7 +1581,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0067",
+      "id": "src_0064",
       "title": "Waterdeep: Dragon Heist",
       "publicationDate": "2018",
       "precision": "YEAR",
@@ -1681,7 +1606,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0068",
+      "id": "src_0065",
       "title": "Waterdeep: Dungeon of the Mad Mage",
       "publicationDate": "2018",
       "precision": "YEAR",
@@ -1706,7 +1631,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0069",
+      "id": "src_0066",
       "title": "Baldur's Gate: Descent into Avernus",
       "publicationDate": "2019",
       "precision": "YEAR",
@@ -1731,7 +1656,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0070",
+      "id": "src_0067",
       "title": "Eberron: Rising from the Last War",
       "publicationDate": "2019",
       "precision": "YEAR",
@@ -1756,7 +1681,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0071",
+      "id": "src_0068",
       "title": "Explorer's Guide to Wildemount",
       "publicationDate": "2020",
       "precision": "YEAR",
@@ -1781,7 +1706,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0072",
+      "id": "src_0069",
       "title": "Tasha's Cauldron of Everything",
       "publicationDate": "2020",
       "precision": "YEAR",
@@ -1806,7 +1731,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0074",
+      "id": "src_0070",
       "title": "Candlekeep Mysteries",
       "publicationDate": "2021",
       "precision": "YEAR",
@@ -1831,7 +1756,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0075",
+      "id": "src_0071",
       "title": "The Wild Beyond the Witchlight",
       "publicationDate": "2021",
       "precision": "YEAR",
@@ -1856,7 +1781,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0073",
+      "id": "src_0072",
       "title": "Van Richten's Guide to Ravenloft",
       "publicationDate": "2021",
       "precision": "YEAR",
@@ -1881,7 +1806,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0078",
+      "id": "src_0073",
       "title": "Dragonlance: Shadow of the Dragon Queen",
       "publicationDate": "2022",
       "precision": "YEAR",
@@ -1906,7 +1831,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0077",
+      "id": "src_0074",
       "title": "Journeys Through the Radiant Citadel",
       "publicationDate": "2022",
       "precision": "YEAR",
@@ -1931,7 +1856,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0076",
+      "id": "src_0075",
       "title": "Spelljammer: Adventures in Space",
       "publicationDate": "2022",
       "precision": "YEAR",
@@ -1956,7 +1881,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0080",
+      "id": "src_0076",
       "title": "Bigby Presents: Glory of the Giants",
       "publicationDate": "2023",
       "precision": "YEAR",
@@ -1981,7 +1906,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0079",
+      "id": "src_0077",
       "title": "Keys from the Golden Vault",
       "publicationDate": "2023",
       "precision": "YEAR",
@@ -2006,7 +1931,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0081",
+      "id": "src_0078",
       "title": "Planescape: Adventures in the Multiverse",
       "publicationDate": "2023",
       "precision": "YEAR",
@@ -2031,7 +1956,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0082",
+      "id": "src_0079",
       "title": "The Book of Many Things",
       "publicationDate": "2023",
       "precision": "YEAR",
@@ -2056,7 +1981,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0086",
+      "id": "src_0080",
       "title": "Dungeon Master's Guide (2024)",
       "publicationDate": "2024",
       "precision": "YEAR",
@@ -2081,7 +2006,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0085",
+      "id": "src_0081",
       "title": "Player's Handbook (2024)",
       "publicationDate": "2024",
       "precision": "YEAR",
@@ -2106,7 +2031,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0084",
+      "id": "src_0082",
       "title": "Quests from the Infinite Staircase",
       "publicationDate": "2024",
       "precision": "YEAR",
@@ -2156,7 +2081,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0090",
+      "id": "src_0084",
       "title": "Eberron: Forge of the Artificer",
       "publicationDate": "2025",
       "precision": "YEAR",
@@ -2181,7 +2106,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0089",
+      "id": "src_0085",
       "title": "Forgotten Realms: Adventures in Faerun",
       "publicationDate": "2025",
       "precision": "YEAR",
@@ -2206,7 +2131,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0088",
+      "id": "src_0086",
       "title": "Forgotten Realms: Heroes of Faerun",
       "publicationDate": "2025",
       "precision": "YEAR",
@@ -2256,7 +2181,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0091",
+      "id": "src_0088",
       "title": "Ravenloft: The Horrors Within",
       "publicationDate": "2026-06-16",
       "precision": "DAY",
@@ -2281,7 +2206,7 @@
       "sourceUrl": null
     },
     {
-      "id": "src_0092",
+      "id": "src_0089",
       "title": "Arcana Unleashed",
       "publicationDate": "2026-09-15",
       "precision": "DAY",
@@ -2316,6 +2241,7 @@
     "Publication chronology is not fictional chronology.",
     "Entries require item-level bibliographic verification and exact editions before promotion.",
     "Known ambiguous seed entries are flagged for correction.",
-    "The newest indexed release is not necessarily the newest published item across all formats."
+    "The newest indexed release is not necessarily the newest published item across all formats.",
+    "Removed three seed entries with incorrect publication/scope assumptions pending proper sourcing."
   ]
 }
