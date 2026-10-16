@@ -38,6 +38,7 @@ function fakeDb() {
     prepare(sql) {
       if (sql.startsWith("SELECT faction_id")) return { all: () => state.factions.map(x => ({ ...x })) };
       if (sql.startsWith("UPDATE factions")) return { run(score, id) { state.factions.find(x=>x.faction_id===id).influence_score=score; } };
+      if (sql.startsWith("SELECT 1 FROM sqlite_master")) return { get: () => ({1:1}) };
       if (sql.startsWith("SELECT territory_id FROM faction_disputes")) return { all: () => state.disputes.map(x=>({...x})) };
       if (sql.startsWith("SELECT territory_id")) return { all: () => state.territories.map(x=>({...x})) };
       if (sql.startsWith("UPDATE territory_control")) return { run(id, territory) { state.territories.find(x=>x.territory_id===territory).controlling_faction_id=id; } };
