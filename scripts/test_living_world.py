@@ -41,6 +41,16 @@ def main():
                         'renderWarTables'):
             check(feature in dashboard, f"faction war dashboard missing {feature}")
         check('faction-war.html' in html, "Living World missing war dashboard link")
+    adventure = ROOT / "game" / "adventure-war-room.html"
+    check(adventure.exists(), "adventure war room missing")
+    if adventure.exists():
+        page = adventure.read_text(encoding="utf-8")
+        for marker in ('id="battleTable"', 'id="rosterTable"', 'id="objectiveTable"',
+                       'id="resourceTable"', 'id="chronologyTable"', 'id="theaterTable"',
+                       'id="advance"', 'id="resolve"', 'moonveil-adventure-war-room-v1',
+                       'state.book===30', 'state.traversal===7'):
+            check(marker in page, f"adventure war room missing {marker}")
+        check('adventure-war-room.html' in dashboard, "faction war dashboard missing adventure link")
     if errors:
         print("\n".join("FAIL: " + e for e in errors))
         print(f"FAILED: {len(errors)} Living World Engine check(s).")
