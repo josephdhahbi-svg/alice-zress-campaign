@@ -60,6 +60,24 @@ test("local server protects APIs and persists bounded relationship updates", {ti
     assert.deepEqual((await war.json()).territories,[]);
     const factions=await fetch(base+"/api/factions",{headers});
     assert.deepEqual((await factions.json()).factions,[]);
+    const created=await fetch(base+"/api/campaigns",{method:"POST",headers,
+      body:JSON.stringify({campaignId:"test-campaign",name:"Local Test",actorId:"dm-1"})});
+    assert.equal(created.status,201);
+    const memberHeaders={...headers,"X-Moonveil-Actor":"dm-1"};
+    const outsider=await fetch(base+"/api/campaigns/test-campaign/events",{headers:{...headers,"X-Moonveil-Actor":"intruder"}});
+    assert.equal(outsider.status,403);
+    const payload={eventId:"event-1",expectedRevision:0,eventType:"SCENE_STARTED",payload:{scene:"pit"}};
+    const first=await fetch(base+"/api/campaigns/test-campaign/events",{method:"POST",headers:memberHeaders,body:JSON.stringify(payload)});
+    assert.equal(first.status,201);
+    assert.equal((await first.json()).revision,1);
+    const retry=await fetch(base+"/api/campaigns/test-campaign/events",{method:"POST",headers:memberHeaders,body:JSON.stringify(payload)});
+    assert.equal(retry.status,200);
+    assert.equal((await retry.json()).duplicate,true);
+    const conflict=await fetch(base+"/api/campaigns/test-campaign/events",{method:"POST",headers:memberHeaders,
+      body:JSON.stringify({...payload,eventId:"event-2"})});
+    assert.equal(conflict.status,409);
+    const read=await fetch(base+"/api/campaigns/test-campaign/events",{headers:memberHeaders});
+    assert.equal((await read.json()).events.length,1);
     const pulse=await fetch(base+"/api/admin/world-pulse",{method:"POST",headers,body:"{}"});
     assert.equal(pulse.status,200);
     const duplicate=await fetch(base+"/api/admin/world-pulse",{method:"POST",headers,body:"{}"});
