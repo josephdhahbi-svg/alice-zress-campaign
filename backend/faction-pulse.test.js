@@ -14,6 +14,7 @@ function fakeDb() {
     factions: [{ faction_id: "eilistraee", influence_score: 80 },
                { faction_id: "lolth", influence_score: 30 }],
     territories: [{ territory_id: "pit", controlling_faction_id: "lolth" }],
+    disputes: [],
     logs: new Map()
   };
   return {
@@ -37,6 +38,7 @@ function fakeDb() {
     prepare(sql) {
       if (sql.startsWith("SELECT faction_id")) return { all: () => state.factions.map(x => ({ ...x })) };
       if (sql.startsWith("UPDATE factions")) return { run(score, id) { state.factions.find(x=>x.faction_id===id).influence_score=score; } };
+      if (sql.startsWith("SELECT territory_id FROM faction_disputes")) return { all: () => state.disputes.map(x=>({...x})) };
       if (sql.startsWith("SELECT territory_id")) return { all: () => state.territories.map(x=>({...x})) };
       if (sql.startsWith("UPDATE territory_control")) return { run(id, territory) { state.territories.find(x=>x.territory_id===territory).controlling_faction_id=id; } };
       if (sql.startsWith("INSERT INTO world_pulse")) return { run(key, timestamp, summary) { state.logs.set(key, {timestamp,summary}); } };
@@ -55,6 +57,15 @@ test("pulse updates bounded influence, changes control, and logs once per hour",
   assert.equal(db.state.territories[0].controlling_faction_id, "eilistraee");
   assert.equal(engine.runPulse(new Date("2026-10-15T12:59:00Z")).applied, false);
   assert.equal(db.state.logs.size, 1);
+});
+test("active disputes prevent autonomous ownership changes",()=>{
+  const db=fakeDb();
+  db.state.disputes=[{territory_id:"pit"}];
+  const engine=initializeFactionPulseEngine(db,{random:()=>0.5});
+  const result=engine.runPulse(new Date("2026-10-15T13:01:00Z"));
+  assert.equal(result.applied,true);
+  assert.deepEqual(result.ownership,[]);
+  assert.equal(db.state.territories[0].controlling_faction_id,"lolth");
 });
 test("invalid randomness rolls back transaction", () => {
   const db = fakeDb();
