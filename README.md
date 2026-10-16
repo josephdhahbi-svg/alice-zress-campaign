@@ -12,6 +12,7 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 
 ## Start here
 - [Master development board](docs/master-development-board.md) — current priorities and architecture links.
+- [Living World 100-task build order](docs/living-world-100-task-build-order.md) — exact 100-task roadmap for QA, state contracts, canonical data, realistic art, gameplay, simulation, backend, and release.
 - [100-task status tracker](docs/task-status.md) — evidence-based progress and blockers.
 - [Repository inventory](docs/project-inventory.md) — inspected assets and current gaps.
 - [Administration and build operations](docs/administration-build-operations.md) — Lego workflow, component contract, and definition of done.
