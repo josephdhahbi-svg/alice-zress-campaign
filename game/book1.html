@@ -71,7 +71,19 @@ const options=[
  {id:"choice-b01-s01-action",kind:"Action",key:"action",title:"Move now",desc:"Advance cautiously toward the nearest cover before the Pit changes again.",ability:"Dexterity · Stealth",dc:12,success:"Alice reaches cover without attracting attention.",failure:"She reaches cover, but something in the Pit notices her arrival.",tags:["survival","threat-clock"]}
 ];
 let state={version:1,sceneId:"scene-book01-rabbit-hole-01",selectedChoiceId:null,events:[],updatedAt:null};
-try{const parsed=JSON.parse(localStorage.getItem(SAVE_KEY));if(parsed&&parsed.version===1&&parsed.sceneId===state.sceneId&&Array.isArray(parsed.events))state=parsed;}catch(_){}
+function validateSave(next){
+ if(!next||typeof next!=="object"||next.version!==1||next.sceneId!=="scene-book01-rabbit-hole-01"||!Array.isArray(next.events)||next.events.length>5000)throw new Error("Incompatible save.");
+ if(next.selectedChoiceId!==null&&!options.some(o=>o.id===next.selectedChoiceId))throw new Error("Invalid selected choice.");
+ if(next.updatedAt!==null&&(typeof next.updatedAt!=="string"||!Number.isFinite(Date.parse(next.updatedAt))))throw new Error("Invalid update time.");
+ const ids=new Set();
+ for(const x of next.events){
+  if(!x||typeof x!=="object"||typeof x.id!=="string"||!x.id||ids.has(x.id))throw new Error("Duplicate or invalid event ID.");
+  ids.add(x.id);const o=options.find(o=>o.id===x.choiceId);
+  if(!o||x.sceneId!==next.sceneId||!Number.isInteger(x.rawRoll)||x.rawRoll<1||x.rawRoll>20||!Number.isInteger(x.modifier)||x.modifier< -10||x.modifier>20||!Number.isInteger(x.dc)||x.dc<1||x.dc>40||x.total!==x.rawRoll+x.modifier||x.success!==(x.total>=x.dc)||x.outcome!==(x.success?o.success:o.failure)||x.ability!==o.ability||!Array.isArray(x.tags)||x.tags.join("|")!==o.tags.join("|")||typeof x.at!=="string"||!Number.isFinite(Date.parse(x.at)))throw new Error("Inconsistent event.");
+ }
+ return next;
+}
+try{const saved=localStorage.getItem(SAVE_KEY);if(saved)state=validateSave(JSON.parse(saved));}catch(err){console.warn("Invalid local save ignored:",err.message);}
 const $=id=>document.getElementById(id);
 const selected=()=>options.find(o=>o.id===state.selectedChoiceId);
 function persist(message){state.updatedAt=new Date().toISOString();localStorage.setItem(SAVE_KEY,JSON.stringify(state));render();if(message)$("status").textContent=message;}
@@ -98,10 +110,7 @@ $("roll").onclick=()=>{
  persist("Roll recorded locally. Review the journal before continuing.");
 };
 $("export").onclick=()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="moonveil-book1-scene-save.json";a.click();URL.revokeObjectURL(url);$("status").textContent="Save export prepared."};
-$("import").onchange=async e=>{const file=e.target.files&&e.target.files[0];if(!file)return;try{const next=JSON.parse(await file.text());if(next.version!==1||next.sceneId!=="scene-book01-rabbit-hole-01"||!Array.isArray(next.events))throw new Error("This is not a compatible Book 1 scene save.");if(next.events.length>5000)throw new Error("Save has too many events.");
- const ids=new Set();
- if(next.events.some(x=>{if(!x||typeof x!=="object"||typeof x.id!=="string"||!x.id||ids.has(x.id))return true;ids.add(x.id);const o=options.find(o=>o.id===x.choiceId);return !o||x.sceneId!==next.sceneId||!Number.isInteger(x.rawRoll)||x.rawRoll<1||x.rawRoll>20||!Number.isInteger(x.modifier)||x.modifier< -10||x.modifier>20||!Number.isInteger(x.dc)||x.dc<1||x.dc>40||x.total!==x.rawRoll+x.modifier||x.success!==(x.total>=x.dc)||x.outcome!==(x.success?o.success:o.failure)||x.ability!==o.ability||!Array.isArray(x.tags)||x.tags.join("|")!==o.tags.join("|")||typeof x.at!=="string"||!Number.isFinite(Date.parse(x.at));}))throw new Error("Save contains invalid, inconsistent, or duplicate events.");
- if(next.selectedChoiceId!==null&&!options.some(o=>o.id===next.selectedChoiceId))throw new Error("Invalid selected choice.");state=next;persist("Save imported and stored locally.");}catch(err){$("status").textContent="Import failed: "+err.message;}finally{$("import").value=""}};
+$("import").onchange=async e=>{const file=e.target.files&&e.target.files[0];if(!file)return;try{const next=JSON.parse(await file.text());validateSave(next);state=next;persist("Save imported and stored locally.");}catch(err){$("status").textContent="Import failed: "+err.message;}finally{$("import").value=""}};
 $("reset").onclick=()=>{if(!confirm("Delete this scene's local event history? Export a save first if you want a backup."))return;state={version:1,sceneId:"scene-book01-rabbit-hole-01",selectedChoiceId:null,events:[],updatedAt:null};localStorage.removeItem(SAVE_KEY);$("result").replaceChildren();$("modifier").value=0;$("dc").value=12;render();$("status").textContent="Scene reset."};
 render();
 </script></body></html>
