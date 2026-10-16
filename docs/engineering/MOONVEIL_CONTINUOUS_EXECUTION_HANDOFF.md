@@ -143,3 +143,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Omniversal verification `38923650564`: SUCCESS.
 - Validate campaign records `38923650506`: SUCCESS.
 - Worker is opt-in and test-verified, but not a fully autonomous AI coding system. Charter remains 18/100, 82 open. Next: persist queue state safely, CLI wrapper, trusted approval gates, and continue economy migration and combat resources.
+
+## 2026-10-16 — Durable draft queue and CLI
+- `backend/durable-draft-worker.js`: manifest-based persistent queue; checksummed task catalog and drafts; restart validation; crash recovery for a draft written before its manifest update. Commits `7d3bce494aa1be8bf3731780aeb74519d5934787`, `394ef348370c44b8de7e77ef4cd8a8f4b6627791`.
+- `backend/durable-draft-worker.test.js` commit `50f9fdcc08c6f5e24aefd36bd21cbb77cac38d51`: restart, ordering, crash recovery, tamper, seed mismatch.
+- `backend/draft-worker-cli.js` commit `3bf64760149904c5408a5ab532b0d8800a785853`: `node backend/draft-worker-cli.js 1 --root /absolute/existing/draft-sandbox`; `status` supported. Not mounted into server; no autonomous AI, GitHub deployment, or automatic execution.
+- **Important remaining gap:** no multi-process locking; simultaneous CLI processes may race. Use single operator only until locking is implemented. CI pending. Charter remains 18/100.
