@@ -61,3 +61,38 @@ def append_event(conn, campaign_id, event_id, key, event_type, payload, expected
     except BaseException:
         conn.rollback()
         raise
+
+def create_campaign(conn, campaign_id):
+    """Create a campaign without replacing an existing save."""
+    if not isinstance(campaign_id, str) or not campaign_id.strip():
+        raise ValueError("Campaign ID required")
+    with conn:
+        conn.execute("INSERT INTO campaigns(id) VALUES(?)", (campaign_id,))
+
+
+def campaign_snapshot(conn, campaign_id, after_revision=0):
+    """Read committed campaign revision and ordered event history.
+
+    after_revision is an exclusive cursor; this is not a projected character
+    sheet and does not perform authorization. Only call after access checks.
+    """
+    if not isinstance(campaign_id, str) or not campaign_id.strip():
+        raise ValueError("Campaign ID required")
+    if type(after_revision) is not int or after_revision < 0:
+        raise ValueError("Invalid event cursor")
+    row = conn.execute("SELECT revision FROM campaigns WHERE id=?", (campaign_id,)).fetchone()
+    if row is None:
+        raise KeyError("Unknown campaign")
+    events = conn.execute(
+        "SELECT id,revision,event_type,payload_json,created_at FROM campaign_events "
+        "WHERE campaign_id=? AND revision>? ORDER BY revision",
+        (campaign_id, after_revision)).fetchall()
+    return {
+        "campaign_id": campaign_id,
+        "revision": row[0],
+        "events": [
+            {"event_id": event_id, "revision": revision, "type": event_type,
+             "payload": json.loads(payload), "created_at": created_at}
+            for event_id, revision, event_type, payload, created_at in events
+        ],
+    }
