@@ -4,6 +4,7 @@ on:
     paths:
       - 'data/**'
       - 'scripts/**'
+      - 'game/**'
       - '.github/workflows/validate.yml'
   pull_request:
     paths:
@@ -27,3 +28,5 @@ jobs:
         run: python scripts/simulate.py --test
       - name: Check Book 1 scene and browser prototype
         run: python scripts/test_book1.py
+      - name: Check Living World Engine
+        run: python scripts/test_living_world.py
