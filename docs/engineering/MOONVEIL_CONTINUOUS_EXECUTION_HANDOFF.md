@@ -282,3 +282,6 @@ Created `prototype/rabbit-hole-play.html` in commit `f3bc0fdba03ef896e260ee2b4be
 
 ## 2026-10-16 — Three Sacred Lich Ascensions engineering slice
 Created `backend/sacred-lich-ascensions.js` (`176f5fef`), tests (`a125c396`), and signed campaign read-only GET APIs in `server.js` (`8ad2d172`). Three proposed paths: Moonveil Witch/Selune/Protection; Alice Z'ress/Eilistraee/Freedom; Starweave Necromancer/Mystra/Knowledge. Five sacrifice evidence objectives each; Level 17 gate; DM and divine review. The evaluator ALWAYS refuses to grant a transformation because no authoritative transformation engine is wired yet. Never claim these quests completed or Chosen/celestial states earned. No charter task closed pending full integration and CI evidence.
+
+## 2026-10-16 — Art QA automation and Alice dashboard concept
+New image concept ART-UI-005 generated in chat and registered in `docs/administration/MOONVEIL_ART_ASSET_INTAKE_REGISTER.md` (`d48d15f3`); no image bytes committed to repository and concept mock inventory is not actual Alice inventory. Added `backend/art-asset-registry.js` (`74006bd7`) with safe asset status/provenance/path checks, and tests `backend/art-asset-registry.test.js` (`34d582de`). No installed art claim, no verified charter closure until CI and UI rendering evidence.
