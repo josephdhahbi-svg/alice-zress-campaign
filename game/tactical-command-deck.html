@@ -20,7 +20,7 @@ button:hover{background:#51366b}.macro{display:flex;gap:8px;align-items:stretch}
 <h1>🌙 Omni-Tactical Command Deck</h1>
 <p>Playable local command sandbox. No server connection, microphone recording, official combat automation, or changes to Alice's character sheet.</p>
 <section class="panel"><h2>Quick-access macros</h2><p class="small">Select a command or pin your favorites. Pins persist in this browser only.</p>
-<div class="grid" id="macros"></div></section>
+<div class="grid" id="macros"></div><p class="small" id="macroHelp">Available commands are clearly marked when not yet connected.</p></section>
 <section class="panel"><h2>⚙️ Glyph Companion — Experimental Sandbox</h2>
 <div class="row"><div class="stat" id="aliceHp"></div><div class="stat" id="glyphHp"></div><div class="stat" id="enemyHp"></div></div>
 <p class="small">Glyph is an optional experimental companion. These prototype actions are not official D&D rules and do not modify your campaign save.</p>
@@ -32,27 +32,28 @@ button:hover{background:#51366b}.macro{display:flex;gap:8px;align-items:stretch}
 "use strict";
 const PIN_KEY="moonveil-command-deck-pins-v1";
 const commands=[
- ["ROLL_INITIATIVE","🎲 Roll Initiative"],["FAST_TRAVEL","🗺️ Fast Travel"],
- ["OPEN_BAZAAR","🛍️ Open Bazaar"],["CAMP_ROMANCE","💜 Camp Companions"],
- ["ATTUNE_ALTAR","✨ Attune Altar"],["OPEN_TACTICAL_MAP","⚔️ Tactical War Table"]
+ ["ROLL_INITIATIVE","🎲 Roll Initiative"],["FAST_TRAVEL","🗺️ Fast Travel (preview)"],
+ ["OPEN_BAZAAR","🛍️ Open Bazaar (preview)"],["CAMP_ROMANCE","💜 Camp Companions (preview)"],
+ ["ATTUNE_ALTAR","✨ Attune Altar (preview)"],["OPEN_TACTICAL_MAP","⚔️ Tactical War Table"]
 ];
 const actions=["SUPPORT","ATTACK","DEFEND","CONTROL","SCAN"];
+const implemented=new Set(["ROLL_INITIATIVE","OPEN_TACTICAL_MAP"]);
 const defaults=["ROLL_INITIATIVE","OPEN_TACTICAL_MAP","ATTUNE_ALTAR"];
 const $=id=>document.getElementById(id);
-function loadPins(){try{const p=JSON.parse(localStorage.getItem(PIN_KEY));return Array.isArray(p)?p.filter(x=>commands.some(c=>c[0]===x)):defaults.slice();}catch{return defaults.slice();}}
+function loadPins(){try{const p=JSON.parse(localStorage.getItem(PIN_KEY));return Array.isArray(p)?[...new Set(p.filter(x=>commands.some(c=>c[0]===x)))].slice(0,commands.length):defaults.slice();}catch{return defaults.slice();}}
 let pins=loadPins(),journal=[],state={alice:{hp:10,maxHp:30},glyph:{hp:20,maxHp:30},enemy:{hp:9,maxHp:9}};
 function log(message){journal.unshift(new Date().toLocaleTimeString()+" · "+message);journal=journal.slice(0,80);$("journal").textContent=journal.join("\n")||"No actions recorded.";}
 function pin(code){pins=pins.includes(code)?pins.filter(x=>x!==code):[...pins,code];try{localStorage.setItem(PIN_KEY,JSON.stringify(pins));}catch{}renderMacros();}
 function command(code){
  if(code==="OPEN_TACTICAL_MAP"){location.href="tactical-war-table.html";return;}
  if(code==="ROLL_INITIATIVE"){log("Initiative: d20 = "+(Math.floor(Math.random()*20)+1)+" (unmodified sandbox roll)");return;}
- log(code.replaceAll("_"," ")+" selected — gameplay integration pending.");
+ log(code.replaceAll("_"," ")+" is a preview only — no world state or campaign resources changed.");
 }
 function renderMacros(){
  const root=$("macros");root.replaceChildren();
  for(const [code,name] of [...commands].sort((a,b)=>Number(pins.includes(b[0]))-Number(pins.includes(a[0])))){
   const wrap=document.createElement("div");wrap.className="macro";
-  const run=document.createElement("button");run.textContent=name;run.onclick=()=>command(code);
+  const run=document.createElement("button");run.textContent=name;run.onclick=()=>command(code);run.title=implemented.has(code)?"Interactive local action":"Preview only — no campaign effect";
   const toggle=document.createElement("button");toggle.className="pin"+(pins.includes(code)?" pinned":"");
   toggle.textContent=pins.includes(code)?"★":"☆";toggle.setAttribute("aria-label",(pins.includes(code)?"Unpin ":"Pin ")+name);
   toggle.setAttribute("aria-pressed",String(pins.includes(code)));toggle.onclick=()=>pin(code);
@@ -67,9 +68,9 @@ function renderStats(){
 function glyph(action){
  if(state.glyph.hp<=0){log("Glyph cannot act.");return;}
  const roll=Math.floor(Math.random()*6)+1,amount=roll+2;
- if(action==="SUPPORT")state.alice.hp=Math.min(state.alice.maxHp,state.alice.hp+amount);
- if(action==="ATTACK")state.enemy.hp=Math.max(0,state.enemy.hp-amount);
- const description={SUPPORT:"Restored up to "+amount+" Alice HP",ATTACK:"Dealt up to "+amount+" prototype damage",DEFEND:"Defensive stance (expires end of round)",CONTROL:"Enemy movement lanes marked (expires end of round)",SCAN:"Scanned nearby hazards"}[action];
+ if(action==="SUPPORT"&&state.alice.hp>0)state.alice.hp=Math.min(state.alice.maxHp,state.alice.hp+amount);
+ if(action==="ATTACK"&&state.enemy.hp>0)state.enemy.hp=Math.max(0,state.enemy.hp-amount);
+ const description={SUPPORT:state.alice.hp<=0?"Alice is incapacitated; no healing applied":"Prototype support, up to "+amount+" HP",ATTACK:"Prototype attack, up to "+amount+" damage",DEFEND:"Defensive stance (expires end of round)",CONTROL:"Enemy movement lanes marked (expires end of round)",SCAN:"Scanned nearby hazards"}[action];
  log("Glyph "+action+": "+description);renderStats();
 }
 for(const action of actions){const button=document.createElement("button");button.textContent=action;button.onclick=()=>glyph(action);$("glyphActions").append(button);}
