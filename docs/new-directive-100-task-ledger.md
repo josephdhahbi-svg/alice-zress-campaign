@@ -13,20 +13,20 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 | T005 | Review Python SQLite event store | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
 | T006 | Check JavaScript and static pages | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
 | T007 | Fix failing tests with evidence | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
-| T008 | Expand CI coverage | PARTIAL | CI updated to trigger on server.js/package.json and run node --check; run result pending |
+| T008 | Expand CI coverage | PARTIAL | CI validated at run 38845612687 (success); latest security-change run pending |
 | T009 | Document architecture and limitations | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
 | T010 | Maintain task completion ledger | PARTIAL | This ledger committed; automated status reconciliation pending |
 | T011 | Harden Express startup | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
 | T012 | Verify SQLite WAL and constraints | PARTIAL | WAL, foreign keys, busy_timeout configured; startup and migration verification pending |
-| T013 | Versioned database migrations | NOT STARTED | Implementation and verification pending |
-| T014 | Campaign and session identifiers | NOT STARTED | Implementation and verification pending |
+| T013 | Versioned database migrations | NOT STARTED | Transactional v1 migrations implemented in backend/migrations.js; upgrade/rollback scenarios still pending |
+| T014 | Campaign and session identifiers | NOT STARTED | Campaign IDs and DM membership records implemented; secure player sessions not yet implemented |
 | T015 | Player and DM authentication | NOT STARTED | Implementation and verification pending |
-| T016 | Per-campaign authorization | NOT STARTED | Implementation and verification pending |
-| T017 | Revision and idempotency checks | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
-| T018 | Authoritative event journal integration | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
-| T019 | Validated API contracts | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T016 | Per-campaign authorization | NOT STARTED | Membership checks exist but actor header can be spoofed by any shared-token holder; NOT secure multiplayer |
+| T017 | Revision and idempotency checks | PARTIAL | SQLite revision conflicts and event idempotency implemented; cross-actor retry guard added |
+| T018 | Authoritative event journal integration | PARTIAL | Node campaign event journal implemented; Python ledger not yet unified |
+| T019 | Validated API contracts | PARTIAL | Basic input validation and bounded 100-event cursor paging; full schema validation pending |
 | T020 | Recovery and concurrency tests | NOT STARTED | Implementation and verification pending |
-| T021 | WebSocket authentication | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T021 | WebSocket authentication | PARTIAL | Shared-token WebSocket authentication only; campaign events deliberately not broadcast to unscoped clients |
 | T022 | Campaign-scoped broadcasts | NOT STARTED | Implementation and verification pending |
 | T023 | Reconnect and resync | NOT STARTED | Implementation and verification pending |
 | T024 | Authoritative movement | NOT STARTED | Implementation and verification pending |
@@ -101,7 +101,7 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 | T093 | Backups and restore | NOT STARTED | Implementation and verification pending |
 | T094 | Logging and diagnostics | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
 | T095 | Deployment workflow | NOT STARTED | Implementation and verification pending |
-| T096 | Security tests | NOT STARTED | Implementation and verification pending |
+| T096 | Security tests | NOT STARTED | Integration checks cover unauthorized HTTP, invalid approval, revision conflicts and cursor; deeper threat model pending |
 | T097 | End-to-end regression | NOT STARTED | Implementation and verification pending |
 | T098 | Release and DM documentation | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
 | T099 | Evidence-based completion audit | NOT STARTED | Implementation and verification pending |
@@ -118,3 +118,11 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 2. Create reproducible npm lockfile; add isolated integration tests for Express routes and SQLite WAL.
 3. Remove reliance on a single shared token for anything beyond loopback-only development. Add campaign-scoped authorization before multiplayer.
 4. Preserve existing browser localStorage saves and Python ledger until an explicitly tested migration exists.
+
+## Development continuation — 2026-10-15
+- Verified GitHub Actions run [38845612687](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38845612687) completed successfully at commit `11c41d87` (baseline before the changes below).
+- Added transactional SQLite migration `backend/migrations.js` and Node campaign event routes in commits `2aed57b`, `f041f53`, `6f95eba` (previous batch).
+- Security review: the shared development token and spoofable actor header do **not** authenticate individual players. Removed campaign event broadcasts from global WebSocket clients until scoped sessions exist. Commit `29417da`.
+- Added bounded cursor-based campaign event reads (100 events per page), stricter duplicate-event actor matching, and corresponding integration tests. Commit `5db7a2b`.
+- Preserve browser local saves and Python ledger; no migration performed.
+- The latest GitHub Actions outcome for these security changes must be checked before marking their tests verified.
