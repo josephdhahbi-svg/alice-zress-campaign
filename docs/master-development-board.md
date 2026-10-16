@@ -196,3 +196,9 @@ The first batch creates structured "Lego" records rather than only brainstorming
 - Added `scripts/test_living_world.py` and CI execution; run #74 passed all checks on commit `213dd06098573ebad0ba20ce9779f87a81568dc1`.
 - Follow-up asset-path alignment commit `bc254b323ebe9c68ce2512d13667ea84058a3406` has a new validation run pending at last check.
 - Limitation: this is a local browser prototype, not a multiplayer/server-synchronized engine; actual art binaries are not committed yet.
+
+
+## Living World Engine — 100-task work order
+- Added `docs/living-world-100-task-build-order.md`, containing exactly 100 numbered tasks across eight phases: browser QA; world-state contracts; canonical campaign data; realistic art pipeline; scene mechanics; living-world simulation; backend/multiplayer/security; release/governance.
+- Treat it as the detailed execution checklist; the master board and task-status tracker remain the high-level summary.
+- Start at Task 001. Mark tasks complete only with actual implementation/test evidence; browser QA is not complete until performed in a real browser.
