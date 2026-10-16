@@ -162,3 +162,8 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Process-spawning integration tests `backend/draft-worker-cli.integration.test.js` commit `8cf438d899440f4188306e2e7fecf6fb7f5c5fa6`: process restarts, contention, exception unlock and stale-lock fail-closed.
 - **Stale lock is NOT automatically removed**: operator must inspect process and lock before manual removal; avoids unsafe lock stealing. Queue not autonomous; no AI generation or publishing.
 - CI pending; charter remains **18/100**, **82 open**.
+
+### Cross-process lock CI verified
+- Omniversal verification `38924261089` SUCCESS.
+- Validate campaign records `38924261076` SUCCESS.
+- No charter closure: verified remains **18/100**, open **82/100**. Worker remains explicit/manual and drafts-only. Stale lock requires operator inspection and manual clearing. Next priority: versioned economy migration and signed HTTP economy integration tests.
