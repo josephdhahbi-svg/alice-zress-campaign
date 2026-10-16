@@ -1,6 +1,5 @@
 "use strict";
 /** Elder Eye scene adapter for the existing VTT event journal; no second database. */
-const crypto=require("node:crypto");
 const {validateScene,resolveSceneChoice}=require("../elder-eye/admin/scene-contract");
 function createElderEyeSceneService(db,{scenes}){
   if(!Array.isArray(scenes))throw new TypeError("scenes array required");
@@ -26,8 +25,9 @@ function createElderEyeSceneService(db,{scenes}){
     const payload=JSON.stringify(result);
     const old=prior.get(campaignId,eventId);
     if(old){
-      if(old.actor_id!==actorId||old.event_type!=="ELDER_EYE_CHOICE"||old.payload_json!==payload)return {status:409,error:"IDEMPOTENCY_CONFLICT"};
-      return {status:200,revision:old.revision,duplicate:true,result};
+      const saved=JSON.parse(old.payload_json);
+      if(old.actor_id!==actorId||old.event_type!=="ELDER_EYE_CHOICE"||saved.sceneId!==sceneId||saved.option!==option||saved.modifier!==modifier||saved.choiceId!==result.choiceId)return {status:409,error:"IDEMPOTENCY_CONFLICT"};
+      return {status:200,revision:old.revision,duplicate:true,result:saved};
     }
     const current=revision.get(campaignId).revision;
     if(current!==expectedRevision)return {status:409,error:"REVISION_CONFLICT",revision:current};
