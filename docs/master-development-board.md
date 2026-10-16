@@ -170,3 +170,12 @@ The first batch creates structured "Lego" records rather than only brainstorming
 - Art source files currently exist in the generated working-session asset folder, not yet in the GitHub repository. Their checkerboard background is baked in; background removal is required before using them as transparent tokens/overlays.
 - `scripts/test_book1.py` now checks Alice linkage, seven unique asset records, and honest asset availability/transparency status.
 - Manual browser QA and actual image-file commit/integration remain outstanding.
+
+
+## 2026-10-16: asset registry and CI repair
+- Created `data/assets.json` for the seven generated art concepts. This is a manifest, not proof the image binaries are committed.
+- Added `character_id: alice-zress` to the Book 1 opening scene and cross-reference validation.
+- Added asset-manifest checks to the validator and regression test.
+- CI initially found an `UnboundLocalError` after the validator began counting asset records. Fixed the scope declaration.
+- Verified GitHub Actions run #70 completed successfully: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38837871070
+- Remaining: commit actual image files, remove checkerboard backgrounds, manually test the browser prototype, and connect persistent scene outcomes to character/journal state.
