@@ -76,11 +76,13 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     try{url=new URL(req.url,"http://localhost");}catch{socket.destroy();return;}
     if(url.pathname!=="/events"){socket.destroy();return;}
     const campaignId=url.searchParams.get("campaignId");
+    const rawCursor=url.searchParams.get("after")??"0";
+    const after=/^(0|[1-9][0-9]*)$/.test(rawCursor)?Number(rawCursor):NaN;
     const offered=(req.headers["sec-websocket-protocol"]||"").split(",").map(x=>x.trim());
     const encoded=offered.find(x=>x.startsWith("moonveil."));
     const accessToken=encoded?.slice("moonveil.".length);
     const session=accessToken?sessions.verify(accessToken):null;
-    if(!id(campaignId)||!session||isRevoked.get(hashSession(accessToken))||
+    if(!id(campaignId)||!Number.isSafeInteger(after)||!session||isRevoked.get(hashSession(accessToken))||
        !memberRole.get(campaignId,session.actorId)){
       socket.write("HTTP/1.1 403 Forbidden\r\nConnection: close\r\n\r\n");
       socket.destroy();return;
@@ -91,7 +93,11 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       client.accessToken=accessToken;
       client.expiresAt=session.expiresAt;
       wss.emit("connection",client,req);
-      client.send(JSON.stringify({type:"CONNECTED",campaignId,actorId:session.actorId}));
+      const current=db.prepare("SELECT COALESCE(MAX(revision),0) AS revision FROM vtt_campaign_events WHERE campaign_id=?").get(campaignId).revision;
+      client.send(JSON.stringify({type:"CONNECTED",campaignId,actorId:session.actorId,revision:current,replayAfter:after}));
+      // Reconnect clients recover complete event payloads via the authenticated,
+      // cursor-paginated HTTP journal; WebSocket is notification-only.
+      if(current>after)client.send(JSON.stringify({type:"CATCH_UP_REQUIRED",campaignId,after,revision:current}));
     });
   });
   function broadcastCampaign(campaignId,event) {
