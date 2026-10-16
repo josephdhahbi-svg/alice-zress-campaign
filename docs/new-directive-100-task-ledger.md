@@ -142,3 +142,11 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Added HTTP regression tests for logout and admin revocation (`204cb7d`). Latest test CI outcome pending.
 - Updated local development documentation (`2665d35`).
 - Security limitations: development admin may mint actor identities; no production identity provider, campaign-scoped WebSocket sessions, or rate limiting. SQLite revoked-token records need expiry cleanup.
+
+## Batch 7 — campaign-scoped WebSocket notifications
+- Verified prior session-revocation integration test: [CI run 38845957562](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38845957562), success at `204cb7d`.
+- Added authenticated campaign-specific WebSocket upgrade handling and `CAMPAIGN_EVENT` notifications (`f319d3e`); no global broadcast of private campaign events.
+- Added integration test for two-campaign isolation and revoked token HTTP denial (`c024a5b`, race correction `5555a53`).
+- Wired new WebSocket test into CI (`46ba83d`), outcome pending at time of writing.
+- Updated development documentation (`496af8e`).
+- Remaining: verify WebSocket CI, real account identity, origin validation and TLS, per-campaign character ownership, reconnection replay, and cross-device gameplay QA.
