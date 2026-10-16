@@ -92,3 +92,11 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Updated `backend/quest-evidence-engine.test.js` commit `36d6ebb1ca44b0fe3b84fc9709d7a25a0cb4e3b6` and `backend/quest-evidence-api.integration.test.js` commit `70ae79bee99fd85d353da70ae4c19385b2d1dac2` to require catalog registration and test immutability and player denial.
 - CI runs `38921730562` and `38921730504` were in progress when written; verify and fix before closing T023. Current verified baseline 15/100.
 - Next: catalog lifecycle/versioning, audit journal for definitions, secure reward catalog with explicit approval, combat resources.
+
+## 2026-10-16 — Quest definition approval and audit batch
+- `backend/migrations.js` migration v4 adds durable `vtt_quest_catalog`, `vtt_quest_definition_audit` and `vtt_quest_approvals`; commit `fa83690404f8597ccabe5593a0a68ad0230e7996`.
+- `backend/quest-evidence-engine.js` commit `87d9f0e323d13c4717ca0b5c54cf97309c89cf82` now writes REGISTERED and APPROVED audit snapshots, requires explicit DM approval before objective verification/completion, preserves immutable objective sets.
+- `server.js` commit `5889ec9f97651476b65dd122ec8993f6aaad207d` adds signed DM-only POST `/api/campaigns/:campaignId/quests/catalog/:questId/approve`.
+- Tests: `backend/quest-evidence-engine.test.js` `89fd3181ae53a66dd1dfc0c5edb48b0c4b2ef846`; `backend/quest-evidence-api.integration.test.js` `8f6a714b25c88b091210a625122545b2ea339955`; new `backend/quest-approval-migration.test.js` `a56e1fa0c80616ff2c868db7b29001e9484ad182`.
+- **CI not yet confirmed for this batch.** Verified charter remains 16/100 until successful workflows and acceptance review. No artifact rewards and no Alice progression changes.
+- Next: CI fixes; check legacy migration tests; assess T029 audit requirements, reward catalog approval and transactional award design; combat spell slots.
