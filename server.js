@@ -5,6 +5,7 @@ const {createDiscoveryLedger}=require("./backend/discovery-ledger");
 const {createLoreArchive}=require("./backend/lore-archive");
 const {createWorldEventBus}=require("./backend/world-event-bus");
 const {createOmniversalMemory}=require("./backend/omniversal-memory");
+const omniversalCatalog=require("./backend/omniversal-quest-character-catalog");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
 const express = require("express");
@@ -850,6 +851,31 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     return preview?res.json({success:true,preview}):res.status(404).json({success:false,error:"NOT_FOUND"});
   });
   // Read-only LEGO chain planning; never registers, completes or unlocks quests.
+  // Read-only draft NPC stat sheets and quest/cast relationships.
+  app.get("/api/campaigns/:campaignId/omniversal/characters",(req,res)=>{
+    const {campaignId}=req.params;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{return res.json({success:true,...omniversalCatalog.listCharacters({limit:req.query.limit===undefined?100:Number(req.query.limit),offset:req.query.offset===undefined?0:Number(req.query.offset)}),draft:true});}
+    catch{return res.status(400).json({success:false,error:"INVALID_PAGINATION"});}
+  });
+  app.get("/api/campaigns/:campaignId/omniversal/characters/:characterId",(req,res)=>{
+    const {campaignId,characterId}=req.params;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const character=omniversalCatalog.getCharacter(characterId);
+    return character?res.json({success:true,character,draft:true}):res.status(404).json({success:false,error:"NOT_FOUND"});
+  });
+  app.get("/api/campaigns/:campaignId/omniversal/quests",(req,res)=>{
+    const {campaignId}=req.params;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{return res.json({success:true,...omniversalCatalog.listQuests({limit:req.query.limit===undefined?100:Number(req.query.limit),offset:req.query.offset===undefined?0:Number(req.query.offset)}),draft:true});}
+    catch{return res.status(400).json({success:false,error:"INVALID_PAGINATION"});}
+  });
+  app.get("/api/campaigns/:campaignId/omniversal/quests/:questId",(req,res)=>{
+    const {campaignId,questId}=req.params;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const quest=omniversalCatalog.getQuest(questId);
+    return quest?res.json({success:true,quest,draft:true}):res.status(404).json({success:false,error:"NOT_FOUND"});
+  });
   app.get("/api/campaigns/:campaignId/quests/multiverse-chains",(req,res)=>{
     if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
     if(!id(req.params.campaignId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
