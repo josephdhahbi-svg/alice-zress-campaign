@@ -146,3 +146,22 @@ Updated:
 - `scripts/validate.py` — asset manifest and character reference validation.
 - `scripts/test_book1.py` — character linkage and asset manifest regression checks.
 - `README.md`, `docs/master-development-board.md`.
+
+
+## Update — 2026-10-16: asset registry and CI repair
+- Added `data/assets.json` with seven asset records. The manifest correctly marks the images as generated locally, not yet committed to the repository, and needing checkerboard removal.
+- Linked `scene-book01-rabbit-hole-01` to the Alice character record `alice-zress`.
+- Extended `scripts/validate.py` to validate the asset manifest and require valid scene character references.
+- Extended `scripts/test_book1.py` to check Alice linkage and the seven asset records.
+- First CI attempt exposed an `UnboundLocalError` in the validator's record counter after adding the asset profile. Fixed by declaring `checked_records` global in `main()`.
+- Follow-up GitHub Actions run #70 completed successfully: validator, deterministic encounter simulation, and Book 1 regression checks all passed.
+- Run: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38837871070
+- Fix commit: `d0225b2aa5306040992ca29294f052836efb27a8`
+
+| Task | Status | Evidence / remaining work |
+|---|---|---|
+| 021 Alice master record | PARTIAL | Scene links to Alice ID; ability scores, proficiencies, and gameplay-state integration remain. |
+| 070 Visual quality | PARTIAL | Seven generated assets registered. Image files are not yet in repository and checkerboard background is baked in. |
+| 081 Automated data checks | DONE for current CI checks | Workflow run #70 passed validator, encounter simulation, and Book 1 regression tests. Add tests as new systems are introduced. |
+| 089 CI pipeline | PARTIAL | Current validation workflow passed; backend/Flutter pipelines and production deployment remain unverified. |
+| 091 Book 1 vertical slice | IN_PROGRESS | Scene, character link, art manifest, local prototype, and CI checks exist. Manual browser QA and actual gameplay journal integration remain. |
