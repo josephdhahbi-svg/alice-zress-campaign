@@ -228,3 +228,10 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Checked GitHub combined status for CI workflow commit `cf8925bdb1c852a273d99f1fefcbe923657720bc`: no status checks returned. Workflow-runs lookup for that commit also returned no runs (connector lookup only surfaces PR-associated runs); CI success remains unverified.
 - Current contracts/fixtures exist: `docs/architecture/spherical-space-time-contract-v1.md`, `tests/continuity/spherical_space_time_fixtures_v1.json`, `tests/test_spherical_space_time_contract.py`, `data/alice_u01_read_model_v1.json`, and `data/master_roads_atlas.json`.
 - Next: trigger/inspect GitHub Actions run via the Actions UI or add a harmless commit to trigger push CI; then review actual logs. Continue using read-only/synthetic tests until complete checkout is available.
+
+## Directive 17 execution update (2026-10-16)
+- Attempted full checkout with `git clone --depth 1 --branch dev/alice-three-chosen-roadmap ...`; failed because this runtime cannot resolve `github.com`. No complete checkout or full-suite execution is available.
+- Queried combined status for CI workflow commit `cf8925bdb1c852a273d99f1fefcbe923657720bc`: no statuses returned. Workflow-run lookup returned no runs; CI status remains unverified.
+- `1f96a35` connected `data/alice_u01_read_model_v1.json` to the spherical space-time contract using a `space_time_context` object with separate space/time/causality/traversal dimensions. Unknown location, timeline, DR date, causal links, book, and traversal intentionally remain null/unresolved.
+- `4888d28` added regression assertions for the new read-model context. Tests are committed but **not executed** due the checkout/network blocker.
+- Next: obtain an actual CI run/logs through GitHub Actions; run tests from a complete checkout; review actual Gemini and Copilot source deliveries. No game-state changes.
