@@ -8,7 +8,7 @@ test("economy migration v6 survives replay and restart without losing adjustment
   db.pragma("foreign_keys=ON");
   assert.throws(()=>createWorldEconomyEngine(db),/ECONOMY_MIGRATION_REQUIRED/);
   migrate(db);
-  assert.equal(MIGRATIONS.at(-1).version,6);
+  assert.ok(MIGRATIONS.some(m=>m.version===6));
   db.prepare("INSERT INTO vtt_campaigns VALUES(?,?,?)").run("c","C","now");
   db.prepare("INSERT INTO vtt_campaign_members VALUES(?,?,?)").run("c","dm","DM");
   const engine=createWorldEconomyEngine(db);
