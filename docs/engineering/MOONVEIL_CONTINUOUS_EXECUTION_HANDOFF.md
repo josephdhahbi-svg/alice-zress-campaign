@@ -178,3 +178,8 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Omniversal verification `38925202319`: SUCCESS.
 - Validate campaign records `38925202498`: SUCCESS.
 - No new charter closure. Verified **18/100**, open **82/100**. Next: signed economy HTTP integration tests and settlement trade baseline; preserve opt-in time progression and unearned-reward restrictions.
+
+## 2026-10-16 — Signed economy HTTP integration coverage
+- Added `backend/world-economy-api.integration.test.js` commit `6305bc7bfa150db46937664a13fc6aadd61c61d5`. Spins up actual Express server with signed DM, member, outsider, and admin identities across two campaigns.
+- Covers DM-only commodity creation and bounded price adjustments, GET authorization, idempotent retries, stale revisions, cross-campaign isolation, audit ledger cardinality, and zero artifact grants.
+- CI pending. Charter remains 18/100, 82 open. No production economy simulation or progression claims.
