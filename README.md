@@ -32,7 +32,8 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 - `data/development_components.json` — reusable component registry.
 - `data/characters.json`, `data/locations.json`, `data/rituals.json`, `data/relationships.json`, `data/story_phases.json` — current starter lore and relationship records.
 - `data/spells.json`, `data/items.json`, `data/quests.json` — starter collections.
-- `scripts/validate.py` — record-family validation; run with `python scripts/validate.py`; CI status must be checked separately.
+- `scripts/validate.py` — record-family validation; run with `python scripts/validate.py`.
+- `scripts/test_book1.py` — Book 1 scene and prototype regression checks; run with `python scripts/test_book1.py`.
 - `game/index.html` — offline campaign prototype with local character/quest save and import/export.
 - `game/book1.html` — standalone Book 1 opening scene prototype with five choices, d20 checks, local event history, and scene save import/export.
 - `.github/workflows/validate.yml` — CI validation and deterministic simulation check.
