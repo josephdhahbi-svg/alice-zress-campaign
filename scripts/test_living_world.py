@@ -73,6 +73,8 @@ def main():
                        'ATTUNE_ALTAR', 'SUPPORT', 'ATTACK',
                        'DEFEND', 'CONTROL', 'SCAN'):
             check(marker in deck_html, f"command deck missing {marker}")
+        for marker in ('preview only', 'implemented=new Set', 'eligibleSupport', 'eligibleAttack', 'new Set(p.filter'):
+            check(marker in deck_html, f"command deck safety guard missing {marker}")
         if tactical.exists():
             check('tactical-command-deck.html' in battle,
                   "tactical war table missing command deck link")
