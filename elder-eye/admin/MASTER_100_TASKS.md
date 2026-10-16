@@ -1,6 +1,6 @@
 # Elder Eye: 100-task autonomous development backlog
 
-Status: PLANNED unless verified in code and tests. Do not confuse planning with completion.
+Status: PLANNED unless verified in code and tests. Session 002 introduced partial implementations; no new tasks are marked complete without executed tests. Do not confuse planning with completion.
 
 ## Operating principles
 Fun first; canon protection; photorealistic visuals; five choices; never invent successful sync or test results.
@@ -141,3 +141,11 @@ Fun first; canon protection; photorealistic visuals; five choices; never invent 
 
 ## Continuation command
 Continue Elder Eye autonomous development on feature/elder-eye-admin-foundation. Select the highest-value uncompleted task, inspect existing repository structure, implement and test a safe improvement, protect Alice Z'ress canon and EE-B2-001, update this backlog with evidence, and report actual commits separately from plans. Prioritize fun, playability, photorealism, and five clickable choices.
+
+## Session 002 partial progress (not completed)
+- EE-T066: Five-choice contract and journal adapter authored; no HTTP endpoint or browser QA.
+- EE-T071: Inspected existing server.js and its auth/event flow; broader repository audit remains.
+- EE-T072: Verified package dependencies and migration definitions; install/runtime check pending.
+- EE-T074: Adapter writes to existing vtt_campaign_events with revision/idempotency controls; full event sourcing and replay projections pending.
+- EE-T085: Added six service regression tests and six earlier scene-contract tests; execution not verified.
+- Architectural decision: elder-eye/admin/INTEGRATION_DECISION.md. Do not run duplicate draft admin schema on live database.
