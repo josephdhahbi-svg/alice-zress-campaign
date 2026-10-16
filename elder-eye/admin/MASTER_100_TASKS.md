@@ -157,3 +157,11 @@ Continue Elder Eye autonomous development on feature/elder-eye-admin-foundation.
 - EE-T085: Scene contract and journal service regression tests included in CI workflow; no passing run confirmed.
 - EE-T078: Shared dice-rule validation used; character ability modifier provenance still requires verification.
 - Full completion count remains 0/100 until acceptance criteria and tests are verified.
+
+## Session 004 partial progress — unverified CI
+- EE-T065: Four text-only cinematic scene panels added to game/elder-eye-live.html; final artwork and visual QA pending.
+- EE-T066: Five clickable choices in browser wired to authenticated choice POST; browser integration test pending.
+- EE-T077: Campaign-scoped GET scene, protected event type, and local /elder-eye shell route committed.
+- EE-T085: Authenticated HTTP integration test authored and added to GitHub Actions; no passing run confirmed.
+- EE-T099: Draft PR #1 created for CI and review, explicitly not for merge. Deployment blocked by client-supplied modifier.
+- Fully verified completion remains 0/100. See SESSION_004_REPORT.md.
