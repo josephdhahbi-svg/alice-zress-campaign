@@ -33,12 +33,17 @@ def append_event(conn, campaign_id, event_id, key, event_type, payload, expected
         raise ValueError("Identifiers and event type are required")
     if type(expected_revision) is not int or expected_revision < 0:
         raise ValueError("Invalid expected revision")
+    if not isinstance(payload, dict):
+        raise ValueError("Event payload must be an object")
     serialized = json.dumps(payload, separators=(",", ":"), allow_nan=False)
-    with conn:
+    # Acquire the writer lock before checking revision to serialize competing writers.
+    conn.execute("BEGIN IMMEDIATE")
+    try:
         existing = conn.execute(
             "SELECT id, revision FROM campaign_events WHERE campaign_id=? AND idempotency_key=?",
             (campaign_id, key)).fetchone()
         if existing:
+            conn.commit()
             return {"event_id": existing[0], "revision": existing[1], "replayed": True}
         current = conn.execute("SELECT revision FROM campaigns WHERE id=?", (campaign_id,)).fetchone()
         if current is None:
@@ -51,4 +56,8 @@ def append_event(conn, campaign_id, event_id, key, event_type, payload, expected
             (event_id, campaign_id, revision, key, event_type, serialized))
         conn.execute("UPDATE campaigns SET revision=? WHERE id=? AND revision=?",
                      (revision, campaign_id, expected_revision))
+        conn.commit()
         return {"event_id": event_id, "revision": revision, "replayed": False}
+    except BaseException:
+        conn.rollback()
+        raise
