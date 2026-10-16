@@ -364,3 +364,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Current `entity_types` does not list `book`, `milestone`, or `hazard`; books already have a separate structure in `data/master_roads_atlas.json`. Prefer adapter/subtype or reviewed schema revision, not replacement. Route fixtures lack required atlas fields (verified endpoints, mode, prerequisites, time window, source status, player-choice requirement).
 - Patches and connections are not first-class operational entities in the shared schema. Keep fixture-only pending Gemini's authoritative append-only patch event contract and Copilot's mapping of actual WorldOS records.
 - No schema migration applied. No tests executed for this documentation-only mapping. Existing fixture CI passed on commit `854f618` (run `38834046615`); current mapping document has not yet had its own CI run checked.
+
+## LEGO bundle mapping and target-resolution follow-up (2026-10-16)
+- `53287b3` added `docs/architecture/copilot-lego-master-bundle-field-mapping-v1.md`, mapping fixture fields to the existing WorldOS shared schema and road atlas.
+- Actual inspection confirmed the shared schema lists entity types character/npc/location/region/plane/timeline/quest/event/route/postal_service/faction/inventory_item/merchant/art_asset; it does not list book, milestone, or hazard. Book slots are in `data/master_roads_atlas.json` as B01-B30 with `unassigned_placeholder` status.
+- `b183d58` added `data/copilot_lego_target_resolution_audit_v1.json`. The 30 bundle book numbers map to existing B01-B30 slots by explicit number, but the proposed titles are not promoted. The 51 hazard IDs are not registered in the authoritative atlas. The nine connection target IDs are unresolved; all three proposed routes lack verified endpoints/time windows and remain locked.
+- `5a760ac` registers the audit JSON as an object document in `scripts/validate.py`.
+- `eff4ed3` added `tests/test_copilot_target_resolution_audit.py` (6 tests) for audit status, atlas placeholder preservation, unregistered hazards, unresolved connections, and route locks.
+- CI for the newest audit test commit has not yet been verified. No schema migration or gameplay mutation occurred.
