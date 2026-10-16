@@ -81,5 +81,34 @@
     "travel": false,
     "choice_submission": false
   },
-  "mutates_game_state": false
+  "mutates_game_state": false,
+  "space_time_context": {
+    "schema_contract": "docs/architecture/spherical-space-time-contract-v1.md",
+    "space": {
+      "plane_id": "MATERIAL_PLANE",
+      "world_id": null,
+      "region_id": "REGION_UNDERDARK",
+      "location_id": null,
+      "location_verification": "unverified"
+    },
+    "time": {
+      "timeline_id": null,
+      "dr_start": null,
+      "dr_end": null,
+      "date_precision": "unknown"
+    },
+    "causality": {
+      "cause_event_ids": [],
+      "prerequisite_event_ids": [],
+      "consequence_event_ids": [],
+      "status": "not_established"
+    },
+    "traversal": {
+      "traversal_id": null,
+      "book_id": null,
+      "book_sequence": null,
+      "status": "not_assigned"
+    },
+    "notes": "Space, time, causality, and traversal are separate dimensions. Nulls are intentional; no date, exact location, causal event, book assignment, or traversal is inferred."
+  }
 }
