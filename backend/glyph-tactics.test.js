@@ -30,3 +30,15 @@ test("Glyph never acts when incapacitated",()=>{
  assert.equal(chooseGlyphAction({glyph:s.allies[1],allies:s.allies,enemies:s.enemies}),"INACTIVE");
  assert.throws(()=>applyGlyphAction(s,"ATTACK"),/unavailable/);
 });
+
+test("Glyph rejects malformed HP and contains nonfinite random rolls",()=>{
+ const s=encounter();s.allies[1].maxHp=0;
+ assert.equal(chooseGlyphAction({glyph:s.allies[1],allies:s.allies,enemies:s.enemies}),"INACTIVE");
+ assert.throws(()=>applyGlyphAction(s,"ATTACK"),/unavailable/);
+ s.allies[1].maxHp=30;
+ applyGlyphAction(s,"ATTACK",{roll:()=>NaN});
+ assert.equal(s.enemies[0].hp,6);
+ s.allies[0].hp=NaN;
+ const result=applyGlyphAction(s,"SUPPORT",{roll:()=>Infinity});
+ assert.equal(result.detail,"No eligible ally");
+});
