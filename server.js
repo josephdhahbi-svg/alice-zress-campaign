@@ -20,6 +20,7 @@ const { createQuestEvidenceEngine } = require("./backend/quest-evidence-engine")
 const { listAscensionPaths, getAscensionPath } = require("./backend/ascension-path-catalog");
 const { getMultiverseAdventureIndex, availableRouteLeads } = require("./backend/multiverse-adventure-index");
 const { planTimeSpaceJourney, listTimeSpaceEras, listTravelMethods } = require("./backend/rabbit-hole-time-space");
+const { createChronalTravelEngine } = require("./backend/chronal-travel-engine");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -64,6 +65,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const settlementMarketPulse = createSettlementMarketPulseEngine(db);
   const combat = createCombatEngine(db);
   const questEvidence = createQuestEvidenceEngine(db);
+  const chronalTravel = createChronalTravelEngine(db);
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
@@ -89,6 +91,29 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const server = http.createServer(app);
   const id = value => typeof value==="string" && /^[a-zA-Z0-9:_-]{1,100}$/.test(value);
   const memberRole=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?");
+  // Explicit DM-authorized travel only. Character ownership is enforced on reads.
+  app.get("/api/campaigns/:campaignId/characters/:characterId/location",(req,res)=>{
+    const {campaignId,characterId}=req.params,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!id(characterId)||!memberRole.get(campaignId,actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const owner=db.prepare("SELECT owner_actor_id FROM vtt_characters WHERE campaign_id=? AND character_id=?").get(campaignId,characterId);
+    if(!owner||(memberRole.get(campaignId,actorId).role!=="DM"&&owner.owner_actor_id!==actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,location:chronalTravel.getLocation(campaignId,characterId)});
+  });
+  for(const [suffix,method] of [["initialize","initializeLocation"],["travel","executeTravel"]]){
+    app.post("/api/campaigns/:campaignId/characters/:characterId/"+suffix,(req,res)=>{
+      const {campaignId,characterId}=req.params,actorId=req.auth.actorId;
+      if(req.auth.kind!=="actor"||!id(campaignId)||!id(characterId)||memberRole.get(campaignId,actorId)?.role!=="DM")
+        return res.status(403).json({success:false,error:"DM_REQUIRED"});
+      try{
+        const result=chronalTravel[method]({...req.body,campaignId,characterId,actorId});
+        return res.status(result.duplicate?200:201).json({success:true,...result});
+      }catch(error){
+        return res.status(error instanceof TypeError?400:409).json({success:false,error:error.message});
+      }
+    });
+  }
   // Time-space itinerary preview is member-only and never commits movement or rewards.
   app.get("/api/campaigns/:campaignId/world/time-space",(req,res)=>{
     const campaignId=req.params.campaignId;
