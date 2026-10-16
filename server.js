@@ -309,8 +309,8 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const campaignId=req.params.campaignId,encounterId=req.params.encounterId,actorId=req.auth.actorId;
     if(!id(campaignId)||!id(encounterId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
     try{
-      const {actionId,kind,targetId,amount,condition}=req.body||{};
-      const result=combat.applyAction({campaignId,encounterId,actorId,actionId,kind,targetId,amount,condition});
+      const {actionId,kind,targetId,amount,condition,attackBonus,armorClass,damageCount,damageSides,damageBonus}=req.body||{};
+      const result=combat.applyAction({campaignId,encounterId,actorId,actionId,kind,targetId,amount,condition,attackBonus,armorClass,damageCount,damageSides,damageBonus});
       return res.status(result.duplicate?200:201).json({success:true,encounter:result});
     }catch(error){
       if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
