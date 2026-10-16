@@ -26,3 +26,12 @@ dialog.mv-modal::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(6px)}
 @media(max-width:800px){.mv-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mv-choice:last-child{grid-column:1/-1}}
 @media(max-width:620px){.mv-grid{grid-template-columns:1fr}.mv-panel{min-height:195px}.mv-shell{width:calc(100% - 22px)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Authenticated atlas controls */
+.mv-connect{display:flex;gap:12px;flex-wrap:wrap;align-items:end}
+.mv-connect label{display:flex;flex:1 1 190px;flex-direction:column;gap:6px;color:var(--mv-muted);font-size:.9rem}
+.mv-connect input{width:100%;padding:12px;border:1px solid var(--mv-line);border-radius:10px;background:#0d1527;color:var(--mv-text);font:inherit}
+.mv-connect input:focus-visible{outline:3px solid var(--mv-focus);outline-offset:2px}
+.mv-connect>.mv-choice{min-height:46px;flex:1 1 140px}
+.mv-room-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px}
+.mv-room-list .mv-choice{min-height:65px}
