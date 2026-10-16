@@ -35,7 +35,7 @@ origin checks, audit logging, and WebSocket session authentication.
   delta is an integer from -20 through 20; total approval clamps to [-100,100].
 
 ## Critical limitations
-- There is no account login, revocation service, or character ownership model. The local admin token can mint sessions for any actor; do not expose the port publicly. Actor tokens expire, but there is no server-side revocation before expiry.
+- There is no account login, revocation service, or character ownership model. The local admin token can mint sessions for any actor; do not expose the port publicly. Actor tokens expire and can be revoked by the administrator or by an actor logging out. Token revocation is persisted in SQLite; periodic cleanup of expired revocation rows is not yet implemented.
 - Equipment is not yet validated against ownership, proficiency, attunement,
   slot restrictions or level prerequisites. Do not use for authoritative rewards.
 - Approval is a numerical relationship tracker, **not consent**. Romance is
@@ -58,3 +58,9 @@ Existing static pages and saved campaigns remain unchanged.
 - `POST /api/campaigns/:campaignId/events` — authorized DM/PLAYER only; `{eventId,expectedRevision,eventType,payload}`; duplicate event IDs are idempotent only for matching actor/type/payload.
 
 These actor sessions authenticate an **actor identifier** issued by a trusted local administrator; they do not authenticate a real-world player or establish a secure public identity provider. Existing Python event storage and browser local saves are unchanged.
+
+## Actor token revocation
+- `POST /api/sessions/logout` — actor session only; revokes its own token.
+- `POST /api/admin/sessions/revoke` — admin only; JSON `{accessToken}` revokes an unexpired actor token.
+- Revocations are stored as SHA-256 token hashes in migration v2. Never store raw access tokens in game data, logs, or source control.
+- This does **not** implement a user login provider, rate limiting, public hosting, or scoped WebSocket sessions.
