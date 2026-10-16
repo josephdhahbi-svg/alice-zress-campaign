@@ -763,7 +763,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const body=req.body||{};
     if(!id(body.actorId)||!memberRole.get(campaignId,body.actorId))return res.status(400).json({success:false,error:"INVALID_ACTOR"});
     try{
-      const result=discoveryLedger.record({campaignId,...body});
+      const result=discoveryLedger.record({...body,campaignId});
       return res.status(result.duplicate?200:201).json({success:true,...result,effects:"NONE",rewards:[]});
     }catch(error){return res.status(error instanceof TypeError?400:409).json({success:false,error:error instanceof TypeError?"INVALID_INPUT":error.message});}
   });
