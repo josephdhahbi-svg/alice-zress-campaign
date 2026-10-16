@@ -222,3 +222,9 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 
 - `cb6bdc0` added `tests/continuity/spherical_space_time_fixtures_v1.json` with synthetic B30→B01, invalid eighth traversal, unknown-date, locked-route, asset-no-unlock, and Alice-choice cases.
 - `a886c33` added `tests/test_spherical_space_time_contract.py` with eight Python unit tests checking the fixtures and current registry contracts. Tests are **not yet executed against a full checkout**; no passing status claimed.
+
+## Directive 16 execution check (2026-10-16)
+- Attempted complete checkout: `git clone --depth 1 --branch dev/alice-three-chosen-roadmap https://github.com/josephdhahbi-svg/alice-zress-campaign.git /tmp/moonveil-checkout` failed with `Could not resolve host: github.com`. No complete checkout was produced; no full-repository validators/tests executed.
+- Checked GitHub combined status for CI workflow commit `cf8925bdb1c852a273d99f1fefcbe923657720bc`: no status checks returned. Workflow-runs lookup for that commit also returned no runs (connector lookup only surfaces PR-associated runs); CI success remains unverified.
+- Current contracts/fixtures exist: `docs/architecture/spherical-space-time-contract-v1.md`, `tests/continuity/spherical_space_time_fixtures_v1.json`, `tests/test_spherical_space_time_contract.py`, `data/alice_u01_read_model_v1.json`, and `data/master_roads_atlas.json`.
+- Next: trigger/inspect GitHub Actions run via the Actions UI or add a harmless commit to trigger push CI; then review actual logs. Continue using read-only/synthetic tests until complete checkout is available.
