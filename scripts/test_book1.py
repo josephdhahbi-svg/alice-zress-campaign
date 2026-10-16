@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Regression checks for the Book 1 scene data and standalone browser prototype."""
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -65,7 +64,7 @@ def main():
     if GAME.exists():
         html = GAME.read_text(encoding="utf-8")
         for element_id in ("choices", "modifier", "dc", "roll", "result", "status", "saveSummary", "log", "export", "import", "reset"):
-            check(re.search(r'id=["\\']' + re.escape(element_id) + r'["\\']', html) is not None, f"browser prototype missing control #{element_id}")
+            check(('id=\"' + element_id + '\"' in html) or (\"id='\" + element_id + \"'\" in html), f\"browser prototype missing control #{element_id}\")
         for feature in ("localStorage", "JSON.stringify", "JSON.parse", "createObjectURL", "Math.random"):
             check(feature in html, f"browser prototype missing expected implementation marker {feature}")
         check("No U01 packets are granted or spent by this scene" in html, "scene should explicitly state that it does not alter U01 packets")
