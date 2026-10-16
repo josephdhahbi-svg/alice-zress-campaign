@@ -279,3 +279,6 @@ Art paperwork records proposed 15+ asset work orders, mandatory provenance/right
 
 ## 2026-10-16 — Rabbit Hole interactive preview
 Created `prototype/rabbit-hole-play.html` in commit `f3bc0fdba03ef896e260ee2b4becf8cff12b6caf`: responsive four-scene opening, five clickable canonical choices, accessible scene journal, local preview and optional signed campaign dialogue API integration. Signed token is memory-only, not stored in localStorage. No quest/reward/travel state changes; standalone HTML must be served same-origin with backend for authenticated API mode. Prototype is not a deployed game or full progression engine. CI status pending; do not close charter tasks until verified.
+
+## 2026-10-16 — Three Sacred Lich Ascensions engineering slice
+Created `backend/sacred-lich-ascensions.js` (`176f5fef`), tests (`a125c396`), and signed campaign read-only GET APIs in `server.js` (`8ad2d172`). Three proposed paths: Moonveil Witch/Selune/Protection; Alice Z'ress/Eilistraee/Freedom; Starweave Necromancer/Mystra/Knowledge. Five sacrifice evidence objectives each; Level 17 gate; DM and divine review. The evaluator ALWAYS refuses to grant a transformation because no authoritative transformation engine is wired yet. Never claim these quests completed or Chosen/celestial states earned. No charter task closed pending full integration and CI evidence.
