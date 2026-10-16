@@ -25,8 +25,17 @@ class DurableDraftWorker{
     if(!fs.existsSync(file)||fs.lstatSync(file).isSymbolicLink()||sha(fs.readFileSync(file))!==record.sha256)throw Error("DRAFT_TAMPERED");
    }
    if(!this.initial.slice(0,m.completed.length).every((t,i)=>t.id===m.completed[i].id))throw Error("QUEUE_ORDER_CONFLICT");
-   this.writer.taskQueue=this.initial.slice(m.completed.length);
-   this.writer.completedLog=m.completed;
+   const recovered=[...m.completed];
+   for(const task of this.initial.slice(recovered.length)){
+    const file=path.join(this.root,task.filename);
+    if(!fs.existsSync(file))break;
+    if(fs.lstatSync(file).isSymbolicLink()||sha(fs.readFileSync(file))!==sha(task.content))throw Error("UNTRACKED_DRAFT_CONFLICT");
+    recovered.push({id:task.id,filename:task.filename,sha256:sha(task.content),status:"DRAFT_WRITTEN"});
+   }
+   if(this.initial.slice(recovered.length).some(t=>fs.existsSync(path.join(this.root,t.filename))))throw Error("QUEUE_ORDER_CONFLICT");
+   this.writer.taskQueue=this.initial.slice(recovered.length);
+   this.writer.completedLog=recovered;
+   if(recovered.length!==m.completed.length)this.persist();
   }else{
    // Recover after a crash between the draft write and manifest commit.
    const recovered=[];
