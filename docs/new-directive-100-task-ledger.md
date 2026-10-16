@@ -195,3 +195,10 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Hardened isolated Glyph prototype against malformed HP and nonfinite random rolls (`04f0bde`), with new edge-case unit test (`723451f`); latest CI pending.
 - Parallel art/asset commits appeared on main during this batch; none of the art/asset files were overwritten.
 - Browser-based interaction QA and authoritative campaign macro execution remain unimplemented; no Flutter integration or production readiness claim.
+
+## Batch 14 — authenticated campaign d20 journal
+- Verified Batch 13 dice/Glyph tests [CI 38847455047](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847455047), success; Pages deployed [38847469964](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847469964).
+- Added deterministic bounded d20 resolution module (`4959690`) and edge-case unit tests (`b6fd16a`), included in CI (`99a6a72`); [CI 38847734743](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847734743) passed.
+- Added campaign-scoped `POST /api/campaigns/:campaignId/rolls` endpoint: server-side crypto random die, authenticated member authorization, observer restriction, journal revision and idempotent retry (`7ff575c`); [CI 38847752196](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847752196) passed existing tests.
+- Extended HTTP integration test with roll replay, invalid input and outsider isolation (`e324d57`); newest CI outcome pending.
+- Documented development API and limitations (`e14abf9`). T017/T018/T032 partial; browser macro remains local-only, no server linkage or official combat effects. Production authentication/fairness remains unimplemented.
