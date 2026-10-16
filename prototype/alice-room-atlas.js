@@ -4,7 +4,7 @@ const byId=id=>document.getElementById(id);
 let session=null,rooms=[],active=null,selectedChoice=null,sessionEpoch=0;
 const labels=["Lawful Good","Neutral Good","Chaotic Good","Utility","Action"];
 function status(message){byId("connection-status").textContent=message}
-function reset(){sessionEpoch++;session=null;rooms=[];active=null;selectedChoice=null;byId("submit-choice").disabled=true;byId("refresh-journal").disabled=true;byId("dm-refresh").disabled=true;byId("dm-queue").replaceChildren();byId("dm-status").textContent="Connect with a DM session to review.";byId("ai-guide-send").disabled=true;byId("ai-guide-reply").textContent="";byId("ai-guide-status").textContent="Connect to a campaign to ask the AI guide.";byId("journal-entries").replaceChildren();byId("token").value="";byId("rooms").replaceChildren();byId("choices").replaceChildren();byId("room-title").textContent="Choose a room";byId("room-description").textContent="Room choices are previews only.";byId("choice-status").textContent="No choice submitted."}
+function reset(){sessionEpoch++;session=null;rooms=[];active=null;selectedChoice=null;byId("submit-choice").disabled=true;byId("refresh-journal").disabled=true;byId("dm-refresh").disabled=true;byId("maps-refresh").disabled=true;byId("maps-list").replaceChildren();byId("maps-status").textContent="Connect to browse maps.";byId("dm-queue").replaceChildren();byId("dm-status").textContent="Connect with a DM session to review.";byId("ai-guide-send").disabled=true;byId("ai-guide-reply").textContent="";byId("ai-guide-status").textContent="Connect to a campaign to ask the AI guide.";byId("journal-entries").replaceChildren();byId("token").value="";byId("rooms").replaceChildren();byId("choices").replaceChildren();byId("room-title").textContent="Choose a room";byId("room-description").textContent="Room choices are previews only.";byId("choice-status").textContent="No choice submitted."}
 async function api(path,options={}){
  if(!session)throw Error("Connect first");
  const response=await fetch("/api/campaigns/"+encodeURIComponent(session.campaign)+"/world/alice-demiplane/"+path,{
@@ -28,7 +28,7 @@ byId("connect").addEventListener("submit",async event=>{
  try{const data=await api("rooms");if(!Array.isArray(data.rooms))throw Error("Invalid room response");
  rooms=data.rooms;const root=byId("rooms");root.replaceChildren();
  rooms.forEach(room=>{const button=document.createElement("button");button.type="button";button.className="mv-choice";button.textContent=room.name+" · "+room.status;button.addEventListener("click",()=>showRoom(room));root.append(button)});
- status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;byId("dm-refresh").disabled=false;byId("quest-chains-refresh").disabled=false;byId("scene-actions-refresh").disabled=false;await refreshAiStatus();if(rooms.length)showRoom(rooms[0]);await refreshJournal();
+ status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;byId("dm-refresh").disabled=false;byId("maps-refresh").disabled=false;byId("quest-chains-refresh").disabled=false;byId("scene-actions-refresh").disabled=false;await refreshAiStatus();if(rooms.length)showRoom(rooms[0]);await refreshJournal();
  }catch(error){reset();status(error.message)}
 });
 byId("disconnect").addEventListener("click",()=>{reset();status("Disconnected. Session cleared from this page.")});
@@ -232,3 +232,42 @@ async function refreshSceneActions(){
  }catch(error){if(epoch===sessionEpoch)byId("scene-actions-status").textContent=error.message}
 }
 byId("scene-actions-refresh").addEventListener("click",refreshSceneActions);
+
+async function refreshChronologicalMaps(){
+ if(!session)return;
+ const epoch=sessionEpoch,current=session,root=byId("maps-list");
+ root.replaceChildren();byId("maps-status").textContent="Loading map grids…";
+ const base="/api/campaigns/"+encodeURIComponent(current.campaign)+"/maps";
+ const headers={"Authorization":"Bearer "+current.token};
+ try{
+  const response=await fetch(base,{headers,cache:"no-store",credentials:"omit"});
+  const data=await response.json();
+  if(epoch!==sessionEpoch)return;
+  if(!response.ok||!Array.isArray(data.maps))throw Error(data.error||"Map atlas unavailable");
+  for(const map of data.maps){
+   const card=document.createElement("article");card.className="mv-journal-entry";
+   const title=document.createElement("h3");title.textContent=map.name+" · "+map.region+" · "+map.plane;
+   const grid=document.createElement("pre");grid.style.overflowX="auto";grid.style.fontFamily="monospace";grid.style.letterSpacing="0.25em";
+   grid.textContent="    A B C D E F G H\n"+map.grid.map((line,i)=>String(i+1).padStart(2,"0")+"  "+line.split("").join(" ")).join("\n");
+   const legend=document.createElement("p");legend.textContent="Legend: # wall · . floor · "+Object.entries(map.legend).map(([symbol,label])=>symbol+" "+label).join(" · ");
+   const date=document.createElement("p");date.textContent="Date: unverified · Map scale: schematic · Canon: "+map.sourceStatus;
+   const button=document.createElement("button");button.className="mv-choice";button.type="button";button.textContent="Preview return visit";
+   const hooks=document.createElement("p");
+   button.addEventListener("click",async()=>{
+    const year=byId("map-year").value.trim();
+    const body={era:byId("map-era").value,level:Number(byId("map-level").value),visitSequence:Number(byId("map-visit").value),drDate:year?year+" DR":null};
+    button.disabled=true;
+    try{
+     const response=await fetch(base+"/"+encodeURIComponent(map.id)+"/visits/preview",{method:"POST",headers:{...headers,"Content-Type":"application/json"},body:JSON.stringify(body),cache:"no-store",credentials:"omit"});
+     const data=await response.json();if(epoch!==sessionEpoch)return;
+     if(!response.ok)throw Error(data.error||"Visit preview unavailable");
+     const v=data.visit;hooks.textContent="Era: "+v.era+" · Visit #"+v.visitSequence+" · "+(v.drDate||"Date unverified")+" · "+v.hooks.map(x=>x.label+": "+(x.ready?"available to review":"missing prerequisite")).join(" | ")+" · Travel and time remain unchanged.";
+    }catch(error){if(epoch===sessionEpoch)hooks.textContent=error.message}
+    finally{button.disabled=false}
+   });
+   card.append(title,grid,legend,date,button,hooks);root.append(card);
+  }
+  byId("maps-status").textContent=data.maps.length+" grid maps loaded. Returning is a DM-reviewed preview, not time travel.";
+ }catch(error){if(epoch===sessionEpoch)byId("maps-status").textContent=error.message}
+}
+byId("maps-refresh").addEventListener("click",refreshChronologicalMaps);
