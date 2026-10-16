@@ -1,5 +1,6 @@
 const sceneActions=require("./backend/scene-interaction-catalog");
 const atlasMaps=require("./backend/chronological-map-atlas");
+const {previewRandomEncounter}=require("./backend/random-encounter-loot");
 const {createDiscoveryLedger}=require("./backend/discovery-ledger");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
@@ -766,6 +767,12 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       const result=discoveryLedger.record({...body,campaignId});
       return res.status(result.duplicate?200:201).json({success:true,...result,effects:"NONE",rewards:[]});
     }catch(error){return res.status(error instanceof TypeError?400:409).json({success:false,error:error instanceof TypeError?"INVALID_INPUT":error.message});}
+  });
+  app.post("/api/campaigns/:campaignId/maps/:mapId/encounters/preview",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{return res.json({success:true,preview:previewRandomEncounter({...req.body,mapId:req.params.mapId}),advisoryOnly:true});}
+    catch{return res.status(400).json({success:false,error:"INVALID_ENCOUNTER_PREVIEW"});}
   });
   app.get("/api/campaigns/:campaignId/maps",(req,res)=>{
     if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
