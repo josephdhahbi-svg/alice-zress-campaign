@@ -27,16 +27,18 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 - `data/schema.json` — lore-record requirements and allowed status values.
 - `data/books.json` — initial structured 30-book catalog; continuity review remains pending.
 - `data/setup_payoffs.json` — proposed cross-book setup/payoff links.
+- `data/scenes.json` — structured Book 1 opening scene with five choices, check definitions, and state-effect rules.
 - `data/decisions.json` — explicit unresolved decisions; no conflicts are silently overwritten.
 - `data/development_components.json` — reusable component registry.
 - `data/characters.json`, `data/locations.json`, `data/rituals.json`, `data/relationships.json`, `data/story_phases.json` — current starter lore and relationship records.
 - `data/spells.json`, `data/items.json`, `data/quests.json` — starter collections.
 - `scripts/validate.py` — record-family validation; run with `python scripts/validate.py`; CI status must be checked separately.
-- `game/index.html` — offline five-choice browser prototype with local character/quest save and import/export.
+- `game/index.html` — offline campaign prototype with local character/quest save and import/export.
+- `game/book1.html` — standalone Book 1 opening scene prototype with five choices, d20 checks, local event history, and scene save import/export.
 - `.github/workflows/validate.yml` — CI validation and deterministic simulation check.
 
 ## Current implementation status
-The browser prototype is local/offline and is not automatically synchronized with GitHub or ChatGPT. The Flutter + Node.js/Express + SQLite WAL architecture is a target design until its source files and tests are located and verified. The Python validator has been updated for lore records, relationships, story phases, and the component registry; check the latest GitHub Actions run before describing the validation pipeline as passing.
+The browser prototypes are local/offline and are not automatically synchronized with GitHub or ChatGPT. The Book 1 scene is a first playable-slice candidate; it has not yet been browser-tested or connected to a remote backend. The Flutter + Node.js/Express + SQLite WAL architecture is a target design until its source files and tests are located and verified. The Python validator has been updated for lore records, relationships, story phases, and the component registry; check the latest GitHub Actions run before describing the validation pipeline as passing.
 
 Historical dates, official lore facts, the relationship between the seven traversals and the 30-book loop, and the foundational trilogy title sets still require review. Book catalog entries are planning records, not assertions that every plot event is official canon or complete.
 
