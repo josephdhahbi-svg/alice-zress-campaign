@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Moonveil lore records and reusable development components.
-
-Lore records use data/schema.json. The component registry is a separate
-planning contract and is validated independently.
-"""
+"""Validate Moonveil lore records and reusable development components."""
 import json
 import sys
 from pathlib import Path
@@ -28,10 +24,10 @@ def load_json(path):
         return None
 
 
-def validate_lore_file(path, records):
+def validate_records(path, records, required_fields, allowed_enums=None):
     global checked_records
     if not isinstance(records, list):
-        fail(f"{path.name}: expected a JSON list of lore records")
+        fail(f"{path.name}: expected a JSON list")
         return
     seen = set()
     for i, rec in enumerate(records):
@@ -40,7 +36,7 @@ def validate_lore_file(path, records):
         if not isinstance(rec, dict):
             fail(f"{label}: expected an object")
             continue
-        for field in schema["required"]:
+        for field in required_fields:
             if field not in rec:
                 fail(f"{label}: missing {field}")
         record_id = rec.get("id")
@@ -50,12 +46,10 @@ def validate_lore_file(path, records):
             fail(f"{label}: duplicate id {record_id!r} within file")
         else:
             seen.add(record_id)
-        if rec.get("continuity_status") not in schema["allowed_continuity_status"]:
-            fail(f"{label}: invalid continuity status")
-        if rec.get("canon_status") not in schema["allowed_canon_status"]:
-            fail(f"{label}: invalid canon status")
-        if "prerequisites" in rec and not isinstance(rec["prerequisites"], list):
-            fail(f"{label}: prerequisites must be a list")
+        for field, allowed in (allowed_enums or {}).items():
+            if rec.get(field) not in allowed:
+                fail(f"{label}: invalid {field} {rec.get(field)!r}")
+    return seen
 
 
 def validate_components(path, document):
@@ -101,7 +95,20 @@ def validate_components(path, document):
 
 def main():
     global checked_files
-    component_path = DATA / "development_components.json"
+    lore_enums = {
+        "canon_status": schema["allowed_canon_status"],
+        "continuity_status": schema["allowed_continuity_status"],
+    }
+    lore_files = {
+        "books.json", "characters.json", "locations.json", "rituals.json",
+        "spells.json", "items.json", "quests.json",
+    }
+    relationship_required = (
+        "id", "subject", "predicate", "object", "start_dr", "end_dr",
+        "location", "plane", "source", "canon_status", "continuity_status",
+    )
+    phase_required = ("id", "title", "order", "books", "chronology", "status")
+
     for path in sorted(DATA.glob("*.json")):
         if path.name == "schema.json":
             continue
@@ -109,10 +116,19 @@ def main():
         if document is None:
             continue
         checked_files += 1
-        if path == component_path:
+        if path.name == "development_components.json":
             validate_components(path, document)
+        elif path.name in lore_files:
+            validate_records(path, document, schema["required"], lore_enums)
+        elif path.name == "relationships.json":
+            validate_records(path, document, relationship_required, lore_enums)
+        elif path.name == "story_phases.json":
+            validate_records(path, document, phase_required, {"status": ("planned", "active", "completed", "deprecated")})
+        elif isinstance(document, list) and not document:
+            # Empty starter collection: valid, but contains no records to validate.
+            continue
         else:
-            validate_lore_file(path, document)
+            fail(f"{path.name}: no validator profile registered for this data shape")
 
     if errors:
         print("\n".join(errors))
