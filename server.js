@@ -27,6 +27,7 @@ const { listSacredAscensions, getSacredAscension, evaluateSacredAscension } = re
 const { getAliceDemiplane, previewAliceDemiplaneAccess } = require("./backend/alice-demiplane-catalog");
 const { listAliceDemiplaneRooms, getAliceDemiplaneRoom, previewAliceDemiplaneRoomChoice } = require("./backend/alice-demiplane-rooms");
 const { createAliceExplorationJournal } = require("./backend/alice-exploration-journal");
+const { listPlanarWeatherHazards, previewPlanarWeatherHazard } = require("./backend/planar-weather-engine");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -151,6 +152,23 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const plan=planTimeSpaceJourney(req.body||{});
     return res.status(plan.reason==="INVALID_DR_DATE"||plan.reason==="UNKNOWN_LOCATION"||plan.reason==="UNKNOWN_TRAVEL_METHOD"?400:200)
       .json({success:true,...plan});
+  });
+  // Planar weather is a DM-reviewed preview, never automatic damage or conditions.
+  app.get("/api/campaigns/:campaignId/weather/hazards",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,hazards:listPlanarWeatherHazards(),mode:"PREVIEW_ONLY"});
+  });
+  app.post("/api/campaigns/:campaignId/weather/preview",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const {hazardId,unitId,rounds=5}=req.body||{};
+    try{
+      const preview=previewPlanarWeatherHazard(hazardId,unitId,rounds);
+      return preview?res.json({success:true,preview}):res.status(404).json({success:false,error:"UNKNOWN_HAZARD"});
+    }catch(error){return res.status(400).json({success:false,error:"INVALID_INPUT"});}
   });
   // Durable narrative proposals only; no travel, ascension, rewards or HP changes.
   app.get("/api/campaigns/:campaignId/world/alice-demiplane/journal",(req,res)=>{
