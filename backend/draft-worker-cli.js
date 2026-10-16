@@ -13,7 +13,7 @@ function main(args=process.argv.slice(2)){
  return withDraftLock(root,()=>{
   const worker=new DurableDraftWorker({rootDir:root});
   const result=command==="status"?{remainingQueue:worker.remainingQueue,mode:"DRAFT_ONLY"}:worker.runNextTask(command);
-  process.stdout.write(JSON.stringify(result)+"\\n");
+  process.stdout.write(JSON.stringify(result)+"\n");
   return 0;
  });
 }
