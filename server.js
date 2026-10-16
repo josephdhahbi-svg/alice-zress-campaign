@@ -293,6 +293,19 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     if(!result.duplicate)broadcastCampaign(campaignId,{type:"CAMPAIGN_EVENT",campaignId,revision:result.revision,eventType});
     res.status(result.status).json({success:true,campaignId,...result});
   });
+  app.post("/api/campaigns/:campaignId/quests/catalog",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const {questId,requiredObjectiveIds}=req.body||{};
+      const result=questEvidence.registerQuest({campaignId,questId,actorId,requiredObjectiveIds});
+      return res.status(result.duplicate?200:201).json({success:true,...result});
+    }catch(error){
+      if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
+      return res.status(409).json({success:false,error:"QUEST_DEFINITION_CONFLICT"});
+    }
+  });
   // Quest evidence is derived only from campaign journal events authored by a DM.
   // No candidate artifacts are automatically awarded.
   app.post("/api/campaigns/:campaignId/quests/objectives/verify",(req,res)=>{
