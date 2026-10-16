@@ -13,6 +13,7 @@ const { resolveD20 } = require("./backend/dice-rules");
 const { createFactionDisputeEngine } = require("./backend/faction-dispute-engine");
 const { createLivingWorldEngine } = require("./backend/living-world-pulse");
 const { createWorldEconomyEngine } = require("./backend/world-economy");
+const { createSettlementTradeEngine } = require("./backend/settlement-trade-engine");
 const { createCombatEngine } = require("./backend/combat-engine");
 const { createQuestEvidenceEngine } = require("./backend/quest-evidence-engine");
 
@@ -55,6 +56,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const disputes = createFactionDisputeEngine(db);
   const livingWorld = createLivingWorldEngine(db);
   const worldEconomy = createWorldEconomyEngine(db);
+  const settlementTrade = createSettlementTradeEngine(db);
   const combat = createCombatEngine(db);
   const questEvidence = createQuestEvidenceEngine(db);
   const pulse = initializeFactionPulseEngine(db);
@@ -113,6 +115,29 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       return res.status(error instanceof TypeError?400:409).json({success:false,error:"PRICE_CONFLICT"});
     }
   });
+  // Explicit settlement trade operations; no cron, player wallet or item grants.
+  app.get("/api/campaigns/:campaignId/world/settlements",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,markets:settlementTrade.getMarkets(campaignId)});
+  });
+  const settlementPost=(route,method)=>{
+    app.post("/api/campaigns/:campaignId/world/settlements/"+route,(req,res)=>{
+      const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+      if(req.auth.kind!=="actor"||!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")
+        return res.status(403).json({success:false,error:"DM_REQUIRED"});
+      try{
+        const result=settlementTrade[method]({...req.body,campaignId,actorId});
+        return res.status(result.duplicate?200:201).json({success:true,...result});
+      }catch(error){
+        return res.status(error instanceof TypeError?400:409).json({success:false,error:"SETTLEMENT_CONFLICT"});
+      }
+    });
+  };
+  settlementPost("create","createSettlement");
+  settlementPost("markets","defineMarket");
+  settlementPost("trades","recordTrade");
   // Campaign-scoped sockets use signed actor sessions, never the shared admin token.
   // The URL carries no token; browsers pass it via WebSocket subprotocol.
   const wss = new WebSocketServer({noServer:true});
