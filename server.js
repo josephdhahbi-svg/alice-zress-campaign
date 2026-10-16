@@ -8,6 +8,7 @@ const {createOmniversalMemory}=require("./backend/omniversal-memory");
 const omniversalCatalog=require("./backend/omniversal-quest-character-catalog");
 const tavernCatalog=require("./backend/omniversal-tavern-catalog");
 const divineCatalog=require("./backend/divine-shrine-catalog");
+const weaveChronology=require("./backend/weave-chronology-tracker");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
 const express = require("express");
@@ -856,6 +857,18 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   // Read-only draft NPC stat sheets and quest/cast relationships.
   // Authenticated read-only tavern and refuge catalog; no automatic rest or transactions.
   // Divine sites and historical cameo previews are advisory, never auto-awards.
+  // Three-era historical tracker, with dates and placements marked unresolved.
+  app.get("/api/campaigns/:campaignId/chronology/weave",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,tracker:weaveChronology.getTracker(),reviewRequired:true});
+  });
+  app.get("/api/campaigns/:campaignId/chronology/books/:book",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const book=weaveChronology.getBook(Number(req.params.book));
+    return book?res.json({success:true,book,reviewRequired:true}):res.status(404).json({success:false,error:"NOT_FOUND"});
+  });
   app.get("/api/campaigns/:campaignId/divine/shrines",(req,res)=>{
     const campaignId=req.params.campaignId;
     if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
