@@ -65,7 +65,7 @@ function createQuestEvidenceEngine(db){
   const next=revision+1,now=new Date().toISOString();
   db.prepare("INSERT INTO vtt_quest_states VALUES(?,?,?,?,?,?) ON CONFLICT(campaign_id,character_id,quest_id) DO UPDATE SET status=excluded.status,revision=excluded.revision,updated_at=excluded.updated_at")
     .run(campaignId,characterId,questId,toStatus,next,now);
-  db.prepare("INSERT INTO vtt_quest_state_audit VALUES(?,?,?,?,?,?,?,?)")
+  db.prepare("INSERT INTO vtt_quest_state_audit VALUES(?,?,?,?,?,?,?,?,?)")
     .run(campaignId,characterId,questId,next,actorId,previous?.status??null,toStatus,reason.trim(),now);
   return {status:toStatus,revision:next};
  });
@@ -125,7 +125,7 @@ function createQuestEvidenceEngine(db){
   const now=new Date().toISOString();
   db.prepare("INSERT INTO vtt_quest_completions VALUES(?,?,?,?,?)").run(campaignId,characterId,questId,completionEventId,now);
   db.prepare("UPDATE vtt_quest_states SET status='COMPLETE',revision=?,updated_at=? WHERE campaign_id=? AND character_id=? AND quest_id=?").run(priorState.revision+1,now,campaignId,characterId,questId);
-  db.prepare("INSERT INTO vtt_quest_state_audit VALUES(?,?,?,?,?,?,?,?)").run(campaignId,characterId,questId,priorState.revision+1,actorId,"ACTIVE","COMPLETE","DM_APPROVED:"+completionEventId,now);
+  db.prepare("INSERT INTO vtt_quest_state_audit VALUES(?,?,?,?,?,?,?,?,?)").run(campaignId,characterId,questId,priorState.revision+1,actorId,"ACTIVE","COMPLETE","DM_APPROVED:"+completionEventId,now);
   return {duplicate:false,awardedArtifacts:[]};
  });
  return {registerQuest:x=>register(x),approveQuest:x=>approve(x),transitionQuest:x=>transition(x),verifyObjective:x=>verify(x),completeQuest:x=>complete(x)};
