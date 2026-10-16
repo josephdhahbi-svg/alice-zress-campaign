@@ -13,6 +13,7 @@ const { resolveD20 } = require("./backend/dice-rules");
 const { createFactionDisputeEngine } = require("./backend/faction-dispute-engine");
 const { createLivingWorldEngine } = require("./backend/living-world-pulse");
 const { createCombatEngine } = require("./backend/combat-engine");
+const { createQuestEvidenceEngine } = require("./backend/quest-evidence-engine");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -53,6 +54,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const disputes = createFactionDisputeEngine(db);
   const livingWorld = createLivingWorldEngine(db);
   const combat = createCombatEngine(db);
+  const questEvidence = createQuestEvidenceEngine(db);
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
@@ -272,6 +274,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       return res.status(400).json({success:false,error:"INVALID_INPUT"});
     const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?").get(campaignId,actorId);
     if(!member||member.role==="OBSERVER")return res.status(403).json({success:false,error:"FORBIDDEN"});
+    if((eventType==="QUEST_OBJECTIVE_VERIFIED"||eventType==="QUEST_COMPLETION_APPROVED")&&member.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
     const append=db.transaction(()=>{
       const prior=db.prepare("SELECT revision,actor_id,event_type,payload_json FROM vtt_campaign_events WHERE campaign_id=? AND event_id=?").get(campaignId,eventId);
       const encoded=JSON.stringify(payload);
@@ -289,6 +292,34 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     if(result.error)return res.status(result.status).json({success:false,...result});
     if(!result.duplicate)broadcastCampaign(campaignId,{type:"CAMPAIGN_EVENT",campaignId,revision:result.revision,eventType});
     res.status(result.status).json({success:true,campaignId,...result});
+  });
+  // Quest evidence is derived only from campaign journal events authored by a DM.
+  // No candidate artifacts are automatically awarded.
+  app.post("/api/campaigns/:campaignId/quests/objectives/verify",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    try{
+      const {characterId,questId,objectiveId,eventId}=req.body||{};
+      const result=questEvidence.verifyObjective({campaignId,characterId,actorId,questId,objectiveId,eventId});
+      return res.status(result.duplicate?200:201).json({success:true,...result});
+    }catch(error){
+      if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
+      if(error.message==="NOT_AUTHORIZED")return res.status(403).json({success:false,error:"FORBIDDEN"});
+      return res.status(409).json({success:false,error:"EVIDENCE_CONFLICT"});
+    }
+  });
+  app.post("/api/campaigns/:campaignId/quests/complete",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    try{
+      const {characterId,questId,completionEventId,requiredObjectiveIds}=req.body||{};
+      const result=questEvidence.completeQuest({campaignId,characterId,actorId,questId,completionEventId,requiredObjectiveIds});
+      return res.status(result.duplicate?200:201).json({success:true,...result});
+    }catch(error){
+      if(error instanceof TypeError)return res.status(400).json({success:false,error:"INVALID_INPUT"});
+      if(error.message==="NOT_AUTHORIZED")return res.status(403).json({success:false,error:"FORBIDDEN"});
+      return res.status(409).json({success:false,error:"QUEST_CONFLICT"});
+    }
   });
   // Combat is DM-authoritative. Signed actor sessions are required; client actor IDs are ignored.
   app.post("/api/campaigns/:campaignId/combat/encounters",(req,res)=>{
