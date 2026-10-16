@@ -172,6 +172,7 @@
       "custom origin gifts treated as homebrew narrative events"
     ],
     "source": "User-supplied Moonveil Universe handoff and established Alice origin decisions; scene text and checks are homebrew",
-    "notes": "First playable-slice candidate. Outcomes are authored examples, not yet wired into game/index.html. Verify the location ID, ability modifiers, check DCs, and rules edition before mechanical lock."
+    "notes": "First playable-slice candidate. Outcomes are authored examples, not yet wired into game/index.html. Verify the location ID, ability modifiers, check DCs, and rules edition before mechanical lock.",
+    "character_id": "alice-zress"
   }
 ]
