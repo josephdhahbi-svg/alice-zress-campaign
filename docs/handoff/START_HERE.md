@@ -257,3 +257,6 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - `da0be21` updates `tests/test_alice_u01_html.py`; `965e0d0` updates `tests/test_alice_u01_contract.py`.
 - New workflow runs are queued/in progress: `38829931684` (commit `da0be21`) and `38829938540` (commit `965e0d0`). Await completion before declaring suite green.
 - The `Validate campaign records` workflow passed on `e918201`; full Moonveil CI failed on two stale assertions, now corrected. Alice remains protected and no gameplay state changed.
+
+- **CI GREEN:** GitHub Actions run `38829938540` for commit `965e0d0` completed successfully on Python 3.11 and 3.12. Both jobs passed registry validation, Netheril route validation, route-planner demo checks, and unit test discovery. Run: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38829938540.
+- Test fixes: `da0be21` adjusted choice assertions to inspect the structured JSON read model; `965e0d0` corrected the fail-closed UI text assertion. The previous failing run `38829931684` failed because it ran after only the first of those two commits, so the second stale assertion remained. The complete run on `965e0d0` passed.
