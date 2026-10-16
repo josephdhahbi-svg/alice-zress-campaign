@@ -9,6 +9,7 @@ const crypto = require("node:crypto");
 const { migrate } = require("./backend/migrations");
 const { createSessionAuth } = require("./backend/session-auth");
 const { createBackupService } = require("./backend/backup-service");
+const { resolveD20 } = require("./backend/dice-rules");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -117,6 +118,40 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   function broadcast(_event) {}
   const adminOnly=(req,res,next)=>req.auth.kind==="admin"?next():res.status(403).json({success:false,error:"ADMIN_REQUIRED"});
   const actorFor=req=>req.auth.kind==="actor"?req.auth.actorId:req.get("X-Moonveil-Actor");
+  // Signed campaign member rolls are server-generated and recorded in the journal.
+  // This is a development API, not a cryptographic fairness protocol.
+  app.post("/api/campaigns/:campaignId/rolls", (req,res)=>{
+    const campaignId=req.params.campaignId,actorId=actorFor(req);
+    if(!id(campaignId)||!id(actorId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    const membership=memberRole.get(campaignId,actorId);
+    if(!membership)return res.status(403).json({success:false,error:"FORBIDDEN"});
+    if(membership.role==="OBSERVER")return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const {eventId,expectedRevision,modifier=0,dc=15}=req.body||{};
+    if(!id(eventId)||!Number.isSafeInteger(expectedRevision)||expectedRevision<0||
+       !Number.isSafeInteger(modifier)||modifier< -10||modifier>20||
+       !Number.isSafeInteger(dc)||dc<1||dc>40)
+      return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    const type="D20_ROLLED";
+    const result=db.transaction(()=>{
+      const prior=db.prepare("SELECT revision,actor_id,event_type,payload_json FROM vtt_campaign_events WHERE campaign_id=? AND event_id=?").get(campaignId,eventId);
+      if(prior){
+        if(prior.actor_id!==actorId||prior.event_type!==type)return {status:409,error:"IDEMPOTENCY_CONFLICT"};
+        const payload=JSON.parse(prior.payload_json);
+        if(payload.modifier!==modifier||payload.dc!==dc)return {status:409,error:"IDEMPOTENCY_CONFLICT"};
+        return {status:200,revision:prior.revision,duplicate:true,roll:payload};
+      }
+      const current=db.prepare("SELECT COALESCE(MAX(revision),0) AS revision FROM vtt_campaign_events WHERE campaign_id=?").get(campaignId).revision;
+      if(current!==expectedRevision)return {status:409,error:"REVISION_CONFLICT",revision:current};
+      const rawRoll=crypto.randomInt(1,21);
+      const roll=resolveD20({rawRoll,modifier,dc});
+      db.prepare("INSERT INTO vtt_campaign_events(campaign_id,revision,event_id,actor_id,event_type,payload_json,occurred_at) VALUES(?,?,?,?,?,?,?)")
+        .run(campaignId,current+1,eventId,actorId,type,JSON.stringify(roll),new Date().toISOString());
+      return {status:201,revision:current+1,duplicate:false,roll};
+    })();
+    if(result.error)return res.status(result.status).json({success:false,...result});
+    if(!result.duplicate)broadcastCampaign(campaignId,{type:"CAMPAIGN_EVENT",campaignId,revision:result.revision,eventType:type});
+    res.status(result.status).json({success:true,campaignId,...result});
+  });
   app.post("/api/admin/sessions",adminOnly,(req,res)=>{
     const {actorId,ttlSeconds}=req.body||{};
     if(!id(actorId)||ttlSeconds!==undefined&&(!Number.isSafeInteger(ttlSeconds)||ttlSeconds<60||ttlSeconds>86400))
