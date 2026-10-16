@@ -21,7 +21,7 @@ function validateAiRequest({message,mode="GUIDE"}={}){
 async function askMoonveilAi({message,mode="GUIDE",apiKey=process.env.OPENAI_API_KEY,model=process.env.MOONVEIL_AI_MODEL||"gpt-4.1-mini",fetchImpl=fetch}={}){
  const request=validateAiRequest({message,mode});
  if(!apiKey)return {available:false,reason:"AI_NOT_CONFIGURED",reply:null,gameMutation:false};
- if(typeof apiKey!=="string"||apiKey.length<8||typeof model!=="string"||!ID.test(model))throw new TypeError("INVALID_AI_CONFIGURATION");
+ if(typeof apiKey!=="string"||apiKey.length<8||typeof model!=="string"||!/^[A-Za-z0-9][A-Za-z0-9._:-]{0,99}$/.test(model))throw new TypeError("INVALID_AI_CONFIGURATION");
  const controller=new AbortController();
  const timeout=setTimeout(()=>controller.abort(),12000);
  try{
