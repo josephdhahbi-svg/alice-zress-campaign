@@ -1,0 +1,172 @@
+{
+  "schema": "moonveil.looking-glass-five-artifacts.v1",
+  "status": "HOMEBREW_DESIGN_DM_APPROVAL_REQUIRED",
+  "attunement": {
+    "limit": 3,
+    "requiredForEach": true,
+    "normalRulesApply": true,
+    "oneHourShortRestUnlessRulebookSaysOtherwise": true,
+    "changingSet": "Requires ending and establishing attunement using normal rules; not in-combat swapping",
+    "triadActivation": "Exactly the three required artifacts attuned; extra non-artifact attunements cannot exceed limit",
+    "pathSelection": "Triad composition determines available path; player chooses by attunement loadout",
+    "activationRules": "One triad power per long rest per character; individual item uses are separate",
+    "saveDC": 15
+  },
+  "items": [
+    {
+      "id": "eye_of_the_caterpillar",
+      "name": "Eye of the Caterpillar",
+      "wonderland": "Caterpillar",
+      "theme": "eldritch insight",
+      "passive": "Advantage on one Investigation check involving magical illusions per long rest",
+      "spell": "Detect Magic",
+      "spellUse": "1/long rest",
+      "ability": "Unblinking Mark: bonus action mark one visible target within 60 feet for 1 minute; first spell hit each turn against it deals +1d4 psychic; concentration; 1/long rest",
+      "tags": [
+        "DAMAGE",
+        "UTILITY"
+      ],
+      "rarity": "Artifact (homebrew)",
+      "requiresAttunement": true,
+      "spellcasting": "Spell use from item does not grant permanent knowledge of spell",
+      "inventoryStatus": "LOCKED_UNEARNED",
+      "canonStatus": "MOONVEIL_HOMEBREW",
+      "endgameTreasury": false
+    },
+    {
+      "id": "mirror_of_the_white_queen",
+      "name": "Mirror of the White Queen",
+      "wonderland": "White Queen",
+      "theme": "mercy and reflection",
+      "passive": "+1 to saving throws against being charmed or frightened",
+      "spell": "Lesser Restoration",
+      "spellUse": "1/long rest",
+      "ability": "Merciful Reflection: reaction when ally within 30 feet takes damage, reduce by 1d8 + proficiency bonus; 1/long rest",
+      "tags": [
+        "DEFENSE",
+        "UTILITY"
+      ],
+      "rarity": "Artifact (homebrew)",
+      "requiresAttunement": true,
+      "spellcasting": "Spell use from item does not grant permanent knowledge of spell",
+      "inventoryStatus": "LOCKED_UNEARNED",
+      "canonStatus": "MOONVEIL_HOMEBREW",
+      "endgameTreasury": false
+    },
+    {
+      "id": "crown_of_the_red_queen",
+      "name": "Crown of the Red Queen",
+      "wonderland": "Red Queen",
+      "theme": "battle tempo",
+      "passive": "+1 initiative while attuned",
+      "spell": "Misty Step",
+      "spellUse": "1/long rest",
+      "ability": "Checkmate: when you hit with an attack, deal +1d6 force damage and move yourself 5 feet without provoking opportunity attacks; 1/long rest",
+      "tags": [
+        "DAMAGE",
+        "UTILITY"
+      ],
+      "rarity": "Artifact (homebrew)",
+      "requiresAttunement": true,
+      "spellcasting": "Spell use from item does not grant permanent knowledge of spell",
+      "inventoryStatus": "LOCKED_UNEARNED",
+      "canonStatus": "MOONVEIL_HOMEBREW",
+      "endgameTreasury": false
+    },
+    {
+      "id": "hourglass_of_the_white_rabbit",
+      "name": "Hourglass of the White Rabbit",
+      "wonderland": "White Rabbit",
+      "theme": "time and movement",
+      "passive": "+5 feet walking speed",
+      "spell": "Expeditious Retreat",
+      "spellUse": "1/long rest",
+      "ability": "Borrowed Moment: reaction after failing a Dexterity saving throw, add +1d4 to the result; 1/long rest",
+      "tags": [
+        "DEFENSE",
+        "UTILITY"
+      ],
+      "rarity": "Artifact (homebrew)",
+      "requiresAttunement": true,
+      "spellcasting": "Spell use from item does not grant permanent knowledge of spell",
+      "inventoryStatus": "LOCKED_UNEARNED",
+      "canonStatus": "MOONVEIL_HOMEBREW",
+      "endgameTreasury": false
+    },
+    {
+      "id": "heart_of_the_jabberwock",
+      "name": "Heart of the Jabberwock",
+      "wonderland": "Jabberwock",
+      "theme": "draconic fury",
+      "passive": "Resistance to one chosen damage type (fire, cold, lightning, acid) selected on attunement",
+      "spell": "Chromatic Orb",
+      "spellUse": "1/long rest at 1st level",
+      "ability": "Vorpal Pulse: action, 15-foot cone, 3d6 chosen attunement damage type, Dexterity save for half; 1/long rest",
+      "tags": [
+        "DAMAGE",
+        "DEFENSE"
+      ],
+      "rarity": "Artifact (homebrew)",
+      "requiresAttunement": true,
+      "spellcasting": "Spell use from item does not grant permanent knowledge of spell",
+      "inventoryStatus": "LOCKED_UNEARNED",
+      "canonStatus": "MOONVEIL_HOMEBREW",
+      "endgameTreasury": false
+    }
+  ],
+  "triads": [
+    {
+      "id": "shattered_crown",
+      "path": "DAMAGE",
+      "name": "The Shattered Crown",
+      "required": [
+        "eye_of_the_caterpillar",
+        "crown_of_the_red_queen",
+        "heart_of_the_jabberwock"
+      ],
+      "activation": "Action",
+      "uses": "1/long rest",
+      "effect": "Choose fire, cold, lightning or acid. One creature within 60 feet makes a Dexterity save against artifact DC 15, taking 6d8 chosen damage on failure or half on success. If standing in a DM-marked compatible hazard, add 1d8 once; no automatic environmental ignition.",
+      "duration": "Instantaneous",
+      "limit": "Cannot stack with another triad ability on same turn"
+    },
+    {
+      "id": "unbroken_mirror",
+      "path": "DEFENSE",
+      "name": "The Unbroken Mirror",
+      "required": [
+        "mirror_of_the_white_queen",
+        "hourglass_of_the_white_rabbit",
+        "heart_of_the_jabberwock"
+      ],
+      "activation": "Reaction when you or ally within 30 feet takes damage",
+      "uses": "1/long rest",
+      "effect": "Reduce triggering damage by 4d8 + proficiency bonus, then grant the protected creature temporary hit points equal to your proficiency bonus. This reduction occurs after resistance; no retroactive healing.",
+      "duration": "Instantaneous",
+      "limit": "One protected creature per activation"
+    },
+    {
+      "id": "infinite_key",
+      "path": "UTILITY",
+      "name": "The Infinite Key",
+      "required": [
+        "eye_of_the_caterpillar",
+        "mirror_of_the_white_queen",
+        "hourglass_of_the_white_rabbit"
+      ],
+      "activation": "Action",
+      "uses": "1/long rest",
+      "effect": "You and up to two willing creatures within 10 feet teleport to an unoccupied space you can see within 60 feet, provided the destination is on the same plane and not warded against teleportation. You also learn whether one nearby portal is active, but not its destination.",
+      "duration": "Instantaneous",
+      "limit": "No planar travel or bypass of sealed chronology gates"
+    }
+  ],
+  "designNotes": [
+    "Exactly five items; three chosen attunements produce one of three defined triad powers.",
+    "Other three-item combinations grant their individual item abilities but no triad power.",
+    "Normal action economy applies; no free bonus actions.",
+    "Artifact ownership does not imply attunement or an unlocked triad.",
+    "Unlocks require quest evidence and DM approval.",
+    "Does not replace or auto-grant previously locked divine treasury rewards."
+  ]
+}
