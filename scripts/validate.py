@@ -110,6 +110,7 @@ def main():
     phase_required = ("id", "title", "order", "books", "chronology", "status")
     payoff_required = ("id", "name", "category", "from_book_id", "to_book_id", "setup", "payoff", "mechanism", "paradox_risk", "status", "canon_status", "continuity_status", "source", "notes")
     decision_required = ("id", "question", "status", "options", "current_policy", "evidence", "affected_ids", "decision", "owner_role", "notes")
+    scene_required = ("id", "book_id", "scene_number", "title", "status", "canon_status", "continuity_status", "location_id", "historical_date_dr", "campaign_timestamp", "purpose", "opening_text", "origin_gifts", "choice_order", "choices", "dice_policy", "state_effects", "prerequisites", "source", "notes")
 
     for path in sorted(DATA.glob("*.json")):
         if path.name == "schema.json":
@@ -134,6 +135,11 @@ def main():
         elif path.name == "decisions.json":
             validate_records(path, document, decision_required, {
                 "status": ("CONFLICT", "SOURCE_CHECK_REQUIRED", "RULES_CHECK_REQUIRED", "APPROVED", "REJECTED", "DEPRECATED"),
+            })
+        elif path.name == "scenes.json":
+            validate_records(path, document, scene_required, {
+                "status": ("PROPOSED", "IN_PROGRESS", "LOCKED_CANON", "BLOCKED", "DEPRECATED"),
+                **lore_enums,
             })
         elif isinstance(document, list) and not document:
             # Empty starter collection: valid, but contains no records to validate.
