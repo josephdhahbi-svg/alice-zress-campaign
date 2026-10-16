@@ -1,0 +1,3032 @@
+{
+  "schema": "moonveil.divine-shrines.v1",
+  "status": "DRAFT_PENDING_CANON_AND_DM_APPROVAL",
+  "deities": [
+    {
+      "name": "Eilistraee",
+      "moralRole": "GOOD",
+      "theme": "Moonlit Song",
+      "blessing": "Moonlight Blessing",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Mystra",
+      "moralRole": "GOOD",
+      "theme": "Weave Resonance",
+      "blessing": "Weave's Measure",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Ghaunadaur",
+      "moralRole": "EVIL",
+      "theme": "The Hunger Beneath",
+      "blessing": "Viscous Endurance",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Lolth",
+      "moralRole": "EVIL",
+      "theme": "The Spider's Test",
+      "blessing": "Spider's Patience",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Selune",
+      "moralRole": "GOOD",
+      "theme": "Wayfarer's Moon",
+      "blessing": "Traveler's Gleam",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Shar",
+      "moralRole": "EVIL",
+      "theme": "The Veil of Loss",
+      "blessing": "Veil of Stillness",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Lathander",
+      "moralRole": "GOOD",
+      "theme": "Dawn's Renewal",
+      "blessing": "Dawn's Comfort",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Bahamut",
+      "moralRole": "GOOD",
+      "theme": "The Platinum Oath",
+      "blessing": "Platinum Resolve",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Sune",
+      "moralRole": "GOOD",
+      "theme": "The Open Heart",
+      "blessing": "Grace of the Heart",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Corellon",
+      "moralRole": "GOOD",
+      "theme": "The First Song",
+      "blessing": "Artist's Inspiration",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "Sehanine Moonbow",
+      "moralRole": "GOOD",
+      "theme": "Dream Passage",
+      "blessing": "Dreamwalker's Insight",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    },
+    {
+      "name": "The Raven Queen",
+      "moralRole": "NEUTRAL",
+      "theme": "Memory's Threshold",
+      "blessing": "Memory's Vigil",
+      "sourceStatus": "CHARACTERIZATION_DRAFT"
+    }
+  ],
+  "sites": [
+    {
+      "id": "mv_shrine_001",
+      "name": "Wayfarer's Shrine of Ghaunadaur — Book 1",
+      "book": 1,
+      "trilogy": 1,
+      "region": "Underdark",
+      "plane": "Material Plane",
+      "deity": "Ghaunadaur",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "OOZE_DOMAIN",
+      "influence": 1,
+      "blessing": {
+        "name": "Viscous Endurance",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "All names soften. All stone yields. What will you offer the dark?",
+        "guidance": "The deep does not love you. It notices what survives.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_001"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_002",
+      "name": "Hidden Sanctuary of Lolth — Book 1",
+      "book": 1,
+      "trilogy": 1,
+      "region": "Underdark",
+      "plane": "Material Plane",
+      "deity": "Lolth",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DROW_CULT",
+      "influence": 2,
+      "blessing": {
+        "name": "Spider's Patience",
+        "effect": "+1 bonus to one Dexterity (Stealth) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A web is strongest when its prey mistakes the strands for shelter.",
+        "guidance": "The choice is yours. So are the consequences of refusing me.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_002"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_003",
+      "name": "Wayfarer's Shrine of Lolth — Book 2",
+      "book": 2,
+      "trilogy": 1,
+      "region": "Underdark",
+      "plane": "Material Plane",
+      "deity": "Lolth",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DROW_CULT",
+      "influence": 1,
+      "blessing": {
+        "name": "Spider's Patience",
+        "effect": "+1 bonus to one Dexterity (Stealth) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A web is strongest when its prey mistakes the strands for shelter.",
+        "guidance": "The choice is yours. So are the consequences of refusing me.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_004"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_004",
+      "name": "Hidden Sanctuary of Eilistraee — Book 2",
+      "book": 2,
+      "trilogy": 1,
+      "region": "Underdark",
+      "plane": "Material Plane",
+      "deity": "Eilistraee",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 2,
+      "blessing": {
+        "name": "Moonlight Blessing",
+        "effect": "advantage on next one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A moonlit path is not a command, Alice. You may choose to walk it.",
+        "guidance": "Light reveals the road; your choices decide whom it shelters.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_005"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_005",
+      "name": "Wayfarer's Shrine of Eilistraee — Book 3",
+      "book": 3,
+      "trilogy": 1,
+      "region": "Underdark",
+      "plane": "Material Plane",
+      "deity": "Eilistraee",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 1,
+      "blessing": {
+        "name": "Moonlight Blessing",
+        "effect": "advantage on next one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A moonlit path is not a command, Alice. You may choose to walk it.",
+        "guidance": "Light reveals the road; your choices decide whom it shelters.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_007"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_006",
+      "name": "Hidden Sanctuary of Ghaunadaur — Book 3",
+      "book": 3,
+      "trilogy": 1,
+      "region": "Underdark",
+      "plane": "Material Plane",
+      "deity": "Ghaunadaur",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "OOZE_DOMAIN",
+      "influence": 2,
+      "blessing": {
+        "name": "Viscous Endurance",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "All names soften. All stone yields. What will you offer the dark?",
+        "guidance": "The deep does not love you. It notices what survives.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_008"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_007",
+      "name": "Wayfarer's Shrine of Lathander — Book 4",
+      "book": 4,
+      "trilogy": 2,
+      "region": "Sword Coast",
+      "plane": "Material Plane",
+      "deity": "Lathander",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DAWN",
+      "influence": 1,
+      "blessing": {
+        "name": "Dawn's Comfort",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A dawn is not forgiveness earned. It is another chance to act.",
+        "guidance": "Start with what you can repair before sunrise.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_010"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_008",
+      "name": "Hidden Sanctuary of Sune — Book 4",
+      "book": 4,
+      "trilogy": 2,
+      "region": "Sword Coast",
+      "plane": "Material Plane",
+      "deity": "Sune",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "FESTIVAL",
+      "influence": 2,
+      "blessing": {
+        "name": "Grace of the Heart",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Affection freely given needs no chains to keep it true.",
+        "guidance": "Listen first. You cannot choose another's heart for them.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_011"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_009",
+      "name": "Wayfarer's Shrine of Sune — Book 5",
+      "book": 5,
+      "trilogy": 2,
+      "region": "Sword Coast",
+      "plane": "Material Plane",
+      "deity": "Sune",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "FESTIVAL",
+      "influence": 1,
+      "blessing": {
+        "name": "Grace of the Heart",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Affection freely given needs no chains to keep it true.",
+        "guidance": "Listen first. You cannot choose another's heart for them.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_013"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_010",
+      "name": "Hidden Sanctuary of Corellon — Book 5",
+      "book": 5,
+      "trilogy": 2,
+      "region": "Sword Coast",
+      "plane": "Material Plane",
+      "deity": "Corellon",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "ELVEN",
+      "influence": 2,
+      "blessing": {
+        "name": "Artist's Inspiration",
+        "effect": "+1 bonus to one Dexterity (Sleight of Hand) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Creation begins where imitation ends. What will you make of this hour?",
+        "guidance": "Your inheritance is not your prison.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_014"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_011",
+      "name": "Wayfarer's Shrine of Corellon — Book 6",
+      "book": 6,
+      "trilogy": 2,
+      "region": "Sword Coast",
+      "plane": "Material Plane",
+      "deity": "Corellon",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "ELVEN",
+      "influence": 1,
+      "blessing": {
+        "name": "Artist's Inspiration",
+        "effect": "+1 bonus to one Dexterity (Sleight of Hand) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Creation begins where imitation ends. What will you make of this hour?",
+        "guidance": "Your inheritance is not your prison.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_016"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_012",
+      "name": "Hidden Sanctuary of Eilistraee — Book 6",
+      "book": 6,
+      "trilogy": 2,
+      "region": "Sword Coast",
+      "plane": "Material Plane",
+      "deity": "Eilistraee",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 2,
+      "blessing": {
+        "name": "Moonlight Blessing",
+        "effect": "advantage on next one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A moonlit path is not a command, Alice. You may choose to walk it.",
+        "guidance": "Light reveals the road; your choices decide whom it shelters.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_017"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_013",
+      "name": "Wayfarer's Shrine of Bahamut — Book 7",
+      "book": 7,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "deity": "Bahamut",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DRACONIC",
+      "influence": 1,
+      "blessing": {
+        "name": "Platinum Resolve",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Honor is not the roar of a dragon. It is the shield held over the small.",
+        "guidance": "Stand beside those who cannot stand alone.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_019"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_014",
+      "name": "Hidden Sanctuary of Mystra — Book 7",
+      "book": 7,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "deity": "Mystra",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "WEAVE_STRONG",
+      "influence": 2,
+      "blessing": {
+        "name": "Weave's Measure",
+        "effect": "+1 bonus to one Arcana check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Attend to the threads before you pull them. Every spell changes something.",
+        "guidance": "The Weave remembers patterns, not promises. Study what you see.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_020"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_015",
+      "name": "Wayfarer's Shrine of Mystra — Book 8",
+      "book": 8,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "deity": "Mystra",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "WEAVE_STRONG",
+      "influence": 1,
+      "blessing": {
+        "name": "Weave's Measure",
+        "effect": "+1 bonus to one Arcana check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Attend to the threads before you pull them. Every spell changes something.",
+        "guidance": "The Weave remembers patterns, not promises. Study what you see.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_022"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_016",
+      "name": "Hidden Sanctuary of Bahamut — Book 8",
+      "book": 8,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "deity": "Bahamut",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DRACONIC",
+      "influence": 2,
+      "blessing": {
+        "name": "Platinum Resolve",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Honor is not the roar of a dragon. It is the shield held over the small.",
+        "guidance": "Stand beside those who cannot stand alone.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_023"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_017",
+      "name": "Wayfarer's Shrine of Bahamut — Book 9",
+      "book": 9,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "deity": "Bahamut",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DRACONIC",
+      "influence": 1,
+      "blessing": {
+        "name": "Platinum Resolve",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Honor is not the roar of a dragon. It is the shield held over the small.",
+        "guidance": "Stand beside those who cannot stand alone.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_025"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_018",
+      "name": "Hidden Sanctuary of Mystra — Book 9",
+      "book": 9,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "plane": "Material Plane",
+      "deity": "Mystra",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "WEAVE_STRONG",
+      "influence": 2,
+      "blessing": {
+        "name": "Weave's Measure",
+        "effect": "+1 bonus to one Arcana check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Attend to the threads before you pull them. Every spell changes something.",
+        "guidance": "The Weave remembers patterns, not promises. Study what you see.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_026"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_019",
+      "name": "Wayfarer's Shrine of Lathander — Book 10",
+      "book": 10,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "deity": "Lathander",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DAWN",
+      "influence": 1,
+      "blessing": {
+        "name": "Dawn's Comfort",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A dawn is not forgiveness earned. It is another chance to act.",
+        "guidance": "Start with what you can repair before sunrise.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_028"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_020",
+      "name": "Hidden Sanctuary of Lathander — Book 10",
+      "book": 10,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "deity": "Lathander",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DAWN",
+      "influence": 2,
+      "blessing": {
+        "name": "Dawn's Comfort",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A dawn is not forgiveness earned. It is another chance to act.",
+        "guidance": "Start with what you can repair before sunrise.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_029"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_021",
+      "name": "Wayfarer's Shrine of Lathander — Book 11",
+      "book": 11,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "deity": "Lathander",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DAWN",
+      "influence": 1,
+      "blessing": {
+        "name": "Dawn's Comfort",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A dawn is not forgiveness earned. It is another chance to act.",
+        "guidance": "Start with what you can repair before sunrise.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_031"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_022",
+      "name": "Hidden Sanctuary of Lathander — Book 11",
+      "book": 11,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "deity": "Lathander",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DAWN",
+      "influence": 2,
+      "blessing": {
+        "name": "Dawn's Comfort",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A dawn is not forgiveness earned. It is another chance to act.",
+        "guidance": "Start with what you can repair before sunrise.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_032"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_023",
+      "name": "Wayfarer's Shrine of Lathander — Book 12",
+      "book": 12,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "deity": "Lathander",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DAWN",
+      "influence": 1,
+      "blessing": {
+        "name": "Dawn's Comfort",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A dawn is not forgiveness earned. It is another chance to act.",
+        "guidance": "Start with what you can repair before sunrise.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_034"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_024",
+      "name": "Hidden Sanctuary of Lathander — Book 12",
+      "book": 12,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "deity": "Lathander",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DAWN",
+      "influence": 2,
+      "blessing": {
+        "name": "Dawn's Comfort",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A dawn is not forgiveness earned. It is another chance to act.",
+        "guidance": "Start with what you can repair before sunrise.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_035"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_025",
+      "name": "Wayfarer's Shrine of Mystra — Book 13",
+      "book": 13,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "deity": "Mystra",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "WEAVE_STRONG",
+      "influence": 1,
+      "blessing": {
+        "name": "Weave's Measure",
+        "effect": "+1 bonus to one Arcana check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Attend to the threads before you pull them. Every spell changes something.",
+        "guidance": "The Weave remembers patterns, not promises. Study what you see.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_037"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_026",
+      "name": "Hidden Sanctuary of Ghaunadaur — Book 13",
+      "book": 13,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "deity": "Ghaunadaur",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "OOZE_DOMAIN",
+      "influence": 2,
+      "blessing": {
+        "name": "Viscous Endurance",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "All names soften. All stone yields. What will you offer the dark?",
+        "guidance": "The deep does not love you. It notices what survives.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_038"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_027",
+      "name": "Wayfarer's Shrine of Ghaunadaur — Book 14",
+      "book": 14,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "deity": "Ghaunadaur",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "OOZE_DOMAIN",
+      "influence": 1,
+      "blessing": {
+        "name": "Viscous Endurance",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "All names soften. All stone yields. What will you offer the dark?",
+        "guidance": "The deep does not love you. It notices what survives.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_040"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_028",
+      "name": "Hidden Sanctuary of Lolth — Book 14",
+      "book": 14,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "deity": "Lolth",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DROW_CULT",
+      "influence": 2,
+      "blessing": {
+        "name": "Spider's Patience",
+        "effect": "+1 bonus to one Dexterity (Stealth) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A web is strongest when its prey mistakes the strands for shelter.",
+        "guidance": "The choice is yours. So are the consequences of refusing me.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_041"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_029",
+      "name": "Wayfarer's Shrine of Lolth — Book 15",
+      "book": 15,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "deity": "Lolth",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DROW_CULT",
+      "influence": 1,
+      "blessing": {
+        "name": "Spider's Patience",
+        "effect": "+1 bonus to one Dexterity (Stealth) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A web is strongest when its prey mistakes the strands for shelter.",
+        "guidance": "The choice is yours. So are the consequences of refusing me.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_043"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_030",
+      "name": "Hidden Sanctuary of Selune — Book 15",
+      "book": 15,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "deity": "Selune",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 2,
+      "blessing": {
+        "name": "Traveler's Gleam",
+        "effect": "+1 bonus to one Wisdom (Survival) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "You need not see the whole road to take the next step.",
+        "guidance": "Follow the light that does not demand you abandon another.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_044"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_031",
+      "name": "Wayfarer's Shrine of Corellon — Book 16",
+      "book": 16,
+      "trilogy": 6,
+      "region": "Feywild",
+      "plane": "Feywild",
+      "deity": "Corellon",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "ELVEN",
+      "influence": 1,
+      "blessing": {
+        "name": "Artist's Inspiration",
+        "effect": "+1 bonus to one Dexterity (Sleight of Hand) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Creation begins where imitation ends. What will you make of this hour?",
+        "guidance": "Your inheritance is not your prison.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_046"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_032",
+      "name": "Hidden Sanctuary of Sehanine Moonbow — Book 16",
+      "book": 16,
+      "trilogy": 6,
+      "region": "Feywild",
+      "plane": "Feywild",
+      "deity": "Sehanine Moonbow",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DREAM",
+      "influence": 2,
+      "blessing": {
+        "name": "Dreamwalker's Insight",
+        "effect": "+1 bonus to one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Dreams remember doors that waking fear has sealed.",
+        "guidance": "A vision is a question, not proof of the future.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_047"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_033",
+      "name": "Wayfarer's Shrine of Sehanine Moonbow — Book 17",
+      "book": 17,
+      "trilogy": 6,
+      "region": "Feywild",
+      "plane": "Feywild",
+      "deity": "Sehanine Moonbow",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DREAM",
+      "influence": 1,
+      "blessing": {
+        "name": "Dreamwalker's Insight",
+        "effect": "+1 bonus to one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Dreams remember doors that waking fear has sealed.",
+        "guidance": "A vision is a question, not proof of the future.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_049"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_034",
+      "name": "Hidden Sanctuary of Sune — Book 17",
+      "book": 17,
+      "trilogy": 6,
+      "region": "Feywild",
+      "plane": "Feywild",
+      "deity": "Sune",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "FESTIVAL",
+      "influence": 2,
+      "blessing": {
+        "name": "Grace of the Heart",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Affection freely given needs no chains to keep it true.",
+        "guidance": "Listen first. You cannot choose another's heart for them.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_050"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_035",
+      "name": "Wayfarer's Shrine of Sune — Book 18",
+      "book": 18,
+      "trilogy": 6,
+      "region": "Feywild",
+      "plane": "Feywild",
+      "deity": "Sune",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "FESTIVAL",
+      "influence": 1,
+      "blessing": {
+        "name": "Grace of the Heart",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Affection freely given needs no chains to keep it true.",
+        "guidance": "Listen first. You cannot choose another's heart for them.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_052"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_036",
+      "name": "Hidden Sanctuary of Corellon — Book 18",
+      "book": 18,
+      "trilogy": 6,
+      "region": "Feywild",
+      "plane": "Feywild",
+      "deity": "Corellon",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "ELVEN",
+      "influence": 2,
+      "blessing": {
+        "name": "Artist's Inspiration",
+        "effect": "+1 bonus to one Dexterity (Sleight of Hand) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Creation begins where imitation ends. What will you make of this hour?",
+        "guidance": "Your inheritance is not your prison.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_053"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_037",
+      "name": "Wayfarer's Shrine of Bahamut — Book 19",
+      "book": 19,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "deity": "Bahamut",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DRACONIC",
+      "influence": 1,
+      "blessing": {
+        "name": "Platinum Resolve",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Honor is not the roar of a dragon. It is the shield held over the small.",
+        "guidance": "Stand beside those who cannot stand alone.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_055"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_038",
+      "name": "Hidden Sanctuary of Selune — Book 19",
+      "book": 19,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "deity": "Selune",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 2,
+      "blessing": {
+        "name": "Traveler's Gleam",
+        "effect": "+1 bonus to one Wisdom (Survival) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "You need not see the whole road to take the next step.",
+        "guidance": "Follow the light that does not demand you abandon another.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_056"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_039",
+      "name": "Wayfarer's Shrine of Selune — Book 20",
+      "book": 20,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "deity": "Selune",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 1,
+      "blessing": {
+        "name": "Traveler's Gleam",
+        "effect": "+1 bonus to one Wisdom (Survival) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "You need not see the whole road to take the next step.",
+        "guidance": "Follow the light that does not demand you abandon another.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_058"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_040",
+      "name": "Hidden Sanctuary of Bahamut — Book 20",
+      "book": 20,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "deity": "Bahamut",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DRACONIC",
+      "influence": 2,
+      "blessing": {
+        "name": "Platinum Resolve",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Honor is not the roar of a dragon. It is the shield held over the small.",
+        "guidance": "Stand beside those who cannot stand alone.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_059"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_041",
+      "name": "Wayfarer's Shrine of Bahamut — Book 21",
+      "book": 21,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "deity": "Bahamut",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DRACONIC",
+      "influence": 1,
+      "blessing": {
+        "name": "Platinum Resolve",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Honor is not the roar of a dragon. It is the shield held over the small.",
+        "guidance": "Stand beside those who cannot stand alone.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_061"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_042",
+      "name": "Hidden Sanctuary of Selune — Book 21",
+      "book": 21,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "plane": "Astral Sea",
+      "deity": "Selune",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 2,
+      "blessing": {
+        "name": "Traveler's Gleam",
+        "effect": "+1 bonus to one Wisdom (Survival) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "You need not see the whole road to take the next step.",
+        "guidance": "Follow the light that does not demand you abandon another.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_062"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_043",
+      "name": "Wayfarer's Shrine of Sehanine Moonbow — Book 22",
+      "book": 22,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands",
+      "deity": "Sehanine Moonbow",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DREAM",
+      "influence": 1,
+      "blessing": {
+        "name": "Dreamwalker's Insight",
+        "effect": "+1 bonus to one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Dreams remember doors that waking fear has sealed.",
+        "guidance": "A vision is a question, not proof of the future.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_064"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_044",
+      "name": "Hidden Sanctuary of The Raven Queen — Book 22",
+      "book": 22,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands",
+      "deity": "The Raven Queen",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MEMORY",
+      "influence": 2,
+      "blessing": {
+        "name": "Memory's Vigil",
+        "effect": "+1 bonus to one Intelligence (History) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A memory kept is not a life restored. Choose what must be remembered.",
+        "guidance": "Death has a boundary. Do not confuse the boundary with cruelty.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_065"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_045",
+      "name": "Wayfarer's Shrine of The Raven Queen — Book 23",
+      "book": 23,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands",
+      "deity": "The Raven Queen",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MEMORY",
+      "influence": 1,
+      "blessing": {
+        "name": "Memory's Vigil",
+        "effect": "+1 bonus to one Intelligence (History) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A memory kept is not a life restored. Choose what must be remembered.",
+        "guidance": "Death has a boundary. Do not confuse the boundary with cruelty.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_067"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_046",
+      "name": "Hidden Sanctuary of Eilistraee — Book 23",
+      "book": 23,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands",
+      "deity": "Eilistraee",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 2,
+      "blessing": {
+        "name": "Moonlight Blessing",
+        "effect": "advantage on next one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A moonlit path is not a command, Alice. You may choose to walk it.",
+        "guidance": "Light reveals the road; your choices decide whom it shelters.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_068"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_047",
+      "name": "Wayfarer's Shrine of Eilistraee — Book 24",
+      "book": 24,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands",
+      "deity": "Eilistraee",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 1,
+      "blessing": {
+        "name": "Moonlight Blessing",
+        "effect": "advantage on next one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A moonlit path is not a command, Alice. You may choose to walk it.",
+        "guidance": "Light reveals the road; your choices decide whom it shelters.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_070"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_048",
+      "name": "Hidden Sanctuary of Mystra — Book 24",
+      "book": 24,
+      "trilogy": 8,
+      "region": "Sigil",
+      "plane": "Outlands",
+      "deity": "Mystra",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "WEAVE_STRONG",
+      "influence": 2,
+      "blessing": {
+        "name": "Weave's Measure",
+        "effect": "+1 bonus to one Arcana check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Attend to the threads before you pull them. Every spell changes something.",
+        "guidance": "The Weave remembers patterns, not promises. Study what you see.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_071"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_049",
+      "name": "Wayfarer's Shrine of Sehanine Moonbow — Book 25",
+      "book": 25,
+      "trilogy": 9,
+      "region": "Shadowfell",
+      "plane": "Shadowfell",
+      "deity": "Sehanine Moonbow",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DREAM",
+      "influence": 1,
+      "blessing": {
+        "name": "Dreamwalker's Insight",
+        "effect": "+1 bonus to one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Dreams remember doors that waking fear has sealed.",
+        "guidance": "A vision is a question, not proof of the future.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_073"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_050",
+      "name": "Hidden Sanctuary of The Raven Queen — Book 25",
+      "book": 25,
+      "trilogy": 9,
+      "region": "Shadowfell",
+      "plane": "Shadowfell",
+      "deity": "The Raven Queen",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MEMORY",
+      "influence": 2,
+      "blessing": {
+        "name": "Memory's Vigil",
+        "effect": "+1 bonus to one Intelligence (History) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A memory kept is not a life restored. Choose what must be remembered.",
+        "guidance": "Death has a boundary. Do not confuse the boundary with cruelty.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_074"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_051",
+      "name": "Wayfarer's Shrine of The Raven Queen — Book 26",
+      "book": 26,
+      "trilogy": 9,
+      "region": "Shadowfell",
+      "plane": "Shadowfell",
+      "deity": "The Raven Queen",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MEMORY",
+      "influence": 1,
+      "blessing": {
+        "name": "Memory's Vigil",
+        "effect": "+1 bonus to one Intelligence (History) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A memory kept is not a life restored. Choose what must be remembered.",
+        "guidance": "Death has a boundary. Do not confuse the boundary with cruelty.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_076"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_052",
+      "name": "Hidden Sanctuary of Shar — Book 26",
+      "book": 26,
+      "trilogy": 9,
+      "region": "Shadowfell",
+      "plane": "Shadowfell",
+      "deity": "Shar",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "SHADOWED",
+      "influence": 2,
+      "blessing": {
+        "name": "Veil of Stillness",
+        "effect": "+1 bonus to one Dexterity (Stealth) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Some truths are wounds. I can teach you how not to feel them.",
+        "guidance": "Forgetfulness is a gift with a price. Ask what you would surrender.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_077"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_053",
+      "name": "Wayfarer's Shrine of Shar — Book 27",
+      "book": 27,
+      "trilogy": 9,
+      "region": "Shadowfell",
+      "plane": "Shadowfell",
+      "deity": "Shar",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "SHADOWED",
+      "influence": 1,
+      "blessing": {
+        "name": "Veil of Stillness",
+        "effect": "+1 bonus to one Dexterity (Stealth) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Some truths are wounds. I can teach you how not to feel them.",
+        "guidance": "Forgetfulness is a gift with a price. Ask what you would surrender.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_079"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_054",
+      "name": "Hidden Sanctuary of Sehanine Moonbow — Book 27",
+      "book": 27,
+      "trilogy": 9,
+      "region": "Shadowfell",
+      "plane": "Shadowfell",
+      "deity": "Sehanine Moonbow",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DREAM",
+      "influence": 2,
+      "blessing": {
+        "name": "Dreamwalker's Insight",
+        "effect": "+1 bonus to one Wisdom (Insight) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Dreams remember doors that waking fear has sealed.",
+        "guidance": "A vision is a question, not proof of the future.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_080"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_055",
+      "name": "Wayfarer's Shrine of Selune — Book 28",
+      "book": 28,
+      "trilogy": 10,
+      "region": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "deity": "Selune",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "MOONLIT",
+      "influence": 1,
+      "blessing": {
+        "name": "Traveler's Gleam",
+        "effect": "+1 bonus to one Wisdom (Survival) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "You need not see the whole road to take the next step.",
+        "guidance": "Follow the light that does not demand you abandon another.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_082"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_056",
+      "name": "Hidden Sanctuary of Shar — Book 28",
+      "book": 28,
+      "trilogy": 10,
+      "region": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "deity": "Shar",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "SHADOWED",
+      "influence": 2,
+      "blessing": {
+        "name": "Veil of Stillness",
+        "effect": "+1 bonus to one Dexterity (Stealth) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Some truths are wounds. I can teach you how not to feel them.",
+        "guidance": "Forgetfulness is a gift with a price. Ask what you would surrender.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_083"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_057",
+      "name": "Wayfarer's Shrine of Shar — Book 29",
+      "book": 29,
+      "trilogy": 10,
+      "region": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "deity": "Shar",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "SHADOWED",
+      "influence": 1,
+      "blessing": {
+        "name": "Veil of Stillness",
+        "effect": "+1 bonus to one Dexterity (Stealth) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "Some truths are wounds. I can teach you how not to feel them.",
+        "guidance": "Forgetfulness is a gift with a price. Ask what you would surrender.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_085"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_058",
+      "name": "Hidden Sanctuary of Lathander — Book 29",
+      "book": 29,
+      "trilogy": 10,
+      "region": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "deity": "Lathander",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DAWN",
+      "influence": 2,
+      "blessing": {
+        "name": "Dawn's Comfort",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "A dawn is not forgiveness earned. It is another chance to act.",
+        "guidance": "Start with what you can repair before sunrise.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_086"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_059",
+      "name": "Wayfarer's Shrine of Lathander — Book 30",
+      "book": 30,
+      "trilogy": 10,
+      "region": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "deity": "Lathander",
+      "siteType": "SHRINE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DAWN",
+      "influence": 1,
+      "blessing": {
+        "name": "Dawn's Comfort",
+        "effect": "gain 2 temporary hit points",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 0,
+        "domainBonus": 0
+      },
+      "dialogue": {
+        "greeting": "A dawn is not forgiveness earned. It is another chance to act.",
+        "guidance": "Start with what you can repair before sunrise.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_088"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    },
+    {
+      "id": "mv_shrine_060",
+      "name": "Hidden Sanctuary of Bahamut — Book 30",
+      "book": 30,
+      "trilogy": 10,
+      "region": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "deity": "Bahamut",
+      "siteType": "TEMPLE",
+      "location": "UNVERIFIED_SUBREGION",
+      "canonStatus": "HOMEBREW_SITE",
+      "drDate": "UNVERIFIED",
+      "existenceAtDate": "DM_REVIEW_REQUIRED",
+      "domainResonance": "DRACONIC",
+      "influence": 2,
+      "blessing": {
+        "name": "Platinum Resolve",
+        "effect": "+1 bonus to one Charisma (Persuasion) check",
+        "duration": "UNTIL_NEXT_COMPLETED_LONG_REST",
+        "stacking": "ONE_ACTIVE_DIVINE_BLESSING_PER_CHARACTER",
+        "refresh": "DM_ATTESTED_VISIT",
+        "automaticGrant": false,
+        "mechanicsStatus": "HOMEBREW_PROPOSAL"
+      },
+      "contact": {
+        "omen": "AVAILABLE_IF_DM_APPROVES",
+        "priestlyGuidance": "REQUIRES_PRIEST_PRESENT",
+        "directAudience": "LOCKED_PENDING_LORE_AND_DM_REVIEW",
+        "relationshipRequirement": 5,
+        "domainBonus": 1
+      },
+      "dialogue": {
+        "greeting": "Honor is not the roar of a dragon. It is the shield held over the small.",
+        "guidance": "Stand beside those who cannot stand alone.",
+        "voiceStatus": "ORIGINAL_CAMPAIGN_DIALOGUE_NOT_CANON_QUOTE",
+        "speakerMode": "VISION_OR_CLERIC_UNLESS_DM_VERIFIES_MANIFESTATION"
+      },
+      "questLinks": [
+        "mv_side_089"
+      ],
+      "revisit": {
+        "allowed": true,
+        "chronologyChecked": true
+      },
+      "safety": {
+        "restAllowed": false,
+        "divineProtection": "NOT_GUARANTEED"
+      }
+    }
+  ]
+}
