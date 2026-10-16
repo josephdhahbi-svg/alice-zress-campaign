@@ -214,3 +214,8 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Visual Codex slot `ART_ENC_NETHERESE_COLLAPSE_CONCEPT_V1` remains `file_path: null` until an actual image binary is placed in the repository and the manifest is updated to that real path.
 - Existing encounter data/UI commits remain `c7f7741`, `fcaecf8`, `9829935`, `9bbc892`, with handoff `e5433b5`; the new images did not alter game state or code.
 - Next art work: create separate clean image assets (wide encounter background, three isolated hazard illustrations, Alice portrait), store actual binaries in repository, verify file paths, then reference them from the UI. Keep all choices disabled and routes locked.
+
+## Spherical Space-Time Contract v1 (2026-10-16)
+- `a5b0134` added `docs/architecture/spherical-space-time-contract-v1.md`.
+- The contract separates Space, Time, Causality, and Traversal; reuses existing `canon_status` values and shared fields; preserves unknown dates; prevents B30→B01 traversal from rewriting DR; and documents ownership boundaries for Copilot, Gemini, ChatGPT, and the player.
+- This is a proposed architecture contract, not an operational engine. No tests were executed in this action. Next: synthetic fixtures, validator integration, and comparison against the actual road atlas and U01 read model.
