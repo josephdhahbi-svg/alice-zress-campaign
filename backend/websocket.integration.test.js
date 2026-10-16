@@ -66,6 +66,24 @@ test("WebSocket event delivery is restricted to authenticated campaign members",
     assert.equal(event.campaignId,"a");
     assert.equal(event.revision,1);
     assert.equal(event.eventType,"SCENE_STARTED");
+    // Recover committed history after a disconnected socket.
+    ws.terminate();
+    ws=await connect(url+"a",alice);
+    assert.equal((await ws.initialMessage).campaignId,"a");
+    const replayResponse=await fetch(base+"/api/campaigns/a/events?after=0",{
+      headers:{Authorization:"Bearer "+alice}});
+    assert.equal(replayResponse.status,200);
+    const replayBody=await replayResponse.json();
+    assert.equal(replayBody.events.length,1);
+    assert.equal(replayBody.events[0].event_id,"evt1");
+    // A stale expected revision must not overwrite a committed event.
+    const staleResponse=await fetch(base+"/api/campaigns/a/events",{
+      method:"POST",
+      headers:{Authorization:"Bearer "+alice,"Content-Type":"application/json"},
+      body:JSON.stringify({eventId:"stale-1",expectedRevision:0,
+        eventType:"SCENE_STARTED",payload:{scene:"alternate"}})});
+    assert.equal(staleResponse.status,409);
+    assert.equal((await staleResponse.json()).error,"REVISION_CONFLICT");
     const logout=await fetch(base+"/api/sessions/logout",{method:"POST",headers:{Authorization:"Bearer "+alice}});
     assert.equal(logout.status,200);
     await assert.rejects(connect(url+"a",alice),/denied|403/i);
