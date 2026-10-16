@@ -165,3 +165,20 @@ Updated:
 | 081 Automated data checks | DONE for current CI checks | Workflow run #70 passed validator, encounter simulation, and Book 1 regression tests. Add tests as new systems are introduced. |
 | 089 CI pipeline | PARTIAL | Current validation workflow passed; backend/Flutter pipelines and production deployment remain unverified. |
 | 091 Book 1 vertical slice | IN_PROGRESS | Scene, character link, art manifest, local prototype, and CI checks exist. Manual browser QA and actual gameplay journal integration remain. |
+
+
+## Update — transparent art export and CI
+- Generated cleaned PNGs for all seven Moonveil art concepts with alpha channels and bundled them into `moonveil_art_assets_transparent.zip` for download from the current ChatGPT session.
+- Checkerboard removal used a border-connected neutral-background mask; the UI frame's center aperture received an additional cleanup pass.
+- Visual review shows the checkerboard removed in the contact sheet. Fine edge halos and any subject pixels near neutral gray/white still require review before production.
+- The cleaned image files remain session artifacts and have not yet been committed as binary files to GitHub.
+- Updated `data/assets.json` to `cleaned_local_not_committed`, with alpha-channel review status.
+- Updated `scripts/test_book1.py` to enforce accurate asset status.
+- GitHub Actions run #72 has passed metadata validation, deterministic simulation, and Book 1 regression checks; the job was still completing post-job cleanup at the last check.
+- Run: https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38838143586
+
+| Task | Status | Evidence / remaining work |
+|---|---|---|
+| 070 Visual quality | PARTIAL | Transparent PNG package generated; inspect edge quality and commit binaries to repository. |
+| 081 Automated data checks | DONE for current CI checks | Run #72's three test steps succeeded; keep checking final workflow result. |
+| 091 Book 1 vertical slice | IN_PROGRESS | Data/prototype/assets prepared; manual browser QA and character/journal persistence remain. |
