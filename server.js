@@ -24,6 +24,7 @@ const { createChronalTravelEngine } = require("./backend/chronal-travel-engine")
 const { getDialogueScene, getDialogueChoices, previewDialogueChoice } = require("./backend/dialogue-engine");
 const { listSacredAscensions, getSacredAscension, evaluateSacredAscension } = require("./backend/sacred-lich-ascensions");
 const { getAliceDemiplane, previewAliceDemiplaneAccess } = require("./backend/alice-demiplane-catalog");
+const { listAliceDemiplaneRooms, getAliceDemiplaneRoom, previewAliceDemiplaneRoomChoice } = require("./backend/alice-demiplane-rooms");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -131,6 +132,28 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const plan=planTimeSpaceJourney(req.body||{});
     return res.status(plan.reason==="INVALID_DR_DATE"||plan.reason==="UNKNOWN_LOCATION"||plan.reason==="UNKNOWN_TRAVEL_METHOD"?400:200)
       .json({success:true,...plan});
+  });
+  // Authenticated room and choice previews. No entry, movement or rewards.
+  app.get("/api/campaigns/:campaignId/world/alice-demiplane/rooms",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,rooms:listAliceDemiplaneRooms(),mode:"READ_ONLY"});
+  });
+  app.get("/api/campaigns/:campaignId/world/alice-demiplane/rooms/:roomId",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const room=getAliceDemiplaneRoom(req.params.roomId);
+    if(!room)return res.status(404).json({success:false,error:"UNKNOWN_ROOM"});
+    return res.json({success:true,room,mode:"READ_ONLY"});
+  });
+  app.post("/api/campaigns/:campaignId/world/alice-demiplane/rooms/:roomId/preview",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const preview=previewAliceDemiplaneRoomChoice(req.params.roomId,req.body?.choiceNumber);
+    return res.status(preview.reason==="UNKNOWN_ROOM"?404:preview.reason==="INVALID_CHOICE"?400:200).json({success:true,...preview});
   });
   // Campaign-scoped, read-only Rabbit Hole geography. No warp or reward action.
   app.get("/api/campaigns/:campaignId/world/alice-demiplane",(req,res)=>{
