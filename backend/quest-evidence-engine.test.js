@@ -19,6 +19,9 @@ test("quest evidence requires authorized journal proof and DM completion approva
    db.prepare("INSERT INTO vtt_campaign_events VALUES(?,?,?,?,?,?,?)").run(campaign,revision,eventId,actor,eventType,JSON.stringify(payload),"now");
   };
   const q=createQuestEvidenceEngine(db);
+  q.registerQuest({campaignId:"a",questId:"Q1",actorId:"dm",requiredObjectiveIds:["rescue","seal"]});
+  assert.equal(q.registerQuest({campaignId:"a",questId:"Q1",actorId:"dm",requiredObjectiveIds:["seal","rescue"]}).duplicate,true);
+  assert.throws(()=>q.registerQuest({campaignId:"a",questId:"Q1",actorId:"dm",requiredObjectiveIds:["rescue"]}),/IMMUTABLE/);
   const args={campaignId:"a",characterId:"alice",actorId:"alice",questId:"Q1",objectiveId:"rescue",eventId:"proof"};
   assert.throws(()=>q.verifyObjective(args),/EVIDENCE_REQUIRED/);
   append("b","proof","dm","QUEST_OBJECTIVE_VERIFIED",{characterId:"alice",questId:"Q1",objectiveId:"rescue"});
@@ -34,6 +37,7 @@ test("quest evidence requires authorized journal proof and DM completion approva
   assert.equal(db.prepare("SELECT COUNT(*) AS n FROM vtt_quest_completions").get().n,0);
   append("a","seal-proof","dm","QUEST_OBJECTIVE_VERIFIED",{characterId:"alice",questId:"Q1",objectiveId:"seal"});
   q.verifyObjective({...args,objectiveId:"seal",eventId:"seal-proof"});
+  assert.throws(()=>q.completeQuest({...done,requiredObjectiveIds:["rescue"]}),/OBJECTIVE_SET_MISMATCH/);
   const result=q.completeQuest(done);
   assert.deepEqual(result,{duplicate:false,awardedArtifacts:[]});
   assert.equal(q.completeQuest(done).duplicate,true);
