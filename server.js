@@ -6,6 +6,7 @@ const { WebSocketServer, WebSocket } = require("ws");
 const Database = require("better-sqlite3");
 const { initializeFactionPulseEngine, scheduleFactionPulse } = require("./backend/faction-pulse");
 const crypto = require("node:crypto");
+const { migrate } = require("./backend/migrations");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -40,6 +41,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
  entity_id TEXT PRIMARY KEY, deity_id TEXT NOT NULL, shrine_id TEXT NOT NULL, attuned_at TEXT NOT NULL
 );
 `);
+  migrate(db);
   const pulse = initializeFactionPulseEngine(db);
   const app = express();
   app.disable("x-powered-by");
@@ -99,6 +101,61 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const relationship=update();
     broadcast({type:"APPROVAL_CHANGED",entityId,companionName,approval:relationship.approval_score});
     res.json({success:true,relationship});
+  });
+  // The shared development token grants a DM-level local role. Per-user identity
+  // is intentionally not claimed; this route is not suitable for public hosting.
+  app.post("/api/campaigns",(req,res)=>{
+    const {campaignId,name,actorId}=req.body||{};
+    if(!id(campaignId)||!id(actorId)||typeof name!=="string"||name.trim().length<1||name.length>120)
+      return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    try{
+      db.transaction(()=>{
+        db.prepare("INSERT INTO vtt_campaigns(campaign_id,name,created_at) VALUES(?,?,?)")
+          .run(campaignId,name.trim(),new Date().toISOString());
+        db.prepare("INSERT INTO vtt_campaign_members(campaign_id,actor_id,role) VALUES(?,?,'DM')")
+          .run(campaignId,actorId);
+      })();
+      res.status(201).json({success:true,campaignId,revision:0});
+    }catch(err){
+      if(err.code?.startsWith("SQLITE_CONSTRAINT"))return res.status(409).json({success:false,error:"CAMPAIGN_EXISTS"});
+      throw err;
+    }
+  });
+  app.get("/api/campaigns/:campaignId/events",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.get("X-Moonveil-Actor");
+    if(!id(campaignId)||!id(actorId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?").get(campaignId,actorId);
+    if(!member)return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    const events=db.prepare("SELECT revision,event_id,actor_id,event_type,payload_json,occurred_at FROM vtt_campaign_events WHERE campaign_id=? ORDER BY revision LIMIT 1000").all(campaignId);
+    res.json({success:true,campaignId,events:events.map(e=>({...e,payload:JSON.parse(e.payload_json),payload_json:undefined}))});
+  });
+  app.post("/api/campaigns/:campaignId/events",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.get("X-Moonveil-Actor");
+    const {eventId,expectedRevision,eventType,payload}=req.body||{};
+    if(!id(campaignId)||!id(actorId)||!id(eventId)||!id(eventType)||
+      !Number.isSafeInteger(expectedRevision)||expectedRevision<0||
+      !payload||typeof payload!=="object"||Array.isArray(payload)||
+      JSON.stringify(payload).length>16000)
+      return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?").get(campaignId,actorId);
+    if(!member||member.role==="OBSERVER")return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const append=db.transaction(()=>{
+      const prior=db.prepare("SELECT revision,event_type,payload_json FROM vtt_campaign_events WHERE campaign_id=? AND event_id=?").get(campaignId,eventId);
+      const encoded=JSON.stringify(payload);
+      if(prior){
+        if(prior.event_type!==eventType||prior.payload_json!==encoded)return {status:409,error:"IDEMPOTENCY_CONFLICT"};
+        return {status:200,revision:prior.revision,duplicate:true};
+      }
+      const current=db.prepare("SELECT COALESCE(MAX(revision),0) AS revision FROM vtt_campaign_events WHERE campaign_id=?").get(campaignId).revision;
+      if(current!==expectedRevision)return {status:409,error:"REVISION_CONFLICT",revision:current};
+      db.prepare("INSERT INTO vtt_campaign_events(campaign_id,revision,event_id,actor_id,event_type,payload_json,occurred_at) VALUES(?,?,?,?,?,?,?)")
+        .run(campaignId,current+1,eventId,actorId,eventType,encoded,new Date().toISOString());
+      return {status:201,revision:current+1,duplicate:false};
+    });
+    const result=append();
+    if(result.error)return res.status(result.status).json({success:false,...result});
+    if(!result.duplicate)broadcast({type:"CAMPAIGN_EVENT",campaignId,revision:result.revision,eventType});
+    res.status(result.status).json({success:true,campaignId,...result});
   });
   app.post("/api/admin/world-pulse",(req,res)=>{
     const result=pulse.runPulse();
