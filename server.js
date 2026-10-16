@@ -7,6 +7,7 @@ const Database = require("better-sqlite3");
 const { initializeFactionPulseEngine, scheduleFactionPulse } = require("./backend/faction-pulse");
 const crypto = require("node:crypto");
 const { migrate } = require("./backend/migrations");
+const { createSessionAuth } = require("./backend/session-auth");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -43,6 +44,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
 `);
   migrate(db);
   const pulse = initializeFactionPulseEngine(db);
+  const sessions=createSessionAuth(token);
   const app = express();
   app.disable("x-powered-by");
   app.use(express.json({ limit: "32kb" }));
@@ -51,8 +53,13 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const supplied = req.get("Authorization") || "";
     const expected = "Bearer " + token;
     const a = Buffer.from(supplied), b = Buffer.from(expected);
-    if (a.length !== b.length || !crypto.timingSafeEqual(a,b))
-      return res.status(401).json({success:false,error:"UNAUTHORIZED"});
+    if (a.length===b.length && crypto.timingSafeEqual(a,b)) {
+      req.auth={kind:"admin"};
+    } else if(supplied.startsWith("Bearer ")) {
+      const session=sessions.verify(supplied.slice(7));
+      if(!session)return res.status(401).json({success:false,error:"UNAUTHORIZED"});
+      req.auth={kind:"actor",actorId:session.actorId};
+    } else return res.status(401).json({success:false,error:"UNAUTHORIZED"});
     next();
   });
   const server = http.createServer(app);
@@ -66,18 +73,27 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     for(const client of wss.clients) if(client.readyState===WebSocket.OPEN) client.send(message);
   }
   const id = value => typeof value==="string" && /^[a-zA-Z0-9:_-]{1,100}$/.test(value);
+  const adminOnly=(req,res,next)=>req.auth.kind==="admin"?next():res.status(403).json({success:false,error:"ADMIN_REQUIRED"});
+  const actorFor=req=>req.auth.kind==="actor"?req.auth.actorId:req.get("X-Moonveil-Actor");
+  app.post("/api/admin/sessions",adminOnly,(req,res)=>{
+    const {actorId,ttlSeconds}=req.body||{};
+    if(!id(actorId)||ttlSeconds!==undefined&&(!Number.isSafeInteger(ttlSeconds)||ttlSeconds<60||ttlSeconds>86400))
+      return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    const expiresIn=ttlSeconds??3600;
+    res.status(201).json({success:true,actorId,expiresIn,accessToken:sessions.issue(actorId,expiresIn)});
+  });
   app.get("/api/health",(_req,res)=>res.json({success:true,status:"Moonveil VTT local core",wal:true}));
-  app.get("/api/war-table/overview/:bookId",(req,res)=>{
+  app.get("/api/war-table/overview/:bookId",adminOnly,(req,res)=>{
     if(!id(req.params.bookId))return res.status(400).json({success:false,error:"INVALID_BOOK"});
     const territories=db.prepare("SELECT * FROM war_territories WHERE book_id=? ORDER BY territory_id").all(req.params.bookId);
     res.json({success:true,territories});
   });
-  app.get("/api/factions",(_req,res)=>{
+  app.get("/api/factions",adminOnly,(_req,res)=>{
     const factions=db.prepare("SELECT * FROM factions ORDER BY faction_id").all();
     const territories=db.prepare("SELECT * FROM territory_control ORDER BY territory_id").all();
     res.json({success:true,factions,territories});
   });
-  app.post("/api/items/equip-advanced",(req,res)=>{
+  app.post("/api/items/equip-advanced",adminOnly,(req,res)=>{
     const {entityId,itemId,slot}=req.body||{};
     if(!id(entityId)||!id(itemId)||!id(slot))return res.status(400).json({success:false,error:"INVALID_INPUT"});
     const item=db.prepare("SELECT * FROM inventory_items_extended WHERE item_id=?").get(itemId);
@@ -86,7 +102,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     broadcast({type:"EQUIPMENT_CHANGED",entityId,slot,itemId});
     res.json({success:true,equippedItem:item.item_name,bonuses:JSON.parse(item.bonus_stats)});
   });
-  app.post("/api/romance/approval",(req,res)=>{
+  app.post("/api/romance/approval",adminOnly,(req,res)=>{
     const {entityId,companionName,delta}=req.body||{};
     if(!id(entityId)||typeof companionName!=="string"||companionName.length<1||companionName.length>100||
       !Number.isInteger(delta)||delta< -20||delta>20)
@@ -104,7 +120,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   });
   // The shared development token grants a DM-level local role. Per-user identity
   // is intentionally not claimed; this route is not suitable for public hosting.
-  app.post("/api/campaigns",(req,res)=>{
+  app.post("/api/campaigns",adminOnly,(req,res)=>{
     const {campaignId,name,actorId}=req.body||{};
     if(!id(campaignId)||!id(actorId)||typeof name!=="string"||name.trim().length<1||name.length>120)
       return res.status(400).json({success:false,error:"INVALID_INPUT"});
@@ -122,7 +138,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     }
   });
   app.get("/api/campaigns/:campaignId/events",(req,res)=>{
-    const campaignId=req.params.campaignId,actorId=req.get("X-Moonveil-Actor");
+    const campaignId=req.params.campaignId,actorId=actorFor(req);
     if(!id(campaignId)||!id(actorId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
     const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?").get(campaignId,actorId);
     if(!member)return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
@@ -132,7 +148,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     res.json({success:true,campaignId,nextCursor:events.length?events[events.length-1].revision:after,hasMore:events.length===100,events:events.map(e=>({...e,payload:JSON.parse(e.payload_json),payload_json:undefined}))});
   });
   app.post("/api/campaigns/:campaignId/events",(req,res)=>{
-    const campaignId=req.params.campaignId,actorId=req.get("X-Moonveil-Actor");
+    const campaignId=req.params.campaignId,actorId=actorFor(req);
     const {eventId,expectedRevision,eventType,payload}=req.body||{};
     if(!id(campaignId)||!id(actorId)||!id(eventId)||!id(eventType)||
       !Number.isSafeInteger(expectedRevision)||expectedRevision<0||
@@ -160,7 +176,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     // Campaign-scoped sockets require real authenticated player sessions.
     res.status(result.status).json({success:true,campaignId,...result});
   });
-  app.post("/api/admin/world-pulse",(req,res)=>{
+  app.post("/api/admin/world-pulse",adminOnly,(req,res)=>{
     const result=pulse.runPulse();
     if(result.applied)broadcast({type:"FACTION_PULSE",result});
     res.json({success:true,...result});
