@@ -19,6 +19,7 @@ const { createCombatEngine } = require("./backend/combat-engine");
 const { createQuestEvidenceEngine } = require("./backend/quest-evidence-engine");
 const { listAscensionPaths, getAscensionPath } = require("./backend/ascension-path-catalog");
 const { getMultiverseAdventureIndex, availableRouteLeads } = require("./backend/multiverse-adventure-index");
+const { planTimeSpaceJourney, listTimeSpaceEras, listTravelMethods } = require("./backend/rabbit-hole-time-space");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -88,6 +89,21 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const server = http.createServer(app);
   const id = value => typeof value==="string" && /^[a-zA-Z0-9:_-]{1,100}$/.test(value);
   const memberRole=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?");
+  // Time-space itinerary preview is member-only and never commits movement or rewards.
+  app.get("/api/campaigns/:campaignId/world/time-space",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,eras:listTimeSpaceEras(),methods:listTravelMethods(),origin:"pit_ghaunadaur"});
+  });
+  app.post("/api/campaigns/:campaignId/world/time-space/plan",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const plan=planTimeSpaceJourney(req.body||{});
+    return res.status(plan.reason==="INVALID_DR_DATE"||plan.reason==="UNKNOWN_LOCATION"||plan.reason==="UNKNOWN_TRAVEL_METHOD"?400:200)
+      .json({success:true,...plan});
+  });
   // Discoverable routes only: no implicit teleport, date progression or character mutation.
   app.get("/api/campaigns/:campaignId/world/adventures",(req,res)=>{
     const campaignId=req.params.campaignId;
