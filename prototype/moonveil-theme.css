@@ -97,3 +97,29 @@ body{background:radial-gradient(ellipse 100% 620px at 50% -180px,#4d3e33 0,trans
 @media(max-width:1080px){.mv-game-layout{grid-template-columns:minmax(0,1fr) 270px}.mv-topbar-context{display:none}}
 @media(max-width:790px){.mv-game-layout{grid-template-columns:minmax(0,1fr);width:calc(100% - 20px)}.mv-game-layout>*{grid-column:1!important}.mv-topbar{padding:8px 12px}.mv-topbar-tag,.mv-topbar-divider{display:none}.mv-header{padding:20px 8px}.mv-quicknav{top:0}.mv-story-stage{grid-template-columns:repeat(2,minmax(0,1fr))}.mv-hud{grid-template-columns:minmax(0,1fr)}.mv-hud-portrait{min-height:235px}#connection-panel .mv-connect{flex-direction:row}#connection-panel .mv-connect label{flex:1 1 190px}.mv-resources{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:530px){.mv-brand{font-size:.95rem}.mv-story-stage{grid-template-columns:1fr}.mv-panel{min-height:205px}.mv-resources{grid-template-columns:1fr}.mv-title{font-size:2.6rem}.mv-decisions{padding:16px}.mv-topbar{min-height:55px}.mv-hud-details h2{font-size:2.2rem}}
+
+/* Moonveil media experience: responsive comic, interactive gallery and opt-in animation. */
+#cinematic-gallery,#comic-strip,#cinematic-screen{grid-column:1/-1}
+.mv-gallery-stage{position:relative;overflow:hidden;min-height:340px;background:#0c1019;border:1px solid #866e4b}
+.mv-gallery-stage img{display:block;width:100%;height:clamp(260px,42vw,510px);object-fit:cover;transition:filter .5s ease,transform .5s ease}
+.mv-gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:50px 24px 18px;background:linear-gradient(transparent,#05080cf2);text-shadow:0 2px 8px #000}
+.mv-gallery-caption strong{font:clamp(1.5rem,3vw,2.5rem) Georgia,serif;color:#ffe4ad}.mv-gallery-caption p{margin:6px 0;color:#e3e4ec}
+.mv-gallery-controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:12px}.mv-gallery-controls .mv-choice{min-height:44px;padding:9px 14px}.mv-gallery-controls span{color:#e4d3b4;margin:0 auto}
+.mv-art-eye img{filter:hue-rotate(82deg) saturate(1.5) contrast(1.15);transform:scale(1.08)}
+.mv-art-light img{filter:brightness(1.25) saturate(.65) hue-rotate(25deg);transform:scale(1.04)}
+.mv-art-path img{filter:hue-rotate(190deg) brightness(.85);transform:scale(1.11)}
+.mv-comic-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.mv-comic-cell{margin:0;min-width:0;border:1px solid #917752;background:#090d13;overflow:hidden;position:relative}
+.mv-comic-cell img{width:100%;height:220px;object-fit:cover;display:block}
+.mv-comic-cell figcaption{padding:14px;background:#101419;border-top:1px solid #66543b;min-height:110px;display:flex;flex-direction:column;gap:8px}
+.mv-comic-cell figcaption b{color:#e8c78d;font:1.12rem Georgia,serif}.mv-comic-cell figcaption span{font-style:italic;color:#d3c8b9}
+.mv-comic-variant-two img{filter:hue-rotate(80deg) contrast(1.3);transform:scale(1.15)}
+.mv-comic-variant-three img{filter:brightness(1.35) saturate(.55);transform:scale(1.2)}
+.mv-comic-variant-four img{filter:hue-rotate(190deg);transform:scale(1.08)}
+.mv-cinema-screen{min-height:350px;position:relative;overflow:hidden;display:grid;place-items:center;background:linear-gradient(#080c16a6,#05070bd6),url("/play/moonveil-underdark-original.svg") center/cover;border:1px solid #92764b}
+.mv-cinema-text{text-align:center;padding:30px;text-shadow:0 3px 20px #000}.mv-cinema-text span{display:block;font-size:.9rem;letter-spacing:.3em;color:#ebc991}.mv-cinema-text strong{display:block;font:clamp(2.3rem,6vw,5rem) Georgia,serif;color:#fff0c9}.mv-cinema-text p{color:#ddd0bc}
+.mv-cinema-playing{animation:mv-cinema-pan 18s ease-in-out infinite alternate}
+@keyframes mv-cinema-pan{from{background-position:45% 40%;filter:brightness(.85)}to{background-position:60% 65%;filter:brightness(1.15)}}
+@media(max-width:850px){.mv-comic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.mv-comic-grid{grid-template-columns:1fr}.mv-comic-cell img{height:185px}.mv-cinema-screen{min-height:260px}.mv-gallery-controls span{margin:0}}
+@media(prefers-reduced-motion:reduce){.mv-cinema-playing{animation:none}.mv-gallery-stage img{transition:none}}
