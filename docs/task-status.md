@@ -127,3 +127,22 @@ Final workflow result: **completed / success**. All three test steps and the ove
 New:
 - `scripts/test_book1.py` — regression checks for the Book 1 data contract and expected browser controls.
 - `.github/workflows/validate.yml` — runs the Book 1 regression script after the existing validation and simulation steps.
+
+
+## Update — Character link and asset registry
+| Task | Status | Evidence / remaining work |
+|---|---|---|
+| 021 Alice master record | PARTIAL | Book 1 scene now references `alice-zress`; abilities/proficiencies and full scene-state integration remain. |
+| 064 Interactive story scenes | PARTIAL | Scene contract links to Alice, Book 1, Pit location, and payoff ledger; browser QA remains. |
+| 070 Visual quality | PARTIAL | Seven assets registered in `data/assets.json`; source images are not yet committed to repository and have checkerboard backgrounds. |
+| 081 Automated data checks | VERIFY | Validator and Book 1 tests extended; wait for the newest GitHub Actions result. |
+| 091 Book 1 vertical slice | IN_PROGRESS | Scene data, prototype, and character linkage exist; manual browser tests, save/restore verification, and journal integration remain. |
+
+New:
+- `data/assets.json` — generated asset manifest with planned paths and status metadata.
+
+Updated:
+- `data/scenes.json` — character reference.
+- `scripts/validate.py` — asset manifest and character reference validation.
+- `scripts/test_book1.py` — character linkage and asset manifest regression checks.
+- `README.md`, `docs/master-development-board.md`.
