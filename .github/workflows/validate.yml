@@ -6,11 +6,17 @@ on:
       - 'scripts/**'
       - 'game/**'
       - 'backend/**'
+      - 'server.js'
+      - 'package.json'
       - '.github/workflows/validate.yml'
   pull_request:
     paths:
       - 'data/**'
       - 'scripts/**'
+      - 'game/**'
+      - 'backend/**'
+      - 'server.js'
+      - 'package.json'
       - '.github/workflows/validate.yml'
   workflow_dispatch:
 jobs:
@@ -33,6 +39,11 @@ jobs:
         run: python scripts/test_living_world.py
       - name: Test SQLite campaign event ledger
         run: python -m unittest discover -s backend -p 'test_*.py' -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check server syntax
+        run: node --check server.js
       - name: Check Faction Territory Pulse Engine
         run: node --test backend/faction-pulse.test.js
       - name: Check Automaton FSM
