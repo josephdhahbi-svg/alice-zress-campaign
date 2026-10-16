@@ -76,6 +76,14 @@ test("local server protects APIs and persists bounded relationship updates", {ti
     const conflict=await fetch(base+"/api/campaigns/test-campaign/events",{method:"POST",headers:memberHeaders,
       body:JSON.stringify({...payload,eventId:"event-2"})});
     assert.equal(conflict.status,409);
+    const badCursor=await fetch(base+"/api/campaigns/test-campaign/events?after=-1",{headers:memberHeaders});
+    assert.equal(badCursor.status,400);
+    const replayAsOtherActor=await fetch(base+"/api/campaigns/test-campaign/events",{
+      method:"POST",headers:{...headers,"X-Moonveil-Actor":"dm-1"},
+      body:JSON.stringify({...payload,eventType:"DIFFERENT_EVENT"})});
+    assert.equal(replayAsOtherActor.status,409);
+    const page=await fetch(base+"/api/campaigns/test-campaign/events?after=1",{headers:memberHeaders});
+    assert.deepEqual((await page.json()).events,[]);
     const read=await fetch(base+"/api/campaigns/test-campaign/events",{headers:memberHeaders});
     assert.equal((await read.json()).events.length,1);
     // A member of one campaign must not read or write another campaign's journal.
