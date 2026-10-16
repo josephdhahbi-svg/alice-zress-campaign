@@ -97,6 +97,23 @@ CREATE TABLE IF NOT EXISTS vtt_quest_state_audit (
  FOREIGN KEY(campaign_id,character_id,quest_id) REFERENCES vtt_quest_states(campaign_id,character_id,quest_id) ON DELETE CASCADE,
  FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
 );
+` },
+  { version:6, name:"campaign commodity economy and audit", sql:`
+CREATE TABLE IF NOT EXISTS vtt_world_economy (
+ campaign_id TEXT NOT NULL REFERENCES vtt_campaigns(campaign_id) ON DELETE CASCADE,
+ commodity_id TEXT NOT NULL, price_copper INTEGER NOT NULL CHECK(price_copper BETWEEN 1 AND 1000000000),
+ revision INTEGER NOT NULL DEFAULT 0 CHECK(revision>=0),
+ PRIMARY KEY(campaign_id,commodity_id)
+);
+CREATE TABLE IF NOT EXISTS vtt_world_economy_adjustments (
+ campaign_id TEXT NOT NULL, adjustment_id TEXT NOT NULL,
+ commodity_id TEXT NOT NULL, actor_id TEXT NOT NULL,
+ old_price_copper INTEGER NOT NULL, new_price_copper INTEGER NOT NULL,
+ reason TEXT NOT NULL, occurred_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,adjustment_id),
+ FOREIGN KEY(campaign_id,commodity_id) REFERENCES vtt_world_economy(campaign_id,commodity_id),
+ FOREIGN KEY(campaign_id,actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
 ` }
 ];
 function migrate(db) {
