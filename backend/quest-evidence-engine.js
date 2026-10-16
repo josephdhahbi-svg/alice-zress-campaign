@@ -6,15 +6,20 @@ const ID=/^[A-Za-z0-9:_-]{1,100}$/;
 const valid=x=>typeof x==="string"&&ID.test(x);
 function createQuestEvidenceEngine(db){
  if(!db||typeof db.transaction!=="function")throw new TypeError("SQLite database required");
- db.exec(`CREATE TABLE IF NOT EXISTS vtt_quest_catalog (
-  campaign_id TEXT NOT NULL REFERENCES vtt_campaigns(campaign_id) ON DELETE CASCADE,
-  quest_id TEXT NOT NULL,
-  required_objectives_json TEXT NOT NULL,
-  created_by_actor_id TEXT NOT NULL,
-  PRIMARY KEY(campaign_id,quest_id),
-  FOREIGN KEY(campaign_id,created_by_actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
- )`);
  const catalog=db.prepare("SELECT required_objectives_json FROM vtt_quest_catalog WHERE campaign_id=? AND quest_id=?");
+ const approval=db.prepare("SELECT approved_by_actor_id FROM vtt_quest_approvals WHERE campaign_id=? AND quest_id=?");
+ const audit=db.prepare("INSERT INTO vtt_quest_definition_audit VALUES(?,?,?,?,?,?,?)");
+ const approve=db.transaction(({campaignId,questId,actorId})=>{
+  if(![campaignId,questId,actorId].every(valid))throw new TypeError("INVALID_ID");
+  if(member.get(campaignId,actorId)?.role!=="DM")throw new Error("DM_REQUIRED");
+  const definition=catalog.get(campaignId,questId);
+  if(!definition)throw new Error("UNKNOWN_QUEST");
+  if(approval.get(campaignId,questId))return {duplicate:true};
+  const now=new Date().toISOString();
+  db.prepare("INSERT INTO vtt_quest_approvals VALUES(?,?,?,?)").run(campaignId,questId,actorId,now);
+  audit.run(campaignId,questId,2,actorId,"APPROVED",definition.required_objectives_json,now);
+  return {duplicate:false};
+ });
  const register=db.transaction(({campaignId,questId,actorId,requiredObjectiveIds})=>{
   if(!valid(campaignId)||!valid(questId)||!valid(actorId)||!Array.isArray(requiredObjectiveIds)||
      requiredObjectiveIds.length<1||requiredObjectiveIds.length>50||
@@ -28,6 +33,7 @@ function createQuestEvidenceEngine(db){
    return {duplicate:true};
   }
   db.prepare("INSERT INTO vtt_quest_catalog VALUES(?,?,?,?)").run(campaignId,questId,encoded,actorId);
+  audit.run(campaignId,questId,1,actorId,"REGISTERED",encoded,new Date().toISOString());
   return {duplicate:false};
  });
  const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?");
@@ -46,6 +52,7 @@ function createQuestEvidenceEngine(db){
   if(![questId,objectiveId,eventId].every(valid))throw new TypeError("INVALID_ID");
   const definition=catalog.get(campaignId,questId);
   if(!definition)throw new Error("UNKNOWN_QUEST");
+  if(!approval.get(campaignId,questId))throw new Error("QUEST_NOT_APPROVED");
   if(!JSON.parse(definition.required_objectives_json).includes(objectiveId))throw new Error("UNKNOWN_OBJECTIVE");
   const prior=objective.get(campaignId,characterId,questId,objectiveId);
   if(prior){
@@ -71,6 +78,7 @@ function createQuestEvidenceEngine(db){
    throw new TypeError("INVALID_COMPLETION");
   const definition=catalog.get(campaignId,questId);
   if(!definition)throw new Error("UNKNOWN_QUEST");
+  if(!approval.get(campaignId,questId))throw new Error("QUEST_NOT_APPROVED");
   const authoritative=JSON.parse(definition.required_objectives_json);
   if(authoritative.length!==requiredObjectiveIds.length||!authoritative.every(x=>requiredObjectiveIds.includes(x)))throw new Error("OBJECTIVE_SET_MISMATCH");
   const prior=completed.get(campaignId,characterId,questId);
@@ -93,6 +101,6 @@ function createQuestEvidenceEngine(db){
   db.prepare("INSERT INTO vtt_quest_completions VALUES(?,?,?,?,?)").run(campaignId,characterId,questId,completionEventId,new Date().toISOString());
   return {duplicate:false,awardedArtifacts:[]};
  });
- return {registerQuest:x=>register(x),verifyObjective:x=>verify(x),completeQuest:x=>complete(x)};
+ return {registerQuest:x=>register(x),approveQuest:x=>approve(x),verifyObjective:x=>verify(x),completeQuest:x=>complete(x)};
 }
 module.exports={createQuestEvidenceEngine};
