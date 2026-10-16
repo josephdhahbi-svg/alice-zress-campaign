@@ -69,6 +69,23 @@
       "spoiler_tier": 0,
       "unlock_event_ids": [],
       "file_path": null
+    },
+    {
+      "asset_id": "ART_ENC_NETHERESE_COLLAPSE_CONCEPT_V1",
+      "entity_id": "ENC_NETHERESE_ENCLAVE_COLLAPSE",
+      "asset_type": "encounter_concept_art",
+      "title": "Netherese Enclave Collapse and Ooze Surge — UI Concept",
+      "canon_status": "homebrew_encounter_concept_unverified",
+      "depiction_state": "generated_concept_not_committed_or_source_verified",
+      "historical_dr": null,
+      "date_precision": "unknown",
+      "plane_id": "MATERIAL_PLANE",
+      "location_id": null,
+      "source_reference": "User-supplied Meeting 12 encounter brief; generated illustration is visual inspiration only and is not a geographical or D&D canon source.",
+      "spoiler_tier": 0,
+      "unlock_event_ids": [],
+      "file_path": null,
+      "notes": "Do not use the depicted route geometry, distances, Skullport depth, Promenade access, hazard stats, or Alice equipment as verified facts. Image file not yet stored in repository."
     }
   ],
   "required_metadata": [
