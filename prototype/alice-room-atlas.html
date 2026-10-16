@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Moonveil — Rabbit Hole Room Atlas</title><link rel="stylesheet" href="./moonveil-theme.css"></head>
-<body><main class="mv-shell">
-<header class="mv-header"><div><p class="mv-eyebrow">Moonveil · Alice Z'ress · Signed campaign preview</p><h1 class="mv-title">The Rabbit Hole Atlas</h1><p class="mv-subtitle">Five rooms inside the hole itself, anchored at the Pit of Ghaunadaur. Exploration remains locked until authorized by the DM.</p></div></header>
-<section class="mv-decisions" aria-label="Campaign connection"><h2>Connect to a local Moonveil server</h2>
+<body><main class="mv-shell mv-game-layout"><div class="mv-topbar"><span class="mv-brand-mark">◈</span><span class="mv-brand">MOONVEIL <em>UNIVERSE</em></span><span class="mv-topbar-divider"></span><span class="mv-topbar-context">ELDER EYE · THE UNDERDARK</span><span class="mv-topbar-tag">LOCAL CAMPAIGN PREVIEW</span></div>
+<header class="mv-header"><div><p class="mv-eyebrow">Moonveil · Alice Z'ress · Signed campaign preview</p><h1 class="mv-title">Into the <span class="mv-title-accent">Rabbit Hole</span></h1><p class="mv-subtitle">The stone remembers your fall. The Elder Eye is watching. Choose your path through the Pit of Ghaunadaur. Travel and rewards require DM authorization.</p></div></header>
+<section class="mv-decisions" id="connection-panel" aria-label="Campaign connection"><h2>Connect to a local Moonveil server</h2>
 <p class="mv-subtitle">Use an existing signed actor session. Credentials are kept in this page's memory only, never in URLs or local storage. The server must permit same-origin API access.</p>
 <form id="connect" class="mv-connect"><label>Campaign ID <input id="campaign" required maxlength="100" pattern="[A-Za-z0-9:_-]+" autocomplete="off"></label>
 <label>Signed actor token <input id="token" required type="password" autocomplete="off"></label><button class="mv-choice" type="submit">Load room atlas</button><button class="mv-choice" id="disconnect" type="button">Disconnect</button></form>
@@ -25,13 +25,13 @@
 <p id="maps-status" class="mv-status" role="status" aria-live="polite">Connect to browse maps.</p>
 <div id="maps-list" class="mv-journal-list"></div>
 </section>
-<section class="mv-decisions" aria-label="Discovery history"><h2>Discovery Ledger</h2><p class="mv-subtitle">Return visits, clues, and revealed secrets recorded by the Dungeon Master. No items are automatically collected.</p><button class="mv-choice" id="discoveries-refresh" type="button" disabled>Load discovery history</button><p id="discoveries-status" class="mv-status" role="status" aria-live="polite">Connect to view discoveries.</p><div id="discoveries-list" class="mv-journal-list"></div></section><section class="mv-decisions" aria-label="Room selection"><h2>Room atlas</h2><div id="rooms" class="mv-room-list"><p class="mv-subtitle">Connect to view authoritative room descriptions.</p></div></section>
-<section class="mv-grid" id="story" aria-label="Four cinematic story panels">
+<section class="mv-decisions" id="discovery-panel" aria-label="Discovery history"><h2>Discovery Ledger</h2><p class="mv-subtitle">Return visits, clues, and revealed secrets recorded by the Dungeon Master. No items are automatically collected.</p><button class="mv-choice" id="discoveries-refresh" type="button" disabled>Load discovery history</button><p id="discoveries-status" class="mv-status" role="status" aria-live="polite">Connect to view discoveries.</p><div id="discoveries-list" class="mv-journal-list"></div></section><section class="mv-decisions" id="room-selection-panel" aria-label="Room selection"><h2>Room atlas</h2><div id="rooms" class="mv-room-list"><p class="mv-subtitle">Connect to view authoritative room descriptions.</p></div></section>
+<section class="mv-grid mv-story-stage" id="story" aria-label="Four cinematic story panels">
 <article class="mv-panel"><span class="mv-chip mv-map">I · Entrance</span><h2>Stone &amp; Stars</h2><p>The Pit of Ghaunadaur is the physical entrance.</p></article>
 <article class="mv-panel"><span class="mv-chip mv-villain">II · Parasite</span><h2>The Elder Eye</h2><p>Ghaunadaur's scar remembers Alice's fall.</p></article>
 <article class="mv-panel"><span class="mv-chip mv-magic">III · Far Realm</span><h2>Alien Resonance</h2><p>The Far Realm influences the hole without replacing it.</p></article>
 <article class="mv-panel"><span class="mv-chip mv-hero">IV · Free Will</span><h2>The Silver Light</h2><p>Alice's heroic choices remain her own.</p></article></section>
-<section class="mv-decisions mv-decision-focus" id="choices-panel"><h2 id="room-title">Choose a room</h2><p class="mv-subtitle" id="room-description">Room choices are previews only.</p>
+<section class="mv-decisions mv-decision-focus" id="choices-panel"><p class="mv-eyebrow">YOUR NEXT MOVE · FIVE PATHS</p><h2 id="room-title">Choose a room</h2><p class="mv-subtitle" id="room-description">Room choices are previews only.</p>
 <div id="choices" class="mv-choice-grid" aria-label="Five room choices"></div>
 <p class="mv-status" id="choice-status" role="status" aria-live="polite">No choice submitted.</p>
 <button class="mv-choice" id="submit-choice" type="button" disabled>Submit selected choice to journal</button>
@@ -41,7 +41,7 @@
 <button class="mv-choice" id="refresh-journal" type="button" disabled>Refresh journal</button>
 <div id="journal-entries" class="mv-journal-list" aria-live="polite"><p class="mv-subtitle">Connect to load journal entries.</p></div>
 </section>
-<section class="mv-decisions" aria-label="Dungeon Master journal review">
+<section class="mv-decisions" id="dm-panel" aria-label="Dungeon Master journal review">
 <h2>DM review &amp; quest evidence</h2>
 <p class="mv-subtitle">Only signed Dungeon Masters may acknowledge discoveries and attest approved quest objectives. Evidence never grants rewards automatically.</p>
 <button class="mv-choice" id="dm-refresh" type="button" disabled>Load DM review queue</button>
@@ -50,7 +50,7 @@
 </section>
 <section class="mv-decisions" id="quest-panel" aria-label="Multiverse quest chain atlas"><h2>Multiverse Quest Atlas</h2><button class="mv-choice" id="quest-chains-refresh" type="button" disabled>Explore quest chains</button><p id="quest-chains-status" class="mv-status">Connect to browse quests.</p><div id="quest-chains-list" class="mv-journal-list"></div></section>
 <section class="mv-decisions" id="scene-panel" aria-label="Spell item and environment actions"><h2>Interactive Scene Actions</h2><button class="mv-choice" id="scene-actions-refresh" type="button" disabled>Explore scene interactions</button><p id="scene-actions-status" class="mv-status">Connect to explore.</p><div id="scene-actions-list" class="mv-journal-list"></div></section>
-<section class="mv-decisions" aria-label="Moonveil AI Story Guide">
+<section class="mv-decisions" id="ai-panel" aria-label="Moonveil AI Story Guide">
 <h2>Moonveil AI Story Guide</h2><p class="mv-subtitle">Ask for lore or guidance. AI suggestions are advisory only; they never change your character, inventory, quests, or timeline. Requires a configured server AI key.</p>
 <form id="ai-guide-form" class="mv-connect"><label>Guide mode <select id="ai-guide-mode"><option value="GUIDE">Story Guide</option><option value="LORE">Lore</option></select></label>
 <label>Ask the guide <textarea id="ai-guide-question" maxlength="2000" rows="3" required placeholder="What can Alice investigate safely in the Pit?"></textarea></label>
