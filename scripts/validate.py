@@ -16,11 +16,16 @@ REGISTRIES = {
     "temporal_route_scenarios.json": ("scenarios",),
     "gemini_omni_engine_module_registry.json": ("modules",),
 }
+LIST_DOCUMENTS = {
+    "relationships.json": ("id", "subject", "predicate", "object", "source", "canon_status", "continuity_status"),
+    "story_phases.json": ("id", "title", "order", "books", "chronology", "status"),
+}
 OBJECT_DOCUMENTS = {
     "living_world_integration_schema_v1.json": ("schema_version", "status", "entity_types", "shared_fields", "source_statuses"),
     "visual_codex_manifest_v1.json": ("schema_version", "status", "assets", "required_metadata", "rules"),
     "alice_u01_read_model_v1.json": ("schema_version", "status", "scene_id", "character", "historical_context", "choices", "routes", "art", "capabilities", "mutates_game_state", "space_time_context"),
     "encounter_netherese_enclave_collapse_v1.json": ("schema_version", "status", "encounter_id", "hazards", "objectives", "outcomes", "interface_rules"),
+    "transport_geography_research_queue_v1.json": ("schema_version", "status", "locations", "candidate_connections", "rendering_rules"),
 }
 for file in sorted((ROOT / "data").glob("*.json")):
     if file.name == "schema.json":
@@ -45,6 +50,24 @@ for file in sorted((ROOT / "data").glob("*.json")):
             if len({m.get("mode_id") for m in records.get("transport_modes", []) if isinstance(m, dict)}) != len(records.get("transport_modes", [])):
                 errors.append(f"{file.name}: duplicate transport mode")
         continue
+    if file.name in LIST_DOCUMENTS:
+        if not isinstance(records, list):
+            errors.append(f"{file.name}: expected list document")
+            continue
+        required_fields = LIST_DOCUMENTS[file.name]
+        for i, rec in enumerate(records):
+            if not isinstance(rec, dict):
+                errors.append(f"{file.name}[{i}]: expected object")
+                continue
+            for field in required_fields:
+                if field not in rec:
+                    errors.append(f"{file.name}[{i}]: missing {field}")
+            if file.name == "relationships.json":
+                if rec.get("canon_status") not in schema["allowed_canon_status"]:
+                    errors.append(f"{file.name}[{i}]: invalid canon status")
+                if rec.get("continuity_status") not in schema["allowed_continuity_status"]:
+                    errors.append(f"{file.name}[{i}]: invalid continuity status")
+        continue
     if file.name in OBJECT_DOCUMENTS:
         if not isinstance(records, dict):
             errors.append(f"{file.name}: expected object document")
@@ -61,6 +84,12 @@ for file in sorted((ROOT / "data").glob("*.json")):
                 errors.append(f"{file.name}: read model must not mutate game state")
             if records.get("character", {}).get("level") != 1:
                 errors.append(f"{file.name}: protected Alice level must remain 1")
+        if file.name == "transport_geography_research_queue_v1.json":
+            if records.get("status") != "research_candidates_not_traversable":
+                errors.append(f"{file.name}: candidates must remain non-traversable")
+            for i, route in enumerate(records.get("candidate_connections", [])):
+                if route.get("status") != "research_only":
+                    errors.append(f"{file.name}.candidate_connections[{i}]: connection must remain research_only")
         if file.name == "encounter_netherese_enclave_collapse_v1.json":
             if records.get("status") != "PROPOSED_HOMEBREW_ENCOUNTER_READ_ONLY":
                 errors.append(f"{file.name}: encounter must remain proposed and read-only")
