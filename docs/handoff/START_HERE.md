@@ -329,3 +329,5 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - New CI run `38833358973` for `e657d5e` was queued; another run will trigger for `e1862f2`. Neither result is claimed passing until checked.
 - Gemini backend implementation still not available at expected source paths; no immutable patch ledger or concurrency code integrated. Copilot's geography remains candidate research only, with no verified route unlocked.
 - Alice remains Level 1 with Shield/Acid Splash/Light and five unselected choices. Causal chain is proposed/read-only, date and locations unknown.
+
+- CI log review found four test errors in `tests/test_spherical_lego_integration.py`: `setUpClass` loaded U01 and LEGO fixtures but did not load `self.chain`, so the four causal-chain tests raised `AttributeError`. `b240bc0` fixes test setup by loading `data/proposed_cosmic_to_u01_causal_chain_v1.json`. New CI run is pending; do not mark tests passing until it completes.
