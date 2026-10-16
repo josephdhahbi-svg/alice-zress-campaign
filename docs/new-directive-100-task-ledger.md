@@ -180,3 +180,10 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Linked the deck from the tactical war table (`9f79949`).
 - Extended `scripts/test_living_world.py` static checks to cover the deck controls, navigation and macro persistence (`0f90c34`). CI for the new browser deck is pending; no manual browser QA yet.
 - T082 and T083 UI controls PARTIAL; T087 Flutter widgets NOT STARTED (browser deck is not Flutter). T040 Glyph remains sandbox-only and is not official D&D rules. T093 local backup restore test verified, but operational recovery, encryption and offsite rotation remain.
+
+## Batch 12 — command deck safety and preview honesty
+- Verified static command deck checks in [CI 38847203967](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38847203967), success at `0f90c349`.
+- Improved local deck to clearly distinguish preview-only commands from working navigation and dice; sanitized/deduplicated saved pin codes (`5529dbb`).
+- Blocked invalid Glyph actions and no-target healing/attacks; sandbox remains isolated from authoritative Alice saves (`1367968`).
+- Extended static checks for preview labeling, supported actions, and target guards (`bd3ff3f`). New CI outcome pending; manual browser QA and automated DOM interaction testing remain.
+- T082/T083 remain PARTIAL; T040 Glyph rules prototype remains PARTIAL and non-canonical. No production-ready claims.
