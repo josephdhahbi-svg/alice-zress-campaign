@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "artStatus": "concept-only",
+  "assets": [
+    {
+      "id": "C001",
+      "label": "Alice Z'ress",
+      "category": "characters",
+      "sceneTags": [
+        "underdark",
+        "pit-of-ghaunadaur"
+      ],
+      "path": "assets/characters/C001_Alice.png",
+      "status": "pending",
+      "plane": "Toril/Underdark",
+      "drDate": null,
+      "canonStatus": "homebrew depiction"
+    },
+    {
+      "id": "C002",
+      "label": "C.P.-09 Glyph",
+      "category": "characters",
+      "sceneTags": [
+        "underdark",
+        "pit-of-ghaunadaur"
+      ],
+      "path": "assets/characters/C002_Glyph.png",
+      "status": "pending",
+      "plane": "Toril/Underdark",
+      "drDate": null,
+      "canonStatus": "homebrew companion"
+    },
+    {
+      "id": "E005",
+      "label": "Ooze monster",
+      "category": "enemies",
+      "sceneTags": [
+        "underdark",
+        "pit-of-ghaunadaur"
+      ],
+      "path": "assets/enemies/E005_Ooze.png",
+      "status": "pending",
+      "plane": "Toril/Underdark",
+      "drDate": null,
+      "canonStatus": "concept"
+    },
+    {
+      "id": "ENV001",
+      "label": "Underdark cave",
+      "category": "environments",
+      "sceneTags": [
+        "underdark",
+        "pit-of-ghaunadaur"
+      ],
+      "path": "assets/environments/ENV001_Cave.png",
+      "status": "pending",
+      "plane": "Toril/Underdark",
+      "drDate": null,
+      "canonStatus": "concept"
+    },
+    {
+      "id": "ENV003",
+      "label": "Arcane portal",
+      "category": "environments",
+      "sceneTags": [
+        "underdark"
+      ],
+      "path": "assets/environments/ENV003_Portal.png",
+      "status": "pending",
+      "plane": "Toril/Underdark",
+      "drDate": null,
+      "canonStatus": "concept"
+    }
+  ]
+}
