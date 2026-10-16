@@ -45,6 +45,9 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   migrate(db);
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
+  const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
+  const isRevoked=db.prepare("SELECT 1 FROM vtt_revoked_sessions WHERE token_hash=?");
+  const revokeSession=db.prepare("INSERT OR IGNORE INTO vtt_revoked_sessions(token_hash,expires_at,revoked_at) VALUES(?,?,?)");
   const app = express();
   app.disable("x-powered-by");
   app.use(express.json({ limit: "32kb" }));
@@ -57,7 +60,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       req.auth={kind:"admin"};
     } else if(supplied.startsWith("Bearer ")) {
       const session=sessions.verify(supplied.slice(7));
-      if(!session)return res.status(401).json({success:false,error:"UNAUTHORIZED"});
+      if(!session||isRevoked.get(hashSession(supplied.slice(7))))return res.status(401).json({success:false,error:"UNAUTHORIZED"});
       req.auth={kind:"actor",actorId:session.actorId};
     } else return res.status(401).json({success:false,error:"UNAUTHORIZED"});
     next();
@@ -81,6 +84,23 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       return res.status(400).json({success:false,error:"INVALID_INPUT"});
     const expiresIn=ttlSeconds??3600;
     res.status(201).json({success:true,actorId,expiresIn,accessToken:sessions.issue(actorId,expiresIn)});
+  });
+  app.post("/api/admin/sessions/revoke",adminOnly,(req,res)=>{
+    const accessToken=req.body?.accessToken;
+    if(typeof accessToken!=="string"||accessToken.length>2048)
+      return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    const claims=sessions.verify(accessToken);
+    if(!claims)return res.status(400).json({success:false,error:"INVALID_SESSION"});
+    revokeSession.run(hashSession(accessToken),claims.expiresAt,new Date().toISOString());
+    res.json({success:true,revoked:true});
+  });
+  app.post("/api/sessions/logout",(req,res)=>{
+    if(req.auth.kind!=="actor")return res.status(403).json({success:false,error:"ACTOR_SESSION_REQUIRED"});
+    const accessToken=req.get("Authorization").slice(7);
+    const claims=sessions.verify(accessToken);
+    if(!claims)return res.status(401).json({success:false,error:"UNAUTHORIZED"});
+    revokeSession.run(hashSession(accessToken),claims.expiresAt,new Date().toISOString());
+    res.json({success:true,revoked:true});
   });
   app.get("/api/health",(_req,res)=>res.json({success:true,status:"Moonveil VTT local core",wal:true}));
   app.get("/api/war-table/overview/:bookId",adminOnly,(req,res)=>{
