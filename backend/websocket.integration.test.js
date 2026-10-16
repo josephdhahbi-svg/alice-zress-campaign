@@ -19,6 +19,7 @@ function connect(url,session){
   return new Promise((resolve,reject)=>{
     const ws=new WebSocket(url,["moonveil."+session]);
     ws.initialMessage=new Promise(resolve=>ws.once("message",buf=>resolve(JSON.parse(String(buf)))));
+    ws.catchupMessage=new Promise(resolve=>ws.on("message",buf=>{const event=JSON.parse(String(buf));if(event.type==="CATCH_UP_REQUIRED")resolve(event);}));
     const timer=setTimeout(()=>{ws.terminate();reject(new Error("WebSocket timeout"));},3000);
     ws.once("open",()=>{clearTimeout(timer);resolve(ws);});
     ws.once("error",e=>{clearTimeout(timer);reject(e);});
@@ -137,7 +138,7 @@ test("WebSocket event delivery is restricted to authenticated campaign members",
     ws=await connect(url+"a&after=2",alice);
     const reconnected=await ws.initialMessage;
     assert.equal(reconnected.revision,3);
-    const catchup=await message(ws);
+    const catchup=await ws.catchupMessage;
     assert.equal(catchup.type,"CATCH_UP_REQUIRED");
     assert.equal(catchup.after,2);
     assert.equal(catchup.revision,3);
