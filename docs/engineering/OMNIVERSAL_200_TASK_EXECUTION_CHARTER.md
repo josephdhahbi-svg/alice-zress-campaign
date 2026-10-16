@@ -1,0 +1,214 @@
+# Omniversal VTT: 100 build tasks + 100 post-build tasks
+
+Companion to `OMNIVERSAL_200_TASK_PROGRAM.md`; existing task statuses remain authoritative. All entries below are planned, not completed.
+
+## Stage A: Tasks 001-100
+- [ ] **001** Repository and CI: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **002** Repository and CI: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **003** Repository and CI: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **004** Repository and CI: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **005** Repository and CI: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **006** Repository and CI: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **007** Repository and CI: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **008** Repository and CI: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **009** Repository and CI: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **010** Repository and CI: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **011** Authentication: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **012** Authentication: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **013** Authentication: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **014** Authentication: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **015** Authentication: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **016** Authentication: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **017** Authentication: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **018** Authentication: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **019** Authentication: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **020** Authentication: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **021** Database and migrations: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **022** Database and migrations: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **023** Database and migrations: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **024** Database and migrations: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **025** Database and migrations: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **026** Database and migrations: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **027** Database and migrations: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **028** Database and migrations: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **029** Database and migrations: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **030** Database and migrations: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **031** Inventory and economy: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **032** Inventory and economy: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **033** Inventory and economy: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **034** Inventory and economy: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **035** Inventory and economy: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **036** Inventory and economy: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **037** Inventory and economy: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **038** Inventory and economy: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **039** Inventory and economy: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **040** Inventory and economy: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **041** Factions and territory: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **042** Factions and territory: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **043** Factions and territory: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **044** Factions and territory: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **045** Factions and territory: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **046** Factions and territory: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **047** Factions and territory: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **048** Factions and territory: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **049** Factions and territory: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **050** Factions and territory: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **051** Dice and combat: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **052** Dice and combat: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **053** Dice and combat: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **054** Dice and combat: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **055** Dice and combat: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **056** Dice and combat: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **057** Dice and combat: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **058** Dice and combat: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **059** Dice and combat: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **060** Dice and combat: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **061** Alice continuity: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **062** Alice continuity: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **063** Alice continuity: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **064** Alice continuity: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **065** Alice continuity: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **066** Alice continuity: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **067** Alice continuity: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **068** Alice continuity: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **069** Alice continuity: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **070** Alice continuity: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **071** Visual maps and UI: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **072** Visual maps and UI: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **073** Visual maps and UI: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **074** Visual maps and UI: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **075** Visual maps and UI: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **076** Visual maps and UI: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **077** Visual maps and UI: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **078** Visual maps and UI: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **079** Visual maps and UI: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **080** Visual maps and UI: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **081** Telemetry and backups: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **082** Telemetry and backups: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **083** Telemetry and backups: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **084** Telemetry and backups: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **085** Telemetry and backups: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **086** Telemetry and backups: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **087** Telemetry and backups: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **088** Telemetry and backups: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **089** Telemetry and backups: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **090** Telemetry and backups: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **091** Integration and release: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **092** Integration and release: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **093** Integration and release: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **094** Integration and release: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **095** Integration and release: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **096** Integration and release: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **097** Integration and release: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **098** Integration and release: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **099** Integration and release: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **100** Integration and release: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+
+## Stage B: Tasks 101-200
+- [ ] **101** CI reproducibility: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **102** CI reproducibility: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **103** CI reproducibility: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **104** CI reproducibility: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **105** CI reproducibility: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **106** CI reproducibility: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **107** CI reproducibility: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **108** CI reproducibility: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **109** CI reproducibility: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **110** CI reproducibility: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **111** Security testing: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **112** Security testing: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **113** Security testing: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **114** Security testing: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **115** Security testing: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **116** Security testing: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **117** Security testing: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **118** Security testing: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **119** Security testing: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **120** Security testing: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **121** Database recovery: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **122** Database recovery: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **123** Database recovery: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **124** Database recovery: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **125** Database recovery: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **126** Database recovery: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **127** Database recovery: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **128** Database recovery: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **129** Database recovery: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **130** Database recovery: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **131** Economy concurrency: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **132** Economy concurrency: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **133** Economy concurrency: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **134** Economy concurrency: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **135** Economy concurrency: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **136** Economy concurrency: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **137** Economy concurrency: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **138** Economy concurrency: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **139** Economy concurrency: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **140** Economy concurrency: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **141** Faction determinism: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **142** Faction determinism: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **143** Faction determinism: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **144** Faction determinism: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **145** Faction determinism: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **146** Faction determinism: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **147** Faction determinism: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **148** Faction determinism: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **149** Faction determinism: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **150** Faction determinism: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **151** Combat balancing: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **152** Combat balancing: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **153** Combat balancing: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **154** Combat balancing: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **155** Combat balancing: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **156** Combat balancing: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **157** Combat balancing: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **158** Combat balancing: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **159** Combat balancing: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **160** Combat balancing: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **161** Canon verification: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **162** Canon verification: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **163** Canon verification: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **164** Canon verification: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **165** Canon verification: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **166** Canon verification: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **167** Canon verification: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **168** Canon verification: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **169** Canon verification: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **170** Canon verification: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **171** Accessibility and UI: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **172** Accessibility and UI: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **173** Accessibility and UI: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **174** Accessibility and UI: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **175** Accessibility and UI: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **176** Accessibility and UI: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **177** Accessibility and UI: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **178** Accessibility and UI: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **179** Accessibility and UI: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **180** Accessibility and UI: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **181** Load and resilience: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **182** Load and resilience: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **183** Load and resilience: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **184** Load and resilience: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **185** Load and resilience: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **186** Load and resilience: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **187** Load and resilience: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **188** Load and resilience: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **189** Load and resilience: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **190** Load and resilience: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **191** Release audit: Inventory baseline. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **192** Release audit: Specify acceptance criteria. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **193** Release audit: Implement primary path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **194** Release audit: Validate inputs. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **195** Release audit: Handle unauthorized states. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **196** Release audit: Test failure path. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **197** Release audit: Add automated regression. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **198** Release audit: Collect evidence. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **199** Release audit: Review integration. Acceptance: recorded evidence, outcome, and reproducible verification.
+- [ ] **200** Release audit: Document and sign off. Acceptance: recorded evidence, outcome, and reproducible verification.
+
+## Rules
+- Preserve existing SQLite backend and GitHub draft PR.
+- Treat v46 pasted runtime as a candidate, not production.
+- Do not claim test passes without test output.
+- Do not change Alice's HP, inventory, relics, or campaign chronology without gameplay evidence.
+- Deployment requires separate release approval.
