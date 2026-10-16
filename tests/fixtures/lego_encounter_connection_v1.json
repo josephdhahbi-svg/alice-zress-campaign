@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "connection_id": "CONN_ENC_COLLAPSE_HAS_SEISMIC_TREMORS_V1",
+  "from_entity": "ENC_NETHERESE_ENCLAVE_COLLAPSE",
+  "to_entity": "HAZ_SEISMIC_TREMORS",
+  "relationship": "has_hazard",
+  "version": 1,
+  "status": "proposed",
+  "canon_status": "unverified",
+  "source_reference": "user_supplied_encounter_brief",
+  "timeline_id": null,
+  "plane_id": null,
+  "location_id": null,
+  "dr_start": null,
+  "dr_end": null,
+  "date_precision": "unknown",
+  "requires_target_entity": true,
+  "integrated": false
+}
