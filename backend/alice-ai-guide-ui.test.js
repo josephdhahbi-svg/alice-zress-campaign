@@ -11,3 +11,14 @@ test("Alice UI exposes optional signed AI Story Guide without unsafe DOM inserti
  assert.match(js,/ai-guide-reply"\)\.textContent=data\.reply/);
  assert.doesNotMatch(js,/innerHTML|localStorage|sessionStorage/);
 });
+
+test("AI UI checks signed availability and guards against stale disconnected responses",()=>{
+ const js=fs.readFileSync(path.join(__dirname,"../prototype/alice-room-atlas.js"),"utf8");
+ assert.match(js,/async function refreshAiStatus\(\)/);
+ assert.match(js,/\/ai\/status/);
+ assert.match(js,/!data\.configured/);
+ assert.match(js,/sessionEpoch\+\+/);
+ assert.match(js,/epoch!==sessionEpoch/);
+ assert.match(js,/AI offline: server key not configured/);
+ assert.doesNotMatch(js,/innerHTML|localStorage|sessionStorage/);
+});
