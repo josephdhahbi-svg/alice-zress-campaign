@@ -109,7 +109,7 @@ Observed job steps:
 - `Check deterministic encounter simulation` — success.
 - `Check Book 1 scene and browser prototype` — success.
 
-At the time checked, the job was still `in_progress` during post-job cleanup; therefore the individual test steps succeeded, but the overall workflow conclusion had not yet been reported.
+Final workflow result: **completed / success**. All three test steps and the overall GitHub Actions workflow succeeded.
 
 | Task | Status | Evidence / remaining work |
 |---|---|---|
@@ -118,10 +118,10 @@ At the time checked, the job was still `in_progress` during post-job cleanup; th
 | 065 Five-choice system | PARTIAL | Automated test step succeeded; manual keyboard/mobile browser test remains. |
 | 066 Animated dice | PARTIAL | d20 check and result logging exist; animation and approved full rules profile remain. |
 | 078 Reliable synchronization | TODO | Current scene save is local browser storage only. |
-| 081 Automated data checks | PARTIAL | Validator and scene regression steps succeeded in the recorded CI run; overall workflow was still finalizing at last check. |
+| 081 Automated data checks | PARTIAL | Validator and scene regression steps succeeded; the recorded GitHub Actions workflow completed successfully. |
 | 085 Save/restore tests | PARTIAL | Automated structural checks exist; manually test export/import/reload in a browser. |
 | 086 UI tests | TODO | No real browser automation or mobile layout test has been run. |
-| 089 CI pipeline | PARTIAL | CI now runs validator, simulation, and Book 1 regression script. Confirm overall workflow conclusion and keep it green on future changes. |
+| 089 CI pipeline | PARTIAL | CI now runs validator, simulation, and Book 1 regression script. Run is green for the recorded commit; keep it green on future changes. |
 | 091 Book 1 vertical slice | IN_PROGRESS | Data and standalone scene prototype exist; browser QA and character/journal integration remain. |
 
 New:
