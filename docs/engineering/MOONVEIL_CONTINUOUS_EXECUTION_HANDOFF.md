@@ -149,3 +149,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - `backend/durable-draft-worker.test.js` commit `50f9fdcc08c6f5e24aefd36bd21cbb77cac38d51`: restart, ordering, crash recovery, tamper, seed mismatch.
 - `backend/draft-worker-cli.js` commit `3bf64760149904c5408a5ab532b0d8800a785853`: `node backend/draft-worker-cli.js 1 --root /absolute/existing/draft-sandbox`; `status` supported. Not mounted into server; no autonomous AI, GitHub deployment, or automatic execution.
 - **Important remaining gap:** no multi-process locking; simultaneous CLI processes may race. Use single operator only until locking is implemented. CI pending. Charter remains 18/100.
+
+### Durable worker CI confirmation
+- Omniversal verification run `38923952094` **SUCCESS**.
+- Validate campaign records run `38923952035` **SUCCESS**.
+- Verified charter **18/100**, open **82/100**; no task closure because this is infrastructure increment rather than a fully accepted 100-task charter deliverable.
+- Next: multi-process lock with stale-lock recovery, CLI integration tests, versioned economy migration, authenticated economy API tests, trusted combat resources and approved reward catalog. No automatic game progression.
