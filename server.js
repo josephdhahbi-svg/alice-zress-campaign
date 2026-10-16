@@ -2,6 +2,7 @@ const sceneActions=require("./backend/scene-interaction-catalog");
 const atlasMaps=require("./backend/chronological-map-atlas");
 const {previewRandomEncounter}=require("./backend/random-encounter-loot");
 const {createDiscoveryLedger}=require("./backend/discovery-ledger");
+const {createLoreArchive}=require("./backend/lore-archive");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
 const express = require("express");
@@ -88,6 +89,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const chronalTravel = createChronalTravelEngine(db);
   const aliceJournal = createAliceExplorationJournal(db);
   const discoveryLedger = createDiscoveryLedger(db);
+  const loreArchive = createLoreArchive(db);
   const journalQuestBridge = createJournalQuestBridge(db);
   const chronosReviews = createChronosReviewEngine(db);
   const pulse = initializeFactionPulseEngine(db);
@@ -750,6 +752,18 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     }
   });
   // Persistent, campaign-scoped discovery notes. Only DMs may attest prerequisites.
+  app.get("/api/campaigns/:campaignId/lore/search",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{return res.json({success:true,results:loreArchive.search(campaignId,req.query.q||""),readOnly:true});}
+    catch{return res.status(400).json({success:false,error:"INVALID_QUERY"});}
+  });
+  app.post("/api/campaigns/:campaignId/lore/documents",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=req.auth.actorId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{return res.status(201).json({success:true,...loreArchive.put({...req.body,campaignId})});}
+    catch{return res.status(400).json({success:false,error:"INVALID_LORE_DOCUMENT"});}
+  });
   app.get("/api/campaigns/:campaignId/maps/discoveries",(req,res)=>{
     const campaignId=req.params.campaignId,actorId=req.auth.actorId;
     if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
