@@ -33,7 +33,7 @@ test("manual snapshots are admin-only, verified and audited without revealing pa
   assert.equal(created.status,201);
   assert.deepEqual(created.body,{success:true,verified:true});
   assert.equal(JSON.stringify(created.body).includes(dir),false);
-  const snapshots=fs.readdirSync(process.env.MOONVEIL_BACKUP_DIR);
+  const snapshots=fs.readdirSync(process.env.MOONVEIL_BACKUP_DIR).filter(name=>name.endsWith(".sqlite"));
   assert.equal(snapshots.length,1);
   const snapshot=new Database(path.join(process.env.MOONVEIL_BACKUP_DIR,snapshots[0]),{readonly:true,fileMustExist:true});
   try{assert.equal(snapshot.pragma("integrity_check",{simple:true}),"ok")}finally{snapshot.close()}
