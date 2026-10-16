@@ -1,0 +1,120 @@
+# Moonveil VTT — 100-task execution ledger (new directive)
+
+Updated: 2026-10-15. This ledger uses **T001–T100 from the user's new ten-phase directive**. Do not conflate it with the older `docs/task-status.md` numbering. A feature stub is not a completed task.
+
+Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementation exists), **NOT STARTED**, **BLOCKED**. No task is marked DONE solely from file existence.
+
+| ID | Task | Status | Evidence / outstanding work |
+|---|---|---|---|
+| T001 | Inventory repository files and systems | PARTIAL | GitHub recursive tree inspected (162 entries); full source-by-source audit pending |
+| T002 | Audit broken paths and dependencies | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T003 | Review server startup and security | PARTIAL | Reviewed server.js; authentication is single shared development token; no per-user auth |
+| T004 | Review dependencies and reproducibility | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T005 | Review Python SQLite event store | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T006 | Check JavaScript and static pages | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T007 | Fix failing tests with evidence | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T008 | Expand CI coverage | PARTIAL | CI updated to trigger on server.js/package.json and run node --check; run result pending |
+| T009 | Document architecture and limitations | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T010 | Maintain task completion ledger | PARTIAL | This ledger committed; automated status reconciliation pending |
+| T011 | Harden Express startup | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T012 | Verify SQLite WAL and constraints | PARTIAL | WAL, foreign keys, busy_timeout configured; startup and migration verification pending |
+| T013 | Versioned database migrations | NOT STARTED | Implementation and verification pending |
+| T014 | Campaign and session identifiers | NOT STARTED | Implementation and verification pending |
+| T015 | Player and DM authentication | NOT STARTED | Implementation and verification pending |
+| T016 | Per-campaign authorization | NOT STARTED | Implementation and verification pending |
+| T017 | Revision and idempotency checks | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T018 | Authoritative event journal integration | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T019 | Validated API contracts | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T020 | Recovery and concurrency tests | NOT STARTED | Implementation and verification pending |
+| T021 | WebSocket authentication | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T022 | Campaign-scoped broadcasts | NOT STARTED | Implementation and verification pending |
+| T023 | Reconnect and resync | NOT STARTED | Implementation and verification pending |
+| T024 | Authoritative movement | NOT STARTED | Implementation and verification pending |
+| T025 | Scenes and portals | NOT STARTED | Implementation and verification pending |
+| T026 | NPC scheduling | NOT STARTED | Implementation and verification pending |
+| T027 | Faction map integration | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T028 | Deterministic pulse auditing | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T029 | Multiplayer consistency tests | NOT STARTED | Implementation and verification pending |
+| T030 | Two-client demo | NOT STARTED | Implementation and verification pending |
+| T031 | Character-sheet models | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T032 | Abilities and proficiency | NOT STARTED | Implementation and verification pending |
+| T033 | Class and species rules | NOT STARTED | Implementation and verification pending |
+| T034 | Spell resources | NOT STARTED | Implementation and verification pending |
+| T035 | Equipment and attunement | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T036 | Initiative and conditions | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T037 | Attack and saving throw rules | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T038 | Rest and leveling | NOT STARTED | Implementation and verification pending |
+| T039 | Official vs homebrew labeling | NOT STARTED | Implementation and verification pending |
+| T040 | Rules regression tests | NOT STARTED | Implementation and verification pending |
+| T041 | War room persistence | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T042 | Tactical grid line of sight | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T043 | Armies and squads | NOT STARTED | Implementation and verification pending |
+| T044 | Garrisons and sieges | NOT STARTED | Implementation and verification pending |
+| T045 | Supply logistics | NOT STARTED | Implementation and verification pending |
+| T046 | Faction diplomacy | NOT STARTED | Implementation and verification pending |
+| T047 | Victory and retreat conditions | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T048 | Enemy tactical AI | NOT STARTED | Implementation and verification pending |
+| T049 | Battle event journaling | NOT STARTED | Implementation and verification pending |
+| T050 | War scenario tests | NOT STARTED | Implementation and verification pending |
+| T051 | Five-choice dialogue | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T052 | Dialogue checks | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T053 | Companion approval history | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T054 | Affirmative consent | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T055 | Redemption questlines | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T056 | Deity shrine prerequisites | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T057 | Merchant economy | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T058 | Lore and quest flags | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T059 | Moral role colors | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T060 | Story continuity tests | NOT STARTED | Implementation and verification pending |
+| T061 | Alice warlock canon | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T062 | Sole Ghaunadaur patron | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T063 | Three custom origin gifts | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T064 | Rabbit-hole prologue | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T065 | Lolth antagonist | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T066 | Underdark adventure content | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T067 | Abyss adventure content | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T068 | Avernus adventure content | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T069 | Thirty books and seven traversals | PARTIAL | Local browser prototype implements progression; canonical save integration pending |
+| T070 | Book 30 loop logic | PARTIAL | Local browser prototype implements progression; canonical save integration pending |
+| T071 | Character registries | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T072 | Location registries | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T073 | Monster registries | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T074 | Spell and item registries | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T075 | Mission and dialogue registries | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T076 | Chronology metadata | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T077 | Source and canon status | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T078 | Lifetime collection targets | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T079 | Endgame reward locks | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T080 | Continuity automated checks | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T081 | Responsive navigation | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T082 | Reusable visual components | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T083 | Tactical and dialogue controls | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T084 | Map overlays | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T085 | Combat animations | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T086 | Keyboard and mobile controls | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T087 | Flutter widgets | NOT STARTED | Implementation and verification pending |
+| T088 | Flutter API integration | NOT STARTED | Implementation and verification pending |
+| T089 | Connection and recovery UI | NOT STARTED | Implementation and verification pending |
+| T090 | Cross-device QA | NOT STARTED | Implementation and verification pending |
+| T091 | Environment and secrets | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T092 | Docker local development | NOT STARTED | Implementation and verification pending |
+| T093 | Backups and restore | NOT STARTED | Implementation and verification pending |
+| T094 | Logging and diagnostics | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T095 | Deployment workflow | NOT STARTED | Implementation and verification pending |
+| T096 | Security tests | NOT STARTED | Implementation and verification pending |
+| T097 | End-to-end regression | NOT STARTED | Implementation and verification pending |
+| T098 | Release and DM documentation | PARTIAL | Existing prototype or documentation; acceptance tests/integration remain |
+| T099 | Evidence-based completion audit | NOT STARTED | Implementation and verification pending |
+| T100 | Verified playable release | NOT STARTED | Implementation and verification pending |
+
+## Verified work performed in this batch
+- Inspected recursive GitHub repository tree: 162 entries including six browser game pages, Node server, Python ledger, and CI.
+- Reviewed `server.js` and `.github/workflows/validate.yml` source. Found CI previously did not trigger on root `server.js` or `package.json` changes and did not check server syntax.
+- Updated workflow to include those paths and run Node 22 `node --check server.js`. Commit `075728d`.
+- Added `.gitignore` for SQLite WAL/database files, `.env`, `node_modules`, and Python cache. Commit `498ba67`.
+
+## Next highest-priority tasks
+1. Run newest CI and local Node/Python suites; fix real failures before marking T006–T008 DONE.
+2. Create reproducible npm lockfile; add isolated integration tests for Express routes and SQLite WAL.
+3. Remove reliance on a single shared token for anything beyond loopback-only development. Add campaign-scoped authorization before multiplayer.
+4. Preserve existing browser localStorage saves and Python ledger until an explicitly tested migration exists.
