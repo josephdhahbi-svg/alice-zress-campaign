@@ -49,7 +49,7 @@ function createSettlementTradeEngine(db){
   const next=state.stock_units+unitsDelta;
   if(!Number.isSafeInteger(next)||next<0||next>1000000000)throw Error("STOCK_BOUNDS");
   db.prepare("UPDATE vtt_settlement_markets SET stock_units=?,revision=revision+1 WHERE campaign_id=? AND settlement_id=? AND commodity_id=?").run(next,campaignId,settlementId,commodityId);
-  db.prepare("INSERT INTO vtt_settlement_trade_audit VALUES(?,?,?,?,?,?,?,?,?)").run(campaignId,tradeId,settlementId,commodityId,actorId,unitsDelta,state.stock_units,next,reason.trim(),new Date().toISOString());
+  db.prepare("INSERT INTO vtt_settlement_trade_audit VALUES(?,?,?,?,?,?,?,?,?,?)").run(campaignId,tradeId,settlementId,commodityId,actorId,unitsDelta,state.stock_units,next,reason.trim(),new Date().toISOString());
   return {duplicate:false,stockUnits:next,revision:state.revision+1};
  });
  return {createSettlement:x=>create(x),defineMarket:x=>market(x),recordTrade:x=>trade(x),
