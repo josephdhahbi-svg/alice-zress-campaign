@@ -24,4 +24,11 @@
 <button class="mv-choice" id="refresh-journal" type="button" disabled>Refresh journal</button>
 <div id="journal-entries" class="mv-journal-list" aria-live="polite"><p class="mv-subtitle">Connect to load journal entries.</p></div>
 </section>
+<section class="mv-decisions" aria-label="Moonveil AI Story Guide">
+<h2>Moonveil AI Story Guide</h2><p class="mv-subtitle">Ask for lore or guidance. AI suggestions are advisory only; they never change your character, inventory, quests, or timeline. Requires a configured server AI key.</p>
+<form id="ai-guide-form" class="mv-connect"><label>Guide mode <select id="ai-guide-mode"><option value="GUIDE">Story Guide</option><option value="LORE">Lore</option></select></label>
+<label>Ask the guide <textarea id="ai-guide-question" maxlength="2000" rows="3" required placeholder="What can Alice investigate safely in the Pit?"></textarea></label>
+<button class="mv-choice" id="ai-guide-send" type="submit" disabled>Ask AI Story Guide</button></form>
+<p class="mv-status" id="ai-guide-status" role="status" aria-live="polite">Connect to a campaign to ask the AI guide.</p><div id="ai-guide-reply" class="mv-journal-entry" aria-live="polite"></div>
+</section>
 </main><script src="./alice-room-atlas.js" defer></script></body></html>
