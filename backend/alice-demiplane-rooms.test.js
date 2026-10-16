@@ -1,0 +1,20 @@
+"use strict";
+const test=require("node:test"),assert=require("node:assert/strict");
+const {listAliceDemiplaneRooms,getAliceDemiplaneRoom,previewAliceDemiplaneRoomChoice}=require("./alice-demiplane-rooms");
+test("five authored Rabbit Hole rooms have five choices and are locked previews",()=>{
+ const rooms=listAliceDemiplaneRooms();
+ assert.equal(rooms.length,5);
+ assert.deepEqual(rooms.map(x=>x.id),["threshold","echo_gallery","void_observatory","silver_azure_nexus","return_gate"]);
+ assert.ok(rooms.every(x=>x.choices.length===5&&x.access==="DM_REVIEW_REQUIRED"));
+ assert.equal(getAliceDemiplaneRoom("threshold").anchor,"pit_ghaunadaur");
+ assert.equal(getAliceDemiplaneRoom("void_observatory").risk,"Far Realm resonance");
+ const preview=previewAliceDemiplaneRoomChoice("return_gate",5);
+ assert.equal(preview.allowed,false);
+ assert.equal(preview.reason,"DM_ADJUDICATION_REQUIRED");
+ assert.deepEqual(preview.rewards,[]);
+ assert.equal(preview.effect,"NONE");
+ assert.equal(previewAliceDemiplaneRoomChoice("return_gate",6).reason,"INVALID_CHOICE");
+ assert.equal(previewAliceDemiplaneRoomChoice("missing",1).reason,"UNKNOWN_ROOM");
+ rooms[0].choices.push("fake");
+ assert.equal(getAliceDemiplaneRoom("threshold").choices.length,5);
+});

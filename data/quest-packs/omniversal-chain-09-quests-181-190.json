@@ -1,0 +1,660 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "chainId": "mv_chain_09",
+  "title": "The Vigil of the Sleepless",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_09_member_1",
+      "name": "Aster Vale Ember",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_2",
+      "name": "Brin Copper Ember",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_3",
+      "name": "Celia Moss Ember",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_4",
+      "name": "Dorian Quill Ember",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_5",
+      "name": "Edda Stone Ember",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_6",
+      "name": "Fenn Ash Ember",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_7",
+      "name": "Galia Reed Ember",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_8",
+      "name": "Hale Meridian Ember",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_9",
+      "name": "Iris Thorn Ember",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_10",
+      "name": "Joren Star Ember",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_181",
+      "number": 181,
+      "title": "The First Thread: Watch Signal",
+      "chainId": "mv_chain_09",
+      "chainStage": 1,
+      "previousQuestId": "mv_side_009",
+      "previousChainQuestId": null,
+      "questGiver": "Gorin",
+      "featuredPartyMembers": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_6"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 3,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Find the first clue among displaced travelers.",
+      "objectives": [
+        "Consult Aster Vale Ember about the evidence from quest 009",
+        "Find the first clue among displaced travelers",
+        "Investigate: A witness remembers a different version of the event",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "A witness remembers a different version of the event",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Aster Vale Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_182",
+      "number": 182,
+      "title": "The Coastward Ledger: Watch Witness",
+      "chainId": "mv_chain_09",
+      "chainStage": 2,
+      "previousQuestId": "mv_side_019",
+      "previousChainQuestId": "mv_side_181",
+      "questGiver": "Brin Copper Ember",
+      "featuredPartyMembers": [
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_7"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 6,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Follow the evidence into merchant and refugee networks.",
+      "objectives": [
+        "Consult Brin Copper Ember about the evidence from quest 019",
+        "Follow the evidence into merchant and refugee networks",
+        "Investigate: A merchant's records contradict the first witness",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "A merchant's records contradict the first witness",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Brin Copper Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_183",
+      "number": 183,
+      "title": "The Scales of Testimony: Watch Seal",
+      "chainId": "mv_chain_09",
+      "chainStage": 3,
+      "previousQuestId": "mv_side_029",
+      "previousChainQuestId": "mv_side_182",
+      "questGiver": "Celia Moss Ember",
+      "featuredPartyMembers": [
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_8"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 9,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Present the evidence before a disputed council.",
+      "objectives": [
+        "Consult Celia Moss Ember about the evidence from quest 029",
+        "Present the evidence before a disputed council",
+        "Investigate: A forged seal implicates an innocent ally",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "A forged seal implicates an innocent ally",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Celia Moss Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_184",
+      "number": 184,
+      "title": "Mistbound Reappearance: Watch Echo",
+      "chainId": "mv_chain_09",
+      "chainStage": 4,
+      "previousQuestId": "mv_side_039",
+      "previousChainQuestId": "mv_side_183",
+      "questGiver": "Dorian Quill Ember",
+      "featuredPartyMembers": [
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_9"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 12,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Recover a lost witness beyond the mists.",
+      "objectives": [
+        "Consult Dorian Quill Ember about the evidence from quest 039",
+        "Recover a lost witness beyond the mists",
+        "Investigate: The witness has aged differently from the party",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "The witness has aged differently from the party",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Dorian Quill Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_185",
+      "number": 185,
+      "title": "The Ashen Bargain: Watch Contract",
+      "chainId": "mv_chain_09",
+      "chainStage": 5,
+      "previousQuestId": "mv_side_049",
+      "previousChainQuestId": "mv_side_184",
+      "questGiver": "Edda Stone Ember",
+      "featuredPartyMembers": [
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_10"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 15,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Challenge a contract exploiting the unresolved mystery.",
+      "objectives": [
+        "Consult Edda Stone Ember about the evidence from quest 049",
+        "Challenge a contract exploiting the unresolved mystery",
+        "Investigate: The contract can be broken without violence",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "The contract can be broken without violence",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Edda Stone Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_186",
+      "number": 186,
+      "title": "The Court of Unfinished Stories: Watch Memory",
+      "chainId": "mv_chain_09",
+      "chainStage": 6,
+      "previousQuestId": "mv_side_059",
+      "previousChainQuestId": "mv_side_185",
+      "questGiver": "Fenn Ash Ember",
+      "featuredPartyMembers": [
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_1"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 18,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Trade favors for a missing account of the mystery.",
+      "objectives": [
+        "Consult Fenn Ash Ember about the evidence from quest 059",
+        "Trade favors for a missing account of the mystery",
+        "Investigate: The account exists in two contradictory versions",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "The account exists in two contradictory versions",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Fenn Ash Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_187",
+      "number": 187,
+      "title": "The Starborne Crossing: Watch Beacon",
+      "chainId": "mv_chain_09",
+      "chainStage": 7,
+      "previousQuestId": "mv_side_069",
+      "previousChainQuestId": "mv_side_186",
+      "questGiver": "Galia Reed Ember",
+      "featuredPartyMembers": [
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_2"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 21,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Trace the mystery through a damaged relay route.",
+      "objectives": [
+        "Consult Galia Reed Ember about the evidence from quest 069",
+        "Trace the mystery through a damaged relay route",
+        "Investigate: A vessel carries evidence from a future journey",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "A vessel carries evidence from a future journey",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Galia Reed Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_188",
+      "number": 188,
+      "title": "The Door That Remembers: Watch Key",
+      "chainId": "mv_chain_09",
+      "chainStage": 8,
+      "previousQuestId": "mv_side_079",
+      "previousChainQuestId": "mv_side_187",
+      "questGiver": "Hale Meridian Ember",
+      "featuredPartyMembers": [
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_3"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 24,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Locate the portal that connects the scattered clues.",
+      "objectives": [
+        "Consult Hale Meridian Ember about the evidence from quest 079",
+        "Locate the portal that connects the scattered clues",
+        "Investigate: Its key is an earlier act of mercy",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "Its key is an earlier act of mercy",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Hale Meridian Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_189",
+      "number": 189,
+      "title": "The Shadow of the Original: Watch Shadow",
+      "chainId": "mv_chain_09",
+      "chainStage": 9,
+      "previousQuestId": "mv_side_089",
+      "previousChainQuestId": "mv_side_188",
+      "questGiver": "Iris Thorn Ember",
+      "featuredPartyMembers": [
+        "chain_09_member_9",
+        "chain_09_member_10",
+        "chain_09_member_4"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 27,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Confront the hidden architect of the mystery.",
+      "objectives": [
+        "Consult Iris Thorn Ember about the evidence from quest 089",
+        "Confront the hidden architect of the mystery",
+        "Investigate: The apparent antagonist was protecting someone",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "The apparent antagonist was protecting someone",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Iris Thorn Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_190",
+      "number": 190,
+      "title": "The Seventh Return: Watch Legacy",
+      "chainId": "mv_chain_09",
+      "chainStage": 10,
+      "previousQuestId": "mv_side_099",
+      "previousChainQuestId": "mv_side_189",
+      "questGiver": "Joren Star Ember",
+      "featuredPartyMembers": [
+        "chain_09_member_10",
+        "chain_09_member_1",
+        "chain_09_member_5"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 30,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Gorin's original case returns: a sleeping sickness moving between settlements. Resolve the mystery and preserve testimony for future traversals.",
+      "objectives": [
+        "Consult Joren Star Ember about the evidence from quest 099",
+        "Resolve the mystery and preserve testimony for future traversals",
+        "Investigate: The final choice changes who remembers the truth",
+        "Resolve the local dispute and preserve the watch evidence for the next stage"
+      ],
+      "complication": "the afflicted dream of the same sealed door",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the watch evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Watch evidence fragment",
+        "Contact favor from Joren Star Ember"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    }
+  ]
+}

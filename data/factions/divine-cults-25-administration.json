@@ -1,0 +1,2171 @@
+{
+  "schema": "moonveil.divine-cult-archive.v1",
+  "status": "PARTIAL_RESEARCH_SEED_NOT_EXHAUSTIVE",
+  "sourcesConsulted": [
+    {
+      "title": "Dungeon Master's Guide (2008)",
+      "evidence": "Deity table and exarch overview",
+      "page": 162
+    },
+    {
+      "title": "Open Grave (2008)",
+      "evidence": "Index identifies named Vecna-linked figures and Vecna cultist archetypes",
+      "pages": [
+        114,
+        204,
+        209,
+        212,
+        214
+      ]
+    },
+    {
+      "title": "Moonveil WorldOS planning notes",
+      "evidence": "Lolth, Eilistraee, Ghaunadaur Underdark faction design",
+      "status": "USER_PROJECT_HOMEBREW_NOT_OFFICIAL_SOURCE"
+    }
+  ],
+  "profiles": [
+    {
+      "deityId": "ao",
+      "deity": "Ao",
+      "atlasNumber": 1,
+      "wonderland": "Red King",
+      "moralRole": "GREEN",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "1_1",
+          "label": "no established ordinary clerical order; do not invent one",
+          "status": "NO_VERIFIED_CULT_OR_HOMEBREW",
+          "officialStatBlock": false
+        },
+        {
+          "id": "1_2",
+          "label": "cosmological witness (homebrew)",
+          "status": "NO_VERIFIED_CULT_OR_HOMEBREW",
+          "officialStatBlock": false
+        },
+        {
+          "id": "1_3",
+          "label": "dream-sequence observer (homebrew)",
+          "status": "NO_VERIFIED_CULT_OR_HOMEBREW",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Ao faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "dream and cosmological law",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_01",
+      "questId": "wonderland_throne_01",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "ghaunadaur",
+      "deity": "Ghaunadaur",
+      "atlasNumber": 2,
+      "wonderland": "Caterpillar",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "2_1",
+          "label": "Ghaunadauran cultist",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "2_2",
+          "label": "ooze keeper",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "2_3",
+          "label": "Elder Eye priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Ghaunadaur faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "identity and eldritch hunger",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_02",
+      "questId": "wonderland_throne_02",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "eilistraee",
+      "deity": "Eilistraee",
+      "atlasNumber": 3,
+      "wonderland": "White Queen",
+      "moralRole": "BLUE",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "3_1",
+          "label": "Sword Dancer",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "3_2",
+          "label": "Dark Maiden priestess",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "3_3",
+          "label": "moonlit refugee protector",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Eilistraee faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "mercy and freedom",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_03",
+      "questId": "wonderland_throne_03",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "lolth",
+      "deity": "Lolth",
+      "atlasNumber": 4,
+      "wonderland": "Queen of Hearts",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "4_1",
+          "label": "Lolthite priestess",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "4_2",
+          "label": "drow house soldier",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "4_3",
+          "label": "spider cult acolyte",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Lolth faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "tyranny and trials",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_04",
+      "questId": "wonderland_throne_04",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "shar",
+      "deity": "Shar",
+      "atlasNumber": 5,
+      "wonderland": "Cheshire Cat",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "5_1",
+          "label": "Dark Justiciar",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "5_2",
+          "label": "shadow devotee",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "5_3",
+          "label": "memory keeper",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Shar faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "loss and disappearing memory",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_05",
+      "questId": "wonderland_throne_05",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "mystra",
+      "deity": "Mystra",
+      "atlasNumber": 6,
+      "wonderland": "White Rabbit",
+      "moralRole": "BLUE",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "6_1",
+          "label": "Weave devotee",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "6_2",
+          "label": "arcane initiate",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "6_3",
+          "label": "spellguard",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Mystra faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "time and magical eras",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_06",
+      "questId": "wonderland_throne_06",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "corellon",
+      "deity": "Corellon",
+      "atlasNumber": 7,
+      "wonderland": "Mad Hatter",
+      "moralRole": "BLUE",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "7_1",
+          "label": "elven priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "7_2",
+          "label": "fey guardian",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "7_3",
+          "label": "artist devotee",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Corellon faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "creative magic",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_07",
+      "questId": "wonderland_throne_07",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "bane",
+      "deity": "Bane",
+      "atlasNumber": 8,
+      "wonderland": "Red Queen",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "8_1",
+          "label": "Black Hand devotee",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "8_2",
+          "label": "tyrant soldier",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "8_3",
+          "label": "war priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Bane faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "rules and domination",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_08",
+      "questId": "wonderland_throne_08",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "bahamut",
+      "deity": "Bahamut",
+      "atlasNumber": 9,
+      "wonderland": "White Knight",
+      "moralRole": "BLUE",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "9_1",
+          "label": "platinum dragon devotee",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "9_2",
+          "label": "dragonborn guardian",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "9_3",
+          "label": "metallic dragon emissary",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Bahamut faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "honor and protection",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_09",
+      "questId": "wonderland_throne_09",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "tiamat",
+      "deity": "Tiamat",
+      "atlasNumber": 10,
+      "wonderland": "Red Knight",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "10_1",
+          "label": "dragon cultist",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "10_2",
+          "label": "chromatic dragon devotee",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "10_3",
+          "label": "dragon cult commander",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Tiamat faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "conquest",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_10",
+      "questId": "wonderland_throne_10",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "vecna",
+      "deity": "Vecna",
+      "atlasNumber": 11,
+      "wonderland": "Humpty Dumpty",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "11_1",
+          "label": "Undead Vecna Cultist",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "11_2",
+          "label": "Master Enigma of Vecna",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "11_3",
+          "label": "secret keeper",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Vecna faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "secrets and language",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_11",
+      "questId": "wonderland_throne_11",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "jergal",
+      "deity": "Jergal",
+      "atlasNumber": 12,
+      "wonderland": "Dormouse",
+      "moralRole": "GREEN",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "12_1",
+          "label": "death scribe",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "12_2",
+          "label": "grave recorder",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "12_3",
+          "label": "ledger keeper",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Jergal faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "memory and death records",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_12",
+      "questId": "wonderland_throne_12",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "cyric",
+      "deity": "Cyric",
+      "atlasNumber": 13,
+      "wonderland": "March Hare",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "13_1",
+          "label": "false prophet",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "13_2",
+          "label": "deceiver",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "13_3",
+          "label": "discord cultist",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Cyric faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "madness and lies",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_13",
+      "questId": "wonderland_throne_13",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "talona",
+      "deity": "Talona",
+      "atlasNumber": 14,
+      "wonderland": "Duchess",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "14_1",
+          "label": "plague priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "14_2",
+          "label": "poisoner",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "14_3",
+          "label": "blight devotee",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Talona faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "poison and corruption",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_14",
+      "questId": "wonderland_throne_14",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "tyr",
+      "deity": "Tyr",
+      "atlasNumber": 15,
+      "wonderland": "Gryphon",
+      "moralRole": "BLUE",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "15_1",
+          "label": "justice priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "15_2",
+          "label": "oathkeeper",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "15_3",
+          "label": "tribunal knight",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Tyr faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "justice",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_15",
+      "questId": "wonderland_throne_15",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "ilmater",
+      "deity": "Ilmater",
+      "atlasNumber": 16,
+      "wonderland": "Mock Turtle",
+      "moralRole": "BLUE",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "16_1",
+          "label": "mercy priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "16_2",
+          "label": "healer",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "16_3",
+          "label": "martyr guardian",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Ilmater faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "compassion and suffering",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_16",
+      "questId": "wonderland_throne_16",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "asmodeus",
+      "deity": "Asmodeus",
+      "atlasNumber": 17,
+      "wonderland": "King of Hearts",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "17_1",
+          "label": "Asmodean cultist",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "17_2",
+          "label": "infernal contract advocate",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "17_3",
+          "label": "devil emissary",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Asmodeus faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "contracts and infernal law",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_17",
+      "questId": "wonderland_throne_17",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "mask",
+      "deity": "Mask",
+      "atlasNumber": 18,
+      "wonderland": "Knave of Hearts",
+      "moralRole": "GREEN",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "18_1",
+          "label": "shadow thief",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "18_2",
+          "label": "masked priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "18_3",
+          "label": "infiltrator",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Mask faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "theft and disguise",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_18",
+      "questId": "wonderland_throne_18",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "oghma",
+      "deity": "Oghma",
+      "atlasNumber": 19,
+      "wonderland": "Dodo",
+      "moralRole": "GREEN",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "19_1",
+          "label": "loremaster",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "19_2",
+          "label": "scribe",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "19_3",
+          "label": "knowledge priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Oghma faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "knowledge and stories",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_19",
+      "questId": "wonderland_throne_19",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "selune",
+      "deity": "Selune",
+      "atlasNumber": 20,
+      "wonderland": "Mouse",
+      "moralRole": "BLUE",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "20_1",
+          "label": "moon priestess",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "20_2",
+          "label": "night guide",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "20_3",
+          "label": "moon guardian",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Selune faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "moonlit guidance",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_20",
+      "questId": "wonderland_throne_20",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "umberlee",
+      "deity": "Umberlee",
+      "atlasNumber": 21,
+      "wonderland": "Walrus",
+      "moralRole": "RED",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "21_1",
+          "label": "storm priestess",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "21_2",
+          "label": "sea cultist",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "21_3",
+          "label": "tide emissary",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Umberlee faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "dangerous sea bargains",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_21",
+      "questId": "wonderland_throne_21",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "moradin",
+      "deity": "Moradin",
+      "atlasNumber": 22,
+      "wonderland": "Carpenter",
+      "moralRole": "BLUE",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "22_1",
+          "label": "forge priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "22_2",
+          "label": "clan defender",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "22_3",
+          "label": "runesmith",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Moradin faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "craftsmanship",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_22",
+      "questId": "wonderland_throne_22",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "tempus",
+      "deity": "Tempus",
+      "atlasNumber": 23,
+      "wonderland": "Lion",
+      "moralRole": "GREEN",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "23_1",
+          "label": "battle priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "23_2",
+          "label": "war champion",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "23_3",
+          "label": "banner bearer",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Tempus faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "war and courage",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_23",
+      "questId": "wonderland_throne_23",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "lathander",
+      "deity": "Lathander",
+      "atlasNumber": 24,
+      "wonderland": "Unicorn",
+      "moralRole": "BLUE",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "24_1",
+          "label": "dawn priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "24_2",
+          "label": "sun guardian",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "24_3",
+          "label": "renewal acolyte",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Lathander faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "dawn and renewal",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_24",
+      "questId": "wonderland_throne_24",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    },
+    {
+      "deityId": "silvanus",
+      "deity": "Silvanus",
+      "atlasNumber": 25,
+      "wonderland": "Tiger-lily",
+      "moralRole": "GREEN",
+      "divineStatus": "VERIFY_BY_EDITION_AND_ERA",
+      "worshiperArchetypes": [
+        {
+          "id": "25_1",
+          "label": "druid devotee",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "25_2",
+          "label": "forest guardian",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        },
+        {
+          "id": "25_3",
+          "label": "nature priest",
+          "status": "ARCHETYPE_SOURCE_CHECK_PENDING",
+          "officialStatBlock": false
+        }
+      ],
+      "faction": {
+        "name": "Silvanus faith and associated cult networks",
+        "status": "CATALOG_PLACEHOLDER_NOT_CANONICAL_ORGANIZATION_NAME",
+        "ethos": "wild nature",
+        "underdarkPresence": "UNVERIFIED_EXCEPT_SPECIFIC_CANON_REFERENCES",
+        "relationships": [],
+        "hierarchy": [
+          "initiate",
+          "operative",
+          "priest_or_leader"
+        ],
+        "recruitment": "DM_DESIGN",
+        "economy": {
+          "tithesGP": null,
+          "inventory": [],
+          "supplyRoutes": [],
+          "treasuryGP": null
+        }
+      },
+      "characterSheetIds": [],
+      "blessingIds": [],
+      "itemIds": [],
+      "spellScrollId": "scroll_wonderland_25",
+      "questId": "wonderland_throne_25",
+      "sourceReview": {
+        "status": "PENDING",
+        "edition": null,
+        "pages": [],
+        "historicalWindowDR": null
+      },
+      "noAutomaticRewards": true
+    }
+  ],
+  "namedCharacterSheets": [
+    {
+      "id": "named_divine_001",
+      "name": "Kas the Betrayer",
+      "linkedDeity": "Vecna",
+      "role": "Historical adversary / former lieutenant; not a current loyal cultist by default",
+      "roleColor": "RED",
+      "source": {
+        "title": "Open Grave (2008), monster index and character section",
+        "page": 204,
+        "edition": "4e"
+      },
+      "canonStatus": "NAMED_CANON_CHARACTER",
+      "mechanics": {
+        "sourceStatBlock": "4e level 26 solo soldier",
+        "edition": "4e",
+        "species": null,
+        "classes": [],
+        "level": null,
+        "challengeRating": null,
+        "armorClass": null,
+        "hitPoints": null,
+        "speed": null,
+        "abilities": {
+          "STR": null,
+          "DEX": null,
+          "CON": null,
+          "INT": null,
+          "WIS": null,
+          "CHA": null
+        },
+        "saves": [],
+        "skills": [],
+        "spells": [],
+        "actions": [],
+        "reactions": [],
+        "legendaryActions": [],
+        "equipment": [],
+        "treasure": [],
+        "blessings": [],
+        "attunementSlots": [],
+        "combatReady": false
+      },
+      "chronology": {
+        "startDR": null,
+        "endDR": null,
+        "existenceVerified": false,
+        "location": null,
+        "plane": null
+      },
+      "relationships": [],
+      "factionId": null,
+      "questIds": [],
+      "dialogueIds": [],
+      "dmReview": "REQUIRED",
+      "notes": "Do not port 4e monster levels or powers directly into 5e player character sheets."
+    },
+    {
+      "id": "named_divine_002",
+      "name": "Osterneth, the Bronze Lich",
+      "linkedDeity": "Vecna",
+      "role": "Vecna-associated undead figure; affiliation to verify in context",
+      "roleColor": "RED",
+      "source": {
+        "title": "Open Grave (2008), monster index",
+        "page": 209,
+        "edition": "4e"
+      },
+      "canonStatus": "NAMED_CANON_CHARACTER",
+      "mechanics": {
+        "sourceStatBlock": "4e level 29 solo controller",
+        "edition": "4e",
+        "species": null,
+        "classes": [],
+        "level": null,
+        "challengeRating": null,
+        "armorClass": null,
+        "hitPoints": null,
+        "speed": null,
+        "abilities": {
+          "STR": null,
+          "DEX": null,
+          "CON": null,
+          "INT": null,
+          "WIS": null,
+          "CHA": null
+        },
+        "saves": [],
+        "skills": [],
+        "spells": [],
+        "actions": [],
+        "reactions": [],
+        "legendaryActions": [],
+        "equipment": [],
+        "treasure": [],
+        "blessings": [],
+        "attunementSlots": [],
+        "combatReady": false
+      },
+      "chronology": {
+        "startDR": null,
+        "endDR": null,
+        "existenceVerified": false,
+        "location": null,
+        "plane": null
+      },
+      "relationships": [],
+      "factionId": null,
+      "questIds": [],
+      "dialogueIds": [],
+      "dmReview": "REQUIRED",
+      "notes": "Do not port 4e monster levels or powers directly into 5e player character sheets."
+    },
+    {
+      "id": "named_divine_003",
+      "name": "Vecna",
+      "linkedDeity": "Vecna",
+      "role": "Deity, not cultist",
+      "roleColor": "RED",
+      "source": {
+        "title": "Open Grave (2008), monster index",
+        "page": 212,
+        "edition": "4e"
+      },
+      "canonStatus": "DEITY_REFERENCE_ONLY",
+      "mechanics": {
+        "sourceStatBlock": "4e level 35 solo controller",
+        "edition": "4e",
+        "species": null,
+        "classes": [],
+        "level": null,
+        "challengeRating": null,
+        "armorClass": null,
+        "hitPoints": null,
+        "speed": null,
+        "abilities": {
+          "STR": null,
+          "DEX": null,
+          "CON": null,
+          "INT": null,
+          "WIS": null,
+          "CHA": null
+        },
+        "saves": [],
+        "skills": [],
+        "spells": [],
+        "actions": [],
+        "reactions": [],
+        "legendaryActions": [],
+        "equipment": [],
+        "treasure": [],
+        "blessings": [],
+        "attunementSlots": [],
+        "combatReady": false
+      },
+      "chronology": {
+        "startDR": null,
+        "endDR": null,
+        "existenceVerified": false,
+        "location": null,
+        "plane": null
+      },
+      "relationships": [],
+      "factionId": null,
+      "questIds": [],
+      "dialogueIds": [],
+      "dmReview": "REQUIRED",
+      "notes": "Do not port 4e monster levels or powers directly into 5e player character sheets."
+    },
+    {
+      "id": "named_divine_004",
+      "name": "Qilué Veladorn",
+      "linkedDeity": "Eilistraee",
+      "role": "Eilistraee-linked historical named figure; current era and status must be verified",
+      "roleColor": "BLUE",
+      "source": {
+        "title": "Forgotten Realms historical lore (specific edition/page pending)",
+        "page": null,
+        "edition": "PENDING"
+      },
+      "canonStatus": "NAMED_LORE_CANDIDATE_UNVERIFIED_SOURCE",
+      "mechanics": {
+        "sourceStatBlock": null,
+        "edition": "UNVERIFIED",
+        "species": null,
+        "classes": [],
+        "level": null,
+        "challengeRating": null,
+        "armorClass": null,
+        "hitPoints": null,
+        "speed": null,
+        "abilities": {
+          "STR": null,
+          "DEX": null,
+          "CON": null,
+          "INT": null,
+          "WIS": null,
+          "CHA": null
+        },
+        "saves": [],
+        "skills": [],
+        "spells": [],
+        "actions": [],
+        "reactions": [],
+        "legendaryActions": [],
+        "equipment": [],
+        "treasure": [],
+        "blessings": [],
+        "attunementSlots": [],
+        "combatReady": false
+      },
+      "chronology": {
+        "startDR": null,
+        "endDR": null,
+        "existenceVerified": false,
+        "location": null,
+        "plane": null
+      },
+      "relationships": [],
+      "factionId": null,
+      "questIds": [],
+      "dialogueIds": [],
+      "dmReview": "REQUIRED",
+      "notes": "Do not port 4e monster levels or powers directly into 5e player character sheets."
+    },
+    {
+      "id": "named_divine_005",
+      "name": "Drizzt Do'Urden",
+      "linkedDeity": "Eilistraee",
+      "role": "Independent drow hero; NOT automatically an Eilistraee cultist",
+      "roleColor": "BLUE",
+      "source": {
+        "title": "Forgotten Realms fiction and campaign sources; page pending",
+        "page": null,
+        "edition": "PENDING"
+      },
+      "canonStatus": "NAMED_CROSS_REFERENCE_NOT_CULTIST",
+      "mechanics": {
+        "sourceStatBlock": null,
+        "edition": "UNVERIFIED",
+        "species": null,
+        "classes": [],
+        "level": null,
+        "challengeRating": null,
+        "armorClass": null,
+        "hitPoints": null,
+        "speed": null,
+        "abilities": {
+          "STR": null,
+          "DEX": null,
+          "CON": null,
+          "INT": null,
+          "WIS": null,
+          "CHA": null
+        },
+        "saves": [],
+        "skills": [],
+        "spells": [],
+        "actions": [],
+        "reactions": [],
+        "legendaryActions": [],
+        "equipment": [],
+        "treasure": [],
+        "blessings": [],
+        "attunementSlots": [],
+        "combatReady": false
+      },
+      "chronology": {
+        "startDR": null,
+        "endDR": null,
+        "existenceVerified": false,
+        "location": null,
+        "plane": null
+      },
+      "relationships": [],
+      "factionId": null,
+      "questIds": [],
+      "dialogueIds": [],
+      "dmReview": "REQUIRED",
+      "notes": "Do not port 4e monster levels or powers directly into 5e player character sheets."
+    },
+    {
+      "id": "named_divine_006",
+      "name": "Elminster Aumar",
+      "linkedDeity": "Mystra",
+      "role": "Mystra-associated wizard and historical agent",
+      "roleColor": "BLUE",
+      "source": {
+        "title": "Forgotten Realms campaign sources; page pending",
+        "page": null,
+        "edition": "PENDING"
+      },
+      "canonStatus": "NAMED_LORE_CANDIDATE_UNVERIFIED_SOURCE",
+      "mechanics": {
+        "sourceStatBlock": null,
+        "edition": "UNVERIFIED",
+        "species": null,
+        "classes": [],
+        "level": null,
+        "challengeRating": null,
+        "armorClass": null,
+        "hitPoints": null,
+        "speed": null,
+        "abilities": {
+          "STR": null,
+          "DEX": null,
+          "CON": null,
+          "INT": null,
+          "WIS": null,
+          "CHA": null
+        },
+        "saves": [],
+        "skills": [],
+        "spells": [],
+        "actions": [],
+        "reactions": [],
+        "legendaryActions": [],
+        "equipment": [],
+        "treasure": [],
+        "blessings": [],
+        "attunementSlots": [],
+        "combatReady": false
+      },
+      "chronology": {
+        "startDR": null,
+        "endDR": null,
+        "existenceVerified": false,
+        "location": null,
+        "plane": null
+      },
+      "relationships": [],
+      "factionId": null,
+      "questIds": [],
+      "dialogueIds": [],
+      "dmReview": "REQUIRED",
+      "notes": "Do not port 4e monster levels or powers directly into 5e player character sheets."
+    }
+  ],
+  "publishedArchetypeReferences": [
+    {
+      "name": "Undead Vecna Cultist",
+      "deity": "Vecna",
+      "source": "Open Grave (2008)",
+      "page": 214,
+      "edition": "4e",
+      "publishedRole": "Level 21 minion"
+    },
+    {
+      "name": "Master Enigma of Vecna",
+      "deity": "Vecna",
+      "source": "Open Grave (2008)",
+      "page": 214,
+      "edition": "4e",
+      "publishedRole": "Level 22 controller"
+    },
+    {
+      "name": "Death Cultist",
+      "deity": "UNASSIGNED",
+      "source": "Open Grave (2008)",
+      "page": 114,
+      "edition": "4e",
+      "publishedRole": "Level 24 controller"
+    }
+  ],
+  "blessingRegister": [
+    {
+      "id": "blessing_01",
+      "deity": "Ao",
+      "name": "Ao Favor — dream and cosmological law",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_01",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_02",
+      "deity": "Ghaunadaur",
+      "name": "Ghaunadaur Favor — identity and eldritch hunger",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_02",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_03",
+      "deity": "Eilistraee",
+      "name": "Eilistraee Favor — mercy and freedom",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_03",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_04",
+      "deity": "Lolth",
+      "name": "Lolth Favor — tyranny and trials",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_04",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_05",
+      "deity": "Shar",
+      "name": "Shar Favor — loss and disappearing memory",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_05",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_06",
+      "deity": "Mystra",
+      "name": "Mystra Favor — time and magical eras",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_06",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_07",
+      "deity": "Corellon",
+      "name": "Corellon Favor — creative magic",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_07",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_08",
+      "deity": "Bane",
+      "name": "Bane Favor — rules and domination",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_08",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_09",
+      "deity": "Bahamut",
+      "name": "Bahamut Favor — honor and protection",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_09",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_10",
+      "deity": "Tiamat",
+      "name": "Tiamat Favor — conquest",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_10",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_11",
+      "deity": "Vecna",
+      "name": "Vecna Favor — secrets and language",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_11",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_12",
+      "deity": "Jergal",
+      "name": "Jergal Favor — memory and death records",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_12",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_13",
+      "deity": "Cyric",
+      "name": "Cyric Favor — madness and lies",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_13",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_14",
+      "deity": "Talona",
+      "name": "Talona Favor — poison and corruption",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_14",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_15",
+      "deity": "Tyr",
+      "name": "Tyr Favor — justice",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_15",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_16",
+      "deity": "Ilmater",
+      "name": "Ilmater Favor — compassion and suffering",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_16",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_17",
+      "deity": "Asmodeus",
+      "name": "Asmodeus Favor — contracts and infernal law",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_17",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_18",
+      "deity": "Mask",
+      "name": "Mask Favor — theft and disguise",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_18",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_19",
+      "deity": "Oghma",
+      "name": "Oghma Favor — knowledge and stories",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_19",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_20",
+      "deity": "Selune",
+      "name": "Selune Favor — moonlit guidance",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_20",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_21",
+      "deity": "Umberlee",
+      "name": "Umberlee Favor — dangerous sea bargains",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_21",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_22",
+      "deity": "Moradin",
+      "name": "Moradin Favor — craftsmanship",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_22",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_23",
+      "deity": "Tempus",
+      "name": "Tempus Favor — war and courage",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_23",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_24",
+      "deity": "Lathander",
+      "name": "Lathander Favor — dawn and renewal",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_24",
+      "eraGate": true,
+      "dmApproval": true
+    },
+    {
+      "id": "blessing_25",
+      "deity": "Silvanus",
+      "name": "Silvanus Favor — wild nature",
+      "status": "PLACEHOLDER_NOT_GRANTED",
+      "mechanics": null,
+      "source": "MOONVEIL_HOMEBREW_PENDING_DESIGN",
+      "questId": "wonderland_throne_25",
+      "eraGate": true,
+      "dmApproval": true
+    }
+  ],
+  "administration": {
+    "sourceVerification": "PENDING_PER_ENTRY",
+    "characterSheetsCompleted": 0,
+    "mechanicalStatBlocksTranscribed": 0,
+    "sourceNamedCharactersSeeded": 6,
+    "profilesCreated": 25,
+    "blessingPlaceholders": 25,
+    "canonChecks": [
+      "Edition",
+      "DR era",
+      "birth/death",
+      "deity incarnation",
+      "faction loyalty",
+      "location and planar access",
+      "spell/item rules",
+      "alignment classification"
+    ],
+    "noInventedCanon": true,
+    "attestation": "DM_REQUIRED",
+    "nextActions": [
+      "Research each deity's actual clergy, cult organizations and named servants in sourcebooks",
+      "Read exact cited pages before marking official",
+      "Fill playable 5e NPC stat blocks as adaptations with separate homebrew labels",
+      "Cross-reference items, scrolls, divine blessings, faction economy and quest unlocks"
+    ]
+  }
+}

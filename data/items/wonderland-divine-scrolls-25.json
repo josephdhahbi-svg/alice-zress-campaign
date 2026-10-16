@@ -1,0 +1,687 @@
+{
+  "schema": "moonveil.wonderland-divine-scrolls.v1",
+  "status": "DRAFT_UNAWARDED",
+  "notes": [
+    "25 original homebrew spell scrolls, not official D&D spell descriptions.",
+    "Spell levels and effects are provisional; saving throws and targeting need DM balancing.",
+    "Do not award or use before source chronology and character prerequisites are verified.",
+    "Not part of locked 150 divine endgame treasury."
+  ],
+  "scrolls": [
+    {
+      "id": "scroll_wonderland_01",
+      "atlasNumber": 1,
+      "deity": "Ao",
+      "wonderlandRole": "Red King",
+      "spell": {
+        "name": "Edict of the Sleeping King",
+        "level": 7,
+        "school": "Abjuration",
+        "effect": "Suppress one creature's portal travel for 1 minute on failed Wisdom save, repeat each turn.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_01",
+      "questLocation": "Underdark atlas site 1",
+      "unlock": {
+        "condition": "DM-approved completion of The Dreaming King",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_02",
+      "atlasNumber": 2,
+      "deity": "Ghaunadaur",
+      "wonderlandRole": "Caterpillar",
+      "spell": {
+        "name": "Eye of the Unmade Self",
+        "level": 5,
+        "school": "Enchantment",
+        "effect": "Deal 4d8 psychic damage on failed Wisdom save, half on success; target loses reactions until its next turn on failure.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_02",
+      "questLocation": "Underdark atlas site 2",
+      "unlock": {
+        "condition": "DM-approved completion of The Elder Eye's Question",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_03",
+      "atlasNumber": 3,
+      "deity": "Eilistraee",
+      "wonderlandRole": "White Queen",
+      "spell": {
+        "name": "Moonlit Liberation",
+        "level": 4,
+        "school": "Abjuration",
+        "effect": "End charmed or frightened on two willing creatures; each gains 1d8 temporary HP.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_03",
+      "questLocation": "Underdark atlas site 3",
+      "unlock": {
+        "condition": "DM-approved completion of The Moonlit Sanctuary",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_04",
+      "atlasNumber": 4,
+      "deity": "Lolth",
+      "wonderlandRole": "Queen of Hearts",
+      "spell": {
+        "name": "Sentence of the Spider Court",
+        "level": 5,
+        "school": "Enchantment",
+        "effect": "Restrain one creature with spectral webs on failed Wisdom save; repeat save each turn.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_04",
+      "questLocation": "Underdark atlas site 4",
+      "unlock": {
+        "condition": "DM-approved completion of The Court of Hearts",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_05",
+      "atlasNumber": 5,
+      "deity": "Shar",
+      "wonderlandRole": "Cheshire Cat",
+      "spell": {
+        "name": "Vanishing Memory",
+        "level": 5,
+        "school": "Illusion",
+        "effect": "Conceal one 10-foot zone from a creature on failed Wisdom save for up to 1 minute.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_05",
+      "questLocation": "Underdark atlas site 5",
+      "unlock": {
+        "condition": "DM-approved completion of The Vanishing Path",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_06",
+      "atlasNumber": 6,
+      "deity": "Mystra",
+      "wonderlandRole": "White Rabbit",
+      "spell": {
+        "name": "Thread of the Weave",
+        "level": 4,
+        "school": "Abjuration",
+        "effect": "Reaction: add 1d4 to one creature's failed spell saving throw, potentially changing the result.",
+        "castingTime": "Reaction (when creature within 30 feet fails a spell saving throw)",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_06",
+      "questLocation": "Underdark atlas site 6",
+      "unlock": {
+        "condition": "DM-approved completion of The Clockwork Weave",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_07",
+      "atlasNumber": 7,
+      "deity": "Corellon",
+      "wonderlandRole": "Mad Hatter",
+      "spell": {
+        "name": "Hatter's Impossible Colors",
+        "level": 4,
+        "school": "Illusion",
+        "effect": "Create 15-foot cube of difficult terrain; creatures entering take 2d6 psychic damage on failed Intelligence save.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_07",
+      "questLocation": "Underdark atlas site 7",
+      "unlock": {
+        "condition": "DM-approved completion of The Impossible Tea Party",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_08",
+      "atlasNumber": 8,
+      "deity": "Bane",
+      "wonderlandRole": "Red Queen",
+      "spell": {
+        "name": "The Red Queen's Race",
+        "level": 5,
+        "school": "Enchantment",
+        "effect": "Halve one creature's speed and prevent Dash on failed Wisdom save for up to 1 minute.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_08",
+      "questLocation": "Underdark atlas site 8",
+      "unlock": {
+        "condition": "DM-approved completion of The Red Queen's Race",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_09",
+      "atlasNumber": 9,
+      "deity": "Bahamut",
+      "wonderlandRole": "White Knight",
+      "spell": {
+        "name": "Platinum Knight's Stand",
+        "level": 5,
+        "school": "Abjuration",
+        "effect": "Reaction: reduce damage dealt to an ally by 4d8 plus caster's spellcasting modifier.",
+        "castingTime": "Reaction (when ally within 30 feet takes damage)",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_09",
+      "questLocation": "Underdark atlas site 9",
+      "unlock": {
+        "condition": "DM-approved completion of The White Knight's Promise",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_10",
+      "atlasNumber": 10,
+      "deity": "Tiamat",
+      "wonderlandRole": "Red Knight",
+      "spell": {
+        "name": "Chromatic Sovereign's Breath",
+        "level": 6,
+        "school": "Evocation",
+        "effect": "Deal 8d6 of chosen acid, cold, fire, lightning, or poison damage in 30-foot cone, Dexterity save for half.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_10",
+      "questLocation": "Underdark atlas site 10",
+      "unlock": {
+        "condition": "DM-approved completion of The Dragon's Challenge",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_11",
+      "atlasNumber": 11,
+      "deity": "Vecna",
+      "wonderlandRole": "Humpty Dumpty",
+      "spell": {
+        "name": "The Word Unbroken",
+        "level": 6,
+        "school": "Divination",
+        "effect": "Reveal whether one inscription is forged, magically altered, or contradictory, and one DM-provided clue.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_11",
+      "questLocation": "Underdark atlas site 11",
+      "unlock": {
+        "condition": "DM-approved completion of The Broken Word",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_12",
+      "atlasNumber": 12,
+      "deity": "Jergal",
+      "wonderlandRole": "Dormouse",
+      "spell": {
+        "name": "Ledger of the Quiet Dead",
+        "level": 4,
+        "school": "Divination",
+        "effect": "Learn a recorded name and approximate date of death from one set of remains or grave marker, if knowable.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_12",
+      "questLocation": "Underdark atlas site 12",
+      "unlock": {
+        "condition": "DM-approved completion of The Sleeping Archive",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_13",
+      "atlasNumber": 13,
+      "deity": "Cyric",
+      "wonderlandRole": "March Hare",
+      "spell": {
+        "name": "March Hare's False Hour",
+        "level": 4,
+        "school": "Illusion",
+        "effect": "One creature treats an illusory hazard as difficult terrain on failed Wisdom save.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_13",
+      "questLocation": "Underdark atlas site 13",
+      "unlock": {
+        "condition": "DM-approved completion of The Madness of Noon",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_14",
+      "atlasNumber": 14,
+      "deity": "Talona",
+      "wonderlandRole": "Duchess",
+      "spell": {
+        "name": "Duchess's Bitter Tea",
+        "level": 4,
+        "school": "Necromancy",
+        "effect": "Deal 5d6 poison damage, Constitution save for half; poisoned until next turn on failed save.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_14",
+      "questLocation": "Underdark atlas site 14",
+      "unlock": {
+        "condition": "DM-approved completion of The Poisoned Household",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_15",
+      "atlasNumber": 15,
+      "deity": "Tyr",
+      "wonderlandRole": "Gryphon",
+      "spell": {
+        "name": "Gryphon's Verdict",
+        "level": 5,
+        "school": "Divination",
+        "effect": "Grant one willing creature advantage on Insight checks and saving throws against charm for 1 minute.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_15",
+      "questLocation": "Underdark atlas site 15",
+      "unlock": {
+        "condition": "DM-approved completion of The Gryphon's Trial",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_16",
+      "atlasNumber": 16,
+      "deity": "Ilmater",
+      "wonderlandRole": "Mock Turtle",
+      "spell": {
+        "name": "Tears of the Mock Turtle",
+        "level": 4,
+        "school": "Abjuration",
+        "effect": "Up to three willing creatures each regain 2d8 plus spellcasting modifier hit points.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_16",
+      "questLocation": "Underdark atlas site 16",
+      "unlock": {
+        "condition": "DM-approved completion of The Mock Turtle's Tears",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_17",
+      "atlasNumber": 17,
+      "deity": "Asmodeus",
+      "wonderlandRole": "King of Hearts",
+      "spell": {
+        "name": "King's Infernal Fine Print",
+        "level": 5,
+        "school": "Divination",
+        "effect": "Reveal one hidden clause or magical consequence of a physically inspected contract.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_17",
+      "questLocation": "Underdark atlas site 17",
+      "unlock": {
+        "condition": "DM-approved completion of The King's Contract",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_18",
+      "atlasNumber": 18,
+      "deity": "Mask",
+      "wonderlandRole": "Knave of Hearts",
+      "spell": {
+        "name": "Knave's Vanishing Tart",
+        "level": 3,
+        "school": "Illusion",
+        "effect": "Become invisible for up to 1 minute, ending after an attack, damage dealt, or spellcasting.",
+        "castingTime": "Bonus Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_18",
+      "questLocation": "Underdark atlas site 18",
+      "unlock": {
+        "condition": "DM-approved completion of The Stolen Tarts",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_19",
+      "atlasNumber": 19,
+      "deity": "Oghma",
+      "wonderlandRole": "Dodo",
+      "spell": {
+        "name": "Dodo's Circular Argument",
+        "level": 4,
+        "school": "Enchantment",
+        "effect": "One creature loses reactions and has disadvantage on next Intelligence check after failed Wisdom save.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_19",
+      "questLocation": "Underdark atlas site 19",
+      "unlock": {
+        "condition": "DM-approved completion of The Caucus Race",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_20",
+      "atlasNumber": 20,
+      "deity": "Selune",
+      "wonderlandRole": "Mouse",
+      "spell": {
+        "name": "Moon-Mouse's Hidden Trail",
+        "level": 3,
+        "school": "Divination",
+        "effect": "Reveal mundane tracks and hidden passages obscured by ordinary darkness within 30 feet for 10 minutes.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_20",
+      "questLocation": "Underdark atlas site 20",
+      "unlock": {
+        "condition": "DM-approved completion of The Moonlit Crossing",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_21",
+      "atlasNumber": 21,
+      "deity": "Umberlee",
+      "wonderlandRole": "Walrus",
+      "spell": {
+        "name": "Walrus's Drowning Bargain",
+        "level": 5,
+        "school": "Conjuration",
+        "effect": "Create a 15-foot square of surging water; Strength save or pushed 10 feet.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_21",
+      "questLocation": "Underdark atlas site 21",
+      "unlock": {
+        "condition": "DM-approved completion of The Walrus's Bargain",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_22",
+      "atlasNumber": 22,
+      "deity": "Moradin",
+      "wonderlandRole": "Carpenter",
+      "spell": {
+        "name": "Carpenter's Living Blueprint",
+        "level": 4,
+        "school": "Transmutation",
+        "effect": "Repair a nonmagical object or structure up to 5-foot cube if half its material remains.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_22",
+      "questLocation": "Underdark atlas site 22",
+      "unlock": {
+        "condition": "DM-approved completion of The Carpenter's Workshop",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_23",
+      "atlasNumber": 23,
+      "deity": "Tempus",
+      "wonderlandRole": "Lion",
+      "spell": {
+        "name": "Lion's Battle Standard",
+        "level": 4,
+        "school": "Enchantment",
+        "effect": "Up to three allies gain +1d4 on first weapon attack roll each round for up to 1 minute.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_23",
+      "questLocation": "Underdark atlas site 23",
+      "unlock": {
+        "condition": "DM-approved completion of The Lion's War",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_24",
+      "atlasNumber": 24,
+      "deity": "Lathander",
+      "wonderlandRole": "Unicorn",
+      "spell": {
+        "name": "Unicorn's First Dawn",
+        "level": 5,
+        "school": "Evocation",
+        "effect": "Undead within 10 feet of point take 5d8 radiant damage, Constitution save half; allies gain 1d8 temporary HP.",
+        "castingTime": "Action",
+        "duration": "Instantaneous",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_24",
+      "questLocation": "Underdark atlas site 24",
+      "unlock": {
+        "condition": "DM-approved completion of The Unicorn's Dawn",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    },
+    {
+      "id": "scroll_wonderland_25",
+      "atlasNumber": 25,
+      "deity": "Silvanus",
+      "wonderlandRole": "Tiger-lily",
+      "spell": {
+        "name": "Tiger-lily's Rooted Court",
+        "level": 4,
+        "school": "Transmutation",
+        "effect": "Roots restrain creatures in 20-foot square on failed Strength save, repeat each turn; requires soil or fungi.",
+        "castingTime": "Action",
+        "duration": "Concentration, up to 1 minute",
+        "components": "V, S, M (inscribed scroll sigil)",
+        "saveDC": "DM_SET_BY_SCROLL_TIER",
+        "upcast": "Not applicable"
+      },
+      "questId": "wonderland_throne_25",
+      "questLocation": "Underdark atlas site 25",
+      "unlock": {
+        "condition": "DM-approved completion of The Garden's Judgment",
+        "era": "PENDING_CHRONOLOGY_VERIFICATION",
+        "awarded": false
+      },
+      "status": "MOONVEIL_HOMEBREW_DRAFT",
+      "spellScrollRules": "DM_SELECT_2014_OR_2024_SCROLL_RULES; NORMAL_CASTING_TIME_AND_CONSUMPTION; NO_FREE_ACTION",
+      "endgameTreasury": false
+    }
+  ]
+}

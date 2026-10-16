@@ -1,0 +1,1022 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "wave": 3,
+  "chainId": "mv_chain_07",
+  "title": "The Choir of Broken Stars",
+  "continuesFrom": "mv_side_170",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_07_member_1",
+      "name": "Aster Vale Star",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_07_member_2",
+      "name": "Brin Copper Star",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_07_member_3",
+      "name": "Celia Moss Star",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_07_member_4",
+      "name": "Dorian Quill Star",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_07_member_5",
+      "name": "Edda Stone Star",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_07_member_6",
+      "name": "Fenn Ash Star",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_07_member_7",
+      "name": "Galia Reed Star",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_07_member_8",
+      "name": "Hale Meridian Star",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_07_member_9",
+      "name": "Iris Thorn Star",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_07_member_10",
+      "name": "Joren Star Star",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_261",
+      "number": 261,
+      "title": "The Reopened Passage: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 11,
+      "previousQuestId": "mv_side_161",
+      "earliestQuestId": "mv_side_007",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Fara",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_4",
+        "chain_07_member_8"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 1,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 007 and 161",
+        "Search the reopened tunnel for a witness who disappeared in the first expedition",
+        "Investigate the complication: A rescue site conceals a community that refuses relocation",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "A rescue site conceals a community that refuses relocation",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Underdark ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_262"
+    },
+    {
+      "id": "mv_side_262",
+      "number": 262,
+      "title": "The Ledger of Consequences: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 12,
+      "previousQuestId": "mv_side_162",
+      "earliestQuestId": "mv_side_017",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Dorian Quill Star",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_2",
+        "chain_07_member_5",
+        "chain_07_member_9"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 4,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 017 and 162",
+        "Interview merchants and refugees about a newly discovered ledger",
+        "Investigate the complication: A former antagonist has begun making restitution",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "A former antagonist has begun making restitution",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Sword Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_263"
+    },
+    {
+      "id": "mv_side_263",
+      "number": 263,
+      "title": "The Council's Second Witness: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 13,
+      "previousQuestId": "mv_side_163",
+      "earliestQuestId": "mv_side_027",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Edda Stone Star",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_3",
+        "chain_07_member_6",
+        "chain_07_member_10"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 7,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 027 and 163",
+        "Compare testimony against the council's archived evidence",
+        "Investigate the complication: A forged seal was used to protect a frightened hatchling",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "A forged seal was used to protect a frightened hatchling",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Dragon Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_264"
+    },
+    {
+      "id": "mv_side_264",
+      "number": 264,
+      "title": "A Memory in the Mist: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 14,
+      "previousQuestId": "mv_side_164",
+      "earliestQuestId": "mv_side_037",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Fenn Ash Star",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_4",
+        "chain_07_member_7",
+        "chain_07_member_1"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 10,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 037 and 164",
+        "Recover a missing record from a village trapped in the mists",
+        "Investigate the complication: The record documents a visit that has not happened yet",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "The record documents a visit that has not happened yet",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Barovia ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_265"
+    },
+    {
+      "id": "mv_side_265",
+      "number": 265,
+      "title": "The Contract's Missing Clause: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 15,
+      "previousQuestId": "mv_side_165",
+      "earliestQuestId": "mv_side_047",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Galia Reed Star",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_5",
+        "chain_07_member_8",
+        "chain_07_member_2"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 13,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 047 and 165",
+        "Challenge a contract built upon an earlier falsehood",
+        "Investigate the complication: The contract holder is trying to free a dependent",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "The contract holder is trying to free a dependent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Avernus ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_266"
+    },
+    {
+      "id": "mv_side_266",
+      "number": 266,
+      "title": "The Story Nobody Told: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 16,
+      "previousQuestId": "mv_side_166",
+      "earliestQuestId": "mv_side_057",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Hale Meridian Star",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_6",
+        "chain_07_member_9",
+        "chain_07_member_3"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 16,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 057 and 166",
+        "Negotiate access to a story that was removed from public memory",
+        "Investigate the complication: The storyteller cannot distinguish two traversals",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "The storyteller cannot distinguish two traversals",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Feywild ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_267"
+    },
+    {
+      "id": "mv_side_267",
+      "number": 267,
+      "title": "The Ship of Returning Voices: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 17,
+      "previousQuestId": "mv_side_167",
+      "earliestQuestId": "mv_side_067",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Iris Thorn Star",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_7",
+        "chain_07_member_10",
+        "chain_07_member_4"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 19,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 067 and 167",
+        "Locate a ship carrying evidence from an abandoned expedition",
+        "Investigate the complication: The ship's crew believes the quest was completed already",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "The ship's crew believes the quest was completed already",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Wildspace ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_268"
+    },
+    {
+      "id": "mv_side_268",
+      "number": 268,
+      "title": "The Door of Confession: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 18,
+      "previousQuestId": "mv_side_168",
+      "earliestQuestId": "mv_side_077",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Joren Star Star",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_8",
+        "chain_07_member_1",
+        "chain_07_member_5"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 22,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 077 and 168",
+        "Trace the evidence through a gate registry and witness exchange",
+        "Investigate the complication: The correct portal opens only for a truthful confession",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "The correct portal opens only for a truthful confession",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Sigil ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_269"
+    },
+    {
+      "id": "mv_side_269",
+      "number": 269,
+      "title": "The Witness in Shadow: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 19,
+      "previousQuestId": "mv_side_169",
+      "earliestQuestId": "mv_side_087",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Aster Vale Star",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_9",
+        "chain_07_member_2",
+        "chain_07_member_6"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 25,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 087 and 169",
+        "Restore a damaged memory without rewriting anyone's identity",
+        "Investigate the complication: The forgotten witness is protecting an apparent villain",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "The forgotten witness is protecting an apparent villain",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Shadowfell ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_270"
+    },
+    {
+      "id": "mv_side_270",
+      "number": 270,
+      "title": "The Legacy Beyond the Loop: Crystal",
+      "chainId": "mv_chain_07",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 20,
+      "previousQuestId": "mv_side_170",
+      "earliestQuestId": "mv_side_097",
+      "previousArcFinale": "mv_side_170",
+      "questGiver": "Brin Copper Star",
+      "recurringCastIds": [
+        "chain_07_member_1",
+        "chain_07_member_2",
+        "chain_07_member_3",
+        "chain_07_member_4",
+        "chain_07_member_5",
+        "chain_07_member_6",
+        "chain_07_member_7",
+        "chain_07_member_8",
+        "chain_07_member_9",
+        "chain_07_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_07_member_10",
+        "chain_07_member_3",
+        "chain_07_member_7"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 28,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier crystal investigations, the crystal choir transmits a plea across the void.",
+      "objectives": [
+        "Review verified evidence from quests 097 and 170",
+        "Present the chain's evidence and decide what survives the next return",
+        "Investigate the complication: the voice is an imprisoned witness, not an enemy",
+        "Record the consequences and secure a lead for the next crystal quest"
+      ],
+      "complication": "the voice is an imprisoned witness, not an enemy",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate crystal clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Crystal testimony fragment",
+        "Multiversal Convergence ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": null
+    }
+  ]
+}

@@ -1,0 +1,3889 @@
+{
+  "schema": "moonveil.major-powers-dialogue.v1",
+  "status": "DRAFT_LORE_REVIEW",
+  "policy": [
+    "45 curated narrative priorities, not official ranked strongest list.",
+    "Lady of Pain is not a deity.",
+    "Mystra incarnation and the Weave must be dated.",
+    "Alignment is campaign moral role, not a permanent absolute alignment claim.",
+    "Dialogue is original and requires source/personality review before a direct divine encounter.",
+    "No rewards or state changes from reading dialogue."
+  ],
+  "counts": {
+    "BLUE_GOOD": 15,
+    "GREEN_NEUTRAL": 15,
+    "RED_EVIL": 15
+  },
+  "profiles": [
+    {
+      "id": "mv_power_001",
+      "name": "Eilistraee",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Freedom, moonlit dance, and redemption",
+      "setting": "Underdark",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": true,
+      "relationship": "RECURRING_ORIGIN_POWER",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Eilistraee",
+            "text": "You stand at a threshold, Alice Z'ress. Freedom shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Eilistraee",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Eilistraee",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Eilistraee",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Eilistraee",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Eilistraee",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Eilistraee",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Eilistraee",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_002",
+      "name": "Mystra (incarnation gated)",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Weave, magic, and responsible spellcraft",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": true,
+      "relationship": "RECURRING_ORIGIN_POWER",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Mystra (incarnation gated)",
+            "text": "You stand at a threshold, Alice Z'ress. Weave shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Mystra (incarnation gated)",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Mystra (incarnation gated)",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Mystra (incarnation gated)",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Mystra (incarnation gated)",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Mystra (incarnation gated)",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Mystra (incarnation gated)",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Mystra (incarnation gated)",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_003",
+      "name": "Selune",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Moonlight, navigation, and hope",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Selune",
+            "text": "You stand at a threshold, Alice Z'ress. Moonlight shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Selune",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Selune",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Selune",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Selune",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Selune",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Selune",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Selune",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_004",
+      "name": "Bahamut",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Justice, honor, and metallic dragons",
+      "setting": "Multiverse",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Bahamut",
+            "text": "You stand at a threshold, Alice Z'ress. Justice shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Bahamut",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Bahamut",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Bahamut",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Bahamut",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Bahamut",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Bahamut",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Bahamut",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_005",
+      "name": "Lathander",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Dawn, renewal, and beginnings",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Lathander",
+            "text": "You stand at a threshold, Alice Z'ress. Dawn shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Lathander",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Lathander",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Lathander",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Lathander",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Lathander",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Lathander",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Lathander",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_006",
+      "name": "Sune",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Love, beauty, and compassion",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Sune",
+            "text": "You stand at a threshold, Alice Z'ress. Love shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Sune",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Sune",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Sune",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Sune",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Sune",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Sune",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Sune",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_007",
+      "name": "Tyr",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Justice and lawful judgment",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Tyr",
+            "text": "You stand at a threshold, Alice Z'ress. Justice and lawful judgment shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Tyr",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Tyr",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Tyr",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Tyr",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Tyr",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Tyr",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Tyr",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_008",
+      "name": "Torm",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Duty, courage, and loyalty",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Torm",
+            "text": "You stand at a threshold, Alice Z'ress. Duty shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Torm",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Torm",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Torm",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Torm",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Torm",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Torm",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Torm",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_009",
+      "name": "Ilmater",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Endurance, mercy, and suffering",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Ilmater",
+            "text": "You stand at a threshold, Alice Z'ress. Endurance shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Ilmater",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Ilmater",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Ilmater",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Ilmater",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Ilmater",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Ilmater",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Ilmater",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_010",
+      "name": "Corellon",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Elven artistry and creation",
+      "setting": "Multiverse",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Corellon",
+            "text": "You stand at a threshold, Alice Z'ress. Elven artistry and creation shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Corellon",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Corellon",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Corellon",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Corellon",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Corellon",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Corellon",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Corellon",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_011",
+      "name": "Sehanine Moonbow",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Dreams, moonlight, and passage",
+      "setting": "Multiverse",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Sehanine Moonbow",
+            "text": "You stand at a threshold, Alice Z'ress. Dreams shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Sehanine Moonbow",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Sehanine Moonbow",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Sehanine Moonbow",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Sehanine Moonbow",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Sehanine Moonbow",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Sehanine Moonbow",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Sehanine Moonbow",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_012",
+      "name": "Moradin",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Craft, endurance, and dwarven kinship",
+      "setting": "Multiverse",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Moradin",
+            "text": "You stand at a threshold, Alice Z'ress. Craft shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Moradin",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Moradin",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Moradin",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Moradin",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Moradin",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Moradin",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Moradin",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_013",
+      "name": "Chauntea",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Harvest, nurture, and growth",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Chauntea",
+            "text": "You stand at a threshold, Alice Z'ress. Harvest shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Chauntea",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Chauntea",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Chauntea",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Chauntea",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Chauntea",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Chauntea",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Chauntea",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_014",
+      "name": "Mielikki",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Forests, rangers, and woodland care",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Mielikki",
+            "text": "You stand at a threshold, Alice Z'ress. Forests shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Mielikki",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Mielikki",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Mielikki",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Mielikki",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Mielikki",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Mielikki",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Mielikki",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_015",
+      "name": "Helm",
+      "moralRole": "BLUE_GOOD",
+      "portfolio": "Guardianship and vigilance",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Helm",
+            "text": "You stand at a threshold, Alice Z'ress. Guardianship and vigilance shapes what may follow, but your choices remain your own.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Helm",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Helm",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Helm",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Helm",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Helm",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Helm",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "compassionate but demanding"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Helm",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "compassionate but demanding"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_016",
+      "name": "The Raven Queen",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Memory, fate, and death",
+      "setting": "Shadowfell",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "The Raven Queen",
+            "text": "You stand at a threshold, Alice Z'ress. Memory shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "The Raven Queen",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "The Raven Queen",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "The Raven Queen",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "The Raven Queen",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "The Raven Queen",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "The Raven Queen",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "The Raven Queen",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_017",
+      "name": "Oghma",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Knowledge, invention, and discovery",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Oghma",
+            "text": "You stand at a threshold, Alice Z'ress. Knowledge shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Oghma",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Oghma",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Oghma",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Oghma",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Oghma",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Oghma",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Oghma",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_018",
+      "name": "Gond",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Craft, technology, and ingenuity",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Gond",
+            "text": "You stand at a threshold, Alice Z'ress. Craft shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Gond",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Gond",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Gond",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Gond",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Gond",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Gond",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Gond",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_019",
+      "name": "Kelemvor",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Judgment of the dead",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Kelemvor",
+            "text": "You stand at a threshold, Alice Z'ress. Judgment of the dead shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Kelemvor",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Kelemvor",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Kelemvor",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Kelemvor",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Kelemvor",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Kelemvor",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Kelemvor",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_020",
+      "name": "Silvanus",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Untamed nature and balance",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Silvanus",
+            "text": "You stand at a threshold, Alice Z'ress. Untamed nature and balance shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Silvanus",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Silvanus",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Silvanus",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Silvanus",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Silvanus",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Silvanus",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Silvanus",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_021",
+      "name": "Tempus",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "War, valor, and battle",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Tempus",
+            "text": "You stand at a threshold, Alice Z'ress. War shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Tempus",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Tempus",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Tempus",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Tempus",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Tempus",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Tempus",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Tempus",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_022",
+      "name": "Waukeen",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Trade, wealth, and exchange",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Waukeen",
+            "text": "You stand at a threshold, Alice Z'ress. Trade shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Waukeen",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Waukeen",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Waukeen",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Waukeen",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Waukeen",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Waukeen",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Waukeen",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_023",
+      "name": "Azuth",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Wizards, spellcraft, and discipline",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Azuth",
+            "text": "You stand at a threshold, Alice Z'ress. Wizards shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Azuth",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Azuth",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Azuth",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Azuth",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Azuth",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Azuth",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Azuth",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_024",
+      "name": "Deneir",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Writing, glyphs, and records",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Deneir",
+            "text": "You stand at a threshold, Alice Z'ress. Writing shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Deneir",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Deneir",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Deneir",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Deneir",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Deneir",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Deneir",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Deneir",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_025",
+      "name": "Savras",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Divination and fate",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Savras",
+            "text": "You stand at a threshold, Alice Z'ress. Divination and fate shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Savras",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Savras",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Savras",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Savras",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Savras",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Savras",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Savras",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_026",
+      "name": "Jergal",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Records of death and duty",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Jergal",
+            "text": "You stand at a threshold, Alice Z'ress. Records of death and duty shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Jergal",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Jergal",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Jergal",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Jergal",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Jergal",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Jergal",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Jergal",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_027",
+      "name": "Istus",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Destiny and the tapestry of fate",
+      "setting": "Greyhawk",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Istus",
+            "text": "You stand at a threshold, Alice Z'ress. Destiny and the tapestry of fate shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Istus",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Istus",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Istus",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Istus",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Istus",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Istus",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Istus",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_028",
+      "name": "Boccob",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Arcane knowledge and magic",
+      "setting": "Greyhawk",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Boccob",
+            "text": "You stand at a threshold, Alice Z'ress. Arcane knowledge and magic shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Boccob",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Boccob",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Boccob",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Boccob",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Boccob",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Boccob",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Boccob",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_029",
+      "name": "Wee Jas",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Magic, death, and law",
+      "setting": "Greyhawk",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Wee Jas",
+            "text": "You stand at a threshold, Alice Z'ress. Magic shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Wee Jas",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Wee Jas",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Wee Jas",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Wee Jas",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Wee Jas",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Wee Jas",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Wee Jas",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_030",
+      "name": "Lady of Pain",
+      "moralRole": "GREEN_NEUTRAL",
+      "portfolio": "Sigil's enigmatic sovereign; not a deity",
+      "setting": "Sigil",
+      "roleType": "NONDEITY_COSMIC_POWER",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Lady of Pain",
+            "text": "You stand at a threshold, Alice Z'ress. Sigil's enigmatic sovereign; not a deity shapes what may follow, but your choices remain your own.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Lady of Pain",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Lady of Pain",
+            "text": "You spared someone when another path was easier. What will you do with their trust?",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Lady of Pain",
+            "text": "Disagreement is not betrayal. Explain the principle you intend to defend.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Lady of Pain",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Lady of Pain",
+            "text": "A blessing does not replace the work you must still do.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Lady of Pain",
+            "text": "You cannot undo every harm. You can decide how to answer for this one.",
+            "tone": "measured and conditional"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Lady of Pain",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "measured and conditional"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_031",
+      "name": "Ghaunadaur",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Oozes, hunger, and the Elder Eye",
+      "setting": "Underdark",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": true,
+      "relationship": "RECURRING_ORIGIN_POWER",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Ghaunadaur",
+            "text": "You stand at a threshold, Alice Z'ress. Oozes shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Ghaunadaur",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Ghaunadaur",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Ghaunadaur",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Ghaunadaur",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Ghaunadaur",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Ghaunadaur",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Ghaunadaur",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_032",
+      "name": "Lolth",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Spider Queen, tyranny, and drow intrigue",
+      "setting": "Underdark",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Lolth",
+            "text": "You stand at a threshold, Alice Z'ress. Spider queen shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Lolth",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Lolth",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Lolth",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Lolth",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Lolth",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Lolth",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Lolth",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_033",
+      "name": "Shar",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Darkness, loss, and secrecy",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Shar",
+            "text": "You stand at a threshold, Alice Z'ress. Darkness shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Shar",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Shar",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Shar",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Shar",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Shar",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Shar",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Shar",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_034",
+      "name": "Bane",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Tyranny, domination, and fear",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Bane",
+            "text": "You stand at a threshold, Alice Z'ress. Tyranny shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Bane",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Bane",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Bane",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Bane",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Bane",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Bane",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Bane",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_035",
+      "name": "Bhaal",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Murder and bloodshed",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Bhaal",
+            "text": "You stand at a threshold, Alice Z'ress. Murder and bloodshed shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Bhaal",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Bhaal",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Bhaal",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Bhaal",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Bhaal",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Bhaal",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Bhaal",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_036",
+      "name": "Myrkul",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Death and necromantic terror",
+      "setting": "Forgotten Realms",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Myrkul",
+            "text": "You stand at a threshold, Alice Z'ress. Death and necromantic terror shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Myrkul",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Myrkul",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Myrkul",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Myrkul",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Myrkul",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Myrkul",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Myrkul",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_037",
+      "name": "Tiamat",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Chromatic dragons and avarice",
+      "setting": "Multiverse",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Tiamat",
+            "text": "You stand at a threshold, Alice Z'ress. Chromatic dragons and avarice shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Tiamat",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Tiamat",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Tiamat",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Tiamat",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Tiamat",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Tiamat",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Tiamat",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_038",
+      "name": "Asmodeus",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Contracts, hierarchy, and the Nine Hells",
+      "setting": "Nine Hells",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Asmodeus",
+            "text": "You stand at a threshold, Alice Z'ress. Contracts shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Asmodeus",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Asmodeus",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Asmodeus",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Asmodeus",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Asmodeus",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Asmodeus",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Asmodeus",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_039",
+      "name": "Orcus",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Undeath and abyssal dominion",
+      "setting": "Abyss",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Orcus",
+            "text": "You stand at a threshold, Alice Z'ress. Undeath and abyssal dominion shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Orcus",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Orcus",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Orcus",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Orcus",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Orcus",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Orcus",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Orcus",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_040",
+      "name": "Demogorgon",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Abyssal destruction and madness",
+      "setting": "Abyss",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Demogorgon",
+            "text": "You stand at a threshold, Alice Z'ress. Abyssal destruction and madness shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Demogorgon",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Demogorgon",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Demogorgon",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Demogorgon",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Demogorgon",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Demogorgon",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Demogorgon",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_041",
+      "name": "Graz'zt",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Temptation, manipulation, and ambition",
+      "setting": "Abyss",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Graz'zt",
+            "text": "You stand at a threshold, Alice Z'ress. Temptation shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Graz'zt",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Graz'zt",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Graz'zt",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Graz'zt",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Graz'zt",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Graz'zt",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Graz'zt",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_042",
+      "name": "Zuggtmoy",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Fungi, decay, and corruption",
+      "setting": "Abyss",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Zuggtmoy",
+            "text": "You stand at a threshold, Alice Z'ress. Fungi shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Zuggtmoy",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Zuggtmoy",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Zuggtmoy",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Zuggtmoy",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Zuggtmoy",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Zuggtmoy",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Zuggtmoy",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_043",
+      "name": "Baphomet",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Savage labyrinths and the hunt",
+      "setting": "Abyss",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Baphomet",
+            "text": "You stand at a threshold, Alice Z'ress. Savage labyrinths and the hunt shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Baphomet",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Baphomet",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Baphomet",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Baphomet",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Baphomet",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Baphomet",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Baphomet",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_044",
+      "name": "Vecna",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Forbidden secrets and undeath",
+      "setting": "Multiverse",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Vecna",
+            "text": "You stand at a threshold, Alice Z'ress. Forbidden secrets and undeath shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Vecna",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Vecna",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Vecna",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Vecna",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Vecna",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Vecna",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Vecna",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    },
+    {
+      "id": "mv_power_045",
+      "name": "Tharizdun",
+      "moralRole": "RED_EVIL",
+      "portfolio": "Imprisoned entropy and ruin",
+      "setting": "Greyhawk",
+      "roleType": "DEITY_OR_COSMIC_POWER_SOURCE_REVIEW",
+      "ranking": "NARRATIVE_PRIORITY_NOT_OFFICIAL_POWER_RANK",
+      "coreAliceRelationship": false,
+      "relationship": "RECURRING_CAMEO_CANDIDATE",
+      "chronology": {
+        "drStart": null,
+        "drEnd": null,
+        "eraId": "UNRESOLVED",
+        "plane": "UNVERIFIED",
+        "presence": "BLOCKED_UNTIL_DATE_LOCATION_AND_MANIFESTATION_VERIFIED"
+      },
+      "dialogue": {
+        "lines": [
+          {
+            "trigger": "FIRST_ENCOUNTER",
+            "speaker": "Tharizdun",
+            "text": "You stand at a threshold, Alice Z'ress. Imprisoned entropy and ruin shapes what may follow, but your choices remain your own.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "ASK_FOR_GUIDANCE",
+            "speaker": "Tharizdun",
+            "text": "Do not mistake a sign for an answer. Look at what is happening here, and ask who benefits if you act.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_COMPASSION",
+            "speaker": "Tharizdun",
+            "text": "Mercy is a costly habit. Tell me what it bought you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "AFTER_DEFIANCE",
+            "speaker": "Tharizdun",
+            "text": "You deny my terms. Interesting. I wonder how long conviction will sustain you.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "RETURN_VISIT",
+            "speaker": "Tharizdun",
+            "text": "You have returned. The place has changed, and so have you. Speak of what happened since our last encounter.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "REQUEST_BLESSING",
+            "speaker": "Tharizdun",
+            "text": "A boon is never free merely because its price is hidden.",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "QUEST_FAILURE",
+            "speaker": "Tharizdun",
+            "text": "A broken promise leaves a useful opening. Shall we discuss it?",
+            "tone": "tempting, intimidating, or manipulative"
+          },
+          {
+            "trigger": "HISTORICAL_PARADOX",
+            "speaker": "Tharizdun",
+            "text": "The name you know may not belong to this age. First establish which era and manifestation you have reached.",
+            "tone": "tempting, intimidating, or manipulative"
+          }
+        ],
+        "authorship": "ORIGINAL_MOONVEIL_NOT_PUBLISHED_QUOTE",
+        "directSpeech": "DM_AND_CANON_REVIEW_REQUIRED",
+        "manifestationDefault": "VISION_OMEN_EMISSARY_OR_RUMOR"
+      },
+      "interactionTriggers": [
+        "FIRST_ENCOUNTER",
+        "ASK_FOR_GUIDANCE",
+        "AFTER_COMPASSION",
+        "AFTER_DEFIANCE",
+        "RETURN_VISIT",
+        "REQUEST_BLESSING",
+        "QUEST_FAILURE",
+        "HISTORICAL_PARADOX"
+      ],
+      "questLinks": [],
+      "blessingStatus": "REFER_TO_SHRINE_CATALOG_IF_PRESENT",
+      "canonStatus": "CHARACTERIZATION_DRAFT_NOT_SOURCE_VERIFIED"
+    }
+  ]
+}

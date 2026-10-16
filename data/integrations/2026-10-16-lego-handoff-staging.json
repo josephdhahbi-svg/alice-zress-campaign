@@ -1,0 +1,177 @@
+{
+  "schema": "moonveil.external-lego-handoff.v1",
+  "status": "STAGED_NOT_LIVE",
+  "origin": "User-supplied Flutter and Express code, October 16 2026",
+  "characterImports": [
+    {
+      "id": "import_candidate_01",
+      "name": "Malakor the Ooze-Touched",
+      "sourceStatus": "USER_SUPPLIED_UNVERIFIED",
+      "deity": "Ghaunadaur",
+      "classLevels": "Warlock 12 / Wizard 4 (user-provided)",
+      "role": "Guardian of Neverlight Grove chasm (unverified)",
+      "canonClaim": "NOT_VERIFIED",
+      "fullSheetReceived": false,
+      "combatStats": null,
+      "sourceEdition": null,
+      "sourcePages": [],
+      "eraIds": [],
+      "drStart": null,
+      "drEnd": null,
+      "locationVerified": false,
+      "items": [],
+      "blessings": [],
+      "inventoryStatus": "NO_IMPORT",
+      "approval": "PENDING"
+    },
+    {
+      "id": "import_candidate_02",
+      "name": "Qilué Veladorn",
+      "sourceStatus": "PUBLISHED_CHARACTER_CHRONOLOGY_PENDING",
+      "deity": "Eilistraee",
+      "classLevels": null,
+      "role": "Historical Eilistraee-associated figure",
+      "canonClaim": "OFFICIAL_CHARACTER",
+      "fullSheetReceived": false,
+      "combatStats": null,
+      "sourceEdition": null,
+      "sourcePages": [],
+      "eraIds": [],
+      "drStart": null,
+      "drEnd": null,
+      "locationVerified": false,
+      "items": [],
+      "blessings": [],
+      "inventoryStatus": "NO_IMPORT",
+      "approval": "PENDING"
+    },
+    {
+      "id": "import_candidate_03",
+      "name": "Master Artificer Thorgar Ironbender",
+      "sourceStatus": "USER_SUPPLIED_UNVERIFIED",
+      "deity": "Gond",
+      "classLevels": null,
+      "role": "Artificer (unverified)",
+      "canonClaim": "NOT_VERIFIED",
+      "fullSheetReceived": false,
+      "combatStats": null,
+      "sourceEdition": null,
+      "sourcePages": [],
+      "eraIds": [],
+      "drStart": null,
+      "drEnd": null,
+      "locationVerified": false,
+      "items": [],
+      "blessings": [],
+      "inventoryStatus": "NO_IMPORT",
+      "approval": "PENDING"
+    },
+    {
+      "id": "import_candidate_04",
+      "name": "Lord Enver Gortash",
+      "sourceStatus": "PUBLISHED_CHARACTER_CHRONOLOGY_PENDING",
+      "deity": "Bane",
+      "classLevels": null,
+      "role": "Baldur's Gate 3 character",
+      "canonClaim": "OFFICIAL_CHARACTER",
+      "fullSheetReceived": false,
+      "combatStats": null,
+      "sourceEdition": null,
+      "sourcePages": [],
+      "eraIds": [],
+      "drStart": null,
+      "drEnd": null,
+      "locationVerified": false,
+      "items": [],
+      "blessings": [],
+      "inventoryStatus": "NO_IMPORT",
+      "approval": "PENDING"
+    }
+  ],
+  "telemetryFixtures": [
+    {
+      "agent_id": "bot_gond_01",
+      "agent_name": "Clockwork Shield Guardian Alpha",
+      "associated_deity": "Gond",
+      "current_grid_coordinate": "MD-04",
+      "behavior_state": "REPAIR",
+      "battery_or_mana": 100,
+      "sourceStatus": "USER_PROPOSED_HOMEBREW",
+      "locationStatus": "UNVERIFIED_GRID_LABEL",
+      "active": false,
+      "telemetryStatus": "STATIC_FIXTURE"
+    },
+    {
+      "agent_id": "bot_bane_01",
+      "agent_name": "Obsidian Executioner Construct",
+      "associated_deity": "Bane",
+      "current_grid_coordinate": "LD-08",
+      "behavior_state": "HUNT",
+      "battery_or_mana": 95,
+      "sourceStatus": "USER_PROPOSED_HOMEBREW",
+      "locationStatus": "UNVERIFIED_GRID_LABEL",
+      "active": false,
+      "telemetryStatus": "STATIC_FIXTURE"
+    },
+    {
+      "agent_id": "bot_ghaunadaur_01",
+      "agent_name": "Slime Ooze Sentient Crawler",
+      "associated_deity": "Ghaunadaur",
+      "current_grid_coordinate": "UD-01",
+      "behavior_state": "PATROL",
+      "battery_or_mana": 88,
+      "sourceStatus": "USER_PROPOSED_HOMEBREW",
+      "locationStatus": "UNVERIFIED_GRID_LABEL",
+      "active": false,
+      "telemetryStatus": "STATIC_FIXTURE"
+    }
+  ],
+  "proposedSectors": [
+    {
+      "id": "UD-01",
+      "name": "Neverlight Grove",
+      "layer": "Upperdark",
+      "deity": "Ghaunadaur",
+      "verified": false,
+      "doNotPublishAsCanon": true
+    },
+    {
+      "id": "MD-04",
+      "name": "Gracklstugh",
+      "layer": "Middledark",
+      "deity": "Gond",
+      "verified": false,
+      "doNotPublishAsCanon": true
+    },
+    {
+      "id": "LD-08",
+      "name": "The Abyss of Anauroch",
+      "layer": "Lowerdark",
+      "deity": "Bane",
+      "verified": false,
+      "doNotPublishAsCanon": true
+    }
+  ],
+  "requestedButNotSupplied": [
+    "Actual XLSX/JSON exported sheets for all four named characters",
+    "Nine-level-per-deity scroll set; current verified catalog contains 25 one-per-deity drafts",
+    "45 deity casting registry; currently separate 25 Wonderland pairings and 45 dialogue powers",
+    "Production SSE endpoint and real bot heartbeat source"
+  ],
+  "architectureCorrections": [
+    "Existing root package uses CommonJS and Express 5; do not switch to ESM blindly.",
+    "Existing root server enables SQLite WAL, authentication, migration and session checks.",
+    "Never seed all tables conditioned on only underdark_sectors count.",
+    "No public unauthenticated inject-module endpoint.",
+    "No web-only dart:html import for Android.",
+    "Never treat mock telemetry as live or generate server activity claims.",
+    "Use historical DR dates; October 2026 is not a canonical Forgotten Realms date.",
+    "No 5e stats invented for missing character sheets."
+  ],
+  "audit": {
+    "stage": "IMPORT_STAGING",
+    "readyForProduction": false,
+    "fullSheetsReceived": 0,
+    "telemetryVerified": false
+  }
+}

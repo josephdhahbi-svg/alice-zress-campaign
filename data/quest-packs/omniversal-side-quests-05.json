@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_5",
+  "setting": "Avernus",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_041",
+      "title": "The Ashwater Caravan",
+      "giver": "Rusk the planar driver",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 13,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Rusk the planar driver needs adventurers: deliver clean water to a refugee camp.",
+      "objectives": [
+        "Meet Rusk the planar driver and verify the request",
+        "Deliver clean water to a refugee camp",
+        "Investigate the complication: The route crosses a disputed contract line",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The route crosses a disputed contract line",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_042",
+      "title": "The Smith's Second Chance",
+      "giver": "Vela the infernal smith",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 13,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Vela the infernal smith needs adventurers: recover a stolen redemption token.",
+      "objectives": [
+        "Meet Vela the infernal smith and verify the request",
+        "Recover a stolen redemption token",
+        "Investigate the complication: Its thief wants freedom for a sibling",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its thief wants freedom for a sibling",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_043",
+      "title": "The Broken Chain",
+      "giver": "Asha the freed prisoner",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 13,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Asha the freed prisoner needs adventurers: locate missing liberation records.",
+      "objectives": [
+        "Meet Asha the freed prisoner and verify the request",
+        "Locate missing liberation records",
+        "Investigate the complication: The records are held as collateral",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The records are held as collateral",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_044",
+      "title": "The Ember Orchard",
+      "giver": "Dain the wandering gardener",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 13,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Dain the wandering gardener needs adventurers: protect rare seedlings.",
+      "objectives": [
+        "Meet Dain the wandering gardener and verify the request",
+        "Protect rare seedlings",
+        "Investigate the complication: A legion mistakes the orchard for a supply depot",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A legion mistakes the orchard for a supply depot",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_045",
+      "title": "The Infernal Receipt",
+      "giver": "Quin the accountant",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 14,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Quin the accountant needs adventurers: find an altered soul-contract receipt.",
+      "objectives": [
+        "Meet Quin the accountant and verify the request",
+        "Find an altered soul-contract receipt",
+        "Investigate the complication: The original contract contains a loophole",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The original contract contains a loophole",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_046",
+      "title": "The Horn at Midnight",
+      "giver": "Sera the watch captain",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 14,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Sera the watch captain needs adventurers: identify a phantom battle signal.",
+      "objectives": [
+        "Meet Sera the watch captain and verify the request",
+        "Identify a phantom battle signal",
+        "Investigate the complication: An old horn echoes across time",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "An old horn echoes across time",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_047",
+      "title": "The Bridge of Cinders",
+      "giver": "Rell the engineer",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 14,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Rell the engineer needs adventurers: repair a bridge for evacuees.",
+      "objectives": [
+        "Meet Rell the engineer and verify the request",
+        "Repair a bridge for evacuees",
+        "Investigate the complication: Its keystone is a bound elemental",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its keystone is a bound elemental",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_048",
+      "title": "The Forgotten Witness",
+      "giver": "Mave the advocate",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 15,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Mave the advocate needs adventurers: bring a witness to a redemption hearing.",
+      "objectives": [
+        "Meet Mave the advocate and verify the request",
+        "Bring a witness to a redemption hearing",
+        "Investigate the complication: The witness fears being condemned",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The witness fears being condemned",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_049",
+      "title": "The Map of Safe Fires",
+      "giver": "Orin the scout",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 15,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Orin the scout needs adventurers: chart shelters across the wastes.",
+      "objectives": [
+        "Meet Orin the scout and verify the request",
+        "Chart shelters across the wastes",
+        "Investigate the complication: One shelter is bait for raiders",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "One shelter is bait for raiders",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_050",
+      "title": "The Last Mercy Bell",
+      "giver": "Halla the healer",
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 15,
+      "trilogy": 5,
+      "levelRange": [
+        15,
+        20
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Halla the healer needs adventurers: restore a bell that marks medical neutrality.",
+      "objectives": [
+        "Meet Halla the healer and verify the request",
+        "Restore a bell that marks medical neutrality",
+        "Investigate the complication: A rival faction wants it silenced",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A rival faction wants it silenced",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}

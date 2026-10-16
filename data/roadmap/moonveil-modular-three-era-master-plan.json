@@ -1,0 +1,110 @@
+{
+  "schema": "moonveil.modular-roadmap.v1",
+  "status": "PLANNING_DRAFT",
+  "principle": "All worldbuilding elements are removable, editable, versioned Lego modules, not irrevocable canon.",
+  "eras": [
+    {
+      "id": "era_1",
+      "label": "First Mystery",
+      "chronology": "Mystryl era, pre-Karsus boundary -339 DR; verify finer windows",
+      "character": "CHARACTER_TO_ASSIGN"
+    },
+    {
+      "id": "era_2",
+      "label": "Second Mystery",
+      "chronology": "Mystra era, -339 to 1358 DR, with historical exceptions",
+      "character": "CHARACTER_TO_ASSIGN"
+    },
+    {
+      "id": "era_3",
+      "label": "Third Mystery",
+      "chronology": "Midnight/Mystra era, 1358 DR onward, including Spellplague and Second Sundering changes",
+      "character": "CHARACTER_TO_ASSIGN",
+      "note": "Present-day in-world DR date must be selected; do not equate with real-world 2026"
+    }
+  ],
+  "bookCount": 30,
+  "characterCount": 3,
+  "characterAssignment": "PENDING_USER_CONFIRMATION",
+  "timelineModel": "Each of 30 books has three era-context layers; this does not automatically imply 90 separate published books",
+  "sevenTraversalCompatibility": "Keep existing 7 traversals / 3-3-1 structure as independent replay dimension",
+  "modules": [
+    "source_publication",
+    "zone",
+    "region",
+    "road",
+    "map",
+    "quest",
+    "character",
+    "deity",
+    "faction",
+    "item",
+    "spell",
+    "economy",
+    "gold_ledger",
+    "trade_route",
+    "encounter",
+    "dialogue",
+    "event"
+  ],
+  "moduleRecordSchema": {
+    "id": "unique_slug",
+    "type": "module_type",
+    "version": 1,
+    "status": "DRAFT | PLAYTEST | APPROVED | ARCHIVED | DEPRECATED",
+    "sourceRefs": [],
+    "eraIds": [],
+    "bookIds": [],
+    "regionIds": [],
+    "mapCoordinates": null,
+    "chronology": {
+      "startDR": null,
+      "endDR": null,
+      "incarnationCheck": "PENDING"
+    },
+    "links": [],
+    "dependencies": [],
+    "balanceNotes": [],
+    "playtestNotes": [],
+    "replacedBy": null,
+    "canonStatus": "OFFICIAL_REFERENCE | HOMEBREW | ALTERNATE_HISTORY",
+    "approval": "DM_REQUIRED"
+  },
+  "economy": {
+    "currency": "gp",
+    "goldStandard": "D&D gold piece; era and region exchange rates unresolved",
+    "roadRecord": {
+      "fromZone": "zone_id",
+      "toZone": "zone_id",
+      "distanceMiles": null,
+      "travelDays": null,
+      "tollsGP": null,
+      "dangerRating": null,
+      "eraAvailability": []
+    },
+    "marketRecord": {
+      "region": "region_id",
+      "era": "era_id",
+      "itemId": "item_id",
+      "priceGP": null,
+      "supply": null,
+      "demand": null,
+      "source": "PENDING"
+    }
+  },
+  "workflows": [
+    "Catalog historical publications without conflating publication date and in-world date",
+    "Map canonical zones and routes, mark homebrew overlays separately",
+    "Attach quests to locations, time windows, prerequisites and faction consequences",
+    "Assign equipment and spell rewards as locked until evidence and DM approval",
+    "Playtest three character journeys through each era's mapped content",
+    "Revise versions, archive deprecated modules, preserve quest history"
+  ],
+  "safeguards": [
+    "No deletion of canonical history on module archive",
+    "No automatic character item grants or gold transactions",
+    "No invented official geographic distances, routes or prices",
+    "No cross-era NPC appearance without existence and location verification",
+    "No claim of live automation or persistent game integration without tests"
+  ]
+}

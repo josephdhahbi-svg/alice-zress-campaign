@@ -1,0 +1,320 @@
+# Moonveil continuous execution handoff
+Repository: josephdhahbi-svg/alice-zress-campaign
+Branch: feature/verified-automation-phase-a
+Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
+
+## Operating contract
+1. Read latest GitHub branch and checklist; do not trust stale counts.
+2. Choose the highest-value unblocked tasks and implement end-to-end. Prefer tests and secure integration over more planning.
+3. Fetch existing files before editing. Preserve signed sessions, actor ownership, campaign events, SQLite WAL and migrations.
+4. Run tests in an actual Node environment; record command, output, commit and failures. Never claim a test passed merely because a test file exists.
+5. Update checklist only for evidence-backed deliverables. If tool access or runtime is blocked, report it without inventing success.
+6. Keep Alice's Level 1 state separate from narrated simulation. No unearned items, buffs or levels.
+7. Never conflate Mistral, Mystryl, Mystra or candidate v46 artifacts. Preserve 20 planned grand artifacts separate from 111-relic goal.
+8. Follow eye-comfort UI: navy/violet surfaces, BLUE heroes, RED villains, GREEN neutral, PURPLE magic, GOLD artifacts, CYAN maps. Four story panels plus five choices (Lawful Good, Neutral Good, Chaotic Good, Utility, Action).
+9. At every session end give verified complete / in progress / remaining, changed files, commits, tests, blockers, next steps and a copyable handoff.
+10. When the 100 tasks are genuinely complete, create a new prioritized backlog based on verified gaps. Do not invent extra work to inflate completion.
+11. No background execution claim: continue when invoked, or use a real supported scheduler if requested.
+
+## Immediate next execution batch
+- Run migration-v3.test.js and quest-core.test.js in Node >=20 with better-sqlite3 installed; fix failures.
+- Review existing server auth and campaign event API; implement authenticated quest service with character ownership, authoritative verified objective evidence, atomic reward transaction and idempotency.
+- Add API integration tests for forbidden access, missing objectives, duplicates, restart persistence, cross-campaign isolation and concurrency.
+- Run npm test and CI, then mark T043/T046/T023/T028/T030/T091/T092 only if their acceptance conditions are fully met.
+- Keep unverified tasks open.
+
+## Existing evidence
+- v46 review commit: 164dc07022e5ffe2abd6598111fc0e4123c4a802
+- Candidate quest core: 7311e4983f42a5d0b3f1b29dc65c561bce851350
+- Candidate unit tests: c8928f3e8da03cef14153f9febdea200a77677e4
+- Migration v3: 628aabe21a7df09e16d5b227d484d803fef20f8d
+- Migration test: 182e71f34926788772801acf1e390ead61382c40
+- Earlier assistant reported local four tests passing, but this session has not independently reproduced them. Verify before counting T091 if strict audit is required.
+
+## Session update — 2026-10-16, machine-readable canon
+- New `config/alice-canon-registry.json` committed at `307eba5b43109cea07d0026b5dd3dfbda17a82b5`.
+- New `backend/alice-canon-registry.test.js` committed at `ae117287e83891aa5761a5a1e716af164907a51e`, then corrected config import at `8352feb49a0869ad39d6501c5e73cf32a74e379e`.
+- First placement under `data/` caused **Validate campaign records** GitHub Actions run 38918715348 to fail at JSON record metadata validation: the validator rejects unregistered JSON shapes. Moved registry to `config/` and deleted bad data copy at `4a0de2a101ba3ac00cfae23db05a1a035e995e71`.
+- No confirmed passing CI result for the corrected HEAD yet. **Do not mark new automated tests verified.** Run `node --test backend/alice-canon-registry.test.js` and `npm test` in CI or a Node environment with dependencies.
+- Task counts stay at the prior **5/100 reported** pending evidence audit; the new registry and tests are committed, not yet independently validated.
+- Next: verify CI on corrected commit; add canon regression tests to existing validation workflow; run migration tests and secure quest ownership/rewards.
+
+## Incoming Living World v46 LEGO — 2026-10-16
+- Source monolith and autonomous loop were supplied by user. **Do not paste over server.js**: its master-key fallback, query-string key, memory-only pseudo-WAL, unauthenticated actor ownership, unverified quest rewards and fixed +1 DR/year per hourly pulse are unsafe/inconsistent.
+- Implemented **opt-in** `backend/living-world-pulse.js` (commit `24988cca90cb6d035326a168dff6f016101086bb`): campaign-scoped SQLite factions, territories, pulse ledger; DM membership validation, explicit DR date, transactional idempotent territory transitions, pre-validation, no implicit cron.
+- Added `backend/living-world-pulse.test.js` (commit `30c97e76089e21edc34768b0bf57a1d63b21a76b`): tests for DM-only, cross-campaign isolation, duplicates, invalid faction and rollback.
+- **Pending:** GitHub Actions execution of new tests; safe API route wiring with signed actor sessions; scheduler design with single-worker lock and explicit campaign policy. Do not mark T081–T090 complete without CI and task-specific acceptance evidence.
+- The user-proposed Python while-loop was **not installed or launched**. If implementing it, require bounded iterations/cost, sandboxed allowlisted commands, explicit approvals for destructive actions, persistent resumability and proof-based completion.
+
+## 2026-10-16 — Signed Living World API integration
+- Previous Living World CI runs **PASSED**: Omniversal verification `38919397721`; Validate campaign records `38919397158`.
+- Implemented `POST /api/campaigns/:campaignId/world/pulses` and `GET /api/campaigns/:campaignId/world/ledger` in `server.js`, commit `206d88ce85fd74b4acba8735d1db9fc996cc75c0`. Requires signed actor session; POST requires campaign DM role; GET requires membership. Admin shared token intentionally rejected. Explicit DR date, no implicit cron.
+- Added `backend/living-world-api.integration.test.js`, commit `5faad09ada9b6f967ca6e4fa6231b8b713841cbf`. Covers admin rejection, player and outsider denial, spoofed actor header, invalid faction, idempotent duplicate, audit ledger, invalid query and cross-campaign isolation.
+- **Awaiting CI**: runs `38919615246` (Omniversal) and `38919615249` (Validate) were queued at last check. Fix failures before claiming integration complete.
+- World factions/territories are intentionally not provisioned by API yet; seed through trusted campaign setup. No auto-advancing DR and no cron activated.
+- Next: validate CI; add restart persistence and transactional quest ownership and rewards. Update master charter only for matching acceptance evidence.
+
+## 2026-10-16 — Combat Engine v1 implementation
+- Added `backend/combat-engine.js`, commit `169974456b14a7893068dd8f13088118935349e1`: campaign-scoped SQLite encounter/combatant/action tables, DM role validation, initiative ordering, HP bounds, healing/damage, condition changes, round/turn advance, encounter ending, transactional idempotent actions. No automatic rewards, spells or player-controlled attacks.
+- Added `backend/combat-engine.test.js`, commit `03abd19c853c4a05e741401f66aa3fdfc277ab82`: unit tests for initiative, HP bounds, conditions, idempotency, DM authorization and rollback.
+- Integrated three signed-actor API routes into `server.js`, commit `42b08e62514b85647d4b2384e1e47813afb393ad`: DM-only encounter creation/actions, campaign member read-only state.
+- Added `backend/combat-api.integration.test.js`, commit `1d31db1e6d1d4aa4c3abd620a9f63a0896a16d2f`: API tests for DM authorization, player/outsider denial, duplicate actions and cross-campaign isolation.
+- CI for `42b08e6` passed: Validate run `38920038700`, Omniversal run `38920038661`. **New integration test was committed afterward**; CI runs `38920078593` and `38920078591` must pass before claiming full batch verification.
+- Still needed: verified full-batch CI, file-backed restart test, concurrent action test, server-side dice/attack roll rules, spell slots, turn permission policy, event-journal integration and quest reward transactions.
+- Do not mark T074 complete: full resource/condition coverage is not yet present. Existing 9/100 count unchanged pending task acceptance review.
+
+## 2026-10-16 — Combat durability and attack rules batch
+- Added `backend/combat-persistence.integration.test.js` at commit `845bec8d55d5cdd17ced21c2065fafd7694071dd`: file-backed WAL database, two independent connections, replay idempotency, conflict rejection, restart and recovered HP state.
+- Added pure `backend/combat-attack-rules.js` at `76a06b446f293b4fa698529597f0ff0c7504fe78` and `backend/combat-attack-rules.test.js` at `6ab257064dc84ae4d63670a7487dec5a4b3221f5`: validates bounded inputs, natural 1 miss, natural 20 hit/critical flag, AC comparisons and damage floor.
+- **IMPORTANT:** attack resolver is NOT yet wired to authenticated API or server-generated dice; it accepts a supplied rawRoll for pure deterministic unit testing. Critical damage dice doubling is not implemented. No combat or inventory state was changed for Alice.
+- **CI evidence pending for these commits.** Do not mark T074/T093 verified until passing CI and full acceptance review. Prior verified baseline remains 10/100.
+- Next: verify GitHub Actions, fix failures, connect attack resolver to DM-authorized combat transaction using server-generated cryptographic RNG, enforce per-turn action economy and spell slots, then return to secure quest ownership/objective/reward transaction tasks.
+
+## 2026-10-16 — Server-rolled attack integration
+- `backend/combat-engine.js` now accepts `ATTACK` actions with bounded DM-adjudicated attackBonus, armorClass, damageCount (1–10), damageSides (2–100), damageBonus. Server uses `node:crypto.randomInt` for d20 and damage dice; natural 20 doubles damage dice; all results are stored in the same SQLite transaction as HP and action ledger. One ATTACK per initiative turn, enforced by durable `vtt_combat_turn_usage` unique key. Idempotent retries return prior results without rerolling. Commits `53e4356c66730783c234712a841ef2ac4334060b`, `bedff17ce06a4fb45c419dbfe099c136a5d119f5`.
+- `server.js` passes attack parameters to DM-authenticated combat engine, commit `21e668fd01bdfd2d956e159ab9c29231f6ed9c80`. No client-supplied rawRoll accepted.
+- `backend/combat-attack.integration.test.js` commit `6b1b9ff388dd1f23a394e2cb6ed443b856ccb755` tests critical dice, bounded HP, action exhaustion, replay without reroll, invalid input and RNG rollback.
+- **Pending:** GitHub Actions CI outcome for integration test commit. No completion count increase until verification.
+- Limitations: DM enters AC and bonuses (not yet derived from trusted character sheets); no player-controlled attack API, spell slots, bonus actions, reactions or condition effects. Do not mark T074 complete.
+
+## 2026-10-16 — Quest evidence and completion implementation
+- Added `backend/quest-evidence-engine.js`, commit `5d10ebeb8956c84e7a6f2971b031965f5a950a8e`: campaign/character owner or DM authorization; objective verification requires exact campaign journal proof `QUEST_OBJECTIVE_VERIFIED` with matching IDs; completion requires DM-authored `QUEST_COMPLETION_APPROVED` event, matching full required objective set, and persisted objective evidence; both transactional and idempotent.
+- Added `backend/quest-evidence-engine.test.js`, commit `d36302dfe6ccfd55770ef5a72e33127b2a7bf18d`: ownership, isolation, missing evidence, rollback, duplicate and conflicting submissions.
+- Integrated signed-actor routes `POST /api/campaigns/:campaignId/quests/objectives/verify` and `POST /api/campaigns/:campaignId/quests/complete` into `server.js`, commit `b311f9316f315f7bee2c7dd15ee9a913291d7c6b`. Existing campaign journal now restricts reserved quest proof/approval event types to DMs.
+- Added `backend/quest-evidence-api.integration.test.js`, commit `aa607842d8d19567f37d83624eabdfc9d3deadb4`: rejects player-forged proof and unauthorized ownership; verifies objective and completion APIs and confirms zero artifacts awarded.
+- **No artifact reward system activated**: v46 artifact list remains candidate-only. Completion returns `awardedArtifacts: []`. No Alice progression or loot changed.
+- **CI pending for latest batch**. Maintain 12/100 verified until GitHub Actions succeeds and charter acceptance is checked.
+- Known gap: full quest catalog/required objective sets are not yet trusted server-defined records; DM approval payload currently defines required set. Future quest definitions must prevent deliberately incomplete approval sets.
+
+## 2026-10-16 — Authoritative quest catalog implementation
+- `backend/quest-evidence-engine.js` commit `cbcbc25c0ad291be44f19e1740d554fa603a5e77` creates campaign-scoped immutable DM-registered quest definitions; objective verification rejects unknown quest/objective and completion checks the full registered required-objective set before accepting journal approval. Existing quest rewards remain disabled.
+- `server.js` commit `09a3e325909c112a1e2cb97c34992d34ae5b3b55` adds signed DM-only `POST /api/campaigns/:campaignId/quests/catalog`. Registration is idempotent only for identical objective sets.
+- Updated `backend/quest-evidence-engine.test.js` commit `36d6ebb1ca44b0fe3b84fc9709d7a25a0cb4e3b6` and `backend/quest-evidence-api.integration.test.js` commit `70ae79bee99fd85d353da70ae4c19385b2d1dac2` to require catalog registration and test immutability and player denial.
+- CI runs `38921730562` and `38921730504` were in progress when written; verify and fix before closing T023. Current verified baseline 15/100.
+- Next: catalog lifecycle/versioning, audit journal for definitions, secure reward catalog with explicit approval, combat resources.
+
+## 2026-10-16 — Quest definition approval and audit batch
+- `backend/migrations.js` migration v4 adds durable `vtt_quest_catalog`, `vtt_quest_definition_audit` and `vtt_quest_approvals`; commit `fa83690404f8597ccabe5593a0a68ad0230e7996`.
+- `backend/quest-evidence-engine.js` commit `87d9f0e323d13c4717ca0b5c54cf97309c89cf82` now writes REGISTERED and APPROVED audit snapshots, requires explicit DM approval before objective verification/completion, preserves immutable objective sets.
+- `server.js` commit `5889ec9f97651476b65dd122ec8993f6aaad207d` adds signed DM-only POST `/api/campaigns/:campaignId/quests/catalog/:questId/approve`.
+- Tests: `backend/quest-evidence-engine.test.js` `89fd3181ae53a66dd1dfc0c5edb48b0c4b2ef846`; `backend/quest-evidence-api.integration.test.js` `8f6a714b25c88b091210a625122545b2ea339955`; new `backend/quest-approval-migration.test.js` `a56e1fa0c80616ff2c868db7b29001e9484ad182`.
+- **CI not yet confirmed for this batch.** Verified charter remains 16/100 until successful workflows and acceptance review. No artifact rewards and no Alice progression changes.
+- Next: CI fixes; check legacy migration tests; assess T029 audit requirements, reward catalog approval and transactional award design; combat spell slots.
+
+### CI resolution and next work
+- First v4 CI runs `38922093940` and `38922093898` failed because `backend/migrations-v3.test.js` expected exactly schema versions [1,2,3].
+- Fixed migration regression assertion to compare with `MIGRATIONS.map(x=>x.version)`, commit `f3bc602c082e59e7d2f509c6b950a417e8a80329`.
+- **Verified PASS**: Omniversal run `38922191588`; Validate campaign records run `38922191598`. Both jobs completed successfully after fix.
+- Charter remains **16/100**: approval/audit is real and tested, but T029 covers broader quest state transitions, not merely catalog registration/approval; keep it open. No reward catalog approved and no artifacts granted.
+- Next: versioned quest status transitions and audit; reviewed artifact metadata/approval design; atomic rewards only after explicit rule approval; combat resources.
+
+## 2026-10-16 — Audited quest state transitions batch
+- Migration v5 in `backend/migrations.js` commit `ed96af51f29f5bd4064d8fa0d03d0ed627a8689e` adds per-character quest states (BLOCKED/ACTIVE/FAILED/COMPLETE), revision and append-only transition audit.
+- `backend/quest-evidence-engine.js` commit `a5c9851285d2ab8f58a59fe3e40fe165a38bb2ee`: DM-only state machine with expected-revision optimistic concurrency, reason, valid transition graph, transactionally logged transitions. Completion requires ACTIVE and records COMPLETE audit in the same transaction as completion.
+- `server.js` commit `85e3b51b562d7ecdb5da22160f71a5f1ae58aba5`: signed DM-only POST `/api/campaigns/:campaignId/quests/:questId/state`.
+- Tests updated: `backend/quest-evidence-engine.test.js` `4cb393d2a40a74c4ea2bcd11d0e8c17c6319a3a2`, `backend/quest-evidence-api.integration.test.js` `e8bab6454b7ee8c98335cd20b46d83c3e50db5e8`; new `backend/quest-state-transitions.test.js` `2049116a43c8edcb93ed30c630d4ba4af3f5c031`.
+- **CI pending at time of handoff**; verified count remains 16/100 until confirmed. Do not award artifacts or modify Alice.
+
+### Quest state CI resolution
+- Initial Omniversal run `38922624373` failed due to eight SQL placeholders for nine `vtt_quest_state_audit` columns; corrected in commit `d7b8d03c02e40aaab6ee153fccdf2f4e0181235a`.
+- Rerun **Omniversal `38922707170` SUCCESS** and **Validate campaign records `38922706681` SUCCESS**.
+- Charter commit `1e0bc0d2da323e400768b6e96b4ace6b0681a246` closes **T025** and **T029**; verified **18/100**, open **82/100**.
+- Next: trusted prerequisite graph (T021), cooldown/repeatability (T026), outcome flags (T027), artifact metadata and explicitly approved reward catalog; combat resources. No candidate artifact awards.
+
+## 2026-10-16 — Proposed master server economy integration
+- Rejected pasted monolith as a replacement: undefined router, unavailable micro-router files, insecure global in-memory state and minute-by-minute chronology changes.
+- Added opt-in `backend/world-economy.js` commit `99a0fd1b36ae636d1e5c263b01f8a451760fe1c5`, conflict-replay fix `28544450f0b6728afb1b8d5dca68493b621e7ed4`: campaign-scoped SQLite commodity prices in copper, bounded ±500 basis points per DM-authorized adjustment, revision checks, adjustment ledger and idempotent retries. No automatic cron.
+- `server.js` commit `a0f492924c469aaea1949eb133d89c16ab022075`: signed member GET `/api/campaigns/:campaignId/world/economy`; DM-only POST `/api/campaigns/:campaignId/world/economy/commodities` and `/api/campaigns/:campaignId/world/economy/adjustments`.
+- Tests `backend/world-economy.test.js` commit `e9927ed1d48db2273be78cbb1f9791460ef3e432` cover DM restriction, campaign isolation, bounds, revision conflicts, replay, and no implicit pulses.
+- **CI pending**. Verified charter baseline 18/100; do not claim production-grade economics or increment verified count until acceptance and CI. Schema currently initialized by engine, not versioned migration. No changes to Alice or campaign chronology.
+
+### Economy CI verified
+- Initial Omniversal `38923255002` failed because economy-only test incorrectly queried the optional world pulse table without initializing the separate pulse engine. Fixed test to inspect `sqlite_master`, commit `226484b27880d27b88109df8d91f5595ce50214b`.
+- **PASS:** Omniversal `38923338531`; Validate campaign records `38923338471`.
+- No charter task marked done: this is an incremental safe economy foundation, not complete world/economy simulation. Verified total remains **18/100**. Next: versioned migration for economy schema, HTTP integration tests, market history, opt-in controlled pulses and task acceptance review.
+
+## 2026-10-16 — Opt-in file-writing worker
+- User-supplied auto-worker was a local prototype, not an AI agent: it only wrote static queued strings and random placeholder modules, lacked persistent queue state, and could overwrite project files.
+- Implemented `backend/ai-auto-worker-file-writer.js` commit `226f8dcd8b0597598b760ff906a455fe7b67d759`: explicit input "1", allowlisted draft directories, no overwrites, symlink directory rejection, content-size bounds, queue exhaustion, SHA-256 evidence and proposal-only quest rewards. **Not wired into server, cron, or unattended automation.**
+- Added `backend/ai-auto-worker-file-writer.test.js` commit `7dd9275d6ae37916736e15af7bdbcfcbafec7c9e`: confirmation, queue order, safe drafts, traversal, overwrite, duplicate IDs, symlinks.
+- CI pending. Verified charter remains **18/100** until acceptance criteria met. No autonomous AI generation, durable queue, GitHub-to-local sync, or canonical lore changes.
+
+### Worker CI results
+- Omniversal verification `38923650564`: SUCCESS.
+- Validate campaign records `38923650506`: SUCCESS.
+- Worker is opt-in and test-verified, but not a fully autonomous AI coding system. Charter remains 18/100, 82 open. Next: persist queue state safely, CLI wrapper, trusted approval gates, and continue economy migration and combat resources.
+
+## 2026-10-16 — Durable draft queue and CLI
+- `backend/durable-draft-worker.js`: manifest-based persistent queue; checksummed task catalog and drafts; restart validation; crash recovery for a draft written before its manifest update. Commits `7d3bce494aa1be8bf3731780aeb74519d5934787`, `394ef348370c44b8de7e77ef4cd8a8f4b6627791`.
+- `backend/durable-draft-worker.test.js` commit `50f9fdcc08c6f5e24aefd36bd21cbb77cac38d51`: restart, ordering, crash recovery, tamper, seed mismatch.
+- `backend/draft-worker-cli.js` commit `3bf64760149904c5408a5ab532b0d8800a785853`: `node backend/draft-worker-cli.js 1 --root /absolute/existing/draft-sandbox`; `status` supported. Not mounted into server; no autonomous AI, GitHub deployment, or automatic execution.
+- **Important remaining gap:** no multi-process locking; simultaneous CLI processes may race. Use single operator only until locking is implemented. CI pending. Charter remains 18/100.
+
+### Durable worker CI confirmation
+- Omniversal verification run `38923952094` **SUCCESS**.
+- Validate campaign records run `38923952035` **SUCCESS**.
+- Verified charter **18/100**, open **82/100**; no task closure because this is infrastructure increment rather than a fully accepted 100-task charter deliverable.
+- Next: multi-process lock with stale-lock recovery, CLI integration tests, versioned economy migration, authenticated economy API tests, trusted combat resources and approved reward catalog. No automatic game progression.
+
+## 2026-10-16 — CLI cross-process lock
+- Added exclusive filesystem lock `backend/draft-worker-lock.js` commit `d30c47bc7df22ec7093285994749fd20b69afa77`. A concurrent CLI call fails closed with WORKER_LOCKED. Locks are removed after normal/exceptional completion if token still matches.
+- CLI lock integration commit `61baef4555ab351fa1c4b373352a2ac0a1a95e5c`, JSON newline correction `01a4a5ee44ce72bb02f0f53a1e08934f468db303`.
+- Process-spawning integration tests `backend/draft-worker-cli.integration.test.js` commit `8cf438d899440f4188306e2e7fecf6fb7f5c5fa6`: process restarts, contention, exception unlock and stale-lock fail-closed.
+- **Stale lock is NOT automatically removed**: operator must inspect process and lock before manual removal; avoids unsafe lock stealing. Queue not autonomous; no AI generation or publishing.
+- CI pending; charter remains **18/100**, **82 open**.
+
+### Cross-process lock CI verified
+- Omniversal verification `38924261089` SUCCESS.
+- Validate campaign records `38924261076` SUCCESS.
+- No charter closure: verified remains **18/100**, open **82/100**. Worker remains explicit/manual and drafts-only. Stale lock requires operator inspection and manual clearing. Next priority: versioned economy migration and signed HTTP economy integration tests.
+
+## 2026-10-16 — Versioned economy migration
+- `backend/migrations.js` migration v6 adds `vtt_world_economy` and `vtt_world_economy_adjustments`, commit `5c2d69675473cb08f9173bf6a93828b5d548f4f0`.
+- `backend/world-economy.js` commit `d1b1ac076f91a84d86fa533b46a2a8166115b945` now fails closed if schema migration was skipped instead of creating tables ad hoc.
+- `backend/world-economy-migration.test.js` commit `54a02e7a43a95728878c3bfac5b331673c40d38b`: migration requirement, replay, preserved prices and audit records.
+- CI pending. Verified charter baseline **18/100**, **82 open**; economy HTTP integration tests and full settlement economy baseline still outstanding.
+
+### Economy migration CI
+- Omniversal verification `38925202319`: SUCCESS.
+- Validate campaign records `38925202498`: SUCCESS.
+- No new charter closure. Verified **18/100**, open **82/100**. Next: signed economy HTTP integration tests and settlement trade baseline; preserve opt-in time progression and unearned-reward restrictions.
+
+## 2026-10-16 — Signed economy HTTP integration coverage
+- Added `backend/world-economy-api.integration.test.js` commit `6305bc7bfa150db46937664a13fc6aadd61c61d5`. Spins up actual Express server with signed DM, member, outsider, and admin identities across two campaigns.
+- Covers DM-only commodity creation and bounded price adjustments, GET authorization, idempotent retries, stale revisions, cross-campaign isolation, audit ledger cardinality, and zero artifact grants.
+- CI pending. Charter remains 18/100, 82 open. No production economy simulation or progression claims.
+
+### Signed economy HTTP CI verified
+- Omniversal verification `38925477392`: SUCCESS.
+- Validate campaign records `38925477471`: SUCCESS.
+- No charter task closed: verified **18/100**, open **82/100**. Next: settlement trade schema, deterministic authorized market pulses, and secure artifact metadata/catalog; maintain Alice progression lock.
+
+## 2026-10-16 — Settlement economy increment
+- Migration v7 `cc0ae7df1475217f72aef2e7b3d0eff1e59cee50`: settlement locations (plane/region), markets, bounded stock and auditable trades.
+- Trade engine `d5340ab370cc2e6c626084065cae9d246c87bff1`; engine tests `b5b9cf22e41ab2041f9ccc692a93ab6af1300b17`.
+- Signed settlement HTTP API `6a7fb2c0f847e85faea6d24d7672048750e2f33a`; HTTP tests `c41e7c2cd7fd7e08e80507e1e7a0e8e03bcb54a0`.
+- Initial Omniversal CI `38925863160` FAILED: ten-column audit insertion had nine placeholders and old economy migration test assumed v6 was latest. Corrected in `e19bdef065020ad0f8deea0e91a50e0bd62a9240` and `5d076fabaf596ecffc8374c9b1b23231beda1caa`. Validate campaign records `38925863264` succeeded. Await new CI.
+- No autonomous trade, no player currency/item transfer, no game clock movement. Charter remains 18/100 pending verification and full T085 acceptance.
+
+### Settlement CI confirmed
+- Omniversal verification `38925955609`: SUCCESS after fixes.
+- Validate campaign records `38925955569`: SUCCESS.
+- Charter still 18/100 verified, 82 open: T085 settlement economy and trade baseline remains partial (no intersettlement logistics, price transmission, currency settlement). T089 deterministic world pulse also open.
+- Next: deterministic opt-in pulse with idempotent event ID, bounded deltas, revision checks, cross-campaign isolation and restart tests; avoid unapproved clock changes and loot.
+
+## 2026-10-16 — Deterministic opt-in settlement market pulses
+- Migration v8 `680a69d8a093c26985ec375b84f2b72d93f0e993`: persistent pulse ID, canonical changes and results ledger.
+- Engine `de5502882ce857fb823f6c20db1eef8f736e9844`: explicit signed DM-only deterministic stock and price deltas; sorted canonical payload, bounded changes, unique market entries, revision checking, transactional all-or-nothing, idempotent replay, campaign isolation. No cron or implicit DR progression.
+- Tests `bc2c6c3a99d4165e9bc3af07659011aacaf09d66`; HTTP route `be7ee8d93e666fdf2bcb4d67e1c391082b76dbc4`.
+- CI pending; charter remains 18/100, 82 open. T089 requires wider event pulse acceptance and mission consistency; no task closed. Next: signed HTTP pulse integration test and restart-file durability.
+
+### Deterministic market pulse CI verified
+- Initial Omniversal `38926256361` failed only because old v7 test assumed migration v7 was latest; fixed `89e1f4b53dc42ef25c82fd293958640b15aeea29`.
+- Omniversal verification `38926336338`: SUCCESS.
+- Validate campaign records `38926336312`: SUCCESS.
+- Verified charter **18/100**, open **82/100**. Market pulse engine is an opt-in component; broader T089 acceptance and HTTP pulse-specific integration tests remain. No Alice progression or loot changes.
+
+## 2026-10-16 — Market pulse HTTP and file-backed persistence verification
+- `backend/settlement-market-pulse-api.integration.test.js` commit `b2e3df64ae66170ca799f64f969cd779b0849475`: actual signed HTTP test covering DM-only pulse, admin/player/outsider denial, replay, revision conflict, bounds, rollback, campaign isolation and no artifact grants.
+- `backend/settlement-market-pulse-persistence.test.js` commit `79d4f525c5ce0c5e52c216a45511dde445652e9d`: file-backed SQLite close/reopen, two simultaneous connections, duplicate replay and stale revision.
+- Omniversal verification `38926825833`: SUCCESS; Validate campaign records `38926825846`: SUCCESS.
+- Verified charter **18/100**, open **82/100**. T085/T089 remain incomplete: intersettlement routes and inventory transfers, currency settlement, mission-consistent world event integration, multi-process stress tests.
+- No automatic pulses, time advancement, or unearned artifacts.
+
+## 2026-10-16 — Ascension catalog signed read API
+- Proposed seven-path catalog `cc68cc55f48d456ff29a60bda72225260e14f46e` and tests `d586f63ec181dbbdc29d98d1fc2f1e7112b7c9e2` passed Omniversal `38927343707` and Validate `38927343687`.
+- Signed read-only member endpoints in `server.js` commit `32f31e62a7f45c54ef256d2f53b23377b2851d4d`; API integration tests commit `449851e5177e077d9619643f1b2b6c099a6013e1`. New CI pending.
+- No ascension mutations, grants, player-supplied proof acceptance, or character progression. Content is HOMEBREW_PROPOSAL; chronology unresolved.
+- Charter still 18/100 verified, 82 open. T085, T089, T093 and narrative/canon tasks require acceptance review rather than speculative closure.
+
+### Ascension read API CI verified
+- Initial Omniversal run `38927506368` failed because test expected JSON from Express's HTML 404; production route was correctly absent. Test fixed in `f1856e0eada8eb559a6bc8d04f0b71615da190bc`.
+- Omniversal `38927610194`: SUCCESS. Validate campaign records `38927610252`: SUCCESS.
+- Charter **18/100 verified, 82 open**; no new checklist closure for read-only catalog. Future: reputation and dialogue predicates, server-authoritative quest integration, and explicit DM approval of rituals; review T085/T089/T093 acceptance with tests.
+
+## 2026-10-16 — Playable-looking ascension UI prototype and art concept
+- Added `prototype/ascension-paths.html` commit `5b58e6a297c25e5c581982fa8898dd006bb22ecb`: responsive navy/violet/gold/cyan static game interface with seven selectable path cards, Alice's immutable baseline, journal, four story panels and five clickable moral choices. Interactions are previews only and are not connected to authoritative backend.
+- Generated cinematic Moonveil UI concept artwork in conversation (not checked into repository). Do not claim art asset integration.
+- CI runs `38928109722` and `38928109708` pending at time of handoff. Charter stays 18/100 until evidence-backed acceptance and CI. UI tasks T061-T065/T068/T069 have a prototype foundation, not production completion.
+- Next: verify CI; integrate concept artwork only after approved asset path and licensing; implement connected read-only ascension screen and a persistent server-authorized choice/event path, then test mobile and keyboard.
+
+## 2026-10-16 — Persistent DM-authorized Rabbit Hole travel
+- `backend/migrations.js` v9 commit `6e83afdf78eca0fe15fd621220cfa4eba9122f98`: `vtt_character_locations` and `vtt_character_travel_events`.
+- `backend/chronal-travel-engine.js` commit `7217d05bcbb585666ff623d7a863f4a9e82384e1`: explicit DM-only initialization and travel, audited evidence, optimistic revision, idempotent replay, atomic SQLite transaction.
+- `server.js` commit `2fdb3604fd013480168aa8b540bedf14cd059bbe`: authenticated location read (owner or DM) and DM-only initialize/travel HTTP endpoints.
+- `backend/chronal-travel-engine.test.js` commit `61b9e4aaef93c3e3f3f759fce2188c18ec51cd29`: replay, unauthorized, revision, invalid year, no artifacts.
+- CI **PASSED**: Validate campaign records `38928967430`; Omniversal verification `38928967450`.
+- Caution: evidence string is recorded but not independently cryptographically verified; DM adjudication is trusted. No automatic timeline paradox resolution, travel cost, source chronology reconciliation or UI connection. No character was moved by these code commits.
+- Charter remains 18/100 verified and 82 open; this is meaningful partial progress on chronology, world travel and persistent character state but not complete spatial-coordinate T047 or mission-consistency T090.
+
+## 2026-10-16 — Signed chronal travel HTTP integration
+- Added `backend/chronal-travel-api.integration.test.js` commit `4b5c20afe40e3afcfcc31c4d24578b6f7d7ea370`: actual HTTP signed actor sessions; DM-only initialization/travel, owner-only location reads, outsider and cross-campaign denial, duplicate travel replay, conflicting replay, invalid year and no artifact grants.
+- Validate campaign records `38929340901` and Omniversal verification `38929341064` were queued at authoring time; inspect final CI before claiming success.
+- Current charter 18/100 verified. The full player UI, verified portal discovery and paradox simulation remain open. Do not grant Alice rewards or move her by documentation.
+
+### Chronal travel HTTP integration — CI verified
+- Initial Omniversal `38929341064` failed on test serialization of `Infinity` to JSON `null`; corrected to invalid string in commit `e569469e0e40c2f310ffe81e8edeaacae728f3f6`.
+- CI **PASSED**: Validate campaign records `38929425056`; Omniversal verification `38929425122`.
+- Test suite `backend/chronal-travel-api.integration.test.js` commit `4b5c20afe40e3afcfcc31c4d24578b6f7d7ea370` covers signed DM-only travel, character owner reads, cross-campaign denial, replay/conflict, invalid year, no artifacts.
+- Charter remains 18/100. No automatic time travel, no live UI session, and no Alice state mutation.
+
+## 2026-10-16 — Gemini three-file integration review and dialogue vertical slice
+Reviewed three user-supplied Gemini Markdown payloads proposing v10–v15 SQL, a replacement Rabbit Hole module, dialogue, crafting and static cinematic HTML. These submissions are largely duplicates, not 100 independently implemented tasks. **Rejected direct migration/replacement**: caller-supplied `portalKeyVerified` bypass, destructive `INSERT OR REPLACE` Alice reset, default 100 gold for every wallet, non-campaign-scoped crafting, and inert UI buttons. Existing migrations v1–v9, chronal travel and Alice progress remain authoritative.
+Approved and adapted dialogue concept:
+- `backend/dialogue-engine.js` `e98307f80000fa8dbea5443e300740786eaf6eae`: five canonical ordered choices, original opening scene, immutable metadata, explicit no-side-effects DM preview.
+- `backend/dialogue-engine.test.js` `68ab2397199af072b4161a8bd6df5572f7458531`: order, invalid choice, unknown scene, fail-closed behavior.
+- `server.js` `4475a38f2db8efb4201becce1ce266f83d0a1256`: signed campaign member GET dialogue and POST preview routes.
+- `backend/dialogue-api.integration.test.js` `51376712d4902fefff00b6d0a8daa11ea3250601`: signed session, member isolation, choice order, zero mutation.
+CI outcome must be checked before declaring verification. This is a **read-only dialogue slice**, not a full quest consequence engine. Charter remains 18/100 until evidence supports closing a specific task.
+
+### Gemini dialogue integration CI verified
+- Omniversal verification run `38930351829`: **SUCCESS**.
+- Validate campaign records run `38930351801`: **SUCCESS**.
+- Safe read-only dialogue slice merged on development branch; no quest completion or artifact grants. Charter still 18/100 until task acceptance audit.
+
+## 2026-10-16 — Art administration intake
+Created `docs/administration/MOONVEIL_ART_ASSET_INTAKE_REGISTER.md` in commit `5944679835fd0f4cfe06c02321c00a14d5887ffe`.
+Two new ChatGPT-generated dashboard concept PNGs exist as conversation artifacts (ART-ADM-001 and ART-ADM-002), **not** committed to GitHub and **not** connected to the VTT. Concepts include illustrative/invented UI statistics and must not be imported as game state.
+Art paperwork records proposed 15+ asset work orders, mandatory provenance/rights/canon checks, exact asset-path verification, and approval form. Existing portrait files across GitHub have NOT yet been exhaustively audited. No charter task closed. Next: audit repo asset paths, transfer approved binary art via supported binary-capable tool, integrate actual UI references and test rendering.
+
+## 2026-10-16 — Rabbit Hole interactive preview
+Created `prototype/rabbit-hole-play.html` in commit `f3bc0fdba03ef896e260ee2b4becf8cff12b6caf`: responsive four-scene opening, five clickable canonical choices, accessible scene journal, local preview and optional signed campaign dialogue API integration. Signed token is memory-only, not stored in localStorage. No quest/reward/travel state changes; standalone HTML must be served same-origin with backend for authenticated API mode. Prototype is not a deployed game or full progression engine. CI status pending; do not close charter tasks until verified.
+
+## 2026-10-16 — Three Sacred Lich Ascensions engineering slice
+Created `backend/sacred-lich-ascensions.js` (`176f5fef`), tests (`a125c396`), and signed campaign read-only GET APIs in `server.js` (`8ad2d172`). Three proposed paths: Moonveil Witch/Selune/Protection; Alice Z'ress/Eilistraee/Freedom; Starweave Necromancer/Mystra/Knowledge. Five sacrifice evidence objectives each; Level 17 gate; DM and divine review. The evaluator ALWAYS refuses to grant a transformation because no authoritative transformation engine is wired yet. Never claim these quests completed or Chosen/celestial states earned. No charter task closed pending full integration and CI evidence.
+
+## 2026-10-16 — Art QA automation and Alice dashboard concept
+New image concept ART-UI-005 generated in chat and registered in `docs/administration/MOONVEIL_ART_ASSET_INTAKE_REGISTER.md` (`d48d15f3`); no image bytes committed to repository and concept mock inventory is not actual Alice inventory. Added `backend/art-asset-registry.js` (`74006bd7`) with safe asset status/provenance/path checks, and tests `backend/art-asset-registry.test.js` (`34d582de`). No installed art claim, no verified charter closure until CI and UI rendering evidence.
+
+## 2026-10-16 — Alice's Rabbit Hole demiplane code
+`backend/alice-demiplane-catalog.js` (`30ee9f92`) and tests (`99d2c3cc`) define Alice's personal Eldritch demiplane as **the Rabbit Hole itself**, with physical entrance `pit_ghaunadaur` in the Material Underdark. Far Realm is the Eldritch influence, not the demiplane's replacement location. Every access preview fails closed even with a supplied approval boolean, pending authoritative travel and DM evidence. Signed member read-only API in `server.js` (`d9697102`) GET `/api/campaigns/:campaignId/world/alice-demiplane`. No free warp, rewards, or transformation; charter unchanged pending CI.
+
+## 2026-10-16 — Rabbit Hole exploration room atlas
+Created `backend/alice-demiplane-rooms.js` (`ad357400`) with five narrative rooms: Threshold, Gallery of Echoes, Void Observatory, Silver and Azure Nexus, Return Gate. Every room has five DM-adjudicated choices and zero rewards. Added unit tests (`144b3909`) and signed campaign member read-only room/preview API routes (`server.js`, `c98e5967`). This is a room catalog and preview layer, **not** unlocked movement, persistent journal or actual portal travel. CI pending; no charter task closed.
+
+## 2026-10-16 — Gemini all-in-one lichdom package intake
+Reviewed user-provided Gemini master schema, TARDIS jump, Alice ascension, 11 paths, and tests. Accepted only the **read-only proposed 11-path catalog** in `backend/lichdom-eleven-paths.js` (`ac5fdded`) and unit test (`a03ddad5`). Rejected direct use of unsafe sample routes: client-chosen arbitrary time jumps, unverified ascension flags, automatic resurrection, gold=100 baseline, Nhal'Ruun as Alice's start, and missing actor/campaign authorization. True Trinity refers to Alice's **three-origin-gift convergence**, not a mandatory sequence of Alice becoming Selûne's and Mystra's angels. Alice's Eldritch phylactery at the Rabbit Hole is **future proposed lore only**; she remains Level 1 and not a lich. No migrations, character-state writes, or auto-unlocks from this intake. CI pending.
+
+## 2026-10-16 — Autonomous visual production sprint 01
+Added reusable responsive theme `prototype/moonveil-theme.css` (`0f27f2f4`), cinematic four-panel/five-choice prototype `prototype/alice-cinematic-ui.html` (`6cdfe28f`), and five art-plate prompt specifications with provenance and approval gates `docs/administration/MOONVEIL_CINEMATIC_ART_MANIFEST_SPRINT_01.md` (`cda87300`). All choice and d20 UI is local demonstration only, not authenticated, persisted, or authoritative. No image binary generated or installed in this sprint. CSS/HTML standalone preview not deployed; CI pending. Next: integrate authorized view into server, build actual verified art asset pipeline and tests, then persistent choice adjudication.
+
+## 2026-10-16 — Authenticated Rabbit Hole room atlas prototype
+Added `prototype/alice-room-atlas.html` (`2faf9f1d`, bug fix `fcc2ebf3`) and accessible CSS (`2179173e`). The standalone page accepts an existing signed actor token and campaign ID in page memory only, GETs five rooms from `/api/campaigns/:campaignId/world/alice-demiplane/rooms`, and POSTs read-only previews with choiceNumber 1–5. No token persistence, no credentials in URL, no reward/travel/quest mutations. Requires a same-origin serving setup; global Express authentication currently prevents direct anonymous loading of HTML and CSS. **Not deployed, not yet end-to-end verified**. Future work: safe static asset hosting with explicit public-asset allowlist, authenticated integration tests, persistent DM adjudication, real approved images. CI not yet verified for this sprint.
+
+## 2026-10-16 — Local playable-shell serving sprint
+`server.js` (`bb902a6b`) now explicitly allowlists `GET /play/alice` and `GET /play/moonveil-theme.css` before signed API middleware. This permits loading the static login shell without exposing private campaign APIs or a directory. Local URL after starting server: `http://127.0.0.1:3000/play/alice` (port configurable). CSP, nosniff and no-store headers applied. Added `backend/alice-room-atlas.integration.test.js` (`5fff1d49`) covering static assets, unauthorized/member requests, room choices, and zero campaign/travel events. **Not publicly deployed; CI pending.** Authentication uses signed actor token entered in page memory. Future hardening: externalize inline JS and remove CSP unsafe-inline; actual artwork and persistent gameplay remain outstanding.
+
+## 2026-10-16 — Sprint 05 browser security hardening
+Previous visual-audit CI succeeded (both workflows at commit `6b76d0fd`). Externalized the room atlas controller into `prototype/alice-room-atlas.js` (`9d57ee5f`), updated HTML (`5170dc8e`), allowlisted its exact JS URL and removed `unsafe-inline` from the script CSP (`1327904e`), strengthened integration assertions (`cb6416da`), and expanded SHA-256 audit to four files (`d3021930`, `fcf82b06`). CSS remains static, signed campaign APIs remain actor/member scoped. This does not implement gameplay persistence or install photorealistic art. CI for this sprint pending.
+
+## 2026-10-16 — Sprint 06 persistent narrative journal
+Previous Sprint 05 workflows both passed. Added SQLite WAL-compatible `vtt_alice_exploration_journal` table and fail-closed engine (`185b9767`) with unique campaign-scoped entry IDs, idempotent player submissions, origin-room-only proposal gate, and single DM review (ACKNOWLEDGED/DECLINED). Signed actor/member-scoped GET/POST and DM-only review routes in `server.js` (`9b99d28f`). Added unit and integration tests (`0fc99552`, `2f5897af`). DM review **records narrative acknowledgment only**; it never moves Alice, awards resources, resurrects, or unlocks the Eldritch Lich. UI journal controls not yet connected. CI pending.
+
+## 2026-10-16 — Sprint 07 cinematic exploration journal UI
+Previous Sprint 06 CI workflows both passed. The local `/play/alice` atlas now has a player-facing journal panel (`d98f77b1`), signed API submission/refresh controller (`64683528`), and responsive styles (`d9a54e76`). Choices from the ORIGIN room can be saved as PENDING; locked rooms remain non-submittable. Reviewed entries display status and DM note. Added static integration assertions (`46350028`). **DM review is available via signed DM API, not yet a visual DM dashboard.** No movement, rewards, lichdom or resurrection. CI pending.
+
+## Sprint 121 intake — Planar weather safety-first phase A
+Accepted three user-supplied weather concepts as explicitly Moonveil homebrew. Added deterministic hazard catalog and min/max dice damage previews (`d8b0a7a7`), signed campaign-member GET `/api/campaigns/:campaignId/weather/hazards` and POST `/api/campaigns/:campaignId/weather/preview` (`521f1fe1`), plus unit tests (`01265714`). This is **not** the submitted auto-apply implementation: no new SQLite hazard tables, no unit statuses, no ticking DOT, no automatic HP or condition mutation, no event ledger writes. Reasons: submitted router opens an independent database, does not verify actor/campaign/DM membership, assumes war_table_units and event_ledger schemas exist, and its sample test manually inserts rows rather than exercising its endpoint. Future phase requires encounter-scoped units, DM authorization, explicit deterministic round resolution, condition saving throws, resistances and idempotent ledger integration. Phlogiston terminology is treated as user homebrew, not assumed canonical Wildspace weather.
+
+## 2026-10-16 — Alice Pit Hole / demiplanes LEGO intake
+Received v36–v45 monolithic Alice sanctuary, memory extraction, resurrection, wizard fortress, eldritch lair and planar citadel bundle. Accepted lore architecture only: four proposed holdings catalog (`1f659a2a`), signed member-only list and preview endpoints (`d65abe8a`), tests (`2643617f`). Rejected auto-seeding Alice as an apex lich, auto phylactery activation, unrestricted sanctuary access, resurrection counter increments, memory theft/mutation point grants, and router-local independent database connections. Alice is still level-one Great Old One Warlock; future Rabbit Hole Eldritch Lich sanctuary stays FUTURE_LOCKED until DM-approved quests. New fortress/lair/citadel are PROPOSED, not canon unlocked locations. No HP, travel, resurrection, rewards or timeline changes. CI pending.

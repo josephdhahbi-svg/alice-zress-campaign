@@ -1,0 +1,2868 @@
+{
+  "schema": "moonveil.weave-chronology.v1",
+  "status": "WORKING_CANON_REVIEW",
+  "eraPolicy": "THREE_ERA_OVERLAY_ACROSS_ALL_30_BOOKS_NOT_THREE_FIXED_BOOK_BLOCKS",
+  "calendarPolicy": "DR_ONLY_FOR_FORGOTTEN_REALMS_WITH_DOCUMENTED_CONVERSION",
+  "eras": [
+    {
+      "id": "ERA_1_MYSTRYL",
+      "label": "Mystryl and the First Weave",
+      "deity": "Mystryl",
+      "startDR": null,
+      "endDR": -339,
+      "transition": "Karsus's Folly, -339 DR",
+      "sourceStatus": "PUBLISHED_LORE_DATE_REVIEW",
+      "notes": "Ancient eras before -339 DR; dates for other settings cannot be converted directly."
+    },
+    {
+      "id": "ERA_2_MYSTRA",
+      "label": "Mystra before the Time of Troubles",
+      "deity": "Mystra (post-Mystryl)",
+      "startDR": -339,
+      "endDR": 1358,
+      "transition": "Time of Troubles, 1358 DR",
+      "sourceStatus": "PUBLISHED_LORE_DATE_REVIEW",
+      "notes": "Historical Mystra; do not equate with Midnight's later incarnation."
+    },
+    {
+      "id": "ERA_3_MIDNIGHT_MYSTRA",
+      "label": "Midnight / Mystra and later eras",
+      "deity": "Midnight ascended as Mystra",
+      "startDR": 1358,
+      "endDR": null,
+      "transition": "Spellplague 1385 DR and Second Sundering 1480s are subevents, not extra incarnation eras",
+      "sourceStatus": "PUBLISHED_LORE_DATE_REVIEW",
+      "notes": "Midnight/Mystra's fate and restoration must be checked at precise years; 1385-1480s is not a continuous uncomplicated divine-presence period."
+    }
+  ],
+  "events": [
+    {
+      "id": "KARSUS_FOLLY",
+      "dr": -339,
+      "eraBefore": "ERA_1_MYSTRYL",
+      "eraAfter": "ERA_2_MYSTRA",
+      "status": "SOURCE_VERIFICATION_REQUIRED"
+    },
+    {
+      "id": "TIME_OF_TROUBLES",
+      "dr": 1358,
+      "eraBefore": "ERA_2_MYSTRA",
+      "eraAfter": "ERA_3_MIDNIGHT_MYSTRA",
+      "status": "SOURCE_VERIFICATION_REQUIRED"
+    },
+    {
+      "id": "SPELLPLAGUE",
+      "dr": 1385,
+      "eraBefore": "ERA_3_MIDNIGHT_MYSTRA",
+      "eraAfter": "ERA_3_MIDNIGHT_MYSTRA",
+      "status": "SOURCE_VERIFICATION_REQUIRED"
+    },
+    {
+      "id": "SECOND_SUNDERING",
+      "drRange": [
+        1482,
+        1487
+      ],
+      "eraBefore": "ERA_3_MIDNIGHT_MYSTRA",
+      "eraAfter": "ERA_3_MIDNIGHT_MYSTRA",
+      "status": "SOURCE_VERIFICATION_REQUIRED"
+    }
+  ],
+  "books": [
+    {
+      "book": 1,
+      "trilogy": 1,
+      "region": "Underdark",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 2,
+      "trilogy": 1,
+      "region": "Underdark",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 3,
+      "trilogy": 1,
+      "region": "Underdark",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 4,
+      "trilogy": 2,
+      "region": "Sword Coast",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 5,
+      "trilogy": 2,
+      "region": "Sword Coast",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 6,
+      "trilogy": 2,
+      "region": "Sword Coast",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 7,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 8,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 9,
+      "trilogy": 3,
+      "region": "Dragon Coast",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 10,
+      "trilogy": 4,
+      "region": "Barovia",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 11,
+      "trilogy": 4,
+      "region": "Barovia",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 12,
+      "trilogy": 4,
+      "region": "Barovia",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 13,
+      "trilogy": 5,
+      "region": "Avernus",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 14,
+      "trilogy": 5,
+      "region": "Avernus",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 15,
+      "trilogy": 5,
+      "region": "Avernus",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 16,
+      "trilogy": 6,
+      "region": "Feywild",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 17,
+      "trilogy": 6,
+      "region": "Feywild",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 18,
+      "trilogy": 6,
+      "region": "Feywild",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 19,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 20,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 21,
+      "trilogy": 7,
+      "region": "Wildspace",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 22,
+      "trilogy": 8,
+      "region": "Sigil",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 23,
+      "trilogy": 8,
+      "region": "Sigil",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 24,
+      "trilogy": 8,
+      "region": "Sigil",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 25,
+      "trilogy": 9,
+      "region": "Shadowfell",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 26,
+      "trilogy": 9,
+      "region": "Shadowfell",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 27,
+      "trilogy": 9,
+      "region": "Shadowfell",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 28,
+      "trilogy": 10,
+      "region": "Multiversal Convergence",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 29,
+      "trilogy": 10,
+      "region": "Multiversal Convergence",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    },
+    {
+      "book": 30,
+      "trilogy": 10,
+      "region": "Multiversal Convergence",
+      "defaultEra": "UNRESOLVED",
+      "mainlineDR": "UNRESOLVED",
+      "mainlineDate": "UNRESOLVED",
+      "locationStatus": "PROVISIONAL_HOMEBREW_REGION",
+      "sourceBooks": [],
+      "eraWindows": [
+        {
+          "eraId": "ERA_1_MYSTRYL",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_2_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        },
+        {
+          "eraId": "ERA_3_MIDNIGHT_MYSTRA",
+          "access": "TIME_TRAVEL_OR_HISTORICAL_RECORD_ONLY_UNTIL_DM_APPROVES",
+          "localDR": "UNRESOLVED",
+          "localCalendar": "UNRESOLVED",
+          "entryEvent": "UNASSIGNED",
+          "exitEvent": "UNASSIGNED",
+          "sourceCitation": "REQUIRED",
+          "cameoEligibility": "BLOCKED_UNTIL_DATE_LOCATION_EXISTENCE_VERIFIED"
+        }
+      ],
+      "traversals": [
+        {
+          "number": 1,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 2,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 3,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 4,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 5,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 6,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        },
+        {
+          "number": 7,
+          "entryTimestamp": "UNRESOLVED",
+          "exitTimestamp": "UNRESOLVED",
+          "eraId": "UNRESOLVED",
+          "continuity": "NOT_STARTED"
+        }
+      ]
+    }
+  ],
+  "sourceRegistry": {
+    "scope": "ALL_PUBLISHED_DND_SOURCEBOOKS_AND_ADVENTURES",
+    "catalogStatus": "NOT_YET_INDEXED",
+    "rule": "Only attach a source after verifying edition, setting, timeline, geography and relevant page; never claim comprehensive coverage without actual indexing."
+  }
+}

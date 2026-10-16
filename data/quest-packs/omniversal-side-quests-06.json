@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_6",
+  "setting": "Feywild",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_051",
+      "title": "The Stolen Afternoon",
+      "giver": "Pip the gardener",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 16,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Pip the gardener needs adventurers: recover an afternoon stolen from a village.",
+      "objectives": [
+        "Meet Pip the gardener and verify the request",
+        "Recover an afternoon stolen from a village",
+        "Investigate the complication: A sprite borrowed it for a birthday",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A sprite borrowed it for a birthday",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_052",
+      "title": "The Tea Cup Trial",
+      "giver": "Lady Fen the hostess",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 16,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Lady Fen the hostess needs adventurers: resolve a magical tea dispute.",
+      "objectives": [
+        "Meet Lady Fen the hostess and verify the request",
+        "Resolve a magical tea dispute",
+        "Investigate the complication: The cups remember different promises",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The cups remember different promises",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_053",
+      "title": "The Orchard of Names",
+      "giver": "Bryn the keeper",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 16,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Bryn the keeper needs adventurers: restore missing names to fruit trees.",
+      "objectives": [
+        "Meet Bryn the keeper and verify the request",
+        "Restore missing names to fruit trees",
+        "Investigate the complication: One name belongs to an exiled prince",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "One name belongs to an exiled prince",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_054",
+      "title": "The Fox's Contract",
+      "giver": "Sable the talking fox",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 16,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Sable the talking fox needs adventurers: find a lost contract.",
+      "objectives": [
+        "Meet Sable the talking fox and verify the request",
+        "Find a lost contract",
+        "Investigate the complication: The contract was never signed",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The contract was never signed",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_055",
+      "title": "The Moonlit Masquerade",
+      "giver": "Ari the mask maker",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 17,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Ari the mask maker needs adventurers: locate a missing guest.",
+      "objectives": [
+        "Meet Ari the mask maker and verify the request",
+        "Locate a missing guest",
+        "Investigate the complication: The guest traded faces with a stranger",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The guest traded faces with a stranger",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_056",
+      "title": "The Bridge of Laughter",
+      "giver": "Tess the bridge warden",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 17,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Tess the bridge warden needs adventurers: repair a bridge that vanished.",
+      "objectives": [
+        "Meet Tess the bridge warden and verify the request",
+        "Repair a bridge that vanished",
+        "Investigate the complication: Its guardian demands an honest joke",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its guardian demands an honest joke",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_057",
+      "title": "The Last Summer Seed",
+      "giver": "Mori the botanist",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 17,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Mori the botanist needs adventurers: save a rare seed from frost.",
+      "objectives": [
+        "Meet Mori the botanist and verify the request",
+        "Save a rare seed from frost",
+        "Investigate the complication: The frost is a disguised messenger",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The frost is a disguised messenger",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_058",
+      "title": "The Unfinished Dance",
+      "giver": "Eris the violinist",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 18,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Eris the violinist needs adventurers: free dancers trapped in a repeating waltz.",
+      "objectives": [
+        "Meet Eris the violinist and verify the request",
+        "Free dancers trapped in a repeating waltz",
+        "Investigate the complication: The music hides a farewell",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The music hides a farewell",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_059",
+      "title": "The Silver Acorn",
+      "giver": "Rina the dryad",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 18,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Rina the dryad needs adventurers: recover an acorn from a collector.",
+      "objectives": [
+        "Meet Rina the dryad and verify the request",
+        "Recover an acorn from a collector",
+        "Investigate the complication: The collector believes it cures illness",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The collector believes it cures illness",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_060",
+      "title": "The Library of Dew",
+      "giver": "Nim the page",
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 18,
+      "trilogy": 6,
+      "levelRange": [
+        12,
+        22
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Nim the page needs adventurers: recover washed-away fairy stories.",
+      "objectives": [
+        "Meet Nim the page and verify the request",
+        "Recover washed-away fairy stories",
+        "Investigate the complication: One story predicts a false coronation",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "One story predicts a false coronation",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}

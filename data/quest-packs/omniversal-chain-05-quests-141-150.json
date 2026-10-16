@@ -1,0 +1,660 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "chainId": "mv_chain_05",
+  "title": "The Cartographers of Tomorrow",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_05_member_1",
+      "name": "Aster Vale Dawn",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_2",
+      "name": "Brin Copper Dawn",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_3",
+      "name": "Celia Moss Dawn",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_4",
+      "name": "Dorian Quill Dawn",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_5",
+      "name": "Edda Stone Dawn",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_6",
+      "name": "Fenn Ash Dawn",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_7",
+      "name": "Galia Reed Dawn",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_8",
+      "name": "Hale Meridian Dawn",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_9",
+      "name": "Iris Thorn Dawn",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_10",
+      "name": "Joren Star Dawn",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_141",
+      "number": 141,
+      "title": "The First Thread: Atlas Signal",
+      "chainId": "mv_chain_05",
+      "chainStage": 1,
+      "previousQuestId": "mv_side_005",
+      "previousChainQuestId": null,
+      "questGiver": "Ilya",
+      "featuredPartyMembers": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_6"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 2,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Find the first clue among displaced travelers.",
+      "objectives": [
+        "Consult Aster Vale Dawn about the evidence from quest 005",
+        "Find the first clue among displaced travelers",
+        "Investigate: A witness remembers a different version of the event",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "A witness remembers a different version of the event",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Aster Vale Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_142",
+      "number": 142,
+      "title": "The Coastward Ledger: Atlas Witness",
+      "chainId": "mv_chain_05",
+      "chainStage": 2,
+      "previousQuestId": "mv_side_015",
+      "previousChainQuestId": "mv_side_141",
+      "questGiver": "Brin Copper Dawn",
+      "featuredPartyMembers": [
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_7"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 5,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Follow the evidence into merchant and refugee networks.",
+      "objectives": [
+        "Consult Brin Copper Dawn about the evidence from quest 015",
+        "Follow the evidence into merchant and refugee networks",
+        "Investigate: A merchant's records contradict the first witness",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "A merchant's records contradict the first witness",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Brin Copper Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_143",
+      "number": 143,
+      "title": "The Scales of Testimony: Atlas Seal",
+      "chainId": "mv_chain_05",
+      "chainStage": 3,
+      "previousQuestId": "mv_side_025",
+      "previousChainQuestId": "mv_side_142",
+      "questGiver": "Celia Moss Dawn",
+      "featuredPartyMembers": [
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_8"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 8,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Present the evidence before a disputed council.",
+      "objectives": [
+        "Consult Celia Moss Dawn about the evidence from quest 025",
+        "Present the evidence before a disputed council",
+        "Investigate: A forged seal implicates an innocent ally",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "A forged seal implicates an innocent ally",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Celia Moss Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_144",
+      "number": 144,
+      "title": "Mistbound Reappearance: Atlas Echo",
+      "chainId": "mv_chain_05",
+      "chainStage": 4,
+      "previousQuestId": "mv_side_035",
+      "previousChainQuestId": "mv_side_143",
+      "questGiver": "Dorian Quill Dawn",
+      "featuredPartyMembers": [
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_9"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 11,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Recover a lost witness beyond the mists.",
+      "objectives": [
+        "Consult Dorian Quill Dawn about the evidence from quest 035",
+        "Recover a lost witness beyond the mists",
+        "Investigate: The witness has aged differently from the party",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "The witness has aged differently from the party",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Dorian Quill Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_145",
+      "number": 145,
+      "title": "The Ashen Bargain: Atlas Contract",
+      "chainId": "mv_chain_05",
+      "chainStage": 5,
+      "previousQuestId": "mv_side_045",
+      "previousChainQuestId": "mv_side_144",
+      "questGiver": "Edda Stone Dawn",
+      "featuredPartyMembers": [
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_10"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 14,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Challenge a contract exploiting the unresolved mystery.",
+      "objectives": [
+        "Consult Edda Stone Dawn about the evidence from quest 045",
+        "Challenge a contract exploiting the unresolved mystery",
+        "Investigate: The contract can be broken without violence",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "The contract can be broken without violence",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Edda Stone Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_146",
+      "number": 146,
+      "title": "The Court of Unfinished Stories: Atlas Memory",
+      "chainId": "mv_chain_05",
+      "chainStage": 6,
+      "previousQuestId": "mv_side_055",
+      "previousChainQuestId": "mv_side_145",
+      "questGiver": "Fenn Ash Dawn",
+      "featuredPartyMembers": [
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_1"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 17,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Trade favors for a missing account of the mystery.",
+      "objectives": [
+        "Consult Fenn Ash Dawn about the evidence from quest 055",
+        "Trade favors for a missing account of the mystery",
+        "Investigate: The account exists in two contradictory versions",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "The account exists in two contradictory versions",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Fenn Ash Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_147",
+      "number": 147,
+      "title": "The Starborne Crossing: Atlas Beacon",
+      "chainId": "mv_chain_05",
+      "chainStage": 7,
+      "previousQuestId": "mv_side_065",
+      "previousChainQuestId": "mv_side_146",
+      "questGiver": "Galia Reed Dawn",
+      "featuredPartyMembers": [
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_2"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 20,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Trace the mystery through a damaged relay route.",
+      "objectives": [
+        "Consult Galia Reed Dawn about the evidence from quest 065",
+        "Trace the mystery through a damaged relay route",
+        "Investigate: A vessel carries evidence from a future journey",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "A vessel carries evidence from a future journey",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Galia Reed Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_148",
+      "number": 148,
+      "title": "The Door That Remembers: Atlas Key",
+      "chainId": "mv_chain_05",
+      "chainStage": 8,
+      "previousQuestId": "mv_side_075",
+      "previousChainQuestId": "mv_side_147",
+      "questGiver": "Hale Meridian Dawn",
+      "featuredPartyMembers": [
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_3"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 23,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Locate the portal that connects the scattered clues.",
+      "objectives": [
+        "Consult Hale Meridian Dawn about the evidence from quest 075",
+        "Locate the portal that connects the scattered clues",
+        "Investigate: Its key is an earlier act of mercy",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "Its key is an earlier act of mercy",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Hale Meridian Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_149",
+      "number": 149,
+      "title": "The Shadow of the Original: Atlas Shadow",
+      "chainId": "mv_chain_05",
+      "chainStage": 9,
+      "previousQuestId": "mv_side_085",
+      "previousChainQuestId": "mv_side_148",
+      "questGiver": "Iris Thorn Dawn",
+      "featuredPartyMembers": [
+        "chain_05_member_9",
+        "chain_05_member_10",
+        "chain_05_member_4"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 26,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Confront the hidden architect of the mystery.",
+      "objectives": [
+        "Consult Iris Thorn Dawn about the evidence from quest 085",
+        "Confront the hidden architect of the mystery",
+        "Investigate: The apparent antagonist was protecting someone",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "The apparent antagonist was protecting someone",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Iris Thorn Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_150",
+      "number": 150,
+      "title": "The Seventh Return: Atlas Legacy",
+      "chainId": "mv_chain_05",
+      "chainStage": 10,
+      "previousQuestId": "mv_side_095",
+      "previousChainQuestId": "mv_side_149",
+      "questGiver": "Joren Star Dawn",
+      "featuredPartyMembers": [
+        "chain_05_member_10",
+        "chain_05_member_1",
+        "chain_05_member_5"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 29,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Ilya's original case returns: maps depicting roads from earlier traversals. Resolve the mystery and preserve testimony for future traversals.",
+      "objectives": [
+        "Consult Joren Star Dawn about the evidence from quest 095",
+        "Resolve the mystery and preserve testimony for future traversals",
+        "Investigate: The final choice changes who remembers the truth",
+        "Resolve the local dispute and preserve the atlas evidence for the next stage"
+      ],
+      "complication": "the most accurate map erases a village",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the atlas evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Atlas evidence fragment",
+        "Contact favor from Joren Star Dawn"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    }
+  ]
+}

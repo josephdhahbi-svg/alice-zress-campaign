@@ -1,0 +1,890 @@
+{
+  "schema": "moonveil.tavern-pack.v1",
+  "region": "Barovia",
+  "firstBook": 10,
+  "lastBook": 12,
+  "count": 10,
+  "status": "AUTHORED_DRAFT",
+  "taverns": [
+    {
+      "id": "mv_tavern_031",
+      "name": "The Kindly Raven",
+      "book": 10,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_031",
+      "kind": "roadside inn",
+      "proprietor": {
+        "name": "Mila Ember",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Kindly Raven is a roadside inn serving travelers in Barovia. Warm stew and private booths.",
+      "signatureService": "Warm stew and private booths",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_031",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_131",
+        "wave3QuestId": "mv_side_231",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Kindly Raven. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_032",
+      "name": "The Misted Hearth",
+      "book": 11,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_032",
+      "kind": "guildhouse tavern",
+      "proprietor": {
+        "name": "Petr Hearth",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Misted Hearth is a guildhouse tavern serving travelers in Barovia. Fresh bread and herbal tea.",
+      "signatureService": "Fresh bread and herbal tea",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_032",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_132",
+        "wave3QuestId": "mv_side_232",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Misted Hearth. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_033",
+      "name": "The Dawnless Candle",
+      "book": 12,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_033",
+      "kind": "refuge canteen",
+      "proprietor": {
+        "name": "Adela Kettle",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Dawnless Candle is a refuge canteen serving travelers in Barovia. Medicinal broth and quiet alcoves.",
+      "signatureService": "Medicinal broth and quiet alcoves",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_033",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_133",
+        "wave3QuestId": "mv_side_233",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Dawnless Candle. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_034",
+      "name": "The Widow's Rest",
+      "book": 10,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_034",
+      "kind": "scholars' hostel",
+      "proprietor": {
+        "name": "Irena Moss",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Widow's Rest is a scholars' hostel serving travelers in Barovia. Map exchange and research table.",
+      "signatureService": "Map exchange and research table",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_034",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_134",
+        "wave3QuestId": "mv_side_234",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Widow's Rest. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_035",
+      "name": "The Last Warm Bowl",
+      "book": 11,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_035",
+      "kind": "crafting lodge",
+      "proprietor": {
+        "name": "Boris Stone",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Last Warm Bowl is a crafting lodge serving travelers in Barovia. Shared forge and repair benches.",
+      "signatureService": "Shared forge and repair benches",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_035",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_135",
+        "wave3QuestId": "mv_side_235",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Last Warm Bowl. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_036",
+      "name": "The Crooked Clock",
+      "book": 12,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_036",
+      "kind": "pilgrim rest",
+      "proprietor": {
+        "name": "Katya Wick",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Crooked Clock is a pilgrim rest serving travelers in Barovia. Simple meals and shrine alcove.",
+      "signatureService": "Simple meals and shrine alcove",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_036",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_136",
+        "wave3QuestId": "mv_side_236",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Crooked Clock. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_037",
+      "name": "The Lantern in Fog",
+      "book": 10,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_037",
+      "kind": "caravanserai",
+      "proprietor": {
+        "name": "Doru Reed",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Lantern in Fog is a caravanserai serving travelers in Barovia. Pack animal shelter and supply crates.",
+      "signatureService": "Pack animal shelter and supply crates",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_037",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_137",
+        "wave3QuestId": "mv_side_237",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Lantern in Fog. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_038",
+      "name": "The Chapel's Kitchen",
+      "book": 11,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_038",
+      "kind": "river or dock inn",
+      "proprietor": {
+        "name": "Vera Copper",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Chapel's Kitchen is a river or dock inn serving travelers in Barovia. Cargo lockers and traveler noticeboard.",
+      "signatureService": "Cargo lockers and traveler noticeboard",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_038",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_138",
+        "wave3QuestId": "mv_side_238",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Chapel's Kitchen. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_039",
+      "name": "The Old Coach House",
+      "book": 12,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_039",
+      "kind": "hidden safehouse",
+      "proprietor": {
+        "name": "Nadia Vale",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Old Coach House is a hidden safehouse serving travelers in Barovia. Discreet entrance and warded meeting room.",
+      "signatureService": "Discreet entrance and warded meeting room",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_039",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_139",
+        "wave3QuestId": "mv_side_239",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Old Coach House. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_040",
+      "name": "The Morning Song",
+      "book": 10,
+      "trilogy": 4,
+      "region": "Barovia",
+      "plane": "Domains of Dread",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_040",
+      "kind": "community hearth",
+      "proprietor": {
+        "name": "Elena Dawn",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Morning Song is a community hearth serving travelers in Barovia. Community kitchen and rescue bulletin.",
+      "signatureService": "Community kitchen and rescue bulletin",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_040",
+        "chainId": "mv_chain_04",
+        "wave2QuestId": "mv_side_140",
+        "wave3QuestId": "mv_side_240",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Morning Song. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Barovia roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+"use strict";
+const test=require("node:test"),assert=require("node:assert/strict");
+const {CHOICE_ORDER,getDialogueScene,getDialogueChoices,previewDialogueChoice}=require("./dialogue-engine");
+test("Pit of Ghaunadaur presents exactly five authored choices in canonical order",()=>{
+ const scene=getDialogueScene("pit_ghaunadaur");
+ assert.equal(scene.plane,"MATERIAL");
+ assert.equal(scene.drYear,null);
+ assert.equal(scene.sourceStatus,"HOMEBREW_PROPOSAL");
+ const choices=getDialogueChoices("pit_ghaunadaur");
+ assert.equal(choices.length,5);
+ assert.deepEqual(choices.map(c=>c.type),CHOICE_ORDER);
+ assert.deepEqual(choices.map(c=>c.number),[1,2,3,4,5]);
+ assert.ok(choices.every(c=>c.approval==="DM_REQUIRED"&&c.effect==="NONE"));
+ assert.equal(previewDialogueChoice("pit_ghaunadaur","UTILITY").reason,"DM_ADJUDICATION_REQUIRED");
+ assert.equal(previewDialogueChoice("pit_ghaunadaur","UTILITY").sideEffects,"NONE");
+ assert.equal(previewDialogueChoice("pit_ghaunadaur","EVIL").reason,"INVALID_CHOICE");
+ assert.equal(previewDialogueChoice("missing","UTILITY").reason,"UNKNOWN_SCENE");
+ assert.deepEqual(getDialogueChoices("missing"),[]);
+ assert.throws(()=>CHOICE_ORDER.push("EXTRA"),TypeError);
+ assert.throws(()=>scene.choices.push({}),TypeError);
+});

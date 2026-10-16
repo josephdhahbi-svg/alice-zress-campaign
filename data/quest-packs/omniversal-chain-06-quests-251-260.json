@@ -1,0 +1,1022 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "wave": 3,
+  "chainId": "mv_chain_06",
+  "title": "The Rivers of Mercy",
+  "continuesFrom": "mv_side_160",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_06_member_1",
+      "name": "Aster Vale River",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_2",
+      "name": "Brin Copper River",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_3",
+      "name": "Celia Moss River",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_4",
+      "name": "Dorian Quill River",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_5",
+      "name": "Edda Stone River",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_6",
+      "name": "Fenn Ash River",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_7",
+      "name": "Galia Reed River",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_8",
+      "name": "Hale Meridian River",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_9",
+      "name": "Iris Thorn River",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_06_member_10",
+      "name": "Joren Star River",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_251",
+      "number": 251,
+      "title": "The Reopened Passage: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 11,
+      "previousQuestId": "mv_side_151",
+      "earliestQuestId": "mv_side_006",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Meren",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_4",
+        "chain_06_member_8"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 3,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 006 and 151",
+        "Search the reopened tunnel for a witness who disappeared in the first expedition",
+        "Investigate the complication: A rescue site conceals a community that refuses relocation",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "A rescue site conceals a community that refuses relocation",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Underdark ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_252"
+    },
+    {
+      "id": "mv_side_252",
+      "number": 252,
+      "title": "The Ledger of Consequences: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 12,
+      "previousQuestId": "mv_side_152",
+      "earliestQuestId": "mv_side_016",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Dorian Quill River",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_2",
+        "chain_06_member_5",
+        "chain_06_member_9"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 6,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 016 and 152",
+        "Interview merchants and refugees about a newly discovered ledger",
+        "Investigate the complication: A former antagonist has begun making restitution",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "A former antagonist has begun making restitution",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Sword Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_253"
+    },
+    {
+      "id": "mv_side_253",
+      "number": 253,
+      "title": "The Council's Second Witness: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 13,
+      "previousQuestId": "mv_side_153",
+      "earliestQuestId": "mv_side_026",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Edda Stone River",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_3",
+        "chain_06_member_6",
+        "chain_06_member_10"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 9,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 026 and 153",
+        "Compare testimony against the council's archived evidence",
+        "Investigate the complication: A forged seal was used to protect a frightened hatchling",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "A forged seal was used to protect a frightened hatchling",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Dragon Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_254"
+    },
+    {
+      "id": "mv_side_254",
+      "number": 254,
+      "title": "A Memory in the Mist: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 14,
+      "previousQuestId": "mv_side_154",
+      "earliestQuestId": "mv_side_036",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Fenn Ash River",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_4",
+        "chain_06_member_7",
+        "chain_06_member_1"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 12,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 036 and 154",
+        "Recover a missing record from a village trapped in the mists",
+        "Investigate the complication: The record documents a visit that has not happened yet",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "The record documents a visit that has not happened yet",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Barovia ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_255"
+    },
+    {
+      "id": "mv_side_255",
+      "number": 255,
+      "title": "The Contract's Missing Clause: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 15,
+      "previousQuestId": "mv_side_155",
+      "earliestQuestId": "mv_side_046",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Galia Reed River",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_5",
+        "chain_06_member_8",
+        "chain_06_member_2"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 15,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 046 and 155",
+        "Challenge a contract built upon an earlier falsehood",
+        "Investigate the complication: The contract holder is trying to free a dependent",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "The contract holder is trying to free a dependent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Avernus ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_256"
+    },
+    {
+      "id": "mv_side_256",
+      "number": 256,
+      "title": "The Story Nobody Told: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 16,
+      "previousQuestId": "mv_side_156",
+      "earliestQuestId": "mv_side_056",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Hale Meridian River",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_6",
+        "chain_06_member_9",
+        "chain_06_member_3"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 18,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 056 and 156",
+        "Negotiate access to a story that was removed from public memory",
+        "Investigate the complication: The storyteller cannot distinguish two traversals",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "The storyteller cannot distinguish two traversals",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Feywild ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_257"
+    },
+    {
+      "id": "mv_side_257",
+      "number": 257,
+      "title": "The Ship of Returning Voices: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 17,
+      "previousQuestId": "mv_side_157",
+      "earliestQuestId": "mv_side_066",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Iris Thorn River",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_7",
+        "chain_06_member_10",
+        "chain_06_member_4"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 21,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 066 and 157",
+        "Locate a ship carrying evidence from an abandoned expedition",
+        "Investigate the complication: The ship's crew believes the quest was completed already",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "The ship's crew believes the quest was completed already",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Wildspace ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_258"
+    },
+    {
+      "id": "mv_side_258",
+      "number": 258,
+      "title": "The Door of Confession: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 18,
+      "previousQuestId": "mv_side_158",
+      "earliestQuestId": "mv_side_076",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Joren Star River",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_8",
+        "chain_06_member_1",
+        "chain_06_member_5"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 24,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 076 and 158",
+        "Trace the evidence through a gate registry and witness exchange",
+        "Investigate the complication: The correct portal opens only for a truthful confession",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "The correct portal opens only for a truthful confession",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Sigil ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_259"
+    },
+    {
+      "id": "mv_side_259",
+      "number": 259,
+      "title": "The Witness in Shadow: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 19,
+      "previousQuestId": "mv_side_159",
+      "earliestQuestId": "mv_side_086",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Aster Vale River",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_9",
+        "chain_06_member_2",
+        "chain_06_member_6"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 27,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 086 and 159",
+        "Restore a damaged memory without rewriting anyone's identity",
+        "Investigate the complication: The forgotten witness is protecting an apparent villain",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "The forgotten witness is protecting an apparent villain",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Shadowfell ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_260"
+    },
+    {
+      "id": "mv_side_260",
+      "number": 260,
+      "title": "The Legacy Beyond the Loop: Water",
+      "chainId": "mv_chain_06",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 20,
+      "previousQuestId": "mv_side_160",
+      "earliestQuestId": "mv_side_096",
+      "previousArcFinale": "mv_side_160",
+      "questGiver": "Brin Copper River",
+      "recurringCastIds": [
+        "chain_06_member_1",
+        "chain_06_member_2",
+        "chain_06_member_3",
+        "chain_06_member_4",
+        "chain_06_member_5",
+        "chain_06_member_6",
+        "chain_06_member_7",
+        "chain_06_member_8",
+        "chain_06_member_9",
+        "chain_06_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_06_member_10",
+        "chain_06_member_3",
+        "chain_06_member_7"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 30,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier water investigations, clean water deliveries vanish across planar borders.",
+      "objectives": [
+        "Review verified evidence from quests 096 and 160",
+        "Present the chain's evidence and decide what survives the next return",
+        "Investigate the complication: a well guardian has been bribed with false promises",
+        "Record the consequences and secure a lead for the next water quest"
+      ],
+      "complication": "a well guardian has been bribed with false promises",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate water clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Water testimony fragment",
+        "Multiversal Convergence ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": null
+    }
+  ]
+}

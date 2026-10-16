@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "canonicalCheckpoint": {
+    "character": "Alice Z'ress",
+    "class": "Great Old One Warlock",
+    "background": "Acolyte",
+    "level": 1,
+    "hp": 5,
+    "maxHp": 9,
+    "earnedRelics": 0
+  },
+  "originGifts": [
+    {
+      "slot": 1,
+      "source": "Mystra",
+      "spell": "Shield",
+      "status": "confirmed"
+    },
+    {
+      "slot": 2,
+      "source": "Ghaunadaur",
+      "spell": "Acid Splash",
+      "status": "confirmed"
+    },
+    {
+      "slot": 3,
+      "source": "Eilistraee",
+      "spell": "Light",
+      "status": "confirmed"
+    },
+    {
+      "slot": 4,
+      "source": null,
+      "spell": null,
+      "status": "pending"
+    },
+    {
+      "slot": 5,
+      "source": null,
+      "spell": null,
+      "status": "pending"
+    }
+  ],
+  "story": {
+    "books": 30,
+    "trilogies": 10,
+    "traversals": 7,
+    "finalTraversal": 7
+  },
+  "grandArtifacts": [
+    {
+      "trilogy": 1,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": "Star of the First Weave"
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": "Obsidian Memory"
+      }
+    },
+    {
+      "trilogy": 2,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      }
+    },
+    {
+      "trilogy": 3,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      }
+    },
+    {
+      "trilogy": 4,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      }
+    },
+    {
+      "trilogy": 5,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      }
+    },
+    {
+      "trilogy": 6,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      }
+    },
+    {
+      "trilogy": 7,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      }
+    },
+    {
+      "trilogy": 8,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      }
+    },
+    {
+      "trilogy": 9,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      }
+    },
+    {
+      "trilogy": 10,
+      "mistral": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      },
+      "netherese": {
+        "status": "planned",
+        "earned": false,
+        "name": null
+      }
+    }
+  ],
+  "relicCollection": {
+    "target": 111,
+    "earned": 0,
+    "reconciledWithGrandArtifacts": false
+  },
+  "narratedElderEye": {
+    "status": "simulation_only",
+    "persistentAwards": 0
+  },
+  "identities": {
+    "Mistral": "campaign_designation_unresolved",
+    "Mystryl": "historical_deity_distinct",
+    "Mystra": "deity_distinct"
+  },
+  "v46Candidates": [
+    "Core Stone of Gador",
+    "Moon-Silver Blade of the Silver Maiden",
+    "Tear of the Weave-Mother",
+    "Codex of Nether Scroll Fragments",
+    "Primal Spark of Mystryl"
+  ]
+}

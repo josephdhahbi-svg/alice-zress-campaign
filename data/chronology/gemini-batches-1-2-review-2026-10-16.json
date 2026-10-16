@@ -1,0 +1,62 @@
+{
+  "schema": "moonveil.gemini-batches-1-2-review.v1",
+  "status": "STAGED_NOT_CANON_APPROVED",
+  "batch1": {
+    "status": "PARTIAL_REVISION",
+    "publicationsReceived": 7,
+    "claimedScope": "1974-1989",
+    "coverage": "SAMPLE_ONLY",
+    "issues": [
+      "1974-01-01 with YEAR precision is a placeholder; represent year separately, exact date null",
+      "1987-08-01 marked EXACT lacks verifiable source proof",
+      "Source reference strings are bibliographic leads not independently verified citations",
+      "SQL and JS date precision need a formal consistency validator",
+      "Incorrect SQL clause COLLATE NOCASE AND edition = ?",
+      "Test misidentifies TSR 2011 and fictional Greyhawk Wars at 576 CY",
+      "Foreign key test claim not backed by a negative foreign-key test",
+      "Tests are provided as source only, no runtime output evidence"
+    ]
+  },
+  "batch2": {
+    "status": "REQUIRES_CANON_CORRECTION",
+    "protagonists": [
+      {
+        "name": "Alice Z'ress",
+        "status": "ESTABLISHED",
+        "class": "Great Old One Warlock",
+        "eraAssignment": "UNRESOLVED_ACROSS_BOOKS"
+      },
+      {
+        "name": "Kaelen Vane",
+        "status": "GEMINI_PROPOSED_NOT_APPROVED",
+        "class": "Chronurgist Wizard"
+      },
+      {
+        "name": "Vespera Moonshadow",
+        "status": "GEMINI_PROPOSED_NOT_APPROVED",
+        "class": "Twilight Cleric / Paladin"
+      }
+    ],
+    "constraints": [
+      "Three era windows across all 30 books; no forced 10-book era blocks",
+      "Seven traversals of all 30 books, 3-3-1 pass rhythm, not 3 books plus 3 books plus 1 book",
+      "Alice begins level 1 falling into the Pit of Ghaunadaur, not level 21",
+      "Do not add Artificer multiclass without approval",
+      "Real October 2026 is not an in-world DR date",
+      "Mystery clue discovery does not equal solved mystery",
+      "Player discoveries must be scoped to campaign, traversal and character"
+    ],
+    "mysteryPrototypeStatus": "SEPARATE_DRAFT_ENGINE"
+  },
+  "existingCanonReferences": [
+    "data/chronology/moonveil-three-eras-30-books.json",
+    "data/roadmap/moonveil-modular-three-era-master-plan.json",
+    "backend/weave-chronology-tracker.js"
+  ],
+  "approvalRequiredFor": [
+    "Protagonist additions",
+    "Canon date assignments",
+    "Class or level changes",
+    "World event revelations"
+  ]
+}

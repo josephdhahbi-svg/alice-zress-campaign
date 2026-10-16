@@ -1,0 +1,125 @@
+/* Moonveil cinematic interface v1: shared accessible theme */
+:root{color-scheme:dark;--mv-bg:#0b0f19;--mv-slate:#131c31;--mv-hero:#478DFF;--mv-villain:#F16B78;--mv-neutral:#48C99A;--mv-magic:#B99AFF;--mv-gold:#F4C66B;--mv-map:#64C8DF;--mv-text:#eef1ff;--mv-muted:#aebad2;--mv-line:#354362;--mv-focus:#f4c66b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#22203e,transparent 52%),var(--mv-bg);color:var(--mv-text);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+.mv-shell{width:min(1260px,calc(100% - 32px));margin:0 auto;padding:28px 0 52px}
+.mv-eyebrow{color:var(--mv-map);font-size:.8rem;letter-spacing:.17em;text-transform:uppercase}
+.mv-header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.mv-title{font-size:clamp(1.65rem,4vw,3.25rem);line-height:1.15;margin:8px 0}
+.mv-subtitle{color:var(--mv-muted);max-width:72ch}
+.mv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.mv-panel{position:relative;isolation:isolate;min-height:235px;padding:24px;display:flex;flex-direction:column;justify-content:end;overflow:hidden;border:1px solid var(--mv-line);border-radius:18px;background:linear-gradient(0deg,rgba(5,8,18,.94),rgba(11,15,25,.23)),radial-gradient(circle at 70% 24%,rgba(185,154,255,.3),transparent 48%),#131c31;box-shadow:0 14px 45px rgba(0,0,0,.25)}
+.mv-panel::before{content:"";position:absolute;inset:0;z-index:-1;background:repeating-linear-gradient(110deg,transparent 0 36px,rgba(100,200,223,.035) 37px 38px);pointer-events:none}
+.mv-panel:nth-child(2){background-color:#14213d}.mv-panel:nth-child(3){background-color:#1b1633}.mv-panel:nth-child(4){background-color:#11263a}
+.mv-panel h2{margin:6px 0;font-size:1.4rem}.mv-panel p{margin:0;color:#d3dcef}
+.mv-chip{align-self:start;padding:4px 10px;border:1px solid currentColor;border-radius:999px;font-size:.73rem;letter-spacing:.08em;text-transform:uppercase}
+.mv-hero{color:var(--mv-hero)}.mv-villain{color:var(--mv-villain)}.mv-neutral{color:var(--mv-neutral)}.mv-magic{color:var(--mv-magic)}.mv-artifact{color:var(--mv-gold)}.mv-map{color:var(--mv-map)}
+.mv-decisions{margin-top:18px;padding:20px;border:1px solid var(--mv-line);border-radius:18px;background:var(--mv-slate)}
+.mv-decisions h2{margin:0 0 12px;font-size:1.2rem}
+.mv-choice-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.mv-choice{min-height:74px;padding:12px;border:1px solid #566486;border-radius:12px;background:#1d2a43;color:var(--mv-text);font:inherit;font-weight:650;cursor:pointer;transition:transform .16s ease,background .16s ease,border-color .16s ease}
+.mv-choice:hover{transform:translateY(-2px);background:#2c3959;border-color:var(--mv-magic)}
+.mv-choice:focus-visible{outline:3px solid var(--mv-focus);outline-offset:3px}
+.mv-status{margin-top:14px;min-height:44px;color:var(--mv-muted)}
+.mv-dice{border:1px solid var(--mv-gold);background:#242137;color:var(--mv-text);border-radius:10px;padding:10px 16px;cursor:pointer}
+dialog.mv-modal{max-width:min(420px,calc(100% - 32px));border:1px solid var(--mv-magic);border-radius:18px;background:var(--mv-slate);color:var(--mv-text);padding:24px}
+dialog.mv-modal::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(6px)}
+@media(max-width:800px){.mv-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mv-choice:last-child{grid-column:1/-1}}
+@media(max-width:620px){.mv-grid{grid-template-columns:1fr}.mv-panel{min-height:195px}.mv-shell{width:calc(100% - 22px)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Authenticated atlas controls */
+.mv-connect{display:flex;gap:12px;flex-wrap:wrap;align-items:end}
+.mv-connect label{display:flex;flex:1 1 190px;flex-direction:column;gap:6px;color:var(--mv-muted);font-size:.9rem}
+.mv-connect input{width:100%;padding:12px;border:1px solid var(--mv-line);border-radius:10px;background:#0d1527;color:var(--mv-text);font:inherit}
+.mv-connect input:focus-visible{outline:3px solid var(--mv-focus);outline-offset:2px}
+.mv-connect>.mv-choice{min-height:46px;flex:1 1 140px}
+.mv-room-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px}
+.mv-room-list .mv-choice{min-height:65px}
+
+/* Narrative journal: clearly distinguish pending and reviewed entries */
+.mv-journal-list{display:grid;gap:10px;margin-top:14px}
+.mv-journal-entry{padding:12px 16px;border:1px solid var(--mv-line);border-left:4px solid var(--mv-magic);border-radius:10px;background:#101a2c}
+.mv-journal-entry p{margin:6px 0 0;color:var(--mv-muted)}
+.mv-choice:disabled{opacity:.5;cursor:not-allowed;transform:none}
+#submit-choice,#refresh-journal{margin-top:10px;min-height:46px}
+
+/* Moonveil GUI enhancement: original CSS cavern art, no external image dependencies. */
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+body{background:radial-gradient(ellipse at 50% -12%,#28325a 0,transparent 45%),radial-gradient(ellipse at 90% 40%,#122e3e 0,transparent 50%),#070b14}
+.mv-shell{max-width:1320px}
+.mv-header{padding:24px 4px 16px;border-bottom:1px solid rgba(185,154,255,.22)}
+.mv-title{font-family:Georgia,"Times New Roman",serif;letter-spacing:.015em;text-shadow:0 2px 24px #060816}
+.mv-hud{display:grid;grid-template-columns:minmax(220px,38%) 1fr;min-height:310px;overflow:hidden;border:1px solid #54617e;border-radius:20px;background:linear-gradient(120deg,#111b30,#101426);box-shadow:0 22px 70px #0008;margin:22px 0}
+.mv-hud-portrait{position:relative;min-height:290px;display:flex;align-items:end;padding:24px;isolation:isolate;background:radial-gradient(ellipse at 50% 21%,#d5e4ff 0,#a5b9df 3%,#546e9e 6%,transparent 11%),radial-gradient(ellipse at 52% 50%,#44618b88 0,transparent 40%),linear-gradient(160deg,#090d18 8%,#293452 50%,#05080f 100%);overflow:hidden}
+.mv-hud-portrait:before,.mv-hud-portrait:after{content:"";position:absolute;z-index:-1;inset:0;background:#080d19;clip-path:polygon(0 0,22% 0,16% 19%,37% 42%,18% 59%,28% 100%,0 100%);filter:drop-shadow(8px 0 10px #000)}
+.mv-hud-portrait:after{transform:scaleX(-1);background:#0a1020}
+.mv-hud-portrait span{font-size:.74rem;font-weight:750;letter-spacing:.18em;color:#dce9ff;text-shadow:0 2px 12px #000}
+.mv-hud-details{padding:clamp(18px,3vw,38px)}.mv-hud-details h2{font:clamp(2rem,4vw,3.4rem)/1.1 Georgia,serif;margin:6px 0;color:#f2e6ff}.mv-hud-details>p{color:#bac8e4}
+.mv-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0}
+.mv-stats>div{border:1px solid #354766;background:#0c1629;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px}.mv-stats strong{color:#f3cc7c}.mv-stats span{font-size:.85rem;color:#d5deee}
+.mv-quicknav{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 24px}.mv-quicknav a{color:#e6e7fa;text-decoration:none;border:1px solid #425372;background:#14223a;padding:9px 15px;border-radius:99px;font-size:.9rem}.mv-quicknav a:hover,.mv-quicknav a:focus-visible{background:#2b3658;outline:2px solid #e6c57c}
+.mv-resources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.mv-resources article{border:1px solid #394763;background:#101a2c;padding:16px;border-radius:12px}.mv-resources h3{margin:0;color:#d7b6ff}.mv-resources p{color:#bac8e0;margin-bottom:0}
+.mv-panel{min-height:280px;border-color:#53607c;box-shadow:0 18px 55px #0008}.mv-panel h2{font-family:Georgia,serif;font-size:1.65rem}
+.mv-panel:nth-child(1){background:linear-gradient(0deg,#080d1df2,#0b102055),radial-gradient(circle at 65% 20%,#d5dafa,transparent 11%),linear-gradient(125deg,#070a14 20%,#293e63 54%,#0a101e)}
+.mv-panel:nth-child(2){background:linear-gradient(0deg,#080d1df2,#0b102055),radial-gradient(ellipse at 45% 30%,#86375b,transparent 36%),linear-gradient(150deg,#0b0b14,#30152d,#080e17)}
+.mv-panel:nth-child(3){background:linear-gradient(0deg,#080d1df2,#0b102055),radial-gradient(ellipse at 60% 24%,#7156ba,transparent 38%),linear-gradient(150deg,#0b1020,#24204d,#080d17)}
+.mv-panel:nth-child(4){background:linear-gradient(0deg,#080d1df2,#0b102055),radial-gradient(ellipse at 56% 20%,#c1d9f9,transparent 20%),linear-gradient(145deg,#10162b,#24445d,#090e1b)}
+.mv-decision-focus{border-color:#b69bea;box-shadow:0 0 0 1px #685486,0 18px 55px #0007}.mv-decision-focus .mv-choice{min-height:90px}
+.mv-decisions{background:linear-gradient(140deg,#151e34,#101729);box-shadow:0 12px 40px #0004}
+.mv-choice{touch-action:manipulation}
+@media(max-width:850px){.mv-stats,.mv-resources{grid-template-columns:1fr}.mv-hud{grid-template-columns:1fr}.mv-hud-portrait{min-height:230px}}
+@media(max-width:620px){.mv-hud-details{padding:20px}.mv-quicknav{overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px}.mv-quicknav a{white-space:nowrap}.mv-panel{min-height:235px}.mv-decision-focus .mv-choice{min-height:70px}}
+
+/* Original repo-hosted atmospheric artwork; CSS gradient remains the fallback. */
+.mv-hud-portrait{background-image:linear-gradient(0deg,#070b18c9,transparent 60%),url("/play/moonveil-underdark-original.svg");background-size:cover;background-position:center}
+
+/* Moonveil RPG interface v3: original BG3-inspired presentation, not a copy of BG3 assets. */
+:root{--mv-bg:#090b0d;--mv-slate:#151714;--mv-line:#64543a;--mv-gold:#dbba78;--mv-focus:#ffdf96;--mv-text:#f2eadc;--mv-muted:#b8b1a3;--mv-magic:#bb9ce5}
+body{background:radial-gradient(ellipse 100% 620px at 50% -180px,#4d3e33 0,transparent 70%),linear-gradient(90deg,#090b0e,#15191c 52%,#080a0d);color:var(--mv-text)}
+.mv-game-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(275px,325px);column-gap:18px;row-gap:16px;width:min(1530px,calc(100% - 36px));padding-top:0}
+.mv-game-layout>*{min-width:0}
+.mv-topbar{grid-column:1/-1;display:flex;align-items:center;gap:14px;min-height:66px;padding:8px 22px;border-bottom:1px solid #8b704c;background:linear-gradient(90deg,#0c1016,#242018 45%,#0c1016);box-shadow:0 8px 28px #0008}
+.mv-brand-mark{font-size:1.9rem;color:#e5c48a}.mv-brand{font-family:Georgia,serif;font-size:1.15rem;letter-spacing:.15em;font-weight:700;white-space:nowrap}.mv-brand em{font-style:normal;color:#c8a76f}.mv-topbar-divider{height:25px;border-left:1px solid #66563e}.mv-topbar-context{color:#d1c0a2;font-size:.75rem;letter-spacing:.14em}.mv-topbar-tag{margin-left:auto;border:1px solid #65533b;padding:6px 10px;color:#d2b988;font-size:.68rem;letter-spacing:.1em}
+.mv-header{grid-column:1/-1;min-height:145px;margin:0;padding:30px 28px 12px;border:0;position:relative}.mv-header:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 20% 50%,#39332688,transparent 65%);pointer-events:none}.mv-header .mv-eyebrow{color:#c6a87d}.mv-title{font:clamp(2.5rem,5vw,4.6rem)/1.02 Georgia,serif;letter-spacing:-.035em;color:#fff4de}.mv-title-accent{color:#e2c48e;text-shadow:0 2px 28px #b79b6744}
+.mv-hud{grid-column:1/-1;grid-row:auto;margin:0;border-radius:5px;border:1px solid #8b7350;background:#101316;box-shadow:0 20px 60px #0009}.mv-hud-portrait{min-height:280px}.mv-hud-details h2{color:#f4e0b4}.mv-stats>div{background:#101416;border-color:#5a4e3b}.mv-stats strong{color:#e4bd78}
+.mv-quicknav{grid-column:1/-1;margin:0;padding:10px 4px;position:sticky;top:0;z-index:8;background:#0c1012ed;backdrop-filter:blur(16px);border-block:1px solid #64523c}.mv-quicknav a{border:0;border-radius:3px;background:transparent;color:#cbbda6;font-size:.79rem;font-weight:750;letter-spacing:.09em;text-transform:uppercase;padding:12px 16px}.mv-quicknav a:hover,.mv-quicknav a:focus-visible{background:#3b3023;color:#f7dfad}
+.mv-decisions{margin:0;border:1px solid #5c4d37;border-radius:5px;background:linear-gradient(155deg,#1b1d1c,#101416);box-shadow:0 12px 30px #0006}.mv-decisions h2{font:1.5rem Georgia,serif;color:#ead5ae}.mv-decisions .mv-subtitle{color:#b8b4ac}
+.mv-story-stage{grid-column:1;grid-row:auto;gap:12px}.mv-panel{min-height:280px;border-radius:4px;border:1px solid #7b6448;box-shadow:inset 0 0 0 1px #18140e,0 16px 35px #0009}.mv-panel h2{font-size:1.7rem;color:#f9e8c9;text-shadow:0 2px 10px #000}.mv-panel p{color:#e3ddd2;text-shadow:0 2px 8px #000}.mv-panel:before{background:linear-gradient(0deg,#0008,transparent 55%)}.mv-chip{border-radius:2px;background:#0a1013a8;backdrop-filter:blur(5px);font-weight:750}
+#connection-panel{grid-column:2;grid-row:auto;border-color:#786245}#connection-panel .mv-connect{flex-direction:column;align-items:stretch}#connection-panel .mv-connect label{flex:auto}#connection-panel .mv-connect>.mv-choice{flex:auto}
+.mv-inventory{grid-column:2}.mv-resources{grid-template-columns:1fr}.mv-resources article{background:#101513;border-color:#514734;border-radius:3px}
+#maps-panel{grid-column:1}#discovery-panel{grid-column:2}#room-selection-panel{grid-column:1}
+#choices-panel{grid-column:1;position:relative;border:1px solid #b99560;background:linear-gradient(145deg,#252016,#121619);box-shadow:0 0 0 1px #483b29,0 20px 55px #000a}#choices-panel:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,transparent,#f0d09b,transparent)}#choices-panel .mv-eyebrow{color:#e1bd79}#choices-panel h2{font-size:1.8rem}
+#choices-panel .mv-choice-grid{grid-template-columns:1fr;gap:8px}#choices-panel .mv-choice{min-height:58px;text-align:left;padding:12px 20px;font-weight:550;background:linear-gradient(90deg,#22282a,#14191b);border:1px solid #554b3d;border-left:3px solid #ad8d5b;border-radius:3px;box-shadow:inset 0 1px #ffffff0b}#choices-panel .mv-choice:hover{background:linear-gradient(90deg,#4a3925,#24231f);border-color:#e4c183;transform:translateX(3px)}#choices-panel .mv-choice:focus-visible{outline:2px solid #f2d397;outline-offset:2px}
+.mv-choice{border-radius:3px;background:#282c2c;border-color:#786345;color:#f0e6d5}.mv-choice:hover{background:#40382c;border-color:#d9b677}
+#journal-panel{grid-column:2}#dm-panel{grid-column:2}#quest-panel{grid-column:1}#scene-panel{grid-column:1}#ai-panel{grid-column:1/-1}
+.mv-journal-entry{border-radius:3px;background:#141a1a;border-color:#554c3c;border-left-color:#c8a46e}
+.mv-connect input,.mv-connect select,.mv-connect textarea{border-radius:3px;background:#0c1114;border:1px solid #62533c;color:#eee0c7}
+@media(max-width:1080px){.mv-game-layout{grid-template-columns:minmax(0,1fr) 270px}.mv-topbar-context{display:none}}
+@media(max-width:790px){.mv-game-layout{grid-template-columns:minmax(0,1fr);width:calc(100% - 20px)}.mv-game-layout>*{grid-column:1!important}.mv-topbar{padding:8px 12px}.mv-topbar-tag,.mv-topbar-divider{display:none}.mv-header{padding:20px 8px}.mv-quicknav{top:0}.mv-story-stage{grid-template-columns:repeat(2,minmax(0,1fr))}.mv-hud{grid-template-columns:minmax(0,1fr)}.mv-hud-portrait{min-height:235px}#connection-panel .mv-connect{flex-direction:row}#connection-panel .mv-connect label{flex:1 1 190px}.mv-resources{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:530px){.mv-brand{font-size:.95rem}.mv-story-stage{grid-template-columns:1fr}.mv-panel{min-height:205px}.mv-resources{grid-template-columns:1fr}.mv-title{font-size:2.6rem}.mv-decisions{padding:16px}.mv-topbar{min-height:55px}.mv-hud-details h2{font-size:2.2rem}}
+
+/* Moonveil media experience: responsive comic, interactive gallery and opt-in animation. */
+#cinematic-gallery,#comic-strip,#cinematic-screen{grid-column:1/-1}
+.mv-gallery-stage{position:relative;overflow:hidden;min-height:340px;background:#0c1019;border:1px solid #866e4b}
+.mv-gallery-stage img{display:block;width:100%;height:clamp(260px,42vw,510px);object-fit:cover;transition:filter .5s ease,transform .5s ease}
+.mv-gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:50px 24px 18px;background:linear-gradient(transparent,#05080cf2);text-shadow:0 2px 8px #000}
+.mv-gallery-caption strong{font:clamp(1.5rem,3vw,2.5rem) Georgia,serif;color:#ffe4ad}.mv-gallery-caption p{margin:6px 0;color:#e3e4ec}
+.mv-gallery-controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:12px}.mv-gallery-controls .mv-choice{min-height:44px;padding:9px 14px}.mv-gallery-controls span{color:#e4d3b4;margin:0 auto}
+.mv-art-eye img{filter:hue-rotate(82deg) saturate(1.5) contrast(1.15);transform:scale(1.08)}
+.mv-art-light img{filter:brightness(1.25) saturate(.65) hue-rotate(25deg);transform:scale(1.04)}
+.mv-art-path img{filter:hue-rotate(190deg) brightness(.85);transform:scale(1.11)}
+.mv-comic-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.mv-comic-cell{margin:0;min-width:0;border:1px solid #917752;background:#090d13;overflow:hidden;position:relative}
+.mv-comic-cell img{width:100%;height:220px;object-fit:cover;display:block}
+.mv-comic-cell figcaption{padding:14px;background:#101419;border-top:1px solid #66543b;min-height:110px;display:flex;flex-direction:column;gap:8px}
+.mv-comic-cell figcaption b{color:#e8c78d;font:1.12rem Georgia,serif}.mv-comic-cell figcaption span{font-style:italic;color:#d3c8b9}
+.mv-comic-variant-two img{filter:hue-rotate(80deg) contrast(1.3);transform:scale(1.15)}
+.mv-comic-variant-three img{filter:brightness(1.35) saturate(.55);transform:scale(1.2)}
+.mv-comic-variant-four img{filter:hue-rotate(190deg);transform:scale(1.08)}
+.mv-cinema-screen{min-height:350px;position:relative;overflow:hidden;display:grid;place-items:center;background:linear-gradient(#080c16a6,#05070bd6),url("/play/moonveil-underdark-original.svg") center/cover;border:1px solid #92764b}
+.mv-cinema-text{text-align:center;padding:30px;text-shadow:0 3px 20px #000}.mv-cinema-text span{display:block;font-size:.9rem;letter-spacing:.3em;color:#ebc991}.mv-cinema-text strong{display:block;font:clamp(2.3rem,6vw,5rem) Georgia,serif;color:#fff0c9}.mv-cinema-text p{color:#ddd0bc}
+.mv-cinema-playing{animation:mv-cinema-pan 18s ease-in-out infinite alternate}
+@keyframes mv-cinema-pan{from{background-position:45% 40%;filter:brightness(.85)}to{background-position:60% 65%;filter:brightness(1.15)}}
+@media(max-width:850px){.mv-comic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.mv-comic-grid{grid-template-columns:1fr}.mv-comic-cell img{height:185px}.mv-cinema-screen{min-height:260px}.mv-gallery-controls span{margin:0}}
+@media(prefers-reduced-motion:reduce){.mv-cinema-playing{animation:none}.mv-gallery-stage img{transition:none}}

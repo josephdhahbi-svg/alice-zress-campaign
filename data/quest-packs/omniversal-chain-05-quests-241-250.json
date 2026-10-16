@@ -1,0 +1,1022 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "wave": 3,
+  "chainId": "mv_chain_05",
+  "title": "The Map of Unwritten Places",
+  "continuesFrom": "mv_side_150",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_05_member_1",
+      "name": "Aster Vale Dawn",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_2",
+      "name": "Brin Copper Dawn",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_3",
+      "name": "Celia Moss Dawn",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_4",
+      "name": "Dorian Quill Dawn",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_5",
+      "name": "Edda Stone Dawn",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_6",
+      "name": "Fenn Ash Dawn",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_7",
+      "name": "Galia Reed Dawn",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_8",
+      "name": "Hale Meridian Dawn",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_9",
+      "name": "Iris Thorn Dawn",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_05_member_10",
+      "name": "Joren Star Dawn",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_241",
+      "number": 241,
+      "title": "The Reopened Passage: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 11,
+      "previousQuestId": "mv_side_141",
+      "earliestQuestId": "mv_side_005",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Ilya",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_4",
+        "chain_05_member_8"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 2,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 005 and 141",
+        "Search the reopened tunnel for a witness who disappeared in the first expedition",
+        "Investigate the complication: A rescue site conceals a community that refuses relocation",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "A rescue site conceals a community that refuses relocation",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Underdark ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_242"
+    },
+    {
+      "id": "mv_side_242",
+      "number": 242,
+      "title": "The Ledger of Consequences: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 12,
+      "previousQuestId": "mv_side_142",
+      "earliestQuestId": "mv_side_015",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Dorian Quill Dawn",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_2",
+        "chain_05_member_5",
+        "chain_05_member_9"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 5,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 015 and 142",
+        "Interview merchants and refugees about a newly discovered ledger",
+        "Investigate the complication: A former antagonist has begun making restitution",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "A former antagonist has begun making restitution",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Sword Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_243"
+    },
+    {
+      "id": "mv_side_243",
+      "number": 243,
+      "title": "The Council's Second Witness: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 13,
+      "previousQuestId": "mv_side_143",
+      "earliestQuestId": "mv_side_025",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Edda Stone Dawn",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_3",
+        "chain_05_member_6",
+        "chain_05_member_10"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 8,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 025 and 143",
+        "Compare testimony against the council's archived evidence",
+        "Investigate the complication: A forged seal was used to protect a frightened hatchling",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "A forged seal was used to protect a frightened hatchling",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Dragon Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_244"
+    },
+    {
+      "id": "mv_side_244",
+      "number": 244,
+      "title": "A Memory in the Mist: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 14,
+      "previousQuestId": "mv_side_144",
+      "earliestQuestId": "mv_side_035",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Fenn Ash Dawn",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_4",
+        "chain_05_member_7",
+        "chain_05_member_1"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 11,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 035 and 144",
+        "Recover a missing record from a village trapped in the mists",
+        "Investigate the complication: The record documents a visit that has not happened yet",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "The record documents a visit that has not happened yet",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Barovia ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_245"
+    },
+    {
+      "id": "mv_side_245",
+      "number": 245,
+      "title": "The Contract's Missing Clause: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 15,
+      "previousQuestId": "mv_side_145",
+      "earliestQuestId": "mv_side_045",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Galia Reed Dawn",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_5",
+        "chain_05_member_8",
+        "chain_05_member_2"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 14,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 045 and 145",
+        "Challenge a contract built upon an earlier falsehood",
+        "Investigate the complication: The contract holder is trying to free a dependent",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "The contract holder is trying to free a dependent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Avernus ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_246"
+    },
+    {
+      "id": "mv_side_246",
+      "number": 246,
+      "title": "The Story Nobody Told: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 16,
+      "previousQuestId": "mv_side_146",
+      "earliestQuestId": "mv_side_055",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Hale Meridian Dawn",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_6",
+        "chain_05_member_9",
+        "chain_05_member_3"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 17,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 055 and 146",
+        "Negotiate access to a story that was removed from public memory",
+        "Investigate the complication: The storyteller cannot distinguish two traversals",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "The storyteller cannot distinguish two traversals",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Feywild ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_247"
+    },
+    {
+      "id": "mv_side_247",
+      "number": 247,
+      "title": "The Ship of Returning Voices: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 17,
+      "previousQuestId": "mv_side_147",
+      "earliestQuestId": "mv_side_065",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Iris Thorn Dawn",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_7",
+        "chain_05_member_10",
+        "chain_05_member_4"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 20,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 065 and 147",
+        "Locate a ship carrying evidence from an abandoned expedition",
+        "Investigate the complication: The ship's crew believes the quest was completed already",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "The ship's crew believes the quest was completed already",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Wildspace ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_248"
+    },
+    {
+      "id": "mv_side_248",
+      "number": 248,
+      "title": "The Door of Confession: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 18,
+      "previousQuestId": "mv_side_148",
+      "earliestQuestId": "mv_side_075",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Joren Star Dawn",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_8",
+        "chain_05_member_1",
+        "chain_05_member_5"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 23,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 075 and 148",
+        "Trace the evidence through a gate registry and witness exchange",
+        "Investigate the complication: The correct portal opens only for a truthful confession",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "The correct portal opens only for a truthful confession",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Sigil ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_249"
+    },
+    {
+      "id": "mv_side_249",
+      "number": 249,
+      "title": "The Witness in Shadow: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 19,
+      "previousQuestId": "mv_side_149",
+      "earliestQuestId": "mv_side_085",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Aster Vale Dawn",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_9",
+        "chain_05_member_2",
+        "chain_05_member_6"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 26,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 085 and 149",
+        "Restore a damaged memory without rewriting anyone's identity",
+        "Investigate the complication: The forgotten witness is protecting an apparent villain",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "The forgotten witness is protecting an apparent villain",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Shadowfell ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_250"
+    },
+    {
+      "id": "mv_side_250",
+      "number": 250,
+      "title": "The Legacy Beyond the Loop: Atlas",
+      "chainId": "mv_chain_05",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 20,
+      "previousQuestId": "mv_side_150",
+      "earliestQuestId": "mv_side_095",
+      "previousArcFinale": "mv_side_150",
+      "questGiver": "Brin Copper Dawn",
+      "recurringCastIds": [
+        "chain_05_member_1",
+        "chain_05_member_2",
+        "chain_05_member_3",
+        "chain_05_member_4",
+        "chain_05_member_5",
+        "chain_05_member_6",
+        "chain_05_member_7",
+        "chain_05_member_8",
+        "chain_05_member_9",
+        "chain_05_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_05_member_10",
+        "chain_05_member_3",
+        "chain_05_member_7"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 29,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier atlas investigations, a forbidden atlas gains a new route after every rescue.",
+      "objectives": [
+        "Review verified evidence from quests 095 and 150",
+        "Present the chain's evidence and decide what survives the next return",
+        "Investigate the complication: the atlas hides one settlement to keep it safe",
+        "Record the consequences and secure a lead for the next atlas quest"
+      ],
+      "complication": "the atlas hides one settlement to keep it safe",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate atlas clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Atlas testimony fragment",
+        "Multiversal Convergence ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": null
+    }
+  ]
+}

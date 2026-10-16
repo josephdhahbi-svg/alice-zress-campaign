@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_3",
+  "setting": "Dragon Coast",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_021",
+      "title": "The Hatchling's Shadow",
+      "giver": "Cera the dragon scholar",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 7,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Cera the dragon scholar needs adventurers: find a missing hatchling.",
+      "objectives": [
+        "Meet Cera the dragon scholar and verify the request",
+        "Find a missing hatchling",
+        "Investigate the complication: The hatchling followed a frightened child",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The hatchling followed a frightened child",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_022",
+      "title": "The Scale Collector",
+      "giver": "Bran the antiquarian",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 7,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Bran the antiquarian needs adventurers: trace forged dragon scales.",
+      "objectives": [
+        "Meet Bran the antiquarian and verify the request",
+        "Trace forged dragon scales",
+        "Investigate the complication: The forger is funding a refuge",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The forger is funding a refuge",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_023",
+      "title": "The Treaty Table",
+      "giver": "Lady Miri the envoy",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 7,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Lady Miri the envoy needs adventurers: protect peace talks.",
+      "objectives": [
+        "Meet Lady Miri the envoy and verify the request",
+        "Protect peace talks",
+        "Investigate the complication: A translator is deliberately mistranslating",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A translator is deliberately mistranslating",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_024",
+      "title": "Smoke Over the Apiary",
+      "giver": "Davin the beekeeper",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 7,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Davin the beekeeper needs adventurers: save hives from strange smoke.",
+      "objectives": [
+        "Meet Davin the beekeeper and verify the request",
+        "Save hives from strange smoke",
+        "Investigate the complication: The smoke comes from a wounded drake",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The smoke comes from a wounded drake",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_025",
+      "title": "The Mountain Beacon",
+      "giver": "Rhea the signal captain",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 8,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Rhea the signal captain needs adventurers: relight a remote beacon.",
+      "objectives": [
+        "Meet Rhea the signal captain and verify the request",
+        "Relight a remote beacon",
+        "Investigate the complication: The tower has become a nesting ground",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The tower has become a nesting ground",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_026",
+      "title": "The Scribe's Missing Page",
+      "giver": "Olen the council clerk",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 8,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Olen the council clerk needs adventurers: recover a treaty appendix.",
+      "objectives": [
+        "Meet Olen the council clerk and verify the request",
+        "Recover a treaty appendix",
+        "Investigate the complication: The missing page contains a dangerous exception",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The missing page contains a dangerous exception",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_027",
+      "title": "The Pilgrim's Scale",
+      "giver": "Talia the pilgrim",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 8,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Talia the pilgrim needs adventurers: return a sacred scale.",
+      "objectives": [
+        "Meet Talia the pilgrim and verify the request",
+        "Return a sacred scale",
+        "Investigate the complication: The temple doubts the donor's identity",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The temple doubts the donor's identity",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_028",
+      "title": "A Nest of Glass",
+      "giver": "Yara the miner",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 9,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Yara the miner needs adventurers: stop tremors beneath a quarry.",
+      "objectives": [
+        "Meet Yara the miner and verify the request",
+        "Stop tremors beneath a quarry",
+        "Investigate the complication: Crystal eggs lie near the blasting site",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Crystal eggs lie near the blasting site",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_029",
+      "title": "The Council's Witness",
+      "giver": "Heska the stable master",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 9,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Heska the stable master needs adventurers: find a witness before the hearing.",
+      "objectives": [
+        "Meet Heska the stable master and verify the request",
+        "Find a witness before the hearing",
+        "Investigate the complication: The witness is hiding from both factions",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The witness is hiding from both factions",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_030",
+      "title": "The Blue Banner",
+      "giver": "Korin the scout",
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 9,
+      "trilogy": 3,
+      "levelRange": [
+        10,
+        15
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Korin the scout needs adventurers: identify impostors under an allied banner.",
+      "objectives": [
+        "Meet Korin the scout and verify the request",
+        "Identify impostors under an allied banner",
+        "Investigate the complication: The banner was purchased at an auction",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The banner was purchased at an auction",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}

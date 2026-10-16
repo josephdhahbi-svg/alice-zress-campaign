@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_2",
+  "setting": "Sword Coast",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_011",
+      "title": "The Baker's Last Flour",
+      "giver": "Marta the baker",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 4,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Marta the baker needs adventurers: find missing grain before winter.",
+      "objectives": [
+        "Meet Marta the baker and verify the request",
+        "Find missing grain before winter",
+        "Investigate the complication: A miller is hiding famine reserves",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A miller is hiding famine reserves",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_012",
+      "title": "The Ferry at Dawn",
+      "giver": "Old Perrin the ferryman",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 4,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Old Perrin the ferryman needs adventurers: restore ferry service across the river.",
+      "objectives": [
+        "Meet Old Perrin the ferryman and verify the request",
+        "Restore ferry service across the river",
+        "Investigate the complication: A river spirit demands an apology",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A river spirit demands an apology",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_013",
+      "title": "A Letter Never Sent",
+      "giver": "Elian the retired soldier",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 4,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Elian the retired soldier needs adventurers: deliver a reconciliation letter.",
+      "objectives": [
+        "Meet Elian the retired soldier and verify the request",
+        "Deliver a reconciliation letter",
+        "Investigate the complication: The recipient now leads a rival militia",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The recipient now leads a rival militia",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_014",
+      "title": "The Orchard Boundary",
+      "giver": "Nora the orchard keeper",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 4,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Nora the orchard keeper needs adventurers: resolve a disputed grove.",
+      "objectives": [
+        "Meet Nora the orchard keeper and verify the request",
+        "Resolve a disputed grove",
+        "Investigate the complication: An old map was drawn during a flood",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "An old map was drawn during a flood",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_015",
+      "title": "The Clocktower Apprentice",
+      "giver": "Pell the watchmaker",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 5,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Pell the watchmaker needs adventurers: find stolen clock components.",
+      "objectives": [
+        "Meet Pell the watchmaker and verify the request",
+        "Find stolen clock components",
+        "Investigate the complication: A child built a rescue signal with them",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A child built a rescue signal with them",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_016",
+      "title": "The Inn's Vanishing Guests",
+      "giver": "Lysa the innkeeper",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 5,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Lysa the innkeeper needs adventurers: investigate missing lodgers.",
+      "objectives": [
+        "Meet Lysa the innkeeper and verify the request",
+        "Investigate missing lodgers",
+        "Investigate the complication: A hidden tunnel is used for evacuations",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A hidden tunnel is used for evacuations",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_017",
+      "title": "The Merchant's False Weights",
+      "giver": "Hadrik the trader",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 5,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Hadrik the trader needs adventurers: audit the market scales.",
+      "objectives": [
+        "Meet Hadrik the trader and verify the request",
+        "Audit the market scales",
+        "Investigate the complication: A rival planted the altered weights",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A rival planted the altered weights",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_018",
+      "title": "The Rainwater Charter",
+      "giver": "Jessa the village reeve",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 6,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Jessa the village reeve needs adventurers: secure rights to a shared well.",
+      "objectives": [
+        "Meet Jessa the village reeve and verify the request",
+        "Secure rights to a shared well",
+        "Investigate the complication: The charter has contradictory signatures",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The charter has contradictory signatures",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_019",
+      "title": "The Shepherd's Signal",
+      "giver": "Arvo the shepherd",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 6,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Arvo the shepherd needs adventurers: find a missing flock.",
+      "objectives": [
+        "Meet Arvo the shepherd and verify the request",
+        "Find a missing flock",
+        "Investigate the complication: The animals fled an approaching landslide",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The animals fled an approaching landslide",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_020",
+      "title": "The Road of Lanterns",
+      "giver": "Nella the caravan guide",
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 6,
+      "trilogy": 2,
+      "levelRange": [
+        5,
+        10
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Nella the caravan guide needs adventurers: escort a nighttime caravan.",
+      "objectives": [
+        "Meet Nella the caravan guide and verify the request",
+        "Escort a nighttime caravan",
+        "Investigate the complication: A roadside beacon was moved to lure travelers",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A roadside beacon was moved to lure travelers",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}

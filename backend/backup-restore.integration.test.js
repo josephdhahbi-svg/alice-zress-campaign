@@ -5,7 +5,7 @@ const fs=require("node:fs");
 const os=require("node:os");
 const path=require("node:path");
 const Database=require("better-sqlite3");
-const {migrate}=require("./migrations");
+const {migrate,MIGRATIONS}=require("./migrations");
 const {createBackupService}=require("./backup-service");
 test("WAL online backup restores campaign events and migrations",async()=>{
  const directory=fs.mkdtempSync(path.join(os.tmpdir(),"moonveil-restore-"));
@@ -32,10 +32,29 @@ test("WAL online backup restores campaign events and migrations",async()=>{
   assert.equal(event.revision,1);
   assert.equal(event.event_type,"CHOICE_RESOLVED");
   assert.deepEqual(JSON.parse(event.payload_json),{kind:"lawful_good"});
-  assert.equal(restored.prepare("SELECT COUNT(*) AS n FROM vtt_schema_migrations").get().n,2);
+  assert.deepEqual(restored.prepare("SELECT version FROM vtt_schema_migrations ORDER BY version").all().map(row=>row.version),MIGRATIONS.map(migration=>migration.version));
   assert.equal(restored.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=?").get("alice").role,"DM");
   assert.equal(db.pragma("journal_mode",{simple:true}).toLowerCase(),"wal");
  }finally{
   restored?.close();db.close();fs.rmSync(directory,{recursive:true,force:true});
  }
+});
+
+test("online backup includes committed writes made while snapshot is requested",async()=>{
+ const directory=fs.mkdtempSync(path.join(os.tmpdir(),"moonveil-live-backup-"));
+ const db=new Database(path.join(directory,"live.sqlite"));
+ let restored;
+ try{
+  db.pragma("journal_mode = WAL");
+  db.exec("CREATE TABLE journal (id INTEGER PRIMARY KEY, text TEXT NOT NULL)");
+  db.prepare("INSERT INTO journal(text) VALUES(?)").run("before snapshot");
+  const service=createBackupService(db,{directory:path.join(directory,"backups"),logger:{info(){},error(){}}});
+  const pending=service.backupNow();
+  const duplicate=await service.backupNow();
+  assert.deepEqual(duplicate,{skipped:true,reason:"IN_PROGRESS"});
+  const snapshot=await pending;
+  restored=new Database(snapshot.path,{readonly:true,fileMustExist:true});
+  assert.equal(restored.pragma("integrity_check",{simple:true}),"ok");
+  assert.equal(restored.prepare("SELECT text FROM journal").get().text,"before snapshot");
+ }finally{restored?.close();db.close();fs.rmSync(directory,{recursive:true,force:true})}
 });

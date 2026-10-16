@@ -1,0 +1,90 @@
+{
+  "schema": "moonveil.atlas.batch3.v1",
+  "status": "RESEARCH_STAGING",
+  "sourceNotes": [
+    {
+      "title": "Forgotten Realms Campaign Set (1987)",
+      "date": "1987",
+      "datePrecision": "YEAR",
+      "verification": "PUBLICATION_REFERENCE_ONLY"
+    },
+    {
+      "title": "Out of the Abyss (2015)",
+      "date": "2015",
+      "datePrecision": "YEAR",
+      "verification": "PUBLICATION_REFERENCE_ONLY"
+    }
+  ],
+  "locations": [
+    {
+      "id": "menzoberranzan",
+      "name": "Menzoberranzan",
+      "setting": "Forgotten Realms",
+      "source": "Out of the Abyss",
+      "canonStatus": "OFFICIAL_LOCATION",
+      "layer": "UNVERIFIED",
+      "grid": "UD-01",
+      "gridStatus": "HOMEBREW_SCHEMATIC",
+      "eraControl": []
+    },
+    {
+      "id": "blingdenstone",
+      "name": "Blingdenstone",
+      "setting": "Forgotten Realms",
+      "source": "Out of the Abyss",
+      "canonStatus": "OFFICIAL_LOCATION",
+      "layer": "UNVERIFIED",
+      "grid": "MD-04",
+      "gridStatus": "HOMEBREW_SCHEMATIC",
+      "eraControl": []
+    },
+    {
+      "id": "gracklstugh",
+      "name": "Gracklstugh",
+      "setting": "Forgotten Realms",
+      "source": "Out of the Abyss",
+      "canonStatus": "OFFICIAL_LOCATION",
+      "layer": "UNVERIFIED",
+      "grid": null,
+      "gridStatus": "UNASSIGNED",
+      "eraControl": []
+    },
+    {
+      "id": "neverlight_grove",
+      "name": "Neverlight Grove",
+      "setting": "Forgotten Realms",
+      "source": "Out of the Abyss",
+      "canonStatus": "OFFICIAL_LOCATION",
+      "layer": "UNVERIFIED",
+      "grid": null,
+      "gridStatus": "UNASSIGNED",
+      "eraControl": []
+    }
+  ],
+  "routes": [
+    {
+      "id": "proposed_menz_bling",
+      "from": "menzoberranzan",
+      "to": "blingdenstone",
+      "mode": "TUNNEL",
+      "status": "PROPOSED_NOT_VERIFIED",
+      "distanceMiles": null,
+      "travelDays": null,
+      "sourceCitation": null,
+      "eraIds": [],
+      "traversable": false
+    }
+  ],
+  "eraIds": [
+    "ERA_1_MYSTRYL",
+    "ERA_2_MYSTRA",
+    "ERA_3_MIDNIGHT_MYSTRA"
+  ],
+  "rules": [
+    "No exact routes without source verification and era applicability",
+    "No official coordinates inferred from schematic labels",
+    "No claim of three-dimensional geometry from a layer enum",
+    "Never infer reverse route unless explicitly represented",
+    "Do not attach geographical facts to all eras automatically"
+  ]
+}

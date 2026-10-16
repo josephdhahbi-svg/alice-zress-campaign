@@ -1,0 +1,660 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "chainId": "mv_chain_01",
+  "title": "The Hundred Lantern Covenant",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_01_member_1",
+      "name": "Aster Vale Lantern",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_2",
+      "name": "Brin Copper Lantern",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_3",
+      "name": "Celia Moss Lantern",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_4",
+      "name": "Dorian Quill Lantern",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_5",
+      "name": "Edda Stone Lantern",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_6",
+      "name": "Fenn Ash Lantern",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_7",
+      "name": "Galia Reed Lantern",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_8",
+      "name": "Hale Meridian Lantern",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_9",
+      "name": "Iris Thorn Lantern",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_01_member_10",
+      "name": "Joren Star Lantern",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_101",
+      "number": 101,
+      "title": "The First Thread: Lantern Signal",
+      "chainId": "mv_chain_01",
+      "chainStage": 1,
+      "previousQuestId": "mv_side_001",
+      "previousChainQuestId": null,
+      "questGiver": "Dessa",
+      "featuredPartyMembers": [
+        "chain_01_member_1",
+        "chain_01_member_2",
+        "chain_01_member_6"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 1,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Find the first clue among displaced travelers.",
+      "objectives": [
+        "Consult Aster Vale Lantern about the evidence from quest 001",
+        "Find the first clue among displaced travelers",
+        "Investigate: A witness remembers a different version of the event",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "A witness remembers a different version of the event",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Aster Vale Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_102",
+      "number": 102,
+      "title": "The Coastward Ledger: Lantern Witness",
+      "chainId": "mv_chain_01",
+      "chainStage": 2,
+      "previousQuestId": "mv_side_011",
+      "previousChainQuestId": "mv_side_101",
+      "questGiver": "Brin Copper Lantern",
+      "featuredPartyMembers": [
+        "chain_01_member_2",
+        "chain_01_member_3",
+        "chain_01_member_7"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 4,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Follow the evidence into merchant and refugee networks.",
+      "objectives": [
+        "Consult Brin Copper Lantern about the evidence from quest 011",
+        "Follow the evidence into merchant and refugee networks",
+        "Investigate: A merchant's records contradict the first witness",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "A merchant's records contradict the first witness",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Brin Copper Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_103",
+      "number": 103,
+      "title": "The Scales of Testimony: Lantern Seal",
+      "chainId": "mv_chain_01",
+      "chainStage": 3,
+      "previousQuestId": "mv_side_021",
+      "previousChainQuestId": "mv_side_102",
+      "questGiver": "Celia Moss Lantern",
+      "featuredPartyMembers": [
+        "chain_01_member_3",
+        "chain_01_member_4",
+        "chain_01_member_8"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 7,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Present the evidence before a disputed council.",
+      "objectives": [
+        "Consult Celia Moss Lantern about the evidence from quest 021",
+        "Present the evidence before a disputed council",
+        "Investigate: A forged seal implicates an innocent ally",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "A forged seal implicates an innocent ally",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Celia Moss Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_104",
+      "number": 104,
+      "title": "Mistbound Reappearance: Lantern Echo",
+      "chainId": "mv_chain_01",
+      "chainStage": 4,
+      "previousQuestId": "mv_side_031",
+      "previousChainQuestId": "mv_side_103",
+      "questGiver": "Dorian Quill Lantern",
+      "featuredPartyMembers": [
+        "chain_01_member_4",
+        "chain_01_member_5",
+        "chain_01_member_9"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 10,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Recover a lost witness beyond the mists.",
+      "objectives": [
+        "Consult Dorian Quill Lantern about the evidence from quest 031",
+        "Recover a lost witness beyond the mists",
+        "Investigate: The witness has aged differently from the party",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "The witness has aged differently from the party",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Dorian Quill Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_105",
+      "number": 105,
+      "title": "The Ashen Bargain: Lantern Contract",
+      "chainId": "mv_chain_01",
+      "chainStage": 5,
+      "previousQuestId": "mv_side_041",
+      "previousChainQuestId": "mv_side_104",
+      "questGiver": "Edda Stone Lantern",
+      "featuredPartyMembers": [
+        "chain_01_member_5",
+        "chain_01_member_6",
+        "chain_01_member_10"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 13,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Challenge a contract exploiting the unresolved mystery.",
+      "objectives": [
+        "Consult Edda Stone Lantern about the evidence from quest 041",
+        "Challenge a contract exploiting the unresolved mystery",
+        "Investigate: The contract can be broken without violence",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "The contract can be broken without violence",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Edda Stone Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_106",
+      "number": 106,
+      "title": "The Court of Unfinished Stories: Lantern Memory",
+      "chainId": "mv_chain_01",
+      "chainStage": 6,
+      "previousQuestId": "mv_side_051",
+      "previousChainQuestId": "mv_side_105",
+      "questGiver": "Fenn Ash Lantern",
+      "featuredPartyMembers": [
+        "chain_01_member_6",
+        "chain_01_member_7",
+        "chain_01_member_1"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 16,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Trade favors for a missing account of the mystery.",
+      "objectives": [
+        "Consult Fenn Ash Lantern about the evidence from quest 051",
+        "Trade favors for a missing account of the mystery",
+        "Investigate: The account exists in two contradictory versions",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "The account exists in two contradictory versions",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Fenn Ash Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_107",
+      "number": 107,
+      "title": "The Starborne Crossing: Lantern Beacon",
+      "chainId": "mv_chain_01",
+      "chainStage": 7,
+      "previousQuestId": "mv_side_061",
+      "previousChainQuestId": "mv_side_106",
+      "questGiver": "Galia Reed Lantern",
+      "featuredPartyMembers": [
+        "chain_01_member_7",
+        "chain_01_member_8",
+        "chain_01_member_2"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 19,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Trace the mystery through a damaged relay route.",
+      "objectives": [
+        "Consult Galia Reed Lantern about the evidence from quest 061",
+        "Trace the mystery through a damaged relay route",
+        "Investigate: A vessel carries evidence from a future journey",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "A vessel carries evidence from a future journey",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Galia Reed Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_108",
+      "number": 108,
+      "title": "The Door That Remembers: Lantern Key",
+      "chainId": "mv_chain_01",
+      "chainStage": 8,
+      "previousQuestId": "mv_side_071",
+      "previousChainQuestId": "mv_side_107",
+      "questGiver": "Hale Meridian Lantern",
+      "featuredPartyMembers": [
+        "chain_01_member_8",
+        "chain_01_member_9",
+        "chain_01_member_3"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 22,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Locate the portal that connects the scattered clues.",
+      "objectives": [
+        "Consult Hale Meridian Lantern about the evidence from quest 071",
+        "Locate the portal that connects the scattered clues",
+        "Investigate: Its key is an earlier act of mercy",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "Its key is an earlier act of mercy",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Hale Meridian Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_109",
+      "number": 109,
+      "title": "The Shadow of the Original: Lantern Shadow",
+      "chainId": "mv_chain_01",
+      "chainStage": 9,
+      "previousQuestId": "mv_side_081",
+      "previousChainQuestId": "mv_side_108",
+      "questGiver": "Iris Thorn Lantern",
+      "featuredPartyMembers": [
+        "chain_01_member_9",
+        "chain_01_member_10",
+        "chain_01_member_4"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 25,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Confront the hidden architect of the mystery.",
+      "objectives": [
+        "Consult Iris Thorn Lantern about the evidence from quest 081",
+        "Confront the hidden architect of the mystery",
+        "Investigate: The apparent antagonist was protecting someone",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "The apparent antagonist was protecting someone",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Iris Thorn Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_110",
+      "number": 110,
+      "title": "The Seventh Return: Lantern Legacy",
+      "chainId": "mv_chain_01",
+      "chainStage": 10,
+      "previousQuestId": "mv_side_091",
+      "previousChainQuestId": "mv_side_109",
+      "questGiver": "Joren Star Lantern",
+      "featuredPartyMembers": [
+        "chain_01_member_10",
+        "chain_01_member_1",
+        "chain_01_member_5"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 28,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Dessa's original case returns: light stolen from refugee beacons. Resolve the mystery and preserve testimony for future traversals.",
+      "objectives": [
+        "Consult Joren Star Lantern about the evidence from quest 091",
+        "Resolve the mystery and preserve testimony for future traversals",
+        "Investigate: The final choice changes who remembers the truth",
+        "Resolve the local dispute and preserve the lantern evidence for the next stage"
+      ],
+      "complication": "a disguised keeper controls the signal",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the lantern evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Lantern evidence fragment",
+        "Contact favor from Joren Star Lantern"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    }
+  ]
+}

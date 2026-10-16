@@ -1,0 +1,660 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "chainId": "mv_chain_10",
+  "title": "The Promisebound Fellowship",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_10_member_1",
+      "name": "Aster Vale Moon",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_2",
+      "name": "Brin Copper Moon",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_3",
+      "name": "Celia Moss Moon",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_4",
+      "name": "Dorian Quill Moon",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_5",
+      "name": "Edda Stone Moon",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_6",
+      "name": "Fenn Ash Moon",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_7",
+      "name": "Galia Reed Moon",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_8",
+      "name": "Hale Meridian Moon",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_9",
+      "name": "Iris Thorn Moon",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_10_member_10",
+      "name": "Joren Star Moon",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_191",
+      "number": 191,
+      "title": "The First Thread: Oath Signal",
+      "chainId": "mv_chain_10",
+      "chainStage": 1,
+      "previousQuestId": "mv_side_010",
+      "previousChainQuestId": null,
+      "questGiver": "Selda",
+      "featuredPartyMembers": [
+        "chain_10_member_1",
+        "chain_10_member_2",
+        "chain_10_member_6"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 1,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Find the first clue among displaced travelers.",
+      "objectives": [
+        "Consult Aster Vale Moon about the evidence from quest 010",
+        "Find the first clue among displaced travelers",
+        "Investigate: A witness remembers a different version of the event",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "A witness remembers a different version of the event",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Aster Vale Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_192",
+      "number": 192,
+      "title": "The Coastward Ledger: Oath Witness",
+      "chainId": "mv_chain_10",
+      "chainStage": 2,
+      "previousQuestId": "mv_side_020",
+      "previousChainQuestId": "mv_side_191",
+      "questGiver": "Brin Copper Moon",
+      "featuredPartyMembers": [
+        "chain_10_member_2",
+        "chain_10_member_3",
+        "chain_10_member_7"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 4,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Follow the evidence into merchant and refugee networks.",
+      "objectives": [
+        "Consult Brin Copper Moon about the evidence from quest 020",
+        "Follow the evidence into merchant and refugee networks",
+        "Investigate: A merchant's records contradict the first witness",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "A merchant's records contradict the first witness",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Brin Copper Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_193",
+      "number": 193,
+      "title": "The Scales of Testimony: Oath Seal",
+      "chainId": "mv_chain_10",
+      "chainStage": 3,
+      "previousQuestId": "mv_side_030",
+      "previousChainQuestId": "mv_side_192",
+      "questGiver": "Celia Moss Moon",
+      "featuredPartyMembers": [
+        "chain_10_member_3",
+        "chain_10_member_4",
+        "chain_10_member_8"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 7,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Present the evidence before a disputed council.",
+      "objectives": [
+        "Consult Celia Moss Moon about the evidence from quest 030",
+        "Present the evidence before a disputed council",
+        "Investigate: A forged seal implicates an innocent ally",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "A forged seal implicates an innocent ally",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Celia Moss Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_194",
+      "number": 194,
+      "title": "Mistbound Reappearance: Oath Echo",
+      "chainId": "mv_chain_10",
+      "chainStage": 4,
+      "previousQuestId": "mv_side_040",
+      "previousChainQuestId": "mv_side_193",
+      "questGiver": "Dorian Quill Moon",
+      "featuredPartyMembers": [
+        "chain_10_member_4",
+        "chain_10_member_5",
+        "chain_10_member_9"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 10,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Recover a lost witness beyond the mists.",
+      "objectives": [
+        "Consult Dorian Quill Moon about the evidence from quest 040",
+        "Recover a lost witness beyond the mists",
+        "Investigate: The witness has aged differently from the party",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "The witness has aged differently from the party",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Dorian Quill Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_195",
+      "number": 195,
+      "title": "The Ashen Bargain: Oath Contract",
+      "chainId": "mv_chain_10",
+      "chainStage": 5,
+      "previousQuestId": "mv_side_050",
+      "previousChainQuestId": "mv_side_194",
+      "questGiver": "Edda Stone Moon",
+      "featuredPartyMembers": [
+        "chain_10_member_5",
+        "chain_10_member_6",
+        "chain_10_member_10"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 13,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Challenge a contract exploiting the unresolved mystery.",
+      "objectives": [
+        "Consult Edda Stone Moon about the evidence from quest 050",
+        "Challenge a contract exploiting the unresolved mystery",
+        "Investigate: The contract can be broken without violence",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "The contract can be broken without violence",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Edda Stone Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_196",
+      "number": 196,
+      "title": "The Court of Unfinished Stories: Oath Memory",
+      "chainId": "mv_chain_10",
+      "chainStage": 6,
+      "previousQuestId": "mv_side_060",
+      "previousChainQuestId": "mv_side_195",
+      "questGiver": "Fenn Ash Moon",
+      "featuredPartyMembers": [
+        "chain_10_member_6",
+        "chain_10_member_7",
+        "chain_10_member_1"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 16,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Trade favors for a missing account of the mystery.",
+      "objectives": [
+        "Consult Fenn Ash Moon about the evidence from quest 060",
+        "Trade favors for a missing account of the mystery",
+        "Investigate: The account exists in two contradictory versions",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "The account exists in two contradictory versions",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Fenn Ash Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_197",
+      "number": 197,
+      "title": "The Starborne Crossing: Oath Beacon",
+      "chainId": "mv_chain_10",
+      "chainStage": 7,
+      "previousQuestId": "mv_side_070",
+      "previousChainQuestId": "mv_side_196",
+      "questGiver": "Galia Reed Moon",
+      "featuredPartyMembers": [
+        "chain_10_member_7",
+        "chain_10_member_8",
+        "chain_10_member_2"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 19,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Trace the mystery through a damaged relay route.",
+      "objectives": [
+        "Consult Galia Reed Moon about the evidence from quest 070",
+        "Trace the mystery through a damaged relay route",
+        "Investigate: A vessel carries evidence from a future journey",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "A vessel carries evidence from a future journey",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Galia Reed Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_198",
+      "number": 198,
+      "title": "The Door That Remembers: Oath Key",
+      "chainId": "mv_chain_10",
+      "chainStage": 8,
+      "previousQuestId": "mv_side_080",
+      "previousChainQuestId": "mv_side_197",
+      "questGiver": "Hale Meridian Moon",
+      "featuredPartyMembers": [
+        "chain_10_member_8",
+        "chain_10_member_9",
+        "chain_10_member_3"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 22,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Locate the portal that connects the scattered clues.",
+      "objectives": [
+        "Consult Hale Meridian Moon about the evidence from quest 080",
+        "Locate the portal that connects the scattered clues",
+        "Investigate: Its key is an earlier act of mercy",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "Its key is an earlier act of mercy",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Hale Meridian Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_199",
+      "number": 199,
+      "title": "The Shadow of the Original: Oath Shadow",
+      "chainId": "mv_chain_10",
+      "chainStage": 9,
+      "previousQuestId": "mv_side_090",
+      "previousChainQuestId": "mv_side_198",
+      "questGiver": "Iris Thorn Moon",
+      "featuredPartyMembers": [
+        "chain_10_member_9",
+        "chain_10_member_10",
+        "chain_10_member_4"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 25,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Confront the hidden architect of the mystery.",
+      "objectives": [
+        "Consult Iris Thorn Moon about the evidence from quest 090",
+        "Confront the hidden architect of the mystery",
+        "Investigate: The apparent antagonist was protecting someone",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "The apparent antagonist was protecting someone",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Iris Thorn Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_200",
+      "number": 200,
+      "title": "The Seventh Return: Oath Legacy",
+      "chainId": "mv_chain_10",
+      "chainStage": 10,
+      "previousQuestId": "mv_side_100",
+      "previousChainQuestId": "mv_side_199",
+      "questGiver": "Joren Star Moon",
+      "featuredPartyMembers": [
+        "chain_10_member_10",
+        "chain_10_member_1",
+        "chain_10_member_5"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 28,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Selda's original case returns: a family promise inherited across generations. Resolve the mystery and preserve testimony for future traversals.",
+      "objectives": [
+        "Consult Joren Star Moon about the evidence from quest 100",
+        "Resolve the mystery and preserve testimony for future traversals",
+        "Investigate: The final choice changes who remembers the truth",
+        "Resolve the local dispute and preserve the oath evidence for the next stage"
+      ],
+      "complication": "fulfilling the promise might harm a stranger",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the oath evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Oath evidence fragment",
+        "Contact favor from Joren Star Moon"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    }
+  ]
+}

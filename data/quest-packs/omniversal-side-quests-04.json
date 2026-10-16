@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_4",
+  "setting": "Barovia",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_031",
+      "title": "The Widow's Window",
+      "giver": "Mila the seamstress",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 10,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Mila the seamstress needs adventurers: discover who lights an empty house.",
+      "objectives": [
+        "Meet Mila the seamstress and verify the request",
+        "Discover who lights an empty house",
+        "Investigate the complication: A ghost repeats a warning about the road",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A ghost repeats a warning about the road",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_032",
+      "title": "The Harvest in Fog",
+      "giver": "Petr the farmer",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 10,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Petr the farmer needs adventurers: protect a harvest from the mists.",
+      "objectives": [
+        "Meet Petr the farmer and verify the request",
+        "Protect a harvest from the mists",
+        "Investigate the complication: The fog follows a stolen grave marker",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The fog follows a stolen grave marker",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_033",
+      "title": "The Missing Chapel Key",
+      "giver": "Sister Adela the caretaker",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 10,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Sister Adela the caretaker needs adventurers: recover the chapel key.",
+      "objectives": [
+        "Meet Sister Adela the caretaker and verify the request",
+        "Recover the chapel key",
+        "Investigate the complication: A child hid it to protect a secret room",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A child hid it to protect a secret room",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_034",
+      "title": "The Night Coach",
+      "giver": "Irena the coach driver",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 10,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Irena the coach driver needs adventurers: find passengers lost on a mountain road.",
+      "objectives": [
+        "Meet Irena the coach driver and verify the request",
+        "Find passengers lost on a mountain road",
+        "Investigate the complication: The road returns travelers to yesterday",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The road returns travelers to yesterday",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_035",
+      "title": "The Clock Without Hands",
+      "giver": "Boris the clockmaker",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 11,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Boris the clockmaker needs adventurers: restore a village clock.",
+      "objectives": [
+        "Meet Boris the clockmaker and verify the request",
+        "Restore a village clock",
+        "Investigate the complication: Its mechanism records an old disappearance",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its mechanism records an old disappearance",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_036",
+      "title": "The Raven's Ribbon",
+      "giver": "Katya the messenger",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 11,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Katya the messenger needs adventurers: follow a raven carrying a ribbon.",
+      "objectives": [
+        "Meet Katya the messenger and verify the request",
+        "Follow a raven carrying a ribbon",
+        "Investigate the complication: The ribbon marks a safe refuge",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The ribbon marks a safe refuge",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_037",
+      "title": "The Cellar's Second Door",
+      "giver": "Doru the cooper",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 11,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Doru the cooper needs adventurers: investigate noises beneath the cellar.",
+      "objectives": [
+        "Meet Doru the cooper and verify the request",
+        "Investigate noises beneath the cellar",
+        "Investigate the complication: A family shelters there in secret",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A family shelters there in secret",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_038",
+      "title": "The Candle Tax",
+      "giver": "Vera the shopkeeper",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 12,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Vera the shopkeeper needs adventurers: challenge an unlawful levy.",
+      "objectives": [
+        "Meet Vera the shopkeeper and verify the request",
+        "Challenge an unlawful levy",
+        "Investigate the complication: The collector has forged an official decree",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The collector has forged an official decree",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_039",
+      "title": "The Bridge of Names",
+      "giver": "Nadia the grave tender",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 12,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Nadia the grave tender needs adventurers: identify inscriptions on a bridge.",
+      "objectives": [
+        "Meet Nadia the grave tender and verify the request",
+        "Identify inscriptions on a bridge",
+        "Investigate the complication: The names belong to living villagers",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The names belong to living villagers",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_040",
+      "title": "A Song for Morning",
+      "giver": "Elena the musician",
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 12,
+      "trilogy": 4,
+      "levelRange": [
+        8,
+        16
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Elena the musician needs adventurers: recover a lost melody.",
+      "objectives": [
+        "Meet Elena the musician and verify the request",
+        "Recover a lost melody",
+        "Investigate the complication: The melody opens a warded sanctuary",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The melody opens a warded sanctuary",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}

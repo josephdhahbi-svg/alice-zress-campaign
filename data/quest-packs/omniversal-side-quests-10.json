@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_10",
+  "setting": "Multiversal Convergence",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_091",
+      "title": "The Refugee Constellation",
+      "giver": "High Envoy Aris",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 28,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "High Envoy Aris needs adventurers: coordinate shelters across five planes.",
+      "objectives": [
+        "Meet High Envoy Aris and verify the request",
+        "Coordinate shelters across five planes",
+        "Investigate the complication: A gate network is collapsing",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A gate network is collapsing",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_092",
+      "title": "The Seven Seals",
+      "giver": "Scholar Vey",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 28,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Scholar Vey needs adventurers: verify seals before a cosmic alignment.",
+      "objectives": [
+        "Meet Scholar Vey and verify the request",
+        "Verify seals before a cosmic alignment",
+        "Investigate the complication: One seal was forged generations ago",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "One seal was forged generations ago",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_093",
+      "title": "The Council of Strangers",
+      "giver": "Ambassador Nyra",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 28,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Ambassador Nyra needs adventurers: gather representatives from rival worlds.",
+      "objectives": [
+        "Meet Ambassador Nyra and verify the request",
+        "Gather representatives from rival worlds",
+        "Investigate the complication: One delegate is a disguised refugee",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "One delegate is a disguised refugee",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_094",
+      "title": "The Broken Moon Signal",
+      "giver": "Engineer Halen",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 28,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Engineer Halen needs adventurers: restore a multiversal emergency relay.",
+      "objectives": [
+        "Meet Engineer Halen and verify the request",
+        "Restore a multiversal emergency relay",
+        "Investigate the complication: The signal repeats from an earlier traversal",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The signal repeats from an earlier traversal",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_095",
+      "title": "The Unfinished Oath",
+      "giver": "Paladin Mira",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 29,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Paladin Mira needs adventurers: resolve a promise spanning three eras.",
+      "objectives": [
+        "Meet Paladin Mira and verify the request",
+        "Resolve a promise spanning three eras",
+        "Investigate the complication: The beneficiary no longer wants revenge",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The beneficiary no longer wants revenge",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_096",
+      "title": "The Archive of Seven Returns",
+      "giver": "Archivist Sola",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 29,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Archivist Sola needs adventurers: reconcile conflicting records of prior cycles.",
+      "objectives": [
+        "Meet Archivist Sola and verify the request",
+        "Reconcile conflicting records of prior cycles",
+        "Investigate the complication: A memory was deliberately protected",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A memory was deliberately protected",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_097",
+      "title": "The Garden Beyond Time",
+      "giver": "Gardener Iri",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 29,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Gardener Iri needs adventurers: save a sanctuary from temporal collapse.",
+      "objectives": [
+        "Meet Gardener Iri and verify the request",
+        "Save a sanctuary from temporal collapse",
+        "Investigate the complication: Its inhabitants age in reverse",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its inhabitants age in reverse",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_098",
+      "title": "The Last Open Door",
+      "giver": "Porter Rell",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 30,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Porter Rell needs adventurers: evacuate travelers through a failing portal.",
+      "objectives": [
+        "Meet Porter Rell and verify the request",
+        "Evacuate travelers through a failing portal",
+        "Investigate the complication: The portal demands a choice of destination",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The portal demands a choice of destination",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_099",
+      "title": "The Witnesses of Dawn",
+      "giver": "Judge Elara",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 30,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Judge Elara needs adventurers: gather testimony before a final hearing.",
+      "objectives": [
+        "Meet Judge Elara and verify the request",
+        "Gather testimony before a final hearing",
+        "Investigate the complication: A villain offers verifiable restitution",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A villain offers verifiable restitution",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_100",
+      "title": "The First Light Again",
+      "giver": "Wayfinder Nessa",
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 30,
+      "trilogy": 10,
+      "levelRange": [
+        28,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Wayfinder Nessa needs adventurers: guide survivors into the next traversal.",
+      "objectives": [
+        "Meet Wayfinder Nessa and verify the request",
+        "Guide survivors into the next traversal",
+        "Investigate the complication: A forgotten clue waits at the original entrance",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A forgotten clue waits at the original entrance",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}

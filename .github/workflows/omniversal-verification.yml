@@ -1,0 +1,37 @@
+name: Omniversal verification (no deployment)
+on:
+  pull_request:
+  push:
+    branches:
+      - feature/verified-automation-phase-a
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # No package-lock.json exists in this repository yet; use npm install.
+      # Pin with a committed lockfile and npm ci in a later change.
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Execute existing tests
+        run: npm test
+      - name: Run actual verification checks
+        run: node automation_100_tasks.js
+      - name: Validate audit and fail closed
+        run: node post_execution_runner.js
+      - name: Publish non-production audit artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: omniversal-verification-audit
+          path: |
+            omniversal_100_task_report.json
+            omniversal_master_production_audit.json
+          if-no-files-found: warn
+          retention-days: 14

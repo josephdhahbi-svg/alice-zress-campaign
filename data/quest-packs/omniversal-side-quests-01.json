@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_1",
+  "setting": "Underdark",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_001",
+      "title": "The Lantern Keeper",
+      "giver": "Dessa the tunnel lamplighter",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 1,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Dessa the tunnel lamplighter needs adventurers: restore the lamps before a refugee caravan enters.",
+      "objectives": [
+        "Meet Dessa the tunnel lamplighter and verify the request",
+        "Restore the lamps before a refugee caravan enters",
+        "Investigate the complication: The darkness conceals a harmless myconid nursery",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The darkness conceals a harmless myconid nursery",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_002",
+      "title": "Missing Mushroom Harvest",
+      "giver": "Brel the fungal farmer",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 1,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Brel the fungal farmer needs adventurers: locate stolen medicinal caps.",
+      "objectives": [
+        "Meet Brel the fungal farmer and verify the request",
+        "Locate stolen medicinal caps",
+        "Investigate the complication: The thieves are starving children",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The thieves are starving children",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_003",
+      "title": "The Silent Bell",
+      "giver": "Vasha the shrine attendant",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 1,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Vasha the shrine attendant needs adventurers: find why the warning bell no longer rings.",
+      "objectives": [
+        "Meet Vasha the shrine attendant and verify the request",
+        "Find why the warning bell no longer rings",
+        "Investigate the complication: Its clapper was removed to silence a false alarm",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its clapper was removed to silence a false alarm",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_004",
+      "title": "The Broken Rope Lift",
+      "giver": "Torren the lift mechanic",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 1,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Torren the lift mechanic needs adventurers: repair a cargo lift across a chasm.",
+      "objectives": [
+        "Meet Torren the lift mechanic and verify the request",
+        "Repair a cargo lift across a chasm",
+        "Investigate the complication: A mimic nests among replacement crates",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A mimic nests among replacement crates",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_005",
+      "title": "The Cartographer's Debt",
+      "giver": "Ilya the apprentice mapper",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 2,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Ilya the apprentice mapper needs adventurers: recover a lost tunnel chart.",
+      "objectives": [
+        "Meet Ilya the apprentice mapper and verify the request",
+        "Recover a lost tunnel chart",
+        "Investigate the complication: The chart reveals a protected sanctuary",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The chart reveals a protected sanctuary",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_006",
+      "title": "A Cup of Clean Water",
+      "giver": "Meren the refugee healer",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 2,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Meren the refugee healer needs adventurers: find a safe source for the settlement.",
+      "objectives": [
+        "Meet Meren the refugee healer and verify the request",
+        "Find a safe source for the settlement",
+        "Investigate the complication: An ooze has contaminated the old cistern",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "An ooze has contaminated the old cistern",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_007",
+      "title": "The Singing Stone",
+      "giver": "Fara the gem cutter",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 2,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Fara the gem cutter needs adventurers: identify a crystal that hums at moonrise.",
+      "objectives": [
+        "Meet Fara the gem cutter and verify the request",
+        "Identify a crystal that hums at moonrise",
+        "Investigate the complication: Its song marks an unstable passage",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its song marks an unstable passage",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_008",
+      "title": "The Unclaimed Pack",
+      "giver": "Nix the courier",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 3,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Nix the courier needs adventurers: deliver a found pack to its owner.",
+      "objectives": [
+        "Meet Nix the courier and verify the request",
+        "Deliver a found pack to its owner",
+        "Investigate the complication: Two travelers claim the same seal",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Two travelers claim the same seal",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_009",
+      "title": "The Watcher's Sleep",
+      "giver": "Gorin the sentry",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 3,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Gorin the sentry needs adventurers: discover why guards fall asleep.",
+      "objectives": [
+        "Meet Gorin the sentry and verify the request",
+        "Discover why guards fall asleep",
+        "Investigate the complication: Spores drift through the watch post",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Spores drift through the watch post",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_010",
+      "title": "A Promise Below",
+      "giver": "Selda the escaped captive",
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 3,
+      "trilogy": 1,
+      "levelRange": [
+        1,
+        4
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Selda the escaped captive needs adventurers: escort her family through the old mines.",
+      "objectives": [
+        "Meet Selda the escaped captive and verify the request",
+        "Escort her family through the old mines",
+        "Investigate the complication: A patrol believes the family are smugglers",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A patrol believes the family are smugglers",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}

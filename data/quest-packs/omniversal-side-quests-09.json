@@ -1,0 +1,408 @@
+{
+  "packId": "omniversal_side_9",
+  "setting": "Shadowfell",
+  "status": "AUTHORED_DRAFT",
+  "count": 10,
+  "quests": [
+    {
+      "id": "mv_side_081",
+      "title": "The Orchard of Ash",
+      "giver": "Mara the keeper",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 25,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Mara the keeper needs adventurers: restore a blighted orchard.",
+      "objectives": [
+        "Meet Mara the keeper and verify the request",
+        "Restore a blighted orchard",
+        "Investigate the complication: Its roots hold forgotten memories",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its roots hold forgotten memories",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_082",
+      "title": "The Bell of Departures",
+      "giver": "Kess the ferryman",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 25,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Kess the ferryman needs adventurers: recover a missing river bell.",
+      "objectives": [
+        "Meet Kess the ferryman and verify the request",
+        "Recover a missing river bell",
+        "Investigate the complication: The bell calls lost souls home",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The bell calls lost souls home",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_083",
+      "title": "The Memory Tailor",
+      "giver": "Venn the tailor",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 25,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Venn the tailor needs adventurers: repair a torn memory tapestry.",
+      "objectives": [
+        "Meet Venn the tailor and verify the request",
+        "Repair a torn memory tapestry",
+        "Investigate the complication: A patron wants a painful truth erased",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "A patron wants a painful truth erased",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_084",
+      "title": "The Quiet Watch",
+      "giver": "Arielle the sentry",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 25,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Arielle the sentry needs adventurers: find missing night guards.",
+      "objectives": [
+        "Meet Arielle the sentry and verify the request",
+        "Find missing night guards",
+        "Investigate the complication: The guards entered a protective trance",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The guards entered a protective trance",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_085",
+      "title": "The Lantern Beneath",
+      "giver": "Orel the miner",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 26,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Orel the miner needs adventurers: retrieve a buried light.",
+      "objectives": [
+        "Meet Orel the miner and verify the request",
+        "Retrieve a buried light",
+        "Investigate the complication: Its flame reveals an old oath",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Its flame reveals an old oath",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_086",
+      "title": "The Pale Conservatory",
+      "giver": "Seren the gardener",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 26,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Seren the gardener needs adventurers: rescue endangered flowers.",
+      "objectives": [
+        "Meet Seren the gardener and verify the request",
+        "Rescue endangered flowers",
+        "Investigate the complication: The flowers bloom only for the grieving",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The flowers bloom only for the grieving",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_087",
+      "title": "The Forgotten Archive",
+      "giver": "Iris the archivist",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 26,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Iris the archivist needs adventurers: preserve records before a shadow storm.",
+      "objectives": [
+        "Meet Iris the archivist and verify the request",
+        "Preserve records before a shadow storm",
+        "Investigate the complication: Some records expose a celebrated hero",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "Some records expose a celebrated hero",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_088",
+      "title": "The Bridge of Echoes",
+      "giver": "Ruth the guide",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 27,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Ruth the guide needs adventurers: escort pilgrims over a spectral bridge.",
+      "objectives": [
+        "Meet Ruth the guide and verify the request",
+        "Escort pilgrims over a spectral bridge",
+        "Investigate the complication: The bridge tests their memories",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The bridge tests their memories",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_089",
+      "title": "The Last Warm Hearth",
+      "giver": "Dela the innkeeper",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 27,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Dela the innkeeper needs adventurers: restore heat to a shelter.",
+      "objectives": [
+        "Meet Dela the innkeeper and verify the request",
+        "Restore heat to a shelter",
+        "Investigate the complication: The hearth houses a lonely spirit",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The hearth houses a lonely spirit",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    },
+    {
+      "id": "mv_side_090",
+      "title": "The Unspoken Name",
+      "giver": "Cael the historian",
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 27,
+      "trilogy": 9,
+      "levelRange": [
+        25,
+        30
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "canonStatus": "HOMEBREW_WITH_OFFICIAL_LORE",
+      "audience": "ANY_ELIGIBLE_PARTY",
+      "hook": "Cael the historian needs adventurers: recover a missing name from a monument.",
+      "objectives": [
+        "Meet Cael the historian and verify the request",
+        "Recover a missing name from a monument",
+        "Investigate the complication: The name belongs to a living exile",
+        "Resolve the conflict and report the outcome"
+      ],
+      "complication": "The name belongs to a living exile",
+      "choices": [
+        "Offer lawful protection and document evidence",
+        "Help those at risk through negotiation",
+        "Improvise a daring rescue or diversion",
+        "Research clues, spells, tools and environment",
+        "Confront immediate danger with DM-adjudicated action"
+      ],
+      "outcomes": [
+        "Compassionate resolution with witnesses",
+        "Partial resolution with consequences",
+        "Unresolved lead for a later visit"
+      ],
+      "rewardStatus": "PROPOSED_DM_APPROVAL_REQUIRED",
+      "timeline": "NO_AUTOMATIC_ADVANCEMENT",
+      "memory": "RECORD_AFTER_DM_VERIFICATION"
+    }
+  ]
+}

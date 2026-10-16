@@ -1,0 +1,1022 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "wave": 3,
+  "chainId": "mv_chain_09",
+  "title": "The Watchers Who Dream Awake",
+  "continuesFrom": "mv_side_190",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_09_member_1",
+      "name": "Aster Vale Ember",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_2",
+      "name": "Brin Copper Ember",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_3",
+      "name": "Celia Moss Ember",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_4",
+      "name": "Dorian Quill Ember",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_5",
+      "name": "Edda Stone Ember",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_6",
+      "name": "Fenn Ash Ember",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_7",
+      "name": "Galia Reed Ember",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_8",
+      "name": "Hale Meridian Ember",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_9",
+      "name": "Iris Thorn Ember",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_09_member_10",
+      "name": "Joren Star Ember",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_281",
+      "number": 281,
+      "title": "The Reopened Passage: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 11,
+      "previousQuestId": "mv_side_181",
+      "earliestQuestId": "mv_side_009",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Gorin",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_4",
+        "chain_09_member_8"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 3,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 009 and 181",
+        "Search the reopened tunnel for a witness who disappeared in the first expedition",
+        "Investigate the complication: A rescue site conceals a community that refuses relocation",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "A rescue site conceals a community that refuses relocation",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Underdark ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_282"
+    },
+    {
+      "id": "mv_side_282",
+      "number": 282,
+      "title": "The Ledger of Consequences: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 12,
+      "previousQuestId": "mv_side_182",
+      "earliestQuestId": "mv_side_019",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Dorian Quill Ember",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_2",
+        "chain_09_member_5",
+        "chain_09_member_9"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 6,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 019 and 182",
+        "Interview merchants and refugees about a newly discovered ledger",
+        "Investigate the complication: A former antagonist has begun making restitution",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "A former antagonist has begun making restitution",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Sword Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_283"
+    },
+    {
+      "id": "mv_side_283",
+      "number": 283,
+      "title": "The Council's Second Witness: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 13,
+      "previousQuestId": "mv_side_183",
+      "earliestQuestId": "mv_side_029",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Edda Stone Ember",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_3",
+        "chain_09_member_6",
+        "chain_09_member_10"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 9,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 029 and 183",
+        "Compare testimony against the council's archived evidence",
+        "Investigate the complication: A forged seal was used to protect a frightened hatchling",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "A forged seal was used to protect a frightened hatchling",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Dragon Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_284"
+    },
+    {
+      "id": "mv_side_284",
+      "number": 284,
+      "title": "A Memory in the Mist: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 14,
+      "previousQuestId": "mv_side_184",
+      "earliestQuestId": "mv_side_039",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Fenn Ash Ember",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_4",
+        "chain_09_member_7",
+        "chain_09_member_1"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 12,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 039 and 184",
+        "Recover a missing record from a village trapped in the mists",
+        "Investigate the complication: The record documents a visit that has not happened yet",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "The record documents a visit that has not happened yet",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Barovia ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_285"
+    },
+    {
+      "id": "mv_side_285",
+      "number": 285,
+      "title": "The Contract's Missing Clause: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 15,
+      "previousQuestId": "mv_side_185",
+      "earliestQuestId": "mv_side_049",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Galia Reed Ember",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_5",
+        "chain_09_member_8",
+        "chain_09_member_2"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 15,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 049 and 185",
+        "Challenge a contract built upon an earlier falsehood",
+        "Investigate the complication: The contract holder is trying to free a dependent",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "The contract holder is trying to free a dependent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Avernus ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_286"
+    },
+    {
+      "id": "mv_side_286",
+      "number": 286,
+      "title": "The Story Nobody Told: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 16,
+      "previousQuestId": "mv_side_186",
+      "earliestQuestId": "mv_side_059",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Hale Meridian Ember",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_6",
+        "chain_09_member_9",
+        "chain_09_member_3"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 18,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 059 and 186",
+        "Negotiate access to a story that was removed from public memory",
+        "Investigate the complication: The storyteller cannot distinguish two traversals",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "The storyteller cannot distinguish two traversals",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Feywild ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_287"
+    },
+    {
+      "id": "mv_side_287",
+      "number": 287,
+      "title": "The Ship of Returning Voices: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 17,
+      "previousQuestId": "mv_side_187",
+      "earliestQuestId": "mv_side_069",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Iris Thorn Ember",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_7",
+        "chain_09_member_10",
+        "chain_09_member_4"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 21,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 069 and 187",
+        "Locate a ship carrying evidence from an abandoned expedition",
+        "Investigate the complication: The ship's crew believes the quest was completed already",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "The ship's crew believes the quest was completed already",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Wildspace ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_288"
+    },
+    {
+      "id": "mv_side_288",
+      "number": 288,
+      "title": "The Door of Confession: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 18,
+      "previousQuestId": "mv_side_188",
+      "earliestQuestId": "mv_side_079",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Joren Star Ember",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_8",
+        "chain_09_member_1",
+        "chain_09_member_5"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 24,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 079 and 188",
+        "Trace the evidence through a gate registry and witness exchange",
+        "Investigate the complication: The correct portal opens only for a truthful confession",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "The correct portal opens only for a truthful confession",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Sigil ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_289"
+    },
+    {
+      "id": "mv_side_289",
+      "number": 289,
+      "title": "The Witness in Shadow: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 19,
+      "previousQuestId": "mv_side_189",
+      "earliestQuestId": "mv_side_089",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Aster Vale Ember",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_9",
+        "chain_09_member_2",
+        "chain_09_member_6"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 27,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 089 and 189",
+        "Restore a damaged memory without rewriting anyone's identity",
+        "Investigate the complication: The forgotten witness is protecting an apparent villain",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "The forgotten witness is protecting an apparent villain",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Shadowfell ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_290"
+    },
+    {
+      "id": "mv_side_290",
+      "number": 290,
+      "title": "The Legacy Beyond the Loop: Watch",
+      "chainId": "mv_chain_09",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 20,
+      "previousQuestId": "mv_side_190",
+      "earliestQuestId": "mv_side_099",
+      "previousArcFinale": "mv_side_190",
+      "questGiver": "Brin Copper Ember",
+      "recurringCastIds": [
+        "chain_09_member_1",
+        "chain_09_member_2",
+        "chain_09_member_3",
+        "chain_09_member_4",
+        "chain_09_member_5",
+        "chain_09_member_6",
+        "chain_09_member_7",
+        "chain_09_member_8",
+        "chain_09_member_9",
+        "chain_09_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_09_member_10",
+        "chain_09_member_3",
+        "chain_09_member_7"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 30,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier watch investigations, sentries share dreams of a city without doors.",
+      "objectives": [
+        "Review verified evidence from quests 099 and 190",
+        "Present the chain's evidence and decide what survives the next return",
+        "Investigate the complication: the dream-city contains people missing from real settlements",
+        "Record the consequences and secure a lead for the next watch quest"
+      ],
+      "complication": "the dream-city contains people missing from real settlements",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate watch clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Watch testimony fragment",
+        "Multiversal Convergence ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": null
+    }
+  ]
+}

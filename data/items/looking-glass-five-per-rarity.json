@@ -1,0 +1,1039 @@
+{
+  "schema": "moonveil.looking-glass-five-per-rarity.v1",
+  "status": "HOMEBREW_DESIGN_NOT_AWARDED",
+  "count": 25,
+  "rarities": [
+    "Legendary",
+    "Very Rare",
+    "Rare",
+    "Uncommon",
+    "Common"
+  ],
+  "rules": [
+    "Five items in each rarity tier from Legendary through Common.",
+    "Each rarity has three optional set paths: damage, defense, utility.",
+    "Exactly three different pieces of the same rarity are needed for a set bonus.",
+    "Common items do not require attunement and must be actively carried or equipped.",
+    "Attunement never exceeds three total slots; artifact items and lower-rarity items compete for the same slots.",
+    "These are separate from the locked endgame divine treasury."
+  ],
+  "items": [
+    {
+      "id": "looking_glass_legendary_caterpillar",
+      "name": "Legendary Caterpillar's Lens",
+      "rarity": "Legendary",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 17,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Elder Eye",
+      "passive": "+4 bonus to one spell attack roll per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Detect Magic",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, when a spell attack hits, add 4d8 as psychic damage.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "legendary_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_legendary_white_queen",
+      "name": "Legendary White Queen's Veil",
+      "rarity": "Legendary",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 17,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Moonlit mercy",
+      "passive": "+4 bonus to one saving throw per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Protection from Evil and Good",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, as a reaction when you take damage, reduce it by 3d8.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "legendary_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_legendary_red_queen",
+      "name": "Legendary Red Queen's Signet",
+      "rarity": "Legendary",
+      "type": "Ring",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 17,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Command and tempo",
+      "passive": "+4 bonus to one spell attack roll per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Command",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, when you hit a creature, add 4d8 as force damage.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "legendary_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_legendary_white_rabbit",
+      "name": "Legendary White Rabbit's Compass",
+      "rarity": "Legendary",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 17,
+      "focus": "UTILITY",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Travel and clocks",
+      "passive": "+4 bonus to one Investigation check per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Longstrider",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, use the Teleport up to 60 feet to a visible unoccupied space.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "legendary_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_legendary_jabberwock",
+      "name": "Legendary Jabberwock Scale",
+      "rarity": "Legendary",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 17,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Dragon resilience",
+      "passive": "+4 bonus to one saving throw per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Absorb Elements",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, as a reaction reduce incoming elemental damage by 3d8.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "legendary_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_very_rare_caterpillar",
+      "name": "Very Rare Caterpillar's Lens",
+      "rarity": "Very Rare",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 11,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Elder Eye",
+      "passive": "+3 bonus to one spell attack roll per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Detect Magic",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, when a spell attack hits, add 3d8 as psychic damage.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "very_rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_very_rare_white_queen",
+      "name": "Very Rare White Queen's Veil",
+      "rarity": "Very Rare",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 11,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Moonlit mercy",
+      "passive": "+3 bonus to one saving throw per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Protection from Evil and Good",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, as a reaction when you take damage, reduce it by 2d8.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "very_rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_very_rare_red_queen",
+      "name": "Very Rare Red Queen's Signet",
+      "rarity": "Very Rare",
+      "type": "Ring",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 11,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Command and tempo",
+      "passive": "+3 bonus to one spell attack roll per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Command",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, when you hit a creature, add 3d8 as force damage.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "very_rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_very_rare_white_rabbit",
+      "name": "Very Rare White Rabbit's Compass",
+      "rarity": "Very Rare",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 11,
+      "focus": "UTILITY",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Travel and clocks",
+      "passive": "+3 bonus to one Investigation check per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Longstrider",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, use the Teleport up to 30 feet to a visible unoccupied space.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "very_rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_very_rare_jabberwock",
+      "name": "Very Rare Jabberwock Scale",
+      "rarity": "Very Rare",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 11,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Dragon resilience",
+      "passive": "+3 bonus to one saving throw per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Absorb Elements",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, as a reaction reduce incoming elemental damage by 2d8.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "very_rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_rare_caterpillar",
+      "name": "Rare Caterpillar's Lens",
+      "rarity": "Rare",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 5,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Elder Eye",
+      "passive": "+2 bonus to one spell attack roll per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Detect Magic",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, when a spell attack hits, add 2d8 as psychic damage.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_rare_white_queen",
+      "name": "Rare White Queen's Veil",
+      "rarity": "Rare",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 5,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Moonlit mercy",
+      "passive": "+2 bonus to one saving throw per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Protection from Evil and Good",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, as a reaction when you take damage, reduce it by 2d6.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_rare_red_queen",
+      "name": "Rare Red Queen's Signet",
+      "rarity": "Rare",
+      "type": "Ring",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 5,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Command and tempo",
+      "passive": "+2 bonus to one spell attack roll per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Command",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, when you hit a creature, add 2d8 as force damage.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_rare_white_rabbit",
+      "name": "Rare White Rabbit's Compass",
+      "rarity": "Rare",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 5,
+      "focus": "UTILITY",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Travel and clocks",
+      "passive": "+2 bonus to one Investigation check per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Longstrider",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, use the Move 15 feet without provoking opportunity attacks.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_rare_jabberwock",
+      "name": "Rare Jabberwock Scale",
+      "rarity": "Rare",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 5,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Dragon resilience",
+      "passive": "+2 bonus to one saving throw per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Absorb Elements",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, as a reaction reduce incoming elemental damage by 2d6.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "rare_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_uncommon_caterpillar",
+      "name": "Uncommon Caterpillar's Lens",
+      "rarity": "Uncommon",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 3,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Elder Eye",
+      "passive": "+1 bonus to one spell attack roll per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Detect Magic",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, when a spell attack hits, add 1d8 as psychic damage.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "uncommon_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_uncommon_white_queen",
+      "name": "Uncommon White Queen's Veil",
+      "rarity": "Uncommon",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 3,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Moonlit mercy",
+      "passive": "+1 bonus to one saving throw per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Protection from Evil and Good",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, as a reaction when you take damage, reduce it by 1d8.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "uncommon_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_uncommon_red_queen",
+      "name": "Uncommon Red Queen's Signet",
+      "rarity": "Uncommon",
+      "type": "Ring",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 3,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Command and tempo",
+      "passive": "+1 bonus to one spell attack roll per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Command",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, when you hit a creature, add 1d8 as force damage.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "uncommon_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_uncommon_white_rabbit",
+      "name": "Uncommon White Rabbit's Compass",
+      "rarity": "Uncommon",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 3,
+      "focus": "UTILITY",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Travel and clocks",
+      "passive": "+1 bonus to one Investigation check per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Longstrider",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, use the Gain advantage on one Investigation check.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "uncommon_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_uncommon_jabberwock",
+      "name": "Uncommon Jabberwock Scale",
+      "rarity": "Uncommon",
+      "type": "Wondrous item",
+      "requiresAttunement": true,
+      "minimumSuggestedLevel": 3,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Dragon resilience",
+      "passive": "+1 bonus to one saving throw per long rest (not a permanent bonus)",
+      "spell": {
+        "name": "Absorb Elements",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "Item casts spell using normal casting time; spell list not required"
+      },
+      "ability": {
+        "text": "Once per long rest, as a reaction reduce incoming elemental damage by 1d8.",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "uncommon_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_common_caterpillar",
+      "name": "Common Caterpillar's Lens",
+      "rarity": "Common",
+      "type": "Wondrous item",
+      "requiresAttunement": false,
+      "minimumSuggestedLevel": 1,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Elder Eye",
+      "passive": "No permanent numerical bonus",
+      "spell": {
+        "name": "Detect Magic",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "No spell cast; instead use only the listed minor item effect"
+      },
+      "ability": {
+        "text": "Once per long rest, deal 1d4 force damage to one creature you hit",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "common_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_common_white_queen",
+      "name": "Common White Queen's Veil",
+      "rarity": "Common",
+      "type": "Wondrous item",
+      "requiresAttunement": false,
+      "minimumSuggestedLevel": 1,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Moonlit mercy",
+      "passive": "No permanent numerical bonus",
+      "spell": {
+        "name": "Protection from Evil and Good",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "No spell cast; instead use only the listed minor item effect"
+      },
+      "ability": {
+        "text": "Once per long rest, gain 1d4 temporary hit points",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "common_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_common_red_queen",
+      "name": "Common Red Queen's Signet",
+      "rarity": "Common",
+      "type": "Ring",
+      "requiresAttunement": false,
+      "minimumSuggestedLevel": 1,
+      "focus": "DAMAGE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Command and tempo",
+      "passive": "No permanent numerical bonus",
+      "spell": {
+        "name": "Command",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "No spell cast; instead use only the listed minor item effect"
+      },
+      "ability": {
+        "text": "Once per long rest, deal 1d4 force damage to one creature you hit",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "common_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_common_white_rabbit",
+      "name": "Common White Rabbit's Compass",
+      "rarity": "Common",
+      "type": "Wondrous item",
+      "requiresAttunement": false,
+      "minimumSuggestedLevel": 1,
+      "focus": "UTILITY",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Travel and clocks",
+      "passive": "No permanent numerical bonus",
+      "spell": {
+        "name": "Longstrider",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "No spell cast; instead use only the listed minor item effect"
+      },
+      "ability": {
+        "text": "Once per long rest, illuminate a 10-foot radius for 10 minutes",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "common_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    },
+    {
+      "id": "looking_glass_common_jabberwock",
+      "name": "Common Jabberwock Scale",
+      "rarity": "Common",
+      "type": "Wondrous item",
+      "requiresAttunement": false,
+      "minimumSuggestedLevel": 1,
+      "focus": "DEFENSE",
+      "sourceStatus": "MOONVEIL_HOMEBREW",
+      "theme": "Dragon resilience",
+      "passive": "No permanent numerical bonus",
+      "spell": {
+        "name": "Absorb Elements",
+        "level": "1st",
+        "uses": 1,
+        "refresh": "Long rest",
+        "restriction": "No spell cast; instead use only the listed minor item effect"
+      },
+      "ability": {
+        "text": "Once per long rest, gain 1d4 temporary hit points",
+        "uses": 1,
+        "refresh": "Long rest"
+      },
+      "setKey": "common_looking_glass",
+      "unlock": {
+        "status": "UNAWARDED",
+        "questEvidence": "DM_APPROVED",
+        "chronology": "UNRESOLVED"
+      },
+      "endgameTreasury": false
+    }
+  ],
+  "sets": [
+    {
+      "id": "legendary_triad_damage",
+      "rarity": "Legendary",
+      "path": "DAMAGE",
+      "requiredItemIds": [
+        "looking_glass_legendary_caterpillar",
+        "looking_glass_legendary_red_queen",
+        "looking_glass_legendary_jabberwock"
+      ],
+      "effect": "Once per long rest, after an attack hits, add 4d8 force damage to that target.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "legendary_triad_defense",
+      "rarity": "Legendary",
+      "path": "DEFENSE",
+      "requiredItemIds": [
+        "looking_glass_legendary_white_queen",
+        "looking_glass_legendary_white_rabbit",
+        "looking_glass_legendary_jabberwock"
+      ],
+      "effect": "Once per long rest, as a reaction to damage, reduce damage to one creature within 30 feet by 3d8.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Reaction",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "legendary_triad_utility",
+      "rarity": "Legendary",
+      "path": "UTILITY",
+      "requiredItemIds": [
+        "looking_glass_legendary_caterpillar",
+        "looking_glass_legendary_white_queen",
+        "looking_glass_legendary_white_rabbit"
+      ],
+      "effect": "Once per long rest, teleport up to 60 feet to a visible unoccupied space.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "very_rare_triad_damage",
+      "rarity": "Very Rare",
+      "path": "DAMAGE",
+      "requiredItemIds": [
+        "looking_glass_very_rare_caterpillar",
+        "looking_glass_very_rare_red_queen",
+        "looking_glass_very_rare_jabberwock"
+      ],
+      "effect": "Once per long rest, after an attack hits, add 3d8 force damage to that target.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "very_rare_triad_defense",
+      "rarity": "Very Rare",
+      "path": "DEFENSE",
+      "requiredItemIds": [
+        "looking_glass_very_rare_white_queen",
+        "looking_glass_very_rare_white_rabbit",
+        "looking_glass_very_rare_jabberwock"
+      ],
+      "effect": "Once per long rest, as a reaction to damage, reduce damage to one creature within 30 feet by 2d8.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Reaction",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "very_rare_triad_utility",
+      "rarity": "Very Rare",
+      "path": "UTILITY",
+      "requiredItemIds": [
+        "looking_glass_very_rare_caterpillar",
+        "looking_glass_very_rare_white_queen",
+        "looking_glass_very_rare_white_rabbit"
+      ],
+      "effect": "Once per long rest, teleport up to 30 feet to a visible unoccupied space.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "rare_triad_damage",
+      "rarity": "Rare",
+      "path": "DAMAGE",
+      "requiredItemIds": [
+        "looking_glass_rare_caterpillar",
+        "looking_glass_rare_red_queen",
+        "looking_glass_rare_jabberwock"
+      ],
+      "effect": "Once per long rest, after an attack hits, add 2d8 force damage to that target.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "rare_triad_defense",
+      "rarity": "Rare",
+      "path": "DEFENSE",
+      "requiredItemIds": [
+        "looking_glass_rare_white_queen",
+        "looking_glass_rare_white_rabbit",
+        "looking_glass_rare_jabberwock"
+      ],
+      "effect": "Once per long rest, as a reaction to damage, reduce damage to one creature within 30 feet by 2d6.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Reaction",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "rare_triad_utility",
+      "rarity": "Rare",
+      "path": "UTILITY",
+      "requiredItemIds": [
+        "looking_glass_rare_caterpillar",
+        "looking_glass_rare_white_queen",
+        "looking_glass_rare_white_rabbit"
+      ],
+      "effect": "Once per long rest, move 15 feet without provoking opportunity attacks.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "uncommon_triad_damage",
+      "rarity": "Uncommon",
+      "path": "DAMAGE",
+      "requiredItemIds": [
+        "looking_glass_uncommon_caterpillar",
+        "looking_glass_uncommon_red_queen",
+        "looking_glass_uncommon_jabberwock"
+      ],
+      "effect": "Once per long rest, after an attack hits, add 1d8 force damage to that target.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "uncommon_triad_defense",
+      "rarity": "Uncommon",
+      "path": "DEFENSE",
+      "requiredItemIds": [
+        "looking_glass_uncommon_white_queen",
+        "looking_glass_uncommon_white_rabbit",
+        "looking_glass_uncommon_jabberwock"
+      ],
+      "effect": "Once per long rest, as a reaction to damage, reduce damage to one creature within 30 feet by 1d8.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Reaction",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "uncommon_triad_utility",
+      "rarity": "Uncommon",
+      "path": "UTILITY",
+      "requiredItemIds": [
+        "looking_glass_uncommon_caterpillar",
+        "looking_glass_uncommon_white_queen",
+        "looking_glass_uncommon_white_rabbit"
+      ],
+      "effect": "Once per long rest, gain advantage on one investigation check.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": true,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "common_triad_damage",
+      "rarity": "Common",
+      "path": "DAMAGE",
+      "requiredItemIds": [
+        "looking_glass_common_caterpillar",
+        "looking_glass_common_red_queen",
+        "looking_glass_common_jabberwock"
+      ],
+      "effect": "Once per long rest, after an attack hits, add 1d4 force damage to that target.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": false,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "common_triad_defense",
+      "rarity": "Common",
+      "path": "DEFENSE",
+      "requiredItemIds": [
+        "looking_glass_common_white_queen",
+        "looking_glass_common_white_rabbit",
+        "looking_glass_common_jabberwock"
+      ],
+      "effect": "Once per long rest, as a reaction to damage, reduce damage to one creature within 30 feet by 1d4.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": false,
+      "activation": "Reaction",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    },
+    {
+      "id": "common_triad_utility",
+      "rarity": "Common",
+      "path": "UTILITY",
+      "requiredItemIds": [
+        "looking_glass_common_caterpillar",
+        "looking_glass_common_white_queen",
+        "looking_glass_common_white_rabbit"
+      ],
+      "effect": "Once per long rest, illuminate a 10-foot radius for 10 minutes.",
+      "uses": 1,
+      "refresh": "Long rest",
+      "requiresAttunement": false,
+      "activation": "Action",
+      "rule": "Exact three-piece matching-tier set; no cross-tier mixing; common items use equipped/carried selection rather than attunement; one set power per long rest; no free actions"
+    }
+  ]
+}

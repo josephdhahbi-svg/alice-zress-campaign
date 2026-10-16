@@ -1,0 +1,135 @@
+{
+  "schema": "moonveil.divine-batch4-staging.v1",
+  "status": "STAGED_NOT_LIVE",
+  "deities": [
+    {
+      "id": "ghaunadaur",
+      "moralRole": "RED",
+      "wonderland": "Caterpillar"
+    },
+    {
+      "id": "eilistraee",
+      "moralRole": "BLUE",
+      "wonderland": "White Queen"
+    },
+    {
+      "id": "lolth",
+      "moralRole": "RED",
+      "wonderland": "Queen of Hearts"
+    },
+    {
+      "id": "mystra",
+      "moralRole": "BLUE",
+      "wonderland": "White Rabbit"
+    },
+    {
+      "id": "selune",
+      "moralRole": "BLUE",
+      "wonderland": "Mouse"
+    }
+  ],
+  "homebrewNpcs": [
+    {
+      "id": "ooze_maw_sovereign",
+      "name": "Corrupted Ooze-Maw Sovereign",
+      "deityId": "ghaunadaur",
+      "moralRole": "RED",
+      "role": "TACTICAL_FOE",
+      "grid": "UD-01",
+      "combatReady": false,
+      "canonStatus": "HOMEBREW_PROTOTYPE"
+    },
+    {
+      "id": "shesheka_sword_dancer",
+      "name": "Shesheka, Moonlit Sword-Dancer Svirfneblin",
+      "deityId": "eilistraee",
+      "moralRole": "BLUE",
+      "role": "QUEST_GIVER",
+      "grid": "MD-02",
+      "combatReady": false,
+      "canonStatus": "HOMEBREW_PROTOTYPE"
+    }
+  ],
+  "environment": [
+    {
+      "id": "oozing_altar",
+      "name": "Oozing Altar of Ghaunadaur",
+      "grid": "UD-01",
+      "magicalAura": "UNVERIFIED",
+      "curse": "UNVERIFIED",
+      "status": "HOMEBREW"
+    },
+    {
+      "id": "promenade_monolith",
+      "name": "Moonlit Promenade Monolith",
+      "grid": "MD-02",
+      "magicalAura": "UNVERIFIED",
+      "curse": "UNVERIFIED",
+      "status": "HOMEBREW"
+    }
+  ],
+  "rewardCandidates": [
+    {
+      "id": "slime_band",
+      "name": "Slime-Lord’s Tentacled Band",
+      "deityId": "ghaunadaur",
+      "canonStatus": "UNVERIFIED_PROPOSED_HOMEBREW",
+      "owned": false,
+      "unlocked": false,
+      "mechanics": null,
+      "requiresDmApproval": true
+    },
+    {
+      "id": "silver_sword",
+      "name": "Silver Sword of the Dark Maiden",
+      "deityId": "eilistraee",
+      "canonStatus": "UNVERIFIED_PROPOSED_HOMEBREW",
+      "owned": false,
+      "unlocked": false,
+      "mechanics": null,
+      "requiresDmApproval": true
+    },
+    {
+      "id": "spider_fang",
+      "name": "Fang of the Spider Queen",
+      "deityId": "lolth",
+      "canonStatus": "UNVERIFIED_PROPOSED_HOMEBREW",
+      "owned": false,
+      "unlocked": false,
+      "mechanics": null,
+      "requiresDmApproval": true
+    },
+    {
+      "id": "falling_star",
+      "name": "Tear of the Falling Star",
+      "deityId": "mystra",
+      "canonStatus": "UNVERIFIED_PROPOSED_HOMEBREW",
+      "owned": false,
+      "unlocked": false,
+      "mechanics": null,
+      "requiresDmApproval": true
+    },
+    {
+      "id": "moonstone_diadem",
+      "name": "Moonstone Diadem of Tides",
+      "deityId": "selune",
+      "canonStatus": "UNVERIFIED_PROPOSED_HOMEBREW",
+      "owned": false,
+      "unlocked": false,
+      "mechanics": null,
+      "requiresDmApproval": true
+    }
+  ],
+  "policy": {
+    "blessingScore": "HOME_BREW_PREVIEW_ONLY",
+    "defaultThreshold": 75,
+    "formula": "questsCompleted * 1.5 + faithWeight * 2 - corruption * 0.5",
+    "spellRules": "Detect Magic detects magical presence and may reveal aura/location under its rules; not automatic full lore reveal. Dispel Magic ends qualifying spell effects; not generic curse removal.",
+    "existingCanonRefs": [
+      "data/quest-packs/wonderland-divine-25-thrones.json",
+      "data/factions/divine-cults-25-administration.json"
+    ],
+    "proposedBundleNotAttached": true
+  },
+  "sourceStatus": "USER_SUPPLIED_GEMINI_PROTOTYPE"
+}

@@ -1,0 +1,1022 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "wave": 3,
+  "chainId": "mv_chain_08",
+  "title": "The Letters of the Seventh Journey",
+  "continuesFrom": "mv_side_180",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_08_member_1",
+      "name": "Aster Vale Quill",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_08_member_2",
+      "name": "Brin Copper Quill",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_08_member_3",
+      "name": "Celia Moss Quill",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_08_member_4",
+      "name": "Dorian Quill Quill",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_08_member_5",
+      "name": "Edda Stone Quill",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_08_member_6",
+      "name": "Fenn Ash Quill",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_08_member_7",
+      "name": "Galia Reed Quill",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_08_member_8",
+      "name": "Hale Meridian Quill",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_08_member_9",
+      "name": "Iris Thorn Quill",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_08_member_10",
+      "name": "Joren Star Quill",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_271",
+      "number": 271,
+      "title": "The Reopened Passage: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 11,
+      "previousQuestId": "mv_side_171",
+      "earliestQuestId": "mv_side_008",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Nix",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_4",
+        "chain_08_member_8"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 2,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 008 and 171",
+        "Search the reopened tunnel for a witness who disappeared in the first expedition",
+        "Investigate the complication: A rescue site conceals a community that refuses relocation",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "A rescue site conceals a community that refuses relocation",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Underdark ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_272"
+    },
+    {
+      "id": "mv_side_272",
+      "number": 272,
+      "title": "The Ledger of Consequences: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 12,
+      "previousQuestId": "mv_side_172",
+      "earliestQuestId": "mv_side_018",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Dorian Quill Quill",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_2",
+        "chain_08_member_5",
+        "chain_08_member_9"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 5,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 018 and 172",
+        "Interview merchants and refugees about a newly discovered ledger",
+        "Investigate the complication: A former antagonist has begun making restitution",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "A former antagonist has begun making restitution",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Sword Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_273"
+    },
+    {
+      "id": "mv_side_273",
+      "number": 273,
+      "title": "The Council's Second Witness: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 13,
+      "previousQuestId": "mv_side_173",
+      "earliestQuestId": "mv_side_028",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Edda Stone Quill",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_3",
+        "chain_08_member_6",
+        "chain_08_member_10"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 8,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 028 and 173",
+        "Compare testimony against the council's archived evidence",
+        "Investigate the complication: A forged seal was used to protect a frightened hatchling",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "A forged seal was used to protect a frightened hatchling",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Dragon Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_274"
+    },
+    {
+      "id": "mv_side_274",
+      "number": 274,
+      "title": "A Memory in the Mist: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 14,
+      "previousQuestId": "mv_side_174",
+      "earliestQuestId": "mv_side_038",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Fenn Ash Quill",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_4",
+        "chain_08_member_7",
+        "chain_08_member_1"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 11,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 038 and 174",
+        "Recover a missing record from a village trapped in the mists",
+        "Investigate the complication: The record documents a visit that has not happened yet",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "The record documents a visit that has not happened yet",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Barovia ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_275"
+    },
+    {
+      "id": "mv_side_275",
+      "number": 275,
+      "title": "The Contract's Missing Clause: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 15,
+      "previousQuestId": "mv_side_175",
+      "earliestQuestId": "mv_side_048",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Galia Reed Quill",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_5",
+        "chain_08_member_8",
+        "chain_08_member_2"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 14,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 048 and 175",
+        "Challenge a contract built upon an earlier falsehood",
+        "Investigate the complication: The contract holder is trying to free a dependent",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "The contract holder is trying to free a dependent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Avernus ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_276"
+    },
+    {
+      "id": "mv_side_276",
+      "number": 276,
+      "title": "The Story Nobody Told: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 16,
+      "previousQuestId": "mv_side_176",
+      "earliestQuestId": "mv_side_058",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Hale Meridian Quill",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_6",
+        "chain_08_member_9",
+        "chain_08_member_3"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 17,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 058 and 176",
+        "Negotiate access to a story that was removed from public memory",
+        "Investigate the complication: The storyteller cannot distinguish two traversals",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "The storyteller cannot distinguish two traversals",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Feywild ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_277"
+    },
+    {
+      "id": "mv_side_277",
+      "number": 277,
+      "title": "The Ship of Returning Voices: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 17,
+      "previousQuestId": "mv_side_177",
+      "earliestQuestId": "mv_side_068",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Iris Thorn Quill",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_7",
+        "chain_08_member_10",
+        "chain_08_member_4"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 20,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 068 and 177",
+        "Locate a ship carrying evidence from an abandoned expedition",
+        "Investigate the complication: The ship's crew believes the quest was completed already",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "The ship's crew believes the quest was completed already",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Wildspace ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_278"
+    },
+    {
+      "id": "mv_side_278",
+      "number": 278,
+      "title": "The Door of Confession: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 18,
+      "previousQuestId": "mv_side_178",
+      "earliestQuestId": "mv_side_078",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Joren Star Quill",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_8",
+        "chain_08_member_1",
+        "chain_08_member_5"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 23,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 078 and 178",
+        "Trace the evidence through a gate registry and witness exchange",
+        "Investigate the complication: The correct portal opens only for a truthful confession",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "The correct portal opens only for a truthful confession",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Sigil ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_279"
+    },
+    {
+      "id": "mv_side_279",
+      "number": 279,
+      "title": "The Witness in Shadow: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 19,
+      "previousQuestId": "mv_side_179",
+      "earliestQuestId": "mv_side_088",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Aster Vale Quill",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_9",
+        "chain_08_member_2",
+        "chain_08_member_6"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 26,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 088 and 179",
+        "Restore a damaged memory without rewriting anyone's identity",
+        "Investigate the complication: The forgotten witness is protecting an apparent villain",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "The forgotten witness is protecting an apparent villain",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Shadowfell ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_280"
+    },
+    {
+      "id": "mv_side_280",
+      "number": 280,
+      "title": "The Legacy Beyond the Loop: Letter",
+      "chainId": "mv_chain_08",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 20,
+      "previousQuestId": "mv_side_180",
+      "earliestQuestId": "mv_side_098",
+      "previousArcFinale": "mv_side_180",
+      "questGiver": "Brin Copper Quill",
+      "recurringCastIds": [
+        "chain_08_member_1",
+        "chain_08_member_2",
+        "chain_08_member_3",
+        "chain_08_member_4",
+        "chain_08_member_5",
+        "chain_08_member_6",
+        "chain_08_member_7",
+        "chain_08_member_8",
+        "chain_08_member_9",
+        "chain_08_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_08_member_10",
+        "chain_08_member_3",
+        "chain_08_member_7"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 29,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier letter investigations, couriers receive letters signed by future versions of themselves.",
+      "objectives": [
+        "Review verified evidence from quests 098 and 180",
+        "Present the chain's evidence and decide what survives the next return",
+        "Investigate the complication: a forged letter could destroy an alliance",
+        "Record the consequences and secure a lead for the next letter quest"
+      ],
+      "complication": "a forged letter could destroy an alliance",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate letter clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Letter testimony fragment",
+        "Multiversal Convergence ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": null
+    }
+  ]
+}

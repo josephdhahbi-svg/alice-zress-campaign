@@ -1,0 +1,1022 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "wave": 3,
+  "chainId": "mv_chain_03",
+  "title": "The Bells That Ring Before Dawn",
+  "continuesFrom": "mv_side_130",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_03_member_1",
+      "name": "Aster Vale Vale",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_03_member_2",
+      "name": "Brin Copper Vale",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_03_member_3",
+      "name": "Celia Moss Vale",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_03_member_4",
+      "name": "Dorian Quill Vale",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_03_member_5",
+      "name": "Edda Stone Vale",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_03_member_6",
+      "name": "Fenn Ash Vale",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_03_member_7",
+      "name": "Galia Reed Vale",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_03_member_8",
+      "name": "Hale Meridian Vale",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_03_member_9",
+      "name": "Iris Thorn Vale",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_03_member_10",
+      "name": "Joren Star Vale",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_221",
+      "number": 221,
+      "title": "The Reopened Passage: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 11,
+      "previousQuestId": "mv_side_121",
+      "earliestQuestId": "mv_side_003",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Vasha",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_4",
+        "chain_03_member_8"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 3,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 003 and 121",
+        "Search the reopened tunnel for a witness who disappeared in the first expedition",
+        "Investigate the complication: A rescue site conceals a community that refuses relocation",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "A rescue site conceals a community that refuses relocation",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Underdark ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_222"
+    },
+    {
+      "id": "mv_side_222",
+      "number": 222,
+      "title": "The Ledger of Consequences: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 12,
+      "previousQuestId": "mv_side_122",
+      "earliestQuestId": "mv_side_013",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Dorian Quill Vale",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_2",
+        "chain_03_member_5",
+        "chain_03_member_9"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 6,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 013 and 122",
+        "Interview merchants and refugees about a newly discovered ledger",
+        "Investigate the complication: A former antagonist has begun making restitution",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "A former antagonist has begun making restitution",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Sword Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_223"
+    },
+    {
+      "id": "mv_side_223",
+      "number": 223,
+      "title": "The Council's Second Witness: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 13,
+      "previousQuestId": "mv_side_123",
+      "earliestQuestId": "mv_side_023",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Edda Stone Vale",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_3",
+        "chain_03_member_6",
+        "chain_03_member_10"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 9,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 023 and 123",
+        "Compare testimony against the council's archived evidence",
+        "Investigate the complication: A forged seal was used to protect a frightened hatchling",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "A forged seal was used to protect a frightened hatchling",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Dragon Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_224"
+    },
+    {
+      "id": "mv_side_224",
+      "number": 224,
+      "title": "A Memory in the Mist: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 14,
+      "previousQuestId": "mv_side_124",
+      "earliestQuestId": "mv_side_033",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Fenn Ash Vale",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_4",
+        "chain_03_member_7",
+        "chain_03_member_1"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 12,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 033 and 124",
+        "Recover a missing record from a village trapped in the mists",
+        "Investigate the complication: The record documents a visit that has not happened yet",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "The record documents a visit that has not happened yet",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Barovia ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_225"
+    },
+    {
+      "id": "mv_side_225",
+      "number": 225,
+      "title": "The Contract's Missing Clause: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 15,
+      "previousQuestId": "mv_side_125",
+      "earliestQuestId": "mv_side_043",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Galia Reed Vale",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_5",
+        "chain_03_member_8",
+        "chain_03_member_2"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 15,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 043 and 125",
+        "Challenge a contract built upon an earlier falsehood",
+        "Investigate the complication: The contract holder is trying to free a dependent",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "The contract holder is trying to free a dependent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Avernus ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_226"
+    },
+    {
+      "id": "mv_side_226",
+      "number": 226,
+      "title": "The Story Nobody Told: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 16,
+      "previousQuestId": "mv_side_126",
+      "earliestQuestId": "mv_side_053",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Hale Meridian Vale",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_6",
+        "chain_03_member_9",
+        "chain_03_member_3"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 18,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 053 and 126",
+        "Negotiate access to a story that was removed from public memory",
+        "Investigate the complication: The storyteller cannot distinguish two traversals",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "The storyteller cannot distinguish two traversals",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Feywild ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_227"
+    },
+    {
+      "id": "mv_side_227",
+      "number": 227,
+      "title": "The Ship of Returning Voices: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 17,
+      "previousQuestId": "mv_side_127",
+      "earliestQuestId": "mv_side_063",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Iris Thorn Vale",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_7",
+        "chain_03_member_10",
+        "chain_03_member_4"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 21,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 063 and 127",
+        "Locate a ship carrying evidence from an abandoned expedition",
+        "Investigate the complication: The ship's crew believes the quest was completed already",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "The ship's crew believes the quest was completed already",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Wildspace ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_228"
+    },
+    {
+      "id": "mv_side_228",
+      "number": 228,
+      "title": "The Door of Confession: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 18,
+      "previousQuestId": "mv_side_128",
+      "earliestQuestId": "mv_side_073",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Joren Star Vale",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_8",
+        "chain_03_member_1",
+        "chain_03_member_5"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 24,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 073 and 128",
+        "Trace the evidence through a gate registry and witness exchange",
+        "Investigate the complication: The correct portal opens only for a truthful confession",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "The correct portal opens only for a truthful confession",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Sigil ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_229"
+    },
+    {
+      "id": "mv_side_229",
+      "number": 229,
+      "title": "The Witness in Shadow: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 19,
+      "previousQuestId": "mv_side_129",
+      "earliestQuestId": "mv_side_083",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Aster Vale Vale",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_9",
+        "chain_03_member_2",
+        "chain_03_member_6"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 27,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 083 and 129",
+        "Restore a damaged memory without rewriting anyone's identity",
+        "Investigate the complication: The forgotten witness is protecting an apparent villain",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "The forgotten witness is protecting an apparent villain",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Shadowfell ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_230"
+    },
+    {
+      "id": "mv_side_230",
+      "number": 230,
+      "title": "The Legacy Beyond the Loop: Bell",
+      "chainId": "mv_chain_03",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 20,
+      "previousQuestId": "mv_side_130",
+      "earliestQuestId": "mv_side_093",
+      "previousArcFinale": "mv_side_130",
+      "questGiver": "Brin Copper Vale",
+      "recurringCastIds": [
+        "chain_03_member_1",
+        "chain_03_member_2",
+        "chain_03_member_3",
+        "chain_03_member_4",
+        "chain_03_member_5",
+        "chain_03_member_6",
+        "chain_03_member_7",
+        "chain_03_member_8",
+        "chain_03_member_9",
+        "chain_03_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_03_member_10",
+        "chain_03_member_3",
+        "chain_03_member_7"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 30,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier bell investigations, warning bells begin sounding before disasters.",
+      "objectives": [
+        "Review verified evidence from quests 093 and 130",
+        "Present the chain's evidence and decide what survives the next return",
+        "Investigate the complication: someone is creating disasters to validate the warnings",
+        "Record the consequences and secure a lead for the next bell quest"
+      ],
+      "complication": "someone is creating disasters to validate the warnings",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate bell clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Bell testimony fragment",
+        "Multiversal Convergence ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": null
+    }
+  ]
+}

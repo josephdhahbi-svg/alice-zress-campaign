@@ -2,6 +2,7 @@
 /** Opt-in SQLite online backups. Uses better-sqlite3 backup() so WAL pages are included. */
 const fs=require("node:fs");
 const path=require("node:path");
+const Database=require("better-sqlite3");
 function createBackupService(db,{directory,intervalMs=6*60*60*1000,retain=14,clock=()=>new Date(),logger=console}={}){
  if(!db||typeof db.backup!=="function")throw new TypeError("SQLite backup() required");
  if(typeof directory!=="string"||!directory.trim())throw new TypeError("Backup directory required");
@@ -18,6 +19,14 @@ function createBackupService(db,{directory,intervalMs=6*60*60*1000,retain=14,clo
    const stamp=clock().toISOString().replace(/[:.]/g,"-");
    destination=path.join(folder,"moonveil-"+stamp+"-"+require("node:crypto").randomBytes(4).toString("hex")+".sqlite");
    await db.backup(destination);
+   // Verify a complete SQLite snapshot before retention can delete older backups.
+   // Test doubles that do not expose SQLite prepare() remain supported by unit tests.
+   if(typeof db.prepare==="function"){
+    const snapshot=new Database(destination,{readonly:true,fileMustExist:true});
+    try{
+     if(snapshot.pragma("integrity_check",{simple:true})!=="ok")throw new Error("BACKUP_INTEGRITY_FAILED");
+    }finally{snapshot.close();}
+   }
    const files=fs.readdirSync(folder).filter(n=>/^moonveil-.*\.sqlite$/.test(n)).sort().reverse();
    for(const file of files.slice(retain))fs.unlinkSync(path.join(folder,file));
    logger.info?.("[Moonveil] SQLite online backup completed");

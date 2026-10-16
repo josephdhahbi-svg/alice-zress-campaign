@@ -1,0 +1,1022 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "wave": 3,
+  "chainId": "mv_chain_02",
+  "title": "The Roots Beneath Every World",
+  "continuesFrom": "mv_side_120",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_02_member_1",
+      "name": "Aster Vale Moss",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_2",
+      "name": "Brin Copper Moss",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_3",
+      "name": "Celia Moss Moss",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_4",
+      "name": "Dorian Quill Moss",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_5",
+      "name": "Edda Stone Moss",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_6",
+      "name": "Fenn Ash Moss",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_7",
+      "name": "Galia Reed Moss",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_8",
+      "name": "Hale Meridian Moss",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_9",
+      "name": "Iris Thorn Moss",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_10",
+      "name": "Joren Star Moss",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_211",
+      "number": 211,
+      "title": "The Reopened Passage: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 11,
+      "previousQuestId": "mv_side_111",
+      "earliestQuestId": "mv_side_002",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Brel",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_4",
+        "chain_02_member_8"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 2,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 002 and 111",
+        "Search the reopened tunnel for a witness who disappeared in the first expedition",
+        "Investigate the complication: A rescue site conceals a community that refuses relocation",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "A rescue site conceals a community that refuses relocation",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Underdark ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_212"
+    },
+    {
+      "id": "mv_side_212",
+      "number": 212,
+      "title": "The Ledger of Consequences: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 12,
+      "previousQuestId": "mv_side_112",
+      "earliestQuestId": "mv_side_012",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Dorian Quill Moss",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_2",
+        "chain_02_member_5",
+        "chain_02_member_9"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 5,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 012 and 112",
+        "Interview merchants and refugees about a newly discovered ledger",
+        "Investigate the complication: A former antagonist has begun making restitution",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "A former antagonist has begun making restitution",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Sword Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_213"
+    },
+    {
+      "id": "mv_side_213",
+      "number": 213,
+      "title": "The Council's Second Witness: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 13,
+      "previousQuestId": "mv_side_113",
+      "earliestQuestId": "mv_side_022",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Edda Stone Moss",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_3",
+        "chain_02_member_6",
+        "chain_02_member_10"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 8,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 022 and 113",
+        "Compare testimony against the council's archived evidence",
+        "Investigate the complication: A forged seal was used to protect a frightened hatchling",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "A forged seal was used to protect a frightened hatchling",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Dragon Coast ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_214"
+    },
+    {
+      "id": "mv_side_214",
+      "number": 214,
+      "title": "A Memory in the Mist: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 14,
+      "previousQuestId": "mv_side_114",
+      "earliestQuestId": "mv_side_032",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Fenn Ash Moss",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_4",
+        "chain_02_member_7",
+        "chain_02_member_1"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 11,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 032 and 114",
+        "Recover a missing record from a village trapped in the mists",
+        "Investigate the complication: The record documents a visit that has not happened yet",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "The record documents a visit that has not happened yet",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Barovia ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_215"
+    },
+    {
+      "id": "mv_side_215",
+      "number": 215,
+      "title": "The Contract's Missing Clause: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 15,
+      "previousQuestId": "mv_side_115",
+      "earliestQuestId": "mv_side_042",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Galia Reed Moss",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_5",
+        "chain_02_member_8",
+        "chain_02_member_2"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 14,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 042 and 115",
+        "Challenge a contract built upon an earlier falsehood",
+        "Investigate the complication: The contract holder is trying to free a dependent",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "The contract holder is trying to free a dependent",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Avernus ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_216"
+    },
+    {
+      "id": "mv_side_216",
+      "number": 216,
+      "title": "The Story Nobody Told: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 16,
+      "previousQuestId": "mv_side_116",
+      "earliestQuestId": "mv_side_052",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Hale Meridian Moss",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_6",
+        "chain_02_member_9",
+        "chain_02_member_3"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 17,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 052 and 116",
+        "Negotiate access to a story that was removed from public memory",
+        "Investigate the complication: The storyteller cannot distinguish two traversals",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "The storyteller cannot distinguish two traversals",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Feywild ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_217"
+    },
+    {
+      "id": "mv_side_217",
+      "number": 217,
+      "title": "The Ship of Returning Voices: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 17,
+      "previousQuestId": "mv_side_117",
+      "earliestQuestId": "mv_side_062",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Iris Thorn Moss",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_7",
+        "chain_02_member_10",
+        "chain_02_member_4"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 20,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 062 and 117",
+        "Locate a ship carrying evidence from an abandoned expedition",
+        "Investigate the complication: The ship's crew believes the quest was completed already",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "The ship's crew believes the quest was completed already",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Wildspace ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_218"
+    },
+    {
+      "id": "mv_side_218",
+      "number": 218,
+      "title": "The Door of Confession: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 18,
+      "previousQuestId": "mv_side_118",
+      "earliestQuestId": "mv_side_072",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Joren Star Moss",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_8",
+        "chain_02_member_1",
+        "chain_02_member_5"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 23,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 072 and 118",
+        "Trace the evidence through a gate registry and witness exchange",
+        "Investigate the complication: The correct portal opens only for a truthful confession",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "The correct portal opens only for a truthful confession",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Sigil ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_219"
+    },
+    {
+      "id": "mv_side_219",
+      "number": 219,
+      "title": "The Witness in Shadow: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 19,
+      "previousQuestId": "mv_side_119",
+      "earliestQuestId": "mv_side_082",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Aster Vale Moss",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_9",
+        "chain_02_member_2",
+        "chain_02_member_6"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 26,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 082 and 119",
+        "Restore a damaged memory without rewriting anyone's identity",
+        "Investigate the complication: The forgotten witness is protecting an apparent villain",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "The forgotten witness is protecting an apparent villain",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Shadowfell ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": "mv_side_220"
+    },
+    {
+      "id": "mv_side_220",
+      "number": 220,
+      "title": "The Legacy Beyond the Loop: Spore",
+      "chainId": "mv_chain_02",
+      "chainArc": "WAVE_3_CONSEQUENCES",
+      "chainStage": 20,
+      "previousQuestId": "mv_side_120",
+      "earliestQuestId": "mv_side_092",
+      "previousArcFinale": "mv_side_120",
+      "questGiver": "Brin Copper Moss",
+      "recurringCastIds": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_10"
+      ],
+      "featuredCastIds": [
+        "chain_02_member_10",
+        "chain_02_member_3",
+        "chain_02_member_7"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 29,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "After the earlier spore investigations, the fungal memory network begins sharing dreams across planes.",
+      "objectives": [
+        "Review verified evidence from quests 092 and 120",
+        "Present the chain's evidence and decide what survives the next return",
+        "Investigate the complication: the colony's oldest memories belong to someone still alive",
+        "Record the consequences and secure a lead for the next spore quest"
+      ],
+      "complication": "the colony's oldest memories belong to someone still alive",
+      "choicePanel": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Protect witnesses and seek an accountable resolution"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help those in danger and negotiate an equitable settlement"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose deception through a daring rescue or diversion"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Investigate spore clues using spells, equipment and the environment"
+        },
+        {
+          "type": "ACTION",
+          "text": "Confront a threat while safeguarding noncombatants"
+        }
+      ],
+      "revisit": {
+        "enabled": true,
+        "trigger": "DM_VERIFIED_NEW_EVIDENCE",
+        "effect": "NEW_CLUE_ONLY",
+        "automaticRewards": false
+      },
+      "outcomes": [
+        "Evidence secured and witnesses protected",
+        "Partial resolution with a later revisit lead",
+        "Unresolved conflict carried forward without erasing prior decisions"
+      ],
+      "rewardCandidates": [
+        "Spore testimony fragment",
+        "Multiversal Convergence ally favor"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL",
+      "nextQuestId": null
+    }
+  ]
+}
