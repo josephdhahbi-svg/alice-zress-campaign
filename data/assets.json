@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Moonveil generated art manifest. Files currently exist in the working session asset folder; repository paths are planned destinations and are not yet committed.",
+  "palette": [
+    "obsidian",
+    "violet",
+    "silver"
+  ],
+  "assets": [
+    {
+      "id": "asset-alice-portrait",
+      "name": "Alice of the Infinite Hallway",
+      "category": "character_portrait",
+      "filename": "01_alice_infinite_hallway_portrait.png",
+      "planned_repository_path": "assets/moonveil/01_alice_infinite_hallway_portrait.png",
+      "related_id": "alice-zress",
+      "target_aspect_ratio": "3:4",
+      "source": "AI-generated concept art",
+      "status": "generated_local_not_committed",
+      "background_status": "checkerboard_baked_in",
+      "transparency_status": "requires_background_removal",
+      "notes": "Generated concept art; character appearance should be checked against Alice's locked visual canon."
+    },
+    {
+      "id": "asset-hallway-wraith",
+      "name": "Hallway Wraith",
+      "category": "enemy_token",
+      "filename": "02_hallway_wraith_token.png",
+      "planned_repository_path": "assets/moonveil/02_hallway_wraith_token.png",
+      "related_id": null,
+      "target_aspect_ratio": "1:1",
+      "source": "AI-generated concept art",
+      "status": "generated_local_not_committed",
+      "background_status": "checkerboard_baked_in",
+      "transparency_status": "requires_background_removal",
+      "notes": "Generated concept art; checkerboard background is baked into image."
+    },
+    {
+      "id": "asset-vertical-ascension",
+      "name": "Vertical Ascension",
+      "category": "spell_icon",
+      "filename": "03_vertical_ascension_spell_icon.png",
+      "planned_repository_path": "assets/moonveil/03_vertical_ascension_spell_icon.png",
+      "related_id": null,
+      "target_aspect_ratio": "1:1",
+      "source": "AI-generated concept art",
+      "status": "generated_local_not_committed",
+      "background_status": "checkerboard_baked_in",
+      "transparency_status": "requires_background_removal",
+      "notes": "Generated concept art; checkerboard background is baked into image."
+    },
+    {
+      "id": "asset-obsidian-item-card",
+      "name": "Obsidian Item Card Background",
+      "category": "item_card_background",
+      "filename": "04_obsidian_item_card_background.png",
+      "planned_repository_path": "assets/moonveil/04_obsidian_item_card_background.png",
+      "related_id": null,
+      "target_aspect_ratio": "3:4",
+      "source": "AI-generated concept art",
+      "status": "generated_local_not_committed",
+      "background_status": "checkerboard_baked_in",
+      "transparency_status": "requires_background_removal",
+      "notes": "Generated concept art; checkerboard background is baked into image."
+    },
+    {
+      "id": "asset-infinite-hallway",
+      "name": "The Infinite Hallway",
+      "category": "location_plate",
+      "filename": "05_infinite_hallway_location_plate.png",
+      "planned_repository_path": "assets/moonveil/05_infinite_hallway_location_plate.png",
+      "related_id": null,
+      "target_aspect_ratio": "16:9",
+      "source": "AI-generated concept art",
+      "status": "generated_local_not_committed",
+      "background_status": "checkerboard_baked_in",
+      "transparency_status": "requires_background_removal",
+      "notes": "Generated concept art; checkerboard background is baked into image."
+    },
+    {
+      "id": "asset-arcane-ui-frame",
+      "name": "Arcane UI Frame",
+      "category": "ui_frame",
+      "filename": "06_arcane_ui_frame.png",
+      "planned_repository_path": "assets/moonveil/06_arcane_ui_frame.png",
+      "related_id": null,
+      "target_aspect_ratio": "3:4",
+      "source": "AI-generated concept art",
+      "status": "generated_local_not_committed",
+      "background_status": "checkerboard_baked_in",
+      "transparency_status": "requires_background_removal",
+      "notes": "Generated concept art; checkerboard background is baked into image."
+    },
+    {
+      "id": "asset-first-door-sigil",
+      "name": "The First Door",
+      "category": "book_sigil",
+      "filename": "07_the_first_door_book_sigil.png",
+      "planned_repository_path": "assets/moonveil/07_the_first_door_book_sigil.png",
+      "related_id": "book-01-pit-of-ghaunadaur",
+      "target_aspect_ratio": "1:1",
+      "source": "AI-generated concept art",
+      "status": "generated_local_not_committed",
+      "background_status": "checkerboard_baked_in",
+      "transparency_status": "requires_background_removal",
+      "notes": "Generated concept art; check the emblem's use against the Book 1 visual style."
+    }
+  ]
+}
