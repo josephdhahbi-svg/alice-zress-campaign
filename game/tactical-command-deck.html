@@ -24,7 +24,7 @@ button:hover{background:#51366b}.macro{display:flex;gap:8px;align-items:stretch}
 <section class="panel"><h2>⚙️ Glyph Companion — Experimental Sandbox</h2>
 <div class="row"><div class="stat" id="aliceHp"></div><div class="stat" id="glyphHp"></div><div class="stat" id="enemyHp"></div></div>
 <p class="small">Glyph is an optional experimental companion. These prototype actions are not official D&D rules and do not modify your campaign save.</p>
-<div class="grid" id="glyphActions"></div><p><button id="reset">Reset Glyph sandbox</button></p></section>
+<p class="small" id="glyphTurn" role="status" aria-live="polite">Round 1 · Action available</p><div class="grid" id="glyphActions"></div><p><button id="nextRound">Next combat round</button> <button id="reset">Reset Glyph sandbox</button></p></section>
 <section class="panel"><h2>Command journal</h2><div id="journal" role="status" aria-live="polite"></div>
 <p><button id="export">Export sandbox JSON</button> <button id="clear">Clear command journal</button></p></section>
 </main><script>
@@ -41,7 +41,7 @@ const implemented=new Set(["ROLL_INITIATIVE","OPEN_TACTICAL_MAP"]);
 const defaults=["ROLL_INITIATIVE","OPEN_TACTICAL_MAP","ATTUNE_ALTAR"];
 const $=id=>document.getElementById(id);
 function loadPins(){try{const p=JSON.parse(localStorage.getItem(PIN_KEY));return Array.isArray(p)?[...new Set(p.filter(x=>commands.some(c=>c[0]===x)))].slice(0,commands.length):defaults.slice();}catch{return defaults.slice();}}
-let pins=loadPins(),journal=[],state={alice:{hp:10,maxHp:30},glyph:{hp:20,maxHp:30},enemy:{hp:9,maxHp:9}};
+let pins=loadPins(),journal=[],round=1,actionSpent=false,state={alice:{hp:10,maxHp:30},glyph:{hp:20,maxHp:30},enemy:{hp:9,maxHp:9}};
 function log(message){journal.unshift(new Date().toLocaleTimeString()+" · "+message);journal=journal.slice(0,80);$("journal").textContent=journal.join("\n")||"No actions recorded.";}
 function pin(code){pins=pins.includes(code)?pins.filter(x=>x!==code):[...pins,code];try{localStorage.setItem(PIN_KEY,JSON.stringify(pins));}catch{}renderMacros();}
 function command(code){
@@ -60,26 +60,29 @@ function renderMacros(){
   wrap.append(run,toggle);root.append(wrap);
  }
 }
+function renderTurn(){ $("glyphTurn").textContent="Round "+round+" · "+(actionSpent?"Action spent":"Action available");for(const b of $("glyphActions").querySelectorAll("button"))b.disabled=actionSpent||state.glyph.hp<=0;}
 function renderStats(){
  $("aliceHp").textContent="Alice · "+state.alice.hp+"/"+state.alice.maxHp+" HP";
  $("glyphHp").textContent="Glyph · "+state.glyph.hp+"/"+state.glyph.maxHp+" HP";
- $("enemyHp").textContent="Ooze · "+state.enemy.hp+"/"+state.enemy.maxHp+" HP";
+ $("enemyHp").textContent="Ooze · "+state.enemy.hp+"/"+state.enemy.maxHp+" HP";renderTurn();
 }
 function glyph(action){
  if(!actions.includes(action)){log("Unknown Glyph action blocked.");return;}
  if(state.glyph.hp<=0){log("Glyph cannot act.");return;}
+ if(actionSpent){log("Glyph already acted this round. Choose Next combat round.");return;}
  const roll=Math.floor(Math.random()*6)+1,amount=roll+2;
  const eligibleSupport=state.alice.hp>0&&state.alice.hp<state.alice.maxHp;
  const eligibleAttack=state.enemy.hp>0;
  if(action==="SUPPORT"&&eligibleSupport)state.alice.hp=Math.min(state.alice.maxHp,state.alice.hp+amount);
  if(action==="ATTACK"&&eligibleAttack)state.enemy.hp=Math.max(0,state.enemy.hp-amount);
  const description={SUPPORT:eligibleSupport?"Prototype support, up to "+amount+" HP":"No eligible support target",ATTACK:eligibleAttack?"Prototype attack, up to "+amount+" damage":"No living target",DEFEND:"Defensive stance (expires end of round)",CONTROL:"Enemy movement lanes marked (expires end of round)",SCAN:"Scanned nearby hazards"}[action];
- log("Glyph "+action+": "+description);renderStats();
+ actionSpent=true;log("Round "+round+" · Glyph "+action+": "+description);renderStats();
 }
 for(const action of actions){const button=document.createElement("button");button.textContent=action;button.onclick=()=>glyph(action);$("glyphActions").append(button);}
-$("reset").onclick=()=>{state={alice:{hp:10,maxHp:30},glyph:{hp:20,maxHp:30},enemy:{hp:9,maxHp:9}};renderStats();log("Glyph sandbox reset.");};
+$("nextRound").onclick=()=>{if(round>=100000){log("Round limit reached.");return;}round++;actionSpent=false;renderStats();log("Round "+round+" started; temporary Glyph effects expired.");};
+$("reset").onclick=()=>{round=1;actionSpent=false;state={alice:{hp:10,maxHp:30},glyph:{hp:20,maxHp:30},enemy:{hp:9,maxHp:9}};renderStats();log("Glyph sandbox reset.");};
 $("clear").onclick=()=>{journal=[];log("Command journal cleared.");};
-$("export").onclick=()=>{const data=JSON.stringify({version:1,prototype:true,pins,journal,state},null,2);const blob=new Blob([data],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="moonveil-command-deck-sandbox.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+$("export").onclick=()=>{const data=JSON.stringify({version:2,prototype:true,pins,journal,state,round,actionSpent},null,2);const blob=new Blob([data],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="moonveil-command-deck-sandbox.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 renderMacros();renderStats();log("Local tactical command deck ready.");
 })();
 </script></body></html>
