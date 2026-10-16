@@ -25,3 +25,5 @@ jobs:
         run: python scripts/validate.py
       - name: Check deterministic encounter simulation
         run: python scripts/simulate.py --test
+      - name: Check Book 1 scene and browser prototype
+        run: python scripts/test_book1.py
