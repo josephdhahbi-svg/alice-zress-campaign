@@ -14,6 +14,10 @@ button,a.action{background:#4c3377;color:white;border:1px solid #a58bd5;border-r
 button:hover,a.action:hover{background:#684797}button:focus-visible,a:focus-visible{outline:3px solid #ddd1ff;outline-offset:2px}
 .toolbar{display:flex;gap:9px;flex-wrap:wrap}.stat{font-size:1.7rem;font-weight:800;color:#d6bdff}
 .meter{height:10px;background:#0d0b16;border-radius:10px;overflow:hidden;margin:9px 0}.meter span{display:block;height:100%;background:#ae8fff}
+.table-scroll{overflow-x:auto;border:1px solid #574475;border-radius:10px}
+table{width:100%;border-collapse:collapse;min-width:590px}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #433452;font-size:.91rem}
+th{background:#322448;color:#e8d9ff;position:sticky;top:0}tbody tr:hover{background:#312442}
+.num{text-align:right;font-variant-numeric:tabular-nums}.muted{color:#b8a9cf}
 small{color:#c4b8d7}pre{white-space:pre-wrap;max-height:230px;overflow:auto;color:#d7cbe6;font-size:.83rem}
 </style></head><body><main>
 <header><small>MOONVEIL UNIVERSE · LOCAL WAR TABLE</small><h1>Faction Territory War</h1>
@@ -26,6 +30,13 @@ small{color:#c4b8d7}pre{white-space:pre-wrap;max-height:230px;overflow:auto;colo
 <div class="grid"><div><small>Local pulse count</small><div id="pulseCount" class="stat">0</div></div><div><small>Controlled territories</small><div id="territoryCount" class="stat">0</div></div><div><small>Last pulse</small><div id="lastPulse" class="stat">—</div></div></div></section>
 <section class="panel"><h2>Faction influence</h2><div id="factions" class="grid"></div></section>
 <section class="panel"><h2>Cosmological territories</h2><div id="territories" class="grid"></div></section>
+<section class="panel"><h2>War Room · Strategic Tables</h2>
+<p>Live calculations from this local simulation. These tables are illustrative homebrew, not official campaign outcomes.</p>
+<h3>Table I · Faction power ranking</h3><div class="table-scroll"><table><thead><tr><th>Rank</th><th>Faction</th><th>Moral role</th><th class="num">Influence</th><th class="num">Territories</th><th class="num">Strategic value</th></tr></thead><tbody id="powerTable"></tbody></table></div>
+<h3>Table II · Territory control register</h3><div class="table-scroll"><table><thead><tr><th>Territory</th><th>Cosmological sector</th><th>Controller</th><th class="num">Value</th><th>Threat</th></tr></thead><tbody id="controlTable"></tbody></table></div>
+<h3>Table III · War front and conquest forecast</h3><div class="table-scroll"><table><thead><tr><th>Territory</th><th>Current controller</th><th>Leading challenger</th><th class="num">Influence advantage</th><th>Forecast</th></tr></thead><tbody id="frontTable"></tbody></table></div>
+<h3>Table IV · Supply and strategic resources</h3><div class="table-scroll"><table><thead><tr><th>Faction</th><th class="num">Controlled value</th><th class="num">Supply index</th><th>Logistics status</th></tr></thead><tbody id="supplyTable"></tbody></table></div>
+</section>
 <section class="panel"><h2>War audit journal</h2><pre id="audit">No local pulses yet.</pre></section>
 <script>
 "use strict";
@@ -51,6 +62,33 @@ function valid(s){return s&&s.version===1&&Number.isInteger(s.pulses)&&s.pulses>
 let state=seed();
 try{const raw=localStorage.getItem(KEY);if(raw){const candidate=JSON.parse(raw);if(valid(candidate))state=candidate;}}catch(_){}
 function node(tag,cls,value){const n=document.createElement(tag);if(cls)n.className=cls;if(value!==undefined)n.textContent=value;return n;}
+function tableRows(id, rows){
+ const body=$(id);body.replaceChildren();
+ for(const cells of rows){const tr=document.createElement("tr");
+ for(const value of cells){const td=node("td","",String(value));tr.append(td);}body.append(tr);}
+}
+function renderWarTables(){
+ const ownerOf=t=>state.factions.find(f=>f.id===t.owner);
+ const ranked=[...state.factions].sort((a,b)=>b.influence-a.influence||a.id.localeCompare(b.id));
+ tableRows("powerTable",ranked.map((f,i)=>[i+1,f.name,f.alignment,f.influence,
+ state.territories.filter(t=>t.owner===f.id).length,
+ state.territories.filter(t=>t.owner===f.id).reduce((sum,t)=>sum+t.value,0)]));
+ tableRows("controlTable",state.territories.map(t=>[t.name,t.sector,
+ ownerOf(t)?.name||"Unclaimed",t.value,
+ ownerOf(t)?.alignment==="RED"?"Hostile":ownerOf(t)?.alignment==="BLUE"?"Protected":"Uncertain"]));
+ tableRows("frontTable",state.territories.map(t=>{
+ const owner=ownerOf(t);const challenger=ranked.find(f=>f.id!==t.owner);
+ const advantage=challenger?challenger.influence-(owner?.influence||0):0;
+ const vulnerable=challenger&&challenger.influence>=65&&advantage>=20;
+ return [t.name,owner?.name||"Unclaimed",challenger?.name||"None",
+ advantage>=0?"+"+advantage:String(advantage),vulnerable?"Capture threshold reached":"Holding"];
+ }));
+ tableRows("supplyTable",ranked.map(f=>{
+ const value=state.territories.filter(t=>t.owner===f.id).reduce((sum,t)=>sum+t.value,0);
+ const supply=Math.min(100,Math.round(f.influence*.6+value*.8));
+ return [f.name,value,supply,supply>=70?"Strong":supply>=40?"Stable":"Strained"];
+ }));
+}
 function render(){
  $("pulseCount").textContent=String(state.pulses);
  $("territoryCount").textContent=state.territories.filter(t=>t.owner).length+"/"+state.territories.length;
@@ -62,6 +100,7 @@ function render(){
  for(const x of state.territories){const owner=state.factions.find(f=>f.id===x.owner);const tile=node("article","tile");
  tile.append(node("h3","",x.name),node("p","",x.sector+" · Strategic value "+x.value));
  tile.append(node("span",owner?"tag "+owner.alignment:"tag GREEN",owner?owner.name:"Unclaimed"));t.append(tile);}
+ renderWarTables();
  $("audit").textContent=state.audit.length?state.audit.slice().reverse().map(x=>x.at+" · "+x.message).join("\n"):"No local pulses yet.";
 }
 function save(){localStorage.setItem(KEY,JSON.stringify(state));render();}
