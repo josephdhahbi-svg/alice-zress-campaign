@@ -35,3 +35,15 @@ test("DM UI exposes review, attestation, and safe DOM-only rendering",()=>{
  assert.match(js,/Session changed/);
  assert.doesNotMatch(js,/innerHTML|localStorage|sessionStorage/);
 });
+
+test("multiverse quest atlas uses signed read-only previews and safe rendering",()=>{
+ const html=fs.readFileSync(path.join(__dirname,"../prototype/alice-room-atlas.html"),"utf8");
+ const js=fs.readFileSync(path.join(__dirname,"../prototype/alice-room-atlas.js"),"utf8");
+ assert.match(html,/id="quest-chains-refresh"/);
+ assert.match(html,/id="quest-chains-list"/);
+ assert.match(js,/async function refreshMultiverseQuestAtlas\(\)/);
+ assert.match(js,/\/quests\/multiverse-chains/);
+ assert.match(js,/epoch!==sessionEpoch/);
+ assert.match(js,/document\.createElement\("ol"\)/);
+ assert.doesNotMatch(js,/innerHTML|localStorage|sessionStorage/);
+});
