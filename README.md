@@ -28,6 +28,7 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 - `data/books.json` — initial structured 30-book catalog; continuity review remains pending.
 - `data/setup_payoffs.json` — proposed cross-book setup/payoff links.
 - `data/scenes.json` — structured Book 1 opening scene with five choices, check definitions, and state-effect rules.
+- `data/assets.json` — seven-entry Moonveil art manifest; generated image files are not yet committed.
 - `data/decisions.json` — explicit unresolved decisions; no conflicts are silently overwritten.
 - `data/development_components.json` — reusable component registry.
 - `data/characters.json`, `data/locations.json`, `data/rituals.json`, `data/relationships.json`, `data/story_phases.json` — current starter lore and relationship records.
@@ -36,6 +37,7 @@ An original interactive Forgotten Realms-inspired D&D campaign development proje
 - `scripts/test_book1.py` — Book 1 scene and prototype regression checks; run with `python scripts/test_book1.py`.
 - `game/index.html` — offline campaign prototype with local character/quest save and import/export.
 - `game/book1.html` — standalone Book 1 opening scene prototype with five choices, d20 checks, local event history, and scene save import/export.
+- `scripts/test_book1.py` — regression checks for scene, Alice linkage, art manifest, and browser controls.
 - `.github/workflows/validate.yml` — CI validation and deterministic simulation check.
 
 ## Current implementation status
