@@ -207,3 +207,10 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - The supplied sample referenced `test_alice_state_attunement.py`, which was not found in the branch, so CI uses actual existing validators and discovers `tests/test_*.py` instead.
 - `133a730` added `docs/handoff/meeting-12-ci-final-handoff.md` with exact commands and guardrails.
 - Workflow commit is verified; **no GitHub Actions run result is verified yet**. Do not call CI passing until actual runs finish for both Python versions.
+
+## Meeting 12 — generated encounter visual concepts (2026-10-15)
+- Generated multiple original concept images in conversation: Netherese Enclave Collapse cinematic scene, combined three-hazard-card set, and Alice/U01 encounter dashboard compositions.
+- These images are **visual concepts only**. They are not uploaded as image binaries to GitHub, are not browser-connected assets, and are not approved canon maps. Any map labels/distances, Skullport depth, Promenade connection, hazard text/statistics, or depicted Alice equipment must be treated as illustrative, not authoritative.
+- Visual Codex slot `ART_ENC_NETHERESE_COLLAPSE_CONCEPT_V1` remains `file_path: null` until an actual image binary is placed in the repository and the manifest is updated to that real path.
+- Existing encounter data/UI commits remain `c7f7741`, `fcaecf8`, `9829935`, `9bbc892`, with handoff `e5433b5`; the new images did not alter game state or code.
+- Next art work: create separate clean image assets (wide encounter background, three isolated hazard illustrations, Alice portrait), store actual binaries in repository, verify file paths, then reference them from the UI. Keep all choices disabled and routes locked.
