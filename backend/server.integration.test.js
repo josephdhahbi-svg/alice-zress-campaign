@@ -78,6 +78,24 @@ test("local server protects APIs and persists bounded relationship updates", {ti
     assert.equal(conflict.status,409);
     const read=await fetch(base+"/api/campaigns/test-campaign/events",{headers:memberHeaders});
     assert.equal((await read.json()).events.length,1);
+    // A member of one campaign must not read or write another campaign's journal.
+    const otherCreated=await fetch(base+"/api/campaigns",{method:"POST",headers,
+      body:JSON.stringify({campaignId:"other-campaign",name:"Separate Game",actorId:"dm-2"})});
+    assert.equal(otherCreated.status,201);
+    const crossRead=await fetch(base+"/api/campaigns/other-campaign/events",{headers:memberHeaders});
+    assert.equal(crossRead.status,403);
+    const crossWrite=await fetch(base+"/api/campaigns/other-campaign/events",{method:"POST",headers:memberHeaders,
+      body:JSON.stringify({eventId:"cross-1",expectedRevision:0,eventType:"SCENE_STARTED",payload:{scene:"pit"}})});
+    assert.equal(crossWrite.status,403);
+    const secondHeaders={...headers,"X-Moonveil-Actor":"dm-2"};
+    const otherRead=await fetch(base+"/api/campaigns/other-campaign/events",{headers:secondHeaders});
+    assert.equal(otherRead.status,200);
+    assert.deepEqual((await otherRead.json()).events,[]);
+    // Reusing an event ID with changed contents must not silently mutate history.
+    const changedRetry=await fetch(base+"/api/campaigns/test-campaign/events",{method:"POST",headers:memberHeaders,
+      body:JSON.stringify({...payload,payload:{scene:"different"}})});
+    assert.equal(changedRetry.status,409);
+    assert.equal((await changedRetry.json()).error,"IDEMPOTENCY_CONFLICT");
     const pulse=await fetch(base+"/api/admin/world-pulse",{method:"POST",headers,body:"{}"});
     assert.equal(pulse.status,200);
     const duplicate=await fetch(base+"/api/admin/world-pulse",{method:"POST",headers,body:"{}"});
