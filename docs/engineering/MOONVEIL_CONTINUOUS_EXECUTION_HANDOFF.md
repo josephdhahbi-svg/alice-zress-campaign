@@ -114,3 +114,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - `server.js` commit `85e3b51b562d7ecdb5da22160f71a5f1ae58aba5`: signed DM-only POST `/api/campaigns/:campaignId/quests/:questId/state`.
 - Tests updated: `backend/quest-evidence-engine.test.js` `4cb393d2a40a74c4ea2bcd11d0e8c17c6319a3a2`, `backend/quest-evidence-api.integration.test.js` `e8bab6454b7ee8c98335cd20b46d83c3e50db5e8`; new `backend/quest-state-transitions.test.js` `2049116a43c8edcb93ed30c630d4ba4af3f5c031`.
 - **CI pending at time of handoff**; verified count remains 16/100 until confirmed. Do not award artifacts or modify Alice.
+
+### Quest state CI resolution
+- Initial Omniversal run `38922624373` failed due to eight SQL placeholders for nine `vtt_quest_state_audit` columns; corrected in commit `d7b8d03c02e40aaab6ee153fccdf2f4e0181235a`.
+- Rerun **Omniversal `38922707170` SUCCESS** and **Validate campaign records `38922706681` SUCCESS**.
+- Charter commit `1e0bc0d2da323e400768b6e96b4ace6b0681a246` closes **T025** and **T029**; verified **18/100**, open **82/100**.
+- Next: trusted prerequisite graph (T021), cooldown/repeatability (T026), outcome flags (T027), artifact metadata and explicitly approved reward catalog; combat resources. No candidate artifact awards.
