@@ -184,7 +184,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const campaignId=req.params.campaignId,actorId=req.auth.actorId;
     if(req.auth.kind!=="actor"||!id(campaignId)||memberRole.get(campaignId,actorId)?.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
     try{
-      const result=chronosReviews.review({campaignId,actorId,...(req.body||{})});
+      const result=chronosReviews.review({...(req.body||{}),campaignId,actorId});
       return res.status(result.duplicate?200:201).json({success:true,...result,timelineMutated:false,rewards:[]});
     }catch(error){return res.status(error instanceof TypeError?400:409).json({success:false,error:error instanceof TypeError?"INVALID_REVIEW":"REVIEW_CONFLICT"});}
   });
