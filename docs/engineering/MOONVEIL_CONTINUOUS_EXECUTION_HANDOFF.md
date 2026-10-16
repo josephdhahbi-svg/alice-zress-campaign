@@ -246,3 +246,8 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - CI **PASSED**: Validate campaign records `38928967430`; Omniversal verification `38928967450`.
 - Caution: evidence string is recorded but not independently cryptographically verified; DM adjudication is trusted. No automatic timeline paradox resolution, travel cost, source chronology reconciliation or UI connection. No character was moved by these code commits.
 - Charter remains 18/100 verified and 82 open; this is meaningful partial progress on chronology, world travel and persistent character state but not complete spatial-coordinate T047 or mission-consistency T090.
+
+## 2026-10-16 — Signed chronal travel HTTP integration
+- Added `backend/chronal-travel-api.integration.test.js` commit `4b5c20afe40e3afcfcc31c4d24578b6f7d7ea370`: actual HTTP signed actor sessions; DM-only initialization/travel, owner-only location reads, outsider and cross-campaign denial, duplicate travel replay, conflicting replay, invalid year and no artifact grants.
+- Validate campaign records `38929340901` and Omniversal verification `38929341064` were queued at authoring time; inspect final CI before claiming success.
+- Current charter 18/100 verified. The full player UI, verified portal discovery and paradox simulation remain open. Do not grant Alice rewards or move her by documentation.
