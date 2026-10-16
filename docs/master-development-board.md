@@ -126,3 +126,13 @@ Keep JSON as validated exchange/configuration data; SQLite as structured persist
 See `docs/vtt-technical-blueprint-audit.md` for the proposed Flutter → API service → Node.js/Express → SQLite persistence flow, repository evidence, code-level risks, recommended gameplay ledgers, and vertical-slice acceptance tests.
 
 Current technical decision: treat Flutter + Node.js + SQLite WAL as the target architecture until source files and tests confirm the implementation. The browser prototype is an existing offline prototype, not proof of backend synchronization. Resolve the book-table INSERT constraint mismatch, server-side validation, transaction error handling, sync queue/concurrency, and packet ledger before trusting remote persistence.
+
+
+## Administration and Lego build system
+- `docs/administration-build-operations.md` defines the capture → classify → connect → build → test → integrate → review → grow workflow, roles, priorities, and done criteria.
+- `data/books.json` is the initial structured 30-book catalog. All entries remain `pending_review`; the file does not certify historical dates or source canon.
+- `data/development_components.json` is the reusable component registry for the book catalog, canon ledger, chronology, loop ledger, U01 packets, Lens, Guvner axioms, choices, dice, sync, living world, and quality gates.
+- `docs/vtt-technical-blueprint-audit.md` records target VTT architecture and code risks.
+
+## Newly created component records
+The first batch creates structured "Lego" records rather than only brainstorming prose. Next steps are to extend the validator for uniqueness/references, run it against every data JSON file, add acceptance criteria and tests to each component, and connect the five-choice Book 1 slice to stable book and scene IDs.
