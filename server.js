@@ -10,6 +10,7 @@ const tavernCatalog=require("./backend/omniversal-tavern-catalog");
 const divineCatalog=require("./backend/divine-shrine-catalog");
 const weaveChronology=require("./backend/weave-chronology-tracker");
 const autonomousWorld=require("./backend/autonomous-world-director");
+const publicationCatalog=require("./backend/dnd-publication-catalog");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
 const express = require("express");
@@ -860,6 +861,21 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   // Divine sites and historical cameo previews are advisory, never auto-awards.
   // Three-era historical tracker, with dates and placements marked unresolved.
   // Read-only autonomous simulation previews; no mutations or scheduling.
+  // Chronological D&D bibliography; item-level lore remains unverified until sourced.
+  app.get("/api/campaigns/:campaignId/library/publications",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{
+      const result=publicationCatalog.listPublications({fromYear:req.query.fromYear===undefined?null:Number(req.query.fromYear),toYear:req.query.toYear===undefined?null:Number(req.query.toYear),setting:req.query.setting||null,edition:req.query.edition||null,limit:req.query.limit===undefined?100:Number(req.query.limit),offset:req.query.offset===undefined?0:Number(req.query.offset)});
+      return res.json({success:true,...result,coverage:publicationCatalog.getCoverage()});
+    }catch{return res.status(400).json({success:false,error:"INVALID_FILTER"});}
+  });
+  app.get("/api/campaigns/:campaignId/library/publications/:publicationId",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const publication=publicationCatalog.getPublication(req.params.publicationId);
+    return publication?res.json({success:true,publication}):res.status(404).json({success:false,error:"NOT_FOUND"});
+  });
   app.get("/api/campaigns/:campaignId/world/autonomous-preview",(req,res)=>{
     const campaignId=req.params.campaignId;
     if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
