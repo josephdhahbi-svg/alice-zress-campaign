@@ -1,0 +1,168 @@
+{
+  "schema": "moonveil.alice-core-divine-scenes.v1",
+  "status": "ORIGINAL_DIALOGUE_CANON_APPROVAL_PENDING",
+  "scenes": [
+    {
+      "power": "Eilistraee",
+      "role": "BLUE_GOOD",
+      "mode": "DISTANT_MOONLIT_SONG",
+      "scene": "pit_ghaunadaur",
+      "era": "UNRESOLVED",
+      "speaker": "Moonlit song, attributed to Eilistraee only after verification",
+      "opening": [
+        "A pale silver line crosses the cavern wall. It illuminates the captive before it illuminates the exit.",
+        "A voice, barely more than music, reaches Alice: 'The road is narrow, but it need not be walked alone.'",
+        "Alice: 'I can leave now, or turn back for someone I have never met.'",
+        "The song: 'Then you have already found the question worth answering.'"
+      ],
+      "returnLine": "The same melody lingers near the stone where Alice once stopped to help.",
+      "voiceRules": [
+        "Compassionate, liberating, artistic, never coercive",
+        "Emphasize consent and redemption rather than demands for worship"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Ask the captives what help they consent to receive.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Share the light and guide the weakest person first.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Confront the cultists who barred the passage.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Study the moon marks for a route around the danger.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "ACTION",
+          "text": "Prepare a defensive spell while escorting the captives.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        }
+      ],
+      "sourceStatus": "HOMEBREW_SCENE",
+      "drYear": null,
+      "manifestationVerified": false
+    },
+    {
+      "power": "Ghaunadaur",
+      "role": "RED_EVIL",
+      "mode": "UNCERTAIN_OOZE_WHISPER",
+      "scene": "pit_ghaunadaur",
+      "era": "UNRESOLVED",
+      "speaker": "Unverified whisper from the ooze",
+      "opening": [
+        "The pool below Alice shifts against the current, as though listening.",
+        "A wet voice murmurs: 'Everything that falls is eventually taken.'",
+        "Alice: 'I fell. I am not yours.'",
+        "The whisper: 'Then prove there is something in you that cannot be dissolved.'"
+      ],
+      "returnLine": "The pool remembers a shape, not necessarily a face; the voice offers no reliable proof of its source.",
+      "voiceRules": [
+        "Alien hunger, contempt for fixed forms, unpredictable attention",
+        "No invented benevolent promises or guaranteed pact rewards"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Reject the demand and invoke the captives' right to freedom.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Help the wounded without accepting the offered bargain.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Expose the cult's manipulation and free its prisoners.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Analyze the ooze's behavior without touching it.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "ACTION",
+          "text": "Defend against an actual attack and secure the passage.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        }
+      ],
+      "sourceStatus": "HOMEBREW_SCENE",
+      "drYear": null,
+      "manifestationVerified": false
+    },
+    {
+      "power": "Mystra",
+      "role": "BLUE_GOOD",
+      "mode": "UNIDENTIFIED_WEAVE_ECHO",
+      "scene": "pit_ghaunadaur",
+      "era": "UNRESOLVED",
+      "speaker": "Weave echo; Mystra identity NOT verified",
+      "opening": [
+        "Blue strands tighten across the cracked archway as Alice raises her hand.",
+        "A measured voice says: 'Magic is a bridge between intention and consequence.'",
+        "Alice: 'Then why was I given Shield?'",
+        "The echo: 'Perhaps because there will be a moment when standing between danger and another life matters more than striking first.'"
+      ],
+      "returnLine": "The arch bears a repaired thread of blue, but its maker's identity remains unresolved.",
+      "voiceRules": [
+        "Respect the Weave, spellcraft and the responsibility of magic",
+        "Identify Mystryl, first Mystra, or Midnight/Mystra before attribution"
+      ],
+      "choices": [
+        {
+          "type": "LAWFUL_GOOD",
+          "text": "Seek a lawful way to stabilize the dangerous arch.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "NEUTRAL_GOOD",
+          "text": "Protect the traveler trapped beneath the falling stones.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "CHAOTIC_GOOD",
+          "text": "Challenge the spellcaster exploiting the broken ward.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "UTILITY",
+          "text": "Identify the Weave signature and compare its historical date.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        },
+        {
+          "type": "ACTION",
+          "text": "Ready Shield only when a qualifying trigger occurs.",
+          "check": "DM_ADJUDICATED",
+          "effect": "NONE_AUTOMATIC"
+        }
+      ],
+      "sourceStatus": "HOMEBREW_SCENE",
+      "drYear": null,
+      "manifestationVerified": false
+    }
+  ]
+}
