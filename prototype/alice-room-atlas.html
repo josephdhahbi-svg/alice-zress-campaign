@@ -12,7 +12,7 @@
  <div class="mv-hud-portrait" role="img" aria-label="Original atmospheric illustration of a moonlit Underdark cavern"><span>THE ELDER EYE · ACT I</span></div>
  <div class="mv-hud-details"><p class="mv-eyebrow">The Moonveil Witch's Chronicle</p><h2>Alice Z'ress</h2><p>Female Drow · Acolyte · Level 1 Great Old One Warlock</p><div class="mv-stats"><div><strong>HP</strong><span>View signed character sheet</span></div><div><strong>Spells</strong><span>Shield · Acid Splash · Light</span></div><div><strong>Origin</strong><span>Pit of Ghaunadaur</span></div></div><p class="mv-subtitle">Live HP, inventory and combat require an authorized campaign session. No invented character statistics or rewards are displayed.</p></div>
  </section>
- <nav class="mv-quicknav" aria-label="Game sections"><a href="#story">Story</a><a href="#choices-panel">Five choices</a><a href="#maps-panel">Maps</a><a href="#journal-panel">Save journal</a><a href="#quest-panel">Quests</a><a href="#scene-panel">Actions</a></nav>
+ <nav class="mv-quicknav" aria-label="Game sections"><a href="#cinematic-gallery">Art gallery</a><a href="#comic-strip">Comic</a><a href="#cinematic-screen">Cinema</a><a href="#story">Story</a><a href="#choices-panel">Five choices</a><a href="#maps-panel">Maps</a><a href="#journal-panel">Save journal</a><a href="#quest-panel">Quests</a><a href="#scene-panel">Actions</a></nav>
  <section class="mv-decisions mv-inventory" aria-label="Inventory and combat status"><h2>Character resources</h2><div class="mv-resources"><article><h3>Inventory</h3><p>Unverified divine treasures are locked. Open your signed character record for owned equipment.</p></article><article><h3>Combat</h3><p>Combat controls are not available in this room-atlas preview. Use the authenticated game API when enabled.</p></article><article><h3>Save / Resume</h3><p>Journal submissions are saved server-side after you connect. Refresh the journal to resume your investigation.</p></article></div></section>
  <section class="mv-decisions" id="maps-panel" aria-label="Chronological map atlas">
 <h2>Chronological Grid Atlas</h2>
@@ -26,6 +26,19 @@
 <div id="maps-list" class="mv-journal-list"></div>
 </section>
 <section class="mv-decisions" id="discovery-panel" aria-label="Discovery history"><h2>Discovery Ledger</h2><p class="mv-subtitle">Return visits, clues, and revealed secrets recorded by the Dungeon Master. No items are automatically collected.</p><button class="mv-choice" id="discoveries-refresh" type="button" disabled>Load discovery history</button><p id="discoveries-status" class="mv-status" role="status" aria-live="polite">Connect to view discoveries.</p><div id="discoveries-list" class="mv-journal-list"></div></section><section class="mv-decisions" id="room-selection-panel" aria-label="Room selection"><h2>Room atlas</h2><div id="rooms" class="mv-room-list"><p class="mv-subtitle">Connect to view authoritative room descriptions.</p></div></section>
+<section class="mv-media-gallery mv-decisions" id="cinematic-gallery" aria-label="Interactive cinematic art slideshow">
+<p class="mv-eyebrow">THE VISUAL CODEX · ORIGINAL ART</p><h2>Visions of the Underdark</h2>
+<div class="mv-gallery-stage"><img id="mv-gallery-image" src="./moonveil-underdark-original.svg" alt="Original artwork of a moonlit Underdark cavern" loading="lazy"><div class="mv-gallery-caption"><strong id="mv-gallery-title">The Moonlit Abyss</strong><p id="mv-gallery-description">An original vision of Alice's journey beneath the surface.</p></div></div>
+<div class="mv-gallery-controls"><button class="mv-choice" type="button" id="mv-gallery-prev" aria-label="Previous artwork">← Previous</button><span id="mv-gallery-count" aria-live="polite">1 / 4</span><button class="mv-choice" type="button" id="mv-gallery-next" aria-label="Next artwork">Next →</button><button class="mv-choice" type="button" id="mv-gallery-play" aria-pressed="false">Play slideshow</button></div>
+<p class="mv-subtitle">Original Moonveil scene art. The slideshow changes illustrations only; it does not alter campaign state.</p>
+</section>
+<section class="mv-comic-section mv-decisions" id="comic-strip" aria-label="Alice opening comic strip"><p class="mv-eyebrow">ALICE Z'RESS · CHAPTER ZERO</p><h2>The Fall Through the Rabbit Hole</h2><div class="mv-comic-grid">
+<figure class="mv-comic-cell"><img src="./moonveil-underdark-original.svg" alt="Deep cavern illuminated by moonlight" loading="lazy"><figcaption><b>01 · The Descent</b><span>“The world above is gone.”</span></figcaption></figure>
+<figure class="mv-comic-cell mv-comic-variant-two"><img src="./moonveil-underdark-original.svg" alt="The darkness of the Elder Eye's domain" loading="lazy"><figcaption><b>02 · The Elder Eye</b><span>Something ancient stirs below.</span></figcaption></figure>
+<figure class="mv-comic-cell mv-comic-variant-three"><img src="./moonveil-underdark-original.svg" alt="Pale moonlight in the cavern" loading="lazy"><figcaption><b>03 · Three Gifts</b><span>Shield. Acid Splash. Light.</span></figcaption></figure>
+<figure class="mv-comic-cell mv-comic-variant-four"><img src="./moonveil-underdark-original.svg" alt="Pathways into the Underdark" loading="lazy"><figcaption><b>04 · The Choice</b><span>Alice decides who she will become.</span></figcaption></figure>
+</div></section>
+<section class="mv-decisions mv-cinema-section" id="cinematic-screen" aria-label="Cinematic sequence viewer"><p class="mv-eyebrow">CINEMATIC MODE</p><h2>Opening Sequence</h2><div class="mv-cinema-screen" role="img" aria-label="Original Moonveil Underdark art with animated cinematic camera effect"><div class="mv-cinema-text"><span>MOONVEIL UNIVERSE</span><strong>Into the Rabbit Hole</strong><p>The Pit of Ghaunadaur · Alice Z'ress</p></div></div><div class="mv-gallery-controls"><button class="mv-choice" id="mv-cinema-toggle" type="button" aria-pressed="false">Play animated scene</button><span id="mv-cinema-status" role="status">Paused · silent visual sequence, not a recorded video</span></div></section>
 <section class="mv-grid mv-story-stage" id="story" aria-label="Four cinematic story panels">
 <article class="mv-panel"><span class="mv-chip mv-map">I · Entrance</span><h2>Stone &amp; Stars</h2><p>The Pit of Ghaunadaur is the physical entrance.</p></article>
 <article class="mv-panel"><span class="mv-chip mv-villain">II · Parasite</span><h2>The Elder Eye</h2><p>Ghaunadaur's scar remembers Alice's fall.</p></article>
@@ -57,4 +70,4 @@
 <button class="mv-choice" id="ai-guide-send" type="submit" disabled>Ask AI Story Guide</button></form>
 <p class="mv-status" id="ai-guide-status" role="status" aria-live="polite">Connect to a campaign to ask the AI guide.</p><div id="ai-guide-reply" class="mv-journal-entry" aria-live="polite"></div>
 </section>
-</main><script src="./alice-room-atlas.js" defer></script></body></html>
+</main><script src="./alice-room-atlas.js" defer></script><script src="./moonveil-media.js" defer></script></body></html>
