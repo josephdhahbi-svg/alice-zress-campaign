@@ -47,7 +47,7 @@ function createWorldEconomyEngine(db){
      typeof reason!=="string"||reason.trim().length<3||reason.length>500)throw new TypeError("INVALID_ADJUSTMENT");
   const previous=prior.get(campaignId,adjustmentId);
   if(previous){
-   if(previous.commodity_id!==commodityId||previous.reason!==reason.trim())throw new Error("IDEMPOTENCY_CONFLICT");
+   if(previous.commodity_id!==commodityId||previous.reason!==reason.trim()||previous.new_price_copper!==Math.max(1,Math.round(previous.old_price_copper*(10000+changeBasisPoints)/10000)))throw new Error("IDEMPOTENCY_CONFLICT");
    return {duplicate:true,priceCopper:previous.new_price_copper};
   }
   const current=price.get(campaignId,commodityId);
