@@ -201,3 +201,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Validate campaign records `38925955569`: SUCCESS.
 - Charter still 18/100 verified, 82 open: T085 settlement economy and trade baseline remains partial (no intersettlement logistics, price transmission, currency settlement). T089 deterministic world pulse also open.
 - Next: deterministic opt-in pulse with idempotent event ID, bounded deltas, revision checks, cross-campaign isolation and restart tests; avoid unapproved clock changes and loot.
+
+## 2026-10-16 — Deterministic opt-in settlement market pulses
+- Migration v8 `680a69d8a093c26985ec375b84f2b72d93f0e993`: persistent pulse ID, canonical changes and results ledger.
+- Engine `de5502882ce857fb823f6c20db1eef8f736e9844`: explicit signed DM-only deterministic stock and price deltas; sorted canonical payload, bounded changes, unique market entries, revision checking, transactional all-or-nothing, idempotent replay, campaign isolation. No cron or implicit DR progression.
+- Tests `bc2c6c3a99d4165e9bc3af07659011aacaf09d66`; HTTP route `be7ee8d93e666fdf2bcb4d67e1c391082b76dbc4`.
+- CI pending; charter remains 18/100, 82 open. T089 requires wider event pulse acceptance and mission consistency; no task closed. Next: signed HTTP pulse integration test and restart-file durability.
