@@ -38,3 +38,10 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - No confirmed passing CI result for the corrected HEAD yet. **Do not mark new automated tests verified.** Run `node --test backend/alice-canon-registry.test.js` and `npm test` in CI or a Node environment with dependencies.
 - Task counts stay at the prior **5/100 reported** pending evidence audit; the new registry and tests are committed, not yet independently validated.
 - Next: verify CI on corrected commit; add canon regression tests to existing validation workflow; run migration tests and secure quest ownership/rewards.
+
+## Incoming Living World v46 LEGO — 2026-10-16
+- Source monolith and autonomous loop were supplied by user. **Do not paste over server.js**: its master-key fallback, query-string key, memory-only pseudo-WAL, unauthenticated actor ownership, unverified quest rewards and fixed +1 DR/year per hourly pulse are unsafe/inconsistent.
+- Implemented **opt-in** `backend/living-world-pulse.js` (commit `24988cca90cb6d035326a168dff6f016101086bb`): campaign-scoped SQLite factions, territories, pulse ledger; DM membership validation, explicit DR date, transactional idempotent territory transitions, pre-validation, no implicit cron.
+- Added `backend/living-world-pulse.test.js` (commit `30c97e76089e21edc34768b0bf57a1d63b21a76b`): tests for DM-only, cross-campaign isolation, duplicates, invalid faction and rollback.
+- **Pending:** GitHub Actions execution of new tests; safe API route wiring with signed actor sessions; scheduler design with single-worker lock and explicit campaign policy. Do not mark T081–T090 complete without CI and task-specific acceptance evidence.
+- The user-proposed Python while-loop was **not installed or launched**. If implementing it, require bounded iterations/cost, sandboxed allowlisted commands, explicit approvals for destructive actions, persistent resumability and proof-based completion.
