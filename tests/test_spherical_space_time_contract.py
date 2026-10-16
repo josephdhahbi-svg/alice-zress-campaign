@@ -49,6 +49,16 @@ class SphericalSpaceTimeContractTests(unittest.TestCase):
         self.assertEqual(self.atlas["status"], "seeded_design_graph")
         self.assertTrue(all(book["source_status"] == "unassigned_placeholder" for book in self.atlas["books"]))
 
+    def test_u01_space_time_dimensions_are_separate_and_unknown(self):
+        context = self.alice["space_time_context"]
+        self.assertIsNone(context["space"]["location_id"])
+        self.assertIsNone(context["time"]["timeline_id"])
+        self.assertIsNone(context["time"]["dr_start"])
+        self.assertEqual(context["time"]["date_precision"], "unknown")
+        self.assertEqual(context["causality"]["status"], "not_established")
+        self.assertIsNone(context["traversal"]["traversal_id"])
+        self.assertIsNone(context["traversal"]["book_id"])
+
     def test_alice_protected_state_remains_unselected(self):
         self.assertEqual(self.alice["character"]["level"], 1)
         self.assertTrue(all(not c["selected"] for c in self.alice["choices"]))
