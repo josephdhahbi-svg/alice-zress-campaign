@@ -1,0 +1,542 @@
+{
+  "schema": "moonveil.source-history-overlay.v1",
+  "status": "FOUNDATION_NOT_COMPLETE_BIBLIOGRAPHY",
+  "principles": [
+    "PUBLICATION_DATE_IS_NOT_IN_WORLD_DATE",
+    "SOURCE_EDITION_IS_NOT_AUTOMATICALLY_CONTINUITY_COMPATIBLE",
+    "FORGOTTEN_REALMS_DR_DOES_NOT_AUTOMATICALLY_MAP_TO_OTHER_SETTINGS",
+    "ALL_CAMEOS_REQUIRE_DATE_PLACE_STATUS_SOURCE",
+    "NO_WAR_OUTCOME_WITHOUT_DM_ATTESTATION"
+  ],
+  "sources": [
+    {
+      "id": "odnd_1974",
+      "title": "Original Dungeons & Dragons boxed set",
+      "publicationYear": 1974,
+      "setting": "MULTISETTING_RULES",
+      "kind": "CORE_RULES",
+      "historicalEra": "NOT_APPLICABLE",
+      "canonStatus": "OFFICIAL_PUBLICATION",
+      "sourceUrl": "https://wpn.wizards.com/en/products/the-making-of-original-d-and-d-1970-1977"
+    },
+    {
+      "id": "ravenloft_horrors_2026",
+      "title": "Ravenloft: The Horrors Within",
+      "publicationYear": 2026,
+      "publicationDate": "2026-06-16",
+      "setting": "RAVENLOFT",
+      "kind": "SETTING_SOURCEBOOK",
+      "historicalEra": "MULTIPLE_OR_DOMAIN_LOCAL",
+      "canonStatus": "OFFICIAL_PUBLICATION",
+      "domainsClaimed": 16,
+      "darklordsClaimed": 17,
+      "sourceUrl": "https://wpn.wizards.com/en/products/ravenloft-the-horrors-within"
+    },
+    {
+      "id": "ravenloft_van_richtens",
+      "title": "Van Richten's Guide to Ravenloft",
+      "publicationYear": 2021,
+      "setting": "RAVENLOFT",
+      "kind": "SETTING_SOURCEBOOK",
+      "historicalEra": "DOMAIN_LOCAL",
+      "canonStatus": "OFFICIAL_PUBLICATION",
+      "sourceUrl": "https://dnd.wizards.com/products/van-richtens-guide-ravenloft"
+    },
+    {
+      "id": "spelljammer_2022",
+      "title": "Spelljammer: Adventures in Space",
+      "publicationYear": 2022,
+      "setting": "SPELLJAMMER",
+      "kind": "SETTING_SOURCEBOOK",
+      "historicalEra": "CROSS_PLANAR_UNVERIFIED",
+      "canonStatus": "OFFICIAL_PUBLICATION",
+      "sourceUrl": "https://dnd.wizards.com/products/spelljammer"
+    },
+    {
+      "id": "manual_planes",
+      "title": "Manual of the Planes",
+      "publicationYear": null,
+      "setting": "PLANESCAPE_AND_PLANAR_LORE",
+      "kind": "SOURCE_FAMILY_MULTIPLE_EDITIONS",
+      "historicalEra": "VARIES",
+      "canonStatus": "EDITION_UNRESOLVED",
+      "sourceUrl": null
+    }
+  ],
+  "layers": [
+    {
+      "id": "publication",
+      "key": [
+        "sourceId",
+        "edition",
+        "publicationDate"
+      ],
+      "description": "Bibliographic publication chronology"
+    },
+    {
+      "id": "history",
+      "key": [
+        "setting",
+        "calendar",
+        "startDate",
+        "endDate",
+        "eraId"
+      ],
+      "description": "In-world chronology; independent per setting"
+    },
+    {
+      "id": "geography",
+      "key": [
+        "plane",
+        "domain",
+        "nation",
+        "region",
+        "siteId",
+        "validFrom",
+        "validTo"
+      ],
+      "description": "Territory and locations at specific dates"
+    },
+    {
+      "id": "sovereignty",
+      "key": [
+        "factionId",
+        "territoryId",
+        "startDate",
+        "endDate",
+        "sourceId"
+      ],
+      "description": "War tables, ownership and contested boundaries"
+    },
+    {
+      "id": "cast",
+      "key": [
+        "characterId",
+        "locationId",
+        "startDate",
+        "endDate",
+        "aliveStatus",
+        "sourceId"
+      ],
+      "description": "Chronologically eligible appearances"
+    },
+    {
+      "id": "moonveil",
+      "key": [
+        "book",
+        "traversal",
+        "sequence",
+        "setting",
+        "date",
+        "sourceId"
+      ],
+      "description": "Playthrough overlays, never rewrite canonical source"
+    },
+    {
+      "id": "consequence",
+      "key": [
+        "campaignId",
+        "eventId",
+        "choiceId",
+        "verifiedBy",
+        "timestamp"
+      ],
+      "description": "DM-attested alterations to the local campaign state"
+    }
+  ],
+  "domainTemplates": [
+    {
+      "setting": "RAVENLOFT",
+      "domain": "Barovia",
+      "plane": "Domains of Dread",
+      "historicalCalendar": "DOMAIN_LOCAL_UNVERIFIED",
+      "ruler": "Strahd von Zarovich",
+      "canonStatus": "SOURCE_REVIEW_REQUIRED"
+    },
+    {
+      "setting": "RAVENLOFT",
+      "domain": "Other Domains of Dread",
+      "plane": "Domains of Dread",
+      "historicalCalendar": "DOMAIN_SPECIFIC",
+      "ruler": "PER_DOMAIN_SOURCE_REQUIRED",
+      "canonStatus": "NOT_YET_ENUMERATED"
+    },
+    {
+      "setting": "FORGOTTEN_REALMS",
+      "domain": "Underdark",
+      "plane": "Material Plane",
+      "historicalCalendar": "DR_IF_FAERUN",
+      "ruler": "MULTIPLE_FACTIONS",
+      "canonStatus": "REGION_NOT_SINGLE_SOVEREIGNTY"
+    },
+    {
+      "setting": "PLANESCAPE",
+      "domain": "Sigil",
+      "plane": "Outlands / Sigil",
+      "historicalCalendar": "SETTING_LOCAL_UNVERIFIED",
+      "ruler": "SOURCE_REQUIRED",
+      "canonStatus": "REVIEW_REQUIRED"
+    }
+  ],
+  "warTableSchema": {
+    "territoryId": "STRING",
+    "setting": "STRING",
+    "plane": "STRING",
+    "calendar": "STRING",
+    "startDate": "DATE_OR_SEQUENCE",
+    "endDate": "DATE_OR_SEQUENCE",
+    "controllingFactionId": "STRING_OR_CONTESTED",
+    "conflictingClaims": [],
+    "militaryStrength": "UNVERIFIED",
+    "tradeRoutes": [],
+    "alliances": [],
+    "events": [],
+    "sources": [],
+    "canonStatus": "UNVERIFIED",
+    "campaignOverride": null
+  },
+  "characterTimelineSchema": {
+    "characterId": "STRING",
+    "setting": "STRING",
+    "eraId": "STRING",
+    "startDate": "DATE_OR_SEQUENCE",
+    "endDate": "DATE_OR_SEQUENCE",
+    "locationId": "STRING",
+    "lifeStatus": "ALIVE_DEAD_SPIRIT_AVATAR_UNKNOWN",
+    "appearanceMode": "PHYSICAL_VISION_RUMOR_ECHO",
+    "sourceId": "STRING",
+    "canonStatus": "UNVERIFIED"
+  },
+  "moonveilBookCoverage": [
+    {
+      "book": 1,
+      "trilogy": 1,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 2,
+      "trilogy": 1,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 3,
+      "trilogy": 1,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 4,
+      "trilogy": 2,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 5,
+      "trilogy": 2,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 6,
+      "trilogy": 2,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 7,
+      "trilogy": 3,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 8,
+      "trilogy": 3,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 9,
+      "trilogy": 3,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 10,
+      "trilogy": 4,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 11,
+      "trilogy": 4,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 12,
+      "trilogy": 4,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 13,
+      "trilogy": 5,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 14,
+      "trilogy": 5,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 15,
+      "trilogy": 5,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 16,
+      "trilogy": 6,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 17,
+      "trilogy": 6,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 18,
+      "trilogy": 6,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 19,
+      "trilogy": 7,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 20,
+      "trilogy": 7,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 21,
+      "trilogy": 7,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 22,
+      "trilogy": 8,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 23,
+      "trilogy": 8,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 24,
+      "trilogy": 8,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 25,
+      "trilogy": 9,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 26,
+      "trilogy": 9,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 27,
+      "trilogy": 9,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 28,
+      "trilogy": 10,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 29,
+      "trilogy": 10,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    },
+    {
+      "book": 30,
+      "trilogy": 10,
+      "sourceCrosswalkStatus": "PENDING_SOURCE_INDEX",
+      "historicalLayers": [
+        "ERA_1_MYSTRYL",
+        "ERA_2_MYSTRA",
+        "ERA_3_MIDNIGHT_MYSTRA"
+      ],
+      "traversals": 7
+    }
+  ]
+}
