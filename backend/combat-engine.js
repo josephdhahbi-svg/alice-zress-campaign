@@ -79,7 +79,7 @@ function createCombatEngine(db,{rollDie=(sides)=>randomInt(1,sides+1)}={}){
   let attackResult=null;
   if(kind==="ATTACK"){
    if(!validId(targetId)||!members.some(c=>c.combatant_id===targetId))throw new TypeError("INVALID_TARGET");
-   if(!integer(attackBonus,-20,40)||!integer(armorClass,1,40)||!integer(damageCount,1,20)||!integer(damageSides,2,100)||!integer(damageBonus,-20,40))throw new TypeError("INVALID_ATTACK");
+   if(!integer(attackBonus,-20,40)||!integer(armorClass,1,40)||!integer(damageCount,1,10)||!integer(damageSides,2,100)||!integer(damageBonus,-20,40))throw new TypeError("INVALID_ATTACK");
    if(db.prepare("SELECT 1 FROM vtt_combat_turn_usage WHERE campaign_id=? AND encounter_id=? AND round=? AND turn_index=? AND action_kind='ACTION'").get(campaignId,encounterId,encounter.round,encounter.turn_index))throw new Error("ACTION_ALREADY_USED");
    const face=rollDie(20);
    if(!integer(face,1,20))throw new TypeError("INVALID_SERVER_ROLL");
