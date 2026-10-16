@@ -56,6 +56,8 @@ jobs:
         run: node --test backend/backup-restore.integration.test.js
       - name: Check Faction Territory Pulse Engine
         run: node --test backend/faction-pulse.test.js
+      - name: Test authenticated browser roll client
+        run: node --test backend/roll-client.test.js
       - name: Test deterministic d20 resolution
         run: node --test backend/dice-rules.test.js
       - name: Test isolated Glyph companion tactics
