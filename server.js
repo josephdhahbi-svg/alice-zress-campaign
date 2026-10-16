@@ -28,6 +28,7 @@ const { getAliceDemiplane, previewAliceDemiplaneAccess } = require("./backend/al
 const { listAliceDemiplaneRooms, getAliceDemiplaneRoom, previewAliceDemiplaneRoomChoice } = require("./backend/alice-demiplane-rooms");
 const { createAliceExplorationJournal } = require("./backend/alice-exploration-journal");
 const { listPlanarWeatherHazards, previewPlanarWeatherHazard } = require("./backend/planar-weather-engine");
+const { listFuturePlanarHoldings, previewFuturePlanarHolding } = require("./backend/future-planar-holdings");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -152,6 +153,22 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const plan=planTimeSpaceJourney(req.body||{});
     return res.status(plan.reason==="INVALID_DR_DATE"||plan.reason==="UNKNOWN_LOCATION"||plan.reason==="UNKNOWN_TRAVEL_METHOD"?400:200)
       .json({success:true,...plan});
+  });
+  // Future demiplane holdings are lore previews, never a travel or resurrection grant.
+  app.get("/api/campaigns/:campaignId/world/future-holdings",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    return res.json({success:true,holdings:listFuturePlanarHoldings(),mode:"READ_ONLY"});
+  });
+  app.post("/api/campaigns/:campaignId/world/future-holdings/:holdingId/preview",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))
+      return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{
+      const preview=previewFuturePlanarHolding(req.params.holdingId,(req.body||{}).state||"QUIESCENT");
+      return preview?res.json({success:true,preview}):res.status(404).json({success:false,error:"NOT_FOUND"});
+    }catch(error){return res.status(400).json({success:false,error:"INVALID_STATE"});}
   });
   // Planar weather is a DM-reviewed preview, never automatic damage or conditions.
   app.get("/api/campaigns/:campaignId/weather/hazards",(req,res)=>{
