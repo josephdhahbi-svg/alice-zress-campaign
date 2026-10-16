@@ -1,0 +1,660 @@
+{
+  "schema": "moonveil.chain-pack.v1",
+  "chainId": "mv_chain_02",
+  "title": "The Mycelium Accord",
+  "status": "AUTHORED_DRAFT",
+  "cast": [
+    {
+      "id": "chain_02_member_1",
+      "name": "Aster Vale Moss",
+      "role": "guide",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_2",
+      "name": "Brin Copper Moss",
+      "role": "healer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_3",
+      "name": "Celia Moss Moss",
+      "role": "scout",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_4",
+      "name": "Dorian Quill Moss",
+      "role": "scholar",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_5",
+      "name": "Edda Stone Moss",
+      "role": "guardian",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_6",
+      "name": "Fenn Ash Moss",
+      "role": "engineer",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_7",
+      "name": "Galia Reed Moss",
+      "role": "diplomat",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_8",
+      "name": "Hale Meridian Moss",
+      "role": "courier",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_9",
+      "name": "Iris Thorn Moss",
+      "role": "investigator",
+      "canonStatus": "HOMEBREW"
+    },
+    {
+      "id": "chain_02_member_10",
+      "name": "Joren Star Moss",
+      "role": "chronicler",
+      "canonStatus": "HOMEBREW"
+    }
+  ],
+  "quests": [
+    {
+      "id": "mv_side_111",
+      "number": 111,
+      "title": "The First Thread: Spore Signal",
+      "chainId": "mv_chain_02",
+      "chainStage": 1,
+      "previousQuestId": "mv_side_002",
+      "previousChainQuestId": null,
+      "questGiver": "Brel",
+      "featuredPartyMembers": [
+        "chain_02_member_1",
+        "chain_02_member_2",
+        "chain_02_member_6"
+      ],
+      "setting": "Underdark",
+      "plane": "Material Plane",
+      "book": 2,
+      "trilogy": 1,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Find the first clue among displaced travelers.",
+      "objectives": [
+        "Consult Aster Vale Moss about the evidence from quest 002",
+        "Find the first clue among displaced travelers",
+        "Investigate: A witness remembers a different version of the event",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "A witness remembers a different version of the event",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Aster Vale Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_112",
+      "number": 112,
+      "title": "The Coastward Ledger: Spore Witness",
+      "chainId": "mv_chain_02",
+      "chainStage": 2,
+      "previousQuestId": "mv_side_012",
+      "previousChainQuestId": "mv_side_111",
+      "questGiver": "Brin Copper Moss",
+      "featuredPartyMembers": [
+        "chain_02_member_2",
+        "chain_02_member_3",
+        "chain_02_member_7"
+      ],
+      "setting": "Sword Coast",
+      "plane": "Material Plane",
+      "book": 5,
+      "trilogy": 2,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Follow the evidence into merchant and refugee networks.",
+      "objectives": [
+        "Consult Brin Copper Moss about the evidence from quest 012",
+        "Follow the evidence into merchant and refugee networks",
+        "Investigate: A merchant's records contradict the first witness",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "A merchant's records contradict the first witness",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Brin Copper Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_113",
+      "number": 113,
+      "title": "The Scales of Testimony: Spore Seal",
+      "chainId": "mv_chain_02",
+      "chainStage": 3,
+      "previousQuestId": "mv_side_022",
+      "previousChainQuestId": "mv_side_112",
+      "questGiver": "Celia Moss Moss",
+      "featuredPartyMembers": [
+        "chain_02_member_3",
+        "chain_02_member_4",
+        "chain_02_member_8"
+      ],
+      "setting": "Dragon Coast",
+      "plane": "Material Plane",
+      "book": 8,
+      "trilogy": 3,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Present the evidence before a disputed council.",
+      "objectives": [
+        "Consult Celia Moss Moss about the evidence from quest 022",
+        "Present the evidence before a disputed council",
+        "Investigate: A forged seal implicates an innocent ally",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "A forged seal implicates an innocent ally",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Celia Moss Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_114",
+      "number": 114,
+      "title": "Mistbound Reappearance: Spore Echo",
+      "chainId": "mv_chain_02",
+      "chainStage": 4,
+      "previousQuestId": "mv_side_032",
+      "previousChainQuestId": "mv_side_113",
+      "questGiver": "Dorian Quill Moss",
+      "featuredPartyMembers": [
+        "chain_02_member_4",
+        "chain_02_member_5",
+        "chain_02_member_9"
+      ],
+      "setting": "Barovia",
+      "plane": "Domains of Dread",
+      "book": 11,
+      "trilogy": 4,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Recover a lost witness beyond the mists.",
+      "objectives": [
+        "Consult Dorian Quill Moss about the evidence from quest 032",
+        "Recover a lost witness beyond the mists",
+        "Investigate: The witness has aged differently from the party",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "The witness has aged differently from the party",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Dorian Quill Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_115",
+      "number": 115,
+      "title": "The Ashen Bargain: Spore Contract",
+      "chainId": "mv_chain_02",
+      "chainStage": 5,
+      "previousQuestId": "mv_side_042",
+      "previousChainQuestId": "mv_side_114",
+      "questGiver": "Edda Stone Moss",
+      "featuredPartyMembers": [
+        "chain_02_member_5",
+        "chain_02_member_6",
+        "chain_02_member_10"
+      ],
+      "setting": "Avernus",
+      "plane": "Nine Hells",
+      "book": 14,
+      "trilogy": 5,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Challenge a contract exploiting the unresolved mystery.",
+      "objectives": [
+        "Consult Edda Stone Moss about the evidence from quest 042",
+        "Challenge a contract exploiting the unresolved mystery",
+        "Investigate: The contract can be broken without violence",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "The contract can be broken without violence",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Edda Stone Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_116",
+      "number": 116,
+      "title": "The Court of Unfinished Stories: Spore Memory",
+      "chainId": "mv_chain_02",
+      "chainStage": 6,
+      "previousQuestId": "mv_side_052",
+      "previousChainQuestId": "mv_side_115",
+      "questGiver": "Fenn Ash Moss",
+      "featuredPartyMembers": [
+        "chain_02_member_6",
+        "chain_02_member_7",
+        "chain_02_member_1"
+      ],
+      "setting": "Feywild",
+      "plane": "Feywild",
+      "book": 17,
+      "trilogy": 6,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Trade favors for a missing account of the mystery.",
+      "objectives": [
+        "Consult Fenn Ash Moss about the evidence from quest 052",
+        "Trade favors for a missing account of the mystery",
+        "Investigate: The account exists in two contradictory versions",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "The account exists in two contradictory versions",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Fenn Ash Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_117",
+      "number": 117,
+      "title": "The Starborne Crossing: Spore Beacon",
+      "chainId": "mv_chain_02",
+      "chainStage": 7,
+      "previousQuestId": "mv_side_062",
+      "previousChainQuestId": "mv_side_116",
+      "questGiver": "Galia Reed Moss",
+      "featuredPartyMembers": [
+        "chain_02_member_7",
+        "chain_02_member_8",
+        "chain_02_member_2"
+      ],
+      "setting": "Wildspace",
+      "plane": "Astral Sea",
+      "book": 20,
+      "trilogy": 7,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Trace the mystery through a damaged relay route.",
+      "objectives": [
+        "Consult Galia Reed Moss about the evidence from quest 062",
+        "Trace the mystery through a damaged relay route",
+        "Investigate: A vessel carries evidence from a future journey",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "A vessel carries evidence from a future journey",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Galia Reed Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_118",
+      "number": 118,
+      "title": "The Door That Remembers: Spore Key",
+      "chainId": "mv_chain_02",
+      "chainStage": 8,
+      "previousQuestId": "mv_side_072",
+      "previousChainQuestId": "mv_side_117",
+      "questGiver": "Hale Meridian Moss",
+      "featuredPartyMembers": [
+        "chain_02_member_8",
+        "chain_02_member_9",
+        "chain_02_member_3"
+      ],
+      "setting": "Sigil",
+      "plane": "Outlands / Sigil",
+      "book": 23,
+      "trilogy": 8,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Locate the portal that connects the scattered clues.",
+      "objectives": [
+        "Consult Hale Meridian Moss about the evidence from quest 072",
+        "Locate the portal that connects the scattered clues",
+        "Investigate: Its key is an earlier act of mercy",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "Its key is an earlier act of mercy",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Hale Meridian Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_119",
+      "number": 119,
+      "title": "The Shadow of the Original: Spore Shadow",
+      "chainId": "mv_chain_02",
+      "chainStage": 9,
+      "previousQuestId": "mv_side_082",
+      "previousChainQuestId": "mv_side_118",
+      "questGiver": "Iris Thorn Moss",
+      "featuredPartyMembers": [
+        "chain_02_member_9",
+        "chain_02_member_10",
+        "chain_02_member_4"
+      ],
+      "setting": "Shadowfell",
+      "plane": "Shadowfell",
+      "book": 26,
+      "trilogy": 9,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Confront the hidden architect of the mystery.",
+      "objectives": [
+        "Consult Iris Thorn Moss about the evidence from quest 082",
+        "Confront the hidden architect of the mystery",
+        "Investigate: The apparent antagonist was protecting someone",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "The apparent antagonist was protecting someone",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Iris Thorn Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    },
+    {
+      "id": "mv_side_120",
+      "number": 120,
+      "title": "The Seventh Return: Spore Legacy",
+      "chainId": "mv_chain_02",
+      "chainStage": 10,
+      "previousQuestId": "mv_side_092",
+      "previousChainQuestId": "mv_side_119",
+      "questGiver": "Joren Star Moss",
+      "featuredPartyMembers": [
+        "chain_02_member_10",
+        "chain_02_member_1",
+        "chain_02_member_5"
+      ],
+      "setting": "Multiversal Convergence",
+      "plane": "Cross-planar",
+      "book": 29,
+      "trilogy": 10,
+      "traversalAvailability": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "era": "CHRONOLOGY_REVIEW_REQUIRED",
+      "drDate": "UNVERIFIED",
+      "sourceStatus": "HOMEBREW",
+      "hook": "Brel's original case returns: a sentient fungal network losing its memories. Resolve the mystery and preserve testimony for future traversals.",
+      "objectives": [
+        "Consult Joren Star Moss about the evidence from quest 092",
+        "Resolve the mystery and preserve testimony for future traversals",
+        "Investigate: The final choice changes who remembers the truth",
+        "Resolve the local dispute and preserve the spore evidence for the next stage"
+      ],
+      "complication": "the cure endangers a peaceful colony",
+      "choices": {
+        "LAWFUL_GOOD": "Secure testimony, protect rights and request a fair hearing",
+        "NEUTRAL_GOOD": "Prioritize survivors and negotiate a compassionate solution",
+        "CHAOTIC_GOOD": "Expose manipulation through a daring nonlethal intervention",
+        "UTILITY": "Analyze the spore evidence with tools, magic and local terrain",
+        "ACTION": "Defend witnesses or confront threats with DM-adjudicated combat"
+      },
+      "outcomes": [
+        "Witnesses protected and the chain advances after approval",
+        "Partial success creates a later revisit clue",
+        "Unresolved evidence remains available for a future traversal"
+      ],
+      "rewardCandidates": [
+        "Spore evidence fragment",
+        "Contact favor from Joren Star Moss"
+      ],
+      "requiresDmApproval": true,
+      "automaticCompletion": false,
+      "automaticRewards": false,
+      "memoryScope": "CAMPAIGN_BOOK_TRAVERSAL"
+    }
+  ]
+}
