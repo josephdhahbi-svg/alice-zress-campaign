@@ -1,0 +1,890 @@
+{
+  "schema": "moonveil.tavern-pack.v1",
+  "region": "Avernus",
+  "firstBook": 13,
+  "lastBook": 15,
+  "count": 10,
+  "status": "AUTHORED_DRAFT",
+  "taverns": [
+    {
+      "id": "mv_tavern_041",
+      "name": "The Cinder Shelter",
+      "book": 13,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_041",
+      "kind": "roadside inn",
+      "proprietor": {
+        "name": "Rusk Ember",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Cinder Shelter is a roadside inn serving travelers in Avernus. Warm stew and private booths.",
+      "signatureService": "Warm stew and private booths",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_041",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_141",
+        "wave3QuestId": "mv_side_241",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Cinder Shelter. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_042",
+      "name": "The Unbroken Chain",
+      "book": 14,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_042",
+      "kind": "guildhouse tavern",
+      "proprietor": {
+        "name": "Vela Hearth",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Unbroken Chain is a guildhouse tavern serving travelers in Avernus. Fresh bread and herbal tea.",
+      "signatureService": "Fresh bread and herbal tea",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_042",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_142",
+        "wave3QuestId": "mv_side_242",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Unbroken Chain. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_043",
+      "name": "The Ashwater Inn",
+      "book": 15,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_043",
+      "kind": "refuge canteen",
+      "proprietor": {
+        "name": "Asha Kettle",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Ashwater Inn is a refuge canteen serving travelers in Avernus. Medicinal broth and quiet alcoves.",
+      "signatureService": "Medicinal broth and quiet alcoves",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_043",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_143",
+        "wave3QuestId": "mv_side_243",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Ashwater Inn. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_044",
+      "name": "The Brass Mercy",
+      "book": 13,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_044",
+      "kind": "scholars' hostel",
+      "proprietor": {
+        "name": "Dain Moss",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Brass Mercy is a scholars' hostel serving travelers in Avernus. Map exchange and research table.",
+      "signatureService": "Map exchange and research table",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_044",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_144",
+        "wave3QuestId": "mv_side_244",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Brass Mercy. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_045",
+      "name": "The Ember Seed",
+      "book": 14,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_045",
+      "kind": "crafting lodge",
+      "proprietor": {
+        "name": "Quin Stone",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Ember Seed is a crafting lodge serving travelers in Avernus. Shared forge and repair benches.",
+      "signatureService": "Shared forge and repair benches",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_045",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_145",
+        "wave3QuestId": "mv_side_245",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Ember Seed. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_046",
+      "name": "The Iron Ladle",
+      "book": 15,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_046",
+      "kind": "pilgrim rest",
+      "proprietor": {
+        "name": "Sera Wick",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Iron Ladle is a pilgrim rest serving travelers in Avernus. Simple meals and shrine alcove.",
+      "signatureService": "Simple meals and shrine alcove",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": true,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_046",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_146",
+        "wave3QuestId": "mv_side_246",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Iron Ladle. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_047",
+      "name": "The Pilgrim's Bell",
+      "book": 13,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_047",
+      "kind": "caravanserai",
+      "proprietor": {
+        "name": "Rell Reed",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Pilgrim's Bell is a caravanserai serving travelers in Avernus. Pack animal shelter and supply crates.",
+      "signatureService": "Pack animal shelter and supply crates",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_047",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_147",
+        "wave3QuestId": "mv_side_247",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Pilgrim's Bell. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_048",
+      "name": "The Cooling Forge",
+      "book": 14,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_048",
+      "kind": "river or dock inn",
+      "proprietor": {
+        "name": "Mave Copper",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Cooling Forge is a river or dock inn serving travelers in Avernus. Cargo lockers and traveler noticeboard.",
+      "signatureService": "Cargo lockers and traveler noticeboard",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "artisan bench",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "moderate; require watch rotation",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_048",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_148",
+        "wave3QuestId": "mv_side_248",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Cooling Forge. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_049",
+      "name": "The White Flag",
+      "book": 15,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_049",
+      "kind": "hidden safehouse",
+      "proprietor": {
+        "name": "Orin Vale",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The White Flag is a hidden safehouse serving travelers in Avernus. Discreet entrance and warded meeting room.",
+      "signatureService": "Discreet entrance and warded meeting room",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": true,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": true,
+        "privateMeetingRoom": false,
+        "medicalAid": true,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "alchemical counter",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "variable; depends on local faction control",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "LOCKED_UNTIL_VERIFIED_DISCOVERY"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_049",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_149",
+        "wave3QuestId": "mv_side_249",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The White Flag. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    },
+    {
+      "id": "mv_tavern_050",
+      "name": "The Last Oasis",
+      "book": 13,
+      "trilogy": 5,
+      "region": "Avernus",
+      "plane": "Nine Hells",
+      "subregion": "LOCATION_TO_BE_VERIFIED",
+      "localMapId": "tavern_050",
+      "kind": "community hearth",
+      "proprietor": {
+        "name": "Halla Dawn",
+        "status": "HOMEBREW_NPC_DRAFT",
+        "disposition": "GREEN_NEUTRAL_UNTIL_ACTIONS"
+      },
+      "description": "The Last Oasis is a community hearth serving travelers in Avernus. Community kitchen and rescue bulletin.",
+      "signatureService": "Community kitchen and rescue bulletin",
+      "services": {
+        "food": true,
+        "nonAlcoholicDrinks": true,
+        "lodging": true,
+        "shortRestSpace": true,
+        "longRestSpace": true,
+        "crafting": false,
+        "repair": true,
+        "supplies": true,
+        "questBoard": true,
+        "secureStorage": false,
+        "privateMeetingRoom": true,
+        "medicalAid": false,
+        "headquartersLease": false,
+        "planarTravel": false
+      },
+      "restPolicy": {
+        "shortRest": "DM_APPROVAL_AND_SAFETY_CHECK",
+        "longRest": "DM_APPROVAL_AND_RULES_CHECK",
+        "safeZone": "CONDITIONAL_NOT_GUARANTEED",
+        "noAutomaticTimeAdvance": true
+      },
+      "crafting": {
+        "station": "shared worktable",
+        "access": "REQUEST_PROPRIETOR_PERMISSION",
+        "materialCosts": "DM_PRICING_REQUIRED",
+        "itemCreation": "DM_APPROVAL_REQUIRED"
+      },
+      "security": {
+        "risk": "low with local watch",
+        "entryPolicy": "No harm to guests; weapons peace-bound by agreement",
+        "secretExit": "NONE"
+      },
+      "quests": {
+        "regionalQuestId": "mv_side_050",
+        "chainId": "mv_chain_05",
+        "wave2QuestId": "mv_side_150",
+        "wave3QuestId": "mv_side_250",
+        "questBoardSlots": 3
+      },
+      "dialogue": [
+        {
+          "speaker": "proprietor",
+          "line": "Welcome to The Last Oasis. You can eat, rest, and speak freely here, provided you keep the peace."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "If you need work, start with the noticeboard. If you need a private room, ask before the evening watch."
+        },
+        {
+          "speaker": "proprietor",
+          "line": "The Avernus roads change. I can share rumors, but you'll need to verify them yourself."
+        }
+      ],
+      "revisit": {
+        "repeatable": true,
+        "visitIndexTracked": true,
+        "hiddenRoom": "HINT_ONLY_UNTIL_DM_VERIFIED",
+        "changesByTraversal": true
+      },
+      "timeline": {
+        "era": "UNVERIFIED",
+        "drDate": "UNVERIFIED",
+        "openingSequence": "DM_DEFINED",
+        "timeOfDay": "LOCAL_TIME_REQUIRED",
+        "existenceAtDate": "REVIEW_REQUIRED"
+      },
+      "canonStatus": "HOMEBREW_LOCATION",
+      "persistentState": "DRAFT_NOT_SPAWNED",
+      "artStatus": "NOT_GENERATED"
+    }
+  ]
+}
