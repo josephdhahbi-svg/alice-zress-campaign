@@ -103,6 +103,17 @@ test("local server protects APIs and persists bounded relationship updates", {ti
     assert.deepEqual((await page.json()).events,[]);
     const read=await fetch(base+"/api/campaigns/test-campaign/events",{headers:memberHeaders});
     assert.equal((await read.json()).events.length,1);
+    // Signed actor identity overrides a forged actor header for journal writes.
+    const signedWrite=await fetch(base+"/api/campaigns/test-campaign/events",{
+      method:"POST",headers:actorHeaders,
+      body:JSON.stringify({eventId:"signed-1",expectedRevision:1,eventType:"ACTOR_JOINED",payload:{actor:"dm-1"}})});
+    assert.equal(signedWrite.status,201);
+    const signedRead=await fetch(base+"/api/campaigns/test-campaign/events",{headers:actorHeaders});
+    assert.equal(signedRead.status,200);
+    const signedEvents=(await signedRead.json()).events;
+    assert.equal(signedEvents[1].actor_id,"dm-1");
+    assert.equal(signedEvents[1].event_id,"signed-1");
+
     // A member of one campaign must not read or write another campaign's journal.
     const otherCreated=await fetch(base+"/api/campaigns",{method:"POST",headers,
       body:JSON.stringify({campaignId:"other-campaign",name:"Separate Game",actorId:"dm-2"})});
