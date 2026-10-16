@@ -159,5 +159,5 @@ The first batch creates structured "Lego" records rather than only brainstorming
 ## Automated Book 1 checks added
 - `scripts/test_book1.py` checks the 30-book catalog, Book 1 scene ID, five-choice order, choice outcomes/check definitions, three origin gifts, book/location/payoff references, and browser prototype controls.
 - `.github/workflows/validate.yml` now runs this test after the validator and deterministic encounter simulation.
-- GitHub Actions run `38836895815` reported success for all three test steps: metadata validation, encounter simulation, and Book 1 regression checks. At the last status read, the job was still finalizing post-job cleanup, so overall workflow conclusion was not yet available.
+- GitHub Actions run `38836895815` reported success for all three test steps: metadata validation, encounter simulation, and Book 1 regression checks. The overall GitHub Actions workflow subsequently completed successfully.
 - Manual browser testing, mobile/keyboard QA, and save/export/import verification remain open.
