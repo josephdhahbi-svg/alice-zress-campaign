@@ -29,6 +29,9 @@ test("quest API prevents player-forged proof and unauthorized rewards",{timeout:
   assert.equal((await send("/api/campaigns/a/quests/catalog/Q1/approve",alice,{})).status,403);
   assert.equal((await send("/api/campaigns/a/quests/catalog/Q1/approve",dm,{})).status,201);
   assert.equal((await send("/api/campaigns/a/quests/catalog/Q1/approve",dm,{})).status,200);
+  assert.equal((await send("/api/campaigns/a/quests/Q1/state",alice,{characterId:"alice",toStatus:"ACTIVE",reason:"Quest started",expectedRevision:0})).status,403);
+  assert.equal((await send("/api/campaigns/a/quests/Q1/state",dm,{characterId:"alice",toStatus:"ACTIVE",reason:"Quest started",expectedRevision:0})).status,201);
+  assert.equal((await send("/api/campaigns/a/quests/Q1/state",dm,{characterId:"alice",toStatus:"FAILED",reason:"Stale request",expectedRevision:0})).status,409);
   const proof={eventId:"proof",expectedRevision:0,eventType:"QUEST_OBJECTIVE_VERIFIED",payload:{characterId:"alice",questId:"Q1",objectiveId:"rescue"}};
   assert.equal((await send("/api/campaigns/a/events",alice,proof)).status,403);
   assert.equal((await send("/api/campaigns/a/events",dm,proof)).status,201);
