@@ -12,10 +12,11 @@ const definitions=[
 ];
 const maps=definitions.map(([id,name,region,plane,tiles,legend])=>({id,name,region,plane,grid:tiles.split("|"),legend:Object.fromEntries(legend.split(";").map(x=>x.split(":"))),scale:"SCHEMATIC",sourceStatus:"HOMEBREW",drDate:"UNVERIFIED"}));
 function listAtlasMaps(){return maps.map(m=>({...m,grid:[...m.grid],legend:{...m.legend}}));}
-function previewAtlasVisit(id,{era="ORIGIN",level=1,drDate=null,visitSequence=1,availableFlags=[]}={}){
+function previewAtlasVisit(id,{era="ORIGIN",level=1,drDate=null,localTime="UNSPECIFIED",visitSequence=1,availableFlags=[]}={}){
  if(!/^[a-z0-9_]{3,100}$/.test(id)||!["ORIGIN","REVISIT","LATER_ERA","ENDGAME"].includes(era)||!Number.isInteger(level)||level<1||level>30||!Number.isInteger(visitSequence)||visitSequence<1||visitSequence>100000||drDate!==null&&!/^[0-9]{1,5} DR$/.test(drDate)||!Array.isArray(availableFlags)||availableFlags.length>100||availableFlags.some(x=>typeof x!=="string"||!/^[A-Z0-9_]{1,100}$/.test(x)))throw new TypeError("INVALID_MAP_VISIT");
+ if(!/^(UNSPECIFIED|[0-2][0-9]:[0-5][0-9])$/.test(localTime)||localTime!=="UNSPECIFIED"&&Number(localTime.slice(0,2))>23)throw new TypeError("INVALID_LOCAL_TIME");
  if(!maps.some(m=>m.id===id))return null;
  const hooks=[["inspect","Survey the site",[]],["dialogue","Revisit conversations",["DIALOGUE_UNLOCKED"]],["item","Return with quest item",["QUEST_ITEM_VERIFIED"]],["spell","Try newly learned spell",["SPELL_KNOWN_VERIFIED"]],["history","Investigate alternate era",["CHRONOS_DM_APPROVED"]]].map(([key,label,requires])=>({key,label,requires,ready:requires.every(f=>availableFlags.includes(f)),applied:false}));
- return {mapId:id,era,level,drDate,visitSequence,hooks,levelGateMet:level>=({ORIGIN:1,REVISIT:1,LATER_ERA:10,ENDGAME:28}[era]),dateVerified:false,returnAllowed:"DM_REVIEW_REQUIRED",travelPerformed:false,worldChanged:false,timelineChanged:false,rewards:[]};
+ return {mapId:id,era,level,drDate,localTime,visitSequence,hooks,levelGateMet:level>=({ORIGIN:1,REVISIT:1,LATER_ERA:10,ENDGAME:28}[era]),dateVerified:false,returnAllowed:"DM_REVIEW_REQUIRED",travelPerformed:false,worldChanged:false,timelineChanged:false,rewards:[]};
 }
 module.exports={listAtlasMaps,previewAtlasVisit};
