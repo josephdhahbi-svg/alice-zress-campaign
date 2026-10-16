@@ -150,3 +150,10 @@ Status vocabulary: **DONE** (verified acceptance), **PARTIAL** (some implementat
 - Wired new WebSocket test into CI (`46ba83d`), outcome pending at time of writing.
 - Updated development documentation (`496af8e`).
 - Remaining: verify WebSocket CI, real account identity, origin validation and TLS, per-campaign character ownership, reconnection replay, and cross-device gameplay QA.
+
+## Batch 8 — WebSocket reconnect recovery
+- Verified campaign-isolation CI run [38846157184](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38846157184), success at `8abd9ab1`.
+- WebSocket now accepts a nonnegative integer `after` revision and returns `CONNECTED` with current revision plus `CATCH_UP_REQUIRED` when a client is behind (`2e912ea`). CI [38846242788](https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38846242788) passed.
+- Added reconnect tests for stale/current/invalid revision cursors (`5da85ee`); latest CI outcome pending.
+- Documented HTTP cursor-based journal replay after reconnect (`380108d`).
+- No automatic browser save migration or gameplay state projection yet; the server event ledger remains a local development prototype.
