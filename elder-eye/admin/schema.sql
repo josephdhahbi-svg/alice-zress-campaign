@@ -1,0 +1,14 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE IF NOT EXISTS campaigns(id TEXT PRIMARY KEY,title TEXT NOT NULL,book_count INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS characters(id TEXT PRIMARY KEY,campaign_id TEXT NOT NULL REFERENCES campaigns(id),name TEXT NOT NULL,ancestry TEXT,class TEXT,subclass TEXT,background TEXT,level INTEGER NOT NULL CHECK(level BETWEEN 1 AND 30),hp_current INTEGER,hp_max INTEGER,armor_class INTEGER,location_id TEXT,canon_status TEXT NOT NULL DEFAULT 'pending');
+CREATE TABLE IF NOT EXISTS abilities(id TEXT PRIMARY KEY,character_id TEXT NOT NULL REFERENCES characters(id),name TEXT NOT NULL,source TEXT,mechanics_status TEXT NOT NULL DEFAULT 'unverified');
+CREATE TABLE IF NOT EXISTS inventory(id TEXT PRIMARY KEY,character_id TEXT NOT NULL REFERENCES characters(id),item_name TEXT NOT NULL,quantity INTEGER NOT NULL DEFAULT 1 CHECK(quantity>=0),source TEXT);
+CREATE TABLE IF NOT EXISTS locations(id TEXT PRIMARY KEY,name TEXT NOT NULL,plane TEXT,book_number INTEGER,canon_status TEXT);
+CREATE TABLE IF NOT EXISTS quests(id TEXT PRIMARY KEY,book_number INTEGER,title TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'locked',location_id TEXT REFERENCES locations(id));
+CREATE TABLE IF NOT EXISTS factions(id TEXT PRIMARY KEY,name TEXT NOT NULL,moral_role TEXT NOT NULL CHECK(moral_role IN ('BLUE','RED','GREEN')),influence INTEGER NOT NULL DEFAULT 50);
+CREATE TABLE IF NOT EXISTS territories(id TEXT PRIMARY KEY,name TEXT NOT NULL,controlling_faction TEXT REFERENCES factions(id));
+CREATE TABLE IF NOT EXISTS assets(id TEXT PRIMARY KEY,title TEXT NOT NULL,book_number INTEGER,location_id TEXT REFERENCES locations(id),style TEXT NOT NULL,source_path TEXT,status TEXT NOT NULL DEFAULT 'planned');
+CREATE TABLE IF NOT EXISTS events(id INTEGER PRIMARY KEY AUTOINCREMENT,campaign_id TEXT NOT NULL REFERENCES campaigns(id),sequence INTEGER NOT NULL,kind TEXT NOT NULL,payload_json TEXT NOT NULL,created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,UNIQUE(campaign_id,sequence));
+CREATE TABLE IF NOT EXISTS continuity(id TEXT PRIMARY KEY,entity_type TEXT NOT NULL,entity_id TEXT NOT NULL,era TEXT,dr_date TEXT,plane TEXT,location_id TEXT,earliest_availability TEXT,source TEXT,canon_status TEXT NOT NULL,notes TEXT);
+CREATE INDEX IF NOT EXISTS idx_events_campaign ON events(campaign_id,sequence);
+CREATE INDEX IF NOT EXISTS idx_continuity_entity ON continuity(entity_type,entity_id);

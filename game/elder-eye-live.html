@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elder Eye — Book 1 Live Scene Prototype</title>
+<style>
+:root{color-scheme:dark;font:16px system-ui;background:#100f19;color:#f5f1ff}body{max-width:980px;margin:auto;padding:18px}
+header,.plate,.choice{border:1px solid #5e4c7d;border-radius:12px;padding:16px;margin:12px 0;background:#1c192a}
+h1{letter-spacing:.12em}input,button{font:inherit;padding:12px;border-radius:8px}input{background:#272339;color:#fff;border:1px solid #76669a;max-width:100%}
+button{background:#3a2b62;color:white;border:1px solid #9b82d5;cursor:pointer;text-align:left}button:disabled{opacity:.5;cursor:not-allowed}
+.choices{display:grid;gap:8px}.panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.panel{min-height:130px;background:linear-gradient(135deg,#1b243c,#3a2447);border:1px solid #695787;border-radius:10px;padding:14px}
+label{display:block;margin:12px 0}small,.muted{color:#c5badb}#status{white-space:pre-wrap}
+@media(max-width:550px){.panels{grid-template-columns:1fr}}
+</style></head><body>
+<header><small>MOONVEIL UNIVERSE / BOOK 01 / DEVELOPMENT PREVIEW</small><h1>ELDER EYE</h1>
+<p>The Watcher of the Shallows · Alice Z'ress · Pit of Ghaunadaur</p></header>
+<section class="plate"><h2>Connect to your local VTT</h2>
+<p class="muted">Serve this page from your trusted local VTT origin. A signed actor session is required. Tokens remain in this page's memory, not browser storage.</p>
+<label>Campaign ID <input id="campaign" value="elder-eye" autocomplete="off"></label>
+<label>Signed actor session token <input id="token" type="password" autocomplete="off" placeholder="Paste session token"></label>
+<label>Verified character modifier <input id="modifier" type="number" min="-10" max="20" placeholder="Not yet approved"></label>
+<button id="load">Load authenticated opening scene</button>
+<p id="status" role="status" aria-live="polite">Not connected. No game-state changes have been made.</p>
+</section>
+<section id="story" class="plate" hidden><h2 id="title"></h2><p id="narrative"></p>
+<div class="panels" aria-label="Four story panels">
+<div class="panel"><strong>1 · The Rabbit Hole</strong><p>Space fractures above the black stone.</p></div>
+<div class="panel"><strong>2 · Mystra</strong><p>A protective Shield fades as Alice lands.</p></div>
+<div class="panel"><strong>3 · Ghaunadaur</strong><p>Acid hisses along the cavern floor.</p></div>
+<div class="panel"><strong>4 · Eilistraee</strong><p>A silver blade turns aside the danger.</p></div>
+</div><h3>What does Alice do?</h3><div id="choices" class="choices"></div></section>
+<section id="journal" class="plate" hidden><h2>Outcome & Journal</h2><p id="outcome"></p><p id="revision"></p></section>
+<script>
+"use strict";
+const sceneId="scene-book01-rabbit-hole-01";
+const $=id=>document.getElementById(id);
+let scene=null,revision=0,pendingEventId=null,pendingOption=null;
+const labels=["Lawful Good","Neutral Good","Chaotic Good","Utility","Action"];
+const status=msg=>$("status").textContent=msg;
+const headers=()=>({Authorization:"Bearer "+$("token").value.trim(),"Content-Type":"application/json"});
+const base=()=>"/api/campaigns/"+encodeURIComponent($("campaign").value.trim());
+async function jsonResponse(response){const data=await response.json();if(!response.ok)throw Error(data.error||"HTTP "+response.status);return data;}
+async function load(){
+ if(!$("campaign").value.trim()||!$("token").value.trim())return status("Campaign and signed session token required.");
+ try{
+  const [s,e]=await Promise.all([fetch(base()+"/scenes/"+sceneId,{headers:headers()}).then(jsonResponse),
+   fetch(base()+"/events?after=0",{headers:headers()}).then(jsonResponse)]);
+  scene=s.scene;revision=e.nextCursor;
+  while(e.hasMore)throw Error("Campaign has more than 100 events; load a fresh snapshot before submitting.");
+  $("title").textContent=scene.title;$("narrative").textContent=scene.opening_text;
+  $("choices").replaceChildren();
+  scene.choices.forEach((choice,i)=>{
+   const button=document.createElement("button");
+   button.textContent=(i+1)+". "+labels[i]+" — "+choice.description;
+   button.onclick=()=>submit(i+1);$("choices").append(button);
+  });
+  $("story").hidden=false;status("Scene loaded. Journal revision "+revision+". No choice submitted.");
+ }catch(err){status("Unable to load: "+err.message)}
+}
+async function submit(option){
+ if(!scene)return;
+ const modifier=Number($("modifier").value);
+ if($("modifier").value.trim()===""||!Number.isSafeInteger(modifier)||modifier< -10||modifier>20)return status("Set a verified character modifier before rolling. Do not guess Alice's stats.");
+ if(pendingEventId&&pendingOption!==option)return status("An earlier choice is awaiting confirmation. Retry that same choice.");
+ if(!pendingEventId){pendingEventId=crypto.randomUUID();pendingOption=option;}
+ const buttons=[...$("choices").querySelectorAll("button")];buttons.forEach(b=>b.disabled=true);
+ try{
+  const result=await fetch(base()+"/scenes/"+sceneId+"/choices",{method:"POST",headers:headers(),
+   body:JSON.stringify({eventId:pendingEventId,expectedRevision:revision,option,modifier})}).then(jsonResponse);
+  revision=result.revision;pendingEventId=null;pendingOption=null;
+  $("journal").hidden=false;$("outcome").textContent=result.result.outcome||"Decision recorded.";
+  $("revision").textContent="Roll "+result.result.roll+" + "+result.result.modifier+" = "+result.result.total+" vs DC "+result.result.dc+" · revision "+revision;
+  status("Choice recorded in VTT journal.");
+ }catch(err){status("Choice not confirmed: "+err.message+". Retry the same choice to preserve idempotency.")}
+ finally{buttons.forEach(b=>b.disabled=false)}
+}
+$("load").onclick=load;
+</script></body></html>

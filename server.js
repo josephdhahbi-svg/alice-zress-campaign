@@ -6,11 +6,14 @@ const { WebSocketServer, WebSocket } = require("ws");
 const Database = require("better-sqlite3");
 const { initializeFactionPulseEngine, scheduleFactionPulse } = require("./backend/faction-pulse");
 const crypto = require("node:crypto");
+const path = require("node:path");
 const { migrate } = require("./backend/migrations");
 const { createSessionAuth } = require("./backend/session-auth");
 const { createBackupService } = require("./backend/backup-service");
 const { resolveD20 } = require("./backend/dice-rules");
 const { createFactionDisputeEngine } = require("./backend/faction-dispute-engine");
+const { createElderEyeSceneService } = require("./backend/elder-eye-scene-service");
+const elderEyeScenes = require("./data/scenes.json");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -49,6 +52,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   // Create faction base tables before disputes, then initialize pulse queries.
   db.exec(require("./backend/faction-pulse").CREATE_TABLES);
   const disputes = createFactionDisputeEngine(db);
+  const elderEye = createElderEyeSceneService(db,{scenes:elderEyeScenes});
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
@@ -57,6 +61,8 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const app = express();
   app.disable("x-powered-by");
   app.use(express.json({ limit: "32kb" }));
+  // Public static shell only. All scene data and mutations still require signed actor authentication.
+  app.get("/elder-eye",(_req,res)=>res.sendFile(path.join(__dirname,"game","elder-eye-live.html")));
   app.use((req,res,next) => {
     res.set("Cache-Control", "no-store");
     const supplied = req.get("Authorization") || "";
@@ -124,6 +130,34 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const actorFor=req=>req.auth.kind==="actor"?req.auth.actorId:req.get("X-Moonveil-Actor");
   // Signed campaign member rolls are server-generated and recorded in the journal.
   // This is a development API, not a cryptographic fairness protocol.
+  // Server-authenticated Elder Eye choices; raw rolls are never accepted from clients.
+  app.get("/api/campaigns/:campaignId/scenes/:sceneId",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=actorFor(req);
+    if(!id(campaignId)||!id(actorId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(!memberRole.get(campaignId,actorId))return res.status(403).json({success:false,error:"NOT_A_MEMBER"});
+    const scene=elderEye.getScene(req.params.sceneId);
+    if(!scene)return res.status(404).json({success:false,error:"SCENE_NOT_FOUND"});
+    res.json({success:true,scene});
+  });
+  // Unscoped scene previews can expose unpublished content; require a campaign context.
+  app.get("/api/elder-eye/scenes/:sceneId",(_req,res)=>res.status(410).json({success:false,error:"CAMPAIGN_CONTEXT_REQUIRED"}));
+  app.post("/api/campaigns/:campaignId/scenes/:sceneId/choices",(req,res)=>{
+    const campaignId=req.params.campaignId,actorId=actorFor(req);
+    const {eventId,expectedRevision,option,modifier}=req.body||{};
+    if(!id(campaignId)||!id(actorId)||!id(eventId)||
+       !Number.isSafeInteger(expectedRevision)||expectedRevision<0||
+       !Number.isInteger(option)||option<1||option>5||
+       !Number.isSafeInteger(modifier)||modifier< -10||modifier>20)
+      return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    const scene=elderEye.getScene(req.params.sceneId);
+    if(!scene)return res.status(404).json({success:false,error:"SCENE_NOT_FOUND"});
+    const result=elderEye.submit({campaignId,actorId,eventId,expectedRevision,
+      sceneId:scene.id,option,modifier,roll:crypto.randomInt(1,21)});
+    if(result.error)return res.status(result.status).json({success:false,...result});
+    if(!result.duplicate)broadcastCampaign(campaignId,{type:"CAMPAIGN_EVENT",campaignId,
+      revision:result.revision,eventType:"ELDER_EYE_CHOICE"});
+    return res.status(result.status).json({success:true,campaignId,...result});
+  });
   app.post("/api/campaigns/:campaignId/rolls", (req,res)=>{
     const campaignId=req.params.campaignId,actorId=actorFor(req);
     if(!id(campaignId)||!id(actorId))return res.status(400).json({success:false,error:"INVALID_INPUT"});
@@ -266,6 +300,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
       !payload||typeof payload!=="object"||Array.isArray(payload)||
       JSON.stringify(payload).length>16000)
       return res.status(400).json({success:false,error:"INVALID_INPUT"});
+    if(eventType==="ELDER_EYE_CHOICE")return res.status(403).json({success:false,error:"PROTECTED_EVENT_TYPE"});
     const member=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?").get(campaignId,actorId);
     if(!member||member.role==="OBSERVER")return res.status(403).json({success:false,error:"FORBIDDEN"});
     const append=db.transaction(()=>{

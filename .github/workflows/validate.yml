@@ -71,6 +71,10 @@ jobs:
         run: node --test backend/faction-dispute-engine.test.js
       - name: Test authenticated browser roll client
         run: node --test backend/roll-client.test.js
+      - name: Test Elder Eye scene contract and journal integration
+        run: node --test elder-eye/admin/scene-contract.test.js backend/elder-eye-scene-service.test.js
+      - name: Test authenticated Elder Eye scene HTTP security
+        run: node --test backend/elder-eye-scene-http.integration.test.js
       - name: Test deterministic d20 resolution
         run: node --test backend/dice-rules.test.js
       - name: Test isolated Glyph companion tactics

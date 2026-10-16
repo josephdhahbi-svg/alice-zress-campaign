@@ -1,0 +1,11 @@
+"use strict";
+const test=require("node:test");
+const assert=require("node:assert/strict");
+const {validateScene,resolveSceneChoice,CHOICE_ORDER}=require("./scene-contract");
+const makeScene=()=>({id:"opening",location_id:"pit-of-ghaunadaur",character_id:"alice-zress",choices:CHOICE_ORDER.map((kind,i)=>({id:"c"+i,order:i+1,kind,check:{ability:"Wisdom",skill:"Insight",dc:12},success:"found",failure:"not found",consequence_tags:["clue"]}))});
+test("accepts canonical five-choice order",()=>assert.deepEqual(validateScene(makeScene()),[]));
+test("rejects reordered choices",()=>{const s=makeScene();s.choices[0].kind="action";assert.match(validateScene(s).join(","),/Incorrect choice order/)});
+test("rejects duplicate choice IDs",()=>{const s=makeScene();s.choices[1].id="c0";assert.match(validateScene(s).join(","),/Duplicate choice IDs/)});
+test("resolves success and failure deterministically",()=>{const s=makeScene();assert.equal(resolveSceneChoice(s,1,10,2).success,true);assert.equal(resolveSceneChoice(s,1,9,2).success,false)});
+test("does not invent ability modifiers",()=>assert.throws(()=>resolveSceneChoice(makeScene(),1,10,undefined),/Verified ability modifier/));
+test("rejects invalid dice and choices",()=>{assert.throws(()=>resolveSceneChoice(makeScene(),6,10,0),/Choice/);assert.throws(()=>resolveSceneChoice(makeScene(),1,21,0),/d20/)});
