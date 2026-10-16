@@ -69,3 +69,6 @@ body{background:radial-gradient(ellipse at 50% -12%,#28325a 0,transparent 45%),r
 .mv-choice{touch-action:manipulation}
 @media(max-width:850px){.mv-stats,.mv-resources{grid-template-columns:1fr}.mv-hud{grid-template-columns:1fr}.mv-hud-portrait{min-height:230px}}
 @media(max-width:620px){.mv-hud-details{padding:20px}.mv-quicknav{overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px}.mv-quicknav a{white-space:nowrap}.mv-panel{min-height:235px}.mv-decision-focus .mv-choice{min-height:70px}}
+
+/* Original repo-hosted atmospheric artwork; CSS gradient remains the fallback. */
+.mv-hud-portrait{background-image:linear-gradient(0deg,#070b18c9,transparent 60%),url("/play/moonveil-underdark-original.svg");background-size:cover;background-position:center}
