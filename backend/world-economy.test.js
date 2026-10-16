@@ -26,6 +26,6 @@ test("campaign economy is bounded, audited, idempotent, and DM-only",()=>{
   assert.throws(()=>e.adjustPrice({...input,adjustmentId:"tick2",expectedRevision:1,changeBasisPoints:501}),/INVALID_ADJUSTMENT/);
   assert.equal(e.getPrices("a")[0].price_copper,525);
   assert.equal(db.prepare("SELECT COUNT(*) AS n FROM vtt_world_economy_adjustments").get().n,1);
-  assert.equal(db.prepare("SELECT COUNT(*) AS n FROM vtt_world_pulses").get().n,0);
+  assert.equal(db.prepare("SELECT COUNT(*) AS n FROM sqlite_master WHERE type='table' AND name='vtt_world_pulses'").get().n,0);
  }finally{db.close();}
 });
