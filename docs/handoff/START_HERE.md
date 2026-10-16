@@ -322,3 +322,10 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Backend status unchanged: the checked Gemini patch/ledger source paths returned 404/NOT_FOUND. No operational immutable ledger or optimistic concurrency implementation was integrated.
 - Geography status unchanged: candidate locations/routes remain research-only; no source-attributed Copilot delivery in this session.
 - Alice remains Level 1 with Shield/Acid Splash/Light and five choices unselected. No save changes or route unlocks.
+
+## Directive 23 — causal-chain CI follow-up (2026-10-16)
+- Verified run `38833183222` for commit `1d3d534` completed with failure; root cause was the repository-wide JSON validator treating `proposed_cosmic_to_u01_causal_chain_v1.json` as a list because it was not registered in the object-document map at that historical commit. The later registration at `7cc2e59` passed validator runs `38832901088` and `38832901124`.
+- `e1862f2` adds causal graph integrity checks directly to `scripts/validate.py`: event ID uniqueness, allowed event canon statuses, resolvable references, player-choice gate for locked quest opportunity, reciprocal cause/consequence links, and unknown-date consistency.
+- New CI run `38833358973` for `e657d5e` was queued; another run will trigger for `e1862f2`. Neither result is claimed passing until checked.
+- Gemini backend implementation still not available at expected source paths; no immutable patch ledger or concurrency code integrated. Copilot's geography remains candidate research only, with no verified route unlocked.
+- Alice remains Level 1 with Shield/Acid Splash/Light and five unselected choices. Causal chain is proposed/read-only, date and locations unknown.
