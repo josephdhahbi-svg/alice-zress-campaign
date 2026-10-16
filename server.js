@@ -66,16 +66,48 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     next();
   });
   const server = http.createServer(app);
-  const wss = new WebSocketServer({ server, path:"/events", verifyClient: ({req}, done) => {
-    // Browser WebSocket API cannot set Authorization headers; require token as subprotocol.
-    const offered = req.headers["sec-websocket-protocol"] || "";
-    done(offered.split(",").map(s=>s.trim()).includes(token));
-  }});
-  function broadcast(event) {
-    const message=JSON.stringify(event);
-    for(const client of wss.clients) if(client.readyState===WebSocket.OPEN) client.send(message);
-  }
   const id = value => typeof value==="string" && /^[a-zA-Z0-9:_-]{1,100}$/.test(value);
+  const memberRole=db.prepare("SELECT role FROM vtt_campaign_members WHERE campaign_id=? AND actor_id=?");
+  // Campaign-scoped sockets use signed actor sessions, never the shared admin token.
+  // The URL carries no token; browsers pass it via WebSocket subprotocol.
+  const wss = new WebSocketServer({noServer:true});
+  server.on("upgrade",(req,socket,head)=>{
+    let url;
+    try{url=new URL(req.url,"http://localhost");}catch{socket.destroy();return;}
+    if(url.pathname!=="/events"){socket.destroy();return;}
+    const campaignId=url.searchParams.get("campaignId");
+    const offered=(req.headers["sec-websocket-protocol"]||"").split(",").map(x=>x.trim());
+    const encoded=offered.find(x=>x.startsWith("moonveil."));
+    const accessToken=encoded?.slice("moonveil.".length);
+    const session=accessToken?sessions.verify(accessToken):null;
+    if(!id(campaignId)||!session||isRevoked.get(hashSession(accessToken))||
+       !memberRole.get(campaignId,session.actorId)){
+      socket.write("HTTP/1.1 403 Forbidden\r\nConnection: close\r\n\r\n");
+      socket.destroy();return;
+    }
+    wss.handleUpgrade(req,socket,head,client=>{
+      client.campaignId=campaignId;
+      client.actorId=session.actorId;
+      client.accessToken=accessToken;
+      client.expiresAt=session.expiresAt;
+      wss.emit("connection",client,req);
+      client.send(JSON.stringify({type:"CONNECTED",campaignId,actorId:session.actorId}));
+    });
+  });
+  function broadcastCampaign(campaignId,event) {
+    const message=JSON.stringify(event);
+    for(const client of wss.clients){
+      if(client.readyState!==WebSocket.OPEN||client.campaignId!==campaignId)continue;
+      if(client.expiresAt<=Math.floor(Date.now()/1000)||
+         isRevoked.get(hashSession(client.accessToken))||
+         !memberRole.get(campaignId,client.actorId)){
+        client.close(1008,"Session no longer authorized");continue;
+      }
+      client.send(message);
+    }
+  }
+  // Legacy global notifications are disabled; they are not campaign-scoped.
+  function broadcast(_event) {}
   const adminOnly=(req,res,next)=>req.auth.kind==="admin"?next():res.status(403).json({success:false,error:"ADMIN_REQUIRED"});
   const actorFor=req=>req.auth.kind==="actor"?req.auth.actorId:req.get("X-Moonveil-Actor");
   app.post("/api/admin/sessions",adminOnly,(req,res)=>{
@@ -192,8 +224,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     });
     const result=append();
     if(result.error)return res.status(result.status).json({success:false,...result});
-    // No campaign events are broadcast to the global WebSocket channel.
-    // Campaign-scoped sockets require real authenticated player sessions.
+    if(!result.duplicate)broadcastCampaign(campaignId,{type:"CAMPAIGN_EVENT",campaignId,revision:result.revision,eventType});
     res.status(result.status).json({success:true,campaignId,...result});
   });
   app.post("/api/admin/world-pulse",adminOnly,(req,res)=>{
