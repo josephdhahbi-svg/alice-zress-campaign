@@ -42,3 +42,30 @@ dialog.mv-modal::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(6px)}
 .mv-journal-entry p{margin:6px 0 0;color:var(--mv-muted)}
 .mv-choice:disabled{opacity:.5;cursor:not-allowed;transform:none}
 #submit-choice,#refresh-journal{margin-top:10px;min-height:46px}
+
+/* Moonveil GUI enhancement: original CSS cavern art, no external image dependencies. */
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+body{background:radial-gradient(ellipse at 50% -12%,#28325a 0,transparent 45%),radial-gradient(ellipse at 90% 40%,#122e3e 0,transparent 50%),#070b14}
+.mv-shell{max-width:1320px}
+.mv-header{padding:24px 4px 16px;border-bottom:1px solid rgba(185,154,255,.22)}
+.mv-title{font-family:Georgia,"Times New Roman",serif;letter-spacing:.015em;text-shadow:0 2px 24px #060816}
+.mv-hud{display:grid;grid-template-columns:minmax(220px,38%) 1fr;min-height:310px;overflow:hidden;border:1px solid #54617e;border-radius:20px;background:linear-gradient(120deg,#111b30,#101426);box-shadow:0 22px 70px #0008;margin:22px 0}
+.mv-hud-portrait{position:relative;min-height:290px;display:flex;align-items:end;padding:24px;isolation:isolate;background:radial-gradient(ellipse at 50% 21%,#d5e4ff 0,#a5b9df 3%,#546e9e 6%,transparent 11%),radial-gradient(ellipse at 52% 50%,#44618b88 0,transparent 40%),linear-gradient(160deg,#090d18 8%,#293452 50%,#05080f 100%);overflow:hidden}
+.mv-hud-portrait:before,.mv-hud-portrait:after{content:"";position:absolute;z-index:-1;inset:0;background:#080d19;clip-path:polygon(0 0,22% 0,16% 19%,37% 42%,18% 59%,28% 100%,0 100%);filter:drop-shadow(8px 0 10px #000)}
+.mv-hud-portrait:after{transform:scaleX(-1);background:#0a1020}
+.mv-hud-portrait span{font-size:.74rem;font-weight:750;letter-spacing:.18em;color:#dce9ff;text-shadow:0 2px 12px #000}
+.mv-hud-details{padding:clamp(18px,3vw,38px)}.mv-hud-details h2{font:clamp(2rem,4vw,3.4rem)/1.1 Georgia,serif;margin:6px 0;color:#f2e6ff}.mv-hud-details>p{color:#bac8e4}
+.mv-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0}
+.mv-stats>div{border:1px solid #354766;background:#0c1629;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px}.mv-stats strong{color:#f3cc7c}.mv-stats span{font-size:.85rem;color:#d5deee}
+.mv-quicknav{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 24px}.mv-quicknav a{color:#e6e7fa;text-decoration:none;border:1px solid #425372;background:#14223a;padding:9px 15px;border-radius:99px;font-size:.9rem}.mv-quicknav a:hover,.mv-quicknav a:focus-visible{background:#2b3658;outline:2px solid #e6c57c}
+.mv-resources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.mv-resources article{border:1px solid #394763;background:#101a2c;padding:16px;border-radius:12px}.mv-resources h3{margin:0;color:#d7b6ff}.mv-resources p{color:#bac8e0;margin-bottom:0}
+.mv-panel{min-height:280px;border-color:#53607c;box-shadow:0 18px 55px #0008}.mv-panel h2{font-family:Georgia,serif;font-size:1.65rem}
+.mv-panel:nth-child(1){background:linear-gradient(0deg,#080d1df2,#0b102055),radial-gradient(circle at 65% 20%,#d5dafa,transparent 11%),linear-gradient(125deg,#070a14 20%,#293e63 54%,#0a101e)}
+.mv-panel:nth-child(2){background:linear-gradient(0deg,#080d1df2,#0b102055),radial-gradient(ellipse at 45% 30%,#86375b,transparent 36%),linear-gradient(150deg,#0b0b14,#30152d,#080e17)}
+.mv-panel:nth-child(3){background:linear-gradient(0deg,#080d1df2,#0b102055),radial-gradient(ellipse at 60% 24%,#7156ba,transparent 38%),linear-gradient(150deg,#0b1020,#24204d,#080d17)}
+.mv-panel:nth-child(4){background:linear-gradient(0deg,#080d1df2,#0b102055),radial-gradient(ellipse at 56% 20%,#c1d9f9,transparent 20%),linear-gradient(145deg,#10162b,#24445d,#090e1b)}
+.mv-decision-focus{border-color:#b69bea;box-shadow:0 0 0 1px #685486,0 18px 55px #0007}.mv-decision-focus .mv-choice{min-height:90px}
+.mv-decisions{background:linear-gradient(140deg,#151e34,#101729);box-shadow:0 12px 40px #0004}
+.mv-choice{touch-action:manipulation}
+@media(max-width:850px){.mv-stats,.mv-resources{grid-template-columns:1fr}.mv-hud{grid-template-columns:1fr}.mv-hud-portrait{min-height:230px}}
+@media(max-width:620px){.mv-hud-details{padding:20px}.mv-quicknav{overflow-x:auto;flex-wrap:nowrap;padding-bottom:8px}.mv-quicknav a{white-space:nowrap}.mv-panel{min-height:235px}.mv-decision-focus .mv-choice{min-height:70px}}
