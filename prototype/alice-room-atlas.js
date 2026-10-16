@@ -4,7 +4,7 @@ const byId=id=>document.getElementById(id);
 let session=null,rooms=[],active=null,selectedChoice=null;
 const labels=["Lawful Good","Neutral Good","Chaotic Good","Utility","Action"];
 function status(message){byId("connection-status").textContent=message}
-function reset(){session=null;rooms=[];active=null;selectedChoice=null;byId("submit-choice").disabled=true;byId("refresh-journal").disabled=true;byId("journal-entries").replaceChildren();byId("token").value="";byId("rooms").replaceChildren();byId("choices").replaceChildren();byId("room-title").textContent="Choose a room";byId("room-description").textContent="Room choices are previews only.";byId("choice-status").textContent="No choice submitted."}
+function reset(){session=null;rooms=[];active=null;selectedChoice=null;byId("submit-choice").disabled=true;byId("refresh-journal").disabled=true;byId("ai-guide-send").disabled=true;byId("ai-guide-reply").textContent="";byId("ai-guide-status").textContent="Connect to a campaign to ask the AI guide.";byId("journal-entries").replaceChildren();byId("token").value="";byId("rooms").replaceChildren();byId("choices").replaceChildren();byId("room-title").textContent="Choose a room";byId("room-description").textContent="Room choices are previews only.";byId("choice-status").textContent="No choice submitted."}
 async function api(path,options={}){
  if(!session)throw Error("Connect first");
  const response=await fetch("/api/campaigns/"+encodeURIComponent(session.campaign)+"/world/alice-demiplane/"+path,{
@@ -28,7 +28,7 @@ byId("connect").addEventListener("submit",async event=>{
  try{const data=await api("rooms");if(!Array.isArray(data.rooms))throw Error("Invalid room response");
  rooms=data.rooms;const root=byId("rooms");root.replaceChildren();
  rooms.forEach(room=>{const button=document.createElement("button");button.type="button";button.className="mv-choice";button.textContent=room.name+" · "+room.status;button.addEventListener("click",()=>showRoom(room));root.append(button)});
- status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;if(rooms.length)showRoom(rooms[0]);await refreshJournal();
+ status("Loaded "+rooms.length+" rooms from the signed campaign API. Narrative proposals can be saved for DM review.");byId("refresh-journal").disabled=false;byId("ai-guide-send").disabled=false;if(rooms.length)showRoom(rooms[0]);await refreshJournal();
  }catch(error){reset();status(error.message)}
 });
 byId("disconnect").addEventListener("click",()=>{reset();status("Disconnected. Session cleared from this page.")});
@@ -60,4 +60,26 @@ byId("submit-choice").addEventListener("click",async()=>{
   await refreshJournal();
  }catch(error){byId("choice-status").textContent=error.message}
  finally{button.disabled=false}
+});
+
+byId("ai-guide-form").addEventListener("submit",async event=>{
+ event.preventDefault();
+ if(!session)return;
+ const message=byId("ai-guide-question").value.trim(),mode=byId("ai-guide-mode").value;
+ if(!message||message.length>2000||!["GUIDE","LORE"].includes(mode))return;
+ const button=byId("ai-guide-send");button.disabled=true;
+ byId("ai-guide-status").textContent="Consulting the AI Story Guide…";
+ byId("ai-guide-reply").textContent="";
+ try{
+  const response=await fetch("/api/campaigns/"+encodeURIComponent(session.campaign)+"/ai/ask",{
+   method:"POST",headers:{"Authorization":"Bearer "+session.token,"Content-Type":"application/json"},
+   body:JSON.stringify({message,mode}),cache:"no-store",credentials:"omit"
+  });
+  const data=await response.json();
+  if(!response.ok)throw Error(response.status===503?"AI is not configured on this server.":data.error||"AI unavailable.");
+  if(!data.available||typeof data.reply!=="string")throw Error("No AI response available.");
+  byId("ai-guide-reply").textContent=data.reply;
+  byId("ai-guide-status").textContent="Advisory answer only. No game state changed.";
+ }catch(error){byId("ai-guide-status").textContent=error.message}
+ finally{button.disabled=!session}
 });
