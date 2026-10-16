@@ -26,6 +26,7 @@ const { getDialogueScene, getDialogueChoices, previewDialogueChoice } = require(
 const { listSacredAscensions, getSacredAscension, evaluateSacredAscension } = require("./backend/sacred-lich-ascensions");
 const { getAliceDemiplane, previewAliceDemiplaneAccess } = require("./backend/alice-demiplane-catalog");
 const { listAliceDemiplaneRooms, getAliceDemiplaneRoom, previewAliceDemiplaneRoomChoice } = require("./backend/alice-demiplane-rooms");
+const { createAliceExplorationJournal } = require("./backend/alice-exploration-journal");
 
 function startMoonveilServer({ port = Number(process.env.PORT || 3000),
   dbPath = process.env.MOONVEIL_DB_PATH || "moonveil_vtt.db",
@@ -71,6 +72,7 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   const combat = createCombatEngine(db);
   const questEvidence = createQuestEvidenceEngine(db);
   const chronalTravel = createChronalTravelEngine(db);
+  const aliceJournal = createAliceExplorationJournal(db);
   const pulse = initializeFactionPulseEngine(db);
   const sessions=createSessionAuth(token);
   const hashSession=value=>crypto.createHash("sha256").update(value).digest("hex");
@@ -149,6 +151,36 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
     const plan=planTimeSpaceJourney(req.body||{});
     return res.status(plan.reason==="INVALID_DR_DATE"||plan.reason==="UNKNOWN_LOCATION"||plan.reason==="UNKNOWN_TRAVEL_METHOD"?400:200)
       .json({success:true,...plan});
+  });
+  // Durable narrative proposals only; no travel, ascension, rewards or HP changes.
+  app.get("/api/campaigns/:campaignId/world/alice-demiplane/journal",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const limit=req.query.limit===undefined?50:Number(req.query.limit);
+    if(!Number.isSafeInteger(limit)||limit<1||limit>100)return res.status(400).json({success:false,error:"INVALID_LIMIT"});
+    const role=memberRole.get(campaignId,req.auth.actorId).role;
+    const entries=aliceJournal.list(campaignId,limit).filter(x=>role==="DM"||x.actor_id===req.auth.actorId);
+    return res.json({success:true,entries,mode:"NARRATIVE_ONLY"});
+  });
+  app.post("/api/campaigns/:campaignId/world/alice-demiplane/journal",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{
+      const {entryId,roomId,choiceNumber}=req.body||{};
+      const entry=aliceJournal.submit({campaignId,entryId,roomId,choiceNumber,actorId:req.auth.actorId});
+      return res.status(entry.duplicate?200:201).json({success:true,entry,effect:"NONE",rewards:[]});
+    }catch(error){return res.status(error instanceof TypeError?400:409).json({success:false,error:error.message==="ROOM_LOCKED"?"ROOM_LOCKED":error instanceof TypeError?"INVALID_INPUT":"ENTRY_CONFLICT"});}
+  });
+  app.post("/api/campaigns/:campaignId/world/alice-demiplane/journal/:entryId/review",(req,res)=>{
+    const {campaignId,entryId}=req.params;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!id(entryId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const membership=memberRole.get(campaignId,req.auth.actorId);
+    if(!membership||membership.role!=="DM")return res.status(403).json({success:false,error:"DM_REQUIRED"});
+    try{
+      const {status,note}=req.body||{};
+      const entry=aliceJournal.review({campaignId,entryId,dmActorId:req.auth.actorId,status,note});
+      return res.json({success:true,entry,effect:"NONE",rewards:[]});
+    }catch(error){return res.status(error instanceof TypeError?400:error.message==="NOT_FOUND"?404:409).json({success:false,error:error instanceof TypeError?"INVALID_INPUT":error.message});}
   });
   // Authenticated room and choice previews. No entry, movement or rewards.
   app.get("/api/campaigns/:campaignId/world/alice-demiplane/rooms",(req,res)=>{
