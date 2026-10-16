@@ -220,3 +220,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Omniversal verification `38926825833`: SUCCESS; Validate campaign records `38926825846`: SUCCESS.
 - Verified charter **18/100**, open **82/100**. T085/T089 remain incomplete: intersettlement routes and inventory transfers, currency settlement, mission-consistent world event integration, multi-process stress tests.
 - No automatic pulses, time advancement, or unearned artifacts.
+
+## 2026-10-16 — Ascension catalog signed read API
+- Proposed seven-path catalog `cc68cc55f48d456ff29a60bda72225260e14f46e` and tests `d586f63ec181dbbdc29d98d1fc2f1e7112b7c9e2` passed Omniversal `38927343707` and Validate `38927343687`.
+- Signed read-only member endpoints in `server.js` commit `32f31e62a7f45c54ef256d2f53b23377b2851d4d`; API integration tests commit `449851e5177e077d9619643f1b2b6c099a6013e1`. New CI pending.
+- No ascension mutations, grants, player-supplied proof acceptance, or character progression. Content is HOMEBREW_PROPOSAL; chronology unresolved.
+- Charter still 18/100 verified, 82 open. T085, T089, T093 and narrative/canon tasks require acceptance review rather than speculative closure.
