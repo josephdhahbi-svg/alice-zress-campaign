@@ -195,3 +195,9 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - Signed settlement HTTP API `6a7fb2c0f847e85faea6d24d7672048750e2f33a`; HTTP tests `c41e7c2cd7fd7e08e80507e1e7a0e8e03bcb54a0`.
 - Initial Omniversal CI `38925863160` FAILED: ten-column audit insertion had nine placeholders and old economy migration test assumed v6 was latest. Corrected in `e19bdef065020ad0f8deea0e91a50e0bd62a9240` and `5d076fabaf596ecffc8374c9b1b23231beda1caa`. Validate campaign records `38925863264` succeeded. Await new CI.
 - No autonomous trade, no player currency/item transfer, no game clock movement. Charter remains 18/100 pending verification and full T085 acceptance.
+
+### Settlement CI confirmed
+- Omniversal verification `38925955609`: SUCCESS after fixes.
+- Validate campaign records `38925955569`: SUCCESS.
+- Charter still 18/100 verified, 82 open: T085 settlement economy and trade baseline remains partial (no intersettlement logistics, price transmission, currency settlement). T089 deterministic world pulse also open.
+- Next: deterministic opt-in pulse with idempotent event ID, bounded deltas, revision checks, cross-campaign isolation and restart tests; avoid unapproved clock changes and loot.
