@@ -127,3 +127,8 @@ Checklist: docs/engineering/MOONVEIL_100_TASK_EXECUTION_CHARTER.md
 - `server.js` commit `a0f492924c469aaea1949eb133d89c16ab022075`: signed member GET `/api/campaigns/:campaignId/world/economy`; DM-only POST `/api/campaigns/:campaignId/world/economy/commodities` and `/api/campaigns/:campaignId/world/economy/adjustments`.
 - Tests `backend/world-economy.test.js` commit `e9927ed1d48db2273be78cbb1f9791460ef3e432` cover DM restriction, campaign isolation, bounds, revision conflicts, replay, and no implicit pulses.
 - **CI pending**. Verified charter baseline 18/100; do not claim production-grade economics or increment verified count until acceptance and CI. Schema currently initialized by engine, not versioned migration. No changes to Alice or campaign chronology.
+
+### Economy CI verified
+- Initial Omniversal `38923255002` failed because economy-only test incorrectly queried the optional world pulse table without initializing the separate pulse engine. Fixed test to inspect `sqlite_master`, commit `226484b27880d27b88109df8d91f5595ce50214b`.
+- **PASS:** Omniversal `38923338531`; Validate campaign records `38923338471`.
+- No charter task marked done: this is an incremental safe economy foundation, not complete world/economy simulation. Verified total remains **18/100**. Next: versioned migration for economy schema, HTTP integration tests, market history, opt-in controlled pulses and task acceptance review.
