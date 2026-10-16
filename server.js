@@ -7,6 +7,7 @@ const {createWorldEventBus}=require("./backend/world-event-bus");
 const {createOmniversalMemory}=require("./backend/omniversal-memory");
 const omniversalCatalog=require("./backend/omniversal-quest-character-catalog");
 const tavernCatalog=require("./backend/omniversal-tavern-catalog");
+const divineCatalog=require("./backend/divine-shrine-catalog");
 "use strict";
 /** Opt-in local development server. Never expose publicly without TLS, auth and deployment hardening. */
 const express = require("express");
@@ -854,6 +855,19 @@ CREATE TABLE IF NOT EXISTS character_deity_attunements (
   // Read-only LEGO chain planning; never registers, completes or unlocks quests.
   // Read-only draft NPC stat sheets and quest/cast relationships.
   // Authenticated read-only tavern and refuge catalog; no automatic rest or transactions.
+  // Divine sites and historical cameo previews are advisory, never auto-awards.
+  app.get("/api/campaigns/:campaignId/divine/shrines",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    try{return res.json({success:true,shrines:divineCatalog.listShrines({book:req.query.book===undefined?null:Number(req.query.book),deity:req.query.deity||null}),draft:true});}
+    catch{return res.status(400).json({success:false,error:"INVALID_FILTER"});}
+  });
+  app.get("/api/campaigns/:campaignId/divine/shrines/:shrineId",(req,res)=>{
+    const campaignId=req.params.campaignId;
+    if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
+    const shrine=divineCatalog.getShrine(req.params.shrineId);
+    return shrine?res.json({success:true,shrine,preview:divineCatalog.previewBlessing({shrineId:shrine.id}),draft:true}):res.status(404).json({success:false,error:"NOT_FOUND"});
+  });
   app.get("/api/campaigns/:campaignId/omniversal/taverns",(req,res)=>{
     const campaignId=req.params.campaignId;
     if(req.auth.kind!=="actor"||!id(campaignId)||!memberRole.get(campaignId,req.auth.actorId))return res.status(403).json({success:false,error:"FORBIDDEN"});
