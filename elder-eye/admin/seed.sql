@@ -1,0 +1,6 @@
+INSERT OR IGNORE INTO campaigns(id,title,book_count) VALUES('elder-eye','The Elder Eye',30);
+INSERT OR IGNORE INTO locations(id,name,plane,book_number,canon_status) VALUES('pit-ghaunadaur','Pit of Ghaunadaur','Underdark',1,'campaign'),('sunken-spire-gate','The Sunken Spire Gate',NULL,2,'campaign');
+INSERT OR IGNORE INTO characters(id,campaign_id,name,ancestry,class,subclass,background,level,location_id,canon_status) VALUES('alice-zress','elder-eye','Alice Z''ress','Drow','Warlock','Great Old One','Acolyte',1,'pit-ghaunadaur','campaign');
+INSERT OR IGNORE INTO abilities(id,character_id,name,source,mechanics_status) VALUES('alice-shield','alice-zress','Shield','Mystra origin gift','homebrew-review'),('alice-acid','alice-zress','Acid Splash','Ghaunadaur origin gift','homebrew-review'),('alice-blade','alice-zress','Blade Ward','Eilistraee origin gift','homebrew-review');
+INSERT OR IGNORE INTO assets(id,title,book_number,location_id,style,status) VALUES('EE-B2-001','The Sunken Spire Gate',2,'sunken-spire-gate','photorealistic cinematic','generated-unlinked');
+INSERT OR IGNORE INTO quests(id,book_number,title,status,location_id) VALUES('EE-B1-OPEN','Down the Rabbit Hole', 'active','pit-ghaunadaur');
