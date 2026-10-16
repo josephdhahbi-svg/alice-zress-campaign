@@ -24,6 +24,33 @@ CREATE TABLE IF NOT EXISTS vtt_revoked_sessions (
  token_hash TEXT PRIMARY KEY, expires_at INTEGER NOT NULL, revoked_at TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_vtt_revoked_expiry ON vtt_revoked_sessions(expires_at);
+` },
+  { version:3, name:"candidate quest objective and reward ledger", sql:`
+CREATE TABLE IF NOT EXISTS vtt_characters (
+ campaign_id TEXT NOT NULL REFERENCES vtt_campaigns(campaign_id) ON DELETE CASCADE,
+ character_id TEXT NOT NULL, owner_actor_id TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,character_id),
+ FOREIGN KEY(campaign_id,owner_actor_id) REFERENCES vtt_campaign_members(campaign_id,actor_id)
+);
+CREATE TABLE IF NOT EXISTS vtt_quest_objectives (
+ campaign_id TEXT NOT NULL, character_id TEXT NOT NULL, quest_id TEXT NOT NULL,
+ objective_id TEXT NOT NULL, verified_event_id TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,character_id,quest_id,objective_id),
+ FOREIGN KEY(campaign_id,character_id) REFERENCES vtt_characters(campaign_id,character_id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS vtt_quest_completions (
+ campaign_id TEXT NOT NULL, character_id TEXT NOT NULL, quest_id TEXT NOT NULL,
+ completed_event_id TEXT NOT NULL, completed_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,character_id,quest_id),
+ FOREIGN KEY(campaign_id,character_id) REFERENCES vtt_characters(campaign_id,character_id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS vtt_character_artifacts (
+ campaign_id TEXT NOT NULL, character_id TEXT NOT NULL, artifact_id TEXT NOT NULL,
+ source_quest_id TEXT NOT NULL, awarded_at TEXT NOT NULL,
+ PRIMARY KEY(campaign_id,character_id,artifact_id),
+ FOREIGN KEY(campaign_id,character_id) REFERENCES vtt_characters(campaign_id,character_id) ON DELETE CASCADE
+);
+CREATE INDEX IF NOT EXISTS idx_vtt_artifact_quest ON vtt_character_artifacts(campaign_id,character_id,source_quest_id);
 ` }
 ];
 function migrate(db) {
