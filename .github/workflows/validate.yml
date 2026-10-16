@@ -58,6 +58,8 @@ jobs:
         run: node --test backend/faction-pulse.test.js
       - name: Restore SQLite WAL with contested territories
         run: node --test backend/faction-dispute-backup.integration.test.js
+      - name: Test authenticated faction dispute HTTP lifecycle
+        run: node --test backend/faction-dispute-http.integration.test.js
       - name: Test transactional faction disputes
         run: node --test backend/faction-dispute-engine.test.js
       - name: Test authenticated browser roll client
