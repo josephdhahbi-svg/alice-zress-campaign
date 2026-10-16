@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 from moonveil_sphere.integration.contract_validation import (
-    validate_space_time_context, validate_entity, validate_patch, validate_connection
+    validate_space_time_context, validate_entity, validate_patch, validate_connection, validate_causal_chain
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,6 +55,27 @@ class SphericalLegoIntegrationTests(unittest.TestCase):
     def test_connection_passes_when_both_entities_exist(self):
         known = {self.connection["from_entity"], self.connection["to_entity"]}
         self.assertEqual(validate_connection(self.connection, known), [])
+
+    def test_causal_chain_contract_passes(self):
+        self.assertEqual(validate_causal_chain(self.chain), [])
+
+    def test_unknown_causal_reference_rejected(self):
+        import copy
+        chain = copy.deepcopy(self.chain)
+        chain["events"][0]["consequence_event_ids"].append("EVT_MISSING")
+        self.assertTrue(any(x.startswith("unknown_event_reference") for x in validate_causal_chain(chain)))
+
+    def test_nonreciprocal_causal_link_rejected(self):
+        import copy
+        chain = copy.deepcopy(self.chain)
+        chain["events"][1]["cause_event_ids"] = []
+        self.assertTrue(any(x.startswith("causal_link_not_reciprocal") for x in validate_causal_chain(chain)))
+
+    def test_causal_chain_cannot_claim_state_effect(self):
+        import copy
+        chain = copy.deepcopy(self.chain)
+        chain["state_effect"] = "advance_alice"
+        self.assertIn("causal_chain_must_have_no_state_effect", validate_causal_chain(chain))
 
     def test_alice_protected_state_is_unchanged(self):
         character = self.u01["character"]
