@@ -285,3 +285,11 @@ Alice Z'ress is a female drow Great Old One Warlock at Level 1, Eilistraee acoly
 - Next: verify the new CI run; then ask Gemini to map `patch_applied` to the real event ledger with compare-and-swap semantics, and ask Copilot to align its proposed patch/connection fields to actual WorldOS schemas.
 
 - **New fixture-shape CI verified:** run `38830892065` for commit `8046708` completed successfully on both Python 3.11 and 3.12. Registry validation, Netheril route validation, route-planner demo, and Python unit test discovery all passed. https://github.com/josephdhahbi-svg/alice-zress-campaign/actions/runs/38830892065
+
+## 30-book spherical architecture and Python proposal helpers (2026-10-16)
+- `9315abc` added `docs/architecture/30-book-sphere-architecture-review-v1.md`, reviewing the supplied 30-book list and five Python snippets. It preserves three book tiers as distinct from seven traversals; treats titles/cosmology/level-21+ ascension as campaign proposals pending source/rules review; and rejects the supplied SQLite snippet as an immutable ledger implementation.
+- Added proposed, read-only Python helpers: `moonveil_sphere/core/singularity.py` (`69d9aa4`), `moonveil_sphere/physics/cataclysm.py` (`d9d726e`), `moonveil_sphere/character/alice_state.py` (`53ae1db`), and `moonveil_sphere/multiverse/transit_engine.py` (`15029e2`), plus package initializers.
+- `c326a94` added `tests/test_moonveil_sphere_proposals.py` (8 tests). Tests check proposed status, input validation, unresolved ooze penalty, Alice Level 1 and five choices, independent reference copies, and no route unlock/traversal assignment.
+- GitHub Actions runs for the package helper commits passed: `38831331270` for `15029e2`, `38831324546` for `2b1d135`, and `38831318762` for `53ae1db`; the run for `c326a94` (`38831349140`) was queued at last check. Do not claim the new eight-test suite passed until that run completes.
+- No SQLite ledger engine implemented: the supplied snippet does not enforce append-only immutability, lacks event schema/foreign keys/concurrency controls, and in-memory SQLite does not demonstrate WAL behavior. Defer until secure transactional design is ready.
+- Alice remains Level 1, gifts Shield/Acid Splash/Light, five choices unselected. No save mutations or route unlocks.
