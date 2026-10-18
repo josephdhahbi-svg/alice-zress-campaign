@@ -71,11 +71,18 @@ const knowledgeKey=campaign=>"moonveil-knowledge-v1-"+campaign;
 function knowledge(campaign){try{const data=JSON.parse(localStorage.getItem(knowledgeKey(campaign)));return data&&Array.isArray(data.clues)?data.clues:[];}catch(_){return [];}}
 function recordKnowledge(campaign,sceneIndex){const clue=discoveries[campaign]?.[sceneIndex];if(!clue)return;const clues=knowledge(campaign);if(clues.some(x=>x.id===clue[0]))return;clues.push({id:clue[0],summary:clue[1],origin:"optional-dialogue",unconfirmed:true});try{localStorage.setItem(knowledgeKey(campaign),JSON.stringify({version:1,clues}));}catch(_){}}
 const key=campaign=>"moonveil-dialogue-v1-"+campaign;
+const questTemplates={
+ alice:[["rescue-witnesses","Listen to an endangered witness","captive-testimony"],["trace-the-spiral","Find a clue to the shifting doors","spiral-doors"],["investigate-wards","Learn what the portal guardian knows","hall-ward"],["question-the-threshold","Discover the unknown voice's intention","threshold-voice"]],
+ vesper:[["read-archive-ward","Question the archive echo","archive-ward"],["map-star-charts","Discover the librarian's star-chart clue","star-chart"],["inspect-guardian","Learn the guardian's ward weakness","guardian-hinge"],["record-moonbridge","Identify the astrolabe's sigil report","moonbridge-record"]]
+};
+function questProgress(campaign){const known=new Set(knowledge(campaign).map(c=>c.id));return(questTemplates[campaign]||[]).map(([id,title,clue])=>({id,title,done:known.has(clue),status:known.has(clue)?"clue found":"investigate"}));}
 function renderJournal(campaign){
  const root=document.getElementById("moonveilKnowledge");if(!root)return;
  root.replaceChildren();const heading=document.createElement("h2");heading.textContent="Discovered clues";root.append(heading);
- const clues=knowledge(campaign);if(!clues.length){const p=document.createElement("p");p.textContent="No NPC clues recorded yet. Ask questions in Conversations.";root.append(p);return;}
+ const clues=knowledge(campaign);if(!clues.length){const p=document.createElement("p");p.textContent="No NPC clues recorded yet. Ask questions in Conversations.";root.append(p);}
  const list=document.createElement("ul");clues.forEach(c=>{const li=document.createElement("li");li.textContent=c.summary+" — NPC testimony (unconfirmed)";list.append(li);});root.append(list);
+ const questTitle=document.createElement("h3");questTitle.textContent="Investigation objectives (playtest)";root.append(questTitle);
+ const objectiveList=document.createElement("ul");questProgress(campaign).forEach(q=>{const item=document.createElement("li");item.textContent=(q.done?"✓ ":"○ ")+q.title+" — "+q.status;objectiveList.append(item);});root.append(objectiveList);
 }
 function mount(campaign,sceneIndex){
  const root=document.getElementById("moonveilDialogue");if(!root)return;
@@ -102,5 +109,5 @@ function mount(campaign,sceneIndex){
  filter.oninput=()=>{const q=filter.value.trim().toLowerCase();buttons.forEach(({button,question,answer})=>{button.hidden=!!q&&!((question+" "+answer).toLowerCase().includes(q));});};
  root.append(options,reply);renderJournal(campaign);
 }
-window.MoonveilDialogue={mount,knowledge,renderJournal};
+window.MoonveilDialogue={mount,knowledge,renderJournal,questProgress};
 })();
