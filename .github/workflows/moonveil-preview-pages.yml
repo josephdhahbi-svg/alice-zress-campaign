@@ -23,7 +23,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Stage static game
         run: |
-          mkdir -p _site
+          mkdir -p _site/data
           cp game/moonveil-hub.html _site/index.html
           cp game/alice-elder-eye-playtest.html _site/
           cp game/vesper-archive.html _site/
