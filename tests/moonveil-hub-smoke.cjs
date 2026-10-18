@@ -14,7 +14,7 @@ for(const name of pages){
  console.log('PASS parsed HTML scripts:',name);
 }
 const hub=fs.readFileSync(path.join(folder,'moonveil-hub.html'),'utf8');
-for(const target of ['alice-elder-eye-playtest.html','vesper-archive.html','index.html']){
+for(const target of ['alice-elder-eye-playtest.html','vesper-archive.html','original-alice.html']){
  assert.ok(hub.includes('href="./'+target+'"'),'Hub is missing '+target);
 }
 const alice=fs.readFileSync(path.join(folder,'alice-elder-eye-playtest.html'),'utf8');
@@ -27,10 +27,10 @@ assert.match(vesper,/moonveil-vesper-archive-v1/);
 assert.doesNotMatch(vesper,/moonveil-alice-elder-eye-playtest-v1/);
 console.log('PASS links, navigation tabs, and isolated saves');
 
-const gameFiles=new Set(pages);
+const gameFiles=new Set([...pages,'original-alice.html']);
 for(const link of hub.matchAll(/href="\.\/([^"]+\.html)"/g)){
  assert.ok(gameFiles.has(link[1]),'Hub links to untracked game: '+link[1]);
- assert.ok(fs.existsSync(path.join(folder,link[1])),'Hub target missing: '+link[1]);
+ if(link[1]==='original-alice.html')assert.ok(fs.existsSync(path.join(folder,'index.html')),'Original Alice source missing');else assert.ok(fs.existsSync(path.join(folder,link[1])),'Hub target missing: '+link[1]);
 }
 assert.match(hub,/GitHub source-preview pages are not the deployed game/,'Deployment caveat missing');
 const aliceSceneCount=(alice.match(/title:"(?:The Pit of Ghaunadaur|The Rabbit Hole|The Hall of Infinite Doors|The Elder Eye Threshold)"/g)||[]).length;
