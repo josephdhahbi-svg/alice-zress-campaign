@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moonveil | Alice Z'ress — Elder Eye Encounter</title>
+<style>
+:root{color-scheme:dark;--bg:#0b121a;--surface:#17252c;--gold:#efca83;--teal:#8fd6c9;--ink:#edf1e9}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+header,main{max-width:850px;margin:auto;padding:16px}header{border-bottom:1px solid #4b5959}h1{font-size:1.6rem;color:var(--gold);margin:.1em 0}h2{color:var(--gold);font-size:1.25rem}small,.muted{color:#b4c6c3}
+nav,.stats,.tools{display:flex;gap:7px;flex-wrap:wrap}nav button,.tools button{flex:1;min-width:95px}.choices button{transition:background .15s ease}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.controls button{flex:1;min-width:120px}.pill{display:inline-block;border:1px solid #6b837f;border-radius:50px;padding:3px 9px;color:#cde8df;font-size:13px}nav{position:sticky;top:0;background:#0b121af2;z-index:3;padding:8px 0}textarea{font:inherit} @media(max-width:430px){header,main{padding:10px}nav button{min-width:80px;padding:10px 7px;font-size:13px}.panel{padding:12px}.visual{min-height:175px}}
+button{background:#223a42;color:var(--ink);border:1px solid #678583;border-radius:11px;padding:12px;text-align:left;font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--gold)}button:hover{background:#31505a}button:disabled{opacity:.5;cursor:not-allowed}
+button.selected{border-color:var(--gold)}.panel{background:var(--surface);border:1px solid #486365;border-radius:15px;padding:16px;margin:12px 0}
+.visual{min-height:210px;border-radius:12px;display:flex;align-items:end;padding:20px;background:radial-gradient(ellipse at 75% 15%,#46796f88,transparent 45%),linear-gradient(150deg,#183944,#111323 65%,#261d2b);border:1px solid #69847b}
+.visual h2{font-size:1.65rem;text-shadow:0 2px 4px #000}.choices{display:grid;gap:8px}.choices button{width:100%}.choices b{color:var(--gold)}
+.stats span{border:1px solid #43595e;border-radius:10px;padding:7px 10px}#status{color:var(--teal);min-height:2em}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.5 ui-monospace,monospace}
+[hidden]{display:none!important}
+</style></head><body>
+<header><small>MOONVEIL UNIVERSE • ALICE Z'RESS • ISOLATED PLAYTEST</small><h1>Elminster & the Elder Eye</h1><div class="stats"><span>Level <b>1</b></span><span>HP <b id="hp">10/10</b></span><span>Resolve <b id="resolve">0</b></span><span>Scene <b id="step">1/4</b></span><span>Checks <b id="checks">0</b></span></div></header>
+<main><nav aria-label="Game sections"><button data-tab="cinema" class="selected">Cinema</button><button data-tab="sheet">Character</button><button data-tab="quests">Quests</button><button data-tab="log">Log</button><button data-tab="help">Answer Sheet</button><button data-tab="map">Map</button><button data-tab="notes">Notes</button></nav>
+<section id="cinema" class="tab panel"><div class="visual" role="img" aria-label="Atmospheric gradient placeholder awaiting approved photorealistic artwork"><h2 id="title"></h2></div><p id="sceneText"></p><p class="muted">Five choices. Checks are rolled once and outcomes persist locally. This is a non-canon playtest of Alice's established opening route.</p><div class="controls"><button id="readScene" type="button">▶ Read scene aloud</button><button id="stopVoice" type="button">■ Stop narration</button></div><div id="choices" class="choices"></div><p id="status" role="status" aria-live="polite"></p><div id="lastRoll" class="panel" hidden></div></section>
+<section class="panel" id="moonveilDialogue" aria-label="Optional NPC conversations"></section><section class="panel" id="moonveilKnowledge" aria-label="NPC discovery journal"></section><section id="sheet" class="tab panel" hidden><h2>Alice Z'ress</h2><p>Heroic Drow • Great Old One Warlock • Patron: Ghaunadaur • Goddess: Eilistraee</p><p>Playtest values only: HP 10, proficiency +2, Arcana +3, Insight +2, Stealth +3, Persuasion +2, attack +4. These numbers are not a ruling on the master sheet.</p><p id="flags"></p></section>
+<section id="quests" class="tab panel" hidden><h2>Quest — The Rabbit Hole</h2><p id="questText"></p><p>Rewards and divine gifts are deliberately not granted in this playtest.</p></section>
+<section id="log" class="tab panel" hidden><h2>Event ledger</h2><div id="events"></div></section>
+<section id="help" class="tab panel" hidden><h2>Answer Sheet / Walkthrough</h2><details><summary>Reveal playtest route (spoilers)</summary><p>At the Pit, examine the glyphs or aid the captives. At the descent, use Arcana to identify the door. At the Hall, inspect the seal; at the Eye, attempt the closing rite. Each decision is resolved separately; a failed check never erases Alice's past actions.</p></details><p>Historical chronology, Elminster's role, and disputed Eilistraee gifts remain unresolved. This demo does not approve them.</p></section>
+<section id="map" class="tab panel" hidden><h2>Route Map</h2><div id="routeMap"></div><p class="muted">Story route is a schematic, not geographic survey data.</p></section><section id="notes" class="tab panel" hidden><h2>Session Notes</h2><label for="playerNotes">Private player notes</label><textarea id="playerNotes" rows="7" style="display:block;width:100%;background:#0d1b22;color:#fff;border:1px solid #678583;border-radius:9px;padding:10px"></textarea><p class="muted">Notes are included in local saves and exports.</p></section><section class="panel"><h2>Save & recovery</h2><div class="tools"><button id="undo">↶ Undo</button><button id="export">↓ Export JSON</button><button id="importBtn">↑ Import JSON</button><button id="restart">↺ Restart playtest</button></div><input type="file" id="importFile" accept=".json,application/json" hidden><p class="muted">Automatic on-device save. No GitHub, server, or ChatGPT synchronization.</p></section></main>
+<script>
+"use strict";
+const KEY="moonveil-alice-elder-eye-playtest-v1";
+const $=id=>document.getElementById(id);
+const scenes=[
+{title:"The Pit of Ghaunadaur",text:"Obsidian arches descend beneath Menzoberranzan. A captive's voice echoes from the stair. Five routes open around a pulsing glyph.",options:[
+["Lawful Good","Guard the captives", "Persuasion",11,"The frightened captives trust your protection.","They hesitate, but remain near your torch."],
+["Neutral Good","Offer a hand to a lost pilgrim","Insight",10,"The pilgrim reveals a safe ledge.","The pilgrim cannot recall the route."],
+["Chaotic Good","Disrupt the cult's warning bell","Stealth",12,"The bell falls silent.","A distant clang alerts the tunnel."],
+["Utility","Read the glyphs before proceeding","Arcana",10,"You discover the descent sigil.","The glyphs resist translation."],
+["Action","Descend toward the pulsing stone","Attack",11,"You break the hanging obstacle.","The passage scrapes you as you pass."]]},
+{title:"The Rabbit Hole",text:"The stone folds into a sky of falling doors. Strange constellations trace a spiral around Alice as time bends.",options:[
+["Lawful Good","Anchor the drifting refugees","Persuasion",12,"You keep the group together.","A refugee drifts away but remains visible."],
+["Neutral Good","Call to the unseen guide","Insight",11,"A calm voice points toward an arch.","Only your own echo replies."],
+["Chaotic Good","Leap between the shifting doors","Stealth",13,"You reach the silver threshold.","You stumble across a broken ledge."],
+["Utility","Map the turning doorway runes","Arcana",12,"You chart a stable route.","The symbols keep rearranging."],
+["Action","Force a passage through the mist","Attack",12,"The mist tears open.","The resistance bruises your arm."]]},
+{title:"The Hall of Infinite Doors",text:"Countless portals stretch beyond sight. One bears the old mark of the Elder Eye; a cracked seal trembles beside it.",options:[
+["Lawful Good","Seal an unsafe portal","Arcana",13,"One dangerous gateway is secured.","The portal continues to flicker."],
+["Neutral Good","Speak to the guardian shade","Persuasion",12,"The shade shares a clue.","The shade vanishes without answering."],
+["Chaotic Good","Slip through the hidden gallery","Stealth",12,"You locate the concealed gallery.","The gallery collapses behind you."],
+["Utility","Study the Elder Eye seal","Arcana",11,"You identify its repeating pattern.","The pattern remains incomplete."],
+["Action","Strike the unstable hinge","Attack",13,"The hinge holds long enough to pass.","The hinge bursts with a sharp recoil."]]},
+{title:"The Elder Eye Threshold",text:"The threshold pulses like a heartbeat. Somewhere beyond it, an ancient intelligence tests every promise Alice has made.",options:[
+["Lawful Good","Pledge to protect the innocent","Persuasion",13,"The ward acknowledges your promise.","The ward demands proof later."],
+["Neutral Good","Ask what the threshold guards","Insight",12,"You glimpse the next mystery.","Its answer is a fragmented memory."],
+["Chaotic Good","Reject the voice's demand","Stealth",13,"You escape its binding gaze.","The gaze follows your shadow."],
+["Utility","Trace a temporary closing rite","Arcana",14,"You stabilize the seal for now.","The seal stays unstable, though you learn its weakness."],
+["Action","Break the immediate threat","Attack",14,"You force the threshold to withdraw.","The threshold strikes back as you retreat."]]}];
+const empty=()=>({version:1,hero:"Alice Z'ress",step:0,hp:10,resolve:0,flags:[],events:[],complete:false,notes:""});
+function valid(s){return s&&s.version===1&&s.hero==="Alice Z'ress"&&Number.isInteger(s.step)&&s.step>=0&&s.step<=4&&Number.isInteger(s.hp)&&s.hp>=0&&s.hp<=10&&Number.isInteger(s.resolve)&&s.resolve>=0&&s.resolve<=4&&Array.isArray(s.events)&&s.events.length<=4&&Array.isArray(s.flags)&&typeof s.complete==="boolean"&&(s.notes===undefined||typeof s.notes==="string")&&s.events.length===s.step&&s.resolve<=s.step&&s.complete===(s.step===4)&&s.events.every((e,i)=>e&&e.scene===i&&Number.isInteger(e.choice)&&e.choice>=0&&e.choice<5&&Number.isInteger(e.roll)&&e.roll>=1&&e.roll<=20&&Number.isInteger(e.total)&&e.total===e.roll+modifiersForValidation(e.skill)&&Number.isInteger(e.dc)&&typeof e.success==="boolean"&&e.success===(e.total>=e.dc));}
+function modifiersForValidation(skill){return ({Persuasion:2,Insight:2,Stealth:3,Arcana:3,Attack:4})[skill]??-999;}
+let state=empty(),history=[];
+try{const s=JSON.parse(localStorage.getItem(KEY));if(valid(s))state=s;}catch(e){}
+function save(){localStorage.setItem(KEY,JSON.stringify(state));render();}
+const modifiers={Persuasion:2,Insight:2,Stealth:3,Arcana:3,Attack:4};
+function act(i){
+if(state.complete||state.step>=4)return;
+const scene=scenes[state.step],o=scene.options[i];if(!o)return;
+history.push(JSON.parse(JSON.stringify(state)));
+const bytes=new Uint32Array(1);let roll;if(globalThis.crypto&&crypto.getRandomValues){const limit=Math.floor(4294967296/20)*20;do{crypto.getRandomValues(bytes);}while(bytes[0]>=limit);roll=(bytes[0]%20)+1;}else{roll=1+Math.floor(Math.random()*20);}const total=roll+modifiers[o[2]],success=total>=o[3];
+state.events.push({scene:state.step,choice:i,kind:o[0],action:o[1],skill:o[2],roll,total,dc:o[3],success,outcome:success?o[4]:o[5],at:new Date().toISOString()});
+state.flags.push((success?"success:":"attempt:")+state.step+":"+i);
+if(success)state.resolve++;else state.hp=Math.max(0,state.hp-1);
+state.step++;state.complete=state.step===4;
+save();$("status").textContent=o[1]+" — d20 "+roll+" + "+modifiers[o[2]]+" = "+total+" vs DC "+o[3]+". "+(success?"Success. ":"Setback. ")+(success?o[4]:o[5]);
+}
+function render(){
+$("checks").textContent=state.events.length; $("hp").textContent=state.hp+"/10";$("resolve").textContent=state.resolve;$("step").textContent=Math.min(4,state.step+1)+"/4";
+const end=state.complete,s=scenes[Math.min(state.step,3)];
+$("title").textContent=end?"The Threshold: Playtest Complete":s.title;
+$("sceneText").textContent=end?"Alice has completed four test encounters. Her choices and rolls are saved. No story outcome, relic, reward or canon change is final.":s.text;
+$("choices").replaceChildren();
+if(!end)s.options.forEach((o,i)=>{const b=document.createElement("button");b.innerHTML="<b>"+o[0]+"</b> — "+o[1]+" • "+o[2]+" DC "+o[3];b.onclick=()=>act(i);$("choices").append(b);});
+const last=state.events[state.events.length-1];$("lastRoll").hidden=!last;if(last)$("lastRoll").textContent="Latest roll: "+last.skill+" "+last.roll+" + "+modifiers[last.skill]+" = "+last.total+" vs DC "+last.dc+". "+(last.success?"Success":"Setback")+". "+last.outcome;
+$("flags").textContent="Recorded checks: "+state.events.length+". Successes: "+state.resolve+".";
+$("questText").textContent=end?"Four scenes attempted. This is playtest completion, not campaign quest completion.":"In progress: "+s.title+" (playtest only).";
+$("events").replaceChildren();state.events.forEach((e,i)=>{const p=document.createElement("p");p.textContent=(i+1)+". "+e.action+" — "+e.skill+" "+e.roll+" total "+e.total+" / DC "+e.dc+" — "+(e.success?"SUCCESS":"SETBACK")+". "+e.outcome;$("events").append(p);});
+$("undo").disabled=!history.length;
+$("playerNotes").value=state.notes||"";
+$("routeMap").replaceChildren(); scenes.forEach((scene,i)=>{const p=document.createElement("p");p.textContent=(i<state.step?"✓ ":(i===state.step?"➤ ":"○ "))+(i+1)+". "+scene.title;$("routeMap").append(p);});
+}
+const voiceSupported=typeof speechSynthesis!=="undefined"&&typeof SpeechSynthesisUtterance!=="undefined";$("readScene").disabled=!voiceSupported;$("stopVoice").disabled=!voiceSupported;$("readScene").onclick=()=>{if(!voiceSupported)return;speechSynthesis.cancel();const scene=scenes[Math.min(state.step,3)];const u=new SpeechSynthesisUtterance(state.complete?"The Elder Eye playtest has concluded.":scene.title+". "+scene.text);u.rate=.9;speechSynthesis.speak(u);};$("stopVoice").onclick=()=>{if(voiceSupported)speechSynthesis.cancel();};
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(el=>el.hidden=el.id!==b.dataset.tab);document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("selected",x===b));});
+$("playerNotes").onchange=()=>{state.notes=$("playerNotes").value.slice(0,10000);save();};
+$("undo").onclick=()=>{if(!history.length)return;state=history.pop();save();$("status").textContent="Previous choice undone on this device.";};
+$("restart").onclick=()=>{if(!confirm("Reset this playtest only?"))return;history=[];state=empty();save();$("status").textContent="Playtest reset; campaign canon unchanged.";};
+$("export").onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download="alice-elder-eye-playtest-save.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+$("importBtn").onclick=()=>$("importFile").click();
+$("importFile").onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const s=JSON.parse(await f.text());if(!valid(s))throw Error("Unexpected save format");history=[];state=s;state.notes=state.notes||"";save();$("status").textContent="Playtest save imported."; }catch(err){$("status").textContent="Import rejected: "+err.message;}e.target.value="";};
+render();
+</script><script src="./moonveil-dialogue.js"></script><script>if(window.MoonveilDialogue){const originalRender=render;render=function(){originalRender();window.MoonveilDialogue.mount("alice",state.step);};render();}</script></body></html>
