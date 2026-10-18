@@ -68,3 +68,5 @@ for(const npc of worldData.npcs)for(const item of npc.inventory)assert.ok(itemId
 for(const dungeon of worldData.dungeons){assert.ok(towns.has(dungeon.near));assert.equal(dungeon.rooms.length,3);}
 assert.match(world,/data\/moonveil-world-catalog\.json/);
 console.log("PASS catalog references and dungeon data");
+
+assert.match(world,/Travel, Roads & Buildings/);assert.match(world,/road.days/);assert.match(world,/a.dungeons\[d.id\]/);assert.match(world,/buildingDetail/);console.log("PASS travel, buildings and dungeon exploration code");
