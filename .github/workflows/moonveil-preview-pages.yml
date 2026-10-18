@@ -28,6 +28,7 @@ jobs:
           cp game/alice-elder-eye-playtest.html _site/
           cp game/vesper-archive.html _site/
           cp game/moonveil-dialogue.js _site/
+          cp game/moonveil-characters.html _site/
           cp game/index.html _site/original-alice.html
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
