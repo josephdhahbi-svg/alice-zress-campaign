@@ -63,6 +63,13 @@ const conversations={
    ["Is this Netherese magic?","Its geometry carries echoes of Netherese craft."],
    ["What remains hidden?","More than this archive can answer in one night."]]}
  ]};
+const discoveries={
+ alice:[["captive-testimony","Witness says captives need protection"],["spiral-doors","Witness reports time-shifted doors"],["hall-ward","Guardian warns of unreliable portal inscriptions"],["threshold-voice","Unknown voice demands an unguarded doorway"]],
+ vesper:[["archive-ward","Archive echo reports ancient defensive wards"],["star-chart","Librarian identifies Moonbridge star-chart connection"],["guardian-hinge","Guardian describes a ward hinge resonance"],["moonbridge-record","Astrolabe identifies a sigil record, not a completed journey"]]
+};
+const knowledgeKey=campaign=>"moonveil-knowledge-v1-"+campaign;
+function knowledge(campaign){try{const data=JSON.parse(localStorage.getItem(knowledgeKey(campaign)));return data&&Array.isArray(data.clues)?data.clues:[];}catch(_){return [];}}
+function recordKnowledge(campaign,sceneIndex){const clue=discoveries[campaign]?.[sceneIndex];if(!clue)return;const clues=knowledge(campaign);if(clues.some(x=>x.id===clue[0]))return;clues.push({id:clue[0],summary:clue[1],origin:"optional-dialogue",unconfirmed:true});try{localStorage.setItem(knowledgeKey(campaign),JSON.stringify({version:1,clues}));}catch(_){}}
 const key=campaign=>"moonveil-dialogue-v1-"+campaign;
 function mount(campaign,sceneIndex){
  const root=document.getElementById("moonveilDialogue");if(!root)return;
@@ -83,11 +90,11 @@ function mount(campaign,sceneIndex){
   button.onclick=()=>{
    reply.textContent=node.npc+": “"+answer+"”";
    const list=Array.isArray(store[node.npc])?store[node.npc]:[];
-   if(!list.includes(i)){list.push(i);store[node.npc]=list;count.textContent="Questions explored: "+list.length+" / "+node.lines.length;try{localStorage.setItem(key(campaign),JSON.stringify(store));}catch(_){}}
+   if(!list.includes(i)){recordKnowledge(campaign,Math.max(0,Math.min(set.length-1,Number(sceneIndex)||0)));list.push(i);store[node.npc]=list;count.textContent="Questions explored: "+list.length+" / "+node.lines.length;try{localStorage.setItem(key(campaign),JSON.stringify(store));}catch(_){}}
   };options.append(button);buttons.push({button,question,answer});
  });
  filter.oninput=()=>{const q=filter.value.trim().toLowerCase();buttons.forEach(({button,question,answer})=>{button.hidden=!!q&&!((question+" "+answer).toLowerCase().includes(q));});};
  root.append(options,reply);
 }
-window.MoonveilDialogue={mount};
+window.MoonveilDialogue={mount,knowledge};
 })();
