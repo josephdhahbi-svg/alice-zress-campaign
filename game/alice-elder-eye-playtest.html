@@ -15,13 +15,13 @@ pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.5 ui-monospace,monos
 [hidden]{display:none!important}
 </style></head><body>
 <header><small>MOONVEIL UNIVERSE • ALICE Z'RESS • ISOLATED PLAYTEST</small><h1>Elminster & the Elder Eye</h1><div class="stats"><span>Level <b>1</b></span><span>HP <b id="hp">10/10</b></span><span>Resolve <b id="resolve">0</b></span><span>Scene <b id="step">1/4</b></span></div></header>
-<main><nav aria-label="Game sections"><button data-tab="cinema" class="selected">Cinema</button><button data-tab="sheet">Character</button><button data-tab="quests">Quests</button><button data-tab="log">Log</button><button data-tab="help">Answer Sheet</button></nav>
+<main><nav aria-label="Game sections"><button data-tab="cinema" class="selected">Cinema</button><button data-tab="sheet">Character</button><button data-tab="quests">Quests</button><button data-tab="log">Log</button><button data-tab="help">Answer Sheet</button><button data-tab="map">Map</button><button data-tab="notes">Notes</button></nav>
 <section id="cinema" class="tab panel"><div class="visual" role="img" aria-label="Atmospheric gradient placeholder awaiting approved photorealistic artwork"><h2 id="title"></h2></div><p id="sceneText"></p><p class="muted">Five choices. Checks are rolled once and outcomes persist locally. This is a non-canon playtest of Alice's established opening route.</p><div id="choices" class="choices"></div><p id="status" role="status"></p></section>
 <section id="sheet" class="tab panel" hidden><h2>Alice Z'ress</h2><p>Heroic Drow • Great Old One Warlock • Patron: Ghaunadaur • Goddess: Eilistraee</p><p>Playtest values only: HP 10, proficiency +2, Arcana +3, Insight +2, Stealth +3, Persuasion +2, attack +4. These numbers are not a ruling on the master sheet.</p><p id="flags"></p></section>
 <section id="quests" class="tab panel" hidden><h2>Quest — The Rabbit Hole</h2><p id="questText"></p><p>Rewards and divine gifts are deliberately not granted in this playtest.</p></section>
 <section id="log" class="tab panel" hidden><h2>Event ledger</h2><div id="events"></div></section>
 <section id="help" class="tab panel" hidden><h2>Answer Sheet / Walkthrough</h2><details><summary>Reveal playtest route (spoilers)</summary><p>At the Pit, examine the glyphs or aid the captives. At the descent, use Arcana to identify the door. At the Hall, inspect the seal; at the Eye, attempt the closing rite. Each decision is resolved separately; a failed check never erases Alice's past actions.</p></details><p>Historical chronology, Elminster's role, and disputed Eilistraee gifts remain unresolved. This demo does not approve them.</p></section>
-<section class="panel"><h2>Save & recovery</h2><div class="tools"><button id="undo">↶ Undo</button><button id="export">↓ Export JSON</button><button id="importBtn">↑ Import JSON</button><button id="restart">↺ Restart playtest</button></div><input type="file" id="importFile" accept=".json,application/json" hidden><p class="muted">Automatic on-device save. No GitHub, server, or ChatGPT synchronization.</p></section></main>
+<section id="map" class="tab panel" hidden><h2>Route Map</h2><div id="routeMap"></div><p class="muted">Story route is a schematic, not geographic survey data.</p></section><section id="notes" class="tab panel" hidden><h2>Session Notes</h2><label for="playerNotes">Private player notes</label><textarea id="playerNotes" rows="7" style="display:block;width:100%;background:#0d1b22;color:#fff;border:1px solid #678583;border-radius:9px;padding:10px"></textarea><p class="muted">Notes are included in local saves and exports.</p></section><section class="panel"><h2>Save & recovery</h2><div class="tools"><button id="undo">↶ Undo</button><button id="export">↓ Export JSON</button><button id="importBtn">↑ Import JSON</button><button id="restart">↺ Restart playtest</button></div><input type="file" id="importFile" accept=".json,application/json" hidden><p class="muted">Automatic on-device save. No GitHub, server, or ChatGPT synchronization.</p></section></main>
 <script>
 "use strict";
 const KEY="moonveil-alice-elder-eye-playtest-v1";
@@ -51,8 +51,8 @@ const scenes=[
 ["Chaotic Good","Reject the voice's demand","Stealth",13,"You escape its binding gaze.","The gaze follows your shadow."],
 ["Utility","Trace a temporary closing rite","Arcana",14,"You stabilize the seal for now.","The seal stays unstable, though you learn its weakness."],
 ["Action","Break the immediate threat","Attack",14,"You force the threshold to withdraw.","The threshold strikes back as you retreat."]]}];
-const empty=()=>({version:1,hero:"Alice Z'ress",step:0,hp:10,resolve:0,flags:[],events:[],complete:false});
-function valid(s){return s&&s.version===1&&s.hero==="Alice Z'ress"&&Number.isInteger(s.step)&&s.step>=0&&s.step<=4&&Number.isInteger(s.hp)&&s.hp>=0&&s.hp<=10&&Number.isInteger(s.resolve)&&s.resolve>=0&&s.resolve<=4&&Array.isArray(s.events)&&s.events.length<=4&&Array.isArray(s.flags)&&typeof s.complete==="boolean";}
+const empty=()=>({version:1,hero:"Alice Z'ress",step:0,hp:10,resolve:0,flags:[],events:[],complete:false,notes:""});
+function valid(s){return s&&s.version===1&&s.hero==="Alice Z'ress"&&Number.isInteger(s.step)&&s.step>=0&&s.step<=4&&Number.isInteger(s.hp)&&s.hp>=0&&s.hp<=10&&Number.isInteger(s.resolve)&&s.resolve>=0&&s.resolve<=4&&Array.isArray(s.events)&&s.events.length<=4&&Array.isArray(s.flags)&&typeof s.complete==="boolean"&&(s.notes===undefined||typeof s.notes==="string")&&s.events.length===s.step&&s.resolve<=s.step;}
 let state=empty(),history=[];
 try{const s=JSON.parse(localStorage.getItem(KEY));if(valid(s))state=s;}catch(e){}
 function save(){localStorage.setItem(KEY,JSON.stringify(state));render();}
@@ -79,12 +79,15 @@ $("flags").textContent="Recorded checks: "+state.events.length+". Successes: "+s
 $("questText").textContent=end?"Four scenes attempted. This is playtest completion, not campaign quest completion.":"In progress: "+s.title+" (playtest only).";
 $("events").replaceChildren();state.events.forEach((e,i)=>{const p=document.createElement("p");p.textContent=(i+1)+". "+e.action+" — "+e.skill+" "+e.roll+" total "+e.total+" / DC "+e.dc+" — "+(e.success?"SUCCESS":"SETBACK")+". "+e.outcome;$("events").append(p);});
 $("undo").disabled=!history.length;
+$("playerNotes").value=state.notes||"";
+$("routeMap").replaceChildren(); scenes.forEach((scene,i)=>{const p=document.createElement("p");p.textContent=(i<state.step?"✓ ":(i===state.step?"➤ ":"○ "))+(i+1)+". "+scene.title;$("routeMap").append(p);});
 }
 document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(el=>el.hidden=el.id!==b.dataset.tab);document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("selected",x===b));});
+$("playerNotes").onchange=()=>{state.notes=$("playerNotes").value.slice(0,10000);save();};
 $("undo").onclick=()=>{if(!history.length)return;state=history.pop();save();$("status").textContent="Previous choice undone on this device.";};
 $("restart").onclick=()=>{if(!confirm("Reset this playtest only?"))return;history=[];state=empty();save();$("status").textContent="Playtest reset; campaign canon unchanged.";};
 $("export").onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:"application/json"}));const a=document.createElement("a");a.href=url;a.download="alice-elder-eye-playtest-save.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
 $("importBtn").onclick=()=>$("importFile").click();
-$("importFile").onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const s=JSON.parse(await f.text());if(!valid(s))throw Error("Unexpected save format");history=[];state=s;save();$("status").textContent="Playtest save imported."; }catch(err){$("status").textContent="Import rejected: "+err.message;}e.target.value="";};
+$("importFile").onchange=async e=>{const f=e.target.files?.[0];if(!f)return;try{const s=JSON.parse(await f.text());if(!valid(s))throw Error("Unexpected save format");history=[];state=s;state.notes=state.notes||"";save();$("status").textContent="Playtest save imported."; }catch(err){$("status").textContent="Import rejected: "+err.message;}e.target.value="";};
 render();
 </script></body></html>
