@@ -71,6 +71,12 @@ const knowledgeKey=campaign=>"moonveil-knowledge-v1-"+campaign;
 function knowledge(campaign){try{const data=JSON.parse(localStorage.getItem(knowledgeKey(campaign)));return data&&Array.isArray(data.clues)?data.clues:[];}catch(_){return [];}}
 function recordKnowledge(campaign,sceneIndex){const clue=discoveries[campaign]?.[sceneIndex];if(!clue)return;const clues=knowledge(campaign);if(clues.some(x=>x.id===clue[0]))return;clues.push({id:clue[0],summary:clue[1],origin:"optional-dialogue",unconfirmed:true});try{localStorage.setItem(knowledgeKey(campaign),JSON.stringify({version:1,clues}));}catch(_){}}
 const key=campaign=>"moonveil-dialogue-v1-"+campaign;
+function renderJournal(campaign){
+ const root=document.getElementById("moonveilKnowledge");if(!root)return;
+ root.replaceChildren();const heading=document.createElement("h2");heading.textContent="Discovered clues";root.append(heading);
+ const clues=knowledge(campaign);if(!clues.length){const p=document.createElement("p");p.textContent="No NPC clues recorded yet. Ask questions in Conversations.";root.append(p);return;}
+ const list=document.createElement("ul");clues.forEach(c=>{const li=document.createElement("li");li.textContent=c.summary+" — NPC testimony (unconfirmed)";list.append(li);});root.append(list);
+}
 function mount(campaign,sceneIndex){
  const root=document.getElementById("moonveilDialogue");if(!root)return;
  const set=conversations[campaign];if(!set)return;
@@ -90,11 +96,11 @@ function mount(campaign,sceneIndex){
   button.onclick=()=>{
    reply.textContent=node.npc+": “"+answer+"”";
    const list=Array.isArray(store[node.npc])?store[node.npc]:[];
-   if(!list.includes(i)){recordKnowledge(campaign,Math.max(0,Math.min(set.length-1,Number(sceneIndex)||0)));list.push(i);store[node.npc]=list;count.textContent="Questions explored: "+list.length+" / "+node.lines.length;try{localStorage.setItem(key(campaign),JSON.stringify(store));}catch(_){}}
+   if(!list.includes(i)){recordKnowledge(campaign,Math.max(0,Math.min(set.length-1,Number(sceneIndex)||0)));list.push(i);store[node.npc]=list;count.textContent="Questions explored: "+list.length+" / "+node.lines.length;try{localStorage.setItem(key(campaign),JSON.stringify(store));}catch(_){}renderJournal(campaign);}
   };options.append(button);buttons.push({button,question,answer});
  });
  filter.oninput=()=>{const q=filter.value.trim().toLowerCase();buttons.forEach(({button,question,answer})=>{button.hidden=!!q&&!((question+" "+answer).toLowerCase().includes(q));});};
- root.append(options,reply);
+ root.append(options,reply);renderJournal(campaign);
 }
-window.MoonveilDialogue={mount,knowledge};
+window.MoonveilDialogue={mount,knowledge,renderJournal};
 })();
