@@ -26,3 +26,14 @@ const vesper=fs.readFileSync(path.join(folder,'vesper-archive.html'),'utf8');
 assert.match(vesper,/moonveil-vesper-archive-v1/);
 assert.doesNotMatch(vesper,/moonveil-alice-elder-eye-playtest-v1/);
 console.log('PASS links, navigation tabs, and isolated saves');
+
+const gameFiles=new Set(pages);
+for(const link of hub.matchAll(/href="\.\/([^"]+\.html)"/g)){
+ assert.ok(gameFiles.has(link[1]),'Hub links to untracked game: '+link[1]);
+ assert.ok(fs.existsSync(path.join(folder,link[1])),'Hub target missing: '+link[1]);
+}
+assert.match(hub,/GitHub source-preview pages are not the deployed game/,'Deployment caveat missing');
+const aliceSceneCount=(alice.match(/title:"(?:The Pit of Ghaunadaur|The Rabbit Hole|The Hall of Infinite Doors|The Elder Eye Threshold)"/g)||[]).length;
+assert.equal(aliceSceneCount,4,'Expected four Alice playtest scenes');
+assert.match(alice,/speechSynthesis\.speak/,'Voice narrator integration missing');
+console.log('PASS complete relative hub targets, four scenes, narration and preview disclaimer');
