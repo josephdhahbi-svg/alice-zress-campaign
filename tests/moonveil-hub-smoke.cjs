@@ -39,3 +39,5 @@ assert.match(alice,/speechSynthesis\.speak/,'Voice narrator integration missing'
 console.log('PASS complete relative hub targets, four scenes, narration and preview disclaimer');
 
 const dialogue=fs.readFileSync(path.join(folder,'moonveil-dialogue.js'),'utf8');new vm.Script(dialogue,{filename:'moonveil-dialogue.js'});assert.match(dialogue,/alice:/);assert.match(dialogue,/vesper:/);for(const page of ['alice-elder-eye-playtest.html','vesper-archive.html']){const html=fs.readFileSync(path.join(folder,page),'utf8');assert.match(html,/moonveil-dialogue\.js/);assert.match(html,/id="moonveilDialogue"/);}console.log('PASS shared optional dialogue integration');
+
+assert.match(dialogue,/Search NPC dialogue/);assert.match(dialogue,/Questions explored:/);console.log("PASS searchable conversation UI");
