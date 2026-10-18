@@ -53,7 +53,7 @@ const scenes=[
 ["Action","Break the immediate threat","Attack",14,"You force the threshold to withdraw.","The threshold strikes back as you retreat."]]}];
 const empty=()=>({version:1,hero:"Alice Z'ress",step:0,hp:10,resolve:0,flags:[],events:[],complete:false,notes:""});
 function valid(s){return s&&s.version===1&&s.hero==="Alice Z'ress"&&Number.isInteger(s.step)&&s.step>=0&&s.step<=4&&Number.isInteger(s.hp)&&s.hp>=0&&s.hp<=10&&Number.isInteger(s.resolve)&&s.resolve>=0&&s.resolve<=4&&Array.isArray(s.events)&&s.events.length<=4&&Array.isArray(s.flags)&&typeof s.complete==="boolean"&&(s.notes===undefined||typeof s.notes==="string")&&s.events.length===s.step&&s.resolve<=s.step&&s.complete===(s.step===4)&&s.events.every((e,i)=>e&&e.scene===i&&Number.isInteger(e.choice)&&e.choice>=0&&e.choice<5&&Number.isInteger(e.roll)&&e.roll>=1&&e.roll<=20&&Number.isInteger(e.total)&&e.total===e.roll+modifiersForValidation(e.skill)&&Number.isInteger(e.dc)&&typeof e.success==="boolean"&&e.success===(e.total>=e.dc));}
-function modifiersForValidation(skill){return ({Persuasion:2,Insight:2,Stealth:3,Arcana:3,Attack:4})[skill]??-999;}}
+function modifiersForValidation(skill){return ({Persuasion:2,Insight:2,Stealth:3,Arcana:3,Attack:4})[skill]??-999;}
 let state=empty(),history=[];
 try{const s=JSON.parse(localStorage.getItem(KEY));if(valid(s))state=s;}catch(e){}
 function save(){localStorage.setItem(KEY,JSON.stringify(state));render();}
