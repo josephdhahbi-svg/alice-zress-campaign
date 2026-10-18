@@ -51,3 +51,20 @@ assert.match(dialogue,/function questProgress/);assert.match(dialogue,/Investiga
 const creator=fs.readFileSync(path.join(folder,"moonveil-characters.html"),"utf8");assert.match(creator,/moonveil-character-roster-v1/);assert.match(creator,/Create new character/);assert.match(hub,/universal character roster/);console.log("PASS general character creation and hub link");
 
 const world=fs.readFileSync(path.join(folder,"moonveil-world.html"),"utf8");assert.match(world,/moonveil-world-sandbox-v1/);assert.match(world,/towns=\[/);assert.match(hub,/Enter Living World Sandbox/);console.log("PASS universal world hub and settlement module");
+
+const worldData=JSON.parse(fs.readFileSync(path.join(folder,"data","moonveil-world-catalog.json"),"utf8"));
+assert.equal(worldData.settlements.length,3);
+assert.equal(worldData.npcs.length,8);
+assert.equal(worldData.dungeons.length,3);
+assert.equal(worldData.gemDragonCatalog.length,5);
+const towns=new Set(worldData.settlements.map(t=>t.id));
+const npcIds=new Set(worldData.npcs.map(n=>n.id));
+const itemIds=new Set(worldData.items.map(i=>i.id));
+for(const town of worldData.settlements){
+ for(const road of town.roads)assert.ok(towns.has(road.to),'unknown road destination '+road.to);
+ for(const building of town.buildings)assert.ok(npcIds.has(building.npc),'missing building owner '+building.npc);
+}
+for(const npc of worldData.npcs)for(const item of npc.inventory)assert.ok(itemIds.has(item),'unknown item '+item);
+for(const dungeon of worldData.dungeons){assert.ok(towns.has(dungeon.near));assert.equal(dungeon.rooms.length,3);}
+assert.match(world,/data\/moonveil-world-catalog\.json/);
+console.log("PASS catalog references and dungeon data");
