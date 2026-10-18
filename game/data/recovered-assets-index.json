@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "status": "source-discovery-not-binary-import",
+  "verifiedFrom": "ChatGPT Library file inventory on 2026-10-18",
+  "characterSources": [
+    {
+      "title": "Moonveil Master v2",
+      "source": "/Moonveil/Moonveil_Master_v2.xlsx",
+      "status": "located-unparsed"
+    },
+    {
+      "title": "Moonveil Master Recovery Handoff",
+      "source": "/Moonveil/Moonveil_Master_Recovery_Handoff.xlsx",
+      "status": "located-unparsed"
+    },
+    {
+      "title": "Abbey Master Archive v0.2",
+      "source": "/ABBEY_MASTER_ARCHIVE_v0_2(1).xlsx",
+      "status": "located-unparsed"
+    },
+    {
+      "title": "Abbey Tabletop Bestiary v0.3",
+      "source": "/ABBEY_MASTER_ARCHIVE_v0_3_MINIATURES(1).xlsx",
+      "status": "located-unparsed"
+    },
+    {
+      "title": "Moonveil v3 Continuity",
+      "source": "/Moonveil/Moonveil_Continuity_v3_PLAYABLE.zip",
+      "status": "located-unparsed"
+    },
+    {
+      "title": "Moonveil v4 Continued",
+      "source": "/Moonveil_Continued_Verified_v4.zip",
+      "status": "located-unparsed"
+    }
+  ],
+  "artSources": [
+    {
+      "name": "Moonveil Universe Artwork Library",
+      "source": "/Moonveil Universe Artwork Library.png"
+    },
+    {
+      "name": "Moonveil Universe Asset Library",
+      "source": "/Moonveil Universe Asset Library.png"
+    },
+    {
+      "name": "Moonveil Universe Monster Atlas",
+      "source": "/Moonveil Universe Monster Atlas.png"
+    },
+    {
+      "name": "Moonveil Fantasy Item Library",
+      "source": "/Moonveil Fantasy Item Library.png"
+    },
+    {
+      "name": "Moonveil Visual Codex",
+      "source": "/Moonveil Visual Codex.png"
+    },
+    {
+      "name": "Moonveil Play With All Artwork",
+      "source": "/Moonveil_Play_With_All_Artwork.zip"
+    },
+    {
+      "name": "Moonveil Visual Answer Sheet",
+      "source": "/Moonveil_Visual_Answer_Sheet.html"
+    },
+    {
+      "name": "Vesper Gothic Warlock Compendium",
+      "source": "/archive_Vesper%20Vane%20Gothic%20Warlock%20Compendium.png"
+    }
+  ],
+  "knownCheckpoints": [
+    {
+      "id": "vesper-vane",
+      "level": 1,
+      "hp": 10,
+      "ac": 13,
+      "pactSlots": 1,
+      "location": "Ravenloft Forgotten Archive Link 2 Sector D",
+      "companion": "PariahT",
+      "status": "handoff-record-needs-save-reconciliation"
+    },
+    {
+      "id": "alice-zress",
+      "status": "separate-existing-campaign-profile; see source files for authoritative sheet"
+    }
+  ],
+  "warnings": [
+    "This index records discoverable Library paths; assets have NOT been copied into GitHub or served by the website.",
+    "Workbook tabs and character counts have not yet been audited.",
+    "Do not replace existing saved characters or overwrite canon.",
+    "Historical deity positions and equipment chains remain unresolved."
+  ]
+}
