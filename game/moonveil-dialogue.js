@@ -73,17 +73,20 @@ function mount(campaign,sceneIndex){
  root.replaceChildren();
  const heading=document.createElement("h2");heading.textContent="Conversations — "+node.npc;root.append(heading);
  const hint=document.createElement("p");hint.textContent="Optional dialogue: ask questions without advancing the main five-choice encounter.";root.append(hint);
+ const filter=document.createElement("input");filter.type="search";filter.placeholder="Search dialogue topics";filter.setAttribute("aria-label","Search NPC dialogue");filter.style.cssText="width:100%;padding:10px;background:#101d25;color:white;border:1px solid #78918e;border-radius:9px;margin-bottom:10px";root.append(filter);
+ const count=document.createElement("small");count.textContent="Questions explored: "+entries.length+" / "+node.lines.length;root.append(count);
  const options=document.createElement("div");options.style.cssText="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px";
  const reply=document.createElement("p");reply.setAttribute("aria-live","polite");
  reply.textContent=entries.length?"Previously asked "+entries.length+" topic(s) here.":"Choose a question to hear the answer.";
- node.lines.forEach(([question,answer],i)=>{
+ const buttons=[];node.lines.forEach(([question,answer],i)=>{
   const button=document.createElement("button");button.type="button";button.textContent=question;
   button.onclick=()=>{
    reply.textContent=node.npc+": “"+answer+"”";
    const list=Array.isArray(store[node.npc])?store[node.npc]:[];
-   if(!list.includes(i)){list.push(i);store[node.npc]=list;try{localStorage.setItem(key(campaign),JSON.stringify(store));}catch(_){}}
-  };options.append(button);
+   if(!list.includes(i)){list.push(i);store[node.npc]=list;count.textContent="Questions explored: "+list.length+" / "+node.lines.length;try{localStorage.setItem(key(campaign),JSON.stringify(store));}catch(_){}}
+  };options.append(button);buttons.push({button,question,answer});
  });
+ filter.oninput=()=>{const q=filter.value.trim().toLowerCase();buttons.forEach(({button,question,answer})=>{button.hidden=!!q&&!((question+" "+answer).toLowerCase().includes(q));});};
  root.append(options,reply);
 }
 window.MoonveilDialogue={mount};
