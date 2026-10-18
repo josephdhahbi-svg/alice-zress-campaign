@@ -1,0 +1,553 @@
+{
+  "version": 1,
+  "provenance": "proposed-homebrew",
+  "currency": "cp",
+  "settlements": [
+    {
+      "id": "embercross",
+      "name": "Embercross",
+      "type": "town",
+      "districts": [
+        "Market Ward",
+        "Forge Row",
+        "Lantern Quarter"
+      ],
+      "streets": [
+        "Copper Lane",
+        "Pilgrim Road",
+        "Bell Street"
+      ],
+      "roads": [
+        {
+          "to": "starglen",
+          "name": "Starfall Road",
+          "days": 2
+        },
+        {
+          "to": "mistport",
+          "name": "Saltwind Causeway",
+          "days": 3
+        }
+      ],
+      "buildings": [
+        {
+          "id": "wayfarers-inn",
+          "name": "Wayfarer's Inn",
+          "street": "Bell Street",
+          "type": "inn",
+          "npc": "mira-vale"
+        },
+        {
+          "id": "copperglass-forge",
+          "name": "Copperglass Forge",
+          "street": "Copper Lane",
+          "type": "smithy",
+          "npc": "torren-flint"
+        },
+        {
+          "id": "lantern-market",
+          "name": "Lantern Market",
+          "street": "Pilgrim Road",
+          "type": "market",
+          "npc": "yla-fern"
+        }
+      ]
+    },
+    {
+      "id": "starglen",
+      "name": "Starglen",
+      "type": "village",
+      "districts": [
+        "Observatory Hill",
+        "Moonwell"
+      ],
+      "streets": [
+        "Astral Steps",
+        "Silverleaf Walk"
+      ],
+      "roads": [
+        {
+          "to": "embercross",
+          "name": "Starfall Road",
+          "days": 2
+        },
+        {
+          "to": "mistport",
+          "name": "Cliff Lantern Trail",
+          "days": 4
+        }
+      ],
+      "buildings": [
+        {
+          "id": "astral-observatory",
+          "name": "Astral Observatory",
+          "street": "Astral Steps",
+          "type": "research",
+          "npc": "sera-quill"
+        },
+        {
+          "id": "ink-quill",
+          "name": "Ink & Quill",
+          "street": "Silverleaf Walk",
+          "type": "shop",
+          "npc": "orin-moss"
+        }
+      ]
+    },
+    {
+      "id": "mistport",
+      "name": "Mistport",
+      "type": "city",
+      "districts": [
+        "Harbor",
+        "Tide Exchange",
+        "Old Quay"
+      ],
+      "streets": [
+        "Pier Road",
+        "Tideglass Avenue",
+        "Old Net Lane"
+      ],
+      "roads": [
+        {
+          "to": "embercross",
+          "name": "Saltwind Causeway",
+          "days": 3
+        },
+        {
+          "to": "starglen",
+          "name": "Cliff Lantern Trail",
+          "days": 4
+        }
+      ],
+      "buildings": [
+        {
+          "id": "tide-exchange",
+          "name": "Tide Exchange",
+          "street": "Tideglass Avenue",
+          "type": "market",
+          "npc": "nessa-tide"
+        },
+        {
+          "id": "mariners-hall",
+          "name": "Mariners' Hall",
+          "street": "Old Net Lane",
+          "type": "inn",
+          "npc": "captain-rell"
+        },
+        {
+          "id": "harbor-gate",
+          "name": "Harbor Gate",
+          "street": "Pier Road",
+          "type": "watch",
+          "npc": "bran-kestrel"
+        }
+      ]
+    }
+  ],
+  "npcs": [
+    {
+      "id": "mira-vale",
+      "name": "Mira Vale",
+      "ancestry": "Human",
+      "role": "Innkeeper",
+      "level": 2,
+      "ac": 11,
+      "hp": 12,
+      "backstory": "A former caravan cook who opened a shelter for travelers.",
+      "personality": "Observant, kind, cautious",
+      "goals": [
+        "Protect guests",
+        "Discover why signal bells ring at night"
+      ],
+      "inventory": [
+        "room-key",
+        "ledger",
+        "travel-rations"
+      ],
+      "dialogue": [
+        "Need a room?",
+        "The old tower has no keeper.",
+        "Tell me what road brought you here."
+      ]
+    },
+    {
+      "id": "torren-flint",
+      "name": "Torren Flint",
+      "ancestry": "Dwarf",
+      "role": "Smith",
+      "level": 3,
+      "ac": 13,
+      "hp": 22,
+      "backstory": "Left the deep forges after a disputed contract and now repairs travelers' gear.",
+      "personality": "Direct, loyal, skeptical",
+      "goals": [
+        "Restore ancestral tools",
+        "Keep apprentices safe"
+      ],
+      "inventory": [
+        "smith-tools",
+        "iron-ingot",
+        "field-lantern"
+      ],
+      "dialogue": [
+        "A blade is only as sound as its temper.",
+        "The mines were sealed for a reason.",
+        "Need a repair?"
+      ]
+    },
+    {
+      "id": "yla-fern",
+      "name": "Yla Fern",
+      "ancestry": "Half-elf",
+      "role": "Merchant",
+      "level": 2,
+      "ac": 12,
+      "hp": 11,
+      "backstory": "Carries seeds, provisions, and letters between distant settlements.",
+      "personality": "Curious, playful, shrewd",
+      "goals": [
+        "Reconnect lost postal routes"
+      ],
+      "inventory": [
+        "travel-rations",
+        "rope",
+        "healers-kit"
+      ],
+      "dialogue": [
+        "Every road has a price.",
+        "Looking for supplies?",
+        "Have you seen the missing couriers?"
+      ]
+    },
+    {
+      "id": "sera-quill",
+      "name": "Sera Quill",
+      "ancestry": "Elf",
+      "role": "Cartographer",
+      "level": 4,
+      "ac": 12,
+      "hp": 19,
+      "backstory": "Studies displaced constellations in a small observatory.",
+      "personality": "Patient, intense, precise",
+      "goals": [
+        "Map the fallen-star caves"
+      ],
+      "inventory": [
+        "star-map",
+        "writing-ink"
+      ],
+      "dialogue": [
+        "The stars shifted again.",
+        "A map is a question written carefully.",
+        "Would you investigate a fallen light?"
+      ]
+    },
+    {
+      "id": "orin-moss",
+      "name": "Orin Moss",
+      "ancestry": "Gnome",
+      "role": "Herbalist",
+      "level": 2,
+      "ac": 11,
+      "hp": 10,
+      "backstory": "Caretaker of a medicinal moonwell garden.",
+      "personality": "Gentle, absent-minded, protective",
+      "goals": [
+        "Preserve rare plants"
+      ],
+      "inventory": [
+        "healers-kit",
+        "travel-blanket"
+      ],
+      "dialogue": [
+        "The garden remembers.",
+        "Keep your boots off the seedlings.",
+        "I can prepare supplies."
+      ]
+    },
+    {
+      "id": "nessa-tide",
+      "name": "Nessa Tide",
+      "ancestry": "Human",
+      "role": "Merchant",
+      "level": 3,
+      "ac": 12,
+      "hp": 18,
+      "backstory": "Brokered peace between rival dock crews after a storm.",
+      "personality": "Fair, pragmatic, secretive",
+      "goals": [
+        "Prevent smuggling violence"
+      ],
+      "inventory": [
+        "rope",
+        "compass",
+        "water-flask"
+      ],
+      "dialogue": [
+        "I sell goods, not promises.",
+        "Which captain sent you?",
+        "The tides are changing."
+      ]
+    },
+    {
+      "id": "captain-rell",
+      "name": "Captain Rell",
+      "ancestry": "Dragonborn",
+      "role": "Sailor",
+      "level": 5,
+      "ac": 15,
+      "hp": 38,
+      "backstory": "Former navigator of a ship lost beyond an unmapped reef.",
+      "personality": "Stoic, brave, superstitious",
+      "goals": [
+        "Recover missing charts"
+      ],
+      "inventory": [
+        "compass",
+        "rope"
+      ],
+      "dialogue": [
+        "Storms do not negotiate.",
+        "A nameless sail crossed the reef.",
+        "Can you read currents?"
+      ]
+    },
+    {
+      "id": "bran-kestrel",
+      "name": "Bran Kestrel",
+      "ancestry": "Human",
+      "role": "Watch officer",
+      "level": 3,
+      "ac": 15,
+      "hp": 24,
+      "backstory": "Transferred from inland patrol duty to the port watch.",
+      "personality": "Disciplined, protective, blunt",
+      "goals": [
+        "Protect the harbor gate"
+      ],
+      "inventory": [
+        "watch-whistle",
+        "lantern"
+      ],
+      "dialogue": [
+        "State your business.",
+        "The old quay is closed tonight.",
+        "Rumors are not evidence."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "travel-rations",
+      "name": "Travel rations",
+      "priceCp": 40,
+      "weightLb": 2,
+      "type": "consumable"
+    },
+    {
+      "id": "field-lantern",
+      "name": "Field lantern",
+      "priceCp": 75,
+      "weightLb": 2,
+      "type": "gear"
+    },
+    {
+      "id": "healers-kit",
+      "name": "Healer's kit",
+      "priceCp": 160,
+      "weightLb": 3,
+      "type": "gear"
+    },
+    {
+      "id": "room-key",
+      "name": "Inn room key",
+      "priceCp": 0,
+      "type": "quest-prop"
+    },
+    {
+      "id": "ledger",
+      "name": "Inn ledger",
+      "priceCp": 0,
+      "type": "quest-prop"
+    },
+    {
+      "id": "smith-tools",
+      "name": "Smith tools",
+      "priceCp": 150,
+      "type": "tools"
+    },
+    {
+      "id": "iron-ingot",
+      "name": "Iron ingot",
+      "priceCp": 50,
+      "type": "material"
+    },
+    {
+      "id": "rope",
+      "name": "Rope",
+      "priceCp": 55,
+      "type": "gear"
+    },
+    {
+      "id": "star-map",
+      "name": "Local star map",
+      "priceCp": 120,
+      "type": "map"
+    },
+    {
+      "id": "writing-ink",
+      "name": "Writing ink",
+      "priceCp": 30,
+      "type": "gear"
+    },
+    {
+      "id": "travel-blanket",
+      "name": "Travel blanket",
+      "priceCp": 60,
+      "type": "gear"
+    },
+    {
+      "id": "compass",
+      "name": "Simple compass",
+      "priceCp": 210,
+      "type": "gear"
+    },
+    {
+      "id": "water-flask",
+      "name": "Water flask",
+      "priceCp": 25,
+      "type": "gear"
+    },
+    {
+      "id": "watch-whistle",
+      "name": "Watch whistle",
+      "priceCp": 20,
+      "type": "gear"
+    },
+    {
+      "id": "lantern",
+      "name": "Watch lantern",
+      "priceCp": 80,
+      "type": "gear"
+    }
+  ],
+  "dungeons": [
+    {
+      "id": "fallen-star-vault",
+      "name": "Fallen Star Vault",
+      "near": "starglen",
+      "tier": "1-4",
+      "rooms": [
+        {
+          "id": "r1",
+          "name": "Glittering Mouth",
+          "challenge": "Trace strange footprints",
+          "dc": 11
+        },
+        {
+          "id": "r2",
+          "name": "Resonant Gallery",
+          "challenge": "Match three crystal tones",
+          "dc": 13
+        },
+        {
+          "id": "r3",
+          "name": "Sapphire Nest",
+          "challenge": "Negotiate with a sapphire-scaled guardian",
+          "dc": 14
+        }
+      ],
+      "encounter": "sapphire-dragon-adolescent",
+      "rewards": "Unapproved: crystallized star map fragment"
+    },
+    {
+      "id": "amber-echo-catacomb",
+      "name": "Amber Echo Catacomb",
+      "near": "embercross",
+      "tier": "1-4",
+      "rooms": [
+        {
+          "id": "r1",
+          "name": "Bell Stair",
+          "challenge": "Find the safe steps",
+          "dc": 11
+        },
+        {
+          "id": "r2",
+          "name": "Amber Vault",
+          "challenge": "Observe rather than disturb the crystal",
+          "dc": 12
+        },
+        {
+          "id": "r3",
+          "name": "Echo Throne",
+          "challenge": "Answer the watcher's riddle",
+          "dc": 14
+        }
+      ],
+      "encounter": "topaz-dragon-messenger",
+      "rewards": "Unapproved: amber resonance glyph"
+    },
+    {
+      "id": "tideglass-depths",
+      "name": "Tideglass Depths",
+      "near": "mistport",
+      "tier": "5-10",
+      "rooms": [
+        {
+          "id": "r1",
+          "name": "Floodgate",
+          "challenge": "Control the tide valves",
+          "dc": 14
+        },
+        {
+          "id": "r2",
+          "name": "Submerged Archive",
+          "challenge": "Recover scattered charts",
+          "dc": 15
+        },
+        {
+          "id": "r3",
+          "name": "Prismatic Chamber",
+          "challenge": "Survive pressure and negotiate passage",
+          "dc": 17
+        }
+      ],
+      "encounter": "emerald-dragon-keeper",
+      "rewards": "Unapproved: deepwater route chart"
+    }
+  ],
+  "gemDragonCatalog": [
+    {
+      "id": "amethyst",
+      "theme": "gravity and force",
+      "role": "planar mystery",
+      "rulesStatus": "homebrew placeholder; official rules not reproduced"
+    },
+    {
+      "id": "crystal",
+      "theme": "radiant light",
+      "role": "highland beacon",
+      "rulesStatus": "homebrew placeholder; official rules not reproduced"
+    },
+    {
+      "id": "emerald",
+      "theme": "psychic insight",
+      "role": "coastal guardian",
+      "rulesStatus": "homebrew placeholder; official rules not reproduced"
+    },
+    {
+      "id": "sapphire",
+      "theme": "sonic resonance",
+      "role": "subterranean sentinel",
+      "rulesStatus": "homebrew placeholder; official rules not reproduced"
+    },
+    {
+      "id": "topaz",
+      "theme": "entropy and decay",
+      "role": "ancient catacomb observer",
+      "rulesStatus": "homebrew placeholder; official rules not reproduced"
+    }
+  ]
+}
