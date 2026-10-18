@@ -1,0 +1,30 @@
+name: Moonveil Hub Browser Smoke Test
+
+on:
+  push:
+    branches:
+      - feature/alice-playable-encounter-20261018
+    paths:
+      - 'game/*.html'
+      - 'tests/moonveil-hub-smoke.cjs'
+      - '.github/workflows/moonveil-hub-smoke.yml'
+  pull_request:
+    paths:
+      - 'game/*.html'
+      - 'tests/moonveil-hub-smoke.cjs'
+      - '.github/workflows/moonveil-hub-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check Moonveil HTML source and scripts
+        run: node tests/moonveil-hub-smoke.cjs
