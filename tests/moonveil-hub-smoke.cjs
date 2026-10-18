@@ -4,7 +4,7 @@ const vm=require('node:vm');
 const assert=require('node:assert/strict');
 const path=require('node:path');
 const folder=path.join(__dirname,'..','game');
-const pages=['moonveil-hub.html','alice-elder-eye-playtest.html','vesper-archive.html','moonveil-characters.html','moonveil-world.html','moonveil-recovery-vault.html','moonveil-recovery-vault.html','index.html'];
+const pages=['moonveil-hub.html','alice-elder-eye-playtest.html','vesper-archive.html','moonveil-characters.html','moonveil-world.html','moonveil-recovery-vault.html','moonveil-media-library.html','index.html'];
 for(const name of pages){
  const html=fs.readFileSync(path.join(folder,name),'utf8');
  assert.match(html,/<html\b/i,name+' lacks HTML root');
@@ -14,7 +14,7 @@ for(const name of pages){
  console.log('PASS parsed HTML scripts:',name);
 }
 const hub=fs.readFileSync(path.join(folder,'moonveil-hub.html'),'utf8');
-for(const target of ['alice-elder-eye-playtest.html','vesper-archive.html','original-alice.html','moonveil-characters.html','moonveil-world.html']){
+for(const target of ['alice-elder-eye-playtest.html','vesper-archive.html','original-alice.html','moonveil-characters.html','moonveil-world.html','moonveil-media-library.html']){
  assert.ok(hub.includes('href="./'+target+'"'),'Hub is missing '+target);
 }
 const alice=fs.readFileSync(path.join(folder,'alice-elder-eye-playtest.html'),'utf8');
@@ -83,3 +83,5 @@ assert.match(world,/moonveil-travel\.js/);
 console.log('PASS universal travel routing and gated Ravenloft crossings');
 
 const recovered=JSON.parse(fs.readFileSync(path.join(folder,"data","recovered-assets-index.json"),"utf8"));assert.ok(recovered.artSources.length>=7);assert.ok(recovered.characterSources.length>=5);console.log("PASS recovery asset inventory references");
+
+const media=fs.readFileSync(path.join(folder,"moonveil-media-library.html"),"utf8");assert.match(media,/indexedDB\.open/);assert.match(media,/image\/\*,video\/\*,audio\/\*/);assert.match(hub,/moonveil-media-library.html/);console.log("PASS mobile visual media importer linked");
