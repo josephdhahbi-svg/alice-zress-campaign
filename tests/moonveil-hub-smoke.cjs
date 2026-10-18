@@ -43,3 +43,5 @@ const dialogue=fs.readFileSync(path.join(folder,'moonveil-dialogue.js'),'utf8');
 assert.match(dialogue,/Search NPC dialogue/);assert.match(dialogue,/Questions explored:/);console.log("PASS searchable conversation UI");
 
 assert.match(dialogue,/moonveil-knowledge-v1-/);assert.match(dialogue,/recordKnowledge/);assert.match(dialogue,/unconfirmed:true/);console.log("PASS unconfirmed knowledge ledger source checks");
+
+assert.match(dialogue,/function renderJournal/);for(const page of ["alice-elder-eye-playtest.html","vesper-archive.html"]){assert.match(fs.readFileSync(path.join(folder,page),"utf8"),/id="moonveilKnowledge"/);}console.log("PASS NPC clue journal panels");
