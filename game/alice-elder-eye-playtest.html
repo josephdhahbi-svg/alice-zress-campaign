@@ -5,7 +5,7 @@
 :root{color-scheme:dark;--bg:#0b121a;--surface:#17252c;--gold:#efca83;--teal:#8fd6c9;--ink:#edf1e9}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
 header,main{max-width:850px;margin:auto;padding:16px}header{border-bottom:1px solid #4b5959}h1{font-size:1.6rem;color:var(--gold);margin:.1em 0}h2{color:var(--gold);font-size:1.25rem}small,.muted{color:#b4c6c3}
-nav,.stats,.tools{display:flex;gap:7px;flex-wrap:wrap}nav button,.tools button{flex:1;min-width:95px}nav{position:sticky;top:0;background:#0b121af2;z-index:3;padding:8px 0}textarea{font:inherit} @media(max-width:430px){header,main{padding:10px}nav button{min-width:80px;padding:10px 7px;font-size:13px}.panel{padding:12px}.visual{min-height:175px}}
+nav,.stats,.tools{display:flex;gap:7px;flex-wrap:wrap}nav button,.tools button{flex:1;min-width:95px}.choices button{transition:background .15s ease}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.controls button{flex:1;min-width:120px}.pill{display:inline-block;border:1px solid #6b837f;border-radius:50px;padding:3px 9px;color:#cde8df;font-size:13px}nav{position:sticky;top:0;background:#0b121af2;z-index:3;padding:8px 0}textarea{font:inherit} @media(max-width:430px){header,main{padding:10px}nav button{min-width:80px;padding:10px 7px;font-size:13px}.panel{padding:12px}.visual{min-height:175px}}
 button{background:#223a42;color:var(--ink);border:1px solid #678583;border-radius:11px;padding:12px;text-align:left;font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--gold)}button:hover{background:#31505a}button:disabled{opacity:.5;cursor:not-allowed}
 button.selected{border-color:var(--gold)}.panel{background:var(--surface);border:1px solid #486365;border-radius:15px;padding:16px;margin:12px 0}
 .visual{min-height:210px;border-radius:12px;display:flex;align-items:end;padding:20px;background:radial-gradient(ellipse at 75% 15%,#46796f88,transparent 45%),linear-gradient(150deg,#183944,#111323 65%,#261d2b);border:1px solid #69847b}
@@ -16,7 +16,7 @@ pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.5 ui-monospace,monos
 </style></head><body>
 <header><small>MOONVEIL UNIVERSE • ALICE Z'RESS • ISOLATED PLAYTEST</small><h1>Elminster & the Elder Eye</h1><div class="stats"><span>Level <b>1</b></span><span>HP <b id="hp">10/10</b></span><span>Resolve <b id="resolve">0</b></span><span>Scene <b id="step">1/4</b></span><span>Checks <b id="checks">0</b></span></div></header>
 <main><nav aria-label="Game sections"><button data-tab="cinema" class="selected">Cinema</button><button data-tab="sheet">Character</button><button data-tab="quests">Quests</button><button data-tab="log">Log</button><button data-tab="help">Answer Sheet</button><button data-tab="map">Map</button><button data-tab="notes">Notes</button></nav>
-<section id="cinema" class="tab panel"><div class="visual" role="img" aria-label="Atmospheric gradient placeholder awaiting approved photorealistic artwork"><h2 id="title"></h2></div><p id="sceneText"></p><p class="muted">Five choices. Checks are rolled once and outcomes persist locally. This is a non-canon playtest of Alice's established opening route.</p><div id="choices" class="choices"></div><p id="status" role="status" aria-live="polite"></p><div id="lastRoll" class="panel" hidden></div></section>
+<section id="cinema" class="tab panel"><div class="visual" role="img" aria-label="Atmospheric gradient placeholder awaiting approved photorealistic artwork"><h2 id="title"></h2></div><p id="sceneText"></p><p class="muted">Five choices. Checks are rolled once and outcomes persist locally. This is a non-canon playtest of Alice's established opening route.</p><div class="controls"><button id="readScene" type="button">▶ Read scene aloud</button><button id="stopVoice" type="button">■ Stop narration</button></div><div id="choices" class="choices"></div><p id="status" role="status" aria-live="polite"></p><div id="lastRoll" class="panel" hidden></div></section>
 <section id="sheet" class="tab panel" hidden><h2>Alice Z'ress</h2><p>Heroic Drow • Great Old One Warlock • Patron: Ghaunadaur • Goddess: Eilistraee</p><p>Playtest values only: HP 10, proficiency +2, Arcana +3, Insight +2, Stealth +3, Persuasion +2, attack +4. These numbers are not a ruling on the master sheet.</p><p id="flags"></p></section>
 <section id="quests" class="tab panel" hidden><h2>Quest — The Rabbit Hole</h2><p id="questText"></p><p>Rewards and divine gifts are deliberately not granted in this playtest.</p></section>
 <section id="log" class="tab panel" hidden><h2>Event ledger</h2><div id="events"></div></section>
@@ -52,7 +52,8 @@ const scenes=[
 ["Utility","Trace a temporary closing rite","Arcana",14,"You stabilize the seal for now.","The seal stays unstable, though you learn its weakness."],
 ["Action","Break the immediate threat","Attack",14,"You force the threshold to withdraw.","The threshold strikes back as you retreat."]]}];
 const empty=()=>({version:1,hero:"Alice Z'ress",step:0,hp:10,resolve:0,flags:[],events:[],complete:false,notes:""});
-function valid(s){return s&&s.version===1&&s.hero==="Alice Z'ress"&&Number.isInteger(s.step)&&s.step>=0&&s.step<=4&&Number.isInteger(s.hp)&&s.hp>=0&&s.hp<=10&&Number.isInteger(s.resolve)&&s.resolve>=0&&s.resolve<=4&&Array.isArray(s.events)&&s.events.length<=4&&Array.isArray(s.flags)&&typeof s.complete==="boolean"&&(s.notes===undefined||typeof s.notes==="string")&&s.events.length===s.step&&s.resolve<=s.step;}
+function valid(s){return s&&s.version===1&&s.hero==="Alice Z'ress"&&Number.isInteger(s.step)&&s.step>=0&&s.step<=4&&Number.isInteger(s.hp)&&s.hp>=0&&s.hp<=10&&Number.isInteger(s.resolve)&&s.resolve>=0&&s.resolve<=4&&Array.isArray(s.events)&&s.events.length<=4&&Array.isArray(s.flags)&&typeof s.complete==="boolean"&&(s.notes===undefined||typeof s.notes==="string")&&s.events.length===s.step&&s.resolve<=s.step&&s.complete===(s.step===4)&&s.events.every((e,i)=>e&&e.scene===i&&Number.isInteger(e.choice)&&e.choice>=0&&e.choice<5&&Number.isInteger(e.roll)&&e.roll>=1&&e.roll<=20&&Number.isInteger(e.total)&&e.total===e.roll+modifiersForValidation(e.skill)&&Number.isInteger(e.dc)&&typeof e.success==="boolean"&&e.success===(e.total>=e.dc));}
+function modifiersForValidation(skill){return ({Persuasion:2,Insight:2,Stealth:3,Arcana:3,Attack:4})[skill]??-999;}}
 let state=empty(),history=[];
 try{const s=JSON.parse(localStorage.getItem(KEY));if(valid(s))state=s;}catch(e){}
 function save(){localStorage.setItem(KEY,JSON.stringify(state));render();}
@@ -61,7 +62,7 @@ function act(i){
 if(state.complete||state.step>=4)return;
 const scene=scenes[state.step],o=scene.options[i];if(!o)return;
 history.push(JSON.parse(JSON.stringify(state)));
-const roll=1+Math.floor(Math.random()*20),total=roll+modifiers[o[2]],success=total>=o[3];
+const bytes=new Uint32Array(1);let roll;if(globalThis.crypto&&crypto.getRandomValues){const limit=Math.floor(4294967296/20)*20;do{crypto.getRandomValues(bytes);}while(bytes[0]>=limit);roll=(bytes[0]%20)+1;}else{roll=1+Math.floor(Math.random()*20);}const total=roll+modifiers[o[2]],success=total>=o[3];
 state.events.push({scene:state.step,choice:i,kind:o[0],action:o[1],skill:o[2],roll,total,dc:o[3],success,outcome:success?o[4]:o[5],at:new Date().toISOString()});
 state.flags.push((success?"success:":"attempt:")+state.step+":"+i);
 if(success)state.resolve++;else state.hp=Math.max(0,state.hp-1);
@@ -83,6 +84,7 @@ $("undo").disabled=!history.length;
 $("playerNotes").value=state.notes||"";
 $("routeMap").replaceChildren(); scenes.forEach((scene,i)=>{const p=document.createElement("p");p.textContent=(i<state.step?"✓ ":(i===state.step?"➤ ":"○ "))+(i+1)+". "+scene.title;$("routeMap").append(p);});
 }
+const voiceSupported=typeof speechSynthesis!=="undefined"&&typeof SpeechSynthesisUtterance!=="undefined";$("readScene").disabled=!voiceSupported;$("stopVoice").disabled=!voiceSupported;$("readScene").onclick=()=>{if(!voiceSupported)return;speechSynthesis.cancel();const scene=scenes[Math.min(state.step,3)];const u=new SpeechSynthesisUtterance(state.complete?"The Elder Eye playtest has concluded.":scene.title+". "+scene.text);u.rate=.9;speechSynthesis.speak(u);};$("stopVoice").onclick=()=>{if(voiceSupported)speechSynthesis.cancel();};
 document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tab").forEach(el=>el.hidden=el.id!==b.dataset.tab);document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("selected",x===b));});
 $("playerNotes").onchange=()=>{state.notes=$("playerNotes").value.slice(0,10000);save();};
 $("undo").onclick=()=>{if(!history.length)return;state=history.pop();save();$("status").textContent="Previous choice undone on this device.";};
