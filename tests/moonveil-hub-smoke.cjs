@@ -4,7 +4,7 @@ const vm=require('node:vm');
 const assert=require('node:assert/strict');
 const path=require('node:path');
 const folder=path.join(__dirname,'..','game');
-const pages=['moonveil-hub.html','alice-elder-eye-playtest.html','vesper-archive.html','moonveil-characters.html','index.html'];
+const pages=['moonveil-hub.html','alice-elder-eye-playtest.html','vesper-archive.html','moonveil-characters.html','moonveil-world.html','index.html'];
 for(const name of pages){
  const html=fs.readFileSync(path.join(folder,name),'utf8');
  assert.match(html,/<html\b/i,name+' lacks HTML root');
@@ -14,7 +14,7 @@ for(const name of pages){
  console.log('PASS parsed HTML scripts:',name);
 }
 const hub=fs.readFileSync(path.join(folder,'moonveil-hub.html'),'utf8');
-for(const target of ['alice-elder-eye-playtest.html','vesper-archive.html','original-alice.html','moonveil-characters.html']){
+for(const target of ['alice-elder-eye-playtest.html','vesper-archive.html','original-alice.html','moonveil-characters.html','moonveil-world.html']){
  assert.ok(hub.includes('href="./'+target+'"'),'Hub is missing '+target);
 }
 const alice=fs.readFileSync(path.join(folder,'alice-elder-eye-playtest.html'),'utf8');
@@ -49,3 +49,5 @@ assert.match(dialogue,/function renderJournal/);for(const page of ["alice-elder-
 assert.match(dialogue,/function questProgress/);assert.match(dialogue,/Investigation objectives \(playtest\)/);assert.match(dialogue,/clue found/);console.log("PASS quest discovery progress integration");
 
 const creator=fs.readFileSync(path.join(folder,"moonveil-characters.html"),"utf8");assert.match(creator,/moonveil-character-roster-v1/);assert.match(creator,/Create new character/);assert.match(hub,/universal character roster/);console.log("PASS general character creation and hub link");
+
+const world=fs.readFileSync(path.join(folder,"moonveil-world.html"),"utf8");assert.match(world,/moonveil-world-sandbox-v1/);assert.match(world,/towns=\[/);assert.match(hub,/Enter Living World Sandbox/);console.log("PASS universal world hub and settlement module");
