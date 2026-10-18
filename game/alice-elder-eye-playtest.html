@@ -5,7 +5,7 @@
 :root{color-scheme:dark;--bg:#0b121a;--surface:#17252c;--gold:#efca83;--teal:#8fd6c9;--ink:#edf1e9}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
 header,main{max-width:850px;margin:auto;padding:16px}header{border-bottom:1px solid #4b5959}h1{font-size:1.6rem;color:var(--gold);margin:.1em 0}h2{color:var(--gold);font-size:1.25rem}small,.muted{color:#b4c6c3}
-nav,.stats,.tools{display:flex;gap:7px;flex-wrap:wrap}nav button,.tools button{flex:1;min-width:95px}
+nav,.stats,.tools{display:flex;gap:7px;flex-wrap:wrap}nav button,.tools button{flex:1;min-width:95px}nav{position:sticky;top:0;background:#0b121af2;z-index:3;padding:8px 0}textarea{font:inherit} @media(max-width:430px){header,main{padding:10px}nav button{min-width:80px;padding:10px 7px;font-size:13px}.panel{padding:12px}.visual{min-height:175px}}
 button{background:#223a42;color:var(--ink);border:1px solid #678583;border-radius:11px;padding:12px;text-align:left;font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--gold)}button:hover{background:#31505a}button:disabled{opacity:.5;cursor:not-allowed}
 button.selected{border-color:var(--gold)}.panel{background:var(--surface);border:1px solid #486365;border-radius:15px;padding:16px;margin:12px 0}
 .visual{min-height:210px;border-radius:12px;display:flex;align-items:end;padding:20px;background:radial-gradient(ellipse at 75% 15%,#46796f88,transparent 45%),linear-gradient(150deg,#183944,#111323 65%,#261d2b);border:1px solid #69847b}
@@ -14,9 +14,9 @@ button.selected{border-color:var(--gold)}.panel{background:var(--surface);border
 pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.5 ui-monospace,monospace}
 [hidden]{display:none!important}
 </style></head><body>
-<header><small>MOONVEIL UNIVERSE • ALICE Z'RESS • ISOLATED PLAYTEST</small><h1>Elminster & the Elder Eye</h1><div class="stats"><span>Level <b>1</b></span><span>HP <b id="hp">10/10</b></span><span>Resolve <b id="resolve">0</b></span><span>Scene <b id="step">1/4</b></span></div></header>
+<header><small>MOONVEIL UNIVERSE • ALICE Z'RESS • ISOLATED PLAYTEST</small><h1>Elminster & the Elder Eye</h1><div class="stats"><span>Level <b>1</b></span><span>HP <b id="hp">10/10</b></span><span>Resolve <b id="resolve">0</b></span><span>Scene <b id="step">1/4</b></span><span>Checks <b id="checks">0</b></span></div></header>
 <main><nav aria-label="Game sections"><button data-tab="cinema" class="selected">Cinema</button><button data-tab="sheet">Character</button><button data-tab="quests">Quests</button><button data-tab="log">Log</button><button data-tab="help">Answer Sheet</button><button data-tab="map">Map</button><button data-tab="notes">Notes</button></nav>
-<section id="cinema" class="tab panel"><div class="visual" role="img" aria-label="Atmospheric gradient placeholder awaiting approved photorealistic artwork"><h2 id="title"></h2></div><p id="sceneText"></p><p class="muted">Five choices. Checks are rolled once and outcomes persist locally. This is a non-canon playtest of Alice's established opening route.</p><div id="choices" class="choices"></div><p id="status" role="status"></p></section>
+<section id="cinema" class="tab panel"><div class="visual" role="img" aria-label="Atmospheric gradient placeholder awaiting approved photorealistic artwork"><h2 id="title"></h2></div><p id="sceneText"></p><p class="muted">Five choices. Checks are rolled once and outcomes persist locally. This is a non-canon playtest of Alice's established opening route.</p><div id="choices" class="choices"></div><p id="status" role="status" aria-live="polite"></p><div id="lastRoll" class="panel" hidden></div></section>
 <section id="sheet" class="tab panel" hidden><h2>Alice Z'ress</h2><p>Heroic Drow • Great Old One Warlock • Patron: Ghaunadaur • Goddess: Eilistraee</p><p>Playtest values only: HP 10, proficiency +2, Arcana +3, Insight +2, Stealth +3, Persuasion +2, attack +4. These numbers are not a ruling on the master sheet.</p><p id="flags"></p></section>
 <section id="quests" class="tab panel" hidden><h2>Quest — The Rabbit Hole</h2><p id="questText"></p><p>Rewards and divine gifts are deliberately not granted in this playtest.</p></section>
 <section id="log" class="tab panel" hidden><h2>Event ledger</h2><div id="events"></div></section>
@@ -69,12 +69,13 @@ state.step++;state.complete=state.step===4;
 save();$("status").textContent=o[1]+" — d20 "+roll+" + "+modifiers[o[2]]+" = "+total+" vs DC "+o[3]+". "+(success?"Success. ":"Setback. ")+(success?o[4]:o[5]);
 }
 function render(){
-$("hp").textContent=state.hp+"/10";$("resolve").textContent=state.resolve;$("step").textContent=Math.min(4,state.step+1)+"/4";
+$("checks").textContent=state.events.length; $("hp").textContent=state.hp+"/10";$("resolve").textContent=state.resolve;$("step").textContent=Math.min(4,state.step+1)+"/4";
 const end=state.complete,s=scenes[Math.min(state.step,3)];
 $("title").textContent=end?"The Threshold: Playtest Complete":s.title;
 $("sceneText").textContent=end?"Alice has completed four test encounters. Her choices and rolls are saved. No story outcome, relic, reward or canon change is final.":s.text;
 $("choices").replaceChildren();
 if(!end)s.options.forEach((o,i)=>{const b=document.createElement("button");b.innerHTML="<b>"+o[0]+"</b> — "+o[1]+" • "+o[2]+" DC "+o[3];b.onclick=()=>act(i);$("choices").append(b);});
+const last=state.events[state.events.length-1];$("lastRoll").hidden=!last;if(last)$("lastRoll").textContent="Latest roll: "+last.skill+" "+last.roll+" + "+modifiers[last.skill]+" = "+last.total+" vs DC "+last.dc+". "+(last.success?"Success":"Setback")+". "+last.outcome;
 $("flags").textContent="Recorded checks: "+state.events.length+". Successes: "+state.resolve+".";
 $("questText").textContent=end?"Four scenes attempted. This is playtest completion, not campaign quest completion.":"In progress: "+s.title+" (playtest only).";
 $("events").replaceChildren();state.events.forEach((e,i)=>{const p=document.createElement("p");p.textContent=(i+1)+". "+e.action+" — "+e.skill+" "+e.roll+" total "+e.total+" / DC "+e.dc+" — "+(e.success?"SUCCESS":"SETBACK")+". "+e.outcome;$("events").append(p);});
