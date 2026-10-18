@@ -31,6 +31,8 @@ jobs:
           cp game/moonveil-characters.html _site/
           cp game/moonveil-world.html _site/
           cp game/index.html _site/original-alice.html
+          mkdir -p _site/data
+          cp game/data/moonveil-world-catalog.json _site/data/
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
