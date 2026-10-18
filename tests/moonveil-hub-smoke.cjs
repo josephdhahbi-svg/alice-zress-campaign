@@ -70,3 +70,14 @@ assert.match(world,/data\/moonveil-world-catalog\.json/);
 console.log("PASS catalog references and dungeon data");
 
 assert.match(world,/Travel, Roads & Buildings/);assert.match(world,/road.days/);assert.match(world,/a.dungeons\[d.id\]/);assert.match(world,/buildingDetail/);console.log("PASS travel, buildings and dungeon exploration code");
+
+const travelCode=fs.readFileSync(path.join(folder,'moonveil-travel.js'),'utf8');
+new vm.Script(travelCode,{filename:'moonveil-travel.js'});
+const sandbox={};vm.runInNewContext(travelCode,{window:sandbox});
+const api=sandbox.MoonveilTravel;
+assert.ok(api&&api.routes.length>=10);
+assert.equal(api.travel({location:'mistport',coins:500,day:1,items:[]},'mists-barovia').ok,false);
+const trip=api.travel({location:'embercross',coins:500,day:1,items:[]},'starfall');
+assert.equal(trip.ok,true);assert.equal(trip.state.location,'starglen');assert.equal(trip.state.day,3);
+assert.match(world,/moonveil-travel\.js/);
+console.log('PASS universal travel routing and gated Ravenloft crossings');
